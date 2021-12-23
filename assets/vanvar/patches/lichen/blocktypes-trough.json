@@ -1,0 +1,37 @@
+[
+  {
+    "op": "add",
+    "path": "/attributes/contentConfig/4/foodFor/0",
+    "value": "lichen:deer-*",
+    "file": "vanvar:blocktypes/wood/trough-large.json",
+    "dependsOn":[{"modid":"lichen"}]
+  },
+  {
+    "op": "add",
+    "path": "/attributes/contentConfig/3/foodFor/0",
+    "value": "lichen:deer-*",
+    "file": "vanvar:blocktypes/wood/trough-large.json",
+    "dependsOn":[{"modid":"lichen"}]
+  },
+  {
+    "op": "add",
+    "path": "/attributes/contentConfig/2/foodFor/0",
+    "value": "lichen:deer-*",
+    "file": "vanvar:blocktypes/wood/trough-large.json",
+    "dependsOn":[{"modid":"lichen"}]
+  },
+  {
+    "op": "add",
+    "path": "/attributes/contentConfig/1/foodFor/0",
+    "value": "lichen:deer-*",
+    "file": "vanvar:blocktypes/wood/trough-large.json",
+    "dependsOn":[{"modid":"lichen"}]
+  },
+  {
+    "op": "add",
+    "path": "/attributes/contentConfig/0/foodFor/0",
+    "value": "lichen:deer-*",
+    "file": "vanvar:blocktypes/wood/trough-large.json",
+    "dependsOn":[{"modid":"lichen"}]
+  }
+]

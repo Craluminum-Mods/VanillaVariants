@@ -1,0 +1,9 @@
+[
+  {
+    "file": "vanvar:recipes/grid/modbooks/fillinkwellbucket.json",
+    "op": "add",
+    "path": "/enabled",
+    "value": false,
+    "dependsOn": [{ "modid": "books", "invert": true }]
+  }
+]

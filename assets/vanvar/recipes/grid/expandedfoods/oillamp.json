@@ -1,0 +1,87 @@
+[ 
+  {
+    "ingredientPattern": "R,P,B",
+    "ingredients": {
+      "R": { "type": "block", "code": "vanvar:woodbucket-*" },
+      "P": { "type": "block", "code": "game:peatbrick" },
+      "B": { "type": "block", "code": "game:bowl-burned" }
+    },
+    "attributes": {
+      "liquidContainerProps": {
+        "requiresContent": { "type": "item", "code": "expandedfoods:foodoilportion-flax" },
+        "requiresQuantity": 1
+      }
+    },
+    "width": 1,
+    "height": 3,
+    "output": { "type": "block", "code": "game:oillamp-up"  }
+  },
+  {
+    "ingredientPattern": "R,P,B",
+    "ingredients": {
+      "R": { "type": "block", "code": "vanvar:woodbucket-*" },
+      "P": { "type": "block", "code": "game:peatbrick" },
+      "B": { "type": "block", "code": "game:bowl-burned" }
+    },
+    "attributes": {
+      "liquidContainerProps": {
+        "requiresContent": { "type": "item", "code": "expandedfoods:foodoilportion-rice" },
+        "requiresQuantity": 1
+      }
+    },
+    "width": 1,
+    "height": 3,
+    "output": { "type": "block", "code": "game:oillamp-up"  }
+  },
+  {
+    "ingredientPattern": "R,P,B",
+    "ingredients": {
+      "R": { "type": "block", "code": "vanvar:woodbucket-*" },
+      "P": { "type": "block", "code": "game:peatbrick" },
+      "B": { "type": "block", "code": "game:bowl-burned" }
+    },
+    "attributes": {
+      "liquidContainerProps": {
+        "requiresContent": { "type": "item", "code": "expandedfoods:foodoilportion-seed" },
+        "requiresQuantity": 1
+      }
+    },
+    "width": 1,
+    "height": 3,
+    "output": { "type": "block", "code": "game:oillamp-up"  }
+  },
+  {
+    "ingredientPattern": "R,P,B",
+    "ingredients": {
+      "R": { "type": "block", "code": "vanvar:woodbucket-*" },
+      "P": { "type": "block", "code": "game:peatbrick" },
+      "B": { "type": "block", "code": "game:bowl-burned" }
+    },
+    "attributes": {
+      "liquidContainerProps": {
+        "requiresContent": { "type": "item", "code": "expandedfoods:foodoilportion-soy" },
+        "requiresQuantity": 1
+      }
+    },
+    "width": 1,
+    "height": 3,
+    "output": { "type": "block", "code": "game:oillamp-up"  }
+  },
+  {
+    "ingredientPattern": "R,P,B",
+    "ingredients": {
+      "R": { "type": "block", "code": "vanvar:woodbucket-*" },
+      "P": { "type": "block", "code": "game:peatbrick" },
+      "B": { "type": "block", "code": "game:bowl-burned" }
+    },
+    "attributes": {
+      "liquidContainerProps": {
+        "requiresContent": { "type": "item", "code": "expandedfoods:lard" },
+        "requiresQuantity": 1
+      }
+    },
+    "width": 1,
+    "height": 3,
+    "output": { "type": "block", "code": "game:oillamp-up"  }
+  }
+]

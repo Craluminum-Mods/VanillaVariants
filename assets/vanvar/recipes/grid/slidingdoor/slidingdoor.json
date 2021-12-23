@@ -1,0 +1,22 @@
+[
+	{
+		"ingredientPattern": "SB,BB,BB",
+		"ingredients": {
+			"S": { "type": "item", "code": "game:saw-*", "isTool": true },
+			"B": { "type": "item", "code": "game:plank-*", "name": "wood" }
+		},
+		"width": 2,
+		"height": 3,
+		"output": { "type": "block", "code": "slidingdoor-{wood}-none-north-bottom-closed-left" }
+	},
+	{
+		"ingredientPattern": "C,D,C",
+		"ingredients": {
+			"C": { "type": "item", "code": "game:cloth-plain" },
+			"D": { "type": "block", "code": "slidingdoor-*-none-north-bottom-closed-left", "name": "wood" }
+		},
+		"width": 1,
+		"height": 3,
+		"output": { "type": "block", "code": "slidingdoor-{wood}-paper-north-bottom-closed-left" }
+	}
+]

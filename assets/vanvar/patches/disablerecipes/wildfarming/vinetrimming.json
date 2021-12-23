@@ -1,0 +1,9 @@
+[
+  {
+    "file": "vanvar:recipes/grid/wildfarming/vinetrimming.json",
+    "op": "add",
+    "path": "/enabled",
+    "value": false,
+    "dependsOn": [{ "modid": "wildfarming", "invert": true }]
+  }
+]

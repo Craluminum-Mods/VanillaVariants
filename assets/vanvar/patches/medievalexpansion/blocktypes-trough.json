@@ -1,0 +1,128 @@
+[
+  {
+    "op": "add",
+    "path": "/attributes/contentConfig/0/foodFor/0",
+    "value": "medievalexpansion:aurochs-*",
+    "file": "vanvar:blocktypes/wood/trough-large.json",
+    "dependsOn":[{"modid":"medievalexpansion"}]
+  },
+  {
+    "op": "add",
+    "path": "/attributes/contentConfig/17/foodFor/0",
+    "value": "medievalexpansion:aurochs-*",
+    "file": "vanvar:blocktypes/wood/trough-large.json",
+    "dependsOn":[{"modid":"medievalexpansion"}]
+  },
+  {
+    "op": "add",
+    "path": "/attributes/contentConfig/16/foodFor/0",
+    "value": "medievalexpansion:aurochs-*",
+    "file": "vanvar:blocktypes/wood/trough-large.json",
+    "dependsOn":[{"modid":"medievalexpansion"}]
+  },
+  {
+    "op": "add",
+    "path": "/attributes/contentConfig/8/foodFor/0",
+    "value": "medievalexpansion:aurochs-*",
+    "file": "vanvar:blocktypes/wood/trough-large.json",
+    "dependsOn":[{"modid":"medievalexpansion"}]
+  },
+  {
+    "op": "add",
+    "path": "/attributes/contentConfig/1/foodFor/0",
+    "value": "medievalexpansion:aurochs-*",
+    "file": "vanvar:blocktypes/wood/trough-large.json",
+    "dependsOn":[{"modid":"medievalexpansion"}]
+  },
+  {
+    "op": "add",
+    "path": "/attributes/contentConfig/2/foodFor/0",
+    "value": "medievalexpansion:aurochs-*",
+    "file": "vanvar:blocktypes/wood/trough-large.json",
+    "dependsOn":[{"modid":"medievalexpansion"}]
+  },
+  {
+    "op": "add",
+    "path": "/attributes/contentConfig/3/foodFor/0",
+    "value": "medievalexpansion:aurochs-*",
+    "file": "vanvar:blocktypes/wood/trough-large.json",
+    "dependsOn":[{"modid":"medievalexpansion"}]
+  },
+  {
+    "op": "add",
+    "path": "/attributes/contentConfig/4/foodFor/0",
+    "value": "medievalexpansion:aurochs-*",
+    "file": "vanvar:blocktypes/wood/trough-large.json",
+    "dependsOn":[{"modid":"medievalexpansion"}]
+  },
+  {
+    "op": "add",
+    "path": "/attributes/contentConfig/5/foodFor/0",
+    "value": "medievalexpansion:aurochs-*",
+    "file": "vanvar:blocktypes/wood/trough-large.json",
+    "dependsOn":[{"modid":"medievalexpansion"}]
+  },
+  {
+    "op": "add",
+    "path": "/attributes/contentConfig/6/foodFor/0",
+    "value": "medievalexpansion:aurochs-*",
+    "file": "vanvar:blocktypes/wood/trough-large.json",
+    "dependsOn":[{"modid":"medievalexpansion"}]
+  },
+  {
+    "op": "add",
+    "path": "/attributes/contentConfig/7/foodFor/0",
+    "value": "medievalexpansion:aurochs-*",
+    "file": "vanvar:blocktypes/wood/trough-large.json",
+    "dependsOn":[{"modid":"medievalexpansion"}]
+  },
+  {
+    "op": "add",
+    "path": "/attributes/contentConfig/9/foodFor/0",
+    "value": "medievalexpansion:aurochs-*",
+    "file": "vanvar:blocktypes/wood/trough-large.json",
+    "dependsOn":[{"modid":"medievalexpansion"}]
+  },
+  {
+    "op": "add",
+    "path": "/attributes/contentConfig/10/foodFor/0",
+    "value": "medievalexpansion:aurochs-*",
+    "file": "vanvar:blocktypes/wood/trough-large.json",
+    "dependsOn":[{"modid":"medievalexpansion"}]
+  },
+  {
+    "op": "add",
+    "path": "/attributes/contentConfig/11/foodFor/0",
+    "value": "medievalexpansion:aurochs-*",
+    "file": "vanvar:blocktypes/wood/trough-large.json",
+    "dependsOn":[{"modid":"medievalexpansion"}]
+  },
+  {
+    "op": "add",
+    "path": "/attributes/contentConfig/12/foodFor/0",
+    "value": "medievalexpansion:aurochs-*",
+    "file": "vanvar:blocktypes/wood/trough-large.json",
+    "dependsOn":[{"modid":"medievalexpansion"}]
+  },
+  {
+    "op": "add",
+    "path": "/attributes/contentConfig/13/foodFor/0",
+    "value": "medievalexpansion:aurochs-*",
+    "file": "vanvar:blocktypes/wood/trough-large.json",
+    "dependsOn":[{"modid":"medievalexpansion"}]
+  },
+  {
+    "op": "add",
+    "path": "/attributes/contentConfig/14/foodFor/0",
+    "value": "medievalexpansion:aurochs-*",
+    "file": "vanvar:blocktypes/wood/trough-large.json",
+    "dependsOn":[{"modid":"medievalexpansion"}]
+  },
+  {
+    "op": "add",
+    "path": "/attributes/contentConfig/15/foodFor/0",
+    "value": "medievalexpansion:aurochs-*",
+    "file": "vanvar:blocktypes/wood/trough-large.json",
+    "dependsOn":[{"modid":"medievalexpansion"}]
+  }
+]

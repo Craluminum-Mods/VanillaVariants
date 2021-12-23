@@ -1,0 +1,61 @@
+[
+  {
+    "op": "add",
+    "path": "/attributes",
+    "value": {
+      "handbook": {
+        "groupBy": ["shelf-*"]
+      }
+    },
+    "file": "blocktypes/wood/shelf.json"
+  },
+  {
+    "op": "add",
+    "path": "/skipVariants",
+    "value": ["*-oak-*"],
+    "file": "blocktypes/wood/shelf.json"
+  },
+  {
+    "op": "add",
+    "path": "/texturesByType",
+    "value": {
+      "*-normal-*": {
+        "wood2": {
+          "base": "block/wood/shelf/wood"
+        },
+        "surface": {
+          "base": "block/wood/shelf/surface"
+        }
+      },
+      "*": {
+        "surface": {
+          "base": "block/wood/debarked/{type}",
+          "overlays": ["vanvar:block/shelf/surface"]
+        },
+        "wood2": {
+          "base": "block/wood/debarked/{type}",
+          "overlays": ["vanvar:block/shelf/wood"]
+        }
+      }
+    },
+    "file": "blocktypes/wood/shelf.json"
+  },
+  {
+    "op": "add",
+    "path": "/creativeinventory/vanvar",
+    "value": ["*-east"],
+    "file": "blocktypes/wood/shelf.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/loadFromProperties",
+    "value": "block/wood",
+    "file": "blocktypes/wood/shelf.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "aged",
+    "file": "blocktypes/wood/shelf.json"
+  }
+]

@@ -1,0 +1,70 @@
+[
+  {
+    "op": "add",
+    "path": "/skipVariants",
+    "value": ["*-oak-*"],
+    "file": "blocktypes/wood/trough-large.json"
+  },
+  {
+    "op": "add",
+    "path": "/creativeinventory/vanvar",
+    "value": ["*-head-north"],
+    "file": "blocktypes/wood/trough-large.json"
+  },
+  {
+    "op": "add",
+    "path": "/textures/bottom-inside",
+    "value": {
+      "baseByType": {
+        "*-genericwood-*": "block/wood/trough/large/bottom-inside",
+        "*": "block/wood/debarked/{material}"
+      }
+    },
+    "file": "blocktypes/wood/trough-large.json"
+  },
+  {
+    "op": "add",
+    "path": "/textures/legs",
+    "value": {
+      "baseByType": {
+        "*-genericwood-*": "block/wood/trough/large/legs",
+        "*": "block/wood/debarked/{material}"
+      }
+    },
+    "file": "blocktypes/wood/trough-large.json"
+  },
+  {
+    "op": "add",
+    "path": "/textures/outer-ring",
+    "value": {
+      "baseByType": {
+        "*-genericwood-*": "block/wood/trough/large/outer-ring",
+        "*": "block/wood/debarked/{material}"
+      }
+    },
+    "file": "blocktypes/wood/trough-large.json"
+  },
+  {
+    "op": "add",
+    "path": "/textures/wood",
+    "value": {
+      "baseByType": {
+        "*-genericwood-*": "block/wood/trough/large/wood",
+        "*": "block/wood/debarked/{material}"
+      }
+    },
+    "file": "blocktypes/wood/trough-large.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/loadFromProperties",
+    "value": "block/wood",
+    "file": "blocktypes/wood/trough-large.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "aged",
+    "file": "blocktypes/wood/trough-large.json"
+  }
+]

@@ -1,0 +1,9 @@
+[
+  {
+    "file": "vanvar:recipes/grid/expandedfoods/mixingbowl.json",
+    "op": "add",
+    "path": "/enabled",
+    "value": false,
+    "dependsOn": [{ "modid": "expandedfoods", "invert": true }]
+  }
+]

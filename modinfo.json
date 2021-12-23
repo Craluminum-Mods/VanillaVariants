@@ -1,0 +1,14 @@
+{
+	"type": "content",
+	"name": "Vanilla Variants",
+	"modid": "vanvar",	
+	"version": "1.0.5",
+
+	"description": "Adds wood and stone variants for various blocks and items",
+	"website": "",
+	"authors": [ "Craluminum2413" ],
+
+	"dependencies": {
+		"game": "1.15.0"
+	}
+}

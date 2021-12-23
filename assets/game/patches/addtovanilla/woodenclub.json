@@ -1,0 +1,64 @@
+[
+  {
+    "op": "remove",
+    "path": "/textures",
+    "file": "itemtypes/tool/woodenclub.json"
+  },
+  {
+    "op": "add",
+    "path": "/skipVariants",
+    "value": ["*-oak"],
+    "file": "itemtypes/tool/woodenclub.json"
+  },
+  {
+    "op": "add",
+    "path": "/texturesByType",
+    "value": {
+      "@.*-(normal|scrap|scrapmace)": {
+        "wood": {
+          "base": "item/tool/material/wood"
+        }
+      },
+      "*": {
+        "woodenclub": {
+          "base": "block/wood/debarked/{type}"
+        }
+      }
+    },
+    "file": "itemtypes/tool/woodenclub.json"
+  },
+  {
+    "op": "add",
+    "path": "/attributes/handbook",
+    "value": {
+      "groupBy": ["woodenclub-*"]
+    },
+    "file": "itemtypes/tool/woodenclub.json"
+  },
+  {
+    "op": "add",
+    "path": "/creativeinventory/vanvar",
+    "value": ["*"],
+    "file": "itemtypes/tool/woodenclub.json"
+  },
+  {
+    "op": "add",
+    "path": "/shapeByType/*",
+    "value": {
+      "base": "item/tool/woodenclub"
+    },
+    "file": "itemtypes/tool/woodenclub.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/loadFromProperties",
+    "value": "block/wood",
+    "file": "itemtypes/tool/woodenclub.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "aged",
+    "file": "itemtypes/tool/woodenclub.json"
+  }
+]

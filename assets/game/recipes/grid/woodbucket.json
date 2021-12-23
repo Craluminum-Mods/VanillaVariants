@@ -1,0 +1,10 @@
+{
+	"ingredientPattern": "_F_,W_W,WWW",
+	"ingredients": {
+		"F": { "type": "item", "code": "flaxtwine" },
+		"W": { "type": "item", "code": "plank-oak" }
+	},
+	"width": 3,
+	"height": 3,
+	"output": { "type": "block", "code": "woodbucket" }
+}

@@ -1,0 +1,125 @@
+[
+  {
+    "op": "add",
+    "path": "/shapeinventoryByType",
+    "value": {
+      "@.*-(wood|rope)-.*": {
+        "base": "block/{material}/ladder-inventory"
+      },
+      "*": {
+        "base": "block/wood/ladder-inventory"
+      }
+    },
+    "file": "blocktypes/wood/ladder.json"
+  },
+  {
+    "op": "add",
+    "path": "/skipVariants",
+    "value": ["*-oak-*"],
+    "file": "blocktypes/wood/ladder.json"
+  },
+  {
+    "op": "add",
+    "path": "/texturesByType",
+    "value": {
+      "*-wood-*": {
+        "ladder": {
+          "base": "block/wood/ladder"
+        }
+      },
+      "*-rope-*": {
+        "rope": {
+          "base": "block/locustnest/stalagmite/rope"
+        },
+        "aged": {
+          "base": "block/wood/debarked/aged"
+        }
+      },
+      "*": {
+        "ladder": {
+          "base": "block/wood/debarked/{material}",
+          "rotation": 90
+        }
+      }
+    },
+    "file": "blocktypes/wood/ladder.json"
+  },
+  {
+    "op": "add",
+    "path": "/creativeinventory/vanvar",
+    "value": ["ladder-{material}-north"],
+    "file": "blocktypes/wood/ladder.json"
+  },
+  {
+    "op": "add",
+    "path": "/shapebytype/@.*-(wood|rope)-east",
+    "value": {
+      "base": "block/{material}/ladder",
+      "rotateY": 270
+    },
+    "file": "blocktypes/wood/ladder.json"
+  },
+  {
+    "op": "add",
+    "path": "/shapebytype/@.*-(wood|rope)-north",
+    "value": {
+      "base": "block/{material}/ladder",
+      "rotateY": 0
+    },
+    "file": "blocktypes/wood/ladder.json"
+  },
+  {
+    "op": "add",
+    "path": "/shapebytype/@.*-(wood|rope)-south",
+    "value": {
+      "base": "block/{material}/ladder",
+      "rotateY": 180
+    },
+    "file": "blocktypes/wood/ladder.json"
+  },
+  {
+    "op": "add",
+    "path": "/shapebytype/@.*-(wood|rope)-west",
+    "value": {
+      "base": "block/{material}/ladder",
+      "rotateY": 90
+    },
+    "file": "blocktypes/wood/ladder.json"
+  },
+  {
+    "op": "replace",
+    "path": "/shapebytype/*-east/base",
+    "value": "block/wood/ladder",
+    "file": "blocktypes/wood/ladder.json"
+  },
+  {
+    "op": "replace",
+    "path": "/shapebytype/*-north/base",
+    "value": "block/wood/ladder",
+    "file": "blocktypes/wood/ladder.json"
+  },
+  {
+    "op": "replace",
+    "path": "/shapebytype/*-south/base",
+    "value": "block/wood/ladder",
+    "file": "blocktypes/wood/ladder.json"
+  },
+  {
+    "op": "replace",
+    "path": "/shapebytype/*-west/base",
+    "value": "block/wood/ladder",
+    "file": "blocktypes/wood/ladder.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/loadFromProperties",
+    "value": "block/wood",
+    "file": "blocktypes/wood/ladder.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "aged",
+    "file": "blocktypes/wood/ladder.json"
+  }
+]

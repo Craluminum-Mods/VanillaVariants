@@ -1,0 +1,58 @@
+{
+	"code": "signpost",
+	"creativeinventory": { "general": ["*"], "decorative": ["*"], "vanvar": ["*"] },
+	"class": "BlockSignPost",
+	"entityclass": "SignPost",
+	"attributes": { "handbook": { "groupBy": ["signpost-*"] } },
+	"variantgroups": [
+		{ "code": "type", "states": ["aged"], "loadFromProperties": "block/wood" }
+	],
+	"skipVariants": [ "*-oak" ],
+	"shape": { "base": "game:block/wood/signpost/post" },
+	"shapeInventory": { "base": "game:block/wood/signpost/inventory" },
+	"textures": {
+		"all": { "base": "game:block/wood/debarked/{type}" }
+	},
+	"blockmaterial": "Wood",
+	"lightAbsorption": 0,
+	"faceCullMode": "neverCull",
+	"sidesolid": {
+		"all": false
+	},
+	"sideopaque": {
+		"all": false
+	},
+	"replaceable": 500,
+	"resistance": 3,
+	"combustibleProps": {
+		"burnTemperature": 600,
+		"burnDuration": 10
+	},
+	"sounds": {
+		"place": "game:block/planks",
+		"hit": "game:block/planks",
+		"break": "game:block/planks",
+		"walk": "game:walk/wood"
+	},
+	"rainPermeable": true,
+	"materialDensity": 600,
+	"guiTransform": {
+		"rotation": { "x": 20, "y": 135, "z": 0 },
+		"origin": { "x": 0.5, "y": 1, "z": 0.5 },
+		"scale": 0.76
+	},
+	"tpHandTransform": {
+		"translation": { "x": -0.88, "y": 0, "z": -0.88 },
+		"rotation": { "x": 0, "y": 0, "z": -89 },
+		"origin": { "x": 0.5, "y": 0, "z": 0.5 },
+		"scale": 0.52
+	},
+	"groundTransform": {
+		"translation": { "x": 0, "y": 0.24, "z": 0 },
+		"rotation": { "x": -90, "y": 0, "z": -11 },
+		"origin": { "x": 0.5, "y": 0, "z": 0.5 },
+		"scale": 3
+	},
+	"selectionBox": { "x1": 0.25, "y1": 0, "z1": 0.25, "x2": 0.75, "y2": 2, "z2": 0.75 },
+	"collisionBox": { "x1": 0.4375, "y1": 0, "z1": 0.4375, "x2": 0.5625, "y2": 2, "z2": 0.5625 }
+}

@@ -1,0 +1,171 @@
+[
+  {
+    "ingredientPattern": "K,H",
+    "enabled": true,
+    "shapeless": true,
+    "ingredients": {
+      "K": { "type": "block", "code": "game:pan-aged", "returnedStack": { "type": "block", "code": "game:pan-aged" } },
+      "H": { "type": "item", "code": "game:grain-*", "quantity": 2, "name": "type", "allowedVariants": ["flax", "rice", "rye", "spelt", "amaranth", "sunflower"]}
+    },
+    "name": "grainseeds",
+    "width": 1,
+    "height": 2,
+    "output": { "type": "item", "code": "game:seeds-{type}", "quantity": 1}
+  },
+  {
+    "ingredientPattern": "K,H",
+    "enabled": true,
+    "shapeless": true,
+    "ingredients": {
+      "K": { "type": "block", "code": "game:pan-birch", "returnedStack": { "type": "block", "code": "game:pan-birch" } },
+      "H": { "type": "item", "code": "game:grain-*", "quantity": 2, "name": "type", "allowedVariants": ["flax", "rice", "rye", "spelt", "amaranth", "sunflower"]}
+    },
+    "name": "grainseeds",
+    "width": 1,
+    "height": 2,
+    "output": { "type": "item", "code": "game:seeds-{type}", "quantity": 1}
+  },
+  {
+    "ingredientPattern": "K,H",
+    "enabled": true,
+    "shapeless": true,
+    "ingredients": {
+      "K": { "type": "block", "code": "game:pan-oak", "returnedStack": { "type": "block", "code": "game:pan-oak" } },
+      "H": { "type": "item", "code": "game:grain-*", "quantity": 2, "name": "type", "allowedVariants": ["flax", "rice", "rye", "spelt", "amaranth", "sunflower"]}
+    },
+    "name": "grainseeds",
+    "width": 1,
+    "height": 2,
+    "output": { "type": "item", "code": "game:seeds-{type}", "quantity": 1}
+  },
+  {
+    "ingredientPattern": "K,H",
+    "enabled": true,
+    "shapeless": true,
+    "ingredients": {
+      "K": { "type": "block", "code": "game:pan-maple", "returnedStack": { "type": "block", "code": "game:pan-maple" } },
+      "H": { "type": "item", "code": "game:grain-*", "quantity": 2, "name": "type", "allowedVariants": ["flax", "rice", "rye", "spelt", "amaranth", "sunflower"]}
+    },
+    "name": "grainseeds",
+    "width": 1,
+    "height": 2,
+    "output": { "type": "item", "code": "game:seeds-{type}", "quantity": 1}
+  },
+  {
+    "ingredientPattern": "K,H",
+    "enabled": true,
+    "shapeless": true,
+    "ingredients": {
+      "K": { "type": "block", "code": "game:pan-pine", "returnedStack": { "type": "block", "code": "game:pan-pine" } },
+      "H": { "type": "item", "code": "game:grain-*", "quantity": 2, "name": "type", "allowedVariants": ["flax", "rice", "rye", "spelt", "amaranth", "sunflower"]}
+    },
+    "name": "grainseeds",
+    "width": 1,
+    "height": 2,
+    "output": { "type": "item", "code": "game:seeds-{type}", "quantity": 1}
+  },
+  {
+    "ingredientPattern": "K,H",
+    "enabled": true,
+    "shapeless": true,
+    "ingredients": {
+      "K": { "type": "block", "code": "game:pan-acacia", "returnedStack": { "type": "block", "code": "game:pan-acacia" } },
+      "H": { "type": "item", "code": "game:grain-*", "quantity": 2, "name": "type", "allowedVariants": ["flax", "rice", "rye", "spelt", "amaranth", "sunflower"]}
+    },
+    "name": "grainseeds",
+    "width": 1,
+    "height": 2,
+    "output": { "type": "item", "code": "game:seeds-{type}", "quantity": 1}
+  },
+  {
+    "ingredientPattern": "K,H",
+    "enabled": true,
+    "shapeless": true,
+    "ingredients": {
+      "K": { "type": "block", "code": "game:pan-kapok", "returnedStack": { "type": "block", "code": "game:pan-kapok" } },
+      "H": { "type": "item", "code": "game:grain-*", "quantity": 2, "name": "type", "allowedVariants": ["flax", "rice", "rye", "spelt", "amaranth", "sunflower"]}
+    },
+    "name": "grainseeds",
+    "width": 1,
+    "height": 2,
+    "output": { "type": "item", "code": "game:seeds-{type}", "quantity": 1}
+  },
+  {
+    "ingredientPattern": "K,H",
+    "enabled": true,
+    "shapeless": true,
+    "ingredients": {
+      "K": { "type": "block", "code": "game:pan-baldcypress", "returnedStack": { "type": "block", "code": "game:pan-baldcypress" } },
+      "H": { "type": "item", "code": "game:grain-*", "quantity": 2, "name": "type", "allowedVariants": ["flax", "rice", "rye", "spelt", "amaranth", "sunflower"]}
+    },
+    "name": "grainseeds",
+    "width": 1,
+    "height": 2,
+    "output": { "type": "item", "code": "game:seeds-{type}", "quantity": 1}
+  },
+  {
+    "ingredientPattern": "K,H",
+    "enabled": true,
+    "shapeless": true,
+    "ingredients": {
+      "K": { "type": "block", "code": "game:pan-larch", "returnedStack": { "type": "block", "code": "game:pan-larch" } },
+      "H": { "type": "item", "code": "game:grain-*", "quantity": 2, "name": "type", "allowedVariants": ["flax", "rice", "rye", "spelt", "amaranth", "sunflower"]}
+    },
+    "name": "grainseeds",
+    "width": 1,
+    "height": 2,
+    "output": { "type": "item", "code": "game:seeds-{type}", "quantity": 1}
+  },
+  {
+    "ingredientPattern": "K,H",
+    "enabled": true,
+    "shapeless": true,
+    "ingredients": {
+      "K": { "type": "block", "code": "game:pan-redwood", "returnedStack": { "type": "block", "code": "game:pan-redwood" } },
+      "H": { "type": "item", "code": "game:grain-*", "quantity": 2, "name": "type", "allowedVariants": ["flax", "rice", "rye", "spelt", "amaranth", "sunflower"]}
+    },
+    "name": "grainseeds",
+    "width": 1,
+    "height": 2,
+    "output": { "type": "item", "code": "game:seeds-{type}", "quantity": 1}
+  },
+  {
+    "ingredientPattern": "K,H",
+    "enabled": true,
+    "shapeless": true,
+    "ingredients": {
+      "K": { "type": "block", "code": "game:pan-ebony", "returnedStack": { "type": "block", "code": "game:pan-ebony" } },
+      "H": { "type": "item", "code": "game:grain-*", "quantity": 2, "name": "type", "allowedVariants": ["flax", "rice", "rye", "spelt", "amaranth", "sunflower"]}
+    },
+    "name": "grainseeds",
+    "width": 1,
+    "height": 2,
+    "output": { "type": "item", "code": "game:seeds-{type}", "quantity": 1}
+  },
+  {
+    "ingredientPattern": "K,H",
+    "enabled": true,
+    "shapeless": true,
+    "ingredients": {
+      "K": { "type": "block", "code": "game:pan-walnut", "returnedStack": { "type": "block", "code": "game:pan-walnut" } },
+      "H": { "type": "item", "code": "game:grain-*", "quantity": 2, "name": "type", "allowedVariants": ["flax", "rice", "rye", "spelt", "amaranth", "sunflower"]}
+    },
+    "name": "grainseeds",
+    "width": 1,
+    "height": 2,
+    "output": { "type": "item", "code": "game:seeds-{type}", "quantity": 1}
+  },
+  {
+    "ingredientPattern": "K,H",
+    "enabled": true,
+    "shapeless": true,
+    "ingredients": {
+      "K": { "type": "block", "code": "game:pan-purpleheart", "returnedStack": { "type": "block", "code": "game:pan-purpleheart" } },
+      "H": { "type": "item", "code": "game:grain-*", "quantity": 2, "name": "type", "allowedVariants": ["flax", "rice", "rye", "spelt", "amaranth", "sunflower"]}
+    },
+    "name": "grainseeds",
+    "width": 1,
+    "height": 2,
+    "output": { "type": "item", "code": "game:seeds-{type}", "quantity": 1}
+  }
+]

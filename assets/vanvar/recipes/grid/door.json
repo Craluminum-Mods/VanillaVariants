@@ -1,0 +1,22 @@
+[
+	{
+		"ingredientPattern": "WW,WW,WW",
+		"ingredients": {
+			"W": { "type": "item", "code": "game:plank-*", "name": "wood", "allowedVariants": ["acacia","aged","baldcypress","birch","ebony","kapok","larch","maple","pine","purpleheart","redwood","walnut"] }
+		},
+		"width": 2,
+		"height": 3,
+		"output": { "type": "block", "code": "door-{wood}-plank-north-down-closed-left"  }
+	},
+	{
+		"ingredientPattern": "AS,PS,PS",
+		"ingredients": {
+			"A": { "type": "item", "code": "game:axe-*", "isTool": true  },
+			"P": { "type": "block", "code": "game:log-placed-*-ud", "name": "wood", "allowedVariants": ["acacia","aged","baldcypress","birch","ebony","kapok","larch","maple","pine","purpleheart","redwood","walnut"] },
+			"S": { "type": "item", "code": "game:stick" }
+		},
+		"width": 2,
+		"height": 3,
+		"output": { "type": "block", "code": "door-{wood}-log-north-down-closed-left"  }
+	}
+]

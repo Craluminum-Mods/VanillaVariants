@@ -1,0 +1,56 @@
+[
+  {
+    "op": "add",
+    "path": "/attributes",
+    "value": {
+      "handbook": {
+        "groupBy": ["moldrack-*"]
+      }
+    },
+    "file": "blocktypes/wood/moldrack.json"
+  },
+  {
+    "op": "add",
+    "path": "/skipVariants",
+    "value": ["*-oak-*"],
+    "file": "blocktypes/wood/moldrack.json"
+  },
+  {
+    "op": "add",
+    "path": "/texturesByType",
+    "value": {
+      "*-normal-*": {
+        "surface": {
+          "base": "block/wood/shelf/surface"
+        },
+        "wood": {
+          "base": "block/wood/shelf/wood"
+        }
+      },
+      "*": {
+        "all": {
+          "base": "block/wood/debarked/{type}"
+        }
+      }
+    },
+    "file": "blocktypes/wood/moldrack.json"
+  },
+  {
+    "op": "add",
+    "path": "/creativeinventory/vanvar",
+    "value": ["*-east"],
+    "file": "blocktypes/wood/moldrack.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/loadFromProperties",
+    "value": "block/wood",
+    "file": "blocktypes/wood/moldrack.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "aged",
+    "file": "blocktypes/wood/moldrack.json"
+  }
+]

@@ -1,0 +1,22 @@
+[
+{
+	"ingredientPattern": "P,_,P",
+	"ingredients": {
+		"P": { "type": "item", "code": "plank-oak" }
+	},
+	"width": 1,
+	"height": 3,
+	"output": { "type": "block", "code": "toolrack-north"  },
+	"recipeGroup": 1
+},
+{
+	"ingredientPattern": "SSS,___,SSS",
+	"ingredients": {
+		"S": { "type": "item", "code": "stick" }
+	},
+	"width": 3,
+	"height": 3,
+	"output": { "type": "block", "code": "toolrack-north"  },
+	"recipeGroup": 2
+}
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "ingredientPattern": "P_P,_P_",
+    "ingredients": {
+      "P": { "type": "item", "code": "plank-oak" }
+    },
+    "width": 3,
+    "height": 2,
+    "output": { "type": "block", "code": "trough-genericwood-small-ns" }
+  },
+  {
+    "ingredientPattern": "P_P,_P_",
+    "ingredients": {
+      "P": {
+        "type": "item",
+        "code": "plank-*",
+        "name": "wood",
+        "allowedVariants": [
+          "acacia",
+          "aged",
+          "baldcypress",
+          "birch",
+          "ebony",
+          "kapok",
+          "larch",
+          "maple",
+          "pine",
+          "purpleheart",
+          "redwood",
+          "walnut"
+        ]
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "output": { "type": "block", "code": "trough-{wood}-small-ns" }
+  }
+]

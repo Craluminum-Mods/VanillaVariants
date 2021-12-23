@@ -1,0 +1,9 @@
+[
+  {
+    "file": "vanvar:recipes/grid/expandedfoods/acornhardtack.json",
+    "op": "add",
+    "path": "/enabled",
+    "value": false,
+    "dependsOn": [{ "modid": "expandedfoods", "invert": true }, { "modid": "acorns", "invert": true }]
+  }
+]
