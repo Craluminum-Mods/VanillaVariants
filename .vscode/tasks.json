@@ -1,0 +1,32 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Pack",
+      "type": "shell",
+      "command": [
+        "mkdir ${env:VINTAGE_STORY_DATA}\\Mods\\${workspaceFolderBasename};",
+        "cp -r resources/* ${env:VINTAGE_STORY_DATA}\\Mods\\${workspaceFolderBasename}"
+      ],
+      "presentation": {
+        "reveal": "silent"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Compress",
+      "type": "shell",
+      "command": "C:\\apps\\7-Zip\\7zG.exe",
+      "args": [
+          "a",
+          "-tzip",
+          "${env:VINTAGE_STORY_DATA}\\Mods\\${workspaceFolderBasename}.zip",
+          ".\\resources\\*"
+      ],
+      "presentation": {
+        "reveal": "silent"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

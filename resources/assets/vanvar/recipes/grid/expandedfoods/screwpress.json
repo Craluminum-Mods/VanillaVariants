@@ -1,0 +1,12 @@
+{
+  "ingredientPattern": "_S_,PPP,PBP",
+  "ingredients": {
+    "S": { "type": "item", "code": "game:stick" },
+    "P": { "type": "item", "code": "game:plank-*", "name": "type" },
+    "B": { "type": "block", "code": "vanvar:woodbucket-*" }
+  },
+  "width": 3,
+  "height": 3,
+  "name": "screwpress",
+  "output": { "type": "block", "code": "expandedfoods:screwpress-{type}" }
+}

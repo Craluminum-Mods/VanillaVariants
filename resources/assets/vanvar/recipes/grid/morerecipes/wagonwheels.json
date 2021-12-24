@@ -1,0 +1,231 @@
+[
+  {
+    "ingredientPattern": "HCW,SAR,BBB",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true,
+        "toolDurabilityCost": 10
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true,
+        "toolDurabilityCost": 15
+      },
+      "W": {
+        "type": "item",
+        "code": "game:saw-*",
+        "isTool": true,
+        "toolDurabilityCost": 40
+      },
+      "B": {
+        "type": "item",
+        "code": "game:plank-*",
+        "quantity": 8,
+        "name": "wood",
+        "allowedVariants": [
+          "acacia",
+          "aged",
+          "baldcypress",
+          "birch",
+          "ebony",
+          "kapok",
+          "larch",
+          "maple",
+          "pine",
+          "purpleheart",
+          "redwood",
+          "walnut"
+        ]
+      },
+      "A": { "type": "block", "code": "game:woodenaxle-ud" },
+      "R": { "type": "item", "code": "game:resin", "quantity": 4 },
+      "S": { "type": "item", "code": "game:stick", "quantity": 12 }
+    },
+    "width": 3,
+    "height": 3,
+    "output": {
+      "type": "block",
+      "code": "vanvar:wagonwheels-{wood}-spoked-west"
+    }
+  },
+  {
+    "ingredientPattern": "HCS,BAR,BBB",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true,
+        "toolDurabilityCost": 10
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true,
+        "toolDurabilityCost": 15
+      },
+      "S": {
+        "type": "item",
+        "code": "game:saw-*",
+        "isTool": true,
+        "toolDurabilityCost": 40
+      },
+      "B": {
+        "type": "item",
+        "code": "game:plank-*",
+        "quantity": 8,
+        "name": "wood",
+        "allowedVariants": [
+          "acacia",
+          "aged",
+          "baldcypress",
+          "birch",
+          "ebony",
+          "kapok",
+          "larch",
+          "maple",
+          "pine",
+          "purpleheart",
+          "redwood",
+          "walnut"
+        ]
+      },
+      "A": { "type": "block", "code": "game:woodenaxle-ud" },
+      "R": { "type": "item", "code": "game:resin", "quantity": 4 }
+    },
+    "width": 3,
+    "height": 3,
+    "output": {
+      "type": "block",
+      "code": "vanvar:wagonwheels-{wood}-solid-west"
+    }
+  },
+  {
+    "ingredientPattern": "WA",
+    "ingredients": {
+      "W": {
+        "type": "block",
+        "code": "vanvar:wagonwheels-*-spoked-west",
+        "name": "wood",
+        "allowedVariants": [
+          "acacia",
+          "aged",
+          "baldcypress",
+          "birch",
+          "ebony",
+          "kapok",
+          "larch",
+          "maple",
+          "pine",
+          "purpleheart",
+          "redwood",
+          "walnut"
+        ]
+      },
+      "A": { "type": "block", "code": "game:woodenaxle-ud" }
+    },
+    "width": 2,
+    "height": 1,
+    "shapeless": true,
+    "recipeGroup": 1,
+    "output": {
+      "type": "block",
+      "code": "vanvar:wagonwheels-{wood}-spoked-longaxle-west"
+    }
+  },
+  {
+    "ingredientPattern": "WA",
+    "ingredients": {
+      "W": {
+        "type": "block",
+        "code": "vanvar:wagonwheels-*-solid-west",
+        "name": "wood",
+        "allowedVariants": [
+          "acacia",
+          "aged",
+          "baldcypress",
+          "birch",
+          "ebony",
+          "kapok",
+          "larch",
+          "maple",
+          "pine",
+          "purpleheart",
+          "redwood",
+          "walnut"
+        ]
+      },
+      "A": { "type": "block", "code": "game:woodenaxle-ud" }
+    },
+    "width": 2,
+    "height": 1,
+    "shapeless": true,
+    "recipeGroup": 1,
+    "output": {
+      "type": "block",
+      "code": "vanvar:wagonwheels-{wood}-solid-longaxle-west"
+    }
+  },
+  {
+    "ingredientPattern": "WS",
+    "ingredients": {
+      "W": {
+        "type": "block",
+        "code": "vanvar:wagonwheels-*-spoked-longaxle-west",
+        "name": "wood",
+        "allowedVariants": [
+          "acacia",
+          "aged",
+          "baldcypress",
+          "birch",
+          "ebony",
+          "kapok",
+          "larch",
+          "maple",
+          "pine",
+          "purpleheart",
+          "redwood",
+          "walnut"
+        ]
+      },
+      "S": { "type": "item", "code": "game:saw-*", "isTool": true }
+    },
+    "width": 2,
+    "height": 1,
+    "shapeless": true,
+    "recipeGroup": 1,
+    "output": { "type": "block", "code": "vanvar:wagonwheels-{wood}-spoked-west" }
+  },
+  {
+    "ingredientPattern": "WS",
+    "ingredients": {
+      "W": {
+        "type": "block",
+        "code": "vanvar:wagonwheels-*-solid-longaxle-west",
+        "name": "wood",
+        "allowedVariants": [
+          "acacia",
+          "aged",
+          "baldcypress",
+          "birch",
+          "ebony",
+          "kapok",
+          "larch",
+          "maple",
+          "pine",
+          "purpleheart",
+          "redwood",
+          "walnut"
+        ]
+      },
+      "S": { "type": "item", "code": "game:saw-*", "isTool": true }
+    },
+    "width": 2,
+    "height": 1,
+    "shapeless": true,
+    "recipeGroup": 1,
+    "output": { "type": "block", "code": "vanvar:wagonwheels-{wood}-solid-west" }
+  }
+]

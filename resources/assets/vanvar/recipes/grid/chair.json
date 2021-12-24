@@ -1,0 +1,75 @@
+[
+  {
+    "ingredientPattern": "WLW,W_W",
+    "ingredients": {
+      "W": {
+        "type": "item",
+        "code": "game:plank-*",
+        "name": "wood",
+        "allowedVariants": [
+          "acacia",
+          "aged",
+          "baldcypress",
+          "birch",
+          "ebony",
+          "kapok",
+          "larch",
+          "maple",
+          "pine",
+          "purpleheart",
+          "redwood",
+          "walnut"
+        ]
+      },
+      "L": {
+        "type": "item",
+        "code": "game:cloth-*",
+        "name": "color",
+        "allowedVariants": [
+          "blue",
+          "red",
+          "yellow",
+          "purple",
+          "brown",
+          "green",
+          "orange",
+          "black",
+          "gray",
+          "pink",
+          "white"
+        ]
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "output": { "type": "block", "code": "chair-{wood}-{color}" }
+  },
+  {
+    "ingredientPattern": "WLW,W_W",
+    "ingredients": {
+      "W": {
+        "type": "item",
+        "code": "game:plank-*",
+        "name": "wood",
+        "allowedVariants": [
+          "acacia",
+          "aged",
+          "baldcypress",
+          "birch",
+          "ebony",
+          "kapok",
+          "larch",
+          "maple",
+          "pine",
+          "purpleheart",
+          "redwood",
+          "walnut"
+        ]
+      },
+      "L": { "type": "item", "code": "game:cloth-plain" }
+    },
+    "width": 3,
+    "height": 2,
+    "output": { "type": "block", "code": "chair-{wood}-plain" }
+  }
+]

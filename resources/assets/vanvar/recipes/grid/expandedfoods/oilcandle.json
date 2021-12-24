@@ -1,0 +1,236 @@
+[
+  {
+    "ingredientPattern": "SWS,RWR,PWP",
+    "ingredients": {
+      "S": {
+        "type": "block",
+        "code": "vanvar:woodbucket-*"
+      },
+      "W": { "type": "item", "code": "game:rope" },
+      "R": { "type": "item", "code": "game:resin" },
+      "P": { "type": "block", "code": "game:peatbrick" }
+    },
+    "attributes": {
+      "liquidContainerProps": {
+        "requiresContent": {
+          "type": "item",
+          "code": "expandedfoods:foodoilportion-flax"
+        },
+        "requiresQuantity": 1
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "item", "code": "game:candle", "quantity": 3 }
+  },
+  {
+    "ingredientPattern": "SWS,RWR,PWP",
+    "ingredients": {
+      "S": {
+        "type": "block",
+        "code": "vanvar:woodbucket-*"
+      },
+      "W": { "type": "item", "code": "game:rope" },
+      "R": { "type": "item", "code": "game:resin" },
+      "P": { "type": "block", "code": "game:peatbrick" }
+    },
+    "attributes": {
+      "liquidContainerProps": {
+        "requiresContent": {
+          "type": "item",
+          "code": "expandedfoods:foodoilportion-rice"
+        },
+        "requiresQuantity": 1
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "item", "code": "game:candle", "quantity": 3 }
+  },
+  {
+    "ingredientPattern": "SWS,RWR,PWP",
+    "ingredients": {
+      "S": {
+        "type": "block",
+        "code": "vanvar:woodbucket-*"
+      },
+      "W": { "type": "item", "code": "game:rope" },
+      "R": { "type": "item", "code": "game:resin" },
+      "P": { "type": "block", "code": "game:peatbrick" }
+    },
+    "attributes": {
+      "liquidContainerProps": {
+        "requiresContent": {
+          "type": "item",
+          "code": "expandedfoods:foodoilportion-seed"
+        },
+        "requiresQuantity": 1
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "item", "code": "game:candle", "quantity": 3 }
+  },
+  {
+    "ingredientPattern": "SWS,RWR,PWP",
+    "ingredients": {
+      "S": {
+        "type": "block",
+        "code": "vanvar:woodbucket-*"
+      },
+      "W": { "type": "item", "code": "game:rope" },
+      "R": { "type": "item", "code": "game:resin" },
+      "P": { "type": "block", "code": "game:peatbrick" }
+    },
+    "attributes": {
+      "liquidContainerProps": {
+        "requiresContent": {
+          "type": "item",
+          "code": "expandedfoods:foodoilportion-soy"
+        },
+        "requiresQuantity": 1
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "item", "code": "game:candle", "quantity": 3 }
+  },
+  {
+    "ingredientPattern": "SWS,RWR,PWP",
+    "ingredients": {
+      "S": {
+        "type": "block",
+        "code": "vanvar:woodbucket-*"
+      },
+      "W": { "type": "item", "code": "game:rope" },
+      "R": { "type": "item", "code": "game:resin" },
+      "P": { "type": "block", "code": "game:peatbrick" }
+    },
+    "attributes": {
+      "liquidContainerProps": {
+        "requiresContent": { "type": "item", "code": "expandedfoods:lard" },
+        "requiresQuantity": 1
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "item", "code": "game:candle", "quantity": 3 }
+  },
+  {
+    "ingredientPattern": "SWS,RWR,PWP",
+    "ingredients": {
+      "S": {
+        "type": "block",
+        "code": "vanvar:woodbucket-*"
+      },
+      "W": { "type": "item", "code": "game:rope" },
+      "R": { "type": "item", "code": "game:beeswax" },
+      "P": { "type": "block", "code": "game:peatbrick" }
+    },
+    "attributes": {
+      "liquidContainerProps": {
+        "requiresContent": {
+          "type": "item",
+          "code": "expandedfoods:foodoilportion-flax"
+        },
+        "requiresQuantity": 1
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "item", "code": "game:candle", "quantity": 3 }
+  },
+  {
+    "ingredientPattern": "SWS,RWR,PWP",
+    "ingredients": {
+      "S": {
+        "type": "block",
+        "code": "vanvar:woodbucket-*"
+      },
+      "W": { "type": "item", "code": "game:rope" },
+      "R": { "type": "item", "code": "game:beeswax" },
+      "P": { "type": "block", "code": "game:peatbrick" }
+    },
+    "attributes": {
+      "liquidContainerProps": {
+        "requiresContent": {
+          "type": "item",
+          "code": "expandedfoods:foodoilportion-rice"
+        },
+        "requiresQuantity": 1
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "item", "code": "game:candle", "quantity": 3 }
+  },
+  {
+    "ingredientPattern": "SWS,RWR,PWP",
+    "ingredients": {
+      "S": {
+        "type": "block",
+        "code": "vanvar:woodbucket-*"
+      },
+      "W": { "type": "item", "code": "game:rope" },
+      "R": { "type": "item", "code": "game:beeswax" },
+      "P": { "type": "block", "code": "game:peatbrick" }
+    },
+    "attributes": {
+      "liquidContainerProps": {
+        "requiresContent": {
+          "type": "item",
+          "code": "expandedfoods:foodoilportion-seed"
+        },
+        "requiresQuantity": 1
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "item", "code": "game:candle", "quantity": 3 }
+  },
+  {
+    "ingredientPattern": "SWS,RWR,PWP",
+    "ingredients": {
+      "S": {
+        "type": "block",
+        "code": "vanvar:woodbucket-*"
+      },
+      "W": { "type": "item", "code": "game:rope" },
+      "R": { "type": "item", "code": "game:beeswax" },
+      "P": { "type": "block", "code": "game:peatbrick" }
+    },
+    "attributes": {
+      "liquidContainerProps": {
+        "requiresContent": {
+          "type": "item",
+          "code": "expandedfoods:foodoilportion-soy"
+        },
+        "requiresQuantity": 1
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "item", "code": "game:candle", "quantity": 3 }
+  },
+  {
+    "ingredientPattern": "SWS,RWR,PWP",
+    "ingredients": {
+      "S": {
+        "type": "block",
+        "code": "vanvar:woodbucket-*"
+      },
+      "W": { "type": "item", "code": "game:rope" },
+      "R": { "type": "item", "code": "game:beeswax" },
+      "P": { "type": "block", "code": "game:peatbrick" }
+    },
+    "attributes": {
+      "liquidContainerProps": {
+        "requiresContent": { "type": "item", "code": "expandedfoods:lard" },
+        "requiresQuantity": 1
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "item", "code": "game:candle", "quantity": 3 }
+  }
+]

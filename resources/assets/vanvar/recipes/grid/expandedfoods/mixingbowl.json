@@ -1,0 +1,12 @@
+{
+  "ingredientPattern": "M_,TS,A_",
+  "ingredients": {
+    "M": { "type": "block", "code": "expandedfoods:mixingbowlmini" },
+    "T": { "type": "block", "code": "vanvar:table-*-normal" },
+    "S": { "type": "item", "code": "game:saw-*", "istool": "true" },
+    "A": { "type": "block", "code": "game:woodenaxle-ud" }
+  },
+  "width": 2,
+  "height": 3,
+  "output": { "type": "block", "code": "expandedfoods:mixingbowl-normal" }
+}
