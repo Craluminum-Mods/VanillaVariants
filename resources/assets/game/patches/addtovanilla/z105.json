@@ -278,7 +278,20 @@
       "/bir remapq vanvar:shelf-pine-north game:shelf-pine-north force",
       "/bir remapq vanvar:shelf-purpleheart-north game:shelf-purpleheart-north force",
       "/bir remapq vanvar:shelf-redwood-north game:shelf-redwood-north force",
-      "/bir remapq vanvar:shelf-walnut-north game:shelf-walnut-north force"
+      "/bir remapq vanvar:shelf-walnut-north game:shelf-walnut-north force",
+
+      "/bir remapq vanvar:chair-aged vanvar:chair-aged-plain force",
+      "/bir remapq vanvar:chair-baldcypress vanvar:chair-baldcypress-plain force",
+      "/bir remapq vanvar:chair-birch vanvar:chair-birch-plain force",
+      "/bir remapq vanvar:chair-ebony vanvar:chair-ebony-plain force",
+      "/bir remapq vanvar:chair-kapok vanvar:chair-kapok-plain force",
+      "/bir remapq vanvar:chair-larch vanvar:chair-larch-plain force",
+      "/bir remapq vanvar:chair-maple vanvar:chair-maple-plain force",
+      "/bir remapq vanvar:chair-pine vanvar:chair-pine-plain force",
+      "/bir remapq vanvar:chair-purpleheart vanvar:chair-purpleheart-plain force",
+      "/bir remapq vanvar:chair-redwood vanvar:chair-redwood-plain force",
+      "/bir remapq vanvar:chair-walnut vanvar:chair-walnut-plain force",
+      "/bir remapq vanvar:chair-acacia vanvar:chair-acacia-plain force"
     ],
     "file": "config/remaps.json"
   }
