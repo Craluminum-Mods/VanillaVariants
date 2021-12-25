@@ -8,9 +8,9 @@
 		"liquidContainerProps": {
 			"capacityLitres": 10,
 			"transferSizeLitres": 1,
-			"emptyShapeLoc": "game:shapes/block/wood/bucket/empty",
-			"opaqueContentShapeLoc": "game:shapes/block/wood/bucket/contents",
-			"liquidContentShapeLoc": "game:shapes/block/wood/bucket/liquidcontents",
+			"emptyShapeLoc": "game:block/wood/bucket/empty",
+			"opaqueContentShapeLoc": "game:block/wood/bucket/contents",
+			"liquidContentShapeLoc": "game:block/wood/bucket/liquidcontents",
 			"liquidMaxYTranslate": 0.4375
 		}
 	},
@@ -28,7 +28,8 @@
 	},
 	"blockmaterial": "Wood",
 	"textures": {
-        "sides": { "base": "game:block/wood/debarked/{type}", "overlays": ["block/bucket/sides"] },
+		"wood": { "base": "game:block/wood/debarked/{type}" },
+    "sides": { "base": "game:block/wood/debarked/{type}", "overlays": ["block/bucket/sides"] },
 		"normal1": { "base": "game:block/cloth/linen/normal1" },
 		"inner side": { "base": "game:block/wood/debarked/{type}", "overlays": ["block/bucket/inner side"] }
 	},
