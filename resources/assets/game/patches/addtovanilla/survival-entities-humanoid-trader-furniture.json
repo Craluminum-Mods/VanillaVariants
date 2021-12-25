@@ -1,0 +1,597 @@
+[
+  {
+    "op": "addeach",
+    "path": "/attributes/tradeProps/selling/list/-",
+    "value": [
+      {
+        "code": "vanvar:bed-aged-head-north",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 1, "var": 0.25 },
+        "price": { "avg": 8, "var": 2 }
+      },
+      {
+        "code": "vanvar:bed-birch-head-north",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 1, "var": 0.25 },
+        "price": { "avg": 8, "var": 2 }
+      },
+      {
+        "code": "vanvar:bed-maple-head-north",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 1, "var": 0.25 },
+        "price": { "avg": 8, "var": 2 }
+      },
+      {
+        "code": "vanvar:bed-pine-head-north",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 1, "var": 0.25 },
+        "price": { "avg": 8, "var": 2 }
+      },
+      {
+        "code": "vanvar:bed-acacia-head-north",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 1, "var": 0.25 },
+        "price": { "avg": 8, "var": 2 }
+      },
+      {
+        "code": "vanvar:bed-kapok-head-north",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 1, "var": 0.25 },
+        "price": { "avg": 8, "var": 2 }
+      },
+      {
+        "code": "vanvar:bed-baldcypress-head-north",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 1, "var": 0.25 },
+        "price": { "avg": 8, "var": 2 }
+      },
+      {
+        "code": "vanvar:bed-larch-head-north",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 1, "var": 0.25 },
+        "price": { "avg": 8, "var": 2 }
+      },
+      {
+        "code": "vanvar:bed-redwood-head-north",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 1, "var": 0.25 },
+        "price": { "avg": 8, "var": 2 }
+      },
+      {
+        "code": "vanvar:bed-ebony-head-north",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 1, "var": 0.25 },
+        "price": { "avg": 8, "var": 2 }
+      },
+      {
+        "code": "vanvar:bed-walnut-head-north",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 1, "var": 0.25 },
+        "price": { "avg": 8, "var": 2 }
+      },
+      {
+        "code": "vanvar:bed-purpleheart-head-north",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 1, "var": 0.25 },
+        "price": { "avg": 8, "var": 2 }
+      },
+      {
+        "code": "vanvar:chair-aged-plain",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:chair-birch-plain",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:chair-maple-plain",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:chair-pine-plain",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:chair-acacia-plain",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:chair-kapok-plain",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:chair-baldcypress-plain",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:chair-larch-plain",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:chair-redwood-plain",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:chair-ebony-plain",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:chair-walnut-plain",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:chair-purpleheart-plain",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:door-aged-plank-north-down-closed-left",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:door-birch-plank-north-down-closed-left",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:door-maple-plank-north-down-closed-left",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:door-pine-plank-north-down-closed-left",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:door-acacia-plank-north-down-closed-left",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:door-kapok-plank-north-down-closed-left",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:door-baldcypress-plank-north-down-closed-left",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:door-larch-plank-north-down-closed-left",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:door-redwood-plank-north-down-closed-left",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:door-ebony-plank-north-down-closed-left",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:door-walnut-plank-north-down-closed-left",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:door-purpleheart-plank-north-down-closed-left",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:table-aged-normal",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 2, "var": 0.5 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:table-birch-normal",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 2, "var": 0.5 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:table-maple-normal",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 2, "var": 0.5 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:table-pine-normal",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 2, "var": 0.5 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:table-acacia-normal",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 2, "var": 0.5 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:table-kapok-normal",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 2, "var": 0.5 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:table-baldcypress-normal",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 2, "var": 0.5 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:table-larch-normal",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 2, "var": 0.5 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:table-redwood-normal",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 2, "var": 0.5 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:table-ebony-normal",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 2, "var": 0.5 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:table-walnut-normal",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 2, "var": 0.5 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:table-purpleheart-normal",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 2, "var": 0.5 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "ladder-aged-north",
+        "type": "block",
+        "stacksize": 16,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "ladder-birch-north",
+        "type": "block",
+        "stacksize": 16,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "ladder-maple-north",
+        "type": "block",
+        "stacksize": 16,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "ladder-pine-north",
+        "type": "block",
+        "stacksize": 16,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "ladder-acacia-north",
+        "type": "block",
+        "stacksize": 16,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "ladder-kapok-north",
+        "type": "block",
+        "stacksize": 16,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "ladder-baldcypress-north",
+        "type": "block",
+        "stacksize": 16,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "ladder-larch-north",
+        "type": "block",
+        "stacksize": 16,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "ladder-redwood-north",
+        "type": "block",
+        "stacksize": 16,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "ladder-ebony-north",
+        "type": "block",
+        "stacksize": 16,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "ladder-walnut-north",
+        "type": "block",
+        "stacksize": 16,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "ladder-purpleheart-north",
+        "type": "block",
+        "stacksize": 16,
+        "stock": { "avg": 4, "var": 1 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "shelf-aged-east",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 6, "var": 1.5 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "shelf-birch-east",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 6, "var": 1.5 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "shelf-maple-east",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 6, "var": 1.5 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "shelf-pine-east",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 6, "var": 1.5 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "shelf-acacia-east",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 6, "var": 1.5 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "shelf-kapok-east",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 6, "var": 1.5 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "shelf-baldcypress-east",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 6, "var": 1.5 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "shelf-larch-east",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 6, "var": 1.5 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "shelf-redwood-east",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 6, "var": 1.5 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "shelf-ebony-east",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 6, "var": 1.5 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "shelf-walnut-east",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 6, "var": 1.5 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "shelf-purpleheart-east",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 6, "var": 1.5 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:barrel-aged",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 8, "var": 2 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:barrel-birch",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 8, "var": 2 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:barrel-maple",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 8, "var": 2 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:barrel-pine",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 8, "var": 2 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:barrel-acacia",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 8, "var": 2 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:barrel-kapok",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 8, "var": 2 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:barrel-baldcypress",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 8, "var": 2 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:barrel-larch",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 8, "var": 2 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:barrel-redwood",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 8, "var": 2 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:barrel-ebony",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 8, "var": 2 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:barrel-walnut",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 8, "var": 2 },
+        "price": { "avg": 2, "var": 0.5 }
+      },
+      {
+        "code": "vanvar:barrel-purpleheart",
+        "type": "block",
+        "stacksize": 1,
+        "stock": { "avg": 8, "var": 2 },
+        "price": { "avg": 2, "var": 0.5 }
+      }
+    ],
+    "file": "entities/humanoid/trader-furniture.json"
+  }
+]
