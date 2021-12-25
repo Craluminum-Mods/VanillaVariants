@@ -1,0 +1,30 @@
+[
+  {
+    "file": "vanvar:blocktypes/wood/bucket.json",
+    "op": "add",
+    "path": "/enabled",
+    "value": false,
+    "condition": { "when": "VVWoodBucketEnabled", "isValue": "false" }
+  },
+  {
+    "file": "game:recipes/grid/woodbucket.json",
+    "op": "add",
+    "path": "/enabled",
+    "value": false,
+    "condition": { "when": "VVWoodBucketEnabled", "isValue": "true" }
+  },
+  {
+    "file": "vanvar:recipes/grid/woodbucket.json",
+    "op": "add",
+    "path": "/0/enabled",
+    "value": false,
+    "condition": { "when": "VVWoodBucketEnabled", "isValue": "false" }
+  },
+  {
+    "file": "vanvar:recipes/grid/woodbucket.json",
+    "op": "add",
+    "path": "/1/enabled",
+    "value": false,
+    "condition": { "when": "VVWoodBucketEnabled", "isValue": "false" }
+  }
+]

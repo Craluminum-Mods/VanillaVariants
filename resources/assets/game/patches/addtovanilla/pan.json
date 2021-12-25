@@ -3,16 +3,16 @@
     "op": "add",
     "path": "/variantgroups/0/states/-",
     "value": "aged",
-    "file": "blocktypes/wood/pan.json"
+    "file": "blocktypes/wood/pan.json",
+    "condition": { "when": "VVWoodenPanEnabled", "isValue": "true" }
   },
-
   {
     "op": "add",
     "path": "/variantgroups/0/loadFromProperties",
     "value": "block/wood",
-    "file": "blocktypes/wood/pan.json"
+    "file": "blocktypes/wood/pan.json",
+    "condition": { "when": "VVWoodenPanEnabled", "isValue": "true" }
   },
-
   {
     "op": "add",
     "path": "/texturesByType",
@@ -24,27 +24,28 @@
         "all": { "base": "block/wood/debarked/{type}" }
       }
     },
-    "file": "blocktypes/wood/pan.json"
+    "file": "blocktypes/wood/pan.json",
+    "condition": { "when": "VVWoodenPanEnabled", "isValue": "true" }
   },
-
   {
     "op": "add",
     "path": "/skipVariants",
     "value": ["*-oak"],
-    "file": "blocktypes/wood/pan.json"
+    "file": "blocktypes/wood/pan.json",
+    "condition": { "when": "VVWoodenPanEnabled", "isValue": "true" }
   },
-
   {
     "op": "add",
     "path": "/attributes/handbook",
     "value": { "groupBy": ["pan-*"] },
-    "file": "blocktypes/wood/pan.json"
+    "file": "blocktypes/wood/pan.json",
+    "condition": { "when": "VVWoodenPanEnabled", "isValue": "true" }
   },
-
   {
     "op": "add",
     "path": "/creativeinventory/vanvar",
     "value": ["*"],
-    "file": "blocktypes/wood/pan.json"
+    "file": "blocktypes/wood/pan.json",
+    "condition": { "when": "VVWoodenPanEnabled", "isValue": "true" }
   }
 ]

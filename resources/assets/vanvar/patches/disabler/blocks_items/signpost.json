@@ -1,0 +1,30 @@
+[
+  {
+    "file": "vanvar:blocktypes/wood/signpost.json",
+    "op": "add",
+    "path": "/enabled",
+    "value": false,
+    "condition": { "when": "VVSignpostEnabled", "isValue": "false" }
+  },
+  {
+    "file": "game:recipes/grid/signpost.json",
+    "op": "add",
+    "path": "/enabled",
+    "value": false,
+    "condition": { "when": "VVSignpostEnabled", "isValue": "true" }
+  },
+  {
+    "file": "vanvar:recipes/grid/signpost.json",
+    "op": "add",
+    "path": "/0/enabled",
+    "value": false,
+    "condition": { "when": "VVSignpostEnabled", "isValue": "false" }
+  },
+  {
+    "file": "vanvar:recipes/grid/signpost.json",
+    "op": "add",
+    "path": "/1/enabled",
+    "value": false,
+    "condition": { "when": "VVSignpostEnabled", "isValue": "false" }
+  }
+]

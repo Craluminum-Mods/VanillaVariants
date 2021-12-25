@@ -1,28 +1,40 @@
-{
-  "ingredientPattern": "_F_,W_W,WWW",
-  "ingredients": {
-    "F": { "type": "item", "code": "game:flaxtwine" },
-    "W": {
-      "type": "item",
-      "code": "game:plank-*",
-      "name": "wood",
-      "allowedVariants": [
-        "acacia",
-        "aged",
-        "baldcypress",
-        "birch",
-        "ebony",
-        "kapok",
-        "larch",
-        "maple",
-        "pine",
-        "purpleheart",
-        "redwood",
-        "walnut"
-      ]
-    }
+[
+  {
+    "ingredientPattern": "_F_,W_W,WWW",
+    "ingredients": {
+      "F": { "type": "item", "code": "game:flaxtwine" },
+      "W": { "type": "item", "code": "game:plank-oak" }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "game:woodbucket" }
   },
-  "width": 3,
-  "height": 3,
-  "output": { "type": "block", "code": "woodbucket-{wood}" }
-}
+  {
+    "ingredientPattern": "_F_,W_W,WWW",
+    "ingredients": {
+      "F": { "type": "item", "code": "game:flaxtwine" },
+      "W": {
+        "type": "item",
+        "code": "game:plank-*",
+        "name": "wood",
+        "allowedVariants": [
+          "acacia",
+          "aged",
+          "baldcypress",
+          "birch",
+          "ebony",
+          "kapok",
+          "larch",
+          "maple",
+          "pine",
+          "purpleheart",
+          "redwood",
+          "walnut"
+        ]
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "woodbucket-{wood}" }
+  }
+]

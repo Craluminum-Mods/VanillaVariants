@@ -82,18 +82,18 @@
 	"block-trough-walnut-large-head-*": "Большое корыто (грецкий орех)",
 	"block-trough-walnut-small-*": "Малое корыто (грецкий орех)",
 
-	"item-woodenclub-acacia-*": "Деревянная дубинка (акация)",
-	"item-woodenclub-aged-*": "Деревянная дубинка (древняя)",
-	"item-woodenclub-baldcypress-*": "Деревянная дубинка (болотный кипарис)",
-	"item-woodenclub-birch-*": "Деревянная дубинка (береза)",
-	"item-woodenclub-ebony-*": "Деревянная дубинка (черное дерево)",
-	"item-woodenclub-kapok-*": "Деревянная дубинка (капок)",
-	"item-woodenclub-larch-*": "Деревянная дубинка (лиственница)",
-	"item-woodenclub-maple-*": "Деревянная дубинка (клен)",
-	"item-woodenclub-normal-*": "Деревянная дубинка (дуб)",
-	"item-woodenclub-pine-*": "Деревянная дубинка (сосна)",
-	"item-woodenclub-purpleheart-*": "Деревянная дубинка (пелтогин)",
-	"item-woodenclub-redwood-*": "Деревянная дубинка (секвойя)",
-	"item-woodenclub-walnut-*": "Деревянная дубинка (грецкий орех)"
+	"item-woodenclub-acacia": "Деревянная дубинка (акация)",
+	"item-woodenclub-aged": "Деревянная дубинка (древняя)",
+	"item-woodenclub-baldcypress": "Деревянная дубинка (болотный кипарис)",
+	"item-woodenclub-birch": "Деревянная дубинка (береза)",
+	"item-woodenclub-ebony": "Деревянная дубинка (черное дерево)",
+	"item-woodenclub-kapok": "Деревянная дубинка (капок)",
+	"item-woodenclub-larch": "Деревянная дубинка (лиственница)",
+	"item-woodenclub-maple": "Деревянная дубинка (клен)",
+	"item-woodenclub-normal": "Деревянная дубинка (дуб)",
+	"item-woodenclub-pine": "Деревянная дубинка (сосна)",
+	"item-woodenclub-purpleheart": "Деревянная дубинка (пелтогин)",
+	"item-woodenclub-redwood": "Деревянная дубинка (секвойя)",
+	"item-woodenclub-walnut": "Деревянная дубинка (грецкий орех)"
 
 }

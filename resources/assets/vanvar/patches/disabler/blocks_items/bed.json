@@ -1,0 +1,30 @@
+[
+  {
+    "file": "vanvar:blocktypes/wood/bed.json",
+    "op": "add",
+    "path": "/enabled",
+    "value": false,
+    "condition": { "when": "VVBedEnabled", "isValue": "false" }
+  },
+  {
+    "file": "game:recipes/grid/bed.json",
+    "op": "add",
+    "path": "/enabled",
+    "value": false,
+    "condition": { "when": "VVBedEnabled", "isValue": "true" }
+  },
+  {
+    "file": "vanvar:recipes/grid/bed.json",
+    "op": "add",
+    "path": "/0/enabled",
+    "value": false,
+    "condition": { "when": "VVBedEnabled", "isValue": "false" }
+  },
+  {
+    "file": "vanvar:recipes/grid/bed.json",
+    "op": "add",
+    "path": "/1/enabled",
+    "value": false,
+    "condition": { "when": "VVBedEnabled", "isValue": "false" }
+  }
+]

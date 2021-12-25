@@ -1,0 +1,40 @@
+[
+  {
+    "ingredientPattern": "A,L",
+    "ingredients": {
+      "A": { "type": "item", "code": "game:knife-*", "isTool": true },
+      "L": { "type": "block", "code": "game:log-placed-oak-ud" }
+    },
+    "width": 1,
+    "height": 2,
+    "output": { "type": "item", "code": "game:woodenclub-normal" }
+  },
+  {
+    "ingredientPattern": "A,L",
+    "ingredients": {
+      "A": { "type": "item", "code": "game:knife-*", "isTool": true },
+      "L": {
+        "type": "block",
+        "code": "game:log-placed-*-ud",
+        "name": "wood",
+        "allowedVariants": [
+          "acacia",
+          "aged",
+          "baldcypress",
+          "birch",
+          "ebony",
+          "kapok",
+          "larch",
+          "maple",
+          "pine",
+          "purpleheart",
+          "redwood",
+          "walnut"
+        ]
+      }
+    },
+    "width": 1,
+    "height": 2,
+    "output": { "type": "item", "code": "game:woodenclub-{wood}" }
+  }
+]

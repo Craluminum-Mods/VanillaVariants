@@ -1,0 +1,23 @@
+[
+  {
+    "file": "game:recipes/grid/shelf.json",
+    "op": "add",
+    "path": "/enabled",
+    "value": false,
+    "condition": { "when": "VVShelfEnabled", "isValue": "true" }
+  },
+  {
+    "file": "vanvar:recipes/grid/shelf.json",
+    "op": "add",
+    "path": "/0/enabled",
+    "value": false,
+    "condition": { "when": "VVShelfEnabled", "isValue": "false" }
+  },
+  {
+    "file": "vanvar:recipes/grid/shelf.json",
+    "op": "add",
+    "path": "/1/enabled",
+    "value": false,
+    "condition": { "when": "VVShelfEnabled", "isValue": "false" }
+  }
+]

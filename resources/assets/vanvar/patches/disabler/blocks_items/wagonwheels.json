@@ -1,0 +1,9 @@
+[
+  {
+    "file": "vanvar:blocktypes/wood/wagonwheels.json",
+    "op": "add",
+    "path": "/enabled",
+    "value": false,
+    "condition": { "when": "VVWagonWheelsEnabled", "isValue": "false" }
+  }
+]

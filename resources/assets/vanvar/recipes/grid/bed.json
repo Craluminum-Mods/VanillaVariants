@@ -1,30 +1,43 @@
-{
-  "ingredientPattern": "L__,HHH,WWW",
-  "ingredients": {
-    "L": { "type": "block", "code": "game:linen-*" },
-    "H": { "type": "block", "code": "game:hay-normal" },
-    "W": {
-      "type": "item",
-      "code": "game:plank-*",
-      "quantity": 2,
-      "name": "wood",
-      "allowedVariants": [
-        "acacia",
-        "aged",
-        "baldcypress",
-        "birch",
-        "ebony",
-        "kapok",
-        "larch",
-        "maple",
-        "pine",
-        "purpleheart",
-        "redwood",
-        "walnut"
-      ]
-    }
+[
+  {
+    "ingredientPattern": "L__,HHH,WWW",
+    "ingredients": {
+      "L": { "type": "block", "code": "game:linen-*" },
+      "H": { "type": "block", "code": "game:hay-normal" },
+      "W": { "type": "item", "code": "game:plank-oak", "quantity": 2 }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "game:bed-wood-head-north" }
   },
-  "width": 3,
-  "height": 3,
-  "output": { "type": "block", "code": "bed-{wood}-head-north" }
-}
+  {
+    "ingredientPattern": "L__,HHH,WWW",
+    "ingredients": {
+      "L": { "type": "block", "code": "game:linen-*" },
+      "H": { "type": "block", "code": "game:hay-normal" },
+      "W": {
+        "type": "item",
+        "code": "game:plank-*",
+        "quantity": 2,
+        "name": "wood",
+        "allowedVariants": [
+          "acacia",
+          "aged",
+          "baldcypress",
+          "birch",
+          "ebony",
+          "kapok",
+          "larch",
+          "maple",
+          "pine",
+          "purpleheart",
+          "redwood",
+          "walnut"
+        ]
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "bed-{wood}-head-north" }
+  }
+]

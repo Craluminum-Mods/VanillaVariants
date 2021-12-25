@@ -7,13 +7,15 @@
         "groupBy": ["shelf-*"]
       }
     },
-    "file": "blocktypes/wood/shelf.json"
+    "file": "blocktypes/wood/shelf.json",
+    "condition": { "when": "VVShelfEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/skipVariants",
     "value": ["*-oak-*"],
-    "file": "blocktypes/wood/shelf.json"
+    "file": "blocktypes/wood/shelf.json",
+    "condition": { "when": "VVShelfEnabled", "isValue": "true" }
   },
   {
     "op": "add",
@@ -38,24 +40,28 @@
         }
       }
     },
-    "file": "blocktypes/wood/shelf.json"
+    "file": "blocktypes/wood/shelf.json",
+    "condition": { "when": "VVShelfEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/vanvar",
     "value": ["*-east"],
-    "file": "blocktypes/wood/shelf.json"
+    "file": "blocktypes/wood/shelf.json",
+    "condition": { "when": "VVShelfEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/variantgroups/0/loadFromProperties",
     "value": "block/wood",
-    "file": "blocktypes/wood/shelf.json"
+    "file": "blocktypes/wood/shelf.json",
+    "condition": { "when": "VVShelfEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/variantgroups/0/states/-",
     "value": "aged",
-    "file": "blocktypes/wood/shelf.json"
+    "file": "blocktypes/wood/shelf.json",
+    "condition": { "when": "VVShelfEnabled", "isValue": "true" }
   }
 ]

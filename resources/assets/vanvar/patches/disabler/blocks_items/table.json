@@ -1,0 +1,93 @@
+[
+  {
+    "file": "vanvar:blocktypes/wood/table.json",
+    "op": "add",
+    "path": "/enabled",
+    "value": false,
+    "condition": { "when": "VVTableEnabled", "isValue": "false" }
+  },
+  {
+    "file": "game:recipes/grid/table.json",
+    "op": "add",
+    "path": "/0/enabled",
+    "value": false,
+    "condition": { "when": "VVTableEnabled", "isValue": "true" }
+  },
+  {
+    "file": "game:recipes/grid/table.json",
+    "op": "add",
+    "path": "/1/enabled",
+    "value": false,
+    "condition": { "when": "VVTableEnabled", "isValue": "true" }
+  },
+  {
+    "file": "game:recipes/grid/table.json",
+    "op": "add",
+    "path": "/2/enabled",
+    "value": false,
+    "condition": { "when": "VVTableEnabled", "isValue": "true" }
+  },
+  {
+    "file": "game:recipes/grid/table.json",
+    "op": "add",
+    "path": "/3/enabled",
+    "value": false,
+    "condition": { "when": "VVTableEnabled", "isValue": "true" }
+  },
+  {
+    "file": "vanvar:recipes/grid/table.json",
+    "op": "add",
+    "path": "/0/enabled",
+    "value": false,
+    "condition": { "when": "VVTableEnabled", "isValue": "false" }
+  },
+  {
+    "file": "vanvar:recipes/grid/table.json",
+    "op": "add",
+    "path": "/1/enabled",
+    "value": false,
+    "condition": { "when": "VVTableEnabled", "isValue": "false" }
+  },
+  {
+    "file": "vanvar:recipes/grid/table.json",
+    "op": "add",
+    "path": "/2/enabled",
+    "value": false,
+    "condition": { "when": "VVTableEnabled", "isValue": "false" }
+  },
+  {
+    "file": "vanvar:recipes/grid/table.json",
+    "op": "add",
+    "path": "/3/enabled",
+    "value": false,
+    "condition": { "when": "VVTableEnabled", "isValue": "false" }
+  },
+  {
+    "file": "vanvar:recipes/grid/table.json",
+    "op": "add",
+    "path": "/4/enabled",
+    "value": false,
+    "condition": { "when": "VVTableEnabled", "isValue": "false" }
+  },
+  {
+    "file": "vanvar:recipes/grid/table.json",
+    "op": "add",
+    "path": "/5/enabled",
+    "value": false,
+    "condition": { "when": "VVTableEnabled", "isValue": "false" }
+  },
+  {
+    "file": "vanvar:recipes/grid/table.json",
+    "op": "add",
+    "path": "/6/enabled",
+    "value": false,
+    "condition": { "when": "VVTableEnabled", "isValue": "false" }
+  },
+  {
+    "file": "vanvar:recipes/grid/table.json",
+    "op": "add",
+    "path": "/7/enabled",
+    "value": false,
+    "condition": { "when": "VVTableEnabled", "isValue": "false" }
+  }
+]

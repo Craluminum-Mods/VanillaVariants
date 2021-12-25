@@ -1,29 +1,41 @@
-{
-  "ingredientPattern": "G,P",
-  "ingredients": {
-    "G": { "type": "block", "code": "game:glass-plain" },
-    "P": {
-      "type": "item",
-      "code": "game:plank-*",
-      "quantity": 2,
-      "name": "wood",
-      "allowedVariants": [
-        "acacia",
-        "aged",
-        "baldcypress",
-        "birch",
-        "ebony",
-        "kapok",
-        "larch",
-        "maple",
-        "pine",
-        "purpleheart",
-        "redwood",
-        "walnut"
-      ]
-    }
+[
+  {
+    "ingredientPattern": "G,P",
+    "ingredients": {
+      "G": { "type": "block", "code": "game:glass-plain" },
+      "P": { "type": "item", "code": "game:plank-oak", "quantity": 2 }
+    },
+    "width": 1,
+    "height": 2,
+    "output": { "type": "block", "code": "game:displaycase" }
   },
-  "width": 1,
-  "height": 2,
-  "output": { "type": "block", "code": "displaycase-{wood}" }
-}
+  {
+    "ingredientPattern": "G,P",
+    "ingredients": {
+      "G": { "type": "block", "code": "game:glass-plain" },
+      "P": {
+        "type": "item",
+        "code": "game:plank-*",
+        "quantity": 2,
+        "name": "wood",
+        "allowedVariants": [
+          "acacia",
+          "aged",
+          "baldcypress",
+          "birch",
+          "ebony",
+          "kapok",
+          "larch",
+          "maple",
+          "pine",
+          "purpleheart",
+          "redwood",
+          "walnut"
+        ]
+      }
+    },
+    "width": 1,
+    "height": 2,
+    "output": { "type": "block", "code": "displaycase-{wood}" }
+  }
+]

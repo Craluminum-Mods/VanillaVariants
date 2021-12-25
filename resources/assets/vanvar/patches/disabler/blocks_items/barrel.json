@@ -1,0 +1,30 @@
+[
+  {
+    "file": "vanvar:blocktypes/wood/barrel.json",
+    "op": "add",
+    "path": "/enabled",
+    "value": false,
+    "condition": { "when": "VVBarrelEnabled", "isValue": "false" }
+  },
+  {
+    "file": "game:recipes/grid/barrel.json",
+    "op": "add",
+    "path": "/enabled",
+    "value": false,
+    "condition": { "when": "VVBarrelEnabled", "isValue": "true" }
+  },
+  {
+    "file": "vanvar:recipes/grid/barrel.json",
+    "op": "add",
+    "path": "/0/enabled",
+    "value": false,
+    "condition": { "when": "VVBarrelEnabled", "isValue": "false" }
+  },
+  {
+    "file": "vanvar:recipes/grid/barrel.json",
+    "op": "add",
+    "path": "/1/enabled",
+    "value": false,
+    "condition": { "when": "VVBarrelEnabled", "isValue": "false" }
+  }
+]

@@ -1,0 +1,9 @@
+[
+  {
+    "file": "vanvar:blocktypes/wood/rails.json",
+    "op": "add",
+    "path": "/enabled",
+    "value": false,
+    "condition": { "when": "VVWoodenRailsEnabled", "isValue": "false" }
+  }
+]

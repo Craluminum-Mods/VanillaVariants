@@ -1,0 +1,9 @@
+[
+  {
+    "file": "vanvar:blocktypes/wood/cage.json",
+    "op": "add",
+    "path": "/enabled",
+    "value": false,
+    "condition": { "when": "VVCageEnabled", "isValue": "false" }
+  }
+]

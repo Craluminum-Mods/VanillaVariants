@@ -1,0 +1,30 @@
+[
+  {
+    "file": "vanvar:blocktypes/wood/henbox.json",
+    "op": "add",
+    "path": "/enabled",
+    "value": false,
+    "condition": {"when": "VVHenboxEnabled", "isValue": "false"}
+  },
+  {
+    "file": "game:recipes/grid/henbox.json",
+    "op": "add",
+    "path": "/enabled",
+    "value": false,
+    "condition": {"when": "VVHenboxEnabled", "isValue": "true"}
+  },
+  {
+    "file": "vanvar:recipes/grid/henbox.json",
+    "op": "add",
+    "path": "/0/enabled",
+    "value": false,
+    "condition": {"when": "VVHenboxEnabled", "isValue": "false"}
+  },
+  {
+    "file": "vanvar:recipes/grid/henbox.json",
+    "op": "add",
+    "path": "/1/enabled",
+    "value": false,
+    "condition": {"when": "VVHenboxEnabled", "isValue": "false"}
+  }
+]

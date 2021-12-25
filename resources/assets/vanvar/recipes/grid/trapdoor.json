@@ -1,10 +1,48 @@
-{
-	"ingredientPattern": "WWW,SSS,WWW",
-	"ingredients": {
-		"W": { "type": "item", "code": "game:plank-*", "name": "wood", "allowedVariants": ["acacia","aged","baldcypress","birch","ebony","kapok","larch","maple","pine","purpleheart","redwood","walnut"] },
-		"S": { "type": "item", "code": "game:stick" }
-	},
-	"width": 3,
-	"height": 3,
-	"output": { "type": "block", "code": "trapdoor-{wood}-closed-up-north", "quantity": 2 }
-}
+[
+  {
+    "ingredientPattern": "WWW,SSS,WWW",
+    "ingredients": {
+      "W": { "type": "item", "code": "game:plank-oak" },
+      "S": { "type": "item", "code": "game:stick" }
+    },
+    "width": 3,
+    "height": 3,
+    "output": {
+      "type": "block",
+      "code": "game:trapdoor-closed-up-north",
+      "quantity": 2
+    }
+  },
+  {
+    "ingredientPattern": "WWW,SSS,WWW",
+    "ingredients": {
+      "W": {
+        "type": "item",
+        "code": "game:plank-*",
+        "name": "wood",
+        "allowedVariants": [
+          "acacia",
+          "aged",
+          "baldcypress",
+          "birch",
+          "ebony",
+          "kapok",
+          "larch",
+          "maple",
+          "pine",
+          "purpleheart",
+          "redwood",
+          "walnut"
+        ]
+      },
+      "S": { "type": "item", "code": "game:stick" }
+    },
+    "width": 3,
+    "height": 3,
+    "output": {
+      "type": "block",
+      "code": "trapdoor-{wood}-closed-up-north",
+      "quantity": 2
+    }
+  }
+]

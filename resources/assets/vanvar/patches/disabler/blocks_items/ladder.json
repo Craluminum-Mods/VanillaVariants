@@ -1,0 +1,23 @@
+[
+  {
+    "file": "game:recipes/grid/ladder.json",
+    "op": "add",
+    "path": "/1/enabled",
+    "value": false,
+    "condition": { "when": "VVLadderEnabled", "isValue": "true" }
+  },
+  {
+    "file": "vanvar:recipes/grid/ladder.json",
+    "op": "add",
+    "path": "/0/enabled",
+    "value": false,
+    "condition": { "when": "VVLadderEnabled", "isValue": "false" }
+  },
+  {
+    "file": "vanvar:recipes/grid/ladder.json",
+    "op": "add",
+    "path": "/1/enabled",
+    "value": false,
+    "condition": { "when": "VVLadderEnabled", "isValue": "false" }
+  }
+]
