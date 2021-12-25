@@ -1,22 +1,8 @@
 [
   {
-    "file": "game:recipes/grid/woodenclub.json",
+    "file": "vanvar:recipes/grid/woodenclub.json",
     "op": "add",
     "path": "/enabled",
-    "value": false,
-    "condition": { "when": "VVWoodenClubEnabled", "isValue": "true" }
-  },
-  {
-    "file": "vanvar:recipes/grid/woodenclub.json",
-    "op": "add",
-    "path": "/0/enabled",
-    "value": false,
-    "condition": { "when": "VVWoodenClubEnabled", "isValue": "false" }
-  },
-  {
-    "file": "vanvar:recipes/grid/woodenclub.json",
-    "op": "add",
-    "path": "/1/enabled",
     "value": false,
     "condition": { "when": "VVWoodenClubEnabled", "isValue": "false" }
   }

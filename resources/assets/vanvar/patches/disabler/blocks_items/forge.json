@@ -4,27 +4,13 @@
     "op": "add",
     "path": "/enabled",
     "value": false,
-    "condition": {"when": "VVForgeEnabled", "isValue": "false"}
+    "condition": { "when": "VVForgeEnabled", "isValue": "false" }
   },
   {
-    "file": "game:recipes/grid/forge.json",
+    "file": "vanvar:recipes/grid/forge.json",
     "op": "add",
     "path": "/enabled",
     "value": false,
-    "condition": {"when": "VVForgeEnabled", "isValue": "true"}
-  },
-  {
-    "file": "vanvar:recipes/grid/forge.json",
-    "op": "add",
-    "path": "/0/enabled",
-    "value": false,
-    "condition": {"when": "VVForgeEnabled", "isValue": "false"}
-  },
-  {
-    "file": "vanvar:recipes/grid/forge.json",
-    "op": "add",
-    "path": "/1/enabled",
-    "value": false,
-    "condition": {"when": "VVForgeEnabled", "isValue": "false"}
+    "condition": { "when": "VVForgeEnabled", "isValue": "false" }
   }
 ]

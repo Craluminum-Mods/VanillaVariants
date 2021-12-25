@@ -1,22 +1,8 @@
 [
   {
-    "file": "game:recipes/grid/moldrack.json",
+    "file": "vanvar:recipes/grid/moldrack.json",
     "op": "add",
     "path": "/enabled",
-    "value": false,
-    "condition": { "when": "VVMoldrackEnabled", "isValue": "true" }
-  },
-  {
-    "file": "vanvar:recipes/grid/moldrack.json",
-    "op": "add",
-    "path": "/0/enabled",
-    "value": false,
-    "condition": { "when": "VVMoldrackEnabled", "isValue": "false" }
-  },
-  {
-    "file": "vanvar:recipes/grid/moldrack.json",
-    "op": "add",
-    "path": "/1/enabled",
     "value": false,
     "condition": { "when": "VVMoldrackEnabled", "isValue": "false" }
   }

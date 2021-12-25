@@ -10,16 +10,6 @@
     "recipeGroup": 1
   },
   {
-    "ingredientPattern": "SSS,___,SSS",
-    "ingredients": {
-      "S": { "type": "item", "code": "game:stick" }
-    },
-    "width": 3,
-    "height": 3,
-    "output": { "type": "block", "code": "game:toolrack-north" },
-    "recipeGroup": 2
-  },
-  {
     "ingredientPattern": "S,_,S",
     "ingredients": {
       "S": {

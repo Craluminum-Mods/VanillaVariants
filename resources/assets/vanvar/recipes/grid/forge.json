@@ -1,50 +1,34 @@
-[
-  {
-    "ingredientPattern": "C_C,C_C,CCC",
-    "ingredients": {
-      "C": {
-        "type": "block",
-        "code": "game:cobblestone-granite",
-        "name": "stone"
-      }
-    },
-    "width": 3,
-    "height": 3,
-    "name": "Forge",
-    "output": { "type": "block", "code": "game:forge" }
+{
+  "ingredientPattern": "C_C,C_C,CCC",
+  "ingredients": {
+    "C": {
+      "type": "block",
+      "code": "game:cobblestone-*",
+      "name": "stone",
+      "allowedVariants": [
+        "andesite",
+        "chalk",
+        "chert",
+        "conglomerate",
+        "limestone",
+        "claystone",
+        "sandstone",
+        "shale",
+        "basalt",
+        "peridotite",
+        "phyllite",
+        "slate",
+        "kimberlite",
+        "bauxite",
+        "suevite",
+        "whitemarble",
+        "redmarble",
+        "greenmarble"
+      ]
+    }
   },
-  {
-    "ingredientPattern": "C_C,C_C,CCC",
-    "ingredients": {
-      "C": {
-        "type": "block",
-        "code": "game:cobblestone-*",
-        "name": "stone",
-        "allowedVariants": [
-          "andesite",
-          "chalk",
-          "chert",
-          "conglomerate",
-          "limestone",
-          "claystone",
-          "sandstone",
-          "shale",
-          "basalt",
-          "peridotite",
-          "phyllite",
-          "slate",
-          "kimberlite",
-          "bauxite",
-          "suevite",
-          "whitemarble",
-          "redmarble",
-          "greenmarble"
-        ]
-      }
-    },
-    "width": 3,
-    "height": 3,
-    "name": "Forge",
-    "output": { "type": "block", "code": "forge-{stone}", "quantity": 1 }
-  }
-]
+  "width": 3,
+  "height": 3,
+  "name": "Forge",
+  "output": { "type": "block", "code": "forge-{stone}", "quantity": 1 }
+}

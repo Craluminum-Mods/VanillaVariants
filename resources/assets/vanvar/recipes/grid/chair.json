@@ -2,16 +2,6 @@
   {
     "ingredientPattern": "WLW,W_W",
     "ingredients": {
-      "W": { "type": "item", "code": "game:plank-oak" },
-      "L": { "type": "item", "code": "game:cloth-*", "name": "color" }
-    },
-    "width": 3,
-    "height": 2,
-    "output": { "type": "block", "code": "game:chair-{color}"}
-  },
-  {
-    "ingredientPattern": "WLW,W_W",
-    "ingredients": {
       "W": {
         "type": "item",
         "code": "game:plank-*",

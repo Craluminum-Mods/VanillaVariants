@@ -1,0 +1,9 @@
+[
+  {
+    "op": "replace",
+    "path": "/ingredients/P/code",
+    "value": "plank-oak",
+    "file": "recipes/grid/signpost.json",
+    "condition": { "when": "VVSignpostEnabled", "isValue": "true" }
+  }
+]

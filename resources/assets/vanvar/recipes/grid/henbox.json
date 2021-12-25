@@ -1,40 +1,28 @@
-[
-  {
-    "ingredientPattern": "PHP,PPP",
-    "ingredients": {
-      "H": { "type": "item", "code": "game:drygrass" },
-      "P": { "type": "item", "code": "game:plank-oak" }
-    },
-    "width": 3,
-    "height": 2,
-    "output": { "type": "block", "code": "game:henbox-empty" }
+{
+  "ingredientPattern": "PHP,___,PPP",
+  "ingredients": {
+    "H": { "type": "item", "code": "game:drygrass" },
+    "P": {
+      "type": "item",
+      "code": "game:plank-*",
+      "name": "wood",
+      "allowedVariants": [
+        "acacia",
+        "aged",
+        "baldcypress",
+        "birch",
+        "ebony",
+        "kapok",
+        "larch",
+        "maple",
+        "pine",
+        "purpleheart",
+        "redwood",
+        "walnut"
+      ]
+    }
   },
-  {
-    "ingredientPattern": "PHP,___,PPP",
-    "ingredients": {
-      "H": { "type": "item", "code": "game:drygrass" },
-      "P": {
-        "type": "item",
-        "code": "game:plank-*",
-        "name": "wood",
-        "allowedVariants": [
-          "acacia",
-          "aged",
-          "baldcypress",
-          "birch",
-          "ebony",
-          "kapok",
-          "larch",
-          "maple",
-          "pine",
-          "purpleheart",
-          "redwood",
-          "walnut"
-        ]
-      }
-    },
-    "width": 3,
-    "height": 3,
-    "output": { "type": "block", "code": "henbox-{wood}-empty" }
-  }
-]
+  "width": 3,
+  "height": 3,
+  "output": { "type": "block", "code": "henbox-{wood}-empty" }
+}

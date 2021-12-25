@@ -1,22 +1,8 @@
 [
   {
-    "file": "game:recipes/grid/pan.json",
+    "file": "vanvar:recipes/grid/pan.json",
     "op": "add",
     "path": "/enabled",
-    "value": false,
-    "condition": { "when": "VVWoodenPanEnabled", "isValue": "true" }
-  },
-  {
-    "file": "vanvar:recipes/grid/pan.json",
-    "op": "add",
-    "path": "/0/enabled",
-    "value": false,
-    "condition": { "when": "VVWoodenPanEnabled", "isValue": "false" }
-  },
-  {
-    "file": "vanvar:recipes/grid/pan.json",
-    "op": "add",
-    "path": "/1/enabled",
     "value": false,
     "condition": { "when": "VVWoodenPanEnabled", "isValue": "false" }
   }

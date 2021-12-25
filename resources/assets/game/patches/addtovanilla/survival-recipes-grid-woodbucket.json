@@ -1,0 +1,9 @@
+[
+  {
+    "op": "replace",
+    "path": "/ingredients/W/code",
+    "value": "plank-oak",
+    "file": "recipes/grid/woodbucket.json",
+    "condition": { "when": "VVWoodBucketEnabled", "isValue": "true" }
+  }
+]

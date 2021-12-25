@@ -1,0 +1,9 @@
+[
+  {
+    "op": "replace",
+    "path": "/ingredients/W/code",
+    "value": "plank-oak",
+    "file": "recipes/grid/bed.json",
+    "condition": { "when": "VVBedEnabled", "isValue": "true" }
+  }
+]

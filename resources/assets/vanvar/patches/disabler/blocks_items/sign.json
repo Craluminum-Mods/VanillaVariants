@@ -7,23 +7,9 @@
     "condition": { "when": "VVSignEnabled", "isValue": "false" }
   },
   {
-    "file": "game:recipes/grid/sign.json",
+    "file": "vanvar:recipes/grid/sign.json",
     "op": "add",
     "path": "/enabled",
-    "value": false,
-    "condition": { "when": "VVSignEnabled", "isValue": "true" }
-  },
-  {
-    "file": "vanvar:recipes/grid/sign.json",
-    "op": "add",
-    "path": "/0/enabled",
-    "value": false,
-    "condition": { "when": "VVSignEnabled", "isValue": "false" }
-  },
-  {
-    "file": "vanvar:recipes/grid/sign.json",
-    "op": "add",
-    "path": "/1/enabled",
     "value": false,
     "condition": { "when": "VVSignEnabled", "isValue": "false" }
   }

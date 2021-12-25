@@ -1,0 +1,9 @@
+[
+  {
+    "op": "replace",
+    "path": "/ingredients/L/code",
+    "value": "log-placed-oak-ud",
+    "file": "recipes/grid/pan.json",
+    "condition": { "when": "VVWoodenPanEnabled", "isValue": "true" }
+  }
+]

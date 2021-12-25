@@ -1,22 +1,8 @@
 [
   {
-    "file": "game:recipes/grid/trough-large.json",
+    "file": "vanvar:recipes/grid/trough-large.json",
     "op": "add",
     "path": "/enabled",
-    "value": false,
-    "condition": { "when": "VVTroughLargeEnabled", "isValue": "true" }
-  },
-  {
-    "file": "vanvar:recipes/grid/trough-large.json",
-    "op": "add",
-    "path": "/0/enabled",
-    "value": false,
-    "condition": { "when": "VVTroughLargeEnabled", "isValue": "false" }
-  },
-  {
-    "file": "vanvar:recipes/grid/trough-large.json",
-    "op": "add",
-    "path": "/1/enabled",
     "value": false,
     "condition": { "when": "VVTroughLargeEnabled", "isValue": "false" }
   }

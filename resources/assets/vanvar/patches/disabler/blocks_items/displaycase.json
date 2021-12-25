@@ -7,23 +7,9 @@
     "condition": {"when": "VVDisplayCaseEnabled", "isValue": "false"}
   },
   {
-    "file": "game:recipes/grid/displaycase.json",
+    "file": "vanvar:recipes/grid/displaycase.json",
     "op": "add",
     "path": "/enabled",
-    "value": false,
-    "condition": {"when": "VVDisplayCaseEnabled", "isValue": "true"}
-  },
-  {
-    "file": "vanvar:recipes/grid/displaycase.json",
-    "op": "add",
-    "path": "/0/enabled",
-    "value": false,
-    "condition": {"when": "VVDisplayCaseEnabled", "isValue": "false"}
-  },
-  {
-    "file": "vanvar:recipes/grid/displaycase.json",
-    "op": "add",
-    "path": "/1/enabled",
     "value": false,
     "condition": {"when": "VVDisplayCaseEnabled", "isValue": "false"}
   }

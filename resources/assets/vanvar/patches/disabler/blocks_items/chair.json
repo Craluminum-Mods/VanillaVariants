@@ -7,13 +7,6 @@
     "condition": {"when": "VVChairEnabled", "isValue": "false"}
   },
   {
-    "file": "game:recipes/grid/chair.json",
-    "op": "add",
-    "path": "/0/enabled",
-    "value": false,
-    "condition": {"when": "VVChairEnabled", "isValue": "true"}
-  },
-  {
     "file": "vanvar:recipes/grid/chair.json",
     "op": "add",
     "path": "/0/enabled",
@@ -24,13 +17,6 @@
     "file": "vanvar:recipes/grid/chair.json",
     "op": "add",
     "path": "/1/enabled",
-    "value": false,
-    "condition": {"when": "VVChairEnabled", "isValue": "false"}
-  },
-  {
-    "file": "vanvar:recipes/grid/chair.json",
-    "op": "add",
-    "path": "/2/enabled",
     "value": false,
     "condition": {"when": "VVChairEnabled", "isValue": "false"}
   }

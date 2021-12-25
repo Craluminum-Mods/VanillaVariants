@@ -1,0 +1,15 @@
+[
+  {
+    "op": "remove",
+    "path": "/ingredients/L/allowedVariants",
+    "file": "recipes/grid/woodenclub.json",
+    "condition": { "when": "VVWoodenClubEnabled", "isValue": "true" }
+  },
+  {
+    "op": "replace",
+    "path": "/ingredients/L/code",
+    "value": "log-placed-oak-ud",
+    "file": "recipes/grid/woodenclub.json",
+    "condition": { "when": "VVWoodenClubEnabled", "isValue": "true" }
+  }
+]

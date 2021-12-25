@@ -7,20 +7,6 @@
     "condition": {"when": "VVDoorEnabled", "isValue": "false"}
   },
   {
-    "file": "game:recipes/grid/door.json",
-    "op": "add",
-    "path": "/0/enabled",
-    "value": false,
-    "condition": {"when": "VVDoorEnabled", "isValue": "true"}
-  },
-  {
-    "file": "game:recipes/grid/door.json",
-    "op": "add",
-    "path": "/1/enabled",
-    "value": false,
-    "condition": {"when": "VVDoorEnabled", "isValue": "true"}
-  },
-  {
     "file": "vanvar:recipes/grid/door.json",
     "op": "add",
     "path": "/0/enabled",
@@ -31,20 +17,6 @@
     "file": "vanvar:recipes/grid/door.json",
     "op": "add",
     "path": "/1/enabled",
-    "value": false,
-    "condition": {"when": "VVDoorEnabled", "isValue": "false"}
-  },
-  {
-    "file": "vanvar:recipes/grid/door.json",
-    "op": "add",
-    "path": "/2/enabled",
-    "value": false,
-    "condition": {"when": "VVDoorEnabled", "isValue": "false"}
-  },
-  {
-    "file": "vanvar:recipes/grid/door.json",
-    "op": "add",
-    "path": "/3/enabled",
     "value": false,
     "condition": {"when": "VVDoorEnabled", "isValue": "false"}
   }

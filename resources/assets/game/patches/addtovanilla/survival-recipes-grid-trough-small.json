@@ -1,0 +1,9 @@
+[
+  {
+    "op": "replace",
+    "path": "/ingredients/P/code",
+    "value": "plank-oak",
+    "file": "recipes/grid/trough-small.json",
+    "condition": { "when": "VVTroughSmallEnabled", "isValue": "true" }
+  }
+]

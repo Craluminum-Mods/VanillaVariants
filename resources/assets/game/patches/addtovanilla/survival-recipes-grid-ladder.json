@@ -1,0 +1,9 @@
+[
+  {
+    "op": "replace",
+    "path": "/1/ingredients/P/code",
+    "value": "plank-oak",
+    "file": "recipes/grid/ladder.json",
+    "condition": { "when": "VVLadderEnabled", "isValue": "true" }
+  }
+]

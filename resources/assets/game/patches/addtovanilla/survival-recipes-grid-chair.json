@@ -1,0 +1,9 @@
+[
+  {
+    "op": "replace",
+    "path": "/0/ingredients/W/code",
+    "value": "plank-oak",
+    "file": "recipes/grid/chair.json",
+    "condition": { "when": "VVChairEnabled", "isValue": "true" }
+  }
+]

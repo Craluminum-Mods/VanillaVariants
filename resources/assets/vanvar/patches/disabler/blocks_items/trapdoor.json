@@ -7,23 +7,9 @@
     "condition": { "when": "VVTrapdoorEnabled", "isValue": "false" }
   },
   {
-    "file": "game:recipes/grid/trapdoor.json",
+    "file": "vanvar:recipes/grid/trapdoor.json",
     "op": "add",
     "path": "/enabled",
-    "value": false,
-    "condition": { "when": "VVTrapdoorEnabled", "isValue": "true" }
-  },
-  {
-    "file": "vanvar:recipes/grid/trapdoor.json",
-    "op": "add",
-    "path": "/0/enabled",
-    "value": false,
-    "condition": { "when": "VVTrapdoorEnabled", "isValue": "false" }
-  },
-  {
-    "file": "vanvar:recipes/grid/trapdoor.json",
-    "op": "add",
-    "path": "/1/enabled",
     "value": false,
     "condition": { "when": "VVTrapdoorEnabled", "isValue": "false" }
   }

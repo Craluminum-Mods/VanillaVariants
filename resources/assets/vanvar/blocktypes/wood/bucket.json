@@ -1,70 +1,94 @@
 {
-	"code": "woodbucket",
-	"class": "BlockBucket",
-	"behaviors": [{"name": "UnstableFalling"}, { "name": "RightClickPickup"}, { "name": "MilkingContainer" } ],
-	"entityClass": "Bucket",
-	"attributes": {
-		"handbook": { "groupBy": ["woodbucket-*"] },
-		"liquidContainerProps": {
-			"capacityLitres": 10,
-			"transferSizeLitres": 1,
-			"emptyShapeLoc": "game:block/wood/bucket/empty",
-			"opaqueContentShapeLoc": "game:block/wood/bucket/contents",
-			"liquidContentShapeLoc": "game:block/wood/bucket/liquidcontents",
-			"liquidMaxYTranslate": 0.4375
-		}
-	},
-    "variantgroups": [
-		{ "code": "type", "states": ["aged"], "loadFromProperties": "block/wood" }
-	],
-    "skipVariants": [ "*-oak" ],
-	"creativeinventory": { "general": ["woodbucket-*"], "decorative": ["woodbucket-*"], "vanvar": ["woodbucket-*"] },
-	"shape": { "base": "game:block/wood/bucket/empty" },
-	"sidesolid": {
-		"all": false
-	},
-	"sideopaque": {
-		"all": false
-	},
-	"blockmaterial": "Wood",
-	"textures": {
-		"wood": { "base": "game:block/wood/debarked/{type}" },
-    "sides": { "base": "game:block/wood/debarked/{type}", "overlays": ["block/bucket/sides"] },
-		"normal1": { "base": "game:block/cloth/linen/normal1" },
-		"inner side": { "base": "game:block/wood/debarked/{type}", "overlays": ["block/bucket/inner side"] }
-	},
-	"replaceable": 500,
-	"resistance": 1.5,
-	"maxStackSize": 1,
-	"liquidSelectable": true,
-	"lightAbsorption": 0,
-	"sounds": {
-		"place": "game:block/planks",
-		"hit": "game:block/planks",
-		"break": "game:block/planks",
-		"walk": "game:walk/wood"
-	},
-	"collisionbox": {
-		"x1": 0.25, "y1": 0, "z1": 0.25, "x2": 0.75, "y2": 0.75, "z2": 0.75
-	},
-	"selectionbox": {
-		"x1": 0.25, "y1": 0, "z1": 0.25, "x2": 0.75, "y2": 0.75, "z2": 0.75
-	},
-	"materialDensity": 400,
-	"tpHandTransform": {
-		"translation": { "x": -0.86, "y": -1.03, "z": -0.88 },
-		"rotation": { "x": 0, "y": 0, "z": 0 },
-		"scale": 0.55
-	},
-	"guiTransform": {
-		"origin": { "x": 0.5, "y": 0.3, "z": 0.5 },
-		"scale": 1.75
-	},
-	"fpHandTransform": {
-		"scale": 1.5
-	},
-	"groundTransform": {
-		"origin": { "x": 0.5, "y": 0, "z": 0.5 },
-		"scale": 2
-	}
+  "code": "woodbucket",
+  "class": "BlockBucket",
+  "behaviors": [
+    { "name": "UnstableFalling" },
+    { "name": "RightClickPickup" },
+    { "name": "MilkingContainer" }
+  ],
+  "entityClass": "Bucket",
+  "attributes": {
+    "handbook": { "groupBy": ["woodbucket-*"] },
+    "liquidContainerProps": {
+      "capacityLitres": 10,
+      "transferSizeLitres": 1,
+      "emptyShapeLoc": "game:block/wood/bucket/empty",
+      "opaqueContentShapeLoc": "game:block/wood/bucket/contents",
+      "liquidContentShapeLoc": "game:block/wood/bucket/liquidcontents",
+      "liquidMaxYTranslate": 0.4375
+    }
+  },
+  "variantgroups": [
+    { "code": "type", "states": ["aged"], "loadFromProperties": "block/wood" }
+  ],
+  "skipVariants": ["*-oak"],
+  "creativeinventory": {
+    "general": ["woodbucket-*"],
+    "decorative": ["woodbucket-*"],
+    "vanvar": ["woodbucket-*"]
+  },
+  "shape": { "base": "game:block/wood/bucket/empty" },
+  "sidesolid": {
+    "all": false
+  },
+  "sideopaque": {
+    "all": false
+  },
+  "blockmaterial": "Wood",
+  "textures": {
+    "wood": { "base": "game:block/wood/debarked/{type}" },
+    "sides": {
+      "base": "game:block/wood/debarked/{type}",
+      "overlays": ["block/bucket/sides"]
+    },
+    "normal1": { "base": "game:block/cloth/linen/normal1" },
+    "inner side": {
+      "base": "game:block/wood/debarked/{type}",
+      "overlays": ["block/bucket/inner side"]
+    }
+  },
+  "replaceable": 500,
+  "resistance": 1.5,
+  "maxStackSize": 1,
+  "liquidSelectable": true,
+  "lightAbsorption": 0,
+  "sounds": {
+    "place": "game:block/planks",
+    "hit": "game:block/planks",
+    "break": "game:block/planks",
+    "walk": "game:walk/wood"
+  },
+  "collisionbox": {
+    "x1": 0.25,
+    "y1": 0,
+    "z1": 0.25,
+    "x2": 0.75,
+    "y2": 0.75,
+    "z2": 0.75
+  },
+  "selectionbox": {
+    "x1": 0.25,
+    "y1": 0,
+    "z1": 0.25,
+    "x2": 0.75,
+    "y2": 0.75,
+    "z2": 0.75
+  },
+  "materialDensity": 400,
+  "tpHandTransform": {
+    "translation": { "x": -0.86, "y": -1.03, "z": -0.88 },
+    "rotation": { "x": 0, "y": 0, "z": 0 },
+    "scale": 0.55
+  },
+  "guiTransform": {
+    "origin": { "x": 0.5, "y": 0.3, "z": 0.5 },
+    "scale": 1.75
+  },
+  "fpHandTransform": {
+    "scale": 1.5
+  },
+  "groundTransform": {
+    "origin": { "x": 0.5, "y": 0, "z": 0.5 },
+    "scale": 2
+  }
 }

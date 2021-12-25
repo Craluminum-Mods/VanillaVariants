@@ -2,26 +2,6 @@
   {
     "ingredientPattern": "WW,WW,WW",
     "ingredients": {
-      "W": { "type": "item", "code": "game:plank-oak" }
-    },
-    "width": 2,
-    "height": 3,
-    "output": { "type": "block", "code": "game:door-plank-north-down-closed-left" }
-  },
-  {
-    "ingredientPattern": "AS,PS,PS",
-    "ingredients": {
-      "A": { "type": "item", "code": "game:axe-*", "isTool": true },
-      "P": { "type": "block", "code": "game:log-placed-oak-ud" },
-      "S": { "type": "item", "code": "game:stick" }
-    },
-    "width": 2,
-    "height": 3,
-    "output": { "type": "block", "code": "game:door-log-north-down-closed-left" }
-  },
-  {
-    "ingredientPattern": "WW,WW,WW",
-    "ingredients": {
       "W": {
         "type": "item",
         "code": "game:plank-*",
