@@ -55,70 +55,26 @@
     "condition": { "when": "VVLadderEnabled", "isValue": "true" }
   },
   {
-    "op": "add",
-    "path": "/shapebytype/@.*-(wood|rope)-east",
-    "value": {
-      "base": "block/{material}/ladder",
-      "rotateY": 270
-    },
+    "op": "remove",
+    "path": "/shapebytype",
     "file": "blocktypes/wood/ladder.json",
     "condition": { "when": "VVLadderEnabled", "isValue": "true" }
   },
   {
     "op": "add",
-    "path": "/shapebytype/@.*-(wood|rope)-north",
+    "path": "/shape",
     "value": {
-      "base": "block/{material}/ladder",
-      "rotateY": 0
+      "baseByType": {
+        "*-rope-*": "block/rope/ladder",
+        "*": "block/wood/ladder"
+      },
+      "rotateYByType": {
+        "*-north": 0,
+        "*-east": 270,
+        "*-south": 180,
+        "*-west": 90
+      }
     },
-    "file": "blocktypes/wood/ladder.json",
-    "condition": { "when": "VVLadderEnabled", "isValue": "true" }
-  },
-  {
-    "op": "add",
-    "path": "/shapebytype/@.*-(wood|rope)-south",
-    "value": {
-      "base": "block/{material}/ladder",
-      "rotateY": 180
-    },
-    "file": "blocktypes/wood/ladder.json",
-    "condition": { "when": "VVLadderEnabled", "isValue": "true" }
-  },
-  {
-    "op": "add",
-    "path": "/shapebytype/@.*-(wood|rope)-west",
-    "value": {
-      "base": "block/{material}/ladder",
-      "rotateY": 90
-    },
-    "file": "blocktypes/wood/ladder.json",
-    "condition": { "when": "VVLadderEnabled", "isValue": "true" }
-  },
-  {
-    "op": "replace",
-    "path": "/shapebytype/*-east/base",
-    "value": "block/wood/ladder",
-    "file": "blocktypes/wood/ladder.json",
-    "condition": { "when": "VVLadderEnabled", "isValue": "true" }
-  },
-  {
-    "op": "replace",
-    "path": "/shapebytype/*-north/base",
-    "value": "block/wood/ladder",
-    "file": "blocktypes/wood/ladder.json",
-    "condition": { "when": "VVLadderEnabled", "isValue": "true" }
-  },
-  {
-    "op": "replace",
-    "path": "/shapebytype/*-south/base",
-    "value": "block/wood/ladder",
-    "file": "blocktypes/wood/ladder.json",
-    "condition": { "when": "VVLadderEnabled", "isValue": "true" }
-  },
-  {
-    "op": "replace",
-    "path": "/shapebytype/*-west/base",
-    "value": "block/wood/ladder",
     "file": "blocktypes/wood/ladder.json",
     "condition": { "when": "VVLadderEnabled", "isValue": "true" }
   },
