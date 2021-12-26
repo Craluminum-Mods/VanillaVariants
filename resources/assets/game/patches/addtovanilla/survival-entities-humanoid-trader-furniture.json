@@ -592,6 +592,7 @@
         "price": { "avg": 2, "var": 0.5 }
       }
     ],
-    "file": "entities/humanoid/trader-furniture.json"
+    "file": "entities/humanoid/trader-furniture.json",
+    "condition": {"when": "VVTradersSellVariantsEnabled", "isValue": "true"}
   }
 ]

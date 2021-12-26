@@ -15,6 +15,7 @@ namespace VanillaVariants.List
 
 		public Part MoreRecipes_feature { get; set; } = new Part(false, "Turn on/off recipes like in More Recipes mod");
 		public Part SlidingDoor_compatibility { get; set; } = new Part(false, "Turn on/off compatibility with Sliding Doors if it is loaded");
+		public Part TradersSellVariants { get; set; } = new Part(false, "Whether traders sell variants or not");
 		public Part Barrel { get; set; } = new Part(true);
 		public Part Bed { get; set; } = new Part(true);
 		public Part Cage { get; set; } = new Part(true);
