@@ -55,6 +55,17 @@
     "condition": { "when": "VVLadderEnabled", "isValue": "true" }
   },
   {
+    "op": "add",
+    "path": "/attributes/handbook/groupByByType",
+    "value": {
+      "@.*-(?!rope).*": [
+        "@ladder-(?!rope).*"
+      ]
+    },
+    "file": "blocktypes/wood/ladder.json",
+    "condition": { "when": "VVLadderEnabled", "isValue": "true" }
+  },  
+  {
     "op": "remove",
     "path": "/shapebytype",
     "file": "blocktypes/wood/ladder.json",
