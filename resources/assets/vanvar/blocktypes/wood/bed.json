@@ -5,11 +5,7 @@
 		"*-head-*": "Bed"
 	},
 	"attributes": {
-		"sleepEfficiencyByType": {
-			"bed-wood-*": 0.70833333,
-			"bed-hay-*": 0.58333333,
-			"bed-woodaged-*": 0.79166666
-		},
+		"sleepEfficiency": 0.70833333,
 		"handbook": { "groupBy": ["bed-*"] }
 	},
 	"sidesolid": {
@@ -27,7 +23,7 @@
     "skipVariants": [ "*-oak-*" ],
 	"creativeinventory": { "general": ["*-head-north"], "decorative": ["*-head-north"], "vanvar": ["*-head-north"] },
 	"shapeinventory": { "base": "game:block/wood/bed-inventory" },
-	"shapebytype": {
+	"shapeByType": {
 		"*-head-north": { "base": "game:block/wood/bed-head", "rotateY": 90 },
 		"*-head-east": { "base": "game:block/wood/bed-head", "rotateY": 0 },
 		"*-head-south": { "base": "game:block/wood/bed-head", "rotateY": 270 },
@@ -66,31 +62,16 @@
 		"origin": { "x": 0.5, "y": 0, "z": 0.5 },
 		"scale": 2
 	},
-	"tpHandTransformByType": {
-		"bed-hay-*": {
-			"translation": { "x": -0.8, "y": -0.1, "z": -0.9 },
-			"rotation": { "x": -71, "y": -37, "z": 17 },
-			"scale": 0.45
-		},
-		"*": {
+	"tpHandTransform": {
 			"translation": { "x": -0.9, "y": -0.3, "z": -0.9 },
 			"rotation": { "x": -80, "y": -37, "z": 17 },
 			"scale": 0.45
-		}
 	},
-	"guiTransformByType": {
-		"bed-hay-*": {
-			"translation": { "x": 0, "y": 2, "z": 0 },
-			"origin": { "x": 0.5, "y": 0.125, "z": 0.5 },
-			"scale": 0.75
-		},
-		"bed-wood-*": {
+	"guiTransform": {
 			"origin": { "x": 0.5, "y": 0.4, "z": 0.5 },
 			"scale": 0.75
-		}
 	},
-	"selectionbox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2ByType": { "bed-hay-*": 0.25, "*" : 0.5  }, "z2": 1},
-	"collisionbox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2ByType": { "bed-hay-*": 0.25, "*" : 0.5  }, "z2": 1},
+	"collisionSelectionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2":  0.5, "z2": 1},
 	"sounds": {
 		"place": "game:block/planks",
 		"hit": "game:block/planks",
