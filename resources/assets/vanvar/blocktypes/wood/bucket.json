@@ -49,7 +49,7 @@
   },
   "replaceable": 500,
   "resistance": 1.5,
-  "maxStackSize": 1,
+  "maxStackSize": 4,
   "liquidSelectable": true,
   "lightAbsorption": 0,
   "sounds": {
