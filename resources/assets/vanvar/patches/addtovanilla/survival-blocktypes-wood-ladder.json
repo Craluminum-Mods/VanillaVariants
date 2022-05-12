@@ -7,14 +7,16 @@
       "*": { "base": "block/wood/ladder-inventory" }
     },
     "file": "game:blocktypes/wood/ladder.json",
-    "condition": { "when": "VVLadderEnabled", "isValue": "true" }
+    "condition": { "when": "VVLadderEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/skipVariants",
     "value": ["*-oak-*"],
     "file": "game:blocktypes/wood/ladder.json",
-    "condition": { "when": "VVLadderEnabled", "isValue": "true" }
+    "condition": { "when": "VVLadderEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
@@ -32,14 +34,16 @@
       }
     },
     "file": "game:blocktypes/wood/ladder.json",
-    "condition": { "when": "VVLadderEnabled", "isValue": "true" }
+    "condition": { "when": "VVLadderEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/creativeinventory/vanvar",
     "value": ["ladder-{material}-north"],
     "file": "game:blocktypes/wood/ladder.json",
-    "condition": { "when": "VVLadderEnabled", "isValue": "true" }
+    "condition": { "when": "VVLadderEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
@@ -48,13 +52,15 @@
       "@.*-(?!rope).*": ["@ladder-(?!rope).*"]
     },
     "file": "game:blocktypes/wood/ladder.json",
-    "condition": { "when": "VVLadderEnabled", "isValue": "true" }
+    "condition": { "when": "VVLadderEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "remove",
     "path": "/shapebytype",
     "file": "game:blocktypes/wood/ladder.json",
-    "condition": { "when": "VVLadderEnabled", "isValue": "true" }
+    "condition": { "when": "VVLadderEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
@@ -72,20 +78,23 @@
       }
     },
     "file": "game:blocktypes/wood/ladder.json",
-    "condition": { "when": "VVLadderEnabled", "isValue": "true" }
+    "condition": { "when": "VVLadderEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/variantgroups/0/loadFromProperties",
     "value": "block/wood",
     "file": "game:blocktypes/wood/ladder.json",
-    "condition": { "when": "VVLadderEnabled", "isValue": "true" }
+    "condition": { "when": "VVLadderEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/variantgroups/0/states/-",
     "value": "aged",
     "file": "game:blocktypes/wood/ladder.json",
-    "condition": { "when": "VVLadderEnabled", "isValue": "true" }
+    "condition": { "when": "VVLadderEnabled", "isValue": "true" },
+    "side": "server"
   }
 ]

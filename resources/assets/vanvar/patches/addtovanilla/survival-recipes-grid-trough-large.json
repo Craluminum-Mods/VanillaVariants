@@ -4,6 +4,7 @@
     "path": "/ingredients/P/code",
     "value": "plank-oak",
     "file": "game:recipes/grid/trough-large.json",
-    "condition": { "when": "VVTroughLargeEnabled", "isValue": "true" }
+    "condition": { "when": "VVTroughLargeEnabled", "isValue": "true" },
+    "side": "server"
   }
 ]

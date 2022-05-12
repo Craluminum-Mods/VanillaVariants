@@ -4,69 +4,79 @@
     "op": "add",
     "path": "/0/enabled",
     "value": false,
-    "dependsOn": [{ "modid": "expandedfoods", "invert": true }]
+    "dependsOn": [{ "modid": "expandedfoods", "invert": true }],
+    "side": "server"
   },
   {
     "file": "vanvar:recipes/grid/expandedfoods/oilcandle.json",
     "op": "add",
     "path": "/1/enabled",
     "value": false,
-    "dependsOn": [{ "modid": "expandedfoods", "invert": true }]
+    "dependsOn": [{ "modid": "expandedfoods", "invert": true }],
+    "side": "server"
   },
   {
     "file": "vanvar:recipes/grid/expandedfoods/oilcandle.json",
     "op": "add",
     "path": "/2/enabled",
     "value": false,
-    "dependsOn": [{ "modid": "expandedfoods", "invert": true }]
+    "dependsOn": [{ "modid": "expandedfoods", "invert": true }],
+    "side": "server"
   },
   {
     "file": "vanvar:recipes/grid/expandedfoods/oilcandle.json",
     "op": "add",
     "path": "/3/enabled",
     "value": false,
-    "dependsOn": [{ "modid": "expandedfoods", "invert": true }]
+    "dependsOn": [{ "modid": "expandedfoods", "invert": true }],
+    "side": "server"
   },
   {
     "file": "vanvar:recipes/grid/expandedfoods/oilcandle.json",
     "op": "add",
     "path": "/4/enabled",
     "value": false,
-    "dependsOn": [{ "modid": "expandedfoods", "invert": true }]
+    "dependsOn": [{ "modid": "expandedfoods", "invert": true }],
+    "side": "server"
   },
   {
     "file": "vanvar:recipes/grid/expandedfoods/oilcandle.json",
     "op": "add",
     "path": "/5/enabled",
     "value": false,
-    "dependsOn": [{ "modid": "expandedfoods", "invert": true }]
+    "dependsOn": [{ "modid": "expandedfoods", "invert": true }],
+    "side": "server"
   },
   {
     "file": "vanvar:recipes/grid/expandedfoods/oilcandle.json",
     "op": "add",
     "path": "/6/enabled",
     "value": false,
-    "dependsOn": [{ "modid": "expandedfoods", "invert": true }]
+    "dependsOn": [{ "modid": "expandedfoods", "invert": true }],
+    "side": "server"
   },
   {
     "file": "vanvar:recipes/grid/expandedfoods/oilcandle.json",
     "op": "add",
     "path": "/7/enabled",
     "value": false,
-    "dependsOn": [{ "modid": "expandedfoods", "invert": true }]
+    "dependsOn": [{ "modid": "expandedfoods", "invert": true }],
+    "side": "server"
   },
   {
     "file": "vanvar:recipes/grid/expandedfoods/oilcandle.json",
     "op": "add",
     "path": "/8/enabled",
     "value": false,
-    "dependsOn": [{ "modid": "expandedfoods", "invert": true }]
+    "dependsOn": [{ "modid": "expandedfoods", "invert": true }],
+    "side": "server"
   },
   {
     "file": "vanvar:recipes/grid/expandedfoods/oilcandle.json",
     "op": "add",
     "path": "/9/enabled",
     "value": false,
-    "dependsOn": [{ "modid": "expandedfoods", "invert": true }]
+    "dependsOn": [{ "modid": "expandedfoods", "invert": true }],
+    "side": "server"
   }
 ]

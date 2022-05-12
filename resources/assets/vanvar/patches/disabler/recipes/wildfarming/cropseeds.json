@@ -4,6 +4,7 @@
     "op": "add",
     "path": "/enabled",
     "value": false,
-    "dependsOn": [{ "modid": "wildfarming", "invert": true }]
+    "dependsOn": [{ "modid": "wildfarming", "invert": true }],
+    "side": "server"
   }
 ]

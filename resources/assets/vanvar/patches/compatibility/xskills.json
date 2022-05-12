@@ -3,14 +3,16 @@
     "file": "vanvar:blocktypes/wood/bucket.json",
     "op": "add",
     "path": "/behaviors/-",
-    "value": {"name": "XSkillsBucket"},
-    "dependsOn":[{"modid":"xskills"}]
+    "value": { "name": "XSkillsBucket" },
+    "dependsOn": [{ "modid": "xskills" }],
+    "side": "server"
   },
   {
     "file": "vanvar:blocktypes/wood/barrel.json",
     "op": "add",
     "path": "/behaviors/-",
-    "value": {"name": "XSkillsBucket"},
-    "dependsOn":[{"modid":"xskills"}]
+    "value": { "name": "XSkillsBucket" },
+    "dependsOn": [{ "modid": "xskills" }],
+    "side": "server"
   }
 ]

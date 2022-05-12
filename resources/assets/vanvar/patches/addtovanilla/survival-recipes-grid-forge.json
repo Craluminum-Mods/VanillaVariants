@@ -4,6 +4,7 @@
     "path": "/ingredients/C/code",
     "value": "cobblestone-granite",
     "file": "game:recipes/grid/forge.json",
-    "condition": { "when": "VVForgeEnabled", "isValue": "true" }
+    "condition": { "when": "VVForgeEnabled", "isValue": "true" },
+    "side": "server"
   }
 ]

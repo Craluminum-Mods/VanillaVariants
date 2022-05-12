@@ -4,20 +4,23 @@
     "op": "add",
     "path": "/enabled",
     "value": false,
-    "condition": {"when": "VVChairEnabled", "isValue": "false"}
+    "condition": { "when": "VVChairEnabled", "isValue": "false" },
+    "side": "server"
   },
   {
     "file": "vanvar:recipes/grid/chair.json",
     "op": "add",
     "path": "/0/enabled",
     "value": false,
-    "condition": {"when": "VVChairEnabled", "isValue": "false"}
+    "condition": { "when": "VVChairEnabled", "isValue": "false" },
+    "side": "server"
   },
   {
     "file": "vanvar:recipes/grid/chair.json",
     "op": "add",
     "path": "/1/enabled",
     "value": false,
-    "condition": {"when": "VVChairEnabled", "isValue": "false"}
+    "condition": { "when": "VVChairEnabled", "isValue": "false" },
+    "side": "server"
   }
 ]

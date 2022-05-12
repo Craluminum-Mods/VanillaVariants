@@ -4,6 +4,7 @@
     "op": "add",
     "path": "/enabled",
     "value": false,
-    "condition": { "when": "VVWagonWheelsEnabled", "isValue": "false" }
+    "condition": { "when": "VVWagonWheelsEnabled", "isValue": "false" },
+    "side": "server"
   }
 ]

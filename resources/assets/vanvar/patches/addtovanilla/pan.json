@@ -4,14 +4,16 @@
     "path": "/variantgroups/0/states/-",
     "value": "aged",
     "file": "game:blocktypes/wood/pan.json",
-    "condition": { "when": "VVWoodenPanEnabled", "isValue": "true" }
+    "condition": { "when": "VVWoodenPanEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/variantgroups/0/loadFromProperties",
     "value": "block/wood",
     "file": "game:blocktypes/wood/pan.json",
-    "condition": { "when": "VVWoodenPanEnabled", "isValue": "true" }
+    "condition": { "when": "VVWoodenPanEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
@@ -21,27 +23,31 @@
       "*": { "all": { "base": "block/wood/debarked/{type}" } }
     },
     "file": "game:blocktypes/wood/pan.json",
-    "condition": { "when": "VVWoodenPanEnabled", "isValue": "true" }
+    "condition": { "when": "VVWoodenPanEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/skipVariants",
     "value": ["*-oak"],
     "file": "game:blocktypes/wood/pan.json",
-    "condition": { "when": "VVWoodenPanEnabled", "isValue": "true" }
+    "condition": { "when": "VVWoodenPanEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/attributes/handbook",
     "value": { "groupBy": ["pan-*"] },
     "file": "game:blocktypes/wood/pan.json",
-    "condition": { "when": "VVWoodenPanEnabled", "isValue": "true" }
+    "condition": { "when": "VVWoodenPanEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/creativeinventory/vanvar",
     "value": ["*"],
     "file": "game:blocktypes/wood/pan.json",
-    "condition": { "when": "VVWoodenPanEnabled", "isValue": "true" }
+    "condition": { "when": "VVWoodenPanEnabled", "isValue": "true" },
+    "side": "server"
   }
 ]

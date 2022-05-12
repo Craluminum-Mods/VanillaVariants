@@ -4,6 +4,7 @@
     "op": "add",
     "path": "/enabled",
     "value": false,
-    "condition": { "when": "VVTroughSmallEnabled", "isValue": "false" }
+    "condition": { "when": "VVTroughSmallEnabled", "isValue": "false" },
+    "side": "server"
   }
 ]

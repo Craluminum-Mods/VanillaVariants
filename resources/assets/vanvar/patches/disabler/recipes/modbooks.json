@@ -4,6 +4,7 @@
     "op": "add",
     "path": "/enabled",
     "value": false,
-    "dependsOn": [{ "modid": "books", "invert": true }]
+    "dependsOn": [{ "modid": "books", "invert": true }],
+    "side": "server"
   }
 ]

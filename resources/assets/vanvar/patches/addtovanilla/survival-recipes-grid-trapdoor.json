@@ -4,6 +4,7 @@
     "path": "/ingredients/W/code",
     "value": "plank-oak",
     "file": "game:recipes/grid/trapdoor.json",
-    "condition": { "when": "VVTrapdoorEnabled", "isValue": "true" }
+    "condition": { "when": "VVTrapdoorEnabled", "isValue": "true" },
+    "side": "server"
   }
 ]

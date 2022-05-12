@@ -4,6 +4,7 @@
     "path": "/0/ingredients/W/code",
     "value": "plank-oak",
     "file": "game:recipes/grid/table.json",
-    "condition": { "when": "VVTableEnabled", "isValue": "true" }
+    "condition": { "when": "VVTableEnabled", "isValue": "true" },
+    "side": "server"
   }
 ]

@@ -4,6 +4,7 @@
     "path": "/ingredients/W/code",
     "value": "plank-oak",
     "file": "game:recipes/grid/woodbucket.json",
-    "condition": { "when": "VVWoodBucketEnabled", "isValue": "true" }
+    "condition": { "when": "VVWoodBucketEnabled", "isValue": "true" },
+    "side": "server"
   }
 ]

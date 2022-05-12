@@ -4,13 +4,15 @@
     "op": "add",
     "path": "/enabled",
     "value": false,
-    "condition": { "when": "VVSignEnabled", "isValue": "false" }
+    "condition": { "when": "VVSignEnabled", "isValue": "false" },
+    "side": "server"
   },
   {
     "file": "vanvar:recipes/grid/sign.json",
     "op": "add",
     "path": "/enabled",
     "value": false,
-    "condition": { "when": "VVSignEnabled", "isValue": "false" }
+    "condition": { "when": "VVSignEnabled", "isValue": "false" },
+    "side": "server"
   }
 ]

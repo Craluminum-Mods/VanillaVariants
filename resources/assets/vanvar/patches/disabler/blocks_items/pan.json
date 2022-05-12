@@ -4,6 +4,7 @@
     "op": "add",
     "path": "/enabled",
     "value": false,
-    "condition": { "when": "VVWoodenPanEnabled", "isValue": "false" }
+    "condition": { "when": "VVWoodenPanEnabled", "isValue": "false" },
+    "side": "server"
   }
 ]

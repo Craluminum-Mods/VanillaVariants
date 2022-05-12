@@ -5,7 +5,8 @@
     "path": "/enabled",
     "value": false,
     "dependsOn": [{ "modid": "slidingdoor", "invert": true }],
-    "condition": {"when": "VVSlidingDoor_compatibilityEnabled", "isValue": "false"}
+    "condition": { "when": "VVSlidingDoor_compatibilityEnabled", "isValue": "false" },
+    "side": "server"
   },
   {
     "file": "vanvar:recipes/grid/slidingdoor/slidingdoor.json",
@@ -13,7 +14,8 @@
     "path": "/0/enabled",
     "value": false,
     "dependsOn": [{ "modid": "slidingdoor", "invert": true }],
-    "condition": {"when": "VVSlidingDoor_compatibilityEnabled", "isValue": "false"}
+    "condition": { "when": "VVSlidingDoor_compatibilityEnabled", "isValue": "false" },
+    "side": "server"
   },
   {
     "file": "vanvar:recipes/grid/slidingdoor/slidingdoor.json",
@@ -21,6 +23,7 @@
     "path": "/1/enabled",
     "value": false,
     "dependsOn": [{ "modid": "slidingdoor", "invert": true }],
-    "condition": {"when": "VVSlidingDoor_compatibilityEnabled", "isValue": "false"}
+    "condition": { "when": "VVSlidingDoor_compatibilityEnabled", "isValue": "false" },
+    "side": "server"
   }
 ]

@@ -4,6 +4,7 @@
     "op": "add",
     "path": "/enabled",
     "value": false,
-    "condition": { "when": "VVWoodenClubEnabled", "isValue": "false" }
+    "condition": { "when": "VVWoodenClubEnabled", "isValue": "false" },
+    "side": "server"
   }
 ]

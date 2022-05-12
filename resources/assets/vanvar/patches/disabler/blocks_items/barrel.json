@@ -4,13 +4,15 @@
     "op": "add",
     "path": "/enabled",
     "value": false,
-    "condition": { "when": "VVBarrelEnabled", "isValue": "false" }
+    "condition": { "when": "VVBarrelEnabled", "isValue": "false" },
+    "side": "server"
   },
   {
     "file": "vanvar:recipes/grid/barrel.json",
     "op": "add",
     "path": "/enabled",
     "value": false,
-    "condition": { "when": "VVBarrelEnabled", "isValue": "false" }
+    "condition": { "when": "VVBarrelEnabled", "isValue": "false" },
+    "side": "server"
   }
 ]

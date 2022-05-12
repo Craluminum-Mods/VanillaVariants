@@ -8,14 +8,16 @@
       }
     },
     "file": "game:blocktypes/wood/moldrack.json",
-    "condition": { "when": "VVMoldrackEnabled", "isValue": "true" }
+    "condition": { "when": "VVMoldrackEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/skipVariants",
     "value": ["*-oak-*"],
     "file": "game:blocktypes/wood/moldrack.json",
-    "condition": { "when": "VVMoldrackEnabled", "isValue": "true" }
+    "condition": { "when": "VVMoldrackEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
@@ -36,27 +38,31 @@
       }
     },
     "file": "game:blocktypes/wood/moldrack.json",
-    "condition": { "when": "VVMoldrackEnabled", "isValue": "true" }
+    "condition": { "when": "VVMoldrackEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/creativeinventory/vanvar",
     "value": ["*-east"],
     "file": "game:blocktypes/wood/moldrack.json",
-    "condition": { "when": "VVMoldrackEnabled", "isValue": "true" }
+    "condition": { "when": "VVMoldrackEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/variantgroups/0/loadFromProperties",
     "value": "block/wood",
     "file": "game:blocktypes/wood/moldrack.json",
-    "condition": { "when": "VVMoldrackEnabled", "isValue": "true" }
+    "condition": { "when": "VVMoldrackEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/variantgroups/0/states/-",
     "value": "aged",
     "file": "game:blocktypes/wood/moldrack.json",
-    "condition": { "when": "VVMoldrackEnabled", "isValue": "true" }
+    "condition": { "when": "VVMoldrackEnabled", "isValue": "true" },
+    "side": "server"
   }
 ]

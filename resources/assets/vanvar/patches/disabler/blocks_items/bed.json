@@ -4,13 +4,15 @@
     "op": "add",
     "path": "/enabled",
     "value": false,
-    "condition": { "when": "VVBedEnabled", "isValue": "false" }
+    "condition": { "when": "VVBedEnabled", "isValue": "false" },
+    "side": "server"
   },
   {
     "file": "vanvar:recipes/grid/bed.json",
     "op": "add",
     "path": "/enabled",
     "value": false,
-    "condition": { "when": "VVBedEnabled", "isValue": "false" }
+    "condition": { "when": "VVBedEnabled", "isValue": "false" },
+    "side": "server"
   }
 ]

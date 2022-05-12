@@ -4,6 +4,7 @@
     "op": "add",
     "path": "/enabled",
     "value": false,
-    "condition": { "when": "VVCageEnabled", "isValue": "false" }
+    "condition": { "when": "VVCageEnabled", "isValue": "false" },
+    "side": "server"
   }
 ]

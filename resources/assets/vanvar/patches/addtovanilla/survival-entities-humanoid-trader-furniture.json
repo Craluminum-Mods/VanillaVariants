@@ -593,6 +593,7 @@
       }
     ],
     "file": "game:entities/humanoid/trader-furniture.json",
-    "condition": {"when": "VVTradersSellVariantsEnabled", "isValue": "true"}
+    "condition": { "when": "VVTradersSellVariantsEnabled", "isValue": "true" },
+    "side": "server"
   }
 ]

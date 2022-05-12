@@ -4,13 +4,15 @@
     "op": "add",
     "path": "/enabled",
     "value": false,
-    "condition": { "when": "VVWoodBucketEnabled", "isValue": "false" }
+    "condition": { "when": "VVWoodBucketEnabled", "isValue": "false" },
+    "side": "server"
   },
   {
     "file": "vanvar:recipes/grid/woodbucket.json",
     "op": "add",
     "path": "/enabled",
     "value": false,
-    "condition": { "when": "VVWoodBucketEnabled", "isValue": "false" }
+    "condition": { "when": "VVWoodBucketEnabled", "isValue": "false" },
+    "side": "server"
   }
 ]

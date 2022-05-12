@@ -4,6 +4,7 @@
     "path": "/ingredients/P/code",
     "value": "plank-oak",
     "file": "game:recipes/grid/henbox.json",
-    "condition": { "when": "VVHenboxEnabled", "isValue": "true" }
+    "condition": { "when": "VVHenboxEnabled", "isValue": "true" },
+    "side": "server"
   }
 ]

@@ -4,13 +4,15 @@
     "op": "add",
     "path": "/0/enabled",
     "value": false,
-    "dependsOn": [{ "modid": "wildfarming", "invert": true }]
+    "dependsOn": [{ "modid": "wildfarming", "invert": true }],
+    "side": "server"
   },
   {
     "file": "vanvar:recipes/grid/wildfarming/reedroots.json",
     "op": "add",
     "path": "/1/enabled",
     "value": false,
-    "dependsOn": [{ "modid": "wildfarming", "invert": true }]
+    "dependsOn": [{ "modid": "wildfarming", "invert": true }],
+    "side": "server"
   }
 ]

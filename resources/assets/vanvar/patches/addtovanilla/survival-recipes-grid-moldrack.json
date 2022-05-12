@@ -4,6 +4,7 @@
     "path": "/ingredients/P/code",
     "value": "plank-oak",
     "file": "game:recipes/grid/moldrack.json",
-    "condition": { "when": "VVMoldrackEnabled", "isValue": "true" }
+    "condition": { "when": "VVMoldrackEnabled", "isValue": "true" },
+    "side": "server"
   }
 ]

@@ -3,14 +3,16 @@
     "op": "remove",
     "path": "/textures",
     "file": "game:itemtypes/tool/woodenclub.json",
-    "condition": { "when": "VVWoodenClubEnabled", "isValue": "true" }
+    "condition": { "when": "VVWoodenClubEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/skipVariants",
     "value": ["*-oak"],
     "file": "game:itemtypes/tool/woodenclub.json",
-    "condition": { "when": "VVWoodenClubEnabled", "isValue": "true" }
+    "condition": { "when": "VVWoodenClubEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
@@ -28,7 +30,8 @@
       }
     },
     "file": "game:itemtypes/tool/woodenclub.json",
-    "condition": { "when": "VVWoodenClubEnabled", "isValue": "true" }
+    "condition": { "when": "VVWoodenClubEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
@@ -37,14 +40,16 @@
       "groupBy": ["woodenclub-*"]
     },
     "file": "game:itemtypes/tool/woodenclub.json",
-    "condition": { "when": "VVWoodenClubEnabled", "isValue": "true" }
+    "condition": { "when": "VVWoodenClubEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/creativeinventory/vanvar",
     "value": ["*"],
     "file": "game:itemtypes/tool/woodenclub.json",
-    "condition": { "when": "VVWoodenClubEnabled", "isValue": "true" }
+    "condition": { "when": "VVWoodenClubEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
@@ -53,34 +58,39 @@
       "base": "item/tool/woodenclub"
     },
     "file": "game:itemtypes/tool/woodenclub.json",
-    "condition": { "when": "VVWoodenClubEnabled", "isValue": "true" }
+    "condition": { "when": "VVWoodenClubEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/variantgroups/0/loadFromProperties",
     "value": "block/wood",
     "file": "game:itemtypes/tool/woodenclub.json",
-    "condition": { "when": "VVWoodenClubEnabled", "isValue": "true" }
+    "condition": { "when": "VVWoodenClubEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/variantgroups/0/states/-",
     "value": "aged",
     "file": "game:itemtypes/tool/woodenclub.json",
-    "condition": { "when": "VVWoodenClubEnabled", "isValue": "true" }
+    "condition": { "when": "VVWoodenClubEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/attackpowerbytype/*",
     "value": 1.5,
     "file": "game:itemtypes/tool/woodenclub.json",
-    "condition": { "when": "VVWoodenClubEnabled", "isValue": "true" }
+    "condition": { "when": "VVWoodenClubEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/durabilitybytype/*",
     "value": 150,
     "file": "game:itemtypes/tool/woodenclub.json",
-    "condition": { "when": "VVWoodenClubEnabled", "isValue": "true" }
+    "condition": { "when": "VVWoodenClubEnabled", "isValue": "true" },
+    "side": "server"
   }
 ]

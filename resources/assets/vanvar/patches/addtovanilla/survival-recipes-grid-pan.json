@@ -4,6 +4,7 @@
     "path": "/ingredients/L/code",
     "value": "log-placed-oak-ud",
     "file": "game:recipes/grid/pan.json",
-    "condition": { "when": "VVWoodenPanEnabled", "isValue": "true" }
+    "condition": { "when": "VVWoodenPanEnabled", "isValue": "true" },
+    "side": "server"
   }
 ]

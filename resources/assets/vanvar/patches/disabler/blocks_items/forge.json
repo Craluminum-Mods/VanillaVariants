@@ -4,13 +4,15 @@
     "op": "add",
     "path": "/enabled",
     "value": false,
-    "condition": { "when": "VVForgeEnabled", "isValue": "false" }
+    "condition": { "when": "VVForgeEnabled", "isValue": "false" },
+    "side": "server"
   },
   {
     "file": "vanvar:recipes/grid/forge.json",
     "op": "add",
     "path": "/enabled",
     "value": false,
-    "condition": { "when": "VVForgeEnabled", "isValue": "false" }
+    "condition": { "when": "VVForgeEnabled", "isValue": "false" },
+    "side": "server"
   }
 ]

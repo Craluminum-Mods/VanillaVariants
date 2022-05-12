@@ -4,6 +4,7 @@
     "path": "/0/ingredients/W/code",
     "value": "plank-oak",
     "file": "game:recipes/grid/bed.json",
-    "condition": { "when": "VVBedEnabled", "isValue": "true" }
+    "condition": { "when": "VVBedEnabled", "isValue": "true" },
+    "side": "server"
   }
 ]

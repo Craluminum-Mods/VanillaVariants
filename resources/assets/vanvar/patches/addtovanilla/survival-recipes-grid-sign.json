@@ -4,6 +4,7 @@
     "path": "/ingredients/P/code",
     "value": "plank-oak",
     "file": "game:recipes/grid/sign.json",
-    "condition": { "when": "VVSignEnabled", "isValue": "true" }
+    "condition": { "when": "VVSignEnabled", "isValue": "true" },
+    "side": "server"
   }
 ]

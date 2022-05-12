@@ -4,13 +4,15 @@
     "op": "add",
     "path": "/enabled",
     "value": false,
-    "condition": {"when": "VVHenboxEnabled", "isValue": "false"}
+    "condition": { "when": "VVHenboxEnabled", "isValue": "false" },
+    "side": "server"
   },
   {
     "file": "vanvar:recipes/grid/henbox.json",
     "op": "add",
     "path": "/enabled",
     "value": false,
-    "condition": {"when": "VVHenboxEnabled", "isValue": "false"}
+    "condition": { "when": "VVHenboxEnabled", "isValue": "false" },
+    "side": "server"
   }
 ]

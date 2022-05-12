@@ -4,6 +4,7 @@
     "path": "/ingredients/P/code",
     "value": "plank-oak",
     "file": "game:recipes/grid/barrel.json",
-    "condition": { "when": "VVBarrelEnabled", "isValue": "true" }
+    "condition": { "when": "VVBarrelEnabled", "isValue": "true" },
+    "side": "server"
   }
 ]

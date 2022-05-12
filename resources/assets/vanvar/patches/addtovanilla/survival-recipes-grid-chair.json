@@ -4,6 +4,7 @@
     "path": "/0/ingredients/W/code",
     "value": "plank-oak",
     "file": "game:recipes/grid/chair.json",
-    "condition": { "when": "VVChairEnabled", "isValue": "true" }
+    "condition": { "when": "VVChairEnabled", "isValue": "true" },
+    "side": "server"
   }
 ]
