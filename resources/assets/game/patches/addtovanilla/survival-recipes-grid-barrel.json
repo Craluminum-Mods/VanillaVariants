@@ -3,7 +3,7 @@
     "op": "replace",
     "path": "/ingredients/P/code",
     "value": "plank-oak",
-    "file": "recipes/grid/barrel.json",
+    "file": "game:recipes/grid/barrel.json",
     "condition": { "when": "VVBarrelEnabled", "isValue": "true" }
   }
 ]

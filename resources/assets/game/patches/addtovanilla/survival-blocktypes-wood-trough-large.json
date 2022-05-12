@@ -3,14 +3,14 @@
     "op": "add",
     "path": "/skipVariants",
     "value": ["*-oak-*"],
-    "file": "blocktypes/wood/trough-large.json",
+    "file": "game:blocktypes/wood/trough-large.json",
     "condition": { "when": "VVTroughLargeEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/vanvar",
     "value": ["*-head-north"],
-    "file": "blocktypes/wood/trough-large.json",
+    "file": "game:blocktypes/wood/trough-large.json",
     "condition": { "when": "VVTroughLargeEnabled", "isValue": "true" }
   },
   {
@@ -22,7 +22,7 @@
         "*": "block/wood/debarked/{material}"
       }
     },
-    "file": "blocktypes/wood/trough-large.json",
+    "file": "game:blocktypes/wood/trough-large.json",
     "condition": { "when": "VVTroughLargeEnabled", "isValue": "true" }
   },
   {
@@ -34,7 +34,7 @@
         "*": "block/wood/debarked/{material}"
       }
     },
-    "file": "blocktypes/wood/trough-large.json",
+    "file": "game:blocktypes/wood/trough-large.json",
     "condition": { "when": "VVTroughLargeEnabled", "isValue": "true" }
   },
   {
@@ -46,7 +46,7 @@
         "*": "block/wood/debarked/{material}"
       }
     },
-    "file": "blocktypes/wood/trough-large.json",
+    "file": "game:blocktypes/wood/trough-large.json",
     "condition": { "when": "VVTroughLargeEnabled", "isValue": "true" }
   },
   {
@@ -58,21 +58,21 @@
         "*": "block/wood/debarked/{material}"
       }
     },
-    "file": "blocktypes/wood/trough-large.json",
+    "file": "game:blocktypes/wood/trough-large.json",
     "condition": { "when": "VVTroughLargeEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/variantgroups/0/loadFromProperties",
     "value": "block/wood",
-    "file": "blocktypes/wood/trough-large.json",
+    "file": "game:blocktypes/wood/trough-large.json",
     "condition": { "when": "VVTroughLargeEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/variantgroups/0/states/-",
     "value": "aged",
-    "file": "blocktypes/wood/trough-large.json",
+    "file": "game:blocktypes/wood/trough-large.json",
     "condition": { "when": "VVTroughLargeEnabled", "isValue": "true" }
   }
 ]

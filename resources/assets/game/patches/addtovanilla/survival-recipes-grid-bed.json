@@ -3,7 +3,7 @@
     "op": "replace",
     "path": "/0/ingredients/W/code",
     "value": "plank-oak",
-    "file": "recipes/grid/bed.json",
+    "file": "game:recipes/grid/bed.json",
     "condition": { "when": "VVBedEnabled", "isValue": "true" }
   }
 ]

@@ -3,7 +3,7 @@
     "op": "replace",
     "path": "/ingredients/P/code",
     "value": "plank-oak",
-    "file": "recipes/grid/henbox.json",
+    "file": "game:recipes/grid/henbox.json",
     "condition": { "when": "VVHenboxEnabled", "isValue": "true" }
   }
 ]

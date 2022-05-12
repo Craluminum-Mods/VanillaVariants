@@ -3,7 +3,7 @@
     "op": "replace",
     "path": "/ingredients/C/code",
     "value": "cobblestone-granite",
-    "file": "recipes/grid/forge.json",
+    "file": "game:recipes/grid/forge.json",
     "condition": { "when": "VVForgeEnabled", "isValue": "true" }
   }
 ]

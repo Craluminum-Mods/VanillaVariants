@@ -3,7 +3,7 @@
     "op": "replace",
     "path": "/ingredients/P/code",
     "value": "plank-oak",
-    "file": "recipes/grid/shelf.json",
+    "file": "game:recipes/grid/shelf.json",
     "condition": { "when": "VVShelfEnabled", "isValue": "true" }
   }
 ]

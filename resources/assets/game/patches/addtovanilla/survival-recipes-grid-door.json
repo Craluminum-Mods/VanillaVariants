@@ -3,14 +3,14 @@
     "op": "replace",
     "path": "/0/ingredients/W/code",
     "value": "plank-oak",
-    "file": "recipes/grid/door.json",
+    "file": "game:recipes/grid/door.json",
     "condition": { "when": "VVDoorEnabled", "isValue": "true" }
   },
   {
     "op": "replace",
     "path": "/1/ingredients/P/code",
     "value": "log-placed-oak-ud",
-    "file": "recipes/grid/door.json",
+    "file": "game:recipes/grid/door.json",
     "condition": { "when": "VVDoorEnabled", "isValue": "true" }
   }
 ]

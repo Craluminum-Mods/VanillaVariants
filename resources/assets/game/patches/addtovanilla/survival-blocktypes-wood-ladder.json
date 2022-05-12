@@ -3,21 +3,17 @@
     "op": "add",
     "path": "/shapeinventoryByType",
     "value": {
-      "@.*-(wood|rope)-.*": {
-        "base": "block/{material}/ladder-inventory"
-      },
-      "*": {
-        "base": "block/wood/ladder-inventory"
-      }
+      "@.*-(wood|rope)-.*": { "base": "block/{material}/ladder-inventory" },
+      "*": { "base": "block/wood/ladder-inventory" }
     },
-    "file": "blocktypes/wood/ladder.json",
+    "file": "game:blocktypes/wood/ladder.json",
     "condition": { "when": "VVLadderEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/skipVariants",
     "value": ["*-oak-*"],
-    "file": "blocktypes/wood/ladder.json",
+    "file": "game:blocktypes/wood/ladder.json",
     "condition": { "when": "VVLadderEnabled", "isValue": "true" }
   },
   {
@@ -25,50 +21,39 @@
     "path": "/texturesByType",
     "value": {
       "*-wood-*": {
-        "ladder": {
-          "base": "block/wood/ladder"
-        }
+        "ladder": { "base": "block/wood/ladder" }
       },
       "*-rope-*": {
-        "rope": {
-          "base": "block/locustnest/stalagmite/rope"
-        },
-        "aged": {
-          "base": "block/wood/debarked/aged"
-        }
+        "rope": { "base": "block/locustnest/stalagmite/rope" },
+        "aged": { "base": "block/wood/debarked/aged" }
       },
       "*": {
-        "ladder": {
-          "base": "block/wood/debarked/{material}",
-          "rotation": 90
-        }
+        "ladder": { "base": "block/wood/debarked/{material}", "rotation": 90 }
       }
     },
-    "file": "blocktypes/wood/ladder.json",
+    "file": "game:blocktypes/wood/ladder.json",
     "condition": { "when": "VVLadderEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/vanvar",
     "value": ["ladder-{material}-north"],
-    "file": "blocktypes/wood/ladder.json",
+    "file": "game:blocktypes/wood/ladder.json",
     "condition": { "when": "VVLadderEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/attributes/handbook/groupByByType",
     "value": {
-      "@.*-(?!rope).*": [
-        "@ladder-(?!rope).*"
-      ]
+      "@.*-(?!rope).*": ["@ladder-(?!rope).*"]
     },
-    "file": "blocktypes/wood/ladder.json",
+    "file": "game:blocktypes/wood/ladder.json",
     "condition": { "when": "VVLadderEnabled", "isValue": "true" }
-  },  
+  },
   {
     "op": "remove",
     "path": "/shapebytype",
-    "file": "blocktypes/wood/ladder.json",
+    "file": "game:blocktypes/wood/ladder.json",
     "condition": { "when": "VVLadderEnabled", "isValue": "true" }
   },
   {
@@ -86,21 +71,21 @@
         "*-west": 90
       }
     },
-    "file": "blocktypes/wood/ladder.json",
+    "file": "game:blocktypes/wood/ladder.json",
     "condition": { "when": "VVLadderEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/variantgroups/0/loadFromProperties",
     "value": "block/wood",
-    "file": "blocktypes/wood/ladder.json",
+    "file": "game:blocktypes/wood/ladder.json",
     "condition": { "when": "VVLadderEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/variantgroups/0/states/-",
     "value": "aged",
-    "file": "blocktypes/wood/ladder.json",
+    "file": "game:blocktypes/wood/ladder.json",
     "condition": { "when": "VVLadderEnabled", "isValue": "true" }
   }
 ]

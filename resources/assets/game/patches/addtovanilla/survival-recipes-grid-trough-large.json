@@ -3,7 +3,7 @@
     "op": "replace",
     "path": "/ingredients/P/code",
     "value": "plank-oak",
-    "file": "recipes/grid/trough-large.json",
+    "file": "game:recipes/grid/trough-large.json",
     "condition": { "when": "VVTroughLargeEnabled", "isValue": "true" }
   }
 ]

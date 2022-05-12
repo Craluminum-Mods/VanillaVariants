@@ -3,14 +3,14 @@
     "op": "add",
     "path": "/skipVariants",
     "value": ["*-oak-*"],
-    "file": "blocktypes/wood/trough-small.json",
+    "file": "game:blocktypes/wood/trough-small.json",
     "condition": { "when": "VVTroughSmallEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/vanvar",
     "value": ["*-ns"],
-    "file": "blocktypes/wood/trough-small.json",
+    "file": "game:blocktypes/wood/trough-small.json",
     "condition": { "when": "VVTroughSmallEnabled", "isValue": "true" }
   },
   {
@@ -22,7 +22,7 @@
         "*": "block/wood/debarked/{material}"
       }
     },
-    "file": "blocktypes/wood/trough-small.json",
+    "file": "game:blocktypes/wood/trough-small.json",
     "condition": { "when": "VVTroughSmallEnabled", "isValue": "true" }
   },
   {
@@ -34,7 +34,7 @@
         "*": "block/wood/debarked/{material}"
       }
     },
-    "file": "blocktypes/wood/trough-small.json",
+    "file": "game:blocktypes/wood/trough-small.json",
     "condition": { "when": "VVTroughSmallEnabled", "isValue": "true" }
   },
   {
@@ -46,21 +46,21 @@
         "*": "block/wood/debarked/{material}"
       }
     },
-    "file": "blocktypes/wood/trough-small.json",
+    "file": "game:blocktypes/wood/trough-small.json",
     "condition": { "when": "VVTroughSmallEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/variantgroups/0/loadFromProperties",
     "value": "block/wood",
-    "file": "blocktypes/wood/trough-small.json",
+    "file": "game:blocktypes/wood/trough-small.json",
     "condition": { "when": "VVTroughSmallEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/variantgroups/0/states/-",
     "value": "aged",
-    "file": "blocktypes/wood/trough-small.json",
+    "file": "game:blocktypes/wood/trough-small.json",
     "condition": { "when": "VVTroughSmallEnabled", "isValue": "true" }
   }
 ]

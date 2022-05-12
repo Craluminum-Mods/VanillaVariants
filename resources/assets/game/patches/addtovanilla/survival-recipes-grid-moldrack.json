@@ -3,7 +3,7 @@
     "op": "replace",
     "path": "/ingredients/P/code",
     "value": "plank-oak",
-    "file": "recipes/grid/moldrack.json",
+    "file": "game:recipes/grid/moldrack.json",
     "condition": { "when": "VVMoldrackEnabled", "isValue": "true" }
   }
 ]

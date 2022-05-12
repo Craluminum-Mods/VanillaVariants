@@ -3,7 +3,7 @@
     "op": "replace",
     "path": "/ingredients/P/code",
     "value": "plank-oak",
-    "file": "recipes/grid/displaycase.json",
+    "file": "game:recipes/grid/displaycase.json",
     "condition": { "when": "VVDisplayCaseEnabled", "isValue": "true" }
   }
 ]

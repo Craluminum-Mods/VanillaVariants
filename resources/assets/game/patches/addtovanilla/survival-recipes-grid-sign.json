@@ -3,7 +3,7 @@
     "op": "replace",
     "path": "/ingredients/P/code",
     "value": "plank-oak",
-    "file": "recipes/grid/sign.json",
+    "file": "game:recipes/grid/sign.json",
     "condition": { "when": "VVSignEnabled", "isValue": "true" }
   }
 ]
