@@ -92,5 +92,33 @@
     "file": "game:itemtypes/tool/woodenclub.json",
     "condition": { "when": "VVWoodenClubEnabled", "isValue": "true" },
     "side": "server"
+  },
+  {
+    "op": "add",
+    "path": "/attributes/groundStorageTransformByType/@woodenclub-(aged|birch|maple|pine|acacia|kapok|baldcypress|larch|redwood|ebony)",
+    "value": {
+      "translation": { "x": 0, "y": -0.075, "z": 0.154 },
+      "rotation": { "x": 26, "y": 88, "z": -87 },
+      "scale": 0.88
+    },
+    "file": "game:itemtypes/tool/woodenclub.json",
+    "condition": { "when": "VVWoodenClubEnabled", "isValue": "true" },
+    "side": "server"
+  },
+  {
+    "op": "move",
+    "frompath": "/attributes/groundStorageTransformByType/*",
+    "path": "/temp",
+    "file": "game:itemtypes/tool/woodenclub.json",
+    "condition": { "when": "VVWoodenClubEnabled", "isValue": "true" },
+    "side": "server"
+  },
+  {
+    "op": "move",
+    "frompath": "/temp",
+    "path": "/attributes/groundStorageTransformByType/*",
+    "file": "game:itemtypes/tool/woodenclub.json",
+    "condition": { "when": "VVWoodenClubEnabled", "isValue": "true" },
+    "side": "server"
   }
 ]
