@@ -5,7 +5,7 @@
     "path": "/enabled",
     "value": false,
     "dependsOn": [{ "modid": "slidingdoor", "invert": true }],
-    "condition": { "when": "VVSlidingDoor_compatibilityEnabled", "isValue": "false" },
+    "condition": { "when": "VVSlidingDoorCompatibilityEnabled", "isValue": "false" },
     "side": "server"
   },
   {
@@ -14,7 +14,7 @@
     "path": "/0/enabled",
     "value": false,
     "dependsOn": [{ "modid": "slidingdoor", "invert": true }],
-    "condition": { "when": "VVSlidingDoor_compatibilityEnabled", "isValue": "false" },
+    "condition": { "when": "VVSlidingDoorCompatibilityEnabled", "isValue": "false" },
     "side": "server"
   },
   {
@@ -23,7 +23,7 @@
     "path": "/1/enabled",
     "value": false,
     "dependsOn": [{ "modid": "slidingdoor", "invert": true }],
-    "condition": { "when": "VVSlidingDoor_compatibilityEnabled", "isValue": "false" },
+    "condition": { "when": "VVSlidingDoorCompatibilityEnabled", "isValue": "false" },
     "side": "server"
   }
 ]
