@@ -1,17 +1,4 @@
 {
-  "block-barrel-acacia": "Baril (Acacia)",
-  "block-barrel-aged": "Baril (Vieillie)",
-  "block-barrel-baldcypress": "Baril (Cyprès chauve)",
-  "block-barrel-birch": "Baril (Bouleau)",
-  "block-barrel-ebony": "Baril (Ébène)",
-  "block-barrel-kapok": "Baril (Fromager)",
-  "block-barrel-larch": "Baril (Mélèze)",
-  "block-barrel-maple": "Baril (Érable)",
-  "block-barrel-pine": "Baril (Pin)",
-  "block-barrel-purpleheart": "Baril (Peltogyne)",
-  "block-barrel-redwood": "Baril (Séquoia)",
-  "block-barrel-walnut": "Baril (Noyer)",
-
   "block-bed-acacia-head-*": "Lit en bois (Acacia)",
   "block-bed-aged-head-*": "Lit en bois (Vieillie)",
   "block-bed-baldcypress-head-*": "Lit en bois (Cyprès chauve)",
@@ -495,7 +482,6 @@
   "block-woodenrails-redwood-*": "Rails en bois (Séquoia)",
   "block-woodenrails-walnut-*": "Rails en bois (Noyer)",
 
-  "game:block-barrel": "Baril (Chêne)",
   "game:block-bed-wood-*": "Lit en bois (Chêne)",
   "game:block-cage-wooden-*": "Cage en bois (Chêne)",
   "game:block-chair-black": "Chaise (Noire) (Chêne)",

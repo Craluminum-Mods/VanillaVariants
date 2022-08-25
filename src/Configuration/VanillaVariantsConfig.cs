@@ -5,7 +5,6 @@ namespace VanillaVariants.Configuration
     public bool MoreRecipesFeature;
     public bool SlidingDoorCompatibility;
     public bool TradersSellVariants;
-    public bool Barrel = true;
     public bool Bed = true;
     public bool Cage = true;
     public bool Chair = true;
@@ -36,7 +35,6 @@ namespace VanillaVariants.Configuration
       MoreRecipesFeature = previousConfig.MoreRecipesFeature;
       SlidingDoorCompatibility = previousConfig.SlidingDoorCompatibility;
       TradersSellVariants = previousConfig.TradersSellVariants;
-      Barrel = previousConfig.Barrel;
       Bed = previousConfig.Bed;
       Cage = previousConfig.Cage;
       Chair = previousConfig.Chair;

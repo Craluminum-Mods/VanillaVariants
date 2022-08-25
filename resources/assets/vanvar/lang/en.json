@@ -1,19 +1,6 @@
 {
   "game:tabname-vanvar": "Van.Var.",
 
-  "block-barrel-acacia": "Barrel (Acacia)",
-  "block-barrel-aged": "Barrel (Aged)",
-  "block-barrel-baldcypress": "Barrel (Bald cypress)",
-  "block-barrel-birch": "Barrel (Birch)",
-  "block-barrel-ebony": "Barrel (Ebony)",
-  "block-barrel-kapok": "Barrel (Kapok)",
-  "block-barrel-larch": "Barrel (Larch)",
-  "block-barrel-maple": "Barrel (Maple)",
-  "block-barrel-pine": "Barrel (Pine)",
-  "block-barrel-purpleheart": "Barrel (Purpleheart)",
-  "block-barrel-redwood": "Barrel (Redwood)",
-  "block-barrel-walnut": "Barrel (Walnut)",
-
   "block-bed-acacia-head-*": "Wooden bed (Acacia)",
   "block-bed-aged-head-*": "Wooden bed (Aged)",
   "block-bed-baldcypress-head-*": "Wooden bed (Bald cypress)",
@@ -497,7 +484,6 @@
   "block-woodenrails-redwood-*": "Wooden rails (Redwood)",
   "block-woodenrails-walnut-*": "Wooden rails (Walnut)",
 
-  "game:block-barrel": "Barrel (Oak)",
   "game:block-bed-wood-*": "Wooden bed (Oak)",
   "game:block-cage-wooden-*": "Wooden cage (Oak)",
   "game:block-chair-black": "Wooden chair (Black) (Oak)",

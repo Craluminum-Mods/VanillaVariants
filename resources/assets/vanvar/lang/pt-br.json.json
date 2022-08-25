@@ -1,19 +1,6 @@
 {
   "game:tabname-vanvar": "Van.Var.",
 
-  "block-barrel-acacia": "Barríl (Acácia)",
-  "block-barrel-aged": "Barríl (Envelhecido)",
-  "block-barrel-baldcypress": "Barríl (Cipreste-do-pantano)",
-  "block-barrel-birch": "Barríl (Bétula)",
-  "block-barrel-ebony": "Barríl (Ébano)",
-  "block-barrel-kapok": "Barríl (Mafumeira)",
-  "block-barrel-larch": "Barríl (Larício)",
-  "block-barrel-maple": "Barríl (Bordo)",
-  "block-barrel-pine": "Barríl (Pinho)",
-  "block-barrel-purpleheart": "Barríl (Roxinho)",
-  "block-barrel-redwood": "Barríl (Sequoia)",
-  "block-barrel-walnut": "Barríl (Nogueira-comum)",
-
   "block-bed-acacia-head-*": "Cama de madeira (Acácia)",
   "block-bed-aged-head-*": "Cama de madeira (Envelhecido)",
   "block-bed-baldcypress-head-*": "Cama de madeira (Cipreste-do-pantano)",
@@ -497,7 +484,6 @@
   "block-woodenrails-redwood-*": "Trilhos de madeira (Sequoia)",
   "block-woodenrails-walnut-*": "Trilhos de madeira (Nogueira-comum)",
 
-  "game:block-barrel": "Barríl (Carvalho)",
   "game:block-bed-wood-*": "Cama de madeira (Carvalho)",
   "game:block-cage-wooden-*": "Gaiola de madeira (Carvalho)",
   "game:block-chair-black": "Cadeira de madeira (Preto) (Carvalho)",

@@ -33,7 +33,6 @@ namespace VanillaVariants.Configuration
       api.World.Config.SetBool("VVMoreRecipesFeatureEnabled", config.MoreRecipesFeature);
       api.World.Config.SetBool("VVSlidingDoorCompatibilityEnabled", config.SlidingDoorCompatibility);
       api.World.Config.SetBool("VVTradersSellVariantsEnabled", config.TradersSellVariants);
-      api.World.Config.SetBool("VVBarrelEnabled", config.Barrel);
       api.World.Config.SetBool("VVBedEnabled", config.Bed);
       api.World.Config.SetBool("VVCageEnabled", config.Cage);
       api.World.Config.SetBool("VVChairEnabled", config.Chair);

@@ -1,17 +1,4 @@
 {
-  "block-barrel-acacia": "Бочка (акация)",
-  "block-barrel-aged": "Бочка (древняя)",
-  "block-barrel-baldcypress": "Бочка (болотный кипарис)",
-  "block-barrel-birch": "Бочка (береза)",
-  "block-barrel-ebony": "Бочка (черное дерево)",
-  "block-barrel-kapok": "Бочка (капок)",
-  "block-barrel-larch": "Бочка (лиственница)",
-  "block-barrel-maple": "Бочка (клен)",
-  "block-barrel-pine": "Бочка (сосна)",
-  "block-barrel-purpleheart": "Бочка (пелтогин)",
-  "block-barrel-redwood": "Бочка (секвойя)",
-  "block-barrel-walnut": "Бочка (грецкий орех)",
-
   "block-bed-acacia-head-*": "Деревянная кровать (акация)",
   "block-bed-aged-head-*": "Деревянная кровать (древняя)",
   "block-bed-baldcypress-head-*": "Деревянная кровать (болотный кипарис)",
@@ -483,7 +470,6 @@
   "block-woodenrails-redwood-*": "Деревянные рельсы (секвойя)",
   "block-woodenrails-walnut-*": "Деревянные рельсы (грецкий орех)",
 
-  "game:block-barrel": "Бочка (дуб)",
   "game:block-bed-wood-*": "Деревянная кровать (дуб)",
   "game:block-cage-wooden-*": "Деревянная клетка (дуб)",
   "game:block-chair-black": "Деревянный стул (черный) (дуб)",
