@@ -2,7 +2,7 @@
   "ingredientPattern": "L__,HHH,WWW",
   "ingredients": {
     "L": { "type": "block", "code": "game:linen-*" },
-    "H": { "type": "block", "code": "game:hay-normal" },
+    "H": { "type": "block", "code": "game:hay-normal-ud" },
     "W": {
       "type": "item",
       "code": "game:plank-*",
