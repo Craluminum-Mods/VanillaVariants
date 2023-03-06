@@ -9,7 +9,6 @@ namespace VanillaVariants.Configuration
     public bool Cage = true;
     public bool Chair = true;
     public bool DisplayCase = true;
-    public bool Door = true;
     public bool Forge = true;
     public bool Henbox = true;
     public bool Ladder = true;
@@ -39,7 +38,6 @@ namespace VanillaVariants.Configuration
       Cage = previousConfig.Cage;
       Chair = previousConfig.Chair;
       DisplayCase = previousConfig.DisplayCase;
-      Door = previousConfig.Door;
       Forge = previousConfig.Forge;
       Henbox = previousConfig.Henbox;
       Ladder = previousConfig.Ladder;

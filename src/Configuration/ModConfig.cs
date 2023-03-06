@@ -37,7 +37,6 @@ namespace VanillaVariants.Configuration
       api.World.Config.SetBool("VVCageEnabled", config.Cage);
       api.World.Config.SetBool("VVChairEnabled", config.Chair);
       api.World.Config.SetBool("VVDisplayCaseEnabled", config.DisplayCase);
-      api.World.Config.SetBool("VVDoorEnabled", config.Door);
       api.World.Config.SetBool("VVForgeEnabled", config.Forge);
       api.World.Config.SetBool("VVHenboxEnabled", config.Henbox);
       api.World.Config.SetBool("VVLadderEnabled", config.Ladder);
