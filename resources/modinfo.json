@@ -3,7 +3,7 @@
   "name": "Vanilla Variants",
   "modid": "vanvar",
   "version": "3.0.0",
-  "description": "Wood and stone variants of various blocks and items",
+  "description": "Wood and stone variants of various blocks",
   "authors": ["Craluminum2413"],
   "dependencies": {
     "game": "1.18.0-pre.5"
