@@ -23,7 +23,7 @@
 	},
 	"textures": {
 		"aged": { "base": "game:block/wood/debarked/{type}" },
-		"rusty-iron": { "base": "game:block/currency/rusty-iron" }
+		"rusty-iron": { "base": "game:block/metal/tarnished/rusty-iron" }
 	},
 	"blockmaterial": "Wood",
 	"lightAbsorption": 0,
