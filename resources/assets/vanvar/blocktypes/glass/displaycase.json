@@ -9,7 +9,7 @@
 	"attributes": { "handbook": { "groupBy": ["displaycase-*"] } },
 	"skipVariants": [ "*-oak" ],
 	"creativeinventory": { "general": ["*"], "terrain": ["*"], "vanvar": ["*"] },
-	"shape": { "base": "game:block/wood/displaycase" },
+	"shape": { "base": "game:block/wood/displaycase/generic" },
 	"textures": {
 		"wood": { "base": "game:block/wood/debarked/{type}" }
 	},
