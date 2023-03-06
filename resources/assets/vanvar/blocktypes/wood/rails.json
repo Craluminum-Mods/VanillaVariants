@@ -1,6 +1,6 @@
 {
 	"code": "woodenrails",
-	"class": "BlockRails",
+	"class": "VV_BlockWoodRails",
 	"behaviors": [ {"name": "Unstable"} ],
 	"attributes": { "handbook": { "groupBy": ["woodenrails-*"] } },
 	"variantgroups": [

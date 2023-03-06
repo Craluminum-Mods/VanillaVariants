@@ -1,5 +1,6 @@
 {
 	"code": "chair",
+    "class": "VV_BlockWoodChair",
 	"behaviors": [{ "name": "UnstableFalling"} ],
 	"attributes": { "handbook": { "groupBy": ["chair-*"] } },
 	"variantgroups": [

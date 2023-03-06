@@ -1,5 +1,6 @@
 {
 	"code": "cage",
+    "class": "VV_BlockWoodCage",
 	"behaviors": [ {"name": "HorizontalOrientable"} ],
 	"attributes": { "handbook": { "groupBy": ["cage-*"] } },
 	"variantgroups": [

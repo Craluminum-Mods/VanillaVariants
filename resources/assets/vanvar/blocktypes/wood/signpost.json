@@ -1,7 +1,7 @@
 {
 	"code": "signpost",
 	"creativeinventory": { "general": ["*"], "decorative": ["*"], "vanvar": ["*"] },
-	"class": "BlockSignPost",
+	"class": "VV_BlockWoodSignPost",
 	"entityclass": "SignPost",
 	"attributes": { "handbook": { "groupBy": ["signpost-*"] } },
 	"variantgroups": [

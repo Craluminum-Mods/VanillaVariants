@@ -1,6 +1,6 @@
 {
 	"code": "toolrack",
-	"class": "BlockToolRack",
+	"class": "VV_BlockWoodToolRack",
 	"entityclass": "ToolRack",
 	"creativeinventory": { "general": ["toolrack-*-north"], "decorative": ["toolrack-*-north"], "vanvar": ["toolrack-*-north"] },
 	"behaviors": [{"name": "HorizontalAttachable"}],

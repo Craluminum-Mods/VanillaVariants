@@ -1,0 +1,13 @@
+[
+    {
+        "op": "add",
+        "path": "/classByType",
+        "file": "game:blocktypes/wood/moldrack.json",
+        "condition": { "when": "VVMoldrackEnabled", "isValue": "true" },
+        "side": "server",
+        "value": {
+            "*-normal-*": "BlockMoldRack",
+            "*": "VV_BlockWoodMoldRack"
+        }
+    }
+]

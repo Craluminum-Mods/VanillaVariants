@@ -1,6 +1,6 @@
 {
 	"code": "henbox",
-	"class": "BlockHenbox",
+	"class": "VV_BlockWoodHenbox",
 	"entityClass": "HenBox",
 	"behaviors": [{ "name": "CollectFrom"}],
 	"variantgroups": [

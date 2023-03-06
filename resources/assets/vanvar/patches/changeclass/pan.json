@@ -1,0 +1,13 @@
+[
+    {
+        "op": "add",
+        "path": "/classByType",
+        "file": "game:blocktypes/wood/pan.json",
+        "condition": { "when": "VVWoodenPanEnabled", "isValue": "true" },
+        "side": "server",
+        "value": {
+            "*-wooden": "BlockPan",
+            "*": "VV_BlockWoodPan"
+        }
+    }
+]

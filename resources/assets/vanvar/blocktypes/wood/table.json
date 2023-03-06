@@ -1,5 +1,6 @@
 {
 	"code": "table",
+	"class": "VV_BlockWoodTable",
 	"behaviors": [{"name": "UnstableFalling"} ],
 	"variantgroups": [
 		{ "code": "material", "states": ["aged"], "loadFromProperties": "block/wood" },

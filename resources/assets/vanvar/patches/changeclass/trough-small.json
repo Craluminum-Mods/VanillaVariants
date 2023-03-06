@@ -1,0 +1,13 @@
+[
+    {
+        "op": "add",
+        "path": "/classByType",
+        "file": "game:blocktypes/wood/trough-small.json",
+        "condition": { "when": "VVTroughSmallEnabled", "isValue": "true" },
+        "side": "server",
+        "value": {
+            "*-genericwood-*": "BlockTrough",
+            "*": "VV_BlockWoodTrough"
+        }
+    }
+]

@@ -1,0 +1,13 @@
+[
+    {
+        "op": "add",
+        "path": "/classByType",
+        "file": "game:blocktypes/wood/ladder.json",
+        "condition": { "when": "VVLadderEnabled", "isValue": "true" },
+        "side": "server",
+        "value": {
+            "@ladder-(wood|rope)-.*": "Block",
+            "*": "VV_BlockWoodLadder"
+        }
+    }
+]

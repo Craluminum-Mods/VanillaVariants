@@ -1,6 +1,6 @@
 {
 	"code": "forge",
-	"class": "BlockForge",
+	"class": "VV_BlockStoneForge",
 	"entityClass": "Forge",
     "variantgroups": [
 		{ "code": "rock", "loadFromProperties": "block/rockwithdeposit" }

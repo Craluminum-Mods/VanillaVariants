@@ -1,0 +1,13 @@
+[
+    {
+        "op": "add",
+        "path": "/classByType",
+        "file": "game:blocktypes/wood/trough-large.json",
+        "condition": { "when": "VVTroughLargeEnabled", "isValue": "true" },
+        "side": "server",
+        "value": {
+            "*-genericwood-*": "BlockTrough",
+            "*": "VV_BlockWoodTroughDoubleBlock"
+        }
+    }
+]

@@ -1,6 +1,6 @@
 {
   "code": "bed",
-  "class": "BlockBed",
+  "class": "VV_BlockWoodBed",
   "entityClassByType": {
     "*-head-*": "Bed"
   },

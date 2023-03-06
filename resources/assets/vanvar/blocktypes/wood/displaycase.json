@@ -1,7 +1,7 @@
 {
 	"code": "displaycase",
 	"behaviors": [{"name": "UnstableFalling", "properties": { "fallSound": null, "dustIntensity": 0 }}],	
-	"class": "BlockDisplayCase",
+	"class": "VV_BlockWoodDisplayCase",
 	"entityClass": "DisplayCase",
 	"variantgroups": [
 		{ "code": "type", "states": ["aged"], "loadFromProperties": "block/wood" }
@@ -19,7 +19,7 @@
 	"resistance": 3,
 	"heldTpIdleAnimation": "holdbothhandslarge", "heldTpUseAnimation": "twohandplaceblock",
 	"sounds": {
-		"walk": "player/buildhigh"
+		"walk": "game:player/buildhigh"
 	},
 	"collisionSelectionBoxes": [
 		{ "x1": 0.0625, "y1": 0, "z1": 0.0625, "x2": 0.5, "y2": 0.625, "z2": 0.5 },

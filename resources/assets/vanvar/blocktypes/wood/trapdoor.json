@@ -1,6 +1,6 @@
 {
 	"code": "trapdoor",
-	"class": "BlockTrapdoor",
+	"class": "VV_BlockWoodTrapdoor",
 	"behaviors": [
 		{"name": "Lockable" }, 
 		{

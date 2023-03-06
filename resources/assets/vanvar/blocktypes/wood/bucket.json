@@ -1,6 +1,6 @@
 {
   "code": "woodbucket",
-  "class": "BlockBucket",
+  "class": "VV_BlockWoodBucket",
   "behaviors": [
     { "name": "UnstableFalling" },
     { "name": "RightClickPickup" },

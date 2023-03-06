@@ -1,7 +1,7 @@
 {
 	"code": "sign",
 	"creativeinventory": { "general": ["*-ground-north"], "decorative": ["*-ground-north"], "vanvar": ["*-ground-north"] },
-	"class": "BlockSign",
+	"class": "VV_BlockWoodSign",
 	"entityclass": "Sign",
 	"attributes": { "handbook": { "groupBy": ["sign-*"] } },
 	"variantgroups": [

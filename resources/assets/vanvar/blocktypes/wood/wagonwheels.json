@@ -1,5 +1,6 @@
 {
 	"code": "wagonwheels",
+    "class": "VV_BlockWoodWagonWheels",
 	"creativeinventory": { "general": ["*-west"], "construction": ["*-west"], "vanvar": ["*-west"] },
 	"attributes": { "handbook": { "groupBy": ["wagonwheels-*"] } },
 	"variantgroups": [
