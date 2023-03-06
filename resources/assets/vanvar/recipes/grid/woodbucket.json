@@ -1,5 +1,5 @@
 {
-  "ingredientPattern": "_F_,W_W,WWW",
+  "ingredientPattern": "WWW,W_W,_F_",
   "ingredients": {
     "F": { "type": "item", "code": "game:flaxtwine" },
     "W": {

@@ -1,5 +1,5 @@
 {
-  "ingredientPattern": "LK",
+  "ingredientPattern": "KL",
   "ingredients": {
     "K": { "type": "item", "code": "game:knife-*", "isTool": true },
     "L": {

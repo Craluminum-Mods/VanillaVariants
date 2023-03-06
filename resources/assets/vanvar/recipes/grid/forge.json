@@ -1,5 +1,5 @@
 {
-  "ingredientPattern": "C_C,C_C,CCC",
+  "ingredientPattern": "CCC,__C,CCC",
   "ingredients": {
     "C": {
       "type": "block",

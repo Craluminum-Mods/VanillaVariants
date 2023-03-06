@@ -1,5 +1,5 @@
 {
-  "ingredientPattern": "G,P",
+  "ingredientPattern": "P,G",
   "ingredients": {
     "G": { "type": "block", "code": "game:glass-plain" },
     "P": {

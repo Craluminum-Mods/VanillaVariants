@@ -1,5 +1,5 @@
 {
-  "ingredientPattern": "S_S,S_S,PPP",
+  "ingredientPattern": "PPP,S_S,S_S",
   "ingredients": {
     "S": { "type": "item", "code": "game:stick" },
     "P": {

@@ -1,5 +1,5 @@
 {
-  "ingredientPattern": "PP,__,PP",
+  "ingredientPattern": "P_P,P_P",
   "ingredients": {
     "P": {
       "type": "item",
@@ -21,7 +21,7 @@
       ]
     }
   },
-  "width": 2,
-  "height": 3,
+  "width": 3,
+  "height": 2,
   "output": { "type": "block", "code": "game:shelf-{wood}-east" }
 }

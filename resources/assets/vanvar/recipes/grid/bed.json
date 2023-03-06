@@ -1,5 +1,5 @@
 {
-  "ingredientPattern": "L__,HHH,WWW",
+  "ingredientPattern": "__L,HHH,WWW",
   "ingredients": {
     "L": { "type": "block", "code": "game:linen-*" },
     "H": { "type": "block", "code": "game:hay-normal-ud" },

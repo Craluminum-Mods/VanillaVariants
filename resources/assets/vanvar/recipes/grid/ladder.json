@@ -1,5 +1,5 @@
 {
-  "ingredientPattern": "P_P,PSP,P_P",
+  "ingredientPattern": "PPP,_S_,PPP",
   "ingredients": {
     "P": {
       "type": "item",

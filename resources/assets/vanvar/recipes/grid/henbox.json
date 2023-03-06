@@ -1,5 +1,5 @@
 {
-  "ingredientPattern": "PHP,___,PPP",
+  "ingredientPattern": "PPP,PHP",
   "ingredients": {
     "H": { "type": "item", "code": "game:drygrass" },
     "P": {
@@ -23,6 +23,6 @@
     }
   },
   "width": 3,
-  "height": 3,
+  "height": 2,
   "output": { "type": "block", "code": "henbox-{wood}-empty" }
 }

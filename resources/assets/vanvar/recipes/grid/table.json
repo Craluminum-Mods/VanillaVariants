@@ -1,6 +1,6 @@
 [
   {
-    "ingredientPattern": "WWW,W_W,W_W",
+    "ingredientPattern": "WWW,__W,WWW",
     "ingredients": {
       "W": {
         "type": "item",
