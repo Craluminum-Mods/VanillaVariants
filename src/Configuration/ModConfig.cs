@@ -31,7 +31,6 @@ namespace VanillaVariants.Configuration
       }
 
       api.World.Config.SetBool("VVMoreRecipesFeatureEnabled", config.MoreRecipesFeature);
-      api.World.Config.SetBool("VVSlidingDoorCompatibilityEnabled", config.SlidingDoorCompatibility);
       api.World.Config.SetBool("VVTradersSellVariantsEnabled", config.TradersSellVariants);
       api.World.Config.SetBool("VVBedEnabled", config.Bed);
       api.World.Config.SetBool("VVCageEnabled", config.Cage);
@@ -51,7 +50,6 @@ namespace VanillaVariants.Configuration
       api.World.Config.SetBool("VVTroughSmallEnabled", config.TroughSmall);
       api.World.Config.SetBool("VVWagonWheelsEnabled", config.WagonWheels);
       api.World.Config.SetBool("VVWoodBucketEnabled", config.WoodBucket);
-      api.World.Config.SetBool("VVWoodenClubEnabled", config.WoodenClub);
       api.World.Config.SetBool("VVWoodenPanEnabled", config.WoodenPan);
       api.World.Config.SetBool("VVWoodenRailsEnabled", config.WoodenRails);
     }

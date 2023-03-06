@@ -3,7 +3,6 @@ namespace VanillaVariants.Configuration
   class VanillaVariantsConfig
   {
     public bool MoreRecipesFeature;
-    public bool SlidingDoorCompatibility;
     public bool TradersSellVariants;
     public bool Bed = true;
     public bool Cage = true;
@@ -23,7 +22,6 @@ namespace VanillaVariants.Configuration
     public bool TroughSmall = true;
     public bool WagonWheels = true;
     public bool WoodBucket = true;
-    public bool WoodenClub = true;
     public bool WoodenPan = true;
     public bool WoodenRails = true;
 
@@ -32,7 +30,6 @@ namespace VanillaVariants.Configuration
     public VanillaVariantsConfig(VanillaVariantsConfig previousConfig)
     {
       MoreRecipesFeature = previousConfig.MoreRecipesFeature;
-      SlidingDoorCompatibility = previousConfig.SlidingDoorCompatibility;
       TradersSellVariants = previousConfig.TradersSellVariants;
       Bed = previousConfig.Bed;
       Cage = previousConfig.Cage;
@@ -52,7 +49,6 @@ namespace VanillaVariants.Configuration
       TroughSmall = previousConfig.TroughSmall;
       WagonWheels = previousConfig.WagonWheels;
       WoodBucket = previousConfig.WoodBucket;
-      WoodenClub = previousConfig.WoodenClub;
       WoodenPan = previousConfig.WoodenPan;
       WoodenRails = previousConfig.WoodenRails;
     }
