@@ -6,7 +6,7 @@
         "condition": { "when": "VVTroughLargeEnabled", "isValue": "true" },
         "side": "server",
         "value": {
-            "*-genericwood-*": "BlockTrough",
+            "*-genericwood-*": "BlockTroughDoubleBlock",
             "*": "VV_BlockWoodTroughDoubleBlock"
         }
     }
