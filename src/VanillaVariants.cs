@@ -32,6 +32,8 @@ namespace VanillaVariants
             api.RegisterBlockClass("VV_BlockWoodTrough", typeof(BlockWoodTrough));
             api.RegisterBlockClass("VV_BlockWoodTroughDoubleBlock", typeof(BlockWoodTroughDoubleBlock));
             api.RegisterBlockClass("VV_BlockWoodWagonWheels", typeof(BlockWoodWagonWheels));
+            api.RegisterItemClass("VV_ItemWoodArmorStand", typeof(ItemWoodArmorStand));
+            api.RegisterEntity("VV_EntityWoodArmorStand", typeof(EntityWoodArmorStand));
             api.World.Logger.Event("started 'Vanilla Variants' mod");
         }
     }

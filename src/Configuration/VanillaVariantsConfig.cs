@@ -4,6 +4,7 @@ namespace VanillaVariants.Configuration
   {
     public bool MoreRecipesFeature;
     public bool TradersSellVariants;
+    public bool ArmorStand = true;
     public bool Bed = true;
     public bool Cage = true;
     public bool Chair = true;
@@ -31,6 +32,7 @@ namespace VanillaVariants.Configuration
     {
       MoreRecipesFeature = previousConfig.MoreRecipesFeature;
       TradersSellVariants = previousConfig.TradersSellVariants;
+      ArmorStand = previousConfig.ArmorStand;
       Bed = previousConfig.Bed;
       Cage = previousConfig.Cage;
       Chair = previousConfig.Chair;

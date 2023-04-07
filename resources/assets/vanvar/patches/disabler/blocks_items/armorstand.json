@@ -1,0 +1,26 @@
+[
+    {
+        "file": "vanvar:itemtypes/wood/armorstand.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVArmorStandEnabled", "isValue": "false" },
+        "side": "server"
+    },
+    {
+        "file": "vanvar:entities/wood/armorstand.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVArmorStandEnabled", "isValue": "false" },
+        "side": "server"
+    },
+    {
+        "file": "vanvar:recipes/grid/armorstand.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVArmorStandEnabled", "isValue": "false" },
+        "side": "server"
+    }
+]

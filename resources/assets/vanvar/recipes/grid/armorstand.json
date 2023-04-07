@@ -1,0 +1,15 @@
+{
+    "ingredientPattern": "BBB,BHB,_H_",
+    "ingredients": {
+        "H": { "type": "block", "code": "game:hay-normal-ud" },
+        "B": {
+            "type": "item",
+            "code": "game:plank-*",
+            "name": "wood",
+            "allowedVariants": ["acacia", "aged", "baldcypress", "birch", "ebony", "kapok", "larch", "maple", "pine", "purpleheart", "redwood", "walnut"]
+        }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "item", "code": "armorstand-{wood}" }
+}
