@@ -1,27 +1,9 @@
 {
-  "ingredientPattern": "PPP,P_P",
-  "ingredients": {
-    "P": {
-      "type": "item",
-      "code": "game:plank-*",
-      "name": "wood",
-      "allowedVariants": [
-        "acacia",
-        "aged",
-        "baldcypress",
-        "birch",
-        "ebony",
-        "kapok",
-        "larch",
-        "maple",
-        "pine",
-        "purpleheart",
-        "redwood",
-        "walnut"
-      ]
-    }
-  },
-  "width": 3,
-  "height": 2,
-  "output": { "type": "block", "code": "game:trough-{wood}-large-head-north" }
+    "ingredientPattern": "PPP,P_P",
+    "ingredients": {
+        "P": { "type": "item", "code": "game:plank-*", "name": "wood" }
+    },
+    "width": 3,
+    "height": 2,
+    "output": { "type": "block", "code": "game:trough-{wood}-large-head-north" }
 }

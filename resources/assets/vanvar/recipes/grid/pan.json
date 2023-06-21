@@ -1,28 +1,14 @@
 {
-  "ingredientPattern": "KL",
-  "ingredients": {
-    "K": { "type": "item", "code": "game:knife-*", "isTool": true },
-    "L": {
-      "type": "block",
-      "code": "game:log-placed-*-ud",
-      "name": "wood",
-      "allowedVariants": [
-        "acacia",
-        "aged",
-        "baldcypress",
-        "birch",
-        "ebony",
-        "kapok",
-        "larch",
-        "maple",
-        "pine",
-        "purpleheart",
-        "redwood",
-        "walnut"
-      ]
-    }
-  },
-  "width": 2,
-  "height": 1,
-  "output": { "type": "block", "code": "game:pan-{wood}" }
+    "ingredientPattern": "KL",
+    "ingredients": {
+        "K": { "type": "item", "code": "game:knife-*", "isTool": true },
+        "L": {
+            "type": "block",
+            "code": "game:log-placed-*-ud",
+            "name": "wood"
+        }
+    },
+    "width": 2,
+    "height": 1,
+    "output": { "type": "block", "code": "game:pan-{wood}" }
 }

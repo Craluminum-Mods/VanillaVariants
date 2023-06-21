@@ -1,29 +1,15 @@
 {
-  "ingredientPattern": "S,P",
-  "ingredients": {
-    "P": {
-      "type": "item",
-      "code": "game:plank-*",
-      "quantity": 2,
-      "name": "wood",
-      "allowedVariants": [
-        "acacia",
-        "aged",
-        "baldcypress",
-        "birch",
-        "ebony",
-        "kapok",
-        "larch",
-        "maple",
-        "pine",
-        "purpleheart",
-        "redwood",
-        "walnut"
-      ]
+    "ingredientPattern": "S,P",
+    "ingredients": {
+        "P": {
+            "type": "item",
+            "code": "game:plank-*",
+            "quantity": 2,
+            "name": "wood"
+        },
+        "S": { "type": "item", "code": "game:stick" }
     },
-    "S": { "type": "item", "code": "game:stick" }
-  },
-  "width": 1,
-  "height": 2,
-  "output": { "type": "block", "code": "sign-{wood}-ground-north" }
+    "width": 1,
+    "height": 2,
+    "output": { "type": "block", "code": "sign-{wood}-ground-north" }
 }
