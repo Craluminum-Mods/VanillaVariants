@@ -1,11 +1,11 @@
 {
-  "type": "code",
-  "name": "Vanilla Variants",
-  "modid": "vanvar",
-  "version": "3.1.1",
-  "description": "Wood and stone variants of various blocks",
-  "authors": ["Craluminum2413"],
-  "dependencies": {
-    "game": "1.18.0-rc.2"
-  }
+    "type": "code",
+    "name": "Vanilla Variants",
+    "modid": "vanvar",
+    "version": "3.1.2",
+    "description": "Wood and stone variants of various blocks",
+    "authors": ["Craluminum2413"],
+    "dependencies": {
+        "game": "1.18.0"
+    }
 }
