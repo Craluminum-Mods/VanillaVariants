@@ -1,6 +1,15 @@
 {
     "code": "armorstand",
-    "class": "VV_ItemWoodArmorStand",
+    "class": "ItemArmorStand",
+    "behaviors": [
+        {
+            "name": "VanillaVariants.CbName",
+            "properties": {
+                "translationName": "item-armorstand",
+                "translationPart": "material-{wood}"
+            }
+        }
+    ],
     "attributes": { "handbook": { "groupBy": ["armorstand-*"] } },
     "variantgroups": [{ "code": "wood", "states": ["aged"], "loadFromProperties": "block/wood" }],
     "skipVariants": ["*-oak"],

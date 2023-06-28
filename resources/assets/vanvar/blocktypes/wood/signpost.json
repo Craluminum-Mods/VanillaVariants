@@ -1,9 +1,18 @@
 {
 	"code": "signpost",
 	"creativeinventory": { "general": ["*"], "decorative": ["*"], "vanvar": ["*"] },
-	"class": "VV_BlockWoodSignPost",
+	"class": "BlockSignPost",
 	"entityclass": "SignPost",
-	"attributes": { "handbook": { "groupBy": ["signpost-*"] } },
+    "behaviors": [
+        {
+            "name": "VanillaVariants.BbName",
+            "properties": {
+                "translationName": "block-signpost",
+                "translationPart": "material-{type}"
+            }
+        }
+    ],
+    "attributes": { "handbook": { "groupBy": ["signpost-*"] } },
 	"variantgroups": [
 		{ "code": "type", "states": ["aged"], "loadFromProperties": "block/wood" }
 	],

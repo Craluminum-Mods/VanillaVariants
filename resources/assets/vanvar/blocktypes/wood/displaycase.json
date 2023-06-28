@@ -1,34 +1,42 @@
 {
-	"code": "displaycase",
-	"behaviors": [{"name": "UnstableFalling", "properties": { "fallSound": null, "dustIntensity": 0 }}],	
-	"class": "VV_BlockWoodDisplayCase",
-	"entityClass": "DisplayCase",
-	"variantgroups": [
-		{ "code": "type", "states": ["aged"], "loadFromProperties": "block/wood" }
-	],
-	"attributes": { "handbook": { "groupBy": ["displaycase-*"] } },
-	"skipVariants": [ "*-oak" ],
-	"creativeinventory": { "general": ["*"], "terrain": ["*"], "vanvar": ["*"] },
-	"shape": { "base": "game:block/wood/displaycase/generic" },
-	"textures": {
-		"wood": { "base": "game:block/wood/debarked/{type}" }
-	},
-	"drawtype": "json",
-	"blockmaterial": "Wood",
-	"replaceable": 600,
-	"resistance": 3,
-	"heldTpIdleAnimation": "holdbothhandslarge", "heldTpUseAnimation": "twohandplaceblock",
-	"sounds": {
-		"walk": "game:player/buildhigh"
-	},
-	"collisionSelectionBoxes": [
-		{ "x1": 0.0625, "y1": 0, "z1": 0.0625, "x2": 0.5, "y2": 0.625, "z2": 0.5 },
-		{ "x1": 0.5, "y1": 0, "z1": 0.0625, "x2": 0.9375, "y2": 0.625, "z2": 0.5 },
-		{ "x1": 0.0625, "y1": 0, "z1": 0.5, "x2": 0.5, "y2": 0.625, "z2": 0.9375 },
-		{ "x1": 0.5, "y1": 0, "z1": 0.5, "x2": 0.9375, "y2": 0.625, "z2": 0.9375 }
-	],
-	"sideopaque": { "all": false },
-	"sideao": { "all": true },
-	"emitsideao": { "all": false },
-	"sidesolid": { "all": false }
+    "code": "displaycase",
+    "class": "BlockDisplayCase",
+    "entityClass": "DisplayCase",
+    "behaviors": [
+        {
+            "name": "VanillaVariants.BbName",
+            "properties": {
+                "translationName": "block-displaycase-*",
+                "translationPart": "material-{type}"
+            }
+        },
+        { "name": "UnstableFalling", "properties": { "fallSound": null, "dustIntensity": 0 } }
+    ],
+    "variantgroups": [{ "code": "type", "states": ["aged"], "loadFromProperties": "block/wood" }],
+    "attributes": { "handbook": { "groupBy": ["displaycase-*"] } },
+    "skipVariants": ["*-oak"],
+    "creativeinventory": { "general": ["*"], "terrain": ["*"], "vanvar": ["*"] },
+    "shape": { "base": "game:block/wood/displaycase/generic" },
+    "textures": {
+        "wood": { "base": "game:block/wood/debarked/{type}" }
+    },
+    "drawtype": "json",
+    "blockmaterial": "Wood",
+    "replaceable": 600,
+    "resistance": 3,
+    "heldTpIdleAnimation": "holdbothhandslarge",
+    "heldTpUseAnimation": "twohandplaceblock",
+    "sounds": {
+        "walk": "game:player/buildhigh"
+    },
+    "collisionSelectionBoxes": [
+        { "x1": 0.0625, "y1": 0, "z1": 0.0625, "x2": 0.5, "y2": 0.625, "z2": 0.5 },
+        { "x1": 0.5, "y1": 0, "z1": 0.0625, "x2": 0.9375, "y2": 0.625, "z2": 0.5 },
+        { "x1": 0.0625, "y1": 0, "z1": 0.5, "x2": 0.5, "y2": 0.625, "z2": 0.9375 },
+        { "x1": 0.5, "y1": 0, "z1": 0.5, "x2": 0.9375, "y2": 0.625, "z2": 0.9375 }
+    ],
+    "sideopaque": { "all": false },
+    "sideao": { "all": true },
+    "emitsideao": { "all": false },
+    "sidesolid": { "all": false }
 }
