@@ -3,6 +3,8 @@ using VanillaVariants.Configuration;
 using Vintagestory.API.Util;
 using Vintagestory.API.Datastructures;
 using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
+using System;
 
 [assembly: ModInfo("Vanilla Variants")]
 
@@ -10,6 +12,15 @@ namespace VanillaVariants;
 
 public class Core : ModSystem
 {
+    readonly string[][] array = new string[][] {
+        new string[] { "@ladder-(?!wood|rope)(.*)", "block-ladder-wood-*", "material" },
+        new string[] { "@moldrack-(?!normal)(.*)", "block-moldrack-*", "type" },
+        new string[] { "@pan-(?!wooden)(.*)", "block-pan-wooden", "type" },
+        new string[] { "@shelf-(?!normal)(.*)", "block-shelf-normal-*", "type" },
+        new string[] { "@trough-(?!genericwood)(.*large)-(.*)", "block-trough-genericwood-large-head-*", "material" },
+        new string[] { "@trough-(?!genericwood)(.*small)-(.*)", "block-trough-genericwood-small-*", "material" }
+    };
+
     public override void Start(ICoreAPI api)
     {
         base.Start(api);
@@ -22,67 +33,34 @@ public class Core : ModSystem
 
     public override void AssetsFinalize(ICoreAPI api)
     {
+        AppendBlockBehaviors(api);
+    }
+
+    private void AppendBlockBehaviors(ICoreAPI api)
+    {
         foreach (var block in api.World.Blocks)
         {
             bool matched = false;
             object properties = null;
 
-            if (block.WildCardMatch("@ladder-(?!wood|rope)(.*)"))
+            foreach (string[] s in array)
             {
-                matched = true;
-                properties = new
+                if (block.WildCardMatch(s[0]))
                 {
-                    translationName = "block-ladder-wood-*",
-                    translationPart = "material-" + block.Variant["material"]
-                };
-            }
-            else if (block.WildCardMatch("@moldrack-(?!normal)(.*)"))
-            {
-                matched = true;
-                properties = new
-                {
-                    translationName = "block-moldrack-*",
-                    translationPart = "material-" + block.Variant["type"]
-                };
-            }
-            else if (block.WildCardMatch("@pan-(?!wooden)(.*)"))
-            {
-                matched = true;
-                properties = new
-                {
-                    translationName = "block-pan-wooden",
-                    translationPart = "material-" + block.Variant["type"]
-                };
-            }
-            else if (block.WildCardMatch("@shelf-(?!normal)(.*)"))
-            {
-                matched = true;
-                properties = new
-                {
-                    translationName = "block-shelf-normal-*",
-                    translationPart = "material-" + block.Variant["type"]
-                };
-            }
-            else if (block.WildCardMatch("@trough-(?!genericwood)(.*large)-(.*)"))
-            {
-                matched = true;
-                properties = new
-                {
-                    translationName = "block-trough-genericwood-large-head-*",
-                    translationPart = "material-" + block.Variant["material"]
-                };
-            }
-            else if (block.WildCardMatch("@trough-(?!genericwood)(.*small)-(.*)"))
-            {
-                matched = true;
-                properties = new
-                {
-                    translationName = "block-trough-genericwood-small-*",
-                    translationPart = "material-" + block.Variant["material"]
-                };
+                    matched = true;
+                    properties = new
+                    {
+                        translationName = s[1],
+                        translationPart = "material-" + block.Variant[s[2]]
+                    };
+                    break;
+                }
             }
 
-            if (matched) AppendBlockBehavior(new BlockBehaviorName(block), properties);
+            if (matched)
+            {
+                AppendBlockBehavior(new BlockBehaviorName(block), properties);
+            }
         }
     }
 
