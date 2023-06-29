@@ -1,0 +1,57 @@
+[
+    {
+        "ingredientPattern": "H_,PH,SP",
+        "ingredients": {
+            "H": { "type": "item", "code": "game:drygrass" },
+            "P": { "type": "item", "code": "game:plank-*", "name": "wood", "quantity": 2 },
+            "S": { "type": "block", "code": "game:soil-medium-none" }
+        },
+        "width": 2,
+        "height": 3,
+        "output": { "type": "block", "code": "slantedroofing-sod-{wood}-east-free", "quantity": 4 }
+    },
+    {
+        "ingredientPattern": "PSP,HPH,_H_",
+        "ingredients": {
+            "H": { "type": "item", "code": "game:drygrass" },
+            "P": { "type": "item", "code": "game:plank-*", "name": "wood", "quantity": 2 },
+            "S": { "type": "block", "code": "game:soil-medium-none" }
+        },
+        "width": 3,
+        "height": 3,
+        "output": { "type": "block", "code": "slantedroofingridge-sod-{wood}-ns-free", "quantity": 4 }
+    },
+    {
+        "ingredientPattern": "PSP,HHH,_H_",
+        "ingredients": {
+            "H": { "type": "item", "code": "game:drygrass" },
+            "P": { "type": "item", "code": "game:plank-*", "name": "wood", "quantity": 2 },
+            "S": { "type": "block", "code": "game:soil-medium-none" }
+        },
+        "width": 3,
+        "height": 3,
+        "output": { "type": "block", "code": "slantedroofingtip-sod-{wood}-free", "quantity": 4 }
+    },
+    {
+        "ingredientPattern": "_HP,_HP,HSP",
+        "ingredients": {
+            "H": { "type": "item", "code": "game:drygrass" },
+            "P": { "type": "item", "code": "game:plank-*", "name": "wood", "quantity": 2 },
+            "S": { "type": "block", "code": "game:soil-medium-none" }
+        },
+        "width": 3,
+        "height": 3,
+        "output": { "type": "block", "code": "slantedroofingcornerinner-sod-{wood}-east-free", "quantity": 4 }
+    },
+    {
+        "ingredientPattern": "H_,HH,SP",
+        "ingredients": {
+            "H": { "type": "item", "code": "game:drygrass" },
+            "P": { "type": "item", "code": "game:plank-*", "name": "wood", "quantity": 2 },
+            "S": { "type": "block", "code": "game:soil-medium-none" }
+        },
+        "width": 2,
+        "height": 3,
+        "output": { "type": "block", "code": "slantedroofingcornerouter-sod-{wood}-east-free", "quantity": 4 }
+    }
+]

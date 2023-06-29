@@ -3,8 +3,6 @@ using VanillaVariants.Configuration;
 using Vintagestory.API.Util;
 using Vintagestory.API.Datastructures;
 using Newtonsoft.Json.Linq;
-using System.Collections.Generic;
-using System;
 
 [assembly: ModInfo("Vanilla Variants")]
 

@@ -1,0 +1,13 @@
+[
+    { "file": "vanvar:blocktypes/wood/roofing/slantedroofing.json", "op": "add", "path": "/enabled", "value": false, "condition": { "when": "VVSodRoodingEnabled", "isValue": "false" }, "side": "server" },
+    { "file": "vanvar:blocktypes/wood/roofing/slantedroofingcorner-inner.json", "op": "add", "path": "/enabled", "value": false, "condition": { "when": "VVSodRoodingEnabled", "isValue": "false" }, "side": "server" },
+    { "file": "vanvar:blocktypes/wood/roofing/slantedroofingcorner-outer.json", "op": "add", "path": "/enabled", "value": false, "condition": { "when": "VVSodRoodingEnabled", "isValue": "false" }, "side": "server" },
+    { "file": "vanvar:blocktypes/wood/roofing/slantedroofingridge.json", "op": "add", "path": "/enabled", "value": false, "condition": { "when": "VVSodRoodingEnabled", "isValue": "false" }, "side": "server" },
+    { "file": "vanvar:blocktypes/wood/roofing/slantedroofingtip.json", "op": "add", "path": "/enabled", "value": false, "condition": { "when": "VVSodRoodingEnabled", "isValue": "false" }, "side": "server" },
+
+    { "file": "vanvar:recipes/grid/roofing.json", "op": "add", "path": "/0/enabled", "value": false, "condition": { "when": "VVSodRoodingEnabled", "isValue": "false" }, "side": "server" },
+    { "file": "vanvar:recipes/grid/roofing.json", "op": "add", "path": "/1/enabled", "value": false, "condition": { "when": "VVSodRoodingEnabled", "isValue": "false" }, "side": "server" },
+    { "file": "vanvar:recipes/grid/roofing.json", "op": "add", "path": "/2/enabled", "value": false, "condition": { "when": "VVSodRoodingEnabled", "isValue": "false" }, "side": "server" },
+    { "file": "vanvar:recipes/grid/roofing.json", "op": "add", "path": "/3/enabled", "value": false, "condition": { "when": "VVSodRoodingEnabled", "isValue": "false" }, "side": "server" },
+    { "file": "vanvar:recipes/grid/roofing.json", "op": "add", "path": "/4/enabled", "value": false, "condition": { "when": "VVSodRoodingEnabled", "isValue": "false" }, "side": "server" }
+]

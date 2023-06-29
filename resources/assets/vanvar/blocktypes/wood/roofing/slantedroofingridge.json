@@ -1,0 +1,49 @@
+{
+    "code": "slantedroofingridge",
+    "behaviors": [
+        {
+            "name": "VanillaVariants.BbName",
+            "properties": {
+                "translationName": "block-slantedroofingridge-sod-*",
+                "translationPart": "material-{material}"
+            }
+        },
+        { "name": "NWOrientable" }
+    ],
+    "variantgroups": [
+        { "code": "type", "states": ["sod"] },
+        {
+            "code": "material",
+            "loadFromProperties": "block/wood"
+        },
+        { "code": "orientation", "states": ["ns", "we"] },
+        { "code": "cover", "states": ["free", "snow"] }
+    ],
+    "shape": { "base": "game:block/roofing/ridge/sod-{cover}", "rotateYByType": { "*-ns-*": 90, "*-we-*": 90 } },
+    "textures": {
+        "aged-top": { "base": "game:block/wood/planks/{material}1" },
+        "aged1": { "base": "game:block/wood/planks/{material}1" },
+        "aged-side": { "base": "game:block/wood/planks/{material}1" }
+    },
+    "drawtype": "json",
+    "faceCullMode": "NeverCull",
+    "renderpass": "OpaqueNoCull",
+    "sidesolid": { "all": false, "down": true },
+    "sideopaque": { "all": false },
+    "blockmaterial": "Plant",
+    "creativeinventory": { "general": ["*-ns-free"], "decorative": ["*-ns-free"], "vanvar": ["*-ns-free"] },
+    "replaceable": 300,
+    "resistance": 2,
+    "lightAbsorption": 99,
+    "emitSideAo": { "all": true },
+    "sideAo": { "all": false },
+    "collisionSelectionBoxes": [
+        { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.375, "z2": 1, "rotateYByType": { "*-we-*": 90 } },
+        { "x1": 0.25, "y1": 0.375, "z1": 0, "x2": 0.75, "y2": 0.5625, "z2": 1, "rotateYByType": { "*-we-*": 90 } }
+    ],
+    "guiTransform": {
+        "rotation": { "x": -22.6, "y": -50, "z": 0 },
+        "origin": { "x": 0.5, "y": 0.3, "z": 0.5 },
+        "scale": 0.8
+    }
+}
