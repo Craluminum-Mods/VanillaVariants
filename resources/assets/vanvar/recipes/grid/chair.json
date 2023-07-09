@@ -5,12 +5,14 @@
             "W": {
                 "type": "item",
                 "code": "game:plank-*",
-                "name": "wood"
+                "name": "wood",
+                "skipVariants": ["oak"]
             },
             "L": {
                 "type": "item",
                 "code": "game:cloth-*",
-                "name": "color"
+                "name": "color",
+                "skipVariants": ["mordant"]
             }
         },
         "width": 3,
@@ -23,7 +25,8 @@
             "W": {
                 "type": "item",
                 "code": "game:plank-*",
-                "name": "wood"
+                "name": "wood",
+                "skipVariants": ["oak"]
             },
             "L": { "type": "item", "code": "game:cloth-plain" }
         },

@@ -2,7 +2,7 @@
     {
         "ingredientPattern": "WWW,__W,WWW",
         "ingredients": {
-            "W": { "type": "item", "code": "game:plank-*", "name": "wood" }
+            "W": { "type": "item", "code": "game:plank-*", "name": "wood", "skipVariants": ["oak"] }
         },
         "width": 3,
         "height": 3,

@@ -3,7 +3,7 @@
         "ingredientPattern": "H_,PH,SP",
         "ingredients": {
             "H": { "type": "item", "code": "game:drygrass" },
-            "P": { "type": "item", "code": "game:plank-*", "name": "wood", "quantity": 2 },
+            "P": { "type": "item", "code": "game:plank-*", "name": "wood", "quantity": 2, "skipVariants": ["aged"] },
             "S": { "type": "block", "code": "game:soil-medium-none" }
         },
         "width": 2,
@@ -14,7 +14,7 @@
         "ingredientPattern": "PSP,HPH,_H_",
         "ingredients": {
             "H": { "type": "item", "code": "game:drygrass" },
-            "P": { "type": "item", "code": "game:plank-*", "name": "wood", "quantity": 2 },
+            "P": { "type": "item", "code": "game:plank-*", "name": "wood", "quantity": 2, "skipVariants": ["aged"] },
             "S": { "type": "block", "code": "game:soil-medium-none" }
         },
         "width": 3,
@@ -25,7 +25,7 @@
         "ingredientPattern": "PSP,HHH,_H_",
         "ingredients": {
             "H": { "type": "item", "code": "game:drygrass" },
-            "P": { "type": "item", "code": "game:plank-*", "name": "wood", "quantity": 2 },
+            "P": { "type": "item", "code": "game:plank-*", "name": "wood", "quantity": 2, "skipVariants": ["aged"] },
             "S": { "type": "block", "code": "game:soil-medium-none" }
         },
         "width": 3,
@@ -36,7 +36,7 @@
         "ingredientPattern": "_HP,_HP,HSP",
         "ingredients": {
             "H": { "type": "item", "code": "game:drygrass" },
-            "P": { "type": "item", "code": "game:plank-*", "name": "wood", "quantity": 2 },
+            "P": { "type": "item", "code": "game:plank-*", "name": "wood", "quantity": 2, "skipVariants": ["aged"] },
             "S": { "type": "block", "code": "game:soil-medium-none" }
         },
         "width": 3,
@@ -47,7 +47,7 @@
         "ingredientPattern": "H_,HH,SP",
         "ingredients": {
             "H": { "type": "item", "code": "game:drygrass" },
-            "P": { "type": "item", "code": "game:plank-*", "name": "wood", "quantity": 2 },
+            "P": { "type": "item", "code": "game:plank-*", "name": "wood", "quantity": 2, "skipVariants": ["aged"] },
             "S": { "type": "block", "code": "game:soil-medium-none" }
         },
         "width": 2,

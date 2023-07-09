@@ -5,7 +5,8 @@
         "L": {
             "type": "block",
             "code": "game:log-placed-*-ud",
-            "name": "wood"
+            "name": "wood",
+            "skipVariants": ["oak"]
         }
     },
     "width": 2,

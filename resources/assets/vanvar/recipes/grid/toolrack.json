@@ -12,7 +12,7 @@
     {
         "ingredientPattern": "S,_,S",
         "ingredients": {
-            "S": { "type": "item", "code": "game:plank-*", "name": "wood" }
+            "S": { "type": "item", "code": "game:plank-*", "name": "wood", "skipVariants": ["oak"] }
         },
         "width": 1,
         "height": 3,

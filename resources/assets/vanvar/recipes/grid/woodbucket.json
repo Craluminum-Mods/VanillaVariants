@@ -2,7 +2,7 @@
     "ingredientPattern": "WWW,W_W,_F_",
     "ingredients": {
         "F": { "type": "item", "code": "game:flaxtwine" },
-        "W": { "type": "item", "code": "game:plank-*", "name": "wood" }
+        "W": { "type": "item", "code": "game:plank-*", "name": "wood", "skipVariants": ["oak"] }
     },
     "width": 3,
     "height": 3,

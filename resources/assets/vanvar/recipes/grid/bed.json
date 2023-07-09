@@ -7,7 +7,8 @@
             "type": "item",
             "code": "game:plank-*",
             "quantity": 2,
-            "name": "wood"
+            "name": "wood",
+            "skipVariants": ["oak"]
         }
     },
     "width": 3,
