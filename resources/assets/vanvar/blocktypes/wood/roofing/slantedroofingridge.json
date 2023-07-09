@@ -19,7 +19,7 @@
         { "code": "orientation", "states": ["ns", "we"] },
         { "code": "cover", "states": ["free", "snow"] }
     ],
-    "shape": { "base": "game:block/roofing/ridge/sod-{cover}", "rotateYByType": { "*-ns-*": 90, "*-we-*": 90 } },
+    "shape": { "base": "game:block/roofing/ridge/sod-{cover}", "rotateYByType": { "*-we-*": 90 } },
     "textures": {
         "aged-top": { "base": "game:block/wood/planks/{material}1" },
         "aged1": { "base": "game:block/wood/planks/{material}1" },
