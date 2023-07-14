@@ -29,7 +29,7 @@
         "base": "game:block/wood/henbox/henbox-{eggCount}"
     },
     "textures": {
-        "hay-egg": { "base": "game:block/henbox/hay-egg" },
+        "hay-egg": { "base": "game:block/wood/henbox/hay-egg" },
         "singlehay2": { "base": "game:block/wood/trough/large/singlehay2" },
         "sides": {
             "base": "game:block/wood/debarked/{type}",
