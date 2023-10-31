@@ -1,10 +1,10 @@
-﻿using Vintagestory.API.Common;
+﻿using Newtonsoft.Json.Linq;
 using VanillaVariants.Configuration;
-using Vintagestory.API.Util;
+using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;
-using Newtonsoft.Json.Linq;
+using Vintagestory.API.Util;
 
-[assembly: ModInfo("Vanilla Variants")]
+[assembly: ModInfo(name: "Vanilla Variants", modID: "vanvar")]
 
 namespace VanillaVariants;
 
@@ -36,7 +36,7 @@ public class Core : ModSystem
 
     private void AppendBlockBehaviors(ICoreAPI api)
     {
-        foreach (var block in api.World.Blocks)
+        foreach (Block block in api.World.Blocks)
         {
             bool matched = false;
             object properties = null;
@@ -62,7 +62,7 @@ public class Core : ModSystem
         }
     }
 
-    private void AppendBlockBehavior<T>(T instance, object propertiesFromJson) where T : BlockBehavior
+    private static void AppendBlockBehavior<T>(T instance, object propertiesFromJson) where T : BlockBehavior
     {
         instance.Initialize(new JsonObject(JToken.FromObject(propertiesFromJson)));
         instance.block.CollectibleBehaviors = instance.block.CollectibleBehaviors.Append(instance);

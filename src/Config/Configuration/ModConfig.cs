@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using Vintagestory.API.Common;
 
 namespace VanillaVariants.Configuration
@@ -6,7 +5,7 @@ namespace VanillaVariants.Configuration
     static class ModConfig
     {
         private const string jsonConfig = "VanillaVariantsConfig.json";
-        private static VanillaVariantsConfig config;
+        private static Config config;
 
         public static void ReadConfig(ICoreAPI api)
         {
@@ -56,13 +55,13 @@ namespace VanillaVariants.Configuration
             api.World.Config.SetBool("VVWoodenRailsEnabled", config.WoodenRails);
         }
 
-        private static VanillaVariantsConfig LoadConfig(ICoreAPI api) =>
-          api.LoadModConfig<VanillaVariantsConfig>(jsonConfig);
+        private static Config LoadConfig(ICoreAPI api) =>
+          api.LoadModConfig<Config>(jsonConfig);
 
         private static void GenerateConfig(ICoreAPI api) =>
-          api.StoreModConfig(new VanillaVariantsConfig(), jsonConfig);
+          api.StoreModConfig(new Config(), jsonConfig);
 
-        private static void GenerateConfig(ICoreAPI api, VanillaVariantsConfig previousConfig) =>
-          api.StoreModConfig(new VanillaVariantsConfig(previousConfig), jsonConfig);
+        private static void GenerateConfig(ICoreAPI api, Config previousConfig) =>
+          api.StoreModConfig(new Config(previousConfig), jsonConfig);
     }
 }

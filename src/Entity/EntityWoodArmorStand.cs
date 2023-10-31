@@ -7,8 +7,8 @@ namespace VanillaVariants
     {
         public override string GetName()
         {
-            var material = Code.EndVariant();
-            var part = Lang.Get($"material-{material}");
+            string material = Code.EndVariant();
+            string part = Lang.Get($"material-{material}");
             return $"{Lang.Get("game:item-armorstand")} ({part})";
         }
     }
