@@ -12,7 +12,17 @@
             }
         }
     ],
-    "attributes": { "handbook": { "groupBy": ["sign-*"] } },
+    "attributes": {
+        "handbook": { "groupBy": ["sign-*"] },
+        "maxWidth": 200,
+        "maxHeight": 165,
+        "fontSize": 20,
+        "textVoxelOffsetX": 0,
+        "textVoxelOffsetY": 0,
+        "textVoxelOffsetZ": 0,
+        "textVoxelWidth": 13,
+        "textVoxelHeight": 7
+    },
     "variantgroups": [
         { "code": "type", "states": ["aged"], "loadFromProperties": "block/wood" },
         { "code": "attachment", "states": ["ground", "wall"] },
