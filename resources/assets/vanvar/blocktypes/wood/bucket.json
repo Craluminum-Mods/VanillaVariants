@@ -41,16 +41,9 @@
     },
     "blockmaterial": "Wood",
     "textures": {
-        "wood": { "base": "game:block/wood/debarked/{type}" },
-        "sides": {
-            "base": "game:block/wood/debarked/{type}",
-            "overlays": ["block/bucket/sides"]
-        },
-        "normal1": { "base": "game:block/cloth/linen/normal1" },
-        "inner side": {
-            "base": "game:block/wood/debarked/{type}",
-            "overlays": ["block/bucket/inner side"]
-        }
+        "sides": { "base": "game:block/wood/debarked/{type}" },
+        "charred": { "base": "game:block/wood/debarked/{type}" },
+        "aged": { "base": "game:block/wood/debarked/{type}" }
     },
     "replaceable": 500,
     "resistance": 1.5,

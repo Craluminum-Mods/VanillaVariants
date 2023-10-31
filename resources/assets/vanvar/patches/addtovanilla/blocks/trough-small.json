@@ -17,10 +17,10 @@
   },
   {
     "op": "add",
-    "path": "/textures/bottom-inside",
+    "path": "/textures/charred",
     "value": {
       "baseByType": {
-        "*-genericwood-*": "block/wood/trough/large/bottom-inside",
+        "*-genericwood-*": "block/wood/charred",
         "*": "block/wood/debarked/{material}"
       }
     },
@@ -30,10 +30,10 @@
   },
   {
     "op": "add",
-    "path": "/textures/outer-ring",
+    "path": "/textures/aged",
     "value": {
       "baseByType": {
-        "*-genericwood-*": "block/wood/trough/large/outer-ring",
+        "*-genericwood-*": "block/wood/debarked/aged",
         "*": "block/wood/debarked/{material}"
       }
     },
