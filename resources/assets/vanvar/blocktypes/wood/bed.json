@@ -52,7 +52,7 @@
     "replaceable": 550,
     "resistance": 2,
     "lightAbsorption": 0,
-    "maxStackSize": 1,
+    "maxStackSize": 2,
     "guitransform": {
         "scale": 0.75
     },
