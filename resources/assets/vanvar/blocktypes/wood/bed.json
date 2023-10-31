@@ -46,23 +46,7 @@
         }
     },
     "textures": {
-        "bottom": { "base": "game:block/wood/debarked/{type}" },
-        "top1": {
-            "base": "game:block/wood/debarked/{type}",
-            "overlays": ["block/bed/top1"]
-        },
-        "top2": {
-            "base": "game:block/wood/debarked/{type}",
-            "overlays": ["block/bed/top2"]
-        },
-        "side2": {
-            "base": "game:block/wood/debarked/{type}",
-            "overlays": ["block/bed/side2"]
-        },
-        "side1": {
-            "base": "game:block/wood/debarked/{type}",
-            "overlays": ["block/bed/side1"]
-        }
+        "walnut": { "base": "game:block/wood/debarked/{type}" }
     },
     "blockmaterial": "Wood",
     "replaceable": 550,
