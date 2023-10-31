@@ -26,7 +26,7 @@ public class Core : ModSystem
         api.RegisterEntity("VV_EntityWoodArmorStand", typeof(EntityWoodArmorStand));
         api.RegisterBlockBehaviorClass("VanillaVariants.BbName", typeof(BlockBehaviorName));
         api.RegisterCollectibleBehaviorClass("VanillaVariants.CbName", typeof(CollectibleBehaviorName));
-        api.World.Logger.Event("started 'Vanilla Variants' mod");
+        api.World.Logger.Event("started '{0}' mod", Mod.Info.ModID);
     }
 
     public override void AssetsFinalize(ICoreAPI api)
