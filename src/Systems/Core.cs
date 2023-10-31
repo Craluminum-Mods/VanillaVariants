@@ -10,7 +10,7 @@ namespace VanillaVariants;
 
 public class Core : ModSystem
 {
-    readonly string[][] array = new string[][] {
+    private string[][] ItemCodesArray { get; } = new string[][] {
         new string[] { "@ladder-(?!wood|rope)(.*)", "block-ladder-wood-*", "material" },
         new string[] { "@moldrack-(?!normal)(.*)", "block-moldrack-*", "type" },
         new string[] { "@pan-(?!wooden)(.*)", "block-pan-wooden", "type" },
@@ -19,10 +19,18 @@ public class Core : ModSystem
         new string[] { "@trough-(?!genericwood)(.*small)-(.*)", "block-trough-genericwood-small-*", "material" }
     };
 
+    public Config Config { get; private set; }
+
+    public override void StartPre(ICoreAPI api)
+    {
+        base.StartPre(api);
+        Config = ModConfig.ReadConfig(api);
+    }
+
     public override void Start(ICoreAPI api)
     {
         base.Start(api);
-        ModConfig.ReadConfig(api);
+
         api.RegisterEntity("VV_EntityWoodArmorStand", typeof(EntityWoodArmorStand));
         api.RegisterBlockBehaviorClass("VanillaVariants.BbName", typeof(BlockBehaviorName));
         api.RegisterCollectibleBehaviorClass("VanillaVariants.CbName", typeof(CollectibleBehaviorName));
@@ -41,7 +49,7 @@ public class Core : ModSystem
             bool matched = false;
             object properties = null;
 
-            foreach (string[] s in array)
+            foreach (string[] s in ItemCodesArray)
             {
                 if (block.WildCardMatch(s[0]))
                 {
