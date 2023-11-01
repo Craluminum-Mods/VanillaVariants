@@ -19,7 +19,7 @@ public class Core : ModSystem
         new string[] { "@trough-(?!genericwood)(.*small)-(.*)", "block-trough-genericwood-small-*", "material" }
     };
 
-    public Config Config { get; private set; }
+    public static Config Config { get; private set; }
 
     public override void StartPre(ICoreAPI api)
     {
