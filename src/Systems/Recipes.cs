@@ -27,7 +27,12 @@ public class Recipes : ModSystem
 
     public override void AssetsLoaded(ICoreAPI api)
     {
-        if (api.Side != EnumAppSide.Server || !Config.OverrideVanillaRecipes)
+        if (api.Side != EnumAppSide.Server)
+        {
+            return;
+        }
+
+        if (!Config.OverrideVanillaRecipes)
         {
             return;
         }
