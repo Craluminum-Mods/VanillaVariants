@@ -16,7 +16,7 @@
             "groupBy": ["quern-*"]
         }
     },
-    "variantgroups": [{ "code": "rock", "loadFromProperties": "block/rock" }],
+    "variantgroups": [{ "code": "rock", "loadFromProperties": "block/rockwithdeposit" }],
     "skipVariants": ["*-granite", "*-andesite", "*-basalt", "*-peridotite"],
     "creativeinventory": { "general": ["*"], "terrain": ["*"], "mechanics": ["*"], "vanvar": ["*"] },
     "shape": { "base": "game:block/stone/quern/complete" },
