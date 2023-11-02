@@ -14,6 +14,7 @@ public class Recipes : ModSystem
     public static AssetLocation CobblestoneCodes { get; } = new("cobblestone-*");
     public static AssetLocation LogCodes { get; } = new("log-*");
     public static AssetLocation ClothCodes { get; } = new("cloth-*");
+    public static AssetLocation RockCodes { get; } = new("rock-*");
 
     public override bool ShouldLoad(EnumAppSide forSide)
     {
@@ -48,6 +49,7 @@ public class Recipes : ModSystem
         Block henbox = api.World.GetBlock(new AssetLocation("henbox-empty"));
         Block ladder = api.World.GetBlock(new AssetLocation("ladder-wood-north"));
         Block moldrack = api.World.GetBlock(new AssetLocation("moldrack-normal-east"));
+        Block quern = api.World.GetBlock(new AssetLocation("quern-granite"));
         Block roof = api.World.GetBlock(new AssetLocation("slantedroofing-sod-east-free"));
         Block roofCornerInner = api.World.GetBlock(new AssetLocation("slantedroofingcornerinner-sod-east-free"));
         Block roofCornerOuter = api.World.GetBlock(new AssetLocation("slantedroofingcornerouter-sod-east-free"));
@@ -61,6 +63,7 @@ public class Recipes : ModSystem
         Block troughLarge = api.World.GetBlock(new AssetLocation("trough-genericwood-large-head-north"));
         Block troughSmall = api.World.GetBlock(new AssetLocation("trough-genericwood-small-ns"));
         Block woodbucket = api.World.GetBlock(new AssetLocation("woodbucket"));
+        Block woodpath = api.World.GetBlock(new AssetLocation("woodenpath-ns"));
 
         Block woodenpan = api.World.GetBlock(new AssetLocation("pan-wooden"));
         const string chairWildcard = "game:chair-*";
@@ -100,6 +103,10 @@ public class Recipes : ModSystem
             if (Config.Moldrack && output == moldrack)
             {
                 HandleRecipe(api, newRecipes, recipe, new VariantTypeWildcard("oak", "wood", PlankCodes), outputCode: new("game:moldrack-{wood}-east"));
+            }
+            if (Config.DecorativeQuern && output == quern)
+            {
+                HandleDecoQuernRecipe(api, newRecipes, recipe);
             }
             if (Config.WoodenPan && output == woodenpan)
             {
@@ -145,6 +152,10 @@ public class Recipes : ModSystem
             {
                 HandleRecipe(api, newRecipes, recipe, new VariantTypeWildcard("oak", "wood", PlankCodes), outputCode: new("vanvar:woodbucket-{wood}"));
             }
+            if (Config.WoodenPath && output == woodpath)
+            {
+                HandleRecipe(api, newRecipes, recipe, new VariantTypeWildcard("oak", "wood", PlankCodes), outputCode: new("vanvar:woodenpath-{wood}-ns"));
+            }
         }
 
         foreach (GridRecipe recipe in newRecipes)
@@ -184,6 +195,32 @@ public class Recipes : ModSystem
         if (newIngredients?.Count != 0)
         {
             newRecipe.Output.Code = new AssetLocation("game:pan-{wood}");
+        }
+
+        _ = newRecipe.ResolveIngredients(api.World);
+        newRecipes.Add(newRecipe);
+    }
+
+    private static void HandleDecoQuernRecipe(ICoreAPI api, List<GridRecipe> newRecipes, GridRecipe recipe)
+    {
+        GridRecipe newRecipe = recipe.Clone();
+        newRecipe.RecipeGroup = 1;
+
+        List<CraftingRecipeIngredient> newIngredients = newRecipe.Ingredients.Where(x => (x.Value.Code == RockCodes) || WildcardUtil.Match(RockCodes, x.Value.Code)).Select(x => x.Value).ToList();
+        foreach (CraftingRecipeIngredient value in newIngredients)
+        {
+            if (value != null)
+            {
+                value.Code = RockCodes;
+                value.Name = "rock";
+                value.AllowedVariants = null;
+                value.SkipVariants = new[] { "andesite", "granite", "basalt", "peridotite" };
+            }
+        }
+
+        if (newIngredients?.Count != 0)
+        {
+            newRecipe.Output.Code = new AssetLocation("vanvar:quern-{rock}");
         }
 
         _ = newRecipe.ResolveIngredients(api.World);

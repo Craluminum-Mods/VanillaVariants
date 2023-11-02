@@ -6,10 +6,12 @@ public class Config
     public bool OverrideVanillaRecipes { get; set; } = true;
     public bool MoreRecipesFeature { get; set; }
     public bool TradersSellVariants { get; set; }
+
     public bool ArmorStand { get; set; } = true;
     public bool Bed { get; set; } = true;
     public bool Cage { get; set; } = true;
     public bool Chair { get; set; } = true;
+    public bool DecorativeQuern { get; set; } = true;
     public bool DisplayCase { get; set; } = true;
     public bool Forge { get; set; } = true;
     public bool Henbox { get; set; } = true;
@@ -27,6 +29,7 @@ public class Config
     public bool WagonWheels { get; set; } = true;
     public bool WoodBucket { get; set; } = true;
     public bool WoodenPan { get; set; } = true;
+    public bool WoodenPath { get; set; } = true;
     public bool WoodenRails { get; set; } = true;
 
     public Config() { }
@@ -37,10 +40,12 @@ public class Config
         OverrideVanillaRecipes = previousConfig.OverrideVanillaRecipes;
         MoreRecipesFeature = previousConfig.MoreRecipesFeature;
         TradersSellVariants = previousConfig.TradersSellVariants;
+
         ArmorStand = previousConfig.ArmorStand;
         Bed = previousConfig.Bed;
         Cage = previousConfig.Cage;
         Chair = previousConfig.Chair;
+        DecorativeQuern = previousConfig.DecorativeQuern;
         DisplayCase = previousConfig.DisplayCase;
         Forge = previousConfig.Forge;
         Henbox = previousConfig.Henbox;
@@ -58,6 +63,7 @@ public class Config
         WagonWheels = previousConfig.WagonWheels;
         WoodBucket = previousConfig.WoodBucket;
         WoodenPan = previousConfig.WoodenPan;
+        WoodenPath = previousConfig.WoodenPath;
         WoodenRails = previousConfig.WoodenRails;
     }
 }

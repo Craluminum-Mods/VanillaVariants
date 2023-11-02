@@ -32,10 +32,12 @@ static class ModConfig
 
         api.World.Config.SetBool("VVMoreRecipesFeatureEnabled", config.MoreRecipesFeature);
         api.World.Config.SetBool("VVTradersSellVariantsEnabled", config.TradersSellVariants);
+
         api.World.Config.SetBool("VVArmorStandEnabled", config.ArmorStand);
         api.World.Config.SetBool("VVBedEnabled", config.Bed);
         api.World.Config.SetBool("VVCageEnabled", config.Cage);
         api.World.Config.SetBool("VVChairEnabled", config.Chair);
+        api.World.Config.SetBool("VVDecoQuernEnabled", config.DecorativeQuern);
         api.World.Config.SetBool("VVDisplayCaseEnabled", config.DisplayCase);
         api.World.Config.SetBool("VVForgeEnabled", config.Forge);
         api.World.Config.SetBool("VVHenboxEnabled", config.Henbox);
@@ -53,6 +55,7 @@ static class ModConfig
         api.World.Config.SetBool("VVWagonWheelsEnabled", config.WagonWheels);
         api.World.Config.SetBool("VVWoodBucketEnabled", config.WoodBucket);
         api.World.Config.SetBool("VVWoodenPanEnabled", config.WoodenPan);
+        api.World.Config.SetBool("VVWoodenPathEnabled", config.WoodenPath);
         api.World.Config.SetBool("VVWoodenRailsEnabled", config.WoodenRails);
 
         return config;
