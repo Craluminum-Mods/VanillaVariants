@@ -23,14 +23,11 @@ public class Core : ModSystem
 
     public override void StartPre(ICoreAPI api)
     {
-        base.StartPre(api);
         Config = ModConfig.ReadConfig(api);
     }
 
     public override void Start(ICoreAPI api)
     {
-        base.Start(api);
-
         api.RegisterEntity("VV_EntityWoodArmorStand", typeof(EntityWoodArmorStand));
         api.RegisterBlockBehaviorClass("VanillaVariants.BbName", typeof(BlockBehaviorName));
         api.RegisterCollectibleBehaviorClass("VanillaVariants.CbName", typeof(CollectibleBehaviorName));

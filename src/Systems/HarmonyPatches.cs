@@ -6,14 +6,13 @@ namespace VanillaVariants;
 
 public class HarmonyPatches : ModSystem
 {
-    public const string HarmonyID = "craluminum2413.vanvar";
+    private Harmony HarmonyInstance => new Harmony(Mod.Info.ModID);
 
     public override void Start(ICoreAPI api)
     {
-        base.Start(api);
         if (Core.Config.ExperimentalOverlayTest)
         {
-            new Harmony(HarmonyID).Patch(original: typeof(ColorBlend).GetMethod(nameof(ColorBlend.Overlay)), prefix: typeof(Overlay_Patch).GetMethod(nameof(Overlay_Patch.Prefix)));
+            HarmonyInstance.Patch(original: typeof(ColorBlend).GetMethod(nameof(ColorBlend.Overlay)), prefix: typeof(Overlay_Patch).GetMethod(nameof(Overlay_Patch.Prefix)));
         }
     }
 
@@ -21,8 +20,7 @@ public class HarmonyPatches : ModSystem
     {
         if (Core.Config.ExperimentalOverlayTest)
         {
-            new Harmony(HarmonyID).Unpatch(original: typeof(ColorBlend).GetMethod(nameof(ColorBlend.Overlay)), HarmonyPatchType.All, HarmonyID);
+            HarmonyInstance.Unpatch(original: typeof(ColorBlend).GetMethod(nameof(ColorBlend.Overlay)), HarmonyPatchType.All, HarmonyInstance.Id);
         }
-        base.Dispose();
     }
 }
