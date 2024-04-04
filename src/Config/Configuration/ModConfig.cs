@@ -43,10 +43,13 @@ static class ModConfig
         api.World.Config.SetBool("VVHenboxEnabled", config.Henbox);
         api.World.Config.SetBool("VVLadderEnabled", config.Ladder);
         api.World.Config.SetBool("VVMoldrackEnabled", config.Moldrack);
+        api.World.Config.SetBool("VVOmokTabletopEnabled", config.OmokTabletop);
+        api.World.Config.SetBool("VVPalisadeEnabled", config.Palisade);
         api.World.Config.SetBool("VVShelfEnabled", config.Shelf);
         api.World.Config.SetBool("VVSignEnabled", config.Sign);
         api.World.Config.SetBool("VVSignpostEnabled", config.Signpost);
         api.World.Config.SetBool("VVSodRoofingEnabled", config.SodRoofing);
+        api.World.Config.SetBool("VVSupportChainEnabled", config.SupportChain);
         api.World.Config.SetBool("VVTableEnabled", config.Table);
         api.World.Config.SetBool("VVToolrackEnabled", config.Toolrack);
         api.World.Config.SetBool("VVTrapdoorEnabled", config.Trapdoor);

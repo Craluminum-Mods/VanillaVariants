@@ -1,0 +1,279 @@
+{
+    "code": "trough",
+    "class": "BlockTroughDoubleBlock",
+    "entityClassByType": {
+        "*-head-*": "Trough"
+    },
+    "behaviors": [
+        {
+            "name": "VanillaVariants.BbName",
+            "properties": {
+                "parts": ["block-trough-genericwood-large-head-*", " (", "material-{material}", ")"]
+            }
+        }
+    ],
+    "attributes": {
+        // contentConfig and unsuitableFor are added by code
+        "handbook": { "groupBy": ["trough-*-large-*"] }
+    },
+    "sidesolid": { "all": false },
+    "sideopaque": { "all": false },
+    "heldTpIdleAnimation": "holdunderarm",
+    "variantgroups": [
+        { "code": "material", "states": ["aged"], "loadFromProperties": "block/wood" },
+        { "code": "part", "states": ["large-head", "large-feet"] },
+        { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
+    ],
+    "skipVariants": ["*-oak-*"],
+    "creativeinventory": {
+        "general": ["*-head-north"],
+        "decorative": ["*-head-north"],
+        "vanvar": ["*-head-north"]
+    },
+    "shapeinventory": { "base": "game:block/wood/trough/large/inventory" },
+    "shapebytype": {
+        "*-head-north": { "base": "game:block/wood/trough/large/empty", "rotateY": 90 },
+        "*-head-east": { "base": "game:block/wood/trough/large/empty", "rotateY": 0 },
+        "*-head-south": { "base": "game:block/wood/trough/large/empty", "rotateY": 270 },
+        "*-head-west": { "base": "game:block/wood/trough/large/empty", "rotateY": 180 },
+
+        "*-feet-north": { "base": "game:block/wood/trough/large/empty", "rotateY": 270 },
+        "*-feet-east": { "base": "game:block/wood/trough/large/empty", "rotateY": 180 },
+        "*-feet-south": { "base": "game:block/wood/trough/large/empty", "rotateY": 90 },
+        "*-feet-west": { "base": "game:block/wood/trough/large/empty", "rotateY": 0 }
+    },
+    "textures": {
+        "charred": { "base": "game:block/wood/debarked/{material}" },
+        "aged": { "base": "game:block/wood/debarked/{material}" },
+        "bottom-inside": { "base": "game:block/wood/debarked/{material}" },
+        "contents-flax": {
+            "base": "game:block/food/grain/flax",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "contents-rice": {
+            "base": "game:block/food/grain/rice",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "contents-rye": {
+            "base": "game:block/food/grain/rye",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "contents-spelt": {
+            "base": "game:block/food/grain/spelt",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "contents-amaranth": {
+            "base": "game:block/food/grain/amaranth",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "contents-sunflower": {
+            "base": "game:block/food/grain/sunflower",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "contents-aubergine": {
+            "base": "game:block/wood/barrel/raw-aubergine",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "bellpepper": {
+            "base": "game:block/wood/barrel/raw-bellpepper",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "cabbage": {
+            "base": "game:block/wood/barrel/raw-cabbage",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "carrot": {
+            "base": "game:block/wood/barrel/raw-carrot",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "cassava": {
+            "base": "game:block/wood/barrel/raw-cassava",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "onion": {
+            "base": "game:block/wood/barrel/raw-onion",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "oniontop": { "base": "game:block/plant/crop/onion/e2" },
+        "parsnip": {
+            "base": "game:block/wood/barrel/raw-parsnip",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "contents-peanut": {
+            "base": "game:block/wood/barrel/raw-peanut",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "pumpkin": {
+            "base": "game:block/wood/barrel/raw-pumpkin",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "contents-soybean": {
+            "base": "game:block/wood/barrel/raw-soybean",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "tomato": {
+            "base": "game:block/wood/barrel/raw-tomato",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "turnip": {
+            "base": "game:block/wood/barrel/raw-turnip",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "turniptop": { "base": "game:block/plant/crop/turnip/e2" },
+        "singlehay": { "base": "game:block/wood/trough/large/singlehay" },
+        "singlehay2": { "base": "game:block/wood/trough/large/singlehay2" },
+        "normal-side": { "base": "game:block/hay/normal-side" },
+        "normal-top": { "base": "game:block/hay/normal-top" },
+        "contents-pressedmash-apple": {
+            "base": "game:block/food/pie/fill-apple",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "contents-pressedmash-blueberry": {
+            "base": "game:block/food/pie/fill-blueberry",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "contents-pressedmash-cranberry": {
+            "base": "game:block/food/pie/fill-cranberry",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "contents-pressedmash-redcurrant": {
+            "base": "game:block/food/pie/fill-redcurrant",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "contents-pressedmash-whitecurrant": {
+            "base": "game:block/food/pie/fill-whitecurrant",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "contents-pressedmash-blackcurrant": {
+            "base": "game:block/food/pie/fill-blackcurrant",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "contents-pressedmash-saguaro": {
+            "base": "game:block/food/pie/fill-saguaro",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "contents-pressedmash-pineapple": {
+            "base": "game:block/food/pie/fill-pineapple",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "contents-pressedmash-redapple": {
+            "base": "game:block/food/pie/fill-apple",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "contents-pressedmash-pinkapple": {
+            "base": "game:block/food/pie/fill-apple",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "contents-pressedmash-yellowapple": {
+            "base": "game:block/food/pie/fill-apple",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "contents-pressedmash-cherry": {
+            "base": "game:block/food/pie/fill-cherry",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "contents-pressedmash-peach": {
+            "base": "game:block/food/pie/fill-peach",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "contents-pressedmash-pear": {
+            "base": "game:block/food/pie/fill-pear",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "contents-pressedmash-orange": {
+            "base": "game:block/food/pie/fill-orange",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "contents-pressedmash-mango": {
+            "base": "game:block/food/pie/fill-mango",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "contents-pressedmash-breadfruit": {
+            "base": "game:block/food/pie/fill-breadfruit",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "contents-pressedmash-lychee": {
+            "base": "game:block/food/pie/fill-lychee",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "contents-pressedmash-pomegranate": {
+            "base": "game:block/food/pie/fill-pomegranate",
+            "overlays": ["game:block/wood/trough/large/shadow"]
+        },
+        "rotoverlay": { "base": "game:item/resource/rot/rotoverlay" },
+        "rot": { "base": "game:item/resource/rot/rot-solids" },
+        "fuzz": { "base": "game:item/resource/rot/rot-fringe" }
+    },
+    "blockmaterial": "Wood",
+    "replaceable": 550,
+    "resistance": 2,
+    "lightAbsorption": 0,
+    "combustibleProps": {
+        "burnTemperature": 600,
+        "burnDuration": 40
+    },
+    "guiTransform": {
+        "translation": { "x": -1, "y": 2, "z": 0 },
+        "origin": { "x": 1, "y": 0.3, "z": 0.5 },
+        "scale": 1.04
+    },
+    "fpHandTransform": {
+        "translation": { "x": -0.1, "y": -0.62, "z": 1.23 },
+        "rotation": { "x": 127, "y": 140, "z": -83 },
+        "scale": 1.6
+    },
+    "tpHandTransform": {
+        "translation": { "x": -0.3, "y": -0.4, "z": -0.4 },
+        "rotation": { "x": 85, "y": 0, "z": 0 },
+        "scale": 0.6
+    },
+    "groundTransform": {
+        "origin": { "x": 0.5, "y": 0, "z": 0.5 },
+        "scale": 2.5
+    },
+    "selectionbox": {
+        "x1": 0.125,
+        "y1": 0,
+        "z1": 0,
+        "x2": 0.875,
+        "y2": 0.5625,
+        "z2": 0.8125,
+        "rotateYByType": {
+            "*-feet-north": 180,
+            "*-feet-east": 90,
+            "*-feet-south": 0,
+            "*-feet-west": 270,
+
+            "*-head-north": 0,
+            "*-head-east": 270,
+            "*-head-south": 180,
+            "*-head-west": 90
+        }
+    },
+    "collisionbox": {
+        "x1": 0.125,
+        "y1": 0,
+        "z1": 0,
+        "x2": 0.875,
+        "y2": 0.5625,
+        "z2": 0.8125,
+        "rotateYByType": {
+            "*-feet-north": 180,
+            "*-feet-east": 90,
+            "*-feet-south": 0,
+            "*-feet-west": 270,
+
+            "*-head-north": 0,
+            "*-head-east": 270,
+            "*-head-south": 180,
+            "*-head-west": 90
+        }
+    },
+    "sounds": {
+        "place": "game:block/planks",
+        "hit": "game:block/planks",
+        "break": "game:block/planks",
+        "walk": "game:walk/wood"
+    },
+    "materialDensity": 600
+}

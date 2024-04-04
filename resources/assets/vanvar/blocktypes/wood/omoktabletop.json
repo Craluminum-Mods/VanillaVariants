@@ -1,0 +1,71 @@
+{
+    "code": "omoktabletop",
+    "class": "BlockOmokTable",
+    "entityClass": "OmokTable",
+    "variantgroups": [{ "code": "material", "states": ["aged"], "loadFromProperties": "block/wood" }],
+    "skipVariants": ["*-larch-*"],
+    "behaviors": [
+        {
+            "name": "VanillaVariants.BbName",
+            "properties": {
+                "parts": ["block-omoktabletop", " (", "material-{material}", ")"]
+            }
+        },
+        { "name": "UnstableFalling" }
+    ],
+    "attributes": {
+        "handbook": { "groupBy": ["omoktabletop-*"] }
+    },
+    "shape": { "base": "game:block/wood/omoktabletop" },
+    "textures": {
+        "larch": { "base": "game:block/wood/debarked/{material}" }
+    },
+    "creativeinventory": {
+        "general": ["*"],
+        "decorative": ["*"],
+        "vanvar": ["*"]
+    },
+    "replaceable": 5001,
+    "resistance": 0.5,
+    "lightAbsorption": 0,
+    "sidesolid": { "all": false },
+    "sideopaque": { "all": false },
+    "combustibleProps": {
+        "burnTemperature": 600,
+        "burnDuration": 6
+    },
+    "sounds": {
+        "place": "game:block/planks",
+        "hit": "game:block/planks",
+        "break": "game:block/planks",
+        "walk": "game:walk/wood"
+    },
+    "collisionbox": {
+        "x1": 0.0625,
+        "y1": 0,
+        "z1": 0.0625,
+        "x2": 0.9375,
+        "y2": 0.125,
+        "z2": 0.9375
+    },
+    "selectionbox": {
+        "x1": 0.0625,
+        "y1": 0,
+        "z1": 0.0625,
+        "x2": 0.9375,
+        "y2": 0.125,
+        "z2": 0.9375
+    },
+    "materialDensity": 600,
+    "blockmaterial": "Wood",
+    "guiTransform": {
+        "origin": { "x": 0.5, "y": 0.125, "z": 0.5 },
+        "scale": 1.3
+    },
+    "tpHandTransform": {
+        "translation": { "x": -1.3, "y": -0.2, "z": -1.12 },
+        "rotation": { "x": -81, "y": 0, "z": 0 },
+        "origin": { "x": 0.5, "y": 0.1, "z": 0.5 },
+        "scale": 0.4
+    }
+}
