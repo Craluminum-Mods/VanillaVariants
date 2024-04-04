@@ -3,9 +3,7 @@ namespace VanillaVariants.Configuration;
 public class Config
 {
     public bool ExperimentalOverlayTest { get; set; } = true;
-    public bool OverrideVanillaRecipes { get; set; } = true;
     public bool MoreRecipesFeature { get; set; }
-    public bool TradersSellVariants { get; set; }
 
     public bool ArmorStand { get; set; } = true;
     public bool Bed { get; set; } = true;
@@ -40,9 +38,7 @@ public class Config
     public Config(Config previousConfig)
     {
         ExperimentalOverlayTest = previousConfig.ExperimentalOverlayTest;
-        OverrideVanillaRecipes = previousConfig.OverrideVanillaRecipes;
         MoreRecipesFeature = previousConfig.MoreRecipesFeature;
-        TradersSellVariants = previousConfig.TradersSellVariants;
 
         ArmorStand = previousConfig.ArmorStand;
         Bed = previousConfig.Bed;
