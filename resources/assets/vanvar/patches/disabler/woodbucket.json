@@ -1,0 +1,30 @@
+[
+    {
+        "file": "vanvar:blocktypes/wood/bucket.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVWoodBucketEnabled", "isValue": "false" },
+        "side": "server"
+    },
+    {
+        "op": "add",
+        "path": "/textures/aged",
+        "value": {
+            "base": "block/wood/debarked/oak"
+        },
+        "file": "game:blocktypes/wood/bucket.json",
+        "condition": { "when": "VVWoodBucketEnabled", "isValue": "true" },
+        "side": "Server"
+    },
+    {
+        "op": "add",
+        "path": "/textures/charred",
+        "value": {
+            "base": "block/wood/debarked/oak"
+        },
+        "file": "game:blocktypes/wood/bucket.json",
+        "condition": { "when": "VVWoodBucketEnabled", "isValue": "true" },
+        "side": "Server"
+    }
+]

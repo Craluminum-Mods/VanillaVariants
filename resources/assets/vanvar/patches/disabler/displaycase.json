@@ -1,0 +1,18 @@
+[
+    {
+        "file": "vanvar:blocktypes/wood/displaycase.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVDisplayCaseEnabled", "isValue": "false" },
+        "side": "server"
+    },
+    {
+        "file": "vanvar:blocktypes/wood/displaycase-tall.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVDisplayCaseEnabled", "isValue": "false" },
+        "side": "server"
+    }
+]

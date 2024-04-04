@@ -1,0 +1,10 @@
+[
+    {
+        "file": "vanvar:blocktypes/stone/forge.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVForgeEnabled", "isValue": "false" },
+        "side": "server"
+    }
+]

@@ -1,0 +1,38 @@
+[
+    {
+        "file": "vanvar:blocktypes/wood/toolrack.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVToolrackEnabled", "isValue": "false" },
+        "side": "server"
+    },
+    {
+        "file": "vanvar:recipes/grid/toolrack.json",
+        "op": "add",
+        "path": "/0/enabled",
+        "value": false,
+        "condition": { "when": "VVToolrackEnabled", "isValue": "false" },
+        "side": "server"
+    },
+    {
+        "file": "vanvar:recipes/grid/toolrack.json",
+        "op": "add",
+        "path": "/1/enabled",
+        "value": false,
+        "condition": { "when": "VVToolrackEnabled", "isValue": "false" },
+        "side": "server"
+    },
+    {
+        "op": "add",
+        "path": "/textures",
+        "value": {
+            "aged": {
+                "base": "block/wood/debarked/oak"
+            }
+        },
+        "file": "game:blocktypes/wood/toolrack.json",
+        "condition": { "when": "VVToolrackEnabled", "isValue": "true" },
+        "side": "Server"
+    }
+]

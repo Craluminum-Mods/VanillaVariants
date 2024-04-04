@@ -1,0 +1,18 @@
+[
+    {
+        "file": "vanvar:blocktypes/wood/palisadestakes.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVPalisadeEnabled", "isValue": "false" },
+        "side": "server"
+    },
+    {
+        "file": "vanvar:blocktypes/wood/palisadewall.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVPalisadeEnabled", "isValue": "false" },
+        "side": "server"
+    }
+]

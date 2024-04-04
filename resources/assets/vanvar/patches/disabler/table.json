@@ -1,0 +1,10 @@
+[
+    {
+        "file": "vanvar:blocktypes/wood/table.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVTableEnabled", "isValue": "false" },
+        "side": "server"
+    }
+]

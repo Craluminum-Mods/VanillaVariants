@@ -1,0 +1,26 @@
+[
+    {
+        "file": "vanvar:blocktypes/wood/pan.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVWoodenPanEnabled", "isValue": "false" },
+        "side": "server"
+    },
+    {
+        "op": "add",
+        "path": "/0/enabled",
+        "value": false,
+        "file": "vanvar:recipes/grid/pan.json",
+        "condition": { "when": "VVWoodenPanEnabled", "isValue": "false" },
+        "side": "Server"
+    },
+    {
+        "op": "add",
+        "path": "/1/enabled",
+        "value": false,
+        "file": "game:recipes/grid/pan.json",
+        "condition": { "when": "VVWoodenPanEnabled", "isValue": "true" },
+        "side": "Server"
+    }
+]

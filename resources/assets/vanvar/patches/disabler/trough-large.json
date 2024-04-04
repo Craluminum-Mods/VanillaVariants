@@ -1,0 +1,40 @@
+[
+    {
+        "file": "vanvar:blocktypes/wood/trough-large.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVTroughLargeEnabled", "isValue": "false" },
+        "side": "server"
+    },
+    {
+        "file": "game:blocktypes/wood/trough-large.json",
+        "op": "add",
+        "path": "/textures/aged",
+        "value": {
+            "base": "block/wood/debarked/oak"
+        },
+        "condition": { "when": "VVTroughLargeEnabled", "isValue": "true" },
+        "side": "server"
+    },
+    {
+        "file": "game:blocktypes/wood/trough-large.json",
+        "op": "add",
+        "path": "/textures/charred",
+        "value": {
+            "base": "block/wood/debarked/oak"
+        },
+        "condition": { "when": "VVTroughLargeEnabled", "isValue": "true" },
+        "side": "server"
+    },
+    {
+        "file": "game:blocktypes/wood/trough-large.json",
+        "op": "add",
+        "path": "/textures/bottom-inside",
+        "value": {
+            "base": "block/wood/debarked/oak"
+        },
+        "condition": { "when": "VVTroughLargeEnabled", "isValue": "true" },
+        "side": "server"
+    }
+]

@@ -1,0 +1,10 @@
+[
+    {
+        "file": "vanvar:blocktypes/metal/supportchain.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVSupportChainEnabled", "isValue": "false" },
+        "side": "server"
+    }
+]

@@ -1,0 +1,10 @@
+[
+    {
+        "file": "vanvar:blocktypes/wood/signpost.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVSignpostEnabled", "isValue": "false" },
+        "side": "server"
+    }
+]

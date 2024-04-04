@@ -1,0 +1,34 @@
+[
+    {
+        "file": "vanvar:blocktypes/wood/omoktabletop.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVOmokTabletopEnabled", "isValue": "false" },
+        "side": "server"
+    },
+    {
+        "file": "vanvar:recipes/grid/omoktabletop.json",
+        "op": "add",
+        "path": "/0/enabled",
+        "value": false,
+        "condition": { "when": "VVOmokTabletopEnabled", "isValue": "false" },
+        "side": "server"
+    },
+    {
+        "file": "vanvar:recipes/grid/omoktabletop.json",
+        "op": "add",
+        "path": "/1/enabled",
+        "value": false,
+        "condition": { "when": "VVOmokTabletopEnabled", "isValue": "false" },
+        "side": "server"
+    },
+    {
+        "file": "vanvar:recipes/grid/omoktabletop.json",
+        "op": "add",
+        "path": "/2/enabled",
+        "value": false,
+        "condition": { "when": "VVOmokTabletopEnabled", "isValue": "false" },
+        "side": "server"
+    }
+]

@@ -1,0 +1,10 @@
+[
+    {
+        "file": "vanvar:blocktypes/wood/bed.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVBedEnabled", "isValue": "false" },
+        "side": "server"
+    }
+]

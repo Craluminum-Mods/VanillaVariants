@@ -1,0 +1,10 @@
+[
+    {
+        "file": "vanvar:blocktypes/wood/henbox.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVHenboxEnabled", "isValue": "false" },
+        "side": "server"
+    }
+]

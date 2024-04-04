@@ -1,0 +1,10 @@
+[
+    {
+        "file": "vanvar:blocktypes/wood/chair.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVChairEnabled", "isValue": "false" },
+        "side": "server"
+    }
+]
