@@ -8,8 +8,7 @@
         {
             "name": "VanillaVariants.BbName",
             "properties": {
-                "translationName": "block-bed-wood-head-*",
-                "translationPart": "material-{type}"
+                "parts": ["block-bed-wood-head-*", " (", "material-{type}", ")"]
             }
         }
     ],

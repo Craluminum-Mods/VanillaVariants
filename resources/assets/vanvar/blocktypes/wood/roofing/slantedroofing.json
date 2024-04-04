@@ -4,8 +4,7 @@
         {
             "name": "VanillaVariants.BbName",
             "properties": {
-                "translationName": "block-slantedroofing-sod-*",
-                "translationPart": "material-{material}"
+                "parts": ["block-slantedroofing-sod-*", " (", "material-{material}", ")"]
             }
         },
         {
@@ -22,6 +21,9 @@
         { "loadFromProperties": "abstract/horizontalorientation" },
         { "code": "cover", "states": ["free", "snow"] }
     ],
+    "attributes": {
+        "handbook": { "groupBy": ["slantedroofing-sod-*"] }
+    },
     "shape": {
         "base": "game:block/roofing/main/sod-{cover}",
         "rotateYByType": {

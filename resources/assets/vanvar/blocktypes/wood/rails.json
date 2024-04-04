@@ -5,8 +5,7 @@
         {
             "name": "VanillaVariants.BbName",
             "properties": {
-                "translationName": "block-woodenrails-*",
-                "translationPart": "material-{material}"
+                "parts": ["block-woodenrails-*", " (", "material-{material}", ")"]
             }
         },
         { "name": "Unstable" }

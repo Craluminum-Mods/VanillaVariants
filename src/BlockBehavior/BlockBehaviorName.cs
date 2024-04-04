@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Vintagestory.API.Common;
 using Vintagestory.API.Config;
@@ -9,9 +10,7 @@ namespace VanillaVariants;
 
 public class BlockBehaviorName : BlockBehavior
 {
-    private string translationName;
-    private readonly List<string> translationParts = new();
-    private string newName;
+    private List<string> parts;
 
     public BlockBehaviorName(Block block) : base(block) { }
 
@@ -19,36 +18,25 @@ public class BlockBehaviorName : BlockBehavior
     {
         base.Initialize(properties);
 
-        if (properties["translationName"].Exists)
+        parts = properties["parts"].AsObject<List<string>>();
+        if (parts != null && parts.Count != 0)
         {
-            translationName = properties["translationName"].AsString();
-        }
-        if (properties["translationParts"].Exists)
-        {
-            translationParts.AddRange(properties["translationParts"].AsObject<List<string>>());
-        }
-        else if (properties["translationPart"].Exists)
-        {
-            translationParts.Add(properties["translationPart"].AsString());
-        }
-
-        newName = Lang.GetMatchingIfExists(translationName);
-
-        if (translationParts?.Count != 0)
-        {
-            newName += " " + string.Join(" ", translationParts.ConvertAll(x => $"({Lang.Get(x)})"));
+            parts = parts.Select(x => Lang.GetMatching(x)).ToList();
         }
     }
 
-    public override void GetHeldItemName(StringBuilder sb, ItemStack itemStack)
-    {
-        sb.Clear();
-        sb.Append(newName);
-    }
+    public override void GetPlacedBlockName(StringBuilder sb, IWorldAccessor world, BlockPos pos) => ConstructName(sb);
 
-    public override void GetPlacedBlockName(StringBuilder sb, IWorldAccessor world, BlockPos pos)
+    public override void GetHeldItemName(StringBuilder sb, ItemStack itemStack) => ConstructName(sb);
+
+    private void ConstructName(StringBuilder sb)
     {
+        if (parts == null || parts.Count == 0)
+        {
+            return;
+        }
+
         sb.Clear();
-        sb.Append(newName);
+        sb.Append(string.Join("", parts));
     }
 }

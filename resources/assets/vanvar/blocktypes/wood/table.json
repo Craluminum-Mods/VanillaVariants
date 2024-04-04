@@ -4,8 +4,7 @@
         {
             "name": "VanillaVariants.BbName",
             "properties": {
-                "translationName": "block-table-{type}",
-                "translationPart": "material-{material}"
+                "parts": ["block-table-{type}", " (", "material-{material}", ")"]
             }
         },
         { "name": "UnstableFalling" }
@@ -16,12 +15,7 @@
     ],
     "skipVariants": ["*-oak-*"],
     "attributes": {
-        "handbookByType": {
-            "*-normal": { "groupBy": ["table-*-normal"] },
-            "*-whitemarble": { "groupBy": ["table-*-whitemarble"] },
-            "*-redmarble": { "groupBy": ["table-*-redmarble"] },
-            "*-greenmarble": { "groupBy": ["table-*-greenmarble"] }
-        },
+        "handbook": { "groupBy": ["table-*-{type}"] },
         "pieFormingSurface": true
     },
     "shape": { "base": "game:block/wood/table" },

@@ -4,8 +4,7 @@
         {
             "name": "VanillaVariants.BbName",
             "properties": {
-                "translationName": "block-slantedroofingtip-sod-*",
-                "translationPart": "material-{material}"
+                "parts": ["block-slantedroofingtip-sod-*", " (", "material-{material}", ")"]
             }
         }
     ],
@@ -17,6 +16,9 @@
         },
         { "code": "cover", "states": ["free", "snow"] }
     ],
+    "attributes": {
+        "handbook": { "groupBy": ["slantedroofingtip-sod-*"] }
+    },
     "shape": { "base": "game:block/roofing/tip/sod-{cover}" },
     "textures": {
         "aged-top": { "base": "game:block/wood/planks/{material}1" },

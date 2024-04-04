@@ -4,17 +4,14 @@
         {
             "name": "VanillaVariants.BbName",
             "properties": {
-                "translationName": "block-woodenpath-*",
-                "translationPart": "material-{type}"
+                "parts": ["block-woodenpath-*", " (", "material-{type}", ")"]
             }
         },
         { "name": "Unstable" },
         { "name": "NWOrientable" }
     ],
     "attributes": {
-        "handbook": {
-            "groupBy": ["woodenpath-*"]
-        }
+        "handbook": { "groupBy": ["woodenpath-*"] }
     },
     "variantgroups": [
         { "code": "type", "states": ["aged"], "loadFromProperties": "block/wood" },

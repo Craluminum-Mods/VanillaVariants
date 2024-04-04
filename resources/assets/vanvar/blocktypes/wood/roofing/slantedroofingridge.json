@@ -4,8 +4,7 @@
         {
             "name": "VanillaVariants.BbName",
             "properties": {
-                "translationName": "block-slantedroofingridge-sod-*",
-                "translationPart": "material-{material}"
+                "parts": ["block-slantedroofingridge-sod-*", " (", "material-{material}", ")"]
             }
         },
         { "name": "NWOrientable" }
@@ -19,6 +18,9 @@
         { "code": "orientation", "states": ["ns", "we"] },
         { "code": "cover", "states": ["free", "snow"] }
     ],
+    "attributes": {
+        "handbook": { "groupBy": ["slantedroofingridge-sod-*"] }
+    },
     "shape": { "base": "game:block/roofing/ridge/sod-{cover}", "rotateYByType": { "*-we-*": 90 } },
     "textures": {
         "aged-top": { "base": "game:block/wood/planks/{material}1" },

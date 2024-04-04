@@ -4,8 +4,7 @@
         {
             "name": "VanillaVariants.BbName",
             "properties": {
-                "translationName": "block-slantedroofingcornerinner-sod-*",
-                "translationPart": "material-{material}"
+                "parts": ["block-slantedroofingcornerinner-sod-*", " (", "material-{material}", ")"]
             }
         },
         { "name": "HorizontalOrientable", "properties": { "dropBlockFace": "east" } }
@@ -19,6 +18,9 @@
         { "loadFromProperties": "abstract/horizontalorientation" },
         { "code": "cover", "states": ["free", "snow"] }
     ],
+    "attributes": {
+        "handbook": { "groupBy": ["slantedroofingcornerinner-sod-*"] }
+    },
     "shape": {
         "base": "game:block/roofing/cornerinner/sod-{cover}",
         "rotateYByType": {

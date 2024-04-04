@@ -5,8 +5,7 @@
         {
             "name": "VanillaVariants.BbName",
             "properties": {
-                "translationName": "block-trapdoor-{state}-*",
-                "translationPart": "material-{type}"
+                "parts": ["block-trapdoor-{state}-*", " (", "material-{type}", ")"]
             }
         },
         { "name": "Lockable" },

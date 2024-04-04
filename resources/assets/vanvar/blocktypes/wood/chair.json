@@ -4,8 +4,7 @@
         {
             "name": "VanillaVariants.BbName",
             "properties": {
-                "translationName": "block-chair-{color}",
-                "translationPart": "material-{type}"
+                "parts": ["block-chair-{color}", " (", "material-{type}", ")"]
             }
         },
         { "name": "UnstableFalling" }

@@ -5,8 +5,7 @@
         {
             "name": "VanillaVariants.CbName",
             "properties": {
-                "translationName": "item-armorstand",
-                "translationPart": "material-{wood}"
+                "parts": ["item-armorstand", " (", "material-{wood}", ")"]
             }
         }
     ],

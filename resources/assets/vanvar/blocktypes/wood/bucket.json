@@ -5,8 +5,7 @@
         {
             "name": "VanillaVariants.BbName",
             "properties": {
-                "translationName": "block-woodbucket",
-                "translationPart": "material-{type}"
+                "parts": ["block-woodbucket", " (", "material-{type}", ")"]
             }
         },
         { "name": "UnstableFalling" },

@@ -4,8 +4,7 @@
         {
             "name": "VanillaVariants.BbName",
             "properties": {
-                "translationName": "block-cage-wooden-*",
-                "translationPart": "material-{type}"
+                "parts": ["block-cage-wooden-*", " (", "material-{type}", ")"]
             }
         },
         { "name": "HorizontalOrientable" }

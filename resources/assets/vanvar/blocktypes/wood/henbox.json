@@ -6,8 +6,7 @@
         {
             "name": "VanillaVariants.BbName",
             "properties": {
-                "translationName": "block-henbox-{eggCount}",
-                "translationPart": "material-{type}"
+                "parts": ["block-henbox-{eggCount}", " (", "material-{type}", ")"]
             }
         },
         { "name": "CollectFrom" }
