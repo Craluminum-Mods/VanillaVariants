@@ -4,17 +4,14 @@
         {
             "name": "VanillaVariants.BbName",
             "properties": {
-                "translationName": "Quern",
-                "translationParts": ["rock-{rock}", "tabname-decorative"]
+                "parts": ["Quern", " (", "rock-{rock}", ") (", "tabname-decorative", ")"]
             }
         },
         { "name": "UnstableFalling", "properties": { "exceptions": ["woodenaxle-ud"] } }
     ],
     "attributes": {
         "mapColorCode": "settlement",
-        "handbook": {
-            "groupBy": ["quern-*"]
-        }
+        "handbook": { "groupBy": ["quern-*"] }
     },
     "variantgroups": [{ "code": "rock", "loadFromProperties": "block/rockwithdeposit" }],
     "skipVariants": ["*-granite", "*-andesite", "*-basalt", "*-peridotite"],

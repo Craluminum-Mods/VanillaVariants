@@ -16,8 +16,7 @@
         {
             "name": "VanillaVariants.BbName",
             "properties": {
-                "translationName": "block-forge",
-                "translationPart": "rock-{rock}"
+                "parts": ["block-forge", " (", "rock-{rock}", ")"]
             }
         },
         { "name": "HeatSource" }
