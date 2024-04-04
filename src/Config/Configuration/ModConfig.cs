@@ -46,7 +46,7 @@ static class ModConfig
         api.World.Config.SetBool("VVShelfEnabled", config.Shelf);
         api.World.Config.SetBool("VVSignEnabled", config.Sign);
         api.World.Config.SetBool("VVSignpostEnabled", config.Signpost);
-        api.World.Config.SetBool("VVSodRoodingEnabled", config.SodRooding);
+        api.World.Config.SetBool("VVSodRoofingEnabled", config.SodRoofing);
         api.World.Config.SetBool("VVTableEnabled", config.Table);
         api.World.Config.SetBool("VVToolrackEnabled", config.Toolrack);
         api.World.Config.SetBool("VVTrapdoorEnabled", config.Trapdoor);

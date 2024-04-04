@@ -24,7 +24,7 @@
     },
     "shape": { "base": "game:block/wood/displaycase/generic" },
     "textures": {
-        "wood": { "base": "game:block/wood/debarked/{type}" }
+        "ebony": { "base": "game:block/wood/debarked/{type}" }
     },
     "drawtype": "json",
     "blockmaterial": "Wood",

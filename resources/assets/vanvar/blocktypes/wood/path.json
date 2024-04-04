@@ -17,7 +17,7 @@
         { "code": "type", "states": ["aged"], "loadFromProperties": "block/wood" },
         { "code": "orientation", "states": ["ns", "we"] }
     ],
-    "skipVariants": ["*-oak"],
+    "skipVariants": ["*-oak-*"],
     "creativeinventory": { "general": ["*-ns"], "decorative": ["*-ns"], "vanvar": ["*-ns"] },
     "renderpass": "BlendNoCull",
     "shapeByType": {

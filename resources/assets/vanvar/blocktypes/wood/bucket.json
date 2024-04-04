@@ -1,6 +1,7 @@
 {
     "code": "woodbucket",
-    "class": "BlockBucket",
+    "class": "VanillaVariants.BlockWoodBucket",
+    "entityClass": "Bucket",
     "behaviors": [
         {
             "name": "VanillaVariants.BbName",
@@ -12,7 +13,6 @@
         { "name": "RightClickPickup" },
         { "name": "MilkingContainer" }
     ],
-    "entityClass": "Bucket",
     "attributes": {
         "handbook": { "groupBy": ["woodbucket-*"] },
         "liquidContainerProps": {

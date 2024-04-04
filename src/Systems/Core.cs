@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Linq;
 using VanillaVariants.Configuration;
 using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;
@@ -31,7 +31,9 @@ public class Core : ModSystem
         api.RegisterEntity("VV_EntityWoodArmorStand", typeof(EntityWoodArmorStand));
         api.RegisterBlockBehaviorClass("VanillaVariants.BbName", typeof(BlockBehaviorName));
         api.RegisterCollectibleBehaviorClass("VanillaVariants.CbName", typeof(CollectibleBehaviorName));
-        api.World.Logger.Event("started '{0}' mod", Mod.Info.ModID);
+        api.RegisterBlockClass("VanillaVariants.BlockWoodBucket", typeof(BlockWoodBucket));
+
+        api.World.Logger.Event("started '{0}' mod", Mod.Info.Name);
     }
 
     public override void AssetsFinalize(ICoreAPI api)

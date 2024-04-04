@@ -54,7 +54,7 @@ public class Config
         Shelf = previousConfig.Shelf;
         Sign = previousConfig.Sign;
         Signpost = previousConfig.Signpost;
-        SodRooding = previousConfig.SodRooding;
+        SodRoofing = previousConfig.SodRoofing;
         Table = previousConfig.Table;
         Toolrack = previousConfig.Toolrack;
         Trapdoor = previousConfig.Trapdoor;
