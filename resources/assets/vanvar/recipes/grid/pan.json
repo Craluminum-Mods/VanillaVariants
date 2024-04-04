@@ -1,15 +1,12 @@
-{
-    "ingredientPattern": "KL",
-    "ingredients": {
-        "K": { "type": "item", "code": "game:knife-*", "isTool": true },
-        "L": {
-            "type": "block",
-            "code": "game:log-placed-*-ud",
-            "name": "wood",
-            "skipVariants": ["oak"]
-        }
-    },
-    "width": 2,
-    "height": 1,
-    "output": { "type": "block", "code": "game:pan-{wood}" }
-}
+[
+    {
+        "ingredientPattern": "LK",
+        "ingredients": {
+            "K": { "type": "item", "code": "game:knife-*", "isTool": true },
+            "L": { "type": "block", "code": "game:logsection-placed-redwood-*" }
+        },
+        "width": 2,
+        "height": 1,
+        "output": { "type": "block", "code": "pan-redwood" }
+    }
+]

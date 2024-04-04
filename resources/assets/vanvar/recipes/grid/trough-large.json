@@ -1,9 +1,0 @@
-{
-    "ingredientPattern": "PPP,P_P",
-    "ingredients": {
-        "P": { "type": "item", "code": "game:plank-*", "name": "wood", "skipVariants": ["oak"] }
-    },
-    "width": 3,
-    "height": 2,
-    "output": { "type": "block", "code": "game:trough-{wood}-large-head-north" }
-}
