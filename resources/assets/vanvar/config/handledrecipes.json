@@ -10,7 +10,7 @@
     "VVHenboxEnabled": [{ "outputCode": "henbox-empty", "ingredientCode": "plank-*", "oldAllowedVariants": ["oak"], "newName": "wood", "newOutputCode": "vanvar:henbox-{wood}-empty" }],
     "VVLadderEnabled": [{ "outputCode": "ladder-wood-north", "ingredientCode": "plank-*", "oldAllowedVariants": ["oak"], "newName": "wood", "newOutputCode": "vanvar:ladder-{wood}-north" }],
     "VVMoldrackEnabled": [{ "outputCode": "moldrack-normal-east", "ingredientCode": "plank-*", "oldAllowedVariants": ["oak"], "newName": "wood", "newOutputCode": "vanvar:moldrack-{wood}-east" }],
-    "VVShelfEnabled": [{ "outputCode": "shelf-normal-east", "ingredientCode": "plank-*", "oldAllowedVariants": ["oak"], "newName": "wood", "newOutputCode": "game:shelf-{wood}-east" }],
+    "VVShelfEnabled": [{ "outputCode": "shelf-normal-east", "ingredientCode": "plank-*", "oldAllowedVariants": ["oak"], "newName": "wood", "newOutputCode": "vanvar:shelf-{wood}-east" }],
     "VVSignEnabled": [{ "outputCode": "sign-ground-north", "ingredientCode": "plank-*", "oldAllowedVariants": ["oak"], "newName": "wood", "newOutputCode": "vanvar:sign-{wood}-ground-north" }],
     "VVSignpostEnabled": [{ "outputCode": "signpost", "ingredientCode": "plank-*", "oldAllowedVariants": ["oak"], "newName": "wood", "newOutputCode": "vanvar:signpost-{wood}" }],
     "VVTrapdoorEnabled": [{ "outputCode": "trapdoor-closed-up-north", "ingredientCode": "plank-*", "oldAllowedVariants": ["oak"], "newName": "wood", "newOutputCode": "vanvar:trapdoor-{wood}-closed-up-north" }],
