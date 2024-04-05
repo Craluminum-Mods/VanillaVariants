@@ -25,6 +25,9 @@
         "*-west": { "base": "game:block/wood/moldrack", "rotateY": 90 },
         "*-south": { "base": "game:block/wood/moldrack", "rotateY": 180 }
     },
+    "textures": {
+        "all": { "base": "game:block/wood/debarked/{type}" }
+    },
     "heldTpIdleAnimation": "holdunderarm",
     "creativeinventory": {
         "general": ["*-east"],

@@ -2,7 +2,7 @@
     "type": "code",
     "name": "Vanilla Variants",
     "modid": "vanvar",
-    "version": "4.0.1",
+    "version": "4.0.2",
     "description": "Wood and stone variants of various blocks",
     "authors": ["Craluminum2413"],
     "dependencies": {
