@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json.Linq;
 using VanillaVariants.Configuration;
 using Vintagestory.API.Common;
+using Vintagestory.API.Util;
 using Vintagestory.GameContent;
 
 [assembly: ModInfo(name: "Vanilla Variants", modID: "vanvar")]
@@ -18,6 +19,7 @@ public class Core : ModSystem
         api.RegisterEntity("VV_EntityWoodArmorStand", typeof(EntityWoodArmorStand));
         api.RegisterBlockBehaviorClass("VanillaVariants.BbName", typeof(BlockBehaviorName));
         api.RegisterCollectibleBehaviorClass("VanillaVariants.CbName", typeof(CollectibleBehaviorName));
+        api.RegisterCollectibleBehaviorClass("VanillaVariants.ModDescription", typeof(CollectibleBehaviorModDescription));
         api.RegisterBlockClass("VanillaVariants.BlockWoodBucket", typeof(BlockWoodBucket));
 
         api.World.Logger.Event("started '{0}' mod", Mod.Info.Name);
@@ -33,7 +35,8 @@ public class Core : ModSystem
 
         foreach (Block block in api.World.Blocks)
         {
-            if (block?.Code?.Domain != "vanvar")
+            bool isFromMod = block?.Attributes?["fromVanVarMod"]?.AsBool() == true;
+            if (block?.Code?.Domain != "vanvar" && !isFromMod)
             {
                 continue;
             }
@@ -51,6 +54,20 @@ public class Core : ModSystem
                     if (smallContentConfig != null) block.Attributes.Token["contentConfig"] = JToken.FromObject(smallContentConfig);
                     if (smallUnsuitableFor != null) block.Attributes.Token["unsuitableFor"] = JToken.FromObject(smallUnsuitableFor);
                     break;
+            }
+
+            if (api.Side.IsServer() && isFromMod)
+            {
+                block.CollectibleBehaviors = block.CollectibleBehaviors.Append(new CollectibleBehaviorModDescription(block));
+            }
+        }
+
+        foreach (Item item in api.World.Items)
+        {
+            bool isFromMod = item?.Attributes?["fromVanVarMod"]?.AsBool() == true;
+            if (api.Side.IsServer() && isFromMod)
+            {
+                item.CollectibleBehaviors = item.CollectibleBehaviors.Append(new CollectibleBehaviorModDescription(item));
             }
         }
     }
