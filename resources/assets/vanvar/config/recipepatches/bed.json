@@ -1,0 +1,19 @@
+[
+    {
+        "configKeys": ["VVBedEnabled"],
+        "createNew": false,
+        "outputCode": "bed-wood-head-north",
+        "ingredientCode": "plank-*",
+        "oldCode": "plank-oak",
+        "oldAllowedVariants": ["oak"]
+    },
+    {
+        "configKeys": ["VVBedEnabled"],
+        "replaceDefault": false,
+        "outputCode": "bed-wood-head-north",
+        "ingredientCode": "plank-*",
+        "newCode": "plank-*",
+        "newName": "wood",
+        "newOutputCode": "vanvar:bed-{wood}-head-north"
+    },
+]

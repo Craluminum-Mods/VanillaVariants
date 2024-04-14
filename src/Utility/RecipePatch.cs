@@ -1,10 +1,17 @@
+using System.Collections.Generic;
+using System.Linq;
 using Vintagestory.API.Common;
+using Vintagestory.ServerMods.NoObf;
 
 namespace VanillaVariants;
 
 public class RecipePatch
 {
-    public bool NotReplaceDefault;
+    public string[] ConfigKeys = null;
+    public PatchModDependence[] DependsOn = null;
+
+    public bool ReplaceDefault = true;
+    public bool CreateNew = true;
 
     public string OutputCode = null;
     public string IngredientCode = null;
@@ -24,4 +31,13 @@ public class RecipePatch
 
     public AssetLocation GetNewCode() => string.IsNullOrEmpty(NewCode) ? GetIngredientCode() : new AssetLocation(NewCode);
     public AssetLocation GetNewOutputCode() => new AssetLocation(NewOutputCode);
+
+    public bool CanApply(ICoreAPI api)
+    {
+        bool hasConfigs = ConfigKeys == null || ConfigKeys.All(key => api.World.Config.GetBool(key));
+        if (!hasConfigs) return false;
+
+        HashSet<string> loadedModIds = api.ModLoader.Mods.Select(mod => mod.Info.ModID).ToHashSet();
+        return DependsOn == null || DependsOn.All(dependency => loadedModIds.Contains(dependency.modid));
+    }
 }

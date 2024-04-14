@@ -1,0 +1,12 @@
+[
+    {
+        "configKeys": ["VVWoodenPanEnabled"],
+        "outputCode": "pan-wooden",
+        "ingredientCode": "log-*",
+        "oldCode": "log-*",
+        "oldAllowedVariants": ["placed-oak-ud"],
+        "newCode": "log-placed-*-ud",
+        "newName": "wood",
+        "newOutputCode": "vanvar:pan-{wood}"
+    }
+]

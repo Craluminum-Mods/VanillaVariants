@@ -1,0 +1,18 @@
+[
+    {
+        "configKeys": ["VVDisplayCaseEnabled"],
+        "outputCode": "displaycase-generic",
+        "ingredientCode": "plank-*",
+        "oldAllowedVariants": ["oak"],
+        "newName": "wood",
+        "newOutputCode": "vanvar:displaycase-{wood}"
+    },
+    {
+        "configKeys": ["VVDisplayCaseEnabled"],
+        "outputCode": "talldisplaycase-generic",
+        "ingredientCode": "plank-*",
+        "oldAllowedVariants": ["oak"],
+        "newName": "wood",
+        "newOutputCode": "vanvar:talldisplaycase-{wood}"
+    }
+]
