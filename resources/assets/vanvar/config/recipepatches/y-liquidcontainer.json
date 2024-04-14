@@ -1,0 +1,9 @@
+[
+    {
+        "configKeys": ["VVWoodBucketEnabled"],
+        "replaceDefault": false,
+        "replaceOnlyIngredient": true,
+        "ingredientCode": "woodbucket",
+        "newCode": "vanvar:woodbucket-*"
+    },
+]

@@ -38,14 +38,11 @@ public class Recipes : ModSystem
 
         foreach (GridRecipe recipe in api.World.GridRecipes)
         {
-            foreach (RecipePatch patch in patches.Where(x => WildcardUtil.Match(x.GetOutputCode(), recipe.Output.Code)))
+            foreach (RecipePatch patch in patches.Where(x => x.ReplaceOnlyIngredient || WildcardUtil.Match(x.GetOutputCode(), recipe.Output.Code)))
             {
                 HandleRecipe(api, newRecipes, recipe, patch);
                 count++;
             }
-
-            HandleLiquidContainerRecipe(api, newRecipes, recipe);
-            HandleSignRecipe(api, newRecipes, recipe);
         }
 
         api.Logger.Notification($"[{Mod.Info.Name}] RecipePatch Loader: {{0}} patches total", count);
@@ -74,46 +71,26 @@ public class Recipes : ModSystem
         {
             newRecipe.RecipeGroup = 1;
             List<CraftingRecipeIngredient> newIngredients = newRecipe.Ingredients.Where(x => WildcardUtil.Match(patch.GetIngredientCode(), x.Value.Code)).Select(x => x.Value).ToList();
+
             foreach (CraftingRecipeIngredient ingredient in newIngredients)
             {
-                ingredient.Code = patch.GetNewCode();
-                ingredient.Name = patch.NewName;
-                ingredient.AllowedVariants = patch.NewAllowedVariants;
+                if (patch.ReplaceOnlyIngredient)
+                {
+                    ingredient.Code = patch.GetNewCode();
+                }
+                else
+                {
+                    ingredient.Code = patch.GetNewCode();
+                    ingredient.Name = patch.NewName;
+                    ingredient.AllowedVariants = patch.NewAllowedVariants;
+                }
             }
 
-            if (newIngredients?.Count != 0)
+            if (newIngredients?.Count != 0 && !patch.ReplaceOnlyIngredient)
             {
                 newRecipe.Output.Code = patch.GetNewOutputCode();
             }
 
-            newRecipe.ResolveIngredients(api.World);
-            newRecipes.Add(newRecipe);
-        }
-    }
-
-    private static void HandleLiquidContainerRecipe(ICoreAPI api, List<GridRecipe> newRecipes, GridRecipe recipe)
-    {
-        GridRecipe newRecipe = recipe.Clone();
-        newRecipe.RecipeGroup = 1;
-
-        CraftingRecipeIngredient ingredient1 = newRecipe.Ingredients.FirstOrDefault(x => WildcardUtil.Match(new AssetLocation("woodbucket"), x.Value.Code)).Value;
-        if (Core.Config.WoodBucket && ingredient1 != null)
-        {
-            ingredient1.Code = new AssetLocation("vanvar:woodbucket-*");
-            newRecipe.ResolveIngredients(api.World);
-            newRecipes.Add(newRecipe);
-        }
-    }
-
-    private static void HandleSignRecipe(ICoreAPI api, List<GridRecipe> newRecipes, GridRecipe recipe)
-    {
-        GridRecipe newRecipe = recipe.Clone();
-        newRecipe.RecipeGroup = 1;
-
-        CraftingRecipeIngredient ingredient1 = newRecipe.Ingredients.FirstOrDefault(x => WildcardUtil.Match(new AssetLocation("sign-ground-north"), x.Value.Code)).Value;
-        if (Core.Config.Sign && ingredient1 != null)
-        {
-            ingredient1.Code = new AssetLocation("vanvar:sign-*-ground-north");
             newRecipe.ResolveIngredients(api.World);
             newRecipes.Add(newRecipe);
         }

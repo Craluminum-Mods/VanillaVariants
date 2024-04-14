@@ -1,0 +1,9 @@
+[
+    {
+        "configKeys": ["VVSignEnabled"],
+        "replaceDefault": false,
+        "replaceOnlyIngredient": true,
+        "ingredientCode": "sign-ground-north",
+        "newCode": "vanvar:sign-*-ground-north"
+    }
+]

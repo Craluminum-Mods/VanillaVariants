@@ -13,6 +13,8 @@ public class RecipePatch
     public bool ReplaceDefault = true;
     public bool CreateNew = true;
 
+    public bool ReplaceOnlyIngredient = false;
+
     public string OutputCode = null;
     public string IngredientCode = null;
 
