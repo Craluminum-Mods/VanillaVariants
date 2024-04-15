@@ -15,6 +15,7 @@ public class Recipes : ModSystem
 
     public override void AssetsLoaded(ICoreAPI api)
     {
+        long elapsedMilliseconds = api.World.ElapsedMilliseconds;
         GridRecipeLoader gridRecipeLoader = api.ModLoader.GetModSystem<GridRecipeLoader>();
 
         List<GridRecipe> newRecipes = new();
@@ -45,12 +46,12 @@ public class Recipes : ModSystem
             }
         }
 
-        api.Logger.Notification($"[{Mod.Info.Name}] RecipePatch Loader: {{0}} patches total", count);
-
         foreach (GridRecipe recipe in newRecipes)
         {
             gridRecipeLoader.LoadRecipe(null, recipe);
         }
+
+        api.Logger.Notification($"[{Mod.Info.Name}] RecipePatch Loader: Completed in {{0}} ms. {{1}} patches total", api.World.ElapsedMilliseconds - elapsedMilliseconds, count);
     }
 
     private static void HandleRecipe(ICoreAPI api, List<GridRecipe> newRecipes, GridRecipe recipe, RecipePatch patch)
