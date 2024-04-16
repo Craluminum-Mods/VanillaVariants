@@ -101,10 +101,8 @@ public class Recipes : ModSystem
             case EnumRecipePatchType.NewIngredientOnly:
                 {
                     newRecipe.RecipeGroup = 1;
-                    bool any = false;
                     foreach (CraftingRecipeIngredient ingredient in newRecipe.Ingredients.Where(x => WildcardUtil.Match(patch.GetIngredientCode(), x.Value.Code)).Select(x => x.Value))
                     {
-                        any = true;
                         ingredient.Code = patch.GetNewCode();
                     }
                     return newRecipe;
