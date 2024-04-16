@@ -7,93 +7,109 @@ using Vintagestory.ServerMods;
 
 namespace VanillaVariants;
 
-public class Recipes : ModSystem
+public class NewRecipes : ModSystem
 {
-    public override bool ShouldLoad(EnumAppSide forSide) => forSide.IsServer();
+    internal static long elapsedMilliseconds = 0;
+    public static int count = 0;
 
+    public static List<GridRecipe> newRecipes = new();
+
+    public override bool ShouldLoad(EnumAppSide forSide) => forSide.IsServer();
     public override double ExecuteOrder() => 1.01;
 
     public override void AssetsLoaded(ICoreAPI api)
     {
-        long elapsedMilliseconds = api.World.ElapsedMilliseconds;
         GridRecipeLoader gridRecipeLoader = api.ModLoader.GetModSystem<GridRecipeLoader>();
 
-        List<GridRecipe> newRecipes = new();
+        foreach (GridRecipe recipe in newRecipes)
+        {
+            gridRecipeLoader.LoadRecipe(new AssetLocation("skippatch"), recipe);
+        }
+    }
 
+    public override void AssetsFinalize(ICoreAPI api)
+    {
+        api.Logger.Notification($"[{Mod.Info.Name}] RecipePatch Loader: Completed in: {elapsedMilliseconds} ms, {count} patches total");
+    }
+}
+
+public class Recipes : ModSystem
+{
+    /// Apply when recipes are not resolved yet
+    public static List<RecipePatch> prePatches = new();
+
+    // Copy existing recipes, apply patches and add to newRecipes
+    public static List<RecipePatch> postPatches = new();
+
+    public override bool ShouldLoad(EnumAppSide forSide) => forSide.IsServer();
+
+    public override void AssetsLoaded(ICoreAPI api)
+    {
         List<IAsset> many = api.Assets.GetMany("config/recipepatches/");
-        IEnumerable<RecipePatch> patches = Array.Empty<RecipePatch>();
         foreach (IAsset asset in many)
         {
             try
             {
-                patches = patches.Concat(asset.ToObject<RecipePatch[]>().Where(x => x.CanApply(api)));
+                List<RecipePatch> loadedAsset = asset.ToObject<List<RecipePatch>>();
+                if (loadedAsset != null)
+                {
+                    prePatches.AddRange(loadedAsset.Where(x => x.CanApply(api) && x.Type == EnumRecipePatchType.Original));
+                    postPatches.AddRange(loadedAsset.Where(x => x.CanApply(api) && (x.Type == EnumRecipePatchType.New || x.Type == EnumRecipePatchType.NewIngredientOnly)));
+                }
             }
             catch (Exception e)
             {
-                api.Logger.Error($"[{Mod.Info.Name}] Failed loading patches file {{0}}:", asset.Location);
+                api.Logger.Error($"[{Mod.Info.Name}] Failed loading patches file {asset.Location}");
                 api.Logger.Error(e);
             }
         }
-
-        int count = 0;
-
-        foreach (GridRecipe recipe in api.World.GridRecipes)
-        {
-            foreach (RecipePatch patch in patches.Where(x => x.ReplaceOnlyIngredient || WildcardUtil.Match(x.GetOutputCode(), recipe.Output.Code)))
-            {
-                HandleRecipe(api, newRecipes, recipe, patch);
-                count++;
-            }
-        }
-
-        foreach (GridRecipe recipe in newRecipes)
-        {
-            gridRecipeLoader.LoadRecipe(null, recipe);
-        }
-
-        api.Logger.Notification($"[{Mod.Info.Name}] RecipePatch Loader: Completed in {{0}} ms. {{1}} patches total", api.World.ElapsedMilliseconds - elapsedMilliseconds, count);
     }
 
-    private static void HandleRecipe(ICoreAPI api, List<GridRecipe> newRecipes, GridRecipe recipe, RecipePatch patch)
+    public static GridRecipe HandleRecipe(GridRecipe recipe, RecipePatch patch)
     {
         GridRecipe newRecipe = recipe.Clone();
 
-        if (patch.ReplaceDefault)
+        switch (patch.Type)
         {
-            foreach (CraftingRecipeIngredient ingredient in recipe.Ingredients.Where(x => WildcardUtil.Match(patch.GetIngredientCode(), x.Value.Code)).Select(x => x.Value).ToList())
-            {
-                ingredient.Code = patch.GetOldCode();
-                ingredient.AllowedVariants = patch.OldAllowedVariants;
-            }
-
-            recipe.ResolveIngredients(api.World);
-        }
-        if (patch.CreateNew)
-        {
-            newRecipe.RecipeGroup = 1;
-            List<CraftingRecipeIngredient> newIngredients = newRecipe.Ingredients.Where(x => WildcardUtil.Match(patch.GetIngredientCode(), x.Value.Code)).Select(x => x.Value).ToList();
-
-            foreach (CraftingRecipeIngredient ingredient in newIngredients)
-            {
-                if (patch.ReplaceOnlyIngredient)
+            case EnumRecipePatchType.Original:
+                foreach (CraftingRecipeIngredient ingredient in recipe.Ingredients.Where(x => WildcardUtil.Match(patch.GetIngredientCode(), x.Value.Code)).Select(x => x.Value))
                 {
-                    ingredient.Code = patch.GetNewCode();
+                    ingredient.Code = patch.GetOldCode();
+                    ingredient.AllowedVariants = patch.OldAllowedVariants;
+                    ingredient.SkipVariants = patch.OldSkipVariants;
                 }
-                else
+                return null;
+            case EnumRecipePatchType.New:
                 {
-                    ingredient.Code = patch.GetNewCode();
-                    ingredient.Name = patch.NewName;
-                    ingredient.AllowedVariants = patch.NewAllowedVariants;
+                    newRecipe.RecipeGroup = 1;
+                    bool any = false;
+                    foreach (CraftingRecipeIngredient ingredient in newRecipe.Ingredients.Where(x => WildcardUtil.Match(patch.GetIngredientCode(), x.Value.Code)).Select(x => x.Value))
+                    {
+                        any = true;
+                        ingredient.Code = patch.GetNewCode();
+                        ingredient.Name = patch.NewName;
+                        ingredient.AllowedVariants = patch.NewAllowedVariants;
+                        ingredient.SkipVariants = patch.NewSkipVariants;
+                    }
+
+                    if (any)
+                    {
+                        newRecipe.Output.Code = patch.GetNewOutputCode();
+                    }
+                    return newRecipe;
                 }
-            }
-
-            if (newIngredients?.Count != 0 && !patch.ReplaceOnlyIngredient)
-            {
-                newRecipe.Output.Code = patch.GetNewOutputCode();
-            }
-
-            newRecipe.ResolveIngredients(api.World);
-            newRecipes.Add(newRecipe);
+            case EnumRecipePatchType.NewIngredientOnly:
+                {
+                    newRecipe.RecipeGroup = 1;
+                    bool any = false;
+                    foreach (CraftingRecipeIngredient ingredient in newRecipe.Ingredients.Where(x => WildcardUtil.Match(patch.GetIngredientCode(), x.Value.Code)).Select(x => x.Value))
+                    {
+                        any = true;
+                        ingredient.Code = patch.GetNewCode();
+                    }
+                    return newRecipe;
+                }
+            default: return null;
         }
     }
 }

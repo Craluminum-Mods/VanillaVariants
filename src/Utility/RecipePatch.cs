@@ -5,26 +5,31 @@ using Vintagestory.ServerMods.NoObf;
 
 namespace VanillaVariants;
 
+public enum EnumRecipePatchType
+{
+    Original,
+    New,
+    NewIngredientOnly
+}
+
 public class RecipePatch
 {
     public string[] ConfigKeys = null;
     public PatchModDependence[] DependsOn = null;
-
-    public bool ReplaceDefault = true;
-    public bool CreateNew = true;
-
-    public bool ReplaceOnlyIngredient = false;
+    public EnumRecipePatchType Type;
 
     public string OutputCode = null;
     public string IngredientCode = null;
 
     public string OldCode = null;
     public string[] OldAllowedVariants = null;
+    public string[] OldSkipVariants = null;
 
     public string NewOutputCode = null;
     public string NewCode = null;
     public string NewName = null;
     public string[] NewAllowedVariants = null;
+    public string[] NewSkipVariants = null;
 
     public AssetLocation GetIngredientCode() => new AssetLocation(IngredientCode);
 

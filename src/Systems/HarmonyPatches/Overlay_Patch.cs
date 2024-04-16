@@ -1,9 +1,7 @@
-using HarmonyLib;
 using Vintagestory.API.MathTools;
 
 namespace VanillaVariants;
 
-[HarmonyPatch(typeof(ColorBlend), nameof(ColorBlend.Overlay))]
 public static class Overlay_Patch
 {
     public static bool Prefix(ref int __result, int rgb1, int rgb2)
