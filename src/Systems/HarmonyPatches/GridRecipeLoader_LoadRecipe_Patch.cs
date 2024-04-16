@@ -26,7 +26,7 @@ public static class GridRecipeLoader_LoadRecipe_Patch
         {
             if (WildcardUtil.Match(patch.GetOutputCode(), recipe.Output.Code))
             {
-                Recipes.HandleRecipe(recipe, patch);
+                Recipes.HandleRecipe(recipe, patch, out _);
                 NewRecipes.count++;
             }
         }
@@ -35,9 +35,11 @@ public static class GridRecipeLoader_LoadRecipe_Patch
         {
             if (patch.Type == EnumRecipePatchType.NewIngredientOnly || WildcardUtil.Match(patch.GetOutputCode(), recipe.Output.Code))
             {
-                GridRecipe newRecipe = Recipes.HandleRecipe(recipe, patch);
-                NewRecipes.newRecipes.Add(newRecipe);
-                NewRecipes.count++;
+                if (Recipes.HandleRecipe(recipe, patch, out GridRecipe newRecipe) && newRecipe != null)
+                {
+                    NewRecipes.newRecipes.Add(newRecipe);
+                    NewRecipes.count++;
+                }
             }
         }
 

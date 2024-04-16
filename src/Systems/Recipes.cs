@@ -35,10 +35,14 @@ public class NewRecipes : ModSystem
 
 public class Recipes : ModSystem
 {
+    /// <summary>
     /// Apply when recipes are not resolved yet
+    /// </summary>
     public static List<RecipePatch> prePatches = new();
 
-    // Copy existing recipes, apply patches and add to newRecipes
+    /// <summary>
+    /// Copy existing recipes, apply patches and add to newRecipes
+    /// </summary>
     public static List<RecipePatch> postPatches = new();
 
     public override bool ShouldLoad(EnumAppSide forSide) => forSide.IsServer();
@@ -65,9 +69,9 @@ public class Recipes : ModSystem
         }
     }
 
-    public static GridRecipe HandleRecipe(GridRecipe recipe, RecipePatch patch)
+    public static bool HandleRecipe(GridRecipe recipe, RecipePatch patch, out GridRecipe newRecipe)
     {
-        GridRecipe newRecipe = recipe.Clone();
+        newRecipe = recipe.Clone();
 
         switch (patch.Type)
         {
@@ -78,7 +82,8 @@ public class Recipes : ModSystem
                     ingredient.AllowedVariants = patch.OldAllowedVariants;
                     ingredient.SkipVariants = patch.OldSkipVariants;
                 }
-                return null;
+                newRecipe = null;
+                return false;
             case EnumRecipePatchType.New:
                 {
                     newRecipe.RecipeGroup = 1;
@@ -96,18 +101,22 @@ public class Recipes : ModSystem
                     {
                         newRecipe.Output.Code = patch.GetNewOutputCode();
                     }
-                    return newRecipe;
+                    return true;
                 }
             case EnumRecipePatchType.NewIngredientOnly:
                 {
                     newRecipe.RecipeGroup = 1;
+                    bool any = false;
                     foreach (CraftingRecipeIngredient ingredient in newRecipe.Ingredients.Where(x => WildcardUtil.Match(patch.GetIngredientCode(), x.Value.Code)).Select(x => x.Value))
                     {
+                        any = true;
                         ingredient.Code = patch.GetNewCode();
                     }
-                    return newRecipe;
+                    return any;
                 }
-            default: return null;
         }
+
+        newRecipe = null;
+        return false;
     }
 }
