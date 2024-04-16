@@ -6,7 +6,7 @@ using Vintagestory.API.Util;
 
 namespace VanillaVariants;
 
-public class Recipes : ModSystem
+public class RecipePatchLoader : ModSystem
 {
     /// <summary>
     /// Apply when recipes are not resolved yet

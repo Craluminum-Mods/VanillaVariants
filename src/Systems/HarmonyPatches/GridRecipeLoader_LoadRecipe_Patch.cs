@@ -22,28 +22,28 @@ public static class GridRecipeLoader_LoadRecipe_Patch
         ICoreServerAPI api = __instance.GetField<ICoreServerAPI>("api");
         long elapsedMilliseconds = api.World.ElapsedMilliseconds;
 
-        foreach (RecipePatch patch in Recipes.prePatches)
+        foreach (RecipePatch patch in RecipePatchLoader.prePatches)
         {
             if (WildcardUtil.Match(patch.GetOutputCode(), recipe.Output.Code))
             {
-                Recipes.HandleRecipe(recipe, patch, out _);
-                NewRecipes.count++;
+                RecipePatchLoader.HandleRecipe(recipe, patch, out _);
+                NewGridRecipeLoader.count++;
             }
         }
 
-        foreach (RecipePatch patch in Recipes.postPatches)
+        foreach (RecipePatch patch in RecipePatchLoader.postPatches)
         {
             if (patch.Type == EnumRecipePatchType.NewIngredientOnly || WildcardUtil.Match(patch.GetOutputCode(), recipe.Output.Code))
             {
-                if (Recipes.HandleRecipe(recipe, patch, out GridRecipe newRecipe) && newRecipe != null)
+                if (RecipePatchLoader.HandleRecipe(recipe, patch, out GridRecipe newRecipe) && newRecipe != null)
                 {
-                    NewRecipes.newRecipes.Add(newRecipe);
-                    NewRecipes.count++;
+                    NewGridRecipeLoader.newRecipes.Add(newRecipe);
+                    NewGridRecipeLoader.count++;
                 }
             }
         }
 
-        NewRecipes.elapsedMilliseconds += api.World.ElapsedMilliseconds - elapsedMilliseconds;
+        NewGridRecipeLoader.elapsedMilliseconds += api.World.ElapsedMilliseconds - elapsedMilliseconds;
         return true;
     }
 }
