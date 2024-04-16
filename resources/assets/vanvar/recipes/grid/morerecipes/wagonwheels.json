@@ -5,7 +5,7 @@
             "H": { "type": "item", "code": "game:hammer-*", "isTool": true, "toolDurabilityCost": 10 },
             "C": { "type": "item", "code": "game:chisel-*", "isTool": true, "toolDurabilityCost": 15 },
             "W": { "type": "item", "code": "game:saw-*", "isTool": true, "toolDurabilityCost": 40 },
-            "B": { "type": "item", "code": "game:plank-*", "quantity": 8, "name": "wood" },
+            "B": { "type": "item", "code": "game:plank-*", "quantity": 8, "name": "wood", "skipVariants": ["oak"] },
             "A": { "type": "block", "code": "game:woodenaxle-ud" },
             "R": { "type": "item", "code": "game:resin", "quantity": 4 },
             "S": { "type": "item", "code": "game:stick", "quantity": 12 }
@@ -23,7 +23,7 @@
             "H": { "type": "item", "code": "game:hammer-*", "isTool": true, "toolDurabilityCost": 10 },
             "C": { "type": "item", "code": "game:chisel-*", "isTool": true, "toolDurabilityCost": 15 },
             "S": { "type": "item", "code": "game:saw-*", "isTool": true, "toolDurabilityCost": 40 },
-            "B": { "type": "item", "code": "game:plank-*", "quantity": 8, "name": "wood" },
+            "B": { "type": "item", "code": "game:plank-*", "quantity": 8, "name": "wood", "skipVariants": ["oak"] },
             "A": { "type": "block", "code": "game:woodenaxle-ud" },
             "R": { "type": "item", "code": "game:resin", "quantity": 4 }
         },
@@ -37,7 +37,7 @@
     {
         "ingredientPattern": "WA",
         "ingredients": {
-            "W": { "type": "block", "code": "vanvar:wagonwheels-*-spoked-west", "name": "wood" },
+            "W": { "type": "block", "code": "vanvar:wagonwheels-*-spoked-west", "name": "wood", "skipVariants": ["oak"] },
             "A": { "type": "block", "code": "game:woodenaxle-ud" }
         },
         "width": 2,
@@ -52,7 +52,7 @@
     {
         "ingredientPattern": "WA",
         "ingredients": {
-            "W": { "type": "block", "code": "vanvar:wagonwheels-*-solid-west", "name": "wood" },
+            "W": { "type": "block", "code": "vanvar:wagonwheels-*-solid-west", "name": "wood", "skipVariants": ["oak"] },
             "A": { "type": "block", "code": "game:woodenaxle-ud" }
         },
         "width": 2,
@@ -67,7 +67,7 @@
     {
         "ingredientPattern": "WS",
         "ingredients": {
-            "W": { "type": "block", "code": "vanvar:wagonwheels-*-spoked-longaxle-west", "name": "wood" },
+            "W": { "type": "block", "code": "vanvar:wagonwheels-*-spoked-longaxle-west", "name": "wood", "skipVariants": ["oak"] },
             "S": { "type": "item", "code": "game:saw-*", "isTool": true }
         },
         "width": 2,
@@ -79,7 +79,7 @@
     {
         "ingredientPattern": "WS",
         "ingredients": {
-            "W": { "type": "block", "code": "vanvar:wagonwheels-*-solid-longaxle-west", "name": "wood" },
+            "W": { "type": "block", "code": "vanvar:wagonwheels-*-solid-longaxle-west", "name": "wood", "skipVariants": ["oak"] },
             "S": { "type": "item", "code": "game:saw-*", "isTool": true }
         },
         "width": 2,

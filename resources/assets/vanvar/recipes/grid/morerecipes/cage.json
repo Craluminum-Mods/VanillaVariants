@@ -1,7 +1,7 @@
 {
     "ingredientPattern": "PPP,S_S,PPP",
     "ingredients": {
-        "P": { "type": "item", "code": "game:plank-*", "name": "wood" },
+        "P": { "type": "item", "code": "game:plank-*", "name": "wood", "skipVariants": ["oak"] },
         "S": { "type": "item", "code": "game:stick" }
     },
     "width": 3,
