@@ -19,7 +19,7 @@ public class BlockBehaviorName : BlockBehavior
         base.Initialize(properties);
 
         parts = properties["parts"].AsObject<List<string>>();
-        if (parts != null && parts.Count != 0)
+        if (parts != null && parts.Any())
         {
             parts = parts.Select(x => Lang.GetMatching(x)).ToList();
         }
@@ -31,12 +31,10 @@ public class BlockBehaviorName : BlockBehavior
 
     private void ConstructName(StringBuilder sb)
     {
-        if (parts == null || parts.Count == 0)
+        if (parts != null && parts.Any())
         {
-            return;
+            sb.Clear();
+            sb.Append(string.Join("", parts));
         }
-
-        sb.Clear();
-        sb.Append(string.Join("", parts));
     }
 }
