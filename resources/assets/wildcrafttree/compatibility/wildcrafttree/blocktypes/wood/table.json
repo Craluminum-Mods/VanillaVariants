@@ -45,19 +45,19 @@
     },
     "texturesByType": {
         "*-whitemarble": {
-            "sides": { "base": "game:block/wood/debarked/{material}", "overlays": ["block/table/sides-{type}"] },
+            "sides": { "base": "game:block/wood/debarked/{material}", "overlays": ["vanvar:block/table/sides-{type}"] },
             "top": { "base": "game:block/stone/polishedrock/{type}-inside" },
             "bottom": { "base": "game:block/wood/debarked/{material}" },
             "legs": { "base": "game:block/wood/debarked/{material}", "rotation": 90 }
         },
         "*-redmarble": {
-            "sides": { "base": "game:block/wood/debarked/{material}", "overlays": ["block/table/sides-{type}"] },
+            "sides": { "base": "game:block/wood/debarked/{material}", "overlays": ["vanvar:block/table/sides-{type}"] },
             "top": { "base": "game:block/stone/polishedrock/{type}-inside" },
             "bottom": { "base": "game:block/wood/debarked/{material}" },
             "legs": { "base": "game:block/wood/debarked/{material}", "rotation": 90 }
         },
         "*-greenmarble": {
-            "sides": { "base": "game:block/wood/debarked/{material}", "overlays": ["block/table/sides-{type}"] },
+            "sides": { "base": "game:block/wood/debarked/{material}", "overlays": ["vanvar:block/table/sides-{type}"] },
             "top": { "base": "game:block/stone/polishedrock/{type}-inside" },
             "bottom": { "base": "game:block/wood/debarked/{material}" },
             "legs": { "base": "game:block/wood/debarked/{material}", "rotation": 90 }
