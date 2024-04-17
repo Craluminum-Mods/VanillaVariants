@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Vintagestory.API.Common;
+using Vintagestory.API.Util;
 using Vintagestory.ServerMods.NoObf;
 
 namespace VanillaVariants;
@@ -18,12 +19,26 @@ public class RecipePatch
     public string[] ConfigKeys = null;
     public PatchModDependence[] DependsOn = null;
 
+    public bool MatchOutputQuantity = false;
+    public bool ChangeQuantity = false;
+    public int Quantity = 0;
+    public int QuantityNew = 0;
+
     public string OutputCode = null;
     public string OutputCodeNew = null;
     public IngredientPatch[] Ingredients = null;
 
+    public int? RecipeGroup = null;
+
     public AssetLocation GetOutputCode() => new AssetLocation(OutputCode);
     public AssetLocation GetOutputCodeNew() => new AssetLocation(OutputCodeNew);
+
+    public bool MatchesOutput(GridRecipe recipe)
+    {
+        return MatchOutputQuantity
+            ? WildcardUtil.Match(GetOutputCode(), recipe.Output.Code) && recipe.Output.Quantity == Quantity
+            : WildcardUtil.Match(GetOutputCode(), recipe.Output.Code);
+    }
 
     public bool CanApply(ICoreAPI api)
     {

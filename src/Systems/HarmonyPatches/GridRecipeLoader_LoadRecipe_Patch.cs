@@ -24,7 +24,7 @@ public static class GridRecipeLoader_LoadRecipe_Patch
 
         foreach (RecipePatch patch in RecipePatchLoader.ReplacePatches)
         {
-            if (WildcardUtil.Match(patch.GetOutputCode(), recipe.Output.Code))
+            if (patch.MatchesOutput(recipe))
             {
                 RecipePatchLoader.HandleRecipe(recipe, patch, out _);
                 NewGridRecipeLoader.ReplacedCount++;
@@ -34,7 +34,7 @@ public static class GridRecipeLoader_LoadRecipe_Patch
 
         foreach (RecipePatch patch in RecipePatchLoader.CopyPatches)
         {
-            if (patch.Type == EnumRecipePatchType.CopyReplaceIngredients || WildcardUtil.Match(patch.GetOutputCode(), recipe.Output.Code))
+            if (patch.Type == EnumRecipePatchType.CopyReplaceIngredients || patch.MatchesOutput(recipe))
             {
                 if (RecipePatchLoader.HandleRecipe(recipe, patch, out GridRecipe newRecipe) && newRecipe != null)
                 {

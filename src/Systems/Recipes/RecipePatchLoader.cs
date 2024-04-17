@@ -58,6 +58,14 @@ public class RecipePatchLoader : ModSystem
                             ingredient.SkipVariants = ingredPatch.SkipVariants;
                         }
                     }
+                    if (patch.ChangeQuantity)
+                    {
+                        recipe.Output.Quantity = patch.QuantityNew;
+                    }
+                    if (patch.RecipeGroup != null)
+                    {
+                        recipe.RecipeGroup = (int)patch.RecipeGroup;
+                    }
                     newRecipe = null;
                     return false;
                 }
@@ -80,6 +88,14 @@ public class RecipePatchLoader : ModSystem
                     if (any)
                     {
                         newRecipe.Output.Code = patch.GetOutputCodeNew();
+                        if (patch.ChangeQuantity)
+                        {
+                            newRecipe.Output.Quantity = patch.QuantityNew;
+                        }
+                        if (patch.RecipeGroup != null)
+                        {
+                            newRecipe.RecipeGroup = (int)patch.RecipeGroup;
+                        }
                     }
                     return any;
                 }
@@ -94,6 +110,10 @@ public class RecipePatchLoader : ModSystem
                             any = true;
                             ingredient.Code = ingredPatch.GetCode();
                         }
+                    }
+                    if (patch.RecipeGroup != null)
+                    {
+                        newRecipe.RecipeGroup = (int)patch.RecipeGroup;
                     }
                     return any;
                 }
