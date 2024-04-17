@@ -55,7 +55,7 @@
     },
     "textures": {
         "poles": { "base": "game:block/wood/debarked/{type}" },
-        "wood": { "base": "game:block/wood/debarked/{type}", "overlays": ["block/trapdoor/wood"] }
+        "wood": { "base": "game:block/wood/debarked/{type}", "blendedOverlays": [{ "base": "vanvar:block/trapdoor/wood" }] }
     },
     "creativeinventory": { "general": ["*-closed-up-north"], "decorative": ["*-closed-up-north"], "vanvar": ["*-closed-up-north"] },
     "drops": [{ "code": "trapdoor-{type}-closed-up-north" }],

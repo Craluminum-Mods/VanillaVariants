@@ -26,14 +26,8 @@
         "*-south": { "base": "game:block/wood/shelf", "rotateY": 180 }
     },
     "textures": {
-        "surface": {
-            "base": "game:block/wood/debarked/{type}",
-            "overlays": ["vanvar:block/shelf/surface"]
-        },
-        "wood2": {
-            "base": "game:block/wood/debarked/{type}",
-            "overlays": ["vanvar:block/shelf/wood"]
-        }
+        "surface": { "base": "game:block/wood/debarked/{type}", "blendedOverlays": [{ "base": "vanvar:block/shelf/surface" }] },
+        "wood2": { "base": "game:block/wood/debarked/{type}", "blendedOverlays": [{ "base": "vanvar:block/shelf/wood" }] }
     },
     "heldTpIdleAnimation": "holdunderarm",
     "creativeinventory": {

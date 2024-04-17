@@ -32,7 +32,7 @@
         "singlehay2": { "base": "game:block/wood/trough/large/singlehay2" },
         "sides": {
             "base": "game:block/wood/debarked/{type}",
-            "overlays": ["block/henbox/sides"]
+            "blendedOverlays": [{ "base": "vanvar:block/henbox/sides" }]
         },
         "wood": { "base": "game:block/wood/debarked/{type}" }
     },

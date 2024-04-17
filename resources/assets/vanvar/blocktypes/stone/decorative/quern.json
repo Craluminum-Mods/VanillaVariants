@@ -20,9 +20,9 @@
     "blockmaterial": "Stone",
     "textures": {
         "basematerial": { "base": "game:block/stone/rock/{rock}1" },
-        "baseside": { "base": "game:block/stone/rock/{rock}1", "overlays": ["game:block/stone/quern/baseside"] },
-        "baseup": { "base": "game:block/stone/rock/{rock}1", "overlays": ["game:block/stone/quern/grooves"] },
-        "grindstoneup": { "base": "game:block/stone/rock/{rock}1", "overlays": ["game:block/stone/quern/grindstoneup"] }
+        "baseside": { "base": "game:block/stone/rock/{rock}1", "blendedOverlays": [{ "base": "game:block/stone/quern/baseside", "blendMode": "Normal" }] },
+        "baseup": { "base": "game:block/stone/rock/{rock}1", "blendedOverlays": [{ "base": "game:block/stone/quern/grooves", "blendMode": "Normal" }] },
+        "grindstoneup": { "base": "game:block/stone/rock/{rock}1", "blendedOverlays": [{ "base": "game:block/stone/quern/grindstoneup", "blendMode": "Normal" }] }
     },
     "sidesolid": { "all": false, "down": true },
     "sideopaque": { "all": false, "down": true },
