@@ -9,6 +9,7 @@ public class Config
     public bool Bed { get; set; } = true;
     public bool Cage { get; set; } = true;
     public bool Chair { get; set; } = true;
+    public bool CrudeDoor { get; set; } = true;
     public bool DecorativeQuern { get; set; } = true;
     public bool DisplayCase { get; set; } = true;
     public bool Forge { get; set; } = true;
@@ -44,6 +45,7 @@ public class Config
         Bed = previousConfig.Bed;
         Cage = previousConfig.Cage;
         Chair = previousConfig.Chair;
+        CrudeDoor = previousConfig.CrudeDoor;
         DecorativeQuern = previousConfig.DecorativeQuern;
         DisplayCase = previousConfig.DisplayCase;
         Forge = previousConfig.Forge;

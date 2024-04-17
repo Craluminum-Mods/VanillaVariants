@@ -36,6 +36,7 @@ static class ModConfig
         api.World.Config.SetBool("VVBedEnabled", config.Bed);
         api.World.Config.SetBool("VVCageEnabled", config.Cage);
         api.World.Config.SetBool("VVChairEnabled", config.Chair);
+        api.World.Config.SetBool("VVCrudeDoorEnabled", config.CrudeDoor);
         api.World.Config.SetBool("VVDecoQuernEnabled", config.DecorativeQuern);
         api.World.Config.SetBool("VVDisplayCaseEnabled", config.DisplayCase);
         api.World.Config.SetBool("VVForgeEnabled", config.Forge);
