@@ -8,15 +8,8 @@ namespace VanillaVariants;
 
 public class RecipePatchLoader : ModSystem
 {
-    /// <summary>
-    /// Apply when recipes are not resolved yet
-    /// </summary>
-    public static List<RecipePatch> prePatches = new();
-
-    /// <summary>
-    /// Copy existing recipes, apply patches and add to newRecipes
-    /// </summary>
-    public static List<RecipePatch> postPatches = new();
+    public static List<RecipePatch> ReplacePatches { get; set; } = new();
+    public static List<RecipePatch> CopyPatches { get; set; } = new();
 
     public override bool ShouldLoad(EnumAppSide forSide) => forSide.IsServer();
 
@@ -30,8 +23,8 @@ public class RecipePatchLoader : ModSystem
                 List<RecipePatch> loadedAsset = asset.ToObject<List<RecipePatch>>();
                 if (loadedAsset != null)
                 {
-                    prePatches.AddRange(loadedAsset.Where(x => x.CanApply(api) && x.Type == EnumRecipePatchType.Original));
-                    postPatches.AddRange(loadedAsset.Where(x => x.CanApply(api) && (x.Type == EnumRecipePatchType.New || x.Type == EnumRecipePatchType.NewIngredientOnly)));
+                    ReplacePatches.AddRange(loadedAsset.Where(x => x.CanApply(api) && x.Type == EnumRecipePatchType.Replace));
+                    CopyPatches.AddRange(loadedAsset.Where(x => x.CanApply(api) && (x.Type == EnumRecipePatchType.Copy || x.Type == EnumRecipePatchType.CopyReplaceIngredients)));
                 }
             }
             catch (Exception e)
@@ -42,48 +35,65 @@ public class RecipePatchLoader : ModSystem
         }
     }
 
+    public override void Dispose()
+    {
+        ReplacePatches.Clear();
+        CopyPatches.Clear();
+    }
+
     public static bool HandleRecipe(GridRecipe recipe, RecipePatch patch, out GridRecipe newRecipe)
     {
         newRecipe = recipe.Clone();
 
         switch (patch.Type)
         {
-            case EnumRecipePatchType.Original:
-                foreach (CraftingRecipeIngredient ingredient in recipe.Ingredients.Where(x => WildcardUtil.Match(patch.GetIngredientCode(), x.Value.Code)).Select(x => x.Value))
+            case EnumRecipePatchType.Replace:
                 {
-                    ingredient.Code = patch.GetOldCode();
-                    ingredient.AllowedVariants = patch.OldAllowedVariants;
-                    ingredient.SkipVariants = patch.OldSkipVariants;
+                    foreach (IngredientPatch ingredPatch in patch.Ingredients)
+                    {
+                        foreach (CraftingRecipeIngredient ingredient in recipe.Ingredients.Where(x => WildcardUtil.Match(ingredPatch.GetIngredientCode(), x.Value.Code)).Select(x => x.Value))
+                        {
+                            ingredient.Code = ingredPatch.GetCode();
+                            ingredient.AllowedVariants = ingredPatch.AllowedVariants;
+                            ingredient.SkipVariants = ingredPatch.SkipVariants;
+                        }
+                    }
+                    newRecipe = null;
+                    return false;
                 }
-                newRecipe = null;
-                return false;
-            case EnumRecipePatchType.New:
+            case EnumRecipePatchType.Copy:
                 {
                     newRecipe.RecipeGroup = 1;
                     bool any = false;
-                    foreach (CraftingRecipeIngredient ingredient in newRecipe.Ingredients.Where(x => WildcardUtil.Match(patch.GetIngredientCode(), x.Value.Code)).Select(x => x.Value))
+                    foreach (IngredientPatch ingredPatch in patch.Ingredients)
                     {
-                        any = true;
-                        ingredient.Code = patch.GetNewCode();
-                        ingredient.Name = patch.NewName;
-                        ingredient.AllowedVariants = patch.NewAllowedVariants;
-                        ingredient.SkipVariants = patch.NewSkipVariants;
+                        foreach (CraftingRecipeIngredient ingredient in newRecipe.Ingredients.Where(x => WildcardUtil.Match(ingredPatch.GetIngredientCode(), x.Value.Code)).Select(x => x.Value))
+                        {
+                            any = true;
+                            ingredient.Code = ingredPatch.GetCode();
+                            ingredient.Name = ingredPatch.Name;
+                            ingredient.AllowedVariants = ingredPatch.AllowedVariants;
+                            ingredient.SkipVariants = ingredPatch.SkipVariants;
+                        }
                     }
 
                     if (any)
                     {
-                        newRecipe.Output.Code = patch.GetNewOutputCode();
+                        newRecipe.Output.Code = patch.GetOutputCodeNew();
                     }
-                    return true;
+                    return any;
                 }
-            case EnumRecipePatchType.NewIngredientOnly:
+            case EnumRecipePatchType.CopyReplaceIngredients:
                 {
                     newRecipe.RecipeGroup = 1;
                     bool any = false;
-                    foreach (CraftingRecipeIngredient ingredient in newRecipe.Ingredients.Where(x => WildcardUtil.Match(patch.GetIngredientCode(), x.Value.Code)).Select(x => x.Value))
+                    foreach (IngredientPatch ingredPatch in patch.Ingredients)
                     {
-                        any = true;
-                        ingredient.Code = patch.GetNewCode();
+                        foreach (CraftingRecipeIngredient ingredient in newRecipe.Ingredients.Where(x => WildcardUtil.Match(ingredPatch.GetIngredientCode(), x.Value.Code)).Select(x => x.Value))
+                        {
+                            any = true;
+                            ingredient.Code = ingredPatch.GetCode();
+                        }
                     }
                     return any;
                 }

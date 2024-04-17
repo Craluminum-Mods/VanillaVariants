@@ -22,28 +22,29 @@ public static class GridRecipeLoader_LoadRecipe_Patch
         ICoreServerAPI api = __instance.GetField<ICoreServerAPI>("api");
         long elapsedMilliseconds = api.World.ElapsedMilliseconds;
 
-        foreach (RecipePatch patch in RecipePatchLoader.prePatches)
+        foreach (RecipePatch patch in RecipePatchLoader.ReplacePatches)
         {
             if (WildcardUtil.Match(patch.GetOutputCode(), recipe.Output.Code))
             {
                 RecipePatchLoader.HandleRecipe(recipe, patch, out _);
-                NewGridRecipeLoader.count++;
+                NewGridRecipeLoader.ReplacedCount++;
+                NewGridRecipeLoader.Count++;
             }
         }
 
-        foreach (RecipePatch patch in RecipePatchLoader.postPatches)
+        foreach (RecipePatch patch in RecipePatchLoader.CopyPatches)
         {
-            if (patch.Type == EnumRecipePatchType.NewIngredientOnly || WildcardUtil.Match(patch.GetOutputCode(), recipe.Output.Code))
+            if (patch.Type == EnumRecipePatchType.CopyReplaceIngredients || WildcardUtil.Match(patch.GetOutputCode(), recipe.Output.Code))
             {
                 if (RecipePatchLoader.HandleRecipe(recipe, patch, out GridRecipe newRecipe) && newRecipe != null)
                 {
-                    NewGridRecipeLoader.newRecipes.Add(newRecipe);
-                    NewGridRecipeLoader.count++;
+                    NewGridRecipeLoader.NewRecipes.Add(newRecipe);
+                    NewGridRecipeLoader.Count++;
                 }
             }
         }
 
-        NewGridRecipeLoader.elapsedMilliseconds += api.World.ElapsedMilliseconds - elapsedMilliseconds;
+        NewGridRecipeLoader.ElapsedMilliseconds += api.World.ElapsedMilliseconds - elapsedMilliseconds;
         return true;
     }
 }

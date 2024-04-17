@@ -6,11 +6,11 @@ namespace VanillaVariants;
 
 public class NewGridRecipeLoader : ModSystem
 {
-    internal static long elapsedMilliseconds = 0;
-    public static int count = 0;
-    public static int newCount = 0;
-
-    public static List<GridRecipe> newRecipes = new();
+    internal static long ElapsedMilliseconds { get; set; } = 0;
+    public static int Count { get; set; } = 0;
+    public static int ReplacedCount { get; set; } = 0;
+    public static int NewCount { get; set; } = 0;
+    public static List<GridRecipe> NewRecipes { get; set; } = new();
 
     public override bool ShouldLoad(EnumAppSide forSide) => forSide.IsServer();
     public override double ExecuteOrder() => 1.01;
@@ -19,15 +19,24 @@ public class NewGridRecipeLoader : ModSystem
     {
         GridRecipeLoader gridRecipeLoader = api.ModLoader.GetModSystem<GridRecipeLoader>();
 
-        foreach (GridRecipe recipe in newRecipes)
+        foreach (GridRecipe recipe in NewRecipes)
         {
             gridRecipeLoader.LoadRecipe(new AssetLocation("skippatch"), recipe);
-            newCount++;
+            NewCount++;
         }
     }
 
     public override void AssetsFinalize(ICoreAPI api)
     {
-        api.Logger.Notification($"[{Mod.Info.Name}] RecipePatch Loader: Completed in: {elapsedMilliseconds} ms, {count} patches total, {newCount} new recipes");
+        api.Logger.Notification($"[{Mod.Info.Name}] RecipePatch Loader: Completed in: {ElapsedMilliseconds} ms, {Count} patches total, replaced {ReplacedCount} recipes, {NewCount} new recipes");
+    }
+
+    public override void Dispose()
+    {
+        ElapsedMilliseconds = 0;
+        Count = 0;
+        ReplacedCount = 0;
+        NewCount = 0;
+        NewRecipes.Clear();
     }
 }

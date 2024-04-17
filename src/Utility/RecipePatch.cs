@@ -7,37 +7,23 @@ namespace VanillaVariants;
 
 public enum EnumRecipePatchType
 {
-    Original,
-    New,
-    NewIngredientOnly
+    Replace,
+    Copy,
+    CopyReplaceIngredients
 }
 
 public class RecipePatch
 {
+    public EnumRecipePatchType Type;
     public string[] ConfigKeys = null;
     public PatchModDependence[] DependsOn = null;
-    public EnumRecipePatchType Type;
 
     public string OutputCode = null;
-    public string IngredientCode = null;
+    public string OutputCodeNew = null;
+    public IngredientPatch[] Ingredients = null;
 
-    public string OldCode = null;
-    public string[] OldAllowedVariants = null;
-    public string[] OldSkipVariants = null;
-
-    public string NewOutputCode = null;
-    public string NewCode = null;
-    public string NewName = null;
-    public string[] NewAllowedVariants = null;
-    public string[] NewSkipVariants = null;
-
-    public AssetLocation GetIngredientCode() => new AssetLocation(IngredientCode);
-
-    public AssetLocation GetOldCode() => string.IsNullOrEmpty(OldCode) ? GetIngredientCode() : new AssetLocation(OldCode);
     public AssetLocation GetOutputCode() => new AssetLocation(OutputCode);
-
-    public AssetLocation GetNewCode() => string.IsNullOrEmpty(NewCode) ? GetIngredientCode() : new AssetLocation(NewCode);
-    public AssetLocation GetNewOutputCode() => new AssetLocation(NewOutputCode);
+    public AssetLocation GetOutputCodeNew() => new AssetLocation(OutputCodeNew);
 
     public bool CanApply(ICoreAPI api)
     {
