@@ -4,7 +4,7 @@ namespace VanillaVariants.Configuration;
 
 static class ModConfig
 {
-    private const string jsonConfig = "VanillaVariantsConfig.json";
+    private const string jsonConfig = "VanillaVariants.json";
 
     public static Config ReadConfig(ICoreAPI api)
     {
