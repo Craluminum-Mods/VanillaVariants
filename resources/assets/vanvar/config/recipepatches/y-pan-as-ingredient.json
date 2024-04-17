@@ -1,0 +1,13 @@
+[
+    {
+        "type": "CopyReplaceIngredients",
+        "configKeys": ["VanillaVariants_WoodenPan_Enabled"],
+        "ingredients": [{ "ingredientCode": "pan-wooden", "Code": "vanvar:pan-*" }]
+    },
+    {
+        "type": "CopyReplaceIngredients",
+        "configKeys": ["VanillaVariants_WoodenPan_Enabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "ingredients": [{ "ingredientCode": "pan-wooden", "Code": "wildcrafttree:pan-*" }]
+    }
+]
