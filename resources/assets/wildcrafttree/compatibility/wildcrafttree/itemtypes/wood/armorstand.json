@@ -9,7 +9,10 @@
             }
         }
     ],
-    "attributes": { "handbook": { "groupBy": ["armorstand-*"] } },
+    "attributes": {
+        "fromVanVarMod": true,
+        "handbook": { "groupBy": ["armorstand-*"] }
+    },
     "variantgroups": [{ "code": "wood", "loadFromProperties": "wildcrafttree:block/wood" }],
     "shape": {
         "base": "game:entity/land/armorstand"
