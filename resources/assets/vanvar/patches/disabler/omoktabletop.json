@@ -4,7 +4,7 @@
         "op": "addmerge",
         "path": "/enabled",
         "value": false,
-        "condition": { "when": "VVOmokTabletopEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" },
         "side": "server"
     },
     {
@@ -12,7 +12,7 @@
         "op": "addmerge",
         "path": "/0/enabled",
         "value": false,
-        "condition": { "when": "VVOmokTabletopEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" },
         "side": "server"
     },
     {
@@ -20,7 +20,7 @@
         "op": "addmerge",
         "path": "/1/enabled",
         "value": false,
-        "condition": { "when": "VVOmokTabletopEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" },
         "side": "server"
     },
     {
@@ -28,7 +28,7 @@
         "op": "addmerge",
         "path": "/2/enabled",
         "value": false,
-        "condition": { "when": "VVOmokTabletopEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" },
         "side": "server"
     },
 
@@ -37,7 +37,7 @@
         "op": "addmerge",
         "path": "/enabled",
         "value": false,
-        "condition": { "when": "VVOmokTabletopEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" },
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "side": "server"
     },
@@ -46,7 +46,7 @@
         "op": "addmerge",
         "path": "/3/enabled",
         "value": false,
-        "condition": { "when": "VVOmokTabletopEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" },
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "side": "server"
     },
@@ -55,7 +55,7 @@
         "op": "addmerge",
         "path": "/4/enabled",
         "value": false,
-        "condition": { "when": "VVOmokTabletopEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" },
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "side": "server"
     },
@@ -64,7 +64,7 @@
         "op": "addmerge",
         "path": "/5/enabled",
         "value": false,
-        "condition": { "when": "VVOmokTabletopEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" },
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "side": "server"
     },
@@ -73,7 +73,7 @@
         "op": "addmerge",
         "path": "/6/enabled",
         "value": false,
-        "condition": { "when": "VVOmokTabletopEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" },
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "side": "server"
     }

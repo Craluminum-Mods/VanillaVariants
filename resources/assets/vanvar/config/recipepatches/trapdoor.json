@@ -1,27 +1,27 @@
 [
     {
         "type": "Replace",
-        "configKeys": ["VVTrapdoorEnabled"],
+        "configKeys": ["VanillaVariants_Trapdoor_Enabled"],
         "outputCode": "trapdoor-closed-up-north",
         "ingredients": [{ "ingredientCode": "plank-*", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Replace",
-        "configKeys": ["VVTrapdoorEnabled"],
+        "configKeys": ["VanillaVariants_Trapdoor_Enabled"],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "trapdoor-closed-up-north",
         "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VVTrapdoorEnabled"],
+        "configKeys": ["VanillaVariants_Trapdoor_Enabled"],
         "outputCode": "trapdoor-closed-up-north",
         "outputCodeNew": "vanvar:trapdoor-{wood}-closed-up-north",
         "ingredients": [{ "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VVTrapdoorEnabled"],
+        "configKeys": ["VanillaVariants_Trapdoor_Enabled"],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "trapdoor-closed-up-north",
         "outputCodeNew": "wildcrafttree:trapdoor-{wood}-closed-up-north",

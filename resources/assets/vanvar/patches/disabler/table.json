@@ -4,7 +4,7 @@
         "op": "addmerge",
         "path": "/enabled",
         "value": false,
-        "condition": { "when": "VVTableEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_Table_Enabled", "isValue": "false" },
         "side": "server"
     },
     {
@@ -12,7 +12,7 @@
         "op": "addmerge",
         "path": "/enabled",
         "value": false,
-        "condition": { "when": "VVTableEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_Table_Enabled", "isValue": "false" },
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "side": "server"
     }

@@ -4,7 +4,7 @@
         "op": "addmerge",
         "path": "/enabled",
         "value": false,
-        "condition": { "when": "VVDisplayCaseEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_DisplayCase_Enabled", "isValue": "false" },
         "side": "server"
     },
     {
@@ -12,7 +12,7 @@
         "op": "addmerge",
         "path": "/enabled",
         "value": false,
-        "condition": { "when": "VVDisplayCaseEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_DisplayCase_Enabled", "isValue": "false" },
         "side": "server"
     },
     {
@@ -20,7 +20,7 @@
         "op": "addmerge",
         "path": "/enabled",
         "value": false,
-        "condition": { "when": "VVDisplayCaseEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_DisplayCase_Enabled", "isValue": "false" },
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "side": "server"
     },
@@ -29,7 +29,7 @@
         "op": "addmerge",
         "path": "/enabled",
         "value": false,
-        "condition": { "when": "VVDisplayCaseEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_DisplayCase_Enabled", "isValue": "false" },
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "side": "server"
     }

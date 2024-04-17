@@ -1,26 +1,10 @@
 [
     {
-        "file": "vanvar:recipes/grid/morerecipes/cage.json",
-        "op": "addmerge",
-        "path": "/0/enabled",
-        "value": false,
-        "condition": { "when": "VVMoreRecipesFeatureEnabled", "isValue": "false" },
-        "side": "server"
-    },
-    {
-        "file": "vanvar:recipes/grid/morerecipes/woodenrails.json",
-        "op": "addmerge",
-        "path": "/0/enabled",
-        "value": false,
-        "condition": { "when": "VVMoreRecipesFeatureEnabled", "isValue": "false" },
-        "side": "server"
-    },
-    {
         "file": "vanvar:recipes/grid/morerecipes/wagonwheels.json",
         "op": "addmerge",
         "path": "/0/enabled",
         "value": false,
-        "condition": { "when": "VVMoreRecipesFeatureEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_CraftableWagonWheels__Enabled", "isValue": "false" },
         "side": "server"
     },
     {
@@ -28,7 +12,7 @@
         "op": "addmerge",
         "path": "/1/enabled",
         "value": false,
-        "condition": { "when": "VVMoreRecipesFeatureEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_CraftableWagonWheels__Enabled", "isValue": "false" },
         "side": "server"
     },
     {
@@ -36,7 +20,7 @@
         "op": "addmerge",
         "path": "/2/enabled",
         "value": false,
-        "condition": { "when": "VVMoreRecipesFeatureEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_CraftableWagonWheels__Enabled", "isValue": "false" },
         "side": "server"
     },
     {
@@ -44,7 +28,7 @@
         "op": "addmerge",
         "path": "/3/enabled",
         "value": false,
-        "condition": { "when": "VVMoreRecipesFeatureEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_CraftableWagonWheels__Enabled", "isValue": "false" },
         "side": "server"
     },
     {
@@ -52,7 +36,7 @@
         "op": "addmerge",
         "path": "/4/enabled",
         "value": false,
-        "condition": { "when": "VVMoreRecipesFeatureEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_CraftableWagonWheels__Enabled", "isValue": "false" },
         "side": "server"
     },
     {
@@ -60,34 +44,16 @@
         "op": "addmerge",
         "path": "/5/enabled",
         "value": false,
-        "condition": { "when": "VVMoreRecipesFeatureEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_CraftableWagonWheels__Enabled", "isValue": "false" },
         "side": "server"
     },
 
-    {
-        "file": "vanvar:recipes/grid/morerecipes/cage.json",
-        "op": "addmerge",
-        "path": "/1/enabled",
-        "value": false,
-        "condition": { "when": "VVMoreRecipesFeatureEnabled", "isValue": "false" },
-        "dependsOn": [{ "modid": "wildcrafttree" }],
-        "side": "server"
-    },
-    {
-        "file": "vanvar:recipes/grid/morerecipes/woodenrails.json",
-        "op": "addmerge",
-        "path": "/1/enabled",
-        "value": false,
-        "condition": { "when": "VVMoreRecipesFeatureEnabled", "isValue": "false" },
-        "dependsOn": [{ "modid": "wildcrafttree" }],
-        "side": "server"
-    },
     {
         "file": "vanvar:recipes/grid/morerecipes/wagonwheels.json",
         "op": "addmerge",
         "path": "/6/enabled",
         "value": false,
-        "condition": { "when": "VVMoreRecipesFeatureEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_CraftableWagonWheels__Enabled", "isValue": "false" },
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "side": "server"
     },
@@ -96,7 +62,7 @@
         "op": "addmerge",
         "path": "/7/enabled",
         "value": false,
-        "condition": { "when": "VVMoreRecipesFeatureEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_CraftableWagonWheels__Enabled", "isValue": "false" },
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "side": "server"
     },
@@ -105,7 +71,7 @@
         "op": "addmerge",
         "path": "/8/enabled",
         "value": false,
-        "condition": { "when": "VVMoreRecipesFeatureEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_CraftableWagonWheels__Enabled", "isValue": "false" },
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "side": "server"
     },
@@ -114,7 +80,7 @@
         "op": "addmerge",
         "path": "/9/enabled",
         "value": false,
-        "condition": { "when": "VVMoreRecipesFeatureEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_CraftableWagonWheels__Enabled", "isValue": "false" },
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "side": "server"
     },
@@ -123,7 +89,7 @@
         "op": "addmerge",
         "path": "/10/enabled",
         "value": false,
-        "condition": { "when": "VVMoreRecipesFeatureEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_CraftableWagonWheels__Enabled", "isValue": "false" },
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "side": "server"
     },
@@ -132,7 +98,7 @@
         "op": "addmerge",
         "path": "/11/enabled",
         "value": false,
-        "condition": { "when": "VVMoreRecipesFeatureEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_CraftableWagonWheels__Enabled", "isValue": "false" },
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "side": "server"
     }

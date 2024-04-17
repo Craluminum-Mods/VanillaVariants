@@ -4,7 +4,7 @@
         "op": "addmerge",
         "path": "/enabled",
         "value": false,
-        "condition": { "when": "VVWagonWheelsEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_WagonWheels_Enabled", "isValue": "false" },
         "side": "server"
     },
     {
@@ -12,7 +12,7 @@
         "op": "addmerge",
         "path": "/enabled",
         "value": false,
-        "condition": { "when": "VVWagonWheelsEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_WagonWheels_Enabled", "isValue": "false" },
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "side": "server"
     }

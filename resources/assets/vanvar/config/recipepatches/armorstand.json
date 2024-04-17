@@ -1,27 +1,27 @@
 [
     {
         "type": "Replace",
-        "configKeys": ["VVArmorStandEnabled"],
+        "configKeys": ["VanillaVariants_ArmorStand_Enabled"],
         "outputCode": "armorstand",
         "ingredients": [{ "ingredientCode": "plank-*", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Replace",
-        "configKeys": ["VVArmorStandEnabled"],
+        "configKeys": ["VanillaVariants_ArmorStand_Enabled"],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "armorstand",
         "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VVArmorStandEnabled"],
+        "configKeys": ["VanillaVariants_ArmorStand_Enabled"],
         "outputCode": "armorstand",
         "outputCodeNew": "vanvar:armorstand-{wood}",
         "ingredients": [{ "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VVArmorStandEnabled"],
+        "configKeys": ["VanillaVariants_ArmorStand_Enabled"],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "armorstand",
         "outputCodeNew": "wildcrafttree:armorstand-{wood}",

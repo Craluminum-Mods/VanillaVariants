@@ -4,7 +4,7 @@
         "op": "addmerge",
         "path": "/enabled",
         "value": false,
-        "condition": { "when": "VVStonePathEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_StonePath_Enabled", "isValue": "false" },
         "side": "server"
     },
     {
@@ -12,7 +12,7 @@
         "op": "addmerge",
         "path": "/enabled",
         "value": false,
-        "condition": { "when": "VVStonePathEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_StonePath_Enabled", "isValue": "false" },
         "side": "server"
     },
     {
@@ -20,7 +20,7 @@
         "op": "addmerge",
         "path": "/enabled",
         "value": false,
-        "condition": { "when": "VVStonePathEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_StonePath_Enabled", "isValue": "false" },
         "side": "server"
     }
 ]

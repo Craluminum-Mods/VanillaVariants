@@ -3,7 +3,10 @@ namespace VanillaVariants.Configuration;
 public class Config
 {
     public bool ExperimentalOverlayTest { get; set; } = true;
-    public bool MoreRecipesFeature { get; set; }
+
+    public bool CraftableCage { get; set; }
+    public bool CraftableWagonWheels { get; set; }
+    public bool CraftableWoodenRails { get; set; }
 
     public bool ArmorStand { get; set; } = true;
     public bool Bed { get; set; } = true;
@@ -40,7 +43,10 @@ public class Config
     public Config(Config previousConfig)
     {
         ExperimentalOverlayTest = previousConfig.ExperimentalOverlayTest;
-        MoreRecipesFeature = previousConfig.MoreRecipesFeature;
+
+        CraftableCage = previousConfig.CraftableCage;
+        CraftableWagonWheels = previousConfig.CraftableWagonWheels;
+        CraftableWoodenRails = previousConfig.CraftableWoodenRails;
 
         ArmorStand = previousConfig.ArmorStand;
         Bed = previousConfig.Bed;

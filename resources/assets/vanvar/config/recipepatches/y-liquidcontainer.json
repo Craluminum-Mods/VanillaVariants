@@ -1,12 +1,12 @@
 [
     {
         "type": "CopyReplaceIngredients",
-        "configKeys": ["VVWoodBucketEnabled"],
+        "configKeys": ["VanillaVariants_WoodBucket_Enabled"],
         "ingredients": [{ "ingredientCode": "woodbucket", "Code": "vanvar:woodbucket-*" }]
     },
     {
         "type": "CopyReplaceIngredients",
-        "configKeys": ["VVWoodBucketEnabled"],
+        "configKeys": ["VanillaVariants_WoodBucket_Enabled"],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "ingredients": [{ "ingredientCode": "woodbucket", "Code": "wildcrafttree:woodbucket-*" }]
     }

@@ -1,27 +1,27 @@
 [
     {
         "type": "Replace",
-        "configKeys": ["VVWoodenPathEnabled"],
+        "configKeys": ["VanillaVariants_WoodenPath_Enabled"],
         "outputCode": "woodenpath-ns",
         "ingredients": [{ "ingredientCode": "plank-*", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Replace",
-        "configKeys": ["VVWoodenPathEnabled"],
+        "configKeys": ["VanillaVariants_WoodenPath_Enabled"],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "woodenpath-ns",
         "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VVWoodenPathEnabled"],
+        "configKeys": ["VanillaVariants_WoodenPath_Enabled"],
         "outputCode": "woodenpath-ns",
         "outputCodeNew": "vanvar:woodenpath-{wood}-ns",
         "ingredients": [{ "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VVWoodenPathEnabled"],
+        "configKeys": ["VanillaVariants_WoodenPath_Enabled"],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "woodenpath-ns",
         "outputCodeNew": "wildcrafttree:woodenpath-{wood}-ns",

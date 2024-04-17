@@ -4,7 +4,7 @@
         "op": "addmerge",
         "path": "/enabled",
         "value": false,
-        "condition": { "when": "VVForgeEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_Forge_Enabled", "isValue": "false" },
         "side": "server"
     }
 ]

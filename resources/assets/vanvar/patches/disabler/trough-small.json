@@ -4,7 +4,7 @@
         "op": "addmerge",
         "path": "/enabled",
         "value": false,
-        "condition": { "when": "VVTroughSmallEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_TroughSmall_Enabled", "isValue": "false" },
         "side": "server"
     },
     {
@@ -14,7 +14,7 @@
         "value": {
             "base": "block/wood/debarked/oak"
         },
-        "condition": { "when": "VVTroughSmallEnabled", "isValue": "true" },
+        "condition": { "when": "VanillaVariants_TroughSmall_Enabled", "isValue": "true" },
         "side": "server"
     },
     {
@@ -24,7 +24,7 @@
         "value": {
             "base": "block/wood/debarked/oak"
         },
-        "condition": { "when": "VVTroughSmallEnabled", "isValue": "true" },
+        "condition": { "when": "VanillaVariants_TroughSmall_Enabled", "isValue": "true" },
         "side": "server"
     },
     {
@@ -34,7 +34,7 @@
         "value": {
             "base": "block/wood/debarked/oak"
         },
-        "condition": { "when": "VVTroughSmallEnabled", "isValue": "true" },
+        "condition": { "when": "VanillaVariants_TroughSmall_Enabled", "isValue": "true" },
         "side": "server"
     },
 
@@ -43,7 +43,7 @@
         "op": "addmerge",
         "path": "/enabled",
         "value": false,
-        "condition": { "when": "VVTroughSmallEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_TroughSmall_Enabled", "isValue": "false" },
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "side": "server"
     }

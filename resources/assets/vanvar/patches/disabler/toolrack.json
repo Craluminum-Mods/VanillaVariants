@@ -4,7 +4,7 @@
         "op": "addmerge",
         "path": "/enabled",
         "value": false,
-        "condition": { "when": "VVToolrackEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_Toolrack_Enabled", "isValue": "false" },
         "side": "server"
     },
     {
@@ -12,7 +12,7 @@
         "op": "addmerge",
         "path": "/0/enabled",
         "value": false,
-        "condition": { "when": "VVToolrackEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_Toolrack_Enabled", "isValue": "false" },
         "side": "server"
     },
     {
@@ -20,7 +20,7 @@
         "op": "addmerge",
         "path": "/1/enabled",
         "value": false,
-        "condition": { "when": "VVToolrackEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_Toolrack_Enabled", "isValue": "false" },
         "side": "server"
     },
     {
@@ -32,7 +32,7 @@
             }
         },
         "file": "game:blocktypes/wood/toolrack.json",
-        "condition": { "when": "VVToolrackEnabled", "isValue": "true" },
+        "condition": { "when": "VanillaVariants_Toolrack_Enabled", "isValue": "true" },
         "side": "Server"
     },
 
@@ -41,7 +41,7 @@
         "op": "addmerge",
         "path": "/enabled",
         "value": false,
-        "condition": { "when": "VVToolrackEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_Toolrack_Enabled", "isValue": "false" },
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "side": "server"
     },
@@ -50,7 +50,7 @@
         "op": "addmerge",
         "path": "/2/enabled",
         "value": false,
-        "condition": { "when": "VVToolrackEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_Toolrack_Enabled", "isValue": "false" },
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "side": "server"
     }

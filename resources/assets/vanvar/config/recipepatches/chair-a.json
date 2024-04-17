@@ -1,13 +1,13 @@
 [
     {
         "type": "Replace",
-        "configKeys": ["VVChairEnabled"],
+        "configKeys": ["VanillaVariants_Chair_Enabled"],
         "outputCode": "chair-*",
         "ingredients": [{ "ingredientCode": "plank-*", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Replace",
-        "configKeys": ["VVChairEnabled"],
+        "configKeys": ["VanillaVariants_Chair_Enabled"],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "chair-*",
         "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] }]

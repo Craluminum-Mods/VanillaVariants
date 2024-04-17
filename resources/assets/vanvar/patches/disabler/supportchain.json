@@ -4,7 +4,7 @@
         "op": "addmerge",
         "path": "/enabled",
         "value": false,
-        "condition": { "when": "VVSupportChainEnabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_SupportChain_Enabled", "isValue": "false" },
         "side": "server"
     }
 ]

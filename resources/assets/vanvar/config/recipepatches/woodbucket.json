@@ -1,27 +1,27 @@
 [
     {
         "type": "Replace",
-        "configKeys": ["VVWoodBucketEnabled"],
+        "configKeys": ["VanillaVariants_WoodBucket_Enabled"],
         "outputCode": "woodbucket",
         "ingredients": [{ "ingredientCode": "plank-*", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Replace",
-        "configKeys": ["VVWoodBucketEnabled"],
+        "configKeys": ["VanillaVariants_WoodBucket_Enabled"],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "woodbucket",
         "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VVWoodBucketEnabled"],
+        "configKeys": ["VanillaVariants_WoodBucket_Enabled"],
         "outputCode": "woodbucket",
         "outputCodeNew": "vanvar:woodbucket-{wood}",
         "ingredients": [{ "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VVWoodBucketEnabled"],
+        "configKeys": ["VanillaVariants_WoodBucket_Enabled"],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "woodbucket",
         "outputCodeNew": "wildcrafttree:woodbucket-{wood}",

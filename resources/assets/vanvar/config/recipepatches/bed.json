@@ -1,27 +1,27 @@
 [
     {
         "type": "Replace",
-        "configKeys": ["VVBedEnabled"],
+        "configKeys": ["VanillaVariants_Bed_Enabled"],
         "outputCode": "bed-wood-head-north",
         "ingredients": [{ "ingredientCode": "plank-*", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Replace",
-        "configKeys": ["VVBedEnabled"],
+        "configKeys": ["VanillaVariants_Bed_Enabled"],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "bed-wood-head-north",
         "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VVBedEnabled"],
+        "configKeys": ["VanillaVariants_Bed_Enabled"],
         "outputCode": "bed-wood-head-north",
         "outputCodeNew": "vanvar:bed-{wood}-head-north",
         "ingredients": [{ "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VVBedEnabled"],
+        "configKeys": ["VanillaVariants_Bed_Enabled"],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "bed-wood-head-north",
         "outputCodeNew": "wildcrafttree:bed-{wood}-head-north",

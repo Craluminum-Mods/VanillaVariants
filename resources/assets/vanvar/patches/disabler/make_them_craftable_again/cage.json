@@ -1,0 +1,20 @@
+[
+    {
+        "file": "vanvar:recipes/grid/morerecipes/cage.json",
+        "op": "addmerge",
+        "path": "/0/enabled",
+        "value": false,
+        "condition": { "when": "VanillaVariants_CraftableCage__Enabled", "isValue": "false" },
+        "side": "server"
+    },
+
+    {
+        "file": "vanvar:recipes/grid/morerecipes/cage.json",
+        "op": "addmerge",
+        "path": "/1/enabled",
+        "value": false,
+        "condition": { "when": "VanillaVariants_CraftableCage__Enabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
+    }
+]

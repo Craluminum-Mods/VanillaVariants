@@ -1,27 +1,27 @@
 [
     {
         "type": "Replace",
-        "configKeys": ["VVHenboxEnabled"],
+        "configKeys": ["VanillaVariants_Henbox_Enabled"],
         "outputCode": "henbox-empty",
         "ingredients": [{ "ingredientCode": "plank-*", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Replace",
-        "configKeys": ["VVHenboxEnabled"],
+        "configKeys": ["VanillaVariants_Henbox_Enabled"],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "henbox-empty",
         "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VVHenboxEnabled"],
+        "configKeys": ["VanillaVariants_Henbox_Enabled"],
         "outputCode": "henbox-empty",
         "outputCodeNew": "vanvar:henbox-{wood}-empty",
         "ingredients": [{ "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VVHenboxEnabled"],
+        "configKeys": ["VanillaVariants_Henbox_Enabled"],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "henbox-empty",
         "outputCodeNew": "wildcrafttree:henbox-{wood}-empty",
