@@ -1,7 +1,7 @@
 [
     {
         "file": "vanvar:blocktypes/wood/palisadestakes.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/enabled",
         "value": false,
         "condition": { "when": "VVPalisadeEnabled", "isValue": "false" },
@@ -9,7 +9,7 @@
     },
     {
         "file": "vanvar:blocktypes/wood/palisadewall.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/enabled",
         "value": false,
         "condition": { "when": "VVPalisadeEnabled", "isValue": "false" },
@@ -18,7 +18,7 @@
 
     {
         "file": "wildcrafttree:blocktypes/wood/palisadestakes.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/enabled",
         "value": false,
         "condition": { "when": "VVPalisadeEnabled", "isValue": "false" },
@@ -27,7 +27,7 @@
     },
     {
         "file": "wildcrafttree:blocktypes/wood/palisadewall.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/enabled",
         "value": false,
         "condition": { "when": "VVPalisadeEnabled", "isValue": "false" },

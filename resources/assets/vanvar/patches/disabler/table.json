@@ -1,7 +1,7 @@
 [
     {
         "file": "vanvar:blocktypes/wood/table.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/enabled",
         "value": false,
         "condition": { "when": "VVTableEnabled", "isValue": "false" },
@@ -9,7 +9,7 @@
     },
     {
         "file": "wildcrafttree:blocktypes/wood/table.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/enabled",
         "value": false,
         "condition": { "when": "VVTableEnabled", "isValue": "false" },

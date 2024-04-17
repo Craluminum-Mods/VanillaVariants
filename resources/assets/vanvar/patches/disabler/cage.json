@@ -1,7 +1,7 @@
 [
     {
         "file": "vanvar:blocktypes/wood/cage.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/enabled",
         "value": false,
         "condition": { "when": "VVCageEnabled", "isValue": "false" },
@@ -9,7 +9,7 @@
     },
     {
         "file": "wildcrafttree:blocktypes/wood/cage.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/enabled",
         "value": false,
         "condition": { "when": "VVCageEnabled", "isValue": "false" },

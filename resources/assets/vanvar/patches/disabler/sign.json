@@ -1,7 +1,7 @@
 [
     {
         "file": "vanvar:blocktypes/wood/sign.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/enabled",
         "value": false,
         "condition": { "when": "VVSignEnabled", "isValue": "false" },
@@ -9,7 +9,7 @@
     },
     {
         "file": "wildcrafttree:blocktypes/wood/sign.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/enabled",
         "value": false,
         "condition": { "when": "VVSignEnabled", "isValue": "false" },

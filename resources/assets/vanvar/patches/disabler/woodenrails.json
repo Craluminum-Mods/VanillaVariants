@@ -1,7 +1,7 @@
 [
     {
         "file": "vanvar:blocktypes/wood/rails.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/enabled",
         "value": false,
         "condition": { "when": "VVWoodenRailsEnabled", "isValue": "false" },
@@ -9,7 +9,7 @@
     },
     {
         "file": "wildcrafttree:blocktypes/wood/rails.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/enabled",
         "value": false,
         "condition": { "when": "VVWoodenRailsEnabled", "isValue": "false" },

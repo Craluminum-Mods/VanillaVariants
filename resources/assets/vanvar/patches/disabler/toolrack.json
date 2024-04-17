@@ -1,7 +1,7 @@
 [
     {
         "file": "vanvar:blocktypes/wood/toolrack.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/enabled",
         "value": false,
         "condition": { "when": "VVToolrackEnabled", "isValue": "false" },
@@ -9,7 +9,7 @@
     },
     {
         "file": "vanvar:recipes/grid/toolrack.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/0/enabled",
         "value": false,
         "condition": { "when": "VVToolrackEnabled", "isValue": "false" },
@@ -17,14 +17,14 @@
     },
     {
         "file": "vanvar:recipes/grid/toolrack.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/1/enabled",
         "value": false,
         "condition": { "when": "VVToolrackEnabled", "isValue": "false" },
         "side": "server"
     },
     {
-        "op": "add",
+        "op": "addmerge",
         "path": "/textures",
         "value": {
             "aged": {
@@ -38,7 +38,7 @@
 
     {
         "file": "wildcrafttree:blocktypes/wood/toolrack.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/enabled",
         "value": false,
         "condition": { "when": "VVToolrackEnabled", "isValue": "false" },
@@ -47,7 +47,7 @@
     },
     {
         "file": "vanvar:recipes/grid/toolrack.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/2/enabled",
         "value": false,
         "condition": { "when": "VVToolrackEnabled", "isValue": "false" },

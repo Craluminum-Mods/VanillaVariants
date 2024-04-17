@@ -1,7 +1,7 @@
 [
     {
         "file": "vanvar:blocktypes/wood/displaycase.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/enabled",
         "value": false,
         "condition": { "when": "VVDisplayCaseEnabled", "isValue": "false" },
@@ -9,7 +9,7 @@
     },
     {
         "file": "vanvar:blocktypes/wood/displaycase-tall.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/enabled",
         "value": false,
         "condition": { "when": "VVDisplayCaseEnabled", "isValue": "false" },
@@ -17,7 +17,7 @@
     },
     {
         "file": "wildcrafttree:blocktypes/wood/displaycase.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/enabled",
         "value": false,
         "condition": { "when": "VVDisplayCaseEnabled", "isValue": "false" },
@@ -26,7 +26,7 @@
     },
     {
         "file": "wildcrafttree:blocktypes/wood/displaycase-tall.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/enabled",
         "value": false,
         "condition": { "when": "VVDisplayCaseEnabled", "isValue": "false" },

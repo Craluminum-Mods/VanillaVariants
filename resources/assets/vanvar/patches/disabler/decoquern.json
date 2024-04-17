@@ -1,7 +1,7 @@
 [
     {
         "file": "vanvar:blocktypes/stone/decorative/quern.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/enabled",
         "value": false,
         "condition": { "when": "VVDecoQuernEnabled", "isValue": "false" },

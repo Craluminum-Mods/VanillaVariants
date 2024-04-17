@@ -1,7 +1,7 @@
 [
     {
         "file": "vanvar:blocktypes/stone/forge.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/enabled",
         "value": false,
         "condition": { "when": "VVForgeEnabled", "isValue": "false" },

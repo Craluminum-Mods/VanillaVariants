@@ -1,14 +1,14 @@
 [
     {
         "file": "vanvar:blocktypes/wood/bucket.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/enabled",
         "value": false,
         "condition": { "when": "VVWoodBucketEnabled", "isValue": "false" },
         "side": "server"
     },
     {
-        "op": "add",
+        "op": "addmerge",
         "path": "/textures/aged",
         "value": {
             "base": "block/wood/debarked/oak"
@@ -18,7 +18,7 @@
         "side": "Server"
     },
     {
-        "op": "add",
+        "op": "addmerge",
         "path": "/textures/charred",
         "value": {
             "base": "block/wood/debarked/oak"
@@ -30,7 +30,7 @@
 
     {
         "file": "wildcrafttree:blocktypes/wood/bucket.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/enabled",
         "value": false,
         "condition": { "when": "VVWoodBucketEnabled", "isValue": "false" },

@@ -1,7 +1,7 @@
 [
     {
         "file": "vanvar:blocktypes/wood/trough-large.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/enabled",
         "value": false,
         "condition": { "when": "VVTroughLargeEnabled", "isValue": "false" },
@@ -9,7 +9,7 @@
     },
     {
         "file": "game:blocktypes/wood/trough-large.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/textures/aged",
         "value": {
             "base": "block/wood/debarked/oak"
@@ -19,7 +19,7 @@
     },
     {
         "file": "game:blocktypes/wood/trough-large.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/textures/charred",
         "value": {
             "base": "block/wood/debarked/oak"
@@ -29,7 +29,7 @@
     },
     {
         "file": "game:blocktypes/wood/trough-large.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/textures/bottom-inside",
         "value": {
             "base": "block/wood/debarked/oak"
@@ -40,7 +40,7 @@
 
     {
         "file": "wildcrafttree:blocktypes/wood/trough-large.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/enabled",
         "value": false,
         "condition": { "when": "VVTroughLargeEnabled", "isValue": "false" },

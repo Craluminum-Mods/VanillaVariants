@@ -1,7 +1,7 @@
 [
     {
         "file": "vanvar:blocktypes/wood/pan.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/enabled",
         "value": false,
         "condition": { "when": "VVWoodenPanEnabled", "isValue": "false" },
@@ -9,7 +9,7 @@
     },
     {
         "file": "wildcrafttree:blocktypes/wood/pan.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/enabled",
         "value": false,
         "condition": { "when": "VVWoodenPanEnabled", "isValue": "false" },

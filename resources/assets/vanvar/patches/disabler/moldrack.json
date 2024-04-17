@@ -1,7 +1,7 @@
 [
     {
         "file": "vanvar:blocktypes/wood/moldrack.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/enabled",
         "value": false,
         "condition": { "when": "VVMoldrackEnabled", "isValue": "false" },
@@ -9,7 +9,7 @@
     },
     {
         "file": "wildcrafttree:blocktypes/wood/moldrack.json",
-        "op": "add",
+        "op": "addmerge",
         "path": "/enabled",
         "value": false,
         "condition": { "when": "VVMoldrackEnabled", "isValue": "false" },
