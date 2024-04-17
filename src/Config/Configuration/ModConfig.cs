@@ -48,6 +48,7 @@ static class ModConfig
         api.World.Config.SetBool("VanillaVariants_OmokTabletop_Enabled", config.OmokTabletop);
         api.World.Config.SetBool("VanillaVariants_Palisade_Enabled", config.Palisade);
         api.World.Config.SetBool("VanillaVariants_Shelf_Enabled", config.Shelf);
+        api.World.Config.SetBool("VanillaVariants_Sieve_Enabled", config.Sieve);
         api.World.Config.SetBool("VanillaVariants_Sign_Enabled", config.Sign);
         api.World.Config.SetBool("VanillaVariants_Signpost_Enabled", config.Signpost);
         api.World.Config.SetBool("VanillaVariants_SodRoofing_Enabled", config.SodRoofing);

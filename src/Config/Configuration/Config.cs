@@ -22,6 +22,7 @@ public class Config
     public bool OmokTabletop { get; set; } = true;
     public bool Palisade { get; set; } = true;
     public bool Shelf { get; set; } = true;
+    public bool Sieve { get; set; } = true;
     public bool Sign { get; set; } = true;
     public bool Signpost { get; set; } = true;
     public bool SodRoofing { get; set; } = true;
@@ -62,6 +63,7 @@ public class Config
         OmokTabletop = previousConfig.OmokTabletop;
         Palisade = previousConfig.DecorativeQuern;
         Shelf = previousConfig.Shelf;
+        Sieve = previousConfig.Sieve;
         Sign = previousConfig.Sign;
         Signpost = previousConfig.Signpost;
         SodRoofing = previousConfig.SodRoofing;
