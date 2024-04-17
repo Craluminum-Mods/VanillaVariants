@@ -1,0 +1,30 @@
+[
+    {
+        "type": "Replace",
+        "configKeys": ["VVLadderEnabled"],
+        "outputCode": "ladder-wood-north",
+        "ingredients": [{ "ingredientCode": "plank-*", "AllowedVariants": ["oak"] }]
+    },
+    {
+        "type": "Replace",
+        "configKeys": ["VVLadderEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "ladder-wood-north",
+        "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] }]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVLadderEnabled"],
+        "outputCode": "ladder-wood-north",
+        "outputCodeNew": "vanvar:ladder-{wood}-north",
+        "ingredients": [{ "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVLadderEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "ladder-wood-north",
+        "outputCodeNew": "wildcrafttree:ladder-{wood}-north",
+        "ingredients": [{ "ingredientCode": "plank-*", "Code": "wildcrafttree:plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
+    }
+]

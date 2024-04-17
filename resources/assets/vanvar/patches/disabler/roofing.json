@@ -38,5 +38,51 @@
         "value": false,
         "condition": { "when": "VVSodRoofingEnabled", "isValue": "false" },
         "side": "server"
+    },
+
+    {
+        "file": "wildcrafttree:blocktypes/wood/roofing/slantedroofing.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVSodRoofingEnabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
+    },
+    {
+        "file": "wildcrafttree:blocktypes/wood/roofing/slantedroofingcorner-inner.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVSodRoofingEnabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
+    },
+    {
+        "file": "wildcrafttree:blocktypes/wood/roofing/slantedroofingcorner-outer.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVSodRoofingEnabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
+    },
+    {
+        "file": "wildcrafttree:blocktypes/wood/roofing/slantedroofingridge.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVSodRoofingEnabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
+    },
+    {
+        "file": "wildcrafttree:blocktypes/wood/roofing/slantedroofingtip.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVSodRoofingEnabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
     }
 ]

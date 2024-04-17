@@ -1,9 +1,13 @@
 [
     {
+        "type": "CopyReplaceIngredients",
         "configKeys": ["VVSignEnabled"],
-        "replaceDefault": false,
-        "replaceOnlyIngredient": true,
-        "ingredientCode": "sign-ground-north",
-        "newCode": "vanvar:sign-*-ground-north"
+        "ingredients": [{ "ingredientCode": "sign-ground-north", "Code": "vanvar:sign-*-ground-north" }]
+    },
+    {
+        "type": "CopyReplaceIngredients",
+        "configKeys": ["VVSignEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "ingredients": [{ "ingredientCode": "sign-ground-north", "Code": "wildcrafttree:sign-*-ground-north" }]
     }
 ]

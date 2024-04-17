@@ -1,0 +1,15 @@
+[
+    {
+        "type": "Replace",
+        "configKeys": ["VVForgeEnabled"],
+        "outputCode": "forge",
+        "ingredients": [{ "ingredientCode": "cobblestone-*", "AllowedVariants": ["granite"] }]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVForgeEnabled"],
+        "outputCode": "forge",
+        "ingredients": [{ "ingredientCode": "cobblestone-*", "Name": "stone", "SkipVariants": ["granite"] }],
+        "outputCodeNew": "vanvar:forge-{stone}"
+    }
+]

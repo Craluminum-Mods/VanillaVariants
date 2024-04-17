@@ -1,6 +1,30 @@
 [
-    { "configKeys": ["VVTableEnabled"], "outputCode": "table-normal", "ingredientCode": "plank-*", "oldAllowedVariants": ["oak"], "newName": "wood", "newOutputCode": "vanvar:table-{wood}-normal" },
-    { "configKeys": ["VVTableEnabled"], "outputCode": "table-whitemarble", "replaceDefault": false, "ingredientCode": "table-normal", "newCode": "vanvar:table-*-normal", "newName": "wood", "newOutputCode": "vanvar:table-{wood}-whitemarble" },
-    { "configKeys": ["VVTableEnabled"], "outputCode": "table-redmarble", "replaceDefault": false, "ingredientCode": "table-normal", "newCode": "vanvar:table-*-normal", "newName": "wood", "newOutputCode": "vanvar:table-{wood}-redmarble" },
-    { "configKeys": ["VVTableEnabled"], "outputCode": "table-greenmarble", "replaceDefault": false, "ingredientCode": "table-normal", "newCode": "vanvar:table-*-normal", "newName": "wood", "newOutputCode": "vanvar:table-{wood}-greenmarble" }
+    {
+        "type": "Replace",
+        "configKeys": ["VVTableEnabled"],
+        "outputCode": "table-normal",
+        "ingredients": [{ "ingredientCode": "plank-*", "AllowedVariants": ["oak"] }]
+    },
+    {
+        "type": "Replace",
+        "configKeys": ["VVTableEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "table-normal",
+        "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] }]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVTableEnabled"],
+        "outputCode": "table-normal",
+        "outputCodeNew": "vanvar:table-{wood}-normal",
+        "ingredients": [{ "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVTableEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "table-normal",
+        "outputCodeNew": "wildcrafttree:table-{wood}-normal",
+        "ingredients": [{ "ingredientCode": "plank-*", "Code": "wildcrafttree:plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
+    }
 ]

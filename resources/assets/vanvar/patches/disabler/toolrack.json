@@ -34,5 +34,24 @@
         "file": "game:blocktypes/wood/toolrack.json",
         "condition": { "when": "VVToolrackEnabled", "isValue": "true" },
         "side": "Server"
+    },
+
+    {
+        "file": "wildcrafttree:blocktypes/wood/toolrack.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVToolrackEnabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
+    },
+    {
+        "file": "vanvar:recipes/grid/toolrack.json",
+        "op": "add",
+        "path": "/2/enabled",
+        "value": false,
+        "condition": { "when": "VVToolrackEnabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
     }
 ]

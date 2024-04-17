@@ -17,5 +17,14 @@
         "width": 1,
         "height": 3,
         "output": { "type": "block", "code": "toolrack-{wood}-north" }
+    },
+    {
+        "ingredientPattern": "S,_,S",
+        "ingredients": {
+            "S": { "type": "item", "code": "wildcrafttree:plank-*", "name": "wood" }
+        },
+        "width": 1,
+        "height": 3,
+        "output": { "type": "block", "code": "wildcrafttree:toolrack-{wood}-north" }
     }
 ]

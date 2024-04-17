@@ -1,0 +1,30 @@
+[
+    {
+        "type": "Replace",
+        "configKeys": ["VVShelfEnabled"],
+        "outputCode": "shelf-normal-east",
+        "ingredients": [{ "ingredientCode": "plank-*", "AllowedVariants": ["oak"] }]
+    },
+    {
+        "type": "Replace",
+        "configKeys": ["VVShelfEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "shelf-normal-east",
+        "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] }]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVShelfEnabled"],
+        "outputCode": "shelf-normal-east",
+        "outputCodeNew": "vanvar:shelf-{wood}-east",
+        "ingredients": [{ "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVShelfEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "shelf-normal-east",
+        "outputCodeNew": "wildcrafttree:shelf-{wood}-east",
+        "ingredients": [{ "ingredientCode": "plank-*", "Code": "wildcrafttree:plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
+    }
+]

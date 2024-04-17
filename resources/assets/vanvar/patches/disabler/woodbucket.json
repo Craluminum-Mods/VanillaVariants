@@ -26,5 +26,15 @@
         "file": "game:blocktypes/wood/bucket.json",
         "condition": { "when": "VVWoodBucketEnabled", "isValue": "true" },
         "side": "Server"
+    },
+
+    {
+        "file": "wildcrafttree:blocktypes/wood/bucket.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVWoodBucketEnabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
     }
 ]

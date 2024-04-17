@@ -1,0 +1,48 @@
+[
+    {
+        "type": "Copy",
+        "configKeys": ["VVTableEnabled"],
+        "outputCode": "table-whitemarble",
+        "outputCodeNew": "vanvar:table-{wood}-whitemarble",
+        "ingredients": [{ "ingredientCode": "table-normal", "Code": "vanvar:table-*-normal", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVTableEnabled"],
+        "outputCode": "table-redmarble",
+        "outputCodeNew": "vanvar:table-{wood}-redmarble",
+        "ingredients": [{ "ingredientCode": "table-normal", "Code": "vanvar:table-*-normal", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVTableEnabled"],
+        "outputCode": "table-greenmarble",
+        "outputCodeNew": "vanvar:table-{wood}-greenmarble",
+        "ingredients": [{ "ingredientCode": "table-normal", "Code": "vanvar:table-*-normal", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+
+    {
+        "type": "Copy",
+        "configKeys": ["VVTableEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "table-whitemarble",
+        "outputCodeNew": "wildcrafttree:table-{wood}-whitemarble",
+        "ingredients": [{ "ingredientCode": "table-normal", "Code": "wildcrafttree:table-*-normal", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVTableEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "table-redmarble",
+        "outputCodeNew": "wildcrafttree:table-{wood}-redmarble",
+        "ingredients": [{ "ingredientCode": "table-normal", "Code": "wildcrafttree:table-*-normal", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVTableEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "table-greenmarble",
+        "outputCodeNew": "wildcrafttree:table-{wood}-greenmarble",
+        "ingredients": [{ "ingredientCode": "table-normal", "Code": "wildcrafttree:table-*-normal", "Name": "wood", "SkipVariants": ["oak"] }]
+    }
+]

@@ -8,19 +8,12 @@
         "side": "server"
     },
     {
+        "file": "wildcrafttree:blocktypes/wood/pan.json",
         "op": "add",
-        "path": "/0/enabled",
+        "path": "/enabled",
         "value": false,
-        "file": "vanvar:recipes/grid/pan.json",
         "condition": { "when": "VVWoodenPanEnabled", "isValue": "false" },
-        "side": "Server"
-    },
-    {
-        "op": "add",
-        "path": "/1/enabled",
-        "value": false,
-        "file": "game:recipes/grid/pan.json",
-        "condition": { "when": "VVWoodenPanEnabled", "isValue": "true" },
-        "side": "Server"
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
     }
 ]

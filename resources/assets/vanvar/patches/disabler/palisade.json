@@ -14,5 +14,24 @@
         "value": false,
         "condition": { "when": "VVPalisadeEnabled", "isValue": "false" },
         "side": "server"
+    },
+
+    {
+        "file": "wildcrafttree:blocktypes/wood/palisadestakes.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVPalisadeEnabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
+    },
+    {
+        "file": "wildcrafttree:blocktypes/wood/palisadewall.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVPalisadeEnabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
     }
 ]

@@ -1,0 +1,30 @@
+[
+    {
+        "type": "Replace",
+        "configKeys": ["VVMoldrackEnabled"],
+        "outputCode": "moldrack-normal-east",
+        "ingredients": [{ "ingredientCode": "plank-*", "AllowedVariants": ["oak"] }]
+    },
+    {
+        "type": "Replace",
+        "configKeys": ["VVMoldrackEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "moldrack-normal-east",
+        "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] }]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVMoldrackEnabled"],
+        "outputCode": "moldrack-normal-east",
+        "outputCodeNew": "vanvar:moldrack-{wood}-east",
+        "ingredients": [{ "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVMoldrackEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "moldrack-normal-east",
+        "outputCodeNew": "wildcrafttree:moldrack-{wood}-east",
+        "ingredients": [{ "ingredientCode": "plank-*", "Code": "wildcrafttree:plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
+    }
+]

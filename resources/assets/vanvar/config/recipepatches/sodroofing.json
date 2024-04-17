@@ -1,7 +1,0 @@
-[
-    { "configKeys": ["VVSodRoofingEnabled"], "outputCode": "slantedroofing-sod-*", "ingredientCode": "plank-*", "oldAllowedVariants": ["aged"], "newName": "wood", "newOutputCode": "vanvar:slantedroofing-sod-{wood}-east-free" },
-    { "configKeys": ["VVSodRoofingEnabled"], "outputCode": "slantedroofingridge-sod-*", "ingredientCode": "plank-*", "oldAllowedVariants": ["aged"], "newName": "wood", "newOutputCode": "vanvar:slantedroofingridge-sod-{wood}-ns-free" },
-    { "configKeys": ["VVSodRoofingEnabled"], "outputCode": "slantedroofingtip-sod-*", "ingredientCode": "plank-*", "oldAllowedVariants": ["aged"], "newName": "wood", "newOutputCode": "vanvar:slantedroofingtip-sod-{wood}-free" },
-    { "configKeys": ["VVSodRoofingEnabled"], "outputCode": "slantedroofingcornerinner-sod-*", "ingredientCode": "plank-*", "oldAllowedVariants": ["aged"], "newName": "wood", "newOutputCode": "vanvar:slantedroofingcornerinner-sod-{wood}-east-free" },
-    { "configKeys": ["VVSodRoofingEnabled"], "outputCode": "slantedroofingcornerouter-sod-*", "ingredientCode": "plank-*", "oldAllowedVariants": ["aged"], "newName": "wood", "newOutputCode": "vanvar:slantedroofingcornerouter-sod-{wood}-east-free" }
-]

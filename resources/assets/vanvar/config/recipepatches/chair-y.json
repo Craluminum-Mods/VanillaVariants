@@ -1,0 +1,265 @@
+[
+    {
+        "type": "Copy",
+        "configKeys": ["VVChairEnabled"],
+        "outputCode": "chair-*",
+        "outputCodeNew": "vanvar:chair-{wood}-plain",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "cloth-*", "Name": "color", "AllowedVariants": ["plain"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVChairEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "chair-*",
+        "outputCodeNew": "wildcrafttree:chair-{wood}-plain",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "Code": "wildcrafttree:plank-*", "SkipVariants": ["oak"] },
+            { "ingredientCode": "cloth-*", "Name": "color", "AllowedVariants": ["plain"] }
+        ]
+    },
+
+    {
+        "type": "Copy",
+        "configKeys": ["VVChairEnabled"],
+        "outputCode": "chair-*",
+        "outputCodeNew": "vanvar:chair-{wood}-blue",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "cloth-*", "Name": "color", "AllowedVariants": ["blue"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVChairEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "chair-*",
+        "outputCodeNew": "wildcrafttree:chair-{wood}-blue",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "Code": "wildcrafttree:plank-*", "SkipVariants": ["oak"] },
+            { "ingredientCode": "cloth-*", "Name": "color", "AllowedVariants": ["blue"] }
+        ]
+    },
+
+    {
+        "type": "Copy",
+        "configKeys": ["VVChairEnabled"],
+        "outputCode": "chair-*",
+        "outputCodeNew": "vanvar:chair-{wood}-brown",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "cloth-*", "Name": "color", "AllowedVariants": ["brown"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVChairEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "chair-*",
+        "outputCodeNew": "wildcrafttree:chair-{wood}-brown",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "Code": "wildcrafttree:plank-*", "SkipVariants": ["oak"] },
+            { "ingredientCode": "cloth-*", "Name": "color", "AllowedVariants": ["brown"] }
+        ]
+    },
+
+    {
+        "type": "Copy",
+        "configKeys": ["VVChairEnabled"],
+        "outputCode": "chair-*",
+        "outputCodeNew": "vanvar:chair-{wood}-gray",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "cloth-*", "Name": "color", "AllowedVariants": ["gray"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVChairEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "chair-*",
+        "outputCodeNew": "wildcrafttree:chair-{wood}-gray",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "Code": "wildcrafttree:plank-*", "SkipVariants": ["oak"] },
+            { "ingredientCode": "cloth-*", "Name": "color", "AllowedVariants": ["gray"] }
+        ]
+    },
+
+    {
+        "type": "Copy",
+        "configKeys": ["VVChairEnabled"],
+        "outputCode": "chair-*",
+        "outputCodeNew": "vanvar:chair-{wood}-black",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "cloth-*", "Name": "color", "AllowedVariants": ["black"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVChairEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "chair-*",
+        "outputCodeNew": "wildcrafttree:chair-{wood}-black",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "Code": "wildcrafttree:plank-*", "SkipVariants": ["oak"] },
+            { "ingredientCode": "cloth-*", "Name": "color", "AllowedVariants": ["black"] }
+        ]
+    },
+
+    {
+        "type": "Copy",
+        "configKeys": ["VVChairEnabled"],
+        "outputCode": "chair-*",
+        "outputCodeNew": "vanvar:chair-{wood}-green",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "cloth-*", "Name": "color", "AllowedVariants": ["green"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVChairEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "chair-*",
+        "outputCodeNew": "wildcrafttree:chair-{wood}-green",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "Code": "wildcrafttree:plank-*", "SkipVariants": ["oak"] },
+            { "ingredientCode": "cloth-*", "Name": "color", "AllowedVariants": ["green"] }
+        ]
+    },
+
+    {
+        "type": "Copy",
+        "configKeys": ["VVChairEnabled"],
+        "outputCode": "chair-*",
+        "outputCodeNew": "vanvar:chair-{wood}-orange",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "cloth-*", "Name": "color", "AllowedVariants": ["orange"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVChairEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "chair-*",
+        "outputCodeNew": "wildcrafttree:chair-{wood}-orange",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "Code": "wildcrafttree:plank-*", "SkipVariants": ["oak"] },
+            { "ingredientCode": "cloth-*", "Name": "color", "AllowedVariants": ["orange"] }
+        ]
+    },
+
+    {
+        "type": "Copy",
+        "configKeys": ["VVChairEnabled"],
+        "outputCode": "chair-*",
+        "outputCodeNew": "vanvar:chair-{wood}-pink",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "cloth-*", "Name": "color", "AllowedVariants": ["pink"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVChairEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "chair-*",
+        "outputCodeNew": "wildcrafttree:chair-{wood}-pink",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "Code": "wildcrafttree:plank-*", "SkipVariants": ["oak"] },
+            { "ingredientCode": "cloth-*", "Name": "color", "AllowedVariants": ["pink"] }
+        ]
+    },
+
+    {
+        "type": "Copy",
+        "configKeys": ["VVChairEnabled"],
+        "outputCode": "chair-*",
+        "outputCodeNew": "vanvar:chair-{wood}-purple",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "cloth-*", "Name": "color", "AllowedVariants": ["purple"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVChairEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "chair-*",
+        "outputCodeNew": "wildcrafttree:chair-{wood}-purple",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "Code": "wildcrafttree:plank-*", "SkipVariants": ["oak"] },
+            { "ingredientCode": "cloth-*", "Name": "color", "AllowedVariants": ["purple"] }
+        ]
+    },
+
+    {
+        "type": "Copy",
+        "configKeys": ["VVChairEnabled"],
+        "outputCode": "chair-*",
+        "outputCodeNew": "vanvar:chair-{wood}-red",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "cloth-*", "Name": "color", "AllowedVariants": ["red"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVChairEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "chair-*",
+        "outputCodeNew": "wildcrafttree:chair-{wood}-red",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "Code": "wildcrafttree:plank-*", "SkipVariants": ["oak"] },
+            { "ingredientCode": "cloth-*", "Name": "color", "AllowedVariants": ["red"] }
+        ]
+    },
+
+    {
+        "type": "Copy",
+        "configKeys": ["VVChairEnabled"],
+        "outputCode": "chair-*",
+        "outputCodeNew": "vanvar:chair-{wood}-white",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "cloth-*", "Name": "color", "AllowedVariants": ["white"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVChairEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "chair-*",
+        "outputCodeNew": "wildcrafttree:chair-{wood}-white",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "Code": "wildcrafttree:plank-*", "SkipVariants": ["oak"] },
+            { "ingredientCode": "cloth-*", "Name": "color", "AllowedVariants": ["white"] }
+        ]
+    },
+
+    {
+        "type": "Copy",
+        "configKeys": ["VVChairEnabled"],
+        "outputCode": "chair-*",
+        "outputCodeNew": "vanvar:chair-{wood}-yellow",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "cloth-*", "Name": "color", "AllowedVariants": ["yellow"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVChairEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "chair-*",
+        "outputCodeNew": "wildcrafttree:chair-{wood}-yellow",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "Code": "wildcrafttree:plank-*", "SkipVariants": ["oak"] },
+            { "ingredientCode": "cloth-*", "Name": "color", "AllowedVariants": ["yellow"] }
+        ]
+    }
+]

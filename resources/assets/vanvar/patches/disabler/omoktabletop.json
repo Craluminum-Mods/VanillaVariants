@@ -30,5 +30,51 @@
         "value": false,
         "condition": { "when": "VVOmokTabletopEnabled", "isValue": "false" },
         "side": "server"
+    },
+
+    {
+        "file": "wildcrafttree:blocktypes/wood/omoktabletop.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVOmokTabletopEnabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
+    },
+    {
+        "file": "vanvar:recipes/grid/omoktabletop.json",
+        "op": "add",
+        "path": "/3/enabled",
+        "value": false,
+        "condition": { "when": "VVOmokTabletopEnabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
+    },
+    {
+        "file": "vanvar:recipes/grid/omoktabletop.json",
+        "op": "add",
+        "path": "/4/enabled",
+        "value": false,
+        "condition": { "when": "VVOmokTabletopEnabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
+    },
+    {
+        "file": "vanvar:recipes/grid/omoktabletop.json",
+        "op": "add",
+        "path": "/5/enabled",
+        "value": false,
+        "condition": { "when": "VVOmokTabletopEnabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
+    },
+    {
+        "file": "vanvar:recipes/grid/omoktabletop.json",
+        "op": "add",
+        "path": "/6/enabled",
+        "value": false,
+        "condition": { "when": "VVOmokTabletopEnabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
     }
 ]

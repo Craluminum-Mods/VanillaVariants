@@ -14,5 +14,23 @@
         "value": false,
         "condition": { "when": "VVDisplayCaseEnabled", "isValue": "false" },
         "side": "server"
+    },
+    {
+        "file": "wildcrafttree:blocktypes/wood/displaycase.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVDisplayCaseEnabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
+    },
+    {
+        "file": "wildcrafttree:blocktypes/wood/displaycase-tall.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVDisplayCaseEnabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
     }
 ]

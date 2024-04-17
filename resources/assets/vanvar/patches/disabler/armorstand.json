@@ -14,5 +14,24 @@
         "value": false,
         "condition": { "when": "VVArmorStandEnabled", "isValue": "false" },
         "side": "server"
+    },
+
+    {
+        "file": "wildcrafttree:itemtypes/wood/armorstand.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVArmorStandEnabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
+    },
+    {
+        "file": "wildcrafttree:entities/wood/armorstand.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVArmorStandEnabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
     }
 ]

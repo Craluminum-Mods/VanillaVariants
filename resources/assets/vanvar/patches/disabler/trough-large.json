@@ -36,5 +36,15 @@
         },
         "condition": { "when": "VVTroughLargeEnabled", "isValue": "true" },
         "side": "server"
+    },
+
+    {
+        "file": "wildcrafttree:blocktypes/wood/trough-large.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVTroughLargeEnabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
     }
 ]

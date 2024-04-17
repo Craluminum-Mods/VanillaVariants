@@ -1,10 +1,19 @@
 [
-  {
-    "file": "vanvar:blocktypes/wood/cage.json",
-    "op": "add",
-    "path": "/enabled",
-    "value": false,
-    "condition": { "when": "VVCageEnabled", "isValue": "false" },
-    "side": "server"
-  }
+    {
+        "file": "vanvar:blocktypes/wood/cage.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVCageEnabled", "isValue": "false" },
+        "side": "server"
+    },
+    {
+        "file": "wildcrafttree:blocktypes/wood/cage.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVCageEnabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
+    }
 ]

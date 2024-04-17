@@ -1,0 +1,30 @@
+[
+    {
+        "type": "Replace",
+        "configKeys": ["VVSodRoofingEnabled"],
+        "outputCode": "slantedroofingridge-sod-*",
+        "ingredients": [{ "ingredientCode": "plank-*", "AllowedVariants": ["aged"] }]
+    },
+    {
+        "type": "Replace",
+        "configKeys": ["VVSodRoofingEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "slantedroofingridge-sod-*",
+        "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["aged"] }]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVSodRoofingEnabled"],
+        "outputCode": "slantedroofingridge-sod-*",
+        "outputCodeNew": "vanvar:slantedroofingridge-sod-{wood}-ns-free",
+        "ingredients": [{ "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["aged"] }]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVSodRoofingEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "slantedroofingridge-sod-*",
+        "outputCodeNew": "wildcrafttree:slantedroofingridge-sod-{wood}-ns-free",
+        "ingredients": [{ "ingredientCode": "plank-*", "Code": "wildcrafttree:plank-*", "Name": "wood", "SkipVariants": ["aged"] }]
+    }
+]

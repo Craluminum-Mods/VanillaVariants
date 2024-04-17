@@ -1,12 +1,30 @@
 [
     {
+        "type": "Replace",
         "configKeys": ["VVWoodenPanEnabled"],
         "outputCode": "pan-wooden",
-        "ingredientCode": "log-*",
-        "oldCode": "log-*",
-        "oldAllowedVariants": ["placed-oak-ud"],
-        "newCode": "log-placed-*-ud",
-        "newName": "wood",
-        "newOutputCode": "vanvar:pan-{wood}"
+        "ingredients": [{ "ingredientCode": "log-*", "Code": "log-placed-*-ud", "AllowedVariants": ["oak"] }]
+    },
+    {
+        "type": "Replace",
+        "configKeys": ["VVWoodenPanEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "pan-wooden",
+        "ingredients": [{ "ingredientCode": "wildcrafttree:log-*", "Code": "log-placed-*-ud", "AllowedVariants": ["oak"] }]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVWoodenPanEnabled"],
+        "outputCode": "pan-wooden",
+        "outputCodeNew": "vanvar:pan-{wood}",
+        "ingredients": [{ "ingredientCode": "log-placed-*-ud", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVWoodenPanEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "pan-wooden",
+        "outputCodeNew": "wildcrafttree:pan-{wood}",
+        "ingredients": [{ "ingredientCode": "log-placed-*-ud", "Code": "wildcrafttree:log-placed-*-ud", "Name": "wood", "SkipVariants": ["oak"] }]
     }
 ]

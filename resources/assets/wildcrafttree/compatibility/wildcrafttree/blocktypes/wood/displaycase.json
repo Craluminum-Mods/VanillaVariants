@@ -1,0 +1,59 @@
+{
+    "code": "displaycase",
+    "class": "BlockDisplayCase",
+    "entityClass": "DisplayCase",
+    "behaviors": [
+        {
+            "name": "VanillaVariants.BbName",
+            "properties": {
+                "parts": ["block-displaycase-*", " (", "material-{type}", ")"]
+            }
+        },
+        { "name": "UnstableFalling", "properties": { "fallSound": null, "dustIntensity": 0 } }
+    ],
+    "variantgroups": [{ "code": "type", "loadFromProperties": "wildcrafttree:block/wood" }],
+    "attributes": {
+        "fromVanVarMod": true,
+        "handbook": { "groupBy": ["displaycase-*"] },
+        "height": 0.5
+    },
+    "creativeinventory": {
+        "general": ["*"],
+        "terrain": ["*"],
+        "vanvar": ["*"]
+    },
+    "shape": { "base": "game:block/wood/displaycase/generic" },
+    "textures": {
+        "ebony": { "base": "game:block/wood/debarked/{type}" }
+    },
+    "drawtype": "json",
+    "blockmaterial": "Wood",
+    "replaceable": 600,
+    "resistance": 3,
+    "lightAbsorption": 0,
+    "heldTpIdleAnimation": "holdbothhandslarge",
+    "heldRightReadyAnimation": "heldblockready",
+    "heldTpUseAnimation": "twohandplaceblock",
+    "sounds": {
+        "place": "game:block/planks",
+        "break": "game:block/glass",
+        "hit": "game:block/glass",
+        "walk": "game:walk/glass*"
+    },
+    "collisionSelectionBoxes": [
+        { "x1": 0.0625, "y1": 0, "z1": 0.0625, "x2": 0.5, "y2": 0.625, "z2": 0.5 },
+        { "x1": 0.5, "y1": 0, "z1": 0.0625, "x2": 0.9375, "y2": 0.625, "z2": 0.5 },
+        { "x1": 0.0625, "y1": 0, "z1": 0.5, "x2": 0.5, "y2": 0.625, "z2": 0.9375 },
+        { "x1": 0.5, "y1": 0, "z1": 0.5, "x2": 0.9375, "y2": 0.625, "z2": 0.9375 }
+    ],
+    "sideopaque": { "all": false },
+    "sideao": { "all": true },
+    "emitsideao": { "all": false },
+    "sidesolid": { "all": false },
+    "tpHandTransform": {
+        "translation": { "x": -1.34, "y": -0.39, "z": -0.53 },
+        "rotation": { "x": 8, "y": 14, "z": -81 },
+        "origin": { "x": 0.5, "y": 0.25, "z": 0.5 },
+        "scale": 0.5
+    }
+}

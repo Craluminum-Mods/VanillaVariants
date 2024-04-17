@@ -1,0 +1,82 @@
+{
+    "code": "table",
+    "behaviors": [
+        {
+            "name": "VanillaVariants.BbName",
+            "properties": {
+                "parts": ["block-table-{type}", " (", "material-{material}", ")"]
+            }
+        },
+        { "name": "UnstableFalling" }
+    ],
+    "variantgroups": [
+        { "code": "material", "loadFromProperties": "wildcrafttree:block/wood" },
+        { "code": "type", "states": ["normal", "whitemarble", "redmarble", "greenmarble"] }
+    ],
+    "attributes": {
+        "fromVanVarMod": true,
+        "handbook": { "groupBy": ["table-*-{type}"] },
+        "pieFormingSurface": true
+    },
+    "shape": { "base": "game:block/wood/table" },
+    "heldTpIdleAnimation": "holdunderarm",
+    "creativeinventory": { "general": ["*"], "decorative": ["*"], "vanvar": ["*"] },
+    "blockmaterial": "Wood",
+    "replaceable": 900,
+    "resistance": 1.5,
+    "lightAbsorption": 1,
+    "sidesolid": {
+        "up": true,
+        "all": false
+    },
+    "sideopaque": {
+        "up": true,
+        "all": false
+    },
+    "sounds": {
+        "place": "game:block/planks",
+        "hit": "game:block/planks",
+        "break": "game:block/planks",
+        "walk": "game:walk/wood"
+    },
+    "combustibleProps": {
+        "burnTemperature": 600,
+        "burnDuration": 35
+    },
+    "texturesByType": {
+        "*-whitemarble": {
+            "sides": { "base": "game:block/wood/debarked/{material}", "overlays": ["block/table/sides-{type}"] },
+            "top": { "base": "game:block/stone/polishedrock/{type}-inside" },
+            "bottom": { "base": "game:block/wood/debarked/{material}" },
+            "legs": { "base": "game:block/wood/debarked/{material}", "rotation": 90 }
+        },
+        "*-redmarble": {
+            "sides": { "base": "game:block/wood/debarked/{material}", "overlays": ["block/table/sides-{type}"] },
+            "top": { "base": "game:block/stone/polishedrock/{type}-inside" },
+            "bottom": { "base": "game:block/wood/debarked/{material}" },
+            "legs": { "base": "game:block/wood/debarked/{material}", "rotation": 90 }
+        },
+        "*-greenmarble": {
+            "sides": { "base": "game:block/wood/debarked/{material}", "overlays": ["block/table/sides-{type}"] },
+            "top": { "base": "game:block/stone/polishedrock/{type}-inside" },
+            "bottom": { "base": "game:block/wood/debarked/{material}" },
+            "legs": { "base": "game:block/wood/debarked/{material}", "rotation": 90 }
+        },
+        "*": {
+            "sides": { "base": "game:block/wood/debarked/{material}" },
+            "top": { "base": "game:block/wood/debarked/{material}" },
+            "bottom": { "base": "game:block/wood/debarked/{material}" },
+            "legs": { "base": "game:block/wood/debarked/{material}", "rotation": 90 }
+        }
+    },
+    "materialDensity": 400,
+    "tpHandTransform": {
+        "translation": { "x": -0.7, "y": -0.6, "z": -0.9 },
+        "rotation": { "x": 80, "y": 0, "z": 0 },
+        "scale": 0.56
+    },
+    "fpHandTransform": {
+        "translation": { "x": 0.08, "y": -0.2, "z": 0.6 },
+        "rotation": { "x": 33, "y": 134, "z": -102 }
+    }
+}

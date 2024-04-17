@@ -1,0 +1,30 @@
+[
+    {
+        "type": "Replace",
+        "configKeys": ["VVSodRoofingEnabled"],
+        "outputCode": "slantedroofingcornerouter-sod-*",
+        "ingredients": [{ "ingredientCode": "plank-*", "AllowedVariants": ["aged"] }]
+    },
+    {
+        "type": "Replace",
+        "configKeys": ["VVSodRoofingEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "slantedroofingcornerouter-sod-*",
+        "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["aged"] }]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVSodRoofingEnabled"],
+        "outputCode": "slantedroofingcornerouter-sod-*",
+        "outputCodeNew": "vanvar:slantedroofingcornerouter-sod-{wood}-east-free",
+        "ingredients": [{ "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["aged"] }]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVSodRoofingEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "slantedroofingcornerouter-sod-*",
+        "outputCodeNew": "wildcrafttree:slantedroofingcornerouter-sod-{wood}-east-free",
+        "ingredients": [{ "ingredientCode": "plank-*", "Code": "wildcrafttree:plank-*", "Name": "wood", "SkipVariants": ["aged"] }]
+    }
+]

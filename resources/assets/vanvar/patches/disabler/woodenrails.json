@@ -1,10 +1,19 @@
 [
-  {
-    "file": "vanvar:blocktypes/wood/rails.json",
-    "op": "add",
-    "path": "/enabled",
-    "value": false,
-    "condition": { "when": "VVWoodenRailsEnabled", "isValue": "false" },
-    "side": "server"
-  }
+    {
+        "file": "vanvar:blocktypes/wood/rails.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVWoodenRailsEnabled", "isValue": "false" },
+        "side": "server"
+    },
+    {
+        "file": "wildcrafttree:blocktypes/wood/rails.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVWoodenRailsEnabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
+    }
 ]

@@ -6,5 +6,14 @@
         "value": false,
         "condition": { "when": "VVMoldrackEnabled", "isValue": "false" },
         "side": "server"
+    },
+    {
+        "file": "wildcrafttree:blocktypes/wood/moldrack.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVMoldrackEnabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
     }
 ]

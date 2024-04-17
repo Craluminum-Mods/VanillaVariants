@@ -1,0 +1,99 @@
+{
+    "code": "sign",
+    "creativeinventory": { "general": ["*-ground-north"], "decorative": ["*-ground-north"], "vanvar": ["*-ground-north"] },
+    "class": "BlockSign",
+    "entityclass": "Sign",
+    "behaviors": [
+        {
+            "name": "VanillaVariants.BbName",
+            "properties": {
+                "parts": ["block-sign-ground-*", " (", "material-{type}", ")"]
+            }
+        }
+    ],
+    "attributes": {
+        "fromVanVarMod": true,
+        "handbook": { "groupBy": ["sign-*"] },
+        "maxWidth": 200,
+        "maxHeight": 165,
+        "fontSize": 20,
+        "textVoxelOffsetX": 0,
+        "textVoxelOffsetY": 0,
+        "textVoxelOffsetZ": 0,
+        "textVoxelWidth": 13,
+        "textVoxelHeight": 7
+    },
+    "variantgroups": [
+        { "code": "type", "loadFromProperties": "wildcrafttree:block/wood" },
+        { "code": "attachment", "states": ["ground", "wall"] },
+        { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
+    ],
+    "shapebytype": {
+        "*-ground-north": { "base": "game:block/wood/sign", "rotateY": 0 },
+        "*-ground-east": { "base": "game:block/wood/sign", "rotateY": 270 },
+        "*-ground-south": { "base": "game:block/wood/sign", "rotateY": 180 },
+        "*-ground-west": { "base": "game:block/wood/sign", "rotateY": 90 },
+        "*-wall-north": { "base": "game:block/wood/signwall", "rotateY": 0 },
+        "*-wall-east": { "base": "game:block/wood/signwall", "rotateY": 270 },
+        "*-wall-south": { "base": "game:block/wood/signwall", "rotateY": 180 },
+        "*-wall-west": { "base": "game:block/wood/signwall", "rotateY": 90 }
+    },
+    "textures": {
+        "all": { "base": "game:block/wood/debarked/{type}" }
+    },
+    "blockmaterial": "Wood",
+    "lightAbsorption": 0,
+    "sidesolid": {
+        "all": false
+    },
+    "sideopaque": {
+        "all": false
+    },
+    "faceCullMode": "neverCull",
+    "replaceable": 500,
+    "resistance": 3,
+    "selectionboxbytype": {
+        "*-wall-east": { "rotateY": 270, "x1": 0.0625, "y1": 0.3125, "z1": 0, "x2": 0.9375, "y2": 0.8125, "z2": 0.0625 },
+        "*-wall-south": { "rotateY": 180, "x1": 0.0625, "y1": 0.3125, "z1": 0, "x2": 0.9375, "y2": 0.8125, "z2": 0.0625 },
+        "*-wall-west": { "rotateY": 90, "x1": 0.0625, "y1": 0.3125, "z1": 0, "x2": 0.9375, "y2": 0.8125, "z2": 0.0625 },
+        "*-wall-north": { "rotateY": 0, "x1": 0.0625, "y1": 0.3125, "z1": 0, "x2": 0.9375, "y2": 0.8125, "z2": 0.0625 },
+
+        "*": { "x1": 0.0625, "y1": 0, "z1": 0.4375, "x2": 0.9375, "y2": 0.875, "z2": 0.625, "rotateY": 0 }
+    },
+    "collisionboxbytype": {
+        "*-wall-east": { "rotateY": 270, "x1": 0.0625, "y1": 0.3125, "z1": 0, "x2": 0.9375, "y2": 0.8125, "z2": 0.0625 },
+        "*-wall-south": { "rotateY": 180, "x1": 0.0625, "y1": 0.3125, "z1": 0, "x2": 0.9375, "y2": 0.8125, "z2": 0.0625 },
+        "*-wall-west": { "rotateY": 90, "x1": 0.0625, "y1": 0.3125, "z1": 0, "x2": 0.9375, "y2": 0.8125, "z2": 0.0625 },
+        "*-wall-north": { "rotateY": 0, "x1": 0.0625, "y1": 0.3125, "z1": 0, "x2": 0.9375, "y2": 0.8125, "z2": 0.0625 },
+
+        "*": { "x1": 0.0625, "y1": 0, "z1": 0.4375, "x2": 0.9375, "y2": 0.875, "z2": 0.625, "rotateY": 0 }
+    },
+    "combustibleProps": {
+        "burnTemperature": 600,
+        "burnDuration": 10
+    },
+    "sounds": {
+        "place": "game:block/planks",
+        "hit": "game:block/planks",
+        "break": "game:block/planks",
+        "walk": "game:walk/wood"
+    },
+    "rainPermeable": true,
+    "materialDensity": 600,
+    "tpHandTransform": {
+        "translation": { "x": -0.9, "y": 0.1, "z": -0.9 },
+        "rotation": { "x": 0, "y": 0, "z": -89 },
+        "origin": { "x": 0.5, "y": 0, "z": 0.5 },
+        "scale": 0.52
+    },
+    "groundTransform": {
+        "translation": { "x": 0, "y": 0, "z": 0 },
+        "rotation": { "x": -90, "y": 0, "z": -7 },
+        "origin": { "x": 0.5, "y": 0, "z": 0.5 },
+        "scale": 3
+    },
+    "guiTransform": {
+        "rotation": { "x": -22.6, "y": 135, "z": 0 },
+        "scale": 1.72
+    }
+}

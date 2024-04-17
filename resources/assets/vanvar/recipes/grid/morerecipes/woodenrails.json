@@ -1,14 +1,22 @@
-{
-    "ingredientPattern": "PSP,P_P,PSP",
-    "ingredients": {
-        "P": { "type": "item", "code": "game:plank-*", "name": "wood", "skipVariants": ["oak"] },
-        "S": { "type": "item", "code": "game:stick" }
+[
+    {
+        "ingredientPattern": "PSP,P_P,PSP",
+        "ingredients": {
+            "P": { "type": "item", "code": "game:plank-*", "name": "wood", "skipVariants": ["oak"] },
+            "S": { "type": "item", "code": "game:stick" }
+        },
+        "width": 3,
+        "height": 3,
+        "output": { "type": "block", "code": "vanvar:woodenrails-{wood}-flat_ns", "quantity": 8 }
     },
-    "width": 3,
-    "height": 3,
-    "output": {
-        "type": "block",
-        "code": "vanvar:woodenrails-{wood}-flat_ns",
-        "quantity": 8
+    {
+        "ingredientPattern": "PSP,P_P,PSP",
+        "ingredients": {
+            "P": { "type": "item", "code": "wildcrafttree:plank-*", "name": "wood" },
+            "S": { "type": "item", "code": "game:stick" }
+        },
+        "width": 3,
+        "height": 3,
+        "output": { "type": "block", "code": "wildcrafttree:woodenrails-{wood}-flat_ns", "quantity": 8 }
     }
-}
+]

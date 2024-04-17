@@ -1,10 +1,19 @@
 [
-  {
-    "file": "vanvar:blocktypes/wood/wagonwheels.json",
-    "op": "add",
-    "path": "/enabled",
-    "value": false,
-    "condition": { "when": "VVWagonWheelsEnabled", "isValue": "false" },
-    "side": "server"
-  }
+    {
+        "file": "vanvar:blocktypes/wood/wagonwheels.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVWagonWheelsEnabled", "isValue": "false" },
+        "side": "server"
+    },
+    {
+        "file": "wildcrafttree:blocktypes/wood/wagonwheels.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVWagonWheelsEnabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
+    }
 ]

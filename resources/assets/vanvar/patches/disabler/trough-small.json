@@ -36,5 +36,15 @@
         },
         "condition": { "when": "VVTroughSmallEnabled", "isValue": "true" },
         "side": "server"
+    },
+
+    {
+        "file": "wildcrafttree:blocktypes/wood/trough-small.json",
+        "op": "add",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVTroughSmallEnabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
     }
 ]

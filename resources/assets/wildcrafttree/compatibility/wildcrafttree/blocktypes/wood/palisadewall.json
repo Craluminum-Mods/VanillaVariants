@@ -1,0 +1,132 @@
+{
+    "code": "palisadewall",
+    "behaviors": [
+        {
+            "name": "VanillaVariants.BbName",
+            "properties": {
+                "parts": ["block-palisadewall-*", " (", "material-{material}", ")"]
+            }
+        },
+        { "name": "HorizontalOrientable", "properties": { "dropBlockFace": "west" } }
+    ],
+    "variantgroups": [
+        { "code": "material", "loadFromProperties": "wildcrafttree:block/wood" },
+        { "code": "logs", "states": ["four", "three"] },
+        { "code": "type", "states": ["top", "lower", "halftop"] },
+        { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
+    ],
+    "attributes": {
+        "fromVanVarMod": true,
+        "handbook": { "groupBy": ["palisadewall-*-{logs}-{type}-*"] }
+    },
+    "creativeinventory": {
+        "general": ["*-west"],
+        "decorative": ["*-west"],
+        "vanvar": ["*-west"]
+    },
+    "blockmaterial": "Wood",
+    "drawtype": "json",
+    "shapebytype": {
+        "*-four-top-west": { "base": "game:block/wood/fence/palisade/palisadewalltop01", "rotateY": 0 },
+        "*-four-top-east": { "base": "game:block/wood/fence/palisade/palisadewalltop01", "rotateY": 180 },
+        "*-four-top-south": { "base": "game:block/wood/fence/palisade/palisadewalltop01", "rotateY": 90 },
+        "*-four-top-north": { "base": "game:block/wood/fence/palisade/palisadewalltop01", "rotateY": 270 },
+
+        "*-four-halftop-west": { "base": "game:block/wood/fence/palisade/palisadewallhalftop01", "rotateY": 0 },
+        "*-four-halftop-east": { "base": "game:block/wood/fence/palisade/palisadewallhalftop01", "rotateY": 180 },
+        "*-four-halftop-south": { "base": "game:block/wood/fence/palisade/palisadewallhalftop01", "rotateY": 90 },
+        "*-four-halftop-north": { "base": "game:block/wood/fence/palisade/palisadewallhalftop01", "rotateY": 270 },
+
+        "*-four-lower-west": { "base": "game:block/wood/fence/palisade/palisadewall01", "rotateY": 0 },
+        "*-four-lower-east": { "base": "game:block/wood/fence/palisade/palisadewall01", "rotateY": 180 },
+        "*-four-lower-south": { "base": "game:block/wood/fence/palisade/palisadewall01", "rotateY": 90 },
+        "*-four-lower-north": { "base": "game:block/wood/fence/palisade/palisadewall01", "rotateY": 270 },
+
+        "*-three-top-west": { "base": "game:block/wood/fence/palisade/palisadewalltop02", "rotateY": 0 },
+        "*-three-top-east": { "base": "game:block/wood/fence/palisade/palisadewalltop02", "rotateY": 180 },
+        "*-three-top-south": { "base": "game:block/wood/fence/palisade/palisadewalltop02", "rotateY": 90 },
+        "*-three-top-north": { "base": "game:block/wood/fence/palisade/palisadewalltop02", "rotateY": 270 },
+
+        "*-three-halftop-west": { "base": "game:block/wood/fence/palisade/palisadewallhalftop02", "rotateY": 0 },
+        "*-three-halftop-east": { "base": "game:block/wood/fence/palisade/palisadewallhalftop02", "rotateY": 180 },
+        "*-three-halftop-south": { "base": "game:block/wood/fence/palisade/palisadewallhalftop02", "rotateY": 90 },
+        "*-three-halftop-north": { "base": "game:block/wood/fence/palisade/palisadewallhalftop02", "rotateY": 270 },
+
+        "*-three-lower-west": { "base": "game:block/wood/fence/palisade/palisadewall02", "rotateY": 0 },
+        "*-three-lower-east": { "base": "game:block/wood/fence/palisade/palisadewall02", "rotateY": 180 },
+        "*-three-lower-south": { "base": "game:block/wood/fence/palisade/palisadewall02", "rotateY": 90 },
+        "*-three-lower-north": { "base": "game:block/wood/fence/palisade/palisadewall02", "rotateY": 270 }
+    },
+    "textures": {
+        "aged": { "base": "wildcrafttree:block/wood/bark/{material}" },
+        "oak2": { "base": "game:block/wood/debarked/{material}" }
+    },
+    "resistance": 1.2,
+    "lightAbsorption": 0,
+    "faceCullMode": "NeverCull",
+    "sidesolid": {
+        "all": false
+    },
+    "sideopaque": {
+        "all": false
+    },
+    "sounds": {
+        "place": "game:block/planks",
+        "hit": "game:block/planks",
+        "break": "game:block/planks",
+        "walk": "game:walk/wood"
+    },
+    "combustibleProps": {
+        "burnTemperature": 600,
+        "burnDuration": 20
+    },
+    "materialDensity": 600,
+    "selectionbox": {
+        "x1": 0,
+        "y1": 0,
+        "z1": 0,
+        "x2": 0.25,
+        "y2": 1,
+        "z2": 1,
+        "rotateYByType": {
+            "*-west": 0,
+            "*-south": 90,
+            "*-east": 180,
+            "*-north": 270
+        }
+    },
+    "collisionbox": {
+        "x1": 0,
+        "y1": 0,
+        "z1": 0,
+        "x2": 0.25,
+        "y2": 1,
+        "z2": 1,
+        "rotateYByType": {
+            "*-west": 0,
+            "*-south": 90,
+            "*-east": 180,
+            "*-north": 270
+        }
+    },
+    "fpHandTransform": {
+        "rotation": { "x": 0, "y": 49, "z": 0 }
+    },
+    "guiTransform": {
+        "rotation": { "x": -22.6, "y": 107, "z": 0 },
+        "origin": { "x": 0.1, "y": 0.6, "z": 0.5 },
+        "scale": 1.3
+    },
+    "groundTransform": {
+        "translation": { "x": 0, "y": 0, "z": 0 },
+        "rotation": { "x": 0, "y": -1, "z": 0 },
+        "origin": { "x": 0.5, "y": 0, "z": 0.5 },
+        "scale": 2.5
+    },
+    "tpHandTransform": {
+        "translation": { "x": -0.8, "y": -1.2, "z": -0.7 },
+        "rotation": { "x": -12, "y": -48, "z": -35 },
+        "origin": { "x": 0.1, "y": 1.1, "z": 0.2 },
+        "scale": 0.48
+    }
+}

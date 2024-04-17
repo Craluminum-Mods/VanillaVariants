@@ -1,0 +1,30 @@
+[
+    {
+        "type": "Replace",
+        "configKeys": ["VVTrapdoorEnabled"],
+        "outputCode": "trapdoor-closed-up-north",
+        "ingredients": [{ "ingredientCode": "plank-*", "AllowedVariants": ["oak"] }]
+    },
+    {
+        "type": "Replace",
+        "configKeys": ["VVTrapdoorEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "trapdoor-closed-up-north",
+        "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] }]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVTrapdoorEnabled"],
+        "outputCode": "trapdoor-closed-up-north",
+        "outputCodeNew": "vanvar:trapdoor-{wood}-closed-up-north",
+        "ingredients": [{ "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVTrapdoorEnabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "trapdoor-closed-up-north",
+        "outputCodeNew": "wildcrafttree:trapdoor-{wood}-closed-up-north",
+        "ingredients": [{ "ingredientCode": "plank-*", "Code": "wildcrafttree:plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
+    }
+]
