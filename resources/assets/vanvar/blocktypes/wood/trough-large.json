@@ -46,6 +46,7 @@
         "charred": { "base": "game:block/wood/debarked/{material}" },
         "aged": { "base": "game:block/wood/debarked/{material}" },
         "bottom-inside": { "base": "game:block/wood/debarked/{material}" }
+        // billion other textures are added by code
     },
     "blockmaterial": "Wood",
     "replaceable": 550,
