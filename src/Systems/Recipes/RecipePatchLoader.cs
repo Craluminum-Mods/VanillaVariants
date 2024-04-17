@@ -63,7 +63,7 @@ public class RecipePatchLoader : ModSystem
                 }
             case EnumRecipePatchType.Copy:
                 {
-                    newRecipe.RecipeGroup = 1;
+                    newRecipe.RecipeGroup = recipe.RecipeGroup;
                     bool any = false;
                     foreach (IngredientPatch ingredPatch in patch.Ingredients)
                     {
@@ -85,7 +85,7 @@ public class RecipePatchLoader : ModSystem
                 }
             case EnumRecipePatchType.CopyReplaceIngredients:
                 {
-                    newRecipe.RecipeGroup = 1;
+                    newRecipe.RecipeGroup = recipe.RecipeGroup;
                     bool any = false;
                     foreach (IngredientPatch ingredPatch in patch.Ingredients)
                     {
