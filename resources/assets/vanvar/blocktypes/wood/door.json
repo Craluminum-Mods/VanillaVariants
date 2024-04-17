@@ -21,7 +21,7 @@
     ],
     "skipVariants": ["*-oak"],
     "attributes": {
-        "handbook": { "groupBy": ["door-{material}-*"] },
+        "handbook": { "groupBy": ["door-crude-*"] },
         "airtight": false,
         "width": 1,
         "height": 2,
