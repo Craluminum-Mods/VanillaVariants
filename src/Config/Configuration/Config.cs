@@ -15,6 +15,7 @@ public class Config
     public bool CrudeDoor { get; set; } = true;
     public bool DecorativeQuern { get; set; } = true;
     public bool DisplayCase { get; set; } = true;
+    public bool Firewood { get; set; } = true;
     public bool Forge { get; set; } = true;
     public bool Henbox { get; set; } = true;
     public bool Ladder { get; set; } = true;
@@ -56,6 +57,7 @@ public class Config
         CrudeDoor = previousConfig.CrudeDoor;
         DecorativeQuern = previousConfig.DecorativeQuern;
         DisplayCase = previousConfig.DisplayCase;
+        Firewood = previousConfig.Firewood;
         Forge = previousConfig.Forge;
         Henbox = previousConfig.Henbox;
         Ladder = previousConfig.Ladder;

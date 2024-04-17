@@ -1,0 +1,19 @@
+[
+    {
+        "file": "vanvar:itemtypes/wood/firewood.json",
+        "op": "addmerge",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VanillaVariants_Firewood_Enabled", "isValue": "false" },
+        "side": "server"
+    },
+    {
+        "file": "wildcrafttree:itemtypes/wood/firewood.json",
+        "op": "addmerge",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VanillaVariants_Firewood_Enabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
+    }
+]

@@ -1,0 +1,43 @@
+[
+    {
+        "type": "Copy",
+        "configKeys": ["VanillaVariants_Firewood_Enabled"],
+        "outputCode": "firewood",
+        "outputCodeNew": "vanvar:firewood-{wood}",
+        "ChangeQuantity": true,
+        "QuantityNew": 3,
+        "RecipeGroup": 3,
+        "ingredients": [{ "ingredientCode": "log-placed-*-ud", "Name": "wood", "AllowedVariants": ["kapok", "purpleheart", "ebony"] }]
+    },
+
+    {
+        "type": "Copy",
+        "configKeys": ["VanillaVariants_Firewood_Enabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "firewood",
+        "outputCodeNew": "wildcrafttree:firewood-{wood}",
+        "ChangeQuantity": true,
+        "QuantityNew": 3,
+        "RecipeGroup": 3,
+        "ingredients": [
+            {
+                "ingredientCode": "log-*",
+                "Code": "wildcrafttree:log-placed-*-ud",
+                "Name": "wood",
+                "AllowedVariants": [
+                    //
+                    "catalpa",
+                    "jacaranda",
+                    "banyan",
+                    "empresstree",
+                    "guajacum",
+                    "umnini",
+                    "willow",
+                    "bluemahoe",
+                    "sal",
+                    "satinash"
+                ]
+            }
+        ]
+    }
+]

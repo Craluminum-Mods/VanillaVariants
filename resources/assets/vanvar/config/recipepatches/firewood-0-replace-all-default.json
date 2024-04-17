@@ -1,0 +1,23 @@
+[
+    {
+        // replace default firewood recipes
+        "type": "Replace",
+        "configKeys": ["VanillaVariants_Firewood_Enabled"],
+        "outputCode": "firewood",
+        "ChangeQuantity": true,
+        "QuantityNew": 4,
+        "RecipeGroup": 0,
+        "ingredients": [{ "ingredientCode": "log*", "Code": "log-placed-*-ud", "AllowedVariants": ["oak"] }]
+    },
+    {
+        // replace default firewood recipes
+        "type": "Replace",
+        "configKeys": ["VanillaVariants_Firewood_Enabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "firewood",
+        "ChangeQuantity": true,
+        "QuantityNew": 4,
+        "RecipeGroup": 0,
+        "ingredients": [{ "ingredientCode": "wildcrafttree:log*", "Code": "log-placed-*-ud", "AllowedVariants": ["oak"] }]
+    }
+]

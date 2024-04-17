@@ -1,0 +1,13 @@
+[
+    {
+        "type": "CopyReplaceIngredients",
+        "configKeys": ["VanillaVariants_Firewood_Enabled"],
+        "ingredients": [{ "ingredientCode": "firewood", "Code": "vanvar:firewood-*", "SkipVariants": ["aged"] }]
+    },
+    {
+        "type": "CopyReplaceIngredients",
+        "configKeys": ["VanillaVariants_Firewood_Enabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "ingredients": [{ "ingredientCode": "firewood", "Code": "wildcrafttree:firewood-*", "SkipVariants": ["aged"] }]
+    }
+]

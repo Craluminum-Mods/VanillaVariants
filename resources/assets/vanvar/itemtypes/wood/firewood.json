@@ -1,0 +1,72 @@
+{
+    "code": "firewood",
+    "class": "ItemFirewood",
+    "maxstacksize": 32,
+    "behaviors": [
+        {
+            "name": "VanillaVariants.CbName",
+            "properties": {
+                "parts": ["item-firewood", " (", "material-{wood}", ")"]
+            }
+        },
+        {
+            "name": "GroundStorable",
+            "properties": {
+                "layout": "Stacking",
+                "placeRemoveSound": "game:block/planks",
+                "stackingModel": "game:block/wood/firewoodpile",
+                "modelItemsToStackSizeRatio": 0.5,
+                "upSolid": true,
+                "stackingCapacity": 32,
+                "transferQuantity": 2,
+                "bulkTransferQuantity": 8,
+                "collisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 },
+                "cbScaleYByLayer": 0.125
+            }
+        }
+    ],
+    "variantGroups": [{ "code": "wood", "loadFromProperties": "block/wood" }],
+    "skipVariants": ["*-oak"],
+    "attributes": {
+        "firepitConstructable": true,
+        "isClayOvenFuel": true,
+        "placeSound": "game:block/planks"
+    },
+    "shape": { "base": "game:item/firewood" },
+    "textures": {
+        "side": { "base": "game:block/wood/debarked/{wood}" },
+        "south": { "base": "game:block/wood/treetrunk/{wood}" },
+        "bark": { "base": "game:block/wood/bark/{wood}-h" },
+        "north": { "base": "game:block/wood/treetrunk/{wood}" }
+    },
+    "creativeinventory": {
+        "general": ["*"],
+        "items": ["*"],
+        "vanvar": ["*"]
+    },
+    "guiTransform": {
+        "translation": { "x": 3, "y": 0, "z": 0 },
+        "rotation": { "x": -22.5, "y": -44.6875, "z": 90 },
+        "origin": { "x": 0.43, "y": 0.43, "z": 0.5 },
+        "scale": 1.45
+    },
+    "combustibleProps": {
+        "burnTemperature": 700,
+        "burnDuration": 24
+    },
+    "materialDensity": 700,
+    "fpHandTransform": {
+        "translation": { "x": 0.046875, "y": -0.34375, "z": 0 },
+        "rotation": { "x": 4, "y": 15, "z": 0 }
+    },
+    "groundTransform": {
+        "translation": { "x": 0, "y": 0, "z": 0 },
+        "rotation": { "x": 0, "y": 0, "z": 0 },
+        "origin": { "x": 0.5, "y": 0.37, "z": 0.5 },
+        "scale": 4
+    },
+    "tpHandTransform": {
+        "translation": { "x": -1.1, "y": -1, "z": -0.8 },
+        "scale": 0.5
+    }
+}

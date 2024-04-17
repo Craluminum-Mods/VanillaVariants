@@ -1,0 +1,24 @@
+[
+    {
+        "type": "Copy",
+        "configKeys": ["VanillaVariants_Firewood_Enabled"],
+        "outputCode": "firewood",
+        "outputCodeNew": "vanvar:firewood-{wood}",
+        "ChangeQuantity": true,
+        "QuantityNew": 4,
+        "RecipeGroup": 5,
+        "ingredients": [{ "ingredientCode": "log-*", "Code": "logsection-placed-*-ne-ud", "Name": "wood" }]
+    },
+
+    {
+        "type": "Copy",
+        "configKeys": ["VanillaVariants_Firewood_Enabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "firewood",
+        "outputCodeNew": "wildcrafttree:firewood-{wood}",
+        "ChangeQuantity": true,
+        "QuantityNew": 4,
+        "RecipeGroup": 5,
+        "ingredients": [{ "ingredientCode": "log-*", "Code": "wildcrafttree:logsection-placed-*-ne-ud", "Name": "wood" }]
+    }
+]

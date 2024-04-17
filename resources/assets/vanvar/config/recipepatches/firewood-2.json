@@ -1,0 +1,22 @@
+[
+    {
+        "type": "Copy",
+        "configKeys": ["VanillaVariants_Firewood_Enabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "firewood",
+        // there are no such variants for this item
+        // "outputCodeNew": "wildcrafttree:firewood-{wood}",
+        "outputCodeNew": "firewood",
+        "ChangeQuantity": true,
+        "QuantityNew": 2,
+        "RecipeGroup": 2,
+        "ingredients": [
+            {
+                "ingredientCode": "log-*",
+                "Code": "wildcrafttree:lognarrow-placed-*-ud",
+                "Name": "wood",
+                "AllowedVariants": ["sourwood", "thinbearnut", "thinlarch", "thinbirch", "thinwillow", "redwillow", "alder", "brideinwhite", "thinmahoe", "wiliwili"]
+            }
+        ]
+    }
+]

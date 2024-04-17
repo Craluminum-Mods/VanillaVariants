@@ -41,6 +41,7 @@ static class ModConfig
         api.World.Config.SetBool("VanillaVariants_CrudeDoor_Enabled", config.CrudeDoor);
         api.World.Config.SetBool("VanillaVariants_DecorativeQuern_Enabled", config.DecorativeQuern);
         api.World.Config.SetBool("VanillaVariants_DisplayCase_Enabled", config.DisplayCase);
+        api.World.Config.SetBool("VanillaVariants_Firewood_Enabled", config.Firewood);
         api.World.Config.SetBool("VanillaVariants_Forge_Enabled", config.Forge);
         api.World.Config.SetBool("VanillaVariants_Henbox_Enabled", config.Henbox);
         api.World.Config.SetBool("VanillaVariants_Ladder_Enabled", config.Ladder);
