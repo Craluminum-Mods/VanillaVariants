@@ -1,5 +1,7 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using System.Collections.Generic;
+using Newtonsoft.Json.Linq;
 using VanillaVariants.Configuration;
+using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Util;
 using Vintagestory.GameContent;
@@ -30,8 +32,8 @@ public class Core : ModSystem
     private static void ApplyPatches(ICoreAPI api)
     {
         GetDefaultPanAttributes(api, out object panningDrops);
-        GetDefaultLargeTroughAttributes(api, out object largeContentConfig, out object largeUnsuitableFor);
-        GetDefaultSmallTroughAttributes(api, out object smallContentConfig, out object smallUnsuitableFor);
+        GetDefaultLargeTroughAttributes(api, out object largeContentConfig, out object largeUnsuitableFor, out IDictionary<string, CompositeTexture> largeTroughTextures);
+        GetDefaultSmallTroughAttributes(api, out object smallContentConfig, out object smallUnsuitableFor, out IDictionary<string, CompositeTexture> smallTroughTextures);
 
         foreach (Block block in api.World.Blocks)
         {
@@ -44,16 +46,40 @@ public class Core : ModSystem
             switch (block)
             {
                 case BlockPan:
-                    block.Attributes.Token["panningDrops"] = JToken.FromObject(panningDrops);
-                    break;
+                    {
+                        block.Attributes.Token["panningDrops"] = JToken.FromObject(panningDrops);
+                        break;
+                    }
                 case BlockTroughDoubleBlock:
-                    if (largeContentConfig != null) block.Attributes.Token["contentConfig"] = JToken.FromObject(largeContentConfig);
-                    if (largeUnsuitableFor != null) block.Attributes.Token["unsuitableFor"] = JToken.FromObject(largeUnsuitableFor);
-                    break;
+                    {
+                        if (largeContentConfig != null) block.Attributes.Token["contentConfig"] = JToken.FromObject(largeContentConfig);
+                        if (largeUnsuitableFor != null) block.Attributes.Token["unsuitableFor"] = JToken.FromObject(largeUnsuitableFor);
+
+                        foreach ((string key, CompositeTexture val) in largeTroughTextures)
+                        {
+                            if (!block.Textures.ContainsKey(key))
+                            {
+                                block.Textures.Add(key, val);
+                            }
+                        }
+
+                        break;
+                    }
                 case BlockTrough when block.Code.ToString().Contains("small"):
-                    if (smallContentConfig != null) block.Attributes.Token["contentConfig"] = JToken.FromObject(smallContentConfig);
-                    if (smallUnsuitableFor != null) block.Attributes.Token["unsuitableFor"] = JToken.FromObject(smallUnsuitableFor);
-                    break;
+                    {
+                        if (smallContentConfig != null) block.Attributes.Token["contentConfig"] = JToken.FromObject(smallContentConfig);
+                        if (smallUnsuitableFor != null) block.Attributes.Token["unsuitableFor"] = JToken.FromObject(smallUnsuitableFor);
+
+                        foreach ((string key, CompositeTexture val) in smallTroughTextures)
+                        {
+                            if (!block.Textures.ContainsKey(key))
+                            {
+                                block.Textures.Add(key, val);
+                            }
+                        }
+
+                        break;
+                    }
             }
 
             if (api.Side.IsServer() && isFromMod)
@@ -78,17 +104,19 @@ public class Core : ModSystem
         panningDrops = block?.Attributes?["panningDrops"]?.AsObject<object>();
     }
 
-    private static void GetDefaultLargeTroughAttributes(ICoreAPI api, out object largeContentConfig, out object largeUnsuitableFor)
+    private static void GetDefaultLargeTroughAttributes(ICoreAPI api, out object largeContentConfig, out object largeUnsuitableFor, out IDictionary<string, CompositeTexture> textures)
     {
         Block block = api.World.GetBlock(new AssetLocation("trough-genericwood-large-head-north"));
         largeContentConfig = block?.Attributes?["contentConfig"]?.AsObject<object>();
         largeUnsuitableFor = block?.Attributes?["unsuitableFor"]?.AsObject<object>();
+        textures = block.Textures;
     }
 
-    private static void GetDefaultSmallTroughAttributes(ICoreAPI api, out object smallContentConfig, out object smallUnsuitableFor)
+    private static void GetDefaultSmallTroughAttributes(ICoreAPI api, out object smallContentConfig, out object smallUnsuitableFor, out IDictionary<string, CompositeTexture> textures)
     {
         Block block = api.World.GetBlock(new AssetLocation("trough-genericwood-small-ns"));
         smallContentConfig = block?.Attributes?["contentConfig"]?.AsObject<object>();
         smallUnsuitableFor = block?.Attributes?["unsuitableFor"]?.AsObject<object>();
+        textures = block.Textures;
     }
 }

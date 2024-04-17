@@ -35,38 +35,9 @@
         "*-we": { "base": "game:block/wood/trough/small/empty", "rotateY": 90 }
     },
     "textures": {
+        "charred": { "base": "game:block/wood/debarked/{material}" },
         "aged": { "base": "game:block/wood/debarked/{material}" },
-        "wood": { "base": "game:block/wood/debarked/{material}" },
-        "contents-flax": {
-            "base": "game:block/food/grain/flax",
-            "overlays": ["game:block/wood/trough/small/shadow"]
-        },
-        "contents-rice": {
-            "base": "game:block/food/grain/rice",
-            "overlays": ["game:block/wood/trough/small/shadow"]
-        },
-        "contents-rye": {
-            "base": "game:block/food/grain/rye",
-            "overlays": ["game:block/wood/trough/small/shadow"]
-        },
-        "contents-spelt": {
-            "base": "game:block/food/grain/spelt",
-            "overlays": ["game:block/wood/trough/small/shadow"]
-        },
-        "contents-amaranth": {
-            "base": "game:block/food/grain/amaranth",
-            "overlays": ["game:block/wood/trough/small/shadow"]
-        },
-        "contents-sunflower": {
-            "base": "game:block/food/grain/sunflower",
-            "overlays": ["game:block/wood/trough/small/shadow"]
-        },
-        "normal-side": { "base": "game:block/hay/normal-side" },
-        "normal-top": { "base": "game:block/hay/normal-top" },
-
-        "rotoverlay": { "base": "game:item/resource/rot/rotoverlay" },
-        "rot": { "base": "game:item/resource/rot/rot-solids" },
-        "fuzz": { "base": "game:item/resource/rot/rot-fringe" }
+        "wood": { "base": "game:block/wood/debarked/{material}" }
     },
     "blockmaterial": "Wood",
     "replaceable": 550,
