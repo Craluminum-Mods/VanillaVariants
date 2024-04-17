@@ -4,13 +4,17 @@
     "entityClass": "Forge",
     "variantgroups": [{ "code": "rock", "loadFromProperties": "block/rockwithdeposit" }],
     "skipVariants": ["*-halite", "*-granite"],
-    "shape": {
-        "base": "game:block/stone/forge/forge"
-    },
+    "shape": { "base": "game:block/stone/forge/forge" },
     "textures": {
-        "coal": { "base": "game:block/coal/bituminous" },
+        "coal": {
+            "base": "game:block/stone/rock/{rock}1",
+            "blendedOverlays": [{ "base": "vanvar:block/forge/coal-dust-overlay", "blendMode": "normal" }]
+        },
         "ember": { "base": "game:block/coal/ember" },
-        "forge": { "base": "game:block/stone/cobblestone/{rock}1" }
+        "forge": {
+            "base": "game:block/stone/rock/{rock}1",
+            "blendedOverlays": [{ "base": "vanvar:block/forge/forge-overlay", "blendMode": "Normal" }]
+        }
     },
     "behaviors": [
         {
