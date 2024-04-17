@@ -1,0 +1,26 @@
+[
+    {
+        "file": "vanvar:blocktypes/stone/stonepath.json",
+        "op": "addmerge",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVStonePathEnabled", "isValue": "false" },
+        "side": "server"
+    },
+    {
+        "file": "vanvar:blocktypes/stone/stonepathslab.json",
+        "op": "addmerge",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVStonePathEnabled", "isValue": "false" },
+        "side": "server"
+    },
+    {
+        "file": "vanvar:blocktypes/stone/stonepathstairs.json",
+        "op": "addmerge",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VVStonePathEnabled", "isValue": "false" },
+        "side": "server"
+    }
+]

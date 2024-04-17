@@ -1,0 +1,118 @@
+{
+    "code": "stonepathstairs",
+    "class": "BlockStairs",
+    "attributes": {
+        "handbook": { "groupBy": ["stonepathstairs-*"] },
+        "mapColorCode": "road",
+        "noDownVariant": true,
+        "liquidBarrierOnSidesByType": {
+            "*-up-north-*": [1.0, 0.5, 0.5, 0.5],
+            "*-up-south-*": [0.5, 0.5, 1.0, 0.5],
+            "*-up-west-*": [0.5, 0.5, 0.5, 1.0],
+            "*-up-east-*": [0.5, 1.0, 0.5, 0.5]
+        }
+    },
+    "behaviors": [
+        {
+            "name": "VanillaVariants.BbName",
+            "properties": {
+                "parts": ["block-stonepathstairs-up-*", " (", "rock-{rock}", ")"]
+            }
+        },
+        { "name": "WrenchOrientable", "properties": { "baseCode": "stonepathstairs-*-up-*-{cover}" } }
+    ],
+    "variantgroups": [
+        { "code": "rock", "loadFromProperties": "block/rockwithdeposit" },
+        { "code": "updown", "states": ["up"] },
+        { "loadFromProperties": "abstract/horizontalorientation" },
+        { "code": "cover", "states": ["free", "snow"] }
+        //
+    ],
+    "creativeinventory": { "general": ["*-up-north-free"], "construction": ["*-up-north-free"] },
+    "sidesolidByType": {
+        "*-up-north-*": { "all": false, "down": true, "north": true },
+        "*-up-west-*": { "all": false, "down": true, "west": true },
+        "*-up-south-*": { "all": false, "down": true, "south": true },
+        "*-up-east-*": { "all": false, "down": true, "east": true }
+    },
+    "sideopaque": { "all": false, "down": true },
+    "shapebytype": {
+        "*-up-north-free": { "base": "game:block/basic/stairs/normal", "rotateY": 0 },
+        "*-up-west-free": { "base": "game:block/basic/stairs/normal", "rotateY": 90 },
+        "*-up-south-free": { "base": "game:block/basic/stairs/normal", "rotateY": 180 },
+        "*-up-east-free": { "base": "game:block/basic/stairs/normal", "rotateY": 270 },
+        "*-up-north-snow": { "base": "game:block/basic/stairs/snow-normal", "rotateY": 0 },
+        "*-up-west-snow": { "base": "game:block/basic/stairs/snow-normal", "rotateY": 90 },
+        "*-up-south-snow": { "base": "game:block/basic/stairs/snow-normal", "rotateY": 180 },
+        "*-up-east-snow": { "base": "game:block/basic/stairs/snow-normal", "rotateY": 270 }
+    },
+    "faceCullMode": "NeverCull",
+    "blockmaterial": "Gravel",
+    "textures": {
+        "sides": {
+            "base": "game:block/stone/path/normal1",
+            "alternates": [
+                { "base": "game:block/stone/path/normal2", "blendedOverlays": [{ "base": "game:block/stone/rock/{rock}1", "blendMode": "Overlay" }] },
+                { "base": "game:block/stone/path/normal3", "blendedOverlays": [{ "base": "game:block/stone/rock/{rock}1", "blendMode": "Overlay" }] },
+                { "base": "game:block/stone/path/normal4", "blendedOverlays": [{ "base": "game:block/stone/rock/{rock}1", "blendMode": "Overlay" }] },
+                { "base": "game:block/stone/path/normal5", "blendedOverlays": [{ "base": "game:block/stone/rock/{rock}1", "blendMode": "Overlay" }] },
+                { "base": "game:block/stone/path/normal6", "blendedOverlays": [{ "base": "game:block/stone/rock/{rock}1", "blendMode": "Overlay" }] }
+            ],
+            "blendedOverlays": [{ "base": "game:block/stone/rock/{rock}1", "blendMode": "Overlay" }]
+        }
+    },
+    "replaceable": 900,
+    "resistance": 2.4,
+    "emitSideAo": { "all": true },
+    "walkspeedmultiplier": 1.2,
+    "collisionSelectionBoxesByType": {
+        "*-down-*": [
+            { "x1": 0, "y1": 0.5, "z1": 0, "x2": 1, "y2": 1, "z2": 1 },
+            {
+                "x1": 0,
+                "y1": 0,
+                "z1": 0.5,
+                "x2": 1,
+                "y2": 0.5,
+                "z2": 1,
+                "rotateYByType": {
+                    "*-north-*": 180,
+                    "*-east-*": 90,
+                    "*-south-*": 0,
+                    "*-west-*": 270
+                }
+            }
+        ],
+        "*-up-*": [
+            { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.5, "z2": 1 },
+            {
+                "x1": 0,
+                "y1": 0.5,
+                "z1": 0.5,
+                "x2": 1,
+                "y2": 1,
+                "z2": 1,
+                "rotateYByType": {
+                    "*-north-*": 180,
+                    "*-east-*": 90,
+                    "*-south-*": 0,
+                    "*-west-*": 270
+                }
+            }
+        ]
+    },
+    "heldTpIdleAnimation": "holdbothhandslarge",
+    "heldRightReadyAnimation": "heldblockready",
+    "heldTpUseAnimation": "twohandplaceblock",
+    "tpHandTransform": {
+        "translation": { "x": -1.23, "y": -0.91, "z": -0.8 },
+        "rotation": { "x": -2, "y": 25, "z": -78 },
+        "scale": 0.4
+    },
+    "sounds": {
+        "place": "game:block/gravel",
+        "break": "game:block/gravel",
+        "hit": "game:block/gravel",
+        "walk": "game:walk/gravel"
+    }
+}

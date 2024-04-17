@@ -22,6 +22,7 @@ public class Config
     public bool Sign { get; set; } = true;
     public bool Signpost { get; set; } = true;
     public bool SodRoofing { get; set; } = true;
+    public bool StonePath { get; set; } = true;
     public bool SupportChain { get; set; } = true;
     public bool Table { get; set; } = true;
     public bool Toolrack { get; set; } = true;
@@ -58,6 +59,7 @@ public class Config
         Sign = previousConfig.Sign;
         Signpost = previousConfig.Signpost;
         SodRoofing = previousConfig.SodRoofing;
+        StonePath = previousConfig.StonePath;
         SupportChain = previousConfig.SupportChain;
         Table = previousConfig.Table;
         Toolrack = previousConfig.Toolrack;

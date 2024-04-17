@@ -1,0 +1,43 @@
+[
+    {
+        "type": "Replace",
+        "configKeys": ["VVStonePathEnabled"],
+        "outputCode": "stonepath-free",
+        "ingredients": [{ "ingredientCode": "stone-*", "AllowedVariants": ["granite"] }]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVStonePathEnabled"],
+        "outputCode": "stonepath-free",
+        "ingredients": [{ "ingredientCode": "stone-*", "Name": "rock", "SkipVariants": ["granite", "meteorite-iron"] }],
+        "outputCodeNew": "vanvar:stonepath-{rock}-free"
+    },
+
+    {
+        "type": "Replace",
+        "configKeys": ["VVStonePathEnabled"],
+        "outputCode": "stonepathslab-free",
+        "ingredients": [{ "ingredientCode": "stone-*", "AllowedVariants": ["granite"] }]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVStonePathEnabled"],
+        "outputCode": "stonepathslab-free",
+        "ingredients": [{ "ingredientCode": "stone-*", "Name": "rock", "SkipVariants": ["granite", "meteorite-iron"] }],
+        "outputCodeNew": "vanvar:stonepathslab-{rock}-free"
+    },
+
+    {
+        "type": "Replace",
+        "configKeys": ["VVStonePathEnabled"],
+        "outputCode": "stonepathstairs-up-north-free",
+        "ingredients": [{ "ingredientCode": "stone-*", "AllowedVariants": ["granite"] }]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VVStonePathEnabled"],
+        "outputCode": "stonepathstairs-up-north-free",
+        "ingredients": [{ "ingredientCode": "stone-*", "Name": "rock", "SkipVariants": ["granite", "meteorite-iron"] }],
+        "outputCodeNew": "vanvar:stonepathstairs-{rock}-up-north-free"
+    }
+]
