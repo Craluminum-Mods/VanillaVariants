@@ -4,6 +4,7 @@ public class Config
 {
     public bool ExperimentalOverlayTest { get; set; } = true;
 
+    public bool FixHelveHammerTextures { get; set; } = true;
     public bool FixHenboxBugs { get; set; } = true;
 
     public bool CraftableCage { get; set; }
@@ -19,6 +20,7 @@ public class Config
     public bool DisplayCase { get; set; } = true;
     public bool Firewood { get; set; } = true;
     public bool Forge { get; set; } = true;
+    public bool HelveHammer { get; set; } = true;
     public bool Henbox { get; set; } = true;
     public bool Ladder { get; set; } = true;
     public bool Moldrack { get; set; } = true;
@@ -48,6 +50,7 @@ public class Config
     {
         ExperimentalOverlayTest = previousConfig.ExperimentalOverlayTest;
 
+        FixHelveHammerTextures = previousConfig.FixHelveHammerTextures;
         FixHenboxBugs = previousConfig.FixHenboxBugs;
 
         CraftableCage = previousConfig.CraftableCage;
@@ -63,6 +66,7 @@ public class Config
         DisplayCase = previousConfig.DisplayCase;
         Firewood = previousConfig.Firewood;
         Forge = previousConfig.Forge;
+        HelveHammer = previousConfig.HelveHammer;
         Henbox = previousConfig.Henbox;
         Ladder = previousConfig.Ladder;
         Moldrack = previousConfig.Moldrack;

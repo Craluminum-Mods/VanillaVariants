@@ -1,0 +1,133 @@
+[
+    {
+        "type": "Copy",
+        "configKeys": ["VanillaVariants_HelveHammer_Enabled"],
+        "outputCode": "helvehammer-*",
+        "outputCodeNew": "vanvar:helvehammer-{wood}-tinbronze",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "helvehammerhead-*", "Name": "metal", "AllowedVariants": ["tinbronze"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VanillaVariants_HelveHammer_Enabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "helvehammer-*",
+        "outputCodeNew": "wildcrafttree:helvehammer-{wood}-tinbronze",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "Code": "wildcrafttree:plank-*", "SkipVariants": ["oak"] },
+            { "ingredientCode": "helvehammerhead-*", "Name": "metal", "AllowedVariants": ["tinbronze"] }
+        ]
+    },
+
+    {
+        "type": "Copy",
+        "configKeys": ["VanillaVariants_HelveHammer_Enabled"],
+        "outputCode": "helvehammer-*",
+        "outputCodeNew": "vanvar:helvehammer-{wood}-bismuthbronze",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "helvehammerhead-*", "Name": "metal", "AllowedVariants": ["bismuthbronze"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VanillaVariants_HelveHammer_Enabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "helvehammer-*",
+        "outputCodeNew": "wildcrafttree:helvehammer-{wood}-bismuthbronze",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "Code": "wildcrafttree:plank-*", "SkipVariants": ["oak"] },
+            { "ingredientCode": "helvehammerhead-*", "Name": "metal", "AllowedVariants": ["bismuthbronze"] }
+        ]
+    },
+
+    {
+        "type": "Copy",
+        "configKeys": ["VanillaVariants_HelveHammer_Enabled"],
+        "outputCode": "helvehammer-*",
+        "outputCodeNew": "vanvar:helvehammer-{wood}-blackbronze",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "helvehammerhead-*", "Name": "metal", "AllowedVariants": ["blackbronze"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VanillaVariants_HelveHammer_Enabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "helvehammer-*",
+        "outputCodeNew": "wildcrafttree:helvehammer-{wood}-blackbronze",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "Code": "wildcrafttree:plank-*", "SkipVariants": ["oak"] },
+            { "ingredientCode": "helvehammerhead-*", "Name": "metal", "AllowedVariants": ["blackbronze"] }
+        ]
+    },
+
+    {
+        "type": "Copy",
+        "configKeys": ["VanillaVariants_HelveHammer_Enabled"],
+        "outputCode": "helvehammer-*",
+        "outputCodeNew": "vanvar:helvehammer-{wood}-iron",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "helvehammerhead-*", "Name": "metal", "AllowedVariants": ["iron"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VanillaVariants_HelveHammer_Enabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "helvehammer-*",
+        "outputCodeNew": "wildcrafttree:helvehammer-{wood}-iron",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "Code": "wildcrafttree:plank-*", "SkipVariants": ["oak"] },
+            { "ingredientCode": "helvehammerhead-*", "Name": "metal", "AllowedVariants": ["iron"] }
+        ]
+    },
+
+    {
+        "type": "Copy",
+        "configKeys": ["VanillaVariants_HelveHammer_Enabled"],
+        "outputCode": "helvehammer-*",
+        "outputCodeNew": "vanvar:helvehammer-{wood}-meteoriciron",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "helvehammerhead-*", "Name": "metal", "AllowedVariants": ["meteoriciron"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VanillaVariants_HelveHammer_Enabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "helvehammer-*",
+        "outputCodeNew": "wildcrafttree:helvehammer-{wood}-meteoriciron",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "Code": "wildcrafttree:plank-*", "SkipVariants": ["oak"] },
+            { "ingredientCode": "helvehammerhead-*", "Name": "metal", "AllowedVariants": ["meteoriciron"] }
+        ]
+    },
+
+    {
+        "type": "Copy",
+        "configKeys": ["VanillaVariants_HelveHammer_Enabled"],
+        "outputCode": "helvehammer-*",
+        "outputCodeNew": "vanvar:helvehammer-{wood}-steel",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "helvehammerhead-*", "Name": "metal", "AllowedVariants": ["steel"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VanillaVariants_HelveHammer_Enabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "helvehammer-*",
+        "outputCodeNew": "wildcrafttree:helvehammer-{wood}-steel",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "Code": "wildcrafttree:plank-*", "SkipVariants": ["oak"] },
+            { "ingredientCode": "helvehammerhead-*", "Name": "metal", "AllowedVariants": ["steel"] }
+        ]
+    }
+]
