@@ -28,7 +28,7 @@
         { "code": "cover", "states": ["free", "snow"] }
         //
     ],
-    "creativeinventory": { "general": ["*-up-north-free"], "construction": ["*-up-north-free"] },
+    "creativeinventory": { "general": ["*-up-north-free"], "construction": ["*-up-north-free"], "vanvar": ["*-up-north-free"] },
     "sidesolidByType": {
         "*-up-north-*": { "all": false, "down": true, "north": true },
         "*-up-west-*": { "all": false, "down": true, "west": true },
