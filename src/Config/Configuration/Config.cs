@@ -4,6 +4,8 @@ public class Config
 {
     public bool ExperimentalOverlayTest { get; set; } = true;
 
+    public bool FixHenboxBugs { get; set; } = true;
+
     public bool CraftableCage { get; set; }
     public bool CraftableWagonWheels { get; set; }
     public bool CraftableWoodenRails { get; set; }
@@ -45,6 +47,8 @@ public class Config
     public Config(Config previousConfig)
     {
         ExperimentalOverlayTest = previousConfig.ExperimentalOverlayTest;
+
+        FixHenboxBugs = previousConfig.FixHenboxBugs;
 
         CraftableCage = previousConfig.CraftableCage;
         CraftableWagonWheels = previousConfig.CraftableWagonWheels;
