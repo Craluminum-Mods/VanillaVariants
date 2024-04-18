@@ -20,11 +20,12 @@ public class Core : ModSystem
 
     public override void Start(ICoreAPI api)
     {
-        api.RegisterEntity("VV_EntityWoodArmorStand", typeof(EntityWoodArmorStand));
         api.RegisterBlockBehaviorClass("VanillaVariants.BbName", typeof(BlockBehaviorName));
         api.RegisterCollectibleBehaviorClass("VanillaVariants.CbName", typeof(CollectibleBehaviorName));
         api.RegisterCollectibleBehaviorClass("VanillaVariants.ModDescription", typeof(CollectibleBehaviorModDescription));
+
         api.RegisterBlockClass("VanillaVariants.BlockWoodBucket", typeof(BlockWoodBucket));
+        api.RegisterEntity("VV_EntityWoodArmorStand", typeof(EntityWoodArmorStand));
 
         api.World.Logger.Event("started '{0}' mod", Mod.Info.Name);
     }
