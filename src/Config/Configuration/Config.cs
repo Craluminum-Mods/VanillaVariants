@@ -63,7 +63,7 @@ public class Config
         Ladder = previousConfig.Ladder;
         Moldrack = previousConfig.Moldrack;
         OmokTabletop = previousConfig.OmokTabletop;
-        Palisade = previousConfig.DecorativeQuern;
+        Palisade = previousConfig.Palisade;
         Shelf = previousConfig.Shelf;
         Sieve = previousConfig.Sieve;
         Sign = previousConfig.Sign;
