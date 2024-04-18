@@ -4,7 +4,7 @@
         "op": "addmerge",
         "path": "/0/enabled",
         "value": false,
-        "condition": { "when": "VanillaVariants_CraftableWoodenRails__Enabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_CraftableWoodenRails_Enabled", "isValue": "false" },
         "side": "server"
     },
 
@@ -13,7 +13,7 @@
         "op": "addmerge",
         "path": "/1/enabled",
         "value": false,
-        "condition": { "when": "VanillaVariants_CraftableWoodenRails__Enabled", "isValue": "false" },
+        "condition": { "when": "VanillaVariants_CraftableWoodenRails_Enabled", "isValue": "false" },
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "side": "server"
     }
