@@ -4,8 +4,8 @@ public class Config
 {
     public bool ExperimentalOverlayTest { get; set; } = true;
 
-    public bool FixHelveHammerTextures { get; set; } = true;
     public bool FixHenboxBugs { get; set; } = true;
+    public bool FixMechanicalHelveHammerTextures { get; set; } = true;
     public bool FixMechanicalToggleBugs { get; set; } = true;
 
     public bool CraftableCage { get; set; }
@@ -21,7 +21,7 @@ public class Config
     public bool DisplayCase { get; set; } = true;
     public bool Firewood { get; set; } = true;
     public bool Forge { get; set; } = true;
-    public bool HelveHammer { get; set; } = true;
+    public bool HelveHammerItem { get; set; } = true;
     public bool Henbox { get; set; } = true;
     public bool Ladder { get; set; } = true;
     public bool MechanicalHelveHammerBase { get; set; } = true;
@@ -53,8 +53,8 @@ public class Config
     {
         ExperimentalOverlayTest = previousConfig.ExperimentalOverlayTest;
 
-        FixHelveHammerTextures = previousConfig.FixHelveHammerTextures;
         FixHenboxBugs = previousConfig.FixHenboxBugs;
+        FixMechanicalHelveHammerTextures = previousConfig.FixMechanicalHelveHammerTextures;
         FixMechanicalToggleBugs = previousConfig.FixMechanicalToggleBugs;
 
         CraftableCage = previousConfig.CraftableCage;
@@ -70,7 +70,7 @@ public class Config
         DisplayCase = previousConfig.DisplayCase;
         Firewood = previousConfig.Firewood;
         Forge = previousConfig.Forge;
-        HelveHammer = previousConfig.HelveHammer;
+        HelveHammerItem = previousConfig.HelveHammerItem;
         Henbox = previousConfig.Henbox;
         Ladder = previousConfig.Ladder;
         MechanicalHelveHammerBase = previousConfig.MechanicalHelveHammerBase;
