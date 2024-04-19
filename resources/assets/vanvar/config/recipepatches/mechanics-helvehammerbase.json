@@ -1,0 +1,30 @@
+[
+    {
+        "type": "Replace",
+        "configKeys": ["VanillaVariants_MechanicalHelveHammerBase_Enabled"],
+        "outputCode": "helvehammerbase-north",
+        "ingredients": [{ "ingredientCode": "plank-*", "AllowedVariants": ["oak"] }]
+    },
+    {
+        "type": "Replace",
+        "configKeys": ["VanillaVariants_MechanicalHelveHammerBase_Enabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "helvehammerbase-north",
+        "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] }]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VanillaVariants_MechanicalHelveHammerBase_Enabled"],
+        "outputCode": "helvehammerbase-north",
+        "outputCodeNew": "vanvar:helvehammerbase-{wood}-north",
+        "ingredients": [{ "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+    {
+        "type": "Copy",
+        "configKeys": ["VanillaVariants_MechanicalHelveHammerBase_Enabled"],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "helvehammerbase-north",
+        "outputCodeNew": "wildcrafttree:helvehammerbase-{wood}-north",
+        "ingredients": [{ "ingredientCode": "plank-*", "Code": "wildcrafttree:plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
+    }
+]
