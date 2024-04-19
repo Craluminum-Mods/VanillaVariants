@@ -46,6 +46,7 @@ static class ModConfig
         api.World.Config.SetBool("VanillaVariants_HelveHammer_Enabled", config.HelveHammer);
         api.World.Config.SetBool("VanillaVariants_Henbox_Enabled", config.Henbox);
         api.World.Config.SetBool("VanillaVariants_Ladder_Enabled", config.Ladder);
+        api.World.Config.SetBool("VanillaVariants_MechanicalToggle_Enabled", config.MechanicalToggle);
         api.World.Config.SetBool("VanillaVariants_Moldrack_Enabled", config.Moldrack);
         api.World.Config.SetBool("VanillaVariants_OmokTabletop_Enabled", config.OmokTabletop);
         api.World.Config.SetBool("VanillaVariants_Palisade_Enabled", config.Palisade);

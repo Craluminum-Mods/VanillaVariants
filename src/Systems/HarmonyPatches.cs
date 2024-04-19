@@ -25,6 +25,11 @@ public class HarmonyPatches : ModSystem
         {
             HarmonyInstance.Patch(original: AccessTools.IndexerGetter(typeof(BEHelveHammer)), prefix: AccessTools.Method(typeof(HelveHammer_TexturePosition_Patch), nameof(HelveHammer_TexturePosition_Patch.Prefix)));
         }
+        if (Core.Config.FixMechanicalToggleBugs)
+        {
+            HarmonyInstance.Patch(original: typeof(BlockToggle).GetMethod(nameof(BlockToggle.IsOrientedTo)), prefix: typeof(BlockToggle_IsOrientedTo_Patch).GetMethod(nameof(BlockToggle_IsOrientedTo_Patch.Prefix)));
+            HarmonyInstance.Patch(original: typeof(BlockToggle).GetMethod(nameof(BlockToggle.TryPlaceBlock)), prefix: typeof(BlockToggle_TryPlaceBlock_Patch).GetMethod(nameof(BlockToggle_TryPlaceBlock_Patch.Prefix)));
+        }
         HarmonyInstance.Patch(original: typeof(GridRecipeLoader).GetMethod(nameof(GridRecipeLoader.LoadRecipe)), prefix: typeof(GridRecipeLoader_LoadRecipe_Patch).GetMethod(nameof(GridRecipeLoader_LoadRecipe_Patch.Prefix)));
     }
 
@@ -41,7 +46,11 @@ public class HarmonyPatches : ModSystem
         if (Core.Config.FixHelveHammerTextures)
         {
             HarmonyInstance.Unpatch(original: AccessTools.IndexerGetter(typeof(BEHelveHammer)), HarmonyPatchType.All, HarmonyInstance.Id);
-
+        }
+        if (Core.Config.FixMechanicalToggleBugs)
+        {
+            HarmonyInstance.Unpatch(original: typeof(BlockToggle).GetMethod(nameof(BlockToggle.IsOrientedTo)), HarmonyPatchType.All, HarmonyInstance.Id);
+            HarmonyInstance.Unpatch(original: typeof(BlockToggle).GetMethod(nameof(BlockToggle.TryPlaceBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
         }
         HarmonyInstance.Unpatch(original: typeof(GridRecipeLoader).GetMethod(nameof(GridRecipeLoader.LoadRecipe)), HarmonyPatchType.All, HarmonyInstance.Id);
     }

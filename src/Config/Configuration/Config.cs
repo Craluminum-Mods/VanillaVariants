@@ -6,6 +6,7 @@ public class Config
 
     public bool FixHelveHammerTextures { get; set; } = true;
     public bool FixHenboxBugs { get; set; } = true;
+    public bool FixMechanicalToggleBugs { get; set; } = true;
 
     public bool CraftableCage { get; set; }
     public bool CraftableWagonWheels { get; set; }
@@ -23,6 +24,7 @@ public class Config
     public bool HelveHammer { get; set; } = true;
     public bool Henbox { get; set; } = true;
     public bool Ladder { get; set; } = true;
+    public bool MechanicalToggle { get; set; } = true;
     public bool Moldrack { get; set; } = true;
     public bool OmokTabletop { get; set; } = true;
     public bool Palisade { get; set; } = true;
@@ -52,6 +54,7 @@ public class Config
 
         FixHelveHammerTextures = previousConfig.FixHelveHammerTextures;
         FixHenboxBugs = previousConfig.FixHenboxBugs;
+        FixMechanicalToggleBugs = previousConfig.FixMechanicalToggleBugs;
 
         CraftableCage = previousConfig.CraftableCage;
         CraftableWagonWheels = previousConfig.CraftableWagonWheels;
@@ -69,6 +72,7 @@ public class Config
         HelveHammer = previousConfig.HelveHammer;
         Henbox = previousConfig.Henbox;
         Ladder = previousConfig.Ladder;
+        MechanicalToggle = previousConfig.MechanicalToggle;
         Moldrack = previousConfig.Moldrack;
         OmokTabletop = previousConfig.OmokTabletop;
         Palisade = previousConfig.Palisade;
