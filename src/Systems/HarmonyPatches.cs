@@ -30,6 +30,10 @@ public class HarmonyPatches : ModSystem
             HarmonyInstance.Patch(original: typeof(BlockToggle).GetMethod(nameof(BlockToggle.IsOrientedTo)), prefix: typeof(BlockToggle_IsOrientedTo_Patch).GetMethod(nameof(BlockToggle_IsOrientedTo_Patch.Prefix)));
             HarmonyInstance.Patch(original: typeof(BlockToggle).GetMethod(nameof(BlockToggle.TryPlaceBlock)), prefix: typeof(BlockToggle_TryPlaceBlock_Patch).GetMethod(nameof(BlockToggle_TryPlaceBlock_Patch.Prefix)));
             HarmonyInstance.Patch(original: typeof(MechNetworkRenderer).GetMethod(nameof(MechNetworkRenderer.AddDevice)), prefix: typeof(MechNetworkRenderer_AddDevice_Patch).GetMethod(nameof(MechNetworkRenderer_AddDevice_Patch.Prefix)));
+            HarmonyInstance.Patch(original: typeof(BlockAngledGears).GetMethod(nameof(BlockAngledGears.OnPickBlock)), prefix: typeof(BlockAngledGears_OnPickBlock_Patch).GetMethod(nameof(BlockAngledGears_OnPickBlock_Patch.Prefix)));
+            HarmonyInstance.Patch(original: typeof(BlockAngledGears).GetMethod(nameof(BlockAngledGears.getGearBlock)), prefix: typeof(BlockAngledGears_getGearBlock_Patch).GetMethod(nameof(BlockAngledGears_getGearBlock_Patch.Prefix)));
+            HarmonyInstance.Patch(original: typeof(BlockAngledGears).GetMethod(nameof(BlockAngledGears.OnNeighbourBlockChange)), prefix: typeof(BlockAngledGears_OnNeighbourBlockChange_Patch).GetMethod(nameof(BlockAngledGears_OnNeighbourBlockChange_Patch.Prefix)));
+            HarmonyInstance.Patch(original: typeof(BlockAngledGears).GetMethod("ToPegGear", AccessTools.all), prefix: typeof(BlockAngledGears_ToPegGear_Patch).GetMethod(nameof(BlockAngledGears_ToPegGear_Patch.Prefix)));
         }
         HarmonyInstance.Patch(original: typeof(GridRecipeLoader).GetMethod(nameof(GridRecipeLoader.LoadRecipe)), prefix: typeof(GridRecipeLoader_LoadRecipe_Patch).GetMethod(nameof(GridRecipeLoader_LoadRecipe_Patch.Prefix)));
     }
@@ -53,6 +57,10 @@ public class HarmonyPatches : ModSystem
             HarmonyInstance.Unpatch(original: typeof(BlockToggle).GetMethod(nameof(BlockToggle.IsOrientedTo)), HarmonyPatchType.All, HarmonyInstance.Id);
             HarmonyInstance.Unpatch(original: typeof(BlockToggle).GetMethod(nameof(BlockToggle.TryPlaceBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
             HarmonyInstance.Unpatch(original: typeof(MechNetworkRenderer).GetMethod(nameof(MechNetworkRenderer.AddDevice)), HarmonyPatchType.All, HarmonyInstance.Id);
+            HarmonyInstance.Unpatch(original: typeof(BlockAngledGears).GetMethod(nameof(BlockAngledGears.OnPickBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
+            HarmonyInstance.Unpatch(original: typeof(BlockAngledGears).GetMethod(nameof(BlockAngledGears.getGearBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
+            HarmonyInstance.Unpatch(original: typeof(BlockAngledGears).GetMethod(nameof(BlockAngledGears.OnNeighbourBlockChange)), HarmonyPatchType.All, HarmonyInstance.Id);
+            HarmonyInstance.Unpatch(original: typeof(BlockAngledGears).GetMethod("ToPegGear", AccessTools.all), HarmonyPatchType.All, HarmonyInstance.Id);
         }
         HarmonyInstance.Unpatch(original: typeof(GridRecipeLoader).GetMethod(nameof(GridRecipeLoader.LoadRecipe)), HarmonyPatchType.All, HarmonyInstance.Id);
     }

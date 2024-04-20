@@ -12,7 +12,7 @@ public static class HelveHammer_TexturePosition_Patch
         ICoreClientAPI capi = __instance.GetField<ICoreClientAPI>("capi");
         ITexPositionSource blockTexSource = __instance.GetField<ITexPositionSource>("blockTexSource");
 
-        if ((textureCode == "metal" || textureCode == "oak" || textureCode == "oak1") && hammerStack.Item.Textures.TryGetValue(textureCode, out var ctex))
+        if ((textureCode == "metal" || textureCode == "oak" || textureCode == "oak1") && hammerStack.Item.Textures.TryGetValue(textureCode, out CompositeTexture ctex))
         {
             AssetLocation texturePath = ctex.Base;
             __result = capi.BlockTextureAtlas[texturePath];
