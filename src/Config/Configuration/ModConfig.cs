@@ -43,10 +43,10 @@ static class ModConfig
         api.World.Config.SetBool("VanillaVariants_DisplayCase_Enabled", config.DisplayCase);
         api.World.Config.SetBool("VanillaVariants_Firewood_Enabled", config.Firewood);
         api.World.Config.SetBool("VanillaVariants_Forge_Enabled", config.Forge);
-        api.World.Config.SetBool("VanillaVariants_HelveHammerItem_Enabled", config.HelveHammerItem);
         api.World.Config.SetBool("VanillaVariants_Henbox_Enabled", config.Henbox);
         api.World.Config.SetBool("VanillaVariants_Ladder_Enabled", config.Ladder);
         api.World.Config.SetBool("VanillaVariants_MechanicalHelveHammerBase_Enabled", config.MechanicalHelveHammerBase);
+        api.World.Config.SetBool("VanillaVariants_MechanicalHelveHammerItem_Enabled", config.MechanicalHelveHammerItem);
         api.World.Config.SetBool("VanillaVariants_MechanicalToggle_Enabled", config.MechanicalToggle);
         api.World.Config.SetBool("VanillaVariants_Moldrack_Enabled", config.Moldrack);
         api.World.Config.SetBool("VanillaVariants_OmokTabletop_Enabled", config.OmokTabletop);

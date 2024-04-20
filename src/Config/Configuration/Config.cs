@@ -20,10 +20,10 @@ public class Config
     public bool DisplayCase { get; set; } = true;
     public bool Firewood { get; set; } = true;
     public bool Forge { get; set; } = true;
-    public bool HelveHammerItem { get; set; } = true;
     public bool Henbox { get; set; } = true;
     public bool Ladder { get; set; } = true;
     public bool MechanicalHelveHammerBase { get; set; } = true;
+    public bool MechanicalHelveHammerItem { get; set; } = true;
     public bool MechanicalToggle { get; set; } = true;
     public bool Moldrack { get; set; } = true;
     public bool OmokTabletop { get; set; } = true;
@@ -68,10 +68,10 @@ public class Config
         DisplayCase = previousConfig.DisplayCase;
         Firewood = previousConfig.Firewood;
         Forge = previousConfig.Forge;
-        HelveHammerItem = previousConfig.HelveHammerItem;
         Henbox = previousConfig.Henbox;
         Ladder = previousConfig.Ladder;
         MechanicalHelveHammerBase = previousConfig.MechanicalHelveHammerBase;
+        MechanicalHelveHammerItem = previousConfig.MechanicalHelveHammerItem;
         MechanicalToggle = previousConfig.MechanicalToggle;
         Moldrack = previousConfig.Moldrack;
         OmokTabletop = previousConfig.OmokTabletop;

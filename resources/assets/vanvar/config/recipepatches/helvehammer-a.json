@@ -1,13 +1,13 @@
 [
     {
         "type": "Replace",
-        "configKeys": ["VanillaVariants_HelveHammerItem_Enabled"],
+        "configKeys": ["VanillaVariants_MechanicalHelveHammerItem_Enabled"],
         "outputCode": "helvehammer-*",
         "ingredients": [{ "ingredientCode": "plank-*", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Replace",
-        "configKeys": ["VanillaVariants_HelveHammerItem_Enabled"],
+        "configKeys": ["VanillaVariants_MechanicalHelveHammerItem_Enabled"],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "helvehammer-*",
         "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] }]
