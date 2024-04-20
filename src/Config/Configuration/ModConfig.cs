@@ -45,6 +45,7 @@ static class ModConfig
         api.World.Config.SetBool("VanillaVariants_Forge_Enabled", config.Forge);
         api.World.Config.SetBool("VanillaVariants_Henbox_Enabled", config.Henbox);
         api.World.Config.SetBool("VanillaVariants_Ladder_Enabled", config.Ladder);
+        api.World.Config.SetBool("VanillaVariants_MechanicalAxle_Enabled", config.MechanicalAxle);
         api.World.Config.SetBool("VanillaVariants_MechanicalHelveHammerBase_Enabled", config.MechanicalHelveHammerBase);
         api.World.Config.SetBool("VanillaVariants_MechanicalHelveHammerItem_Enabled", config.MechanicalHelveHammerItem);
         api.World.Config.SetBool("VanillaVariants_MechanicalToggle_Enabled", config.MechanicalToggle);

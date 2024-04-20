@@ -22,6 +22,7 @@ public class Config
     public bool Forge { get; set; } = true;
     public bool Henbox { get; set; } = true;
     public bool Ladder { get; set; } = true;
+    public bool MechanicalAxle { get; set; } = true;
     public bool MechanicalHelveHammerBase { get; set; } = true;
     public bool MechanicalHelveHammerItem { get; set; } = true;
     public bool MechanicalToggle { get; set; } = true;
@@ -70,6 +71,7 @@ public class Config
         Forge = previousConfig.Forge;
         Henbox = previousConfig.Henbox;
         Ladder = previousConfig.Ladder;
+        MechanicalAxle = previousConfig.MechanicalAxle;
         MechanicalHelveHammerBase = previousConfig.MechanicalHelveHammerBase;
         MechanicalHelveHammerItem = previousConfig.MechanicalHelveHammerItem;
         MechanicalToggle = previousConfig.MechanicalToggle;
