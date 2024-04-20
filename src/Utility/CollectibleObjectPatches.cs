@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using Newtonsoft.Json.Linq;
 using Vintagestory.API.Common;
+using Vintagestory.API.Datastructures;
 using Vintagestory.API.Util;
 using Vintagestory.GameContent;
 
@@ -67,5 +68,37 @@ public static class CollectibleObjectPatches
         }
 
         block.Attributes.Token["buildMats"]["fuel"] = JToken.FromObject(fuel);
+    }
+
+    public static void PatchQuern(this ICoreAPI api, Block block)
+    {
+        BlockBehaviorUnstableFalling behavior = block.GetBehavior<BlockBehaviorUnstableFalling>();
+        JsonObject properties = new JsonObject(JObject.Parse(behavior.propertiesAtString));
+        AssetLocation[] exceptions = properties?["exceptions"]?.AsObject(new AssetLocation[0], block.Code.Domain);
+        if (exceptions == null)
+        {
+            return;
+        }
+
+        Block[] axleBlocks = Array.Empty<Block>();
+        axleBlocks = axleBlocks
+            .Concat(api.World.SearchBlocks(new AssetLocation("vanvar:woodenaxle-*-ud")))
+            .Concat(api.World.SearchBlocks(new AssetLocation("wildcrafttree:woodenaxle-*-ud")))
+            .ToArray();
+
+        if (!axleBlocks.Any())
+        {
+            return;
+        }
+
+        block.BlockBehaviors = block.BlockBehaviors.Remove(behavior);
+        block.CollectibleBehaviors = block.CollectibleBehaviors.Remove(behavior);
+
+        exceptions = exceptions.Concat(axleBlocks.Select(x => x.Code)).ToArray();
+        properties.Token["exceptions"] = JToken.FromObject(exceptions);
+        behavior.Initialize(properties);
+
+        block.BlockBehaviors = block.BlockBehaviors.Append(behavior);
+        block.CollectibleBehaviors = block.CollectibleBehaviors.Append(behavior);
     }
 }

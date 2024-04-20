@@ -46,6 +46,19 @@ public class Core : ModSystem
                         api.PatchPitKiln(block);
                         break;
                     }
+                case BlockQuern:
+                    {
+                        if (Config.ResolveQuernAndAxleRelationship)
+                        {
+                            api.PatchQuern(block);
+                        }
+                        break;
+                    }
+            }
+
+            if (Config.ResolveQuernAndAxleRelationship && block?.Attributes?["patchQuernExceptions"]?.AsBool() == true)
+            {
+                api.PatchQuern(block);
             }
 
             if (!block.IsFromMod())

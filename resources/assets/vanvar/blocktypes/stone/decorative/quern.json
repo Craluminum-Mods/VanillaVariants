@@ -7,9 +7,10 @@
                 "parts": ["Quern", " (", "rock-{rock}", ") (", "tabname-decorative", ")"]
             }
         },
-        { "name": "UnstableFalling", "properties": { "exceptions": ["woodenaxle-ud"] } }
+        { "name": "UnstableFalling", "properties": { "exceptions": ["game:woodenaxle-ud"] } }
     ],
     "attributes": {
+        "patchQuernExceptions": true,
         "mapColorCode": "settlement",
         "handbook": { "groupBy": ["quern-*"] }
     },
