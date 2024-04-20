@@ -17,11 +17,11 @@ public class HarmonyPatches : ModSystem
         {
             HarmonyInstance.Patch(original: typeof(ColorBlend).GetMethod(nameof(ColorBlend.Overlay)), prefix: typeof(Overlay_Patch).GetMethod(nameof(Overlay_Patch.Prefix)));
         }
-        if (Core.Config.FixHenboxBugs)
+        if (Core.Config.ResolveHenboxImposter)
         {
             HarmonyInstance.Patch(original: typeof(BlockEntityHenBox).GetMethod(nameof(BlockEntityHenBox.TryAddEgg)), prefix: typeof(BlockEntityHenBox_TryAddEgg_Patch).GetMethod(nameof(BlockEntityHenBox_TryAddEgg_Patch.Prefix)));
         }
-        if (Core.Config.FixMechanicalBlocksBugs)
+        if (Core.Config.ResolveMechanicalBlockIssues)
         {
             HarmonyInstance.Patch(original: AccessTools.IndexerGetter(typeof(BEHelveHammer)), prefix: AccessTools.Method(typeof(HelveHammer_TexturePosition_Patch), nameof(HelveHammer_TexturePosition_Patch.Prefix)));
             HarmonyInstance.Patch(original: typeof(BEBehaviorMPAxle).GetMethod("getStandMesh", AccessTools.all), prefix: typeof(BEBehaviorMPAxle_getStandMesh_Patch).GetMethod(nameof(BEBehaviorMPAxle_getStandMesh_Patch.Prefix)));
@@ -40,11 +40,11 @@ public class HarmonyPatches : ModSystem
         {
             HarmonyInstance.Unpatch(original: typeof(ColorBlend).GetMethod(nameof(ColorBlend.Overlay)), HarmonyPatchType.All, HarmonyInstance.Id);
         }
-        if (Core.Config.FixHenboxBugs)
+        if (Core.Config.ResolveHenboxImposter)
         {
             HarmonyInstance.Unpatch(original: typeof(BlockEntityHenBox).GetMethod(nameof(BlockEntityHenBox.TryAddEgg)), HarmonyPatchType.All, HarmonyInstance.Id);
         }
-        if (Core.Config.FixMechanicalBlocksBugs)
+        if (Core.Config.ResolveMechanicalBlockIssues)
         {
             HarmonyInstance.Unpatch(original: AccessTools.IndexerGetter(typeof(BEHelveHammer)), HarmonyPatchType.All, HarmonyInstance.Id);
             HarmonyInstance.Unpatch(original: typeof(BEBehaviorMPAxle).GetMethod("getStandMesh", AccessTools.all), HarmonyPatchType.All, HarmonyInstance.Id);

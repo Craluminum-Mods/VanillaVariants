@@ -4,6 +4,8 @@ public class Config
 {
     public bool ExperimentalOverlayTest { get; set; } = true;
 
+    public bool ResolveHenboxImposter { get; set; } = true;
+    public bool ResolveMechanicalBlockIssues { get; set; } = true;
     public bool ResolveQuernAndAxleRelationship { get; set; } = true;
 
     public bool CraftableCage { get; set; }
@@ -52,6 +54,8 @@ public class Config
     {
         ExperimentalOverlayTest = previousConfig.ExperimentalOverlayTest;
 
+        ResolveHenboxImposter = previousConfig.ResolveHenboxImposter;
+        ResolveMechanicalBlockIssues = previousConfig.ResolveMechanicalBlockIssues;
         ResolveQuernAndAxleRelationship = previousConfig.ResolveQuernAndAxleRelationship;
 
         CraftableCage = previousConfig.CraftableCage;
