@@ -1,20 +1,20 @@
 [
     {
         "type": "Replace",
-        "configKeys": ["VanillaVariants_WoodenPan_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_WoodenPan_Enabled", "isValue": "true" }],
         "outputCode": "pan-wooden",
         "ingredients": [{ "ingredientCode": "logsection-*", "Code": "log-placed-*-ud", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VanillaVariants_WoodenPan_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_WoodenPan_Enabled", "isValue": "true" }],
         "outputCode": "pan-wooden",
         "outputCodeNew": "vanvar:pan-{wood}",
         "ingredients": [{ "ingredientCode": "log-*", "Code": "logsection-placed-*-ne-ud", "Name": "wood", "SkipVariants": ["oak"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VanillaVariants_WoodenPan_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_WoodenPan_Enabled", "isValue": "true" }],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "pan-wooden",
         "outputCodeNew": "wildcrafttree:pan-{wood}",

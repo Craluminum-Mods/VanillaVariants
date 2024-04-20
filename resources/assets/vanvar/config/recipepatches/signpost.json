@@ -1,27 +1,27 @@
 [
     {
         "type": "Replace",
-        "configKeys": ["VanillaVariants_Signpost_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_Signpost_Enabled", "isValue": "true" }],
         "outputCode": "signpost",
         "ingredients": [{ "ingredientCode": "plank-*", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Replace",
-        "configKeys": ["VanillaVariants_Signpost_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_Signpost_Enabled", "isValue": "true" }],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "signpost",
         "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VanillaVariants_Signpost_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_Signpost_Enabled", "isValue": "true" }],
         "outputCode": "signpost",
         "outputCodeNew": "vanvar:signpost-{wood}",
         "ingredients": [{ "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VanillaVariants_Signpost_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_Signpost_Enabled", "isValue": "true" }],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "signpost",
         "outputCodeNew": "wildcrafttree:signpost-{wood}",

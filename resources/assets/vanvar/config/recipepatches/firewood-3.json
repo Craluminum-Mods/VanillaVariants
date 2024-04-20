@@ -1,7 +1,7 @@
 [
     {
         "type": "Copy",
-        "configKeys": ["VanillaVariants_Firewood_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_Firewood_Enabled", "isValue": "true" }],
         "outputCode": "firewood",
         "outputCodeNew": "vanvar:firewood-{wood}",
         "ChangeQuantity": true,
@@ -12,7 +12,7 @@
 
     {
         "type": "Copy",
-        "configKeys": ["VanillaVariants_Firewood_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_Firewood_Enabled", "isValue": "true" }],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "firewood",
         "outputCodeNew": "wildcrafttree:firewood-{wood}",
@@ -24,19 +24,7 @@
                 "ingredientCode": "log-*",
                 "Code": "wildcrafttree:log-placed-*-ud",
                 "Name": "wood",
-                "AllowedVariants": [
-                    //
-                    "catalpa",
-                    "jacaranda",
-                    "banyan",
-                    "empresstree",
-                    "guajacum",
-                    "umnini",
-                    "willow",
-                    "bluemahoe",
-                    "sal",
-                    "satinash"
-                ]
+                "AllowedVariants": ["catalpa", "jacaranda", "banyan", "empresstree", "guajacum", "umnini", "willow", "bluemahoe", "sal", "satinash"]
             }
         ]
     }

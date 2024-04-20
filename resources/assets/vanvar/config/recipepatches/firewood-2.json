@@ -1,7 +1,7 @@
 [
     {
         "type": "Copy",
-        "configKeys": ["VanillaVariants_Firewood_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_Firewood_Enabled", "isValue": "true" }],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "firewood",
         // there are no such variants for this item

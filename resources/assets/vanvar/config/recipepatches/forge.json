@@ -1,13 +1,13 @@
 [
     {
         "type": "Replace",
-        "configKeys": ["VanillaVariants_Forge_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_Forge_Enabled", "isValue": "true" }],
         "outputCode": "forge",
         "ingredients": [{ "ingredientCode": "cobblestone-*", "AllowedVariants": ["granite"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VanillaVariants_Forge_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_Forge_Enabled", "isValue": "true" }],
         "outputCode": "forge",
         "ingredients": [{ "ingredientCode": "cobblestone-*", "Name": "stone", "SkipVariants": ["granite"] }],
         "outputCodeNew": "vanvar:forge-{stone}"

@@ -1,12 +1,12 @@
 [
     {
         "type": "CopyReplaceIngredients",
-        "configKeys": ["VanillaVariants_Sieve_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_Sieve_Enabled", "isValue": "true" }],
         "ingredients": [{ "ingredientCode": "sieve-*", "Code": "vanvar:sieve-*-linen" }]
     },
     {
         "type": "CopyReplaceIngredients",
-        "configKeys": ["VanillaVariants_Sieve_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_Sieve_Enabled", "isValue": "true" }],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "ingredients": [{ "ingredientCode": "sieve-*", "Code": "wildcrafttree:sieve-*-linen" }]
     }

@@ -1,7 +1,7 @@
 [
     {
         "type": "Copy",
-        "configKeys": ["VanillaVariants_DecorativeQuern_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_DecorativeQuern_Enabled", "isValue": "true" }],
         "outputCode": "quern-*",
         "outputCodeNew": "vanvar:quern-{rock}",
         "ingredients": [{ "ingredientCode": "rock-*", "Name": "rock", "SkipVariants": ["andesite", "granite", "basalt", "peridotite"] }]

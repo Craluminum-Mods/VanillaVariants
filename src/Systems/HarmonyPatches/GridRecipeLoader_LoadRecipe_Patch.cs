@@ -25,9 +25,10 @@ public static class GridRecipeLoader_LoadRecipe_Patch
         {
             if (patch.MatchesOutput(recipe))
             {
-                RecipePatchLoader.HandleRecipe(recipe, patch, out _);
-                NewGridRecipeLoader.ReplacedCount++;
-                NewGridRecipeLoader.Count++;
+                if (RecipePatchLoader.HandleRecipe(recipe, patch, out _))
+                {
+                    NewGridRecipeLoader.ReplacedCount++;
+                }
             }
         }
 
@@ -38,7 +39,6 @@ public static class GridRecipeLoader_LoadRecipe_Patch
                 if (RecipePatchLoader.HandleRecipe(recipe, patch, out GridRecipe newRecipe) && newRecipe != null)
                 {
                     NewGridRecipeLoader.NewRecipes.Add(newRecipe);
-                    NewGridRecipeLoader.Count++;
                 }
             }
         }

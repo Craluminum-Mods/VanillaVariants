@@ -2,7 +2,7 @@
     {
         // replace default firewood recipes
         "type": "Replace",
-        "configKeys": ["VanillaVariants_Firewood_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_Firewood_Enabled", "isValue": "true" }],
         "outputCode": "firewood",
         "ChangeQuantity": true,
         "QuantityNew": 4,
@@ -12,7 +12,7 @@
     {
         // replace default firewood recipes
         "type": "Replace",
-        "configKeys": ["VanillaVariants_Firewood_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_Firewood_Enabled", "isValue": "true" }],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "firewood",
         "ChangeQuantity": true,

@@ -1,27 +1,27 @@
 [
     {
         "type": "Replace",
-        "configKeys": ["VanillaVariants_DisplayCase_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_DisplayCase_Enabled", "isValue": "true" }],
         "outputCode": "talldisplaycase-generic",
         "ingredients": [{ "ingredientCode": "plank-*", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Replace",
-        "configKeys": ["VanillaVariants_DisplayCase_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_DisplayCase_Enabled", "isValue": "true" }],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "talldisplaycase-generic",
         "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VanillaVariants_DisplayCase_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_DisplayCase_Enabled", "isValue": "true" }],
         "outputCode": "talldisplaycase-generic",
         "outputCodeNew": "vanvar:talldisplaycase-{wood}",
         "ingredients": [{ "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VanillaVariants_DisplayCase_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_DisplayCase_Enabled", "isValue": "true" }],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "talldisplaycase-generic",
         "outputCodeNew": "wildcrafttree:talldisplaycase-{wood}",

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Vintagestory.API.Common;
+using Vintagestory.API.Datastructures;
 using Vintagestory.API.Util;
 
 namespace VanillaVariants;
@@ -12,27 +13,56 @@ public class RecipePatchLoader : ModSystem
     public static List<RecipePatch> CopyPatches { get; set; } = new();
 
     public override bool ShouldLoad(EnumAppSide forSide) => forSide.IsServer();
+    public override double ExecuteOrder() => 0.06;
 
     public override void AssetsLoaded(ICoreAPI api)
     {
+        long elapsedMilliseconds = api.World.ElapsedMilliseconds;
+
+        ITreeAttribute worldConfig = api.World.Config ?? new TreeAttribute();
         List<IAsset> many = api.Assets.GetMany("config/recipepatches/");
+
+        HashSet<string> loadedModIds = new HashSet<string>(api.ModLoader.Mods.Select((Mod m) => m.Info.ModID).ToList());
         foreach (IAsset asset in many)
         {
+
+            RecipePatch[] patches = null;
             try
             {
-                List<RecipePatch> loadedAsset = asset.ToObject<List<RecipePatch>>();
-                if (loadedAsset != null)
-                {
-                    ReplacePatches.AddRange(loadedAsset.Where(x => x.CanApply(api) && x.Type == EnumRecipePatchType.Replace));
-                    CopyPatches.AddRange(loadedAsset.Where(x => x.CanApply(api) && (x.Type == EnumRecipePatchType.Copy || x.Type == EnumRecipePatchType.CopyReplaceIngredients)));
-                }
+                patches = asset.ToObject<RecipePatch[]>(null);
             }
             catch (Exception e)
             {
-                api.Logger.Error($"[{Mod.Info.Name}] Failed loading patches file {asset.Location}");
+                api.Logger.Error($"[Vanilla Variants] Failed loading recipe patches file {asset.Location}:");
                 api.Logger.Error(e);
             }
+
+            for (int i = 0; patches != null && i < patches.Length; i++)
+            {
+                RecipePatch patch = patches[i];
+
+                NewGridRecipeLoader.TotalCount++;
+
+                if (!patch.CanApply(api, i, asset.Location, worldConfig, loadedModIds))
+                {
+                    NewGridRecipeLoader.UnmetConditionCount++;
+                    continue;
+                }
+
+                switch (patch.Type)
+                {
+                    case EnumRecipePatchType.Replace:
+                        ReplacePatches.Add(patch);
+                        break;
+                    case EnumRecipePatchType.Copy:
+                    case EnumRecipePatchType.CopyReplaceIngredients:
+                        CopyPatches.Add(patch);
+                        break;
+                }
+            }
         }
+
+        NewGridRecipeLoader.ElapsedMilliseconds += api.World.ElapsedMilliseconds - elapsedMilliseconds;
     }
 
     public override void Dispose()
@@ -67,7 +97,7 @@ public class RecipePatchLoader : ModSystem
                         recipe.RecipeGroup = (int)patch.RecipeGroup;
                     }
                     newRecipe = null;
-                    return false;
+                    return true;
                 }
             case EnumRecipePatchType.Copy:
                 {

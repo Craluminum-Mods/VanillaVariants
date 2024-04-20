@@ -1,13 +1,13 @@
 [
     {
         "type": "Replace",
-        "configKeys": ["VanillaVariants_StonePath_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_StonePath_Enabled", "isValue": "true" }],
         "outputCode": "stonepath-free",
         "ingredients": [{ "ingredientCode": "stone-*", "AllowedVariants": ["granite"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VanillaVariants_StonePath_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_StonePath_Enabled", "isValue": "true" }],
         "outputCode": "stonepath-free",
         "ingredients": [{ "ingredientCode": "stone-*", "Name": "rock", "SkipVariants": ["granite", "meteorite-iron"] }],
         "outputCodeNew": "vanvar:stonepath-{rock}-free"
@@ -15,13 +15,13 @@
 
     {
         "type": "Replace",
-        "configKeys": ["VanillaVariants_StonePath_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_StonePath_Enabled", "isValue": "true" }],
         "outputCode": "stonepathslab-free",
         "ingredients": [{ "ingredientCode": "stone-*", "AllowedVariants": ["granite"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VanillaVariants_StonePath_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_StonePath_Enabled", "isValue": "true" }],
         "outputCode": "stonepathslab-free",
         "ingredients": [{ "ingredientCode": "stone-*", "Name": "rock", "SkipVariants": ["granite", "meteorite-iron"] }],
         "outputCodeNew": "vanvar:stonepathslab-{rock}-free"
@@ -29,13 +29,13 @@
 
     {
         "type": "Replace",
-        "configKeys": ["VanillaVariants_StonePath_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_StonePath_Enabled", "isValue": "true" }],
         "outputCode": "stonepathstairs-up-north-free",
         "ingredients": [{ "ingredientCode": "stone-*", "AllowedVariants": ["granite"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VanillaVariants_StonePath_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_StonePath_Enabled", "isValue": "true" }],
         "outputCode": "stonepathstairs-up-north-free",
         "ingredients": [{ "ingredientCode": "stone-*", "Name": "rock", "SkipVariants": ["granite", "meteorite-iron"] }],
         "outputCodeNew": "vanvar:stonepathstairs-{rock}-up-north-free"

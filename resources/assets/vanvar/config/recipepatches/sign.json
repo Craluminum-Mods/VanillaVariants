@@ -1,27 +1,27 @@
 [
     {
         "type": "Replace",
-        "configKeys": ["VanillaVariants_Sign_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_Sign_Enabled", "isValue": "true" }],
         "outputCode": "sign-ground-north",
         "ingredients": [{ "ingredientCode": "plank-*", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Replace",
-        "configKeys": ["VanillaVariants_Sign_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_Sign_Enabled", "isValue": "true" }],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "sign-ground-north",
         "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VanillaVariants_Sign_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_Sign_Enabled", "isValue": "true" }],
         "outputCode": "sign-ground-north",
         "outputCodeNew": "vanvar:sign-{wood}-ground-north",
         "ingredients": [{ "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VanillaVariants_Sign_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_Sign_Enabled", "isValue": "true" }],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "sign-ground-north",
         "outputCodeNew": "wildcrafttree:sign-{wood}-ground-north",

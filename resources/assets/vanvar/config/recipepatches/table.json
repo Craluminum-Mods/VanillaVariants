@@ -1,27 +1,27 @@
 [
     {
         "type": "Replace",
-        "configKeys": ["VanillaVariants_Table_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_Table_Enabled", "isValue": "true" }],
         "outputCode": "table-normal",
         "ingredients": [{ "ingredientCode": "plank-*", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Replace",
-        "configKeys": ["VanillaVariants_Table_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_Table_Enabled", "isValue": "true" }],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "table-normal",
         "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VanillaVariants_Table_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_Table_Enabled", "isValue": "true" }],
         "outputCode": "table-normal",
         "outputCodeNew": "vanvar:table-{wood}-normal",
         "ingredients": [{ "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VanillaVariants_Table_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_Table_Enabled", "isValue": "true" }],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "table-normal",
         "outputCodeNew": "wildcrafttree:table-{wood}-normal",

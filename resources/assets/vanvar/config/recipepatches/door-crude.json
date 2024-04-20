@@ -1,27 +1,27 @@
 [
     {
         "type": "Replace",
-        "configKeys": ["VanillaVariants_CrudeDoor_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_CrudeDoor_Enabled", "isValue": "true" }],
         "outputCode": "door-crude",
         "ingredients": [{ "ingredientCode": "log-*", "Code": "log-placed-*-ud", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Replace",
-        "configKeys": ["VanillaVariants_CrudeDoor_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_CrudeDoor_Enabled", "isValue": "true" }],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "door-crude",
         "ingredients": [{ "ingredientCode": "wildcrafttree:log-*", "Code": "log-placed-*-ud", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VanillaVariants_CrudeDoor_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_CrudeDoor_Enabled", "isValue": "true" }],
         "outputCode": "door-crude",
         "outputCodeNew": "vanvar:door-crude-{wood}",
         "ingredients": [{ "ingredientCode": "log-placed-*-ud", "Name": "wood", "SkipVariants": ["oak"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VanillaVariants_CrudeDoor_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_CrudeDoor_Enabled", "isValue": "true" }],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "door-crude",
         "outputCodeNew": "wildcrafttree:door-crude-{wood}",

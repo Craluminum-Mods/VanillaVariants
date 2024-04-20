@@ -1,27 +1,27 @@
 [
     {
         "type": "Replace",
-        "configKeys": ["VanillaVariants_TroughSmall_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_TroughSmall_Enabled", "isValue": "true" }],
         "outputCode": "trough-genericwood-small-ns",
         "ingredients": [{ "ingredientCode": "plank-*", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Replace",
-        "configKeys": ["VanillaVariants_TroughSmall_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_TroughSmall_Enabled", "isValue": "true" }],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "trough-genericwood-small-ns",
         "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VanillaVariants_TroughSmall_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_TroughSmall_Enabled", "isValue": "true" }],
         "outputCode": "trough-genericwood-small-ns",
         "outputCodeNew": "vanvar:trough-{wood}-small-ns",
         "ingredients": [{ "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VanillaVariants_TroughSmall_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_TroughSmall_Enabled", "isValue": "true" }],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "trough-genericwood-small-ns",
         "outputCodeNew": "wildcrafttree:trough-{wood}-small-ns",

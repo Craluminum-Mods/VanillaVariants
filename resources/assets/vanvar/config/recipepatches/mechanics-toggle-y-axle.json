@@ -1,20 +1,10 @@
 [
     {
-        "type": "Replace",
-        "configKeys": ["VanillaVariants_MechanicalToggle_Enabled", "VanillaVariants_MechanicalAxle_Enabled"],
-        "outputCode": "woodentoggle-ns",
-        "ingredients": [{ "ingredientCode": "plank-*", "AllowedVariants": ["oak"] }]
-    },
-    {
-        "type": "Replace",
-        "configKeys": ["VanillaVariants_MechanicalToggle_Enabled", "VanillaVariants_MechanicalAxle_Enabled"],
-        "dependsOn": [{ "modid": "wildcrafttree" }],
-        "outputCode": "woodentoggle-ns",
-        "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] }]
-    },
-    {
         "type": "Copy",
-        "configKeys": ["VanillaVariants_MechanicalToggle_Enabled", "VanillaVariants_MechanicalAxle_Enabled"],
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalToggle_Enabled", "isValue": "true" },
+            { "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "true" }
+        ],
         "outputCode": "woodentoggle-ns",
         "outputCodeNew": "vanvar:woodentoggle-{wood}-ns",
         "ingredients": [
@@ -24,7 +14,10 @@
     },
     {
         "type": "Copy",
-        "configKeys": ["VanillaVariants_MechanicalToggle_Enabled", "VanillaVariants_MechanicalAxle_Enabled"],
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalToggle_Enabled", "isValue": "true" },
+            { "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "true" }
+        ],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "woodentoggle-ns",
         "outputCodeNew": "wildcrafttree:woodentoggle-{wood}-ns",

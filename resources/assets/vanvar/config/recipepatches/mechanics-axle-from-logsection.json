@@ -1,20 +1,20 @@
 [
     {
         "type": "Replace",
-        "configKeys": ["VanillaVariants_MechanicalAxle_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "true" }],
         "outputCode": "woodenaxle-ud",
         "ingredients": [{ "ingredientCode": "logsection-*", "Code": "log-placed-*-ud", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VanillaVariants_MechanicalAxle_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "true" }],
         "outputCode": "woodenaxle-ud",
         "outputCodeNew": "vanvar:woodenaxle-{wood}-ud",
         "ingredients": [{ "ingredientCode": "log-*", "Code": "logsection-placed-*-ne-ud", "Name": "wood", "SkipVariants": ["oak"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VanillaVariants_MechanicalAxle_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "true" }],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "woodenaxle-ud",
         "outputCodeNew": "wildcrafttree:woodenaxle-{wood}-ud",

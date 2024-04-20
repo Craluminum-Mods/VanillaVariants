@@ -1,27 +1,27 @@
 [
     {
         "type": "Replace",
-        "configKeys": ["VanillaVariants_Sieve_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_Sieve_Enabled", "isValue": "true" }],
         "outputCode": "sieve-linen",
         "ingredients": [{ "ingredientCode": "plank-*", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Replace",
-        "configKeys": ["VanillaVariants_Sieve_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_Sieve_Enabled", "isValue": "true" }],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "sieve-linen",
         "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VanillaVariants_Sieve_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_Sieve_Enabled", "isValue": "true" }],
         "outputCode": "sieve-linen",
         "outputCodeNew": "vanvar:sieve-{wood}-linen",
         "ingredients": [{ "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
     },
     {
         "type": "Copy",
-        "configKeys": ["VanillaVariants_Sieve_Enabled"],
+        "conditions": [{ "when": "VanillaVariants_Sieve_Enabled", "isValue": "true" }],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "sieve-linen",
         "outputCodeNew": "wildcrafttree:sieve-{wood}-linen",
