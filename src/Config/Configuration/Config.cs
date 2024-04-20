@@ -5,8 +5,7 @@ public class Config
     public bool ExperimentalOverlayTest { get; set; } = true;
 
     public bool FixHenboxBugs { get; set; } = true;
-    public bool FixMechanicalHelveHammerTextures { get; set; } = true;
-    public bool FixMechanicalToggleBugs { get; set; } = true;
+    public bool FixMechanicalBlocksBugs { get; set; } = true;
 
     public bool CraftableCage { get; set; }
     public bool CraftableWagonWheels { get; set; }
@@ -54,8 +53,7 @@ public class Config
         ExperimentalOverlayTest = previousConfig.ExperimentalOverlayTest;
 
         FixHenboxBugs = previousConfig.FixHenboxBugs;
-        FixMechanicalHelveHammerTextures = previousConfig.FixMechanicalHelveHammerTextures;
-        FixMechanicalToggleBugs = previousConfig.FixMechanicalToggleBugs;
+        FixMechanicalBlocksBugs = previousConfig.FixMechanicalBlocksBugs;
 
         CraftableCage = previousConfig.CraftableCage;
         CraftableWagonWheels = previousConfig.CraftableWagonWheels;
