@@ -14,7 +14,7 @@
             },
             "preLaunchTask": "Build",
             "args": [
-                "--playStyle" , "preset-surviveandbuild",
+                // "--playStyle" , "preset-surviveandbuild",
                 "--openWorld" , "modding test world",
                 "--tracelog",
                 "--addModPath", "${workspaceFolder}/bin/Debug/net7",
@@ -36,7 +36,7 @@
             },
             "preLaunchTask": "Build",
             "args": [
-                "--playStyle" , "preset-surviveandbuild",
+                // "--playStyle" , "preset-surviveandbuild",
                 "--openWorld" , "modding test world",
                 "--tracelog",
                 "--addModPath", "${workspaceFolder}/bin/Debug/net7",
