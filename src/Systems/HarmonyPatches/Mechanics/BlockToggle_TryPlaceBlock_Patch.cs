@@ -34,8 +34,8 @@ public static class BlockToggle_TryPlaceBlock_Patch
 
         if (Block_TryPlaceBlock_ReversePatch.Base(__instance, world, byPlayer, itemstack, blockSel, ref failureCode))
         {
-        	__instance.WasPlaced(world, blockSel.Position, null);
-        	__result = true;
+            __instance.WasPlaced(world, blockSel.Position, null);
+            __result = true;
             return false;
         }
         __result = false;

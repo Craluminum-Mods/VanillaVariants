@@ -1,0 +1,70 @@
+[
+    // replace all logs and log sections with oak log, planks with oak plank
+    {
+        "type": "Replace",
+        "conditions": [{ "when": "VanillaVariants_MechanicalClutch_Enabled", "isValue": "true" }],
+        "outputCode": "clutch-north",
+        "ingredients": [
+            { "ingredientCode": "log*", "Code": "log-placed-*-ud", "AllowedVariants": ["oak"] },
+            { "ingredientCode": "plank-*", "AllowedVariants": ["oak"] }
+        ]
+    },
+    {
+        "type": "Replace",
+        "conditions": [{ "when": "VanillaVariants_MechanicalClutch_Enabled", "isValue": "true" }],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "clutch-north",
+        "ingredients": [
+            { "ingredientCode": "wildcrafttree:log*", "Code": "log-placed-*-ud", "AllowedVariants": ["oak"] },
+            { "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] }
+        ]
+    },
+
+    // from logs and planks
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_MechanicalClutch_Enabled", "isValue": "true" }],
+        "outputCode": "clutch-north",
+        "outputCodeNew": "vanvar:clutch-{wood}-north",
+        "ingredients": [
+            { "ingredientCode": "log*", "Code": "log-placed-*-ud", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_MechanicalClutch_Enabled", "isValue": "true" }],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "clutch-north",
+        "outputCodeNew": "wildcrafttree:clutch-{wood}-north",
+        "ingredients": [
+            { "ingredientCode": "log*", "Code": "wildcrafttree:log-placed-*-ud", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "plank-*", "Code": "wildcrafttree:plank-*", "Name": "wood", "SkipVariants": ["oak"] }
+        ]
+    },
+
+    // from log sections and planks
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_MechanicalClutch_Enabled", "isValue": "true" }],
+        "outputCode": "clutch-north",
+        "outputCodeNew": "vanvar:clutch-{wood}-north",
+        "RecipeGroup": 1,
+        "ingredients": [
+            { "ingredientCode": "log*", "Code": "logsection-placed-*-ne-ud", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_MechanicalClutch_Enabled", "isValue": "true" }],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "clutch-north",
+        "outputCodeNew": "wildcrafttree:clutch-{wood}-north",
+        "RecipeGroup": 1,
+        "ingredients": [
+            { "ingredientCode": "log*", "Code": "wildcrafttree:logsection-placed-*-ne-ud", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "plank-*", "Code": "wildcrafttree:plank-*", "Name": "wood", "SkipVariants": ["oak"] }
+        ]
+    }
+]
