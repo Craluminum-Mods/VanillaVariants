@@ -20,7 +20,7 @@
         "conditions": [{ "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "true" }],
         "outputCode": "woodenaxle-ud",
         "outputCodeNew": "vanvar:woodenaxle-{wood}-ud",
-        "ingredients": [{ "ingredientCode": "log-placed-*-ud", "Name": "wood", "SkipVariants": ["oak"] }]
+        "ingredients": [{ "ingredientCode": "log*", "Code": "log-placed-*-ud", "Name": "wood", "SkipVariants": ["oak"] }]
     },
     {
         "type": "Copy",
@@ -28,7 +28,7 @@
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "woodenaxle-ud",
         "outputCodeNew": "wildcrafttree:woodenaxle-{wood}-ud",
-        "ingredients": [{ "ingredientCode": "log-placed-*-ud", "Code": "wildcrafttree:log-placed-*-ud", "Name": "wood", "SkipVariants": ["oak"] }]
+        "ingredients": [{ "ingredientCode": "log*", "Code": "wildcrafttree:log-placed-*-ud", "Name": "wood", "SkipVariants": ["oak"] }]
     },
 
     // from log sections
@@ -38,7 +38,7 @@
         "outputCode": "woodenaxle-ud",
         "outputCodeNew": "vanvar:woodenaxle-{wood}-ud",
         "RecipeGroup": 1,
-        "ingredients": [{ "ingredientCode": "log-*", "Code": "logsection-placed-*-ne-ud", "Name": "wood", "SkipVariants": ["oak"] }]
+        "ingredients": [{ "ingredientCode": "log*", "Code": "logsection-placed-*-ne-ud", "Name": "wood", "SkipVariants": ["oak"] }]
     },
     {
         "type": "Copy",
@@ -47,6 +47,6 @@
         "outputCode": "woodenaxle-ud",
         "outputCodeNew": "wildcrafttree:woodenaxle-{wood}-ud",
         "RecipeGroup": 1,
-        "ingredients": [{ "ingredientCode": "log-*", "Code": "wildcrafttree:logsection-placed-*-ne-ud", "Name": "wood", "SkipVariants": ["oak"] }]
+        "ingredients": [{ "ingredientCode": "log*", "Code": "wildcrafttree:logsection-placed-*-ne-ud", "Name": "wood", "SkipVariants": ["oak"] }]
     }
 ]

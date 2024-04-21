@@ -7,7 +7,7 @@
         "ChangeQuantity": true,
         "QuantityNew": 4,
         "RecipeGroup": 5,
-        "ingredients": [{ "ingredientCode": "log-*", "Code": "logsection-placed-*-ne-ud", "Name": "wood" }]
+        "ingredients": [{ "ingredientCode": "log*", "Code": "logsection-placed-*-ne-ud", "Name": "wood" }]
     },
 
     {
@@ -19,6 +19,6 @@
         "ChangeQuantity": true,
         "QuantityNew": 4,
         "RecipeGroup": 5,
-        "ingredients": [{ "ingredientCode": "log-*", "Code": "wildcrafttree:logsection-placed-*-ne-ud", "Name": "wood" }]
+        "ingredients": [{ "ingredientCode": "log*", "Code": "wildcrafttree:logsection-placed-*-ne-ud", "Name": "wood" }]
     }
 ]

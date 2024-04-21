@@ -7,7 +7,7 @@
         "ChangeQuantity": true,
         "QuantityNew": 3,
         "RecipeGroup": 3,
-        "ingredients": [{ "ingredientCode": "log-placed-*-ud", "Name": "wood", "AllowedVariants": ["kapok", "purpleheart", "ebony"] }]
+        "ingredients": [{ "ingredientCode": "log*", "Code": "log-placed-*-ud", "Name": "wood", "AllowedVariants": ["kapok", "purpleheart", "ebony"] }]
     },
 
     {
@@ -21,7 +21,7 @@
         "RecipeGroup": 3,
         "ingredients": [
             {
-                "ingredientCode": "log-*",
+                "ingredientCode": "log*",
                 "Code": "wildcrafttree:log-placed-*-ud",
                 "Name": "wood",
                 "AllowedVariants": ["catalpa", "jacaranda", "banyan", "empresstree", "guajacum", "umnini", "willow", "bluemahoe", "sal", "satinash"]

@@ -12,7 +12,7 @@
         "RecipeGroup": 2,
         "ingredients": [
             {
-                "ingredientCode": "log-*",
+                "ingredientCode": "log*",
                 "Code": "wildcrafttree:lognarrow-placed-*-ud",
                 "Name": "wood",
                 "AllowedVariants": ["sourwood", "thinbearnut", "thinlarch", "thinbirch", "thinwillow", "redwillow", "alder", "brideinwhite", "thinmahoe", "wiliwili"]

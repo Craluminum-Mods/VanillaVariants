@@ -7,7 +7,7 @@
         "ChangeQuantity": true,
         "QuantityNew": 4,
         "RecipeGroup": 4,
-        "ingredients": [{ "ingredientCode": "log-placed-*-ud", "Name": "wood", "AllowedVariants": ["birch", "maple", "pine", "acacia", "redwood", "larch", "baldcypress", "walnut"] }]
+        "ingredients": [{ "ingredientCode": "log*", "Code": "log-placed-*-ud", "Name": "wood", "AllowedVariants": ["birch", "maple", "pine", "acacia", "redwood", "larch", "baldcypress", "walnut"] }]
     },
 
     {
@@ -21,7 +21,7 @@
         "RecipeGroup": 4,
         "ingredients": [
             {
-                "ingredientCode": "log-*",
+                "ingredientCode": "log*",
                 "Code": "wildcrafttree:log-placed-*-ud",
                 "Name": "wood",
                 "AllowedVariants": [

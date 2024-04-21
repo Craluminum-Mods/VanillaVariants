@@ -1,23 +1,26 @@
 [
+    // replace all logs and log sections with oak log
     {
         "type": "Replace",
         "conditions": [{ "when": "VanillaVariants_CrudeDoor_Enabled", "isValue": "true" }],
         "outputCode": "door-crude",
-        "ingredients": [{ "ingredientCode": "log-*", "Code": "log-placed-*-ud", "AllowedVariants": ["oak"] }]
+        "ingredients": [{ "ingredientCode": "log*", "Code": "log-placed-*-ud", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Replace",
         "conditions": [{ "when": "VanillaVariants_CrudeDoor_Enabled", "isValue": "true" }],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "door-crude",
-        "ingredients": [{ "ingredientCode": "wildcrafttree:log-*", "Code": "log-placed-*-ud", "AllowedVariants": ["oak"] }]
+        "ingredients": [{ "ingredientCode": "wildcrafttree:log*", "Code": "log-placed-*-ud", "AllowedVariants": ["oak"] }]
     },
+
+    // from logs
     {
         "type": "Copy",
         "conditions": [{ "when": "VanillaVariants_CrudeDoor_Enabled", "isValue": "true" }],
         "outputCode": "door-crude",
         "outputCodeNew": "vanvar:door-crude-{wood}",
-        "ingredients": [{ "ingredientCode": "log-placed-*-ud", "Name": "wood", "SkipVariants": ["oak"] }]
+        "ingredients": [{ "ingredientCode": "log*", "Code": "log-placed-*-ud", "Name": "wood", "SkipVariants": ["oak"] }]
     },
     {
         "type": "Copy",
@@ -25,6 +28,25 @@
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "door-crude",
         "outputCodeNew": "wildcrafttree:door-crude-{wood}",
-        "ingredients": [{ "ingredientCode": "log-placed-*-ud", "Code": "wildcrafttree:log-placed-*-ud", "Name": "wood", "SkipVariants": ["oak"] }]
+        "ingredients": [{ "ingredientCode": "log*", "Code": "wildcrafttree:log-placed-*-ud", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+
+    // from log sections
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_CrudeDoor_Enabled", "isValue": "true" }],
+        "outputCode": "door-crude",
+        "outputCodeNew": "vanvar:door-crude-{wood}",
+        "RecipeGroup": 1,
+        "ingredients": [{ "ingredientCode": "log*", "Code": "logsection-placed-*-ne-ud", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_CrudeDoor_Enabled", "isValue": "true" }],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "door-crude",
+        "outputCodeNew": "wildcrafttree:door-crude-{wood}",
+        "RecipeGroup": 1,
+        "ingredients": [{ "ingredientCode": "log*", "Code": "wildcrafttree:logsection-placed-*-ne-ud", "Name": "wood", "SkipVariants": ["oak"] }]
     }
 ]
