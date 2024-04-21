@@ -1,0 +1,52 @@
+[
+    // replace all logs and log sections with oak log
+    {
+        "type": "Replace",
+        "conditions": [{ "when": "VanillaVariants_MechanicalWindmillRotor_Enabled", "isValue": "true" }],
+        "outputCode": "windmillrotor-north",
+        "ingredients": [{ "ingredientCode": "log*", "Code": "log-placed-*-ud", "AllowedVariants": ["oak"] }]
+    },
+    {
+        "type": "Replace",
+        "conditions": [{ "when": "VanillaVariants_MechanicalWindmillRotor_Enabled", "isValue": "true" }],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "windmillrotor-north",
+        "ingredients": [{ "ingredientCode": "wildcrafttree:log*", "Code": "log-placed-*-ud", "AllowedVariants": ["oak"] }]
+    },
+
+    // from logs
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_MechanicalWindmillRotor_Enabled", "isValue": "true" }],
+        "outputCode": "windmillrotor-north",
+        "outputCodeNew": "vanvar:windmillrotor-{wood}-north",
+        "ingredients": [{ "ingredientCode": "log*", "Code": "log-placed-*-ud", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_MechanicalWindmillRotor_Enabled", "isValue": "true" }],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "windmillrotor-north",
+        "outputCodeNew": "wildcrafttree:windmillrotor-{wood}-north",
+        "ingredients": [{ "ingredientCode": "log*", "Code": "wildcrafttree:log-placed-*-ud", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+
+    // from log sections
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_MechanicalWindmillRotor_Enabled", "isValue": "true" }],
+        "outputCode": "windmillrotor-north",
+        "outputCodeNew": "vanvar:windmillrotor-{wood}-north",
+        "RecipeGroup": 1,
+        "ingredients": [{ "ingredientCode": "log*", "Code": "logsection-placed-*-ne-ud", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_MechanicalWindmillRotor_Enabled", "isValue": "true" }],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "windmillrotor-north",
+        "outputCodeNew": "wildcrafttree:windmillrotor-{wood}-north",
+        "RecipeGroup": 1,
+        "ingredients": [{ "ingredientCode": "log*", "Code": "wildcrafttree:logsection-placed-*-ne-ud", "Name": "wood", "SkipVariants": ["oak"] }]
+    }
+]

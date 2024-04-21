@@ -31,6 +31,7 @@ public class Config
     public bool MechanicalHelveHammerItem { get; set; } = true;
     public bool MechanicalToggle { get; set; } = true;
     public bool MechanicalTransmission { get; set; } = true;
+    public bool MechanicalWindmillRotor { get; set; } = true;
     public bool Moldrack { get; set; } = true;
     public bool OmokTabletop { get; set; } = true;
     public bool Palisade { get; set; } = true;
@@ -85,6 +86,7 @@ public class Config
         MechanicalHelveHammerItem = previousConfig.MechanicalHelveHammerItem;
         MechanicalToggle = previousConfig.MechanicalToggle;
         MechanicalTransmission = previousConfig.MechanicalTransmission;
+        MechanicalWindmillRotor = previousConfig.MechanicalWindmillRotor;
         Moldrack = previousConfig.Moldrack;
         OmokTabletop = previousConfig.OmokTabletop;
         Palisade = previousConfig.Palisade;
