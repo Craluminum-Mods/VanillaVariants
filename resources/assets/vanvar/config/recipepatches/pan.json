@@ -1,17 +1,20 @@
 [
+    // replace all logs and log sections with oak log
     {
         "type": "Replace",
         "conditions": [{ "when": "VanillaVariants_WoodenPan_Enabled", "isValue": "true" }],
         "outputCode": "pan-wooden",
-        "ingredients": [{ "ingredientCode": "log-*", "Code": "log-placed-*-ud", "AllowedVariants": ["oak"] }]
+        "ingredients": [{ "ingredientCode": "log*", "Code": "log-placed-*-ud", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Replace",
         "conditions": [{ "when": "VanillaVariants_WoodenPan_Enabled", "isValue": "true" }],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "pan-wooden",
-        "ingredients": [{ "ingredientCode": "wildcrafttree:log-*", "Code": "log-placed-*-ud", "AllowedVariants": ["oak"] }]
+        "ingredients": [{ "ingredientCode": "wildcrafttree:log*", "Code": "log-placed-*-ud", "AllowedVariants": ["oak"] }]
     },
+
+    // from logs
     {
         "type": "Copy",
         "conditions": [{ "when": "VanillaVariants_WoodenPan_Enabled", "isValue": "true" }],
@@ -26,5 +29,24 @@
         "outputCode": "pan-wooden",
         "outputCodeNew": "wildcrafttree:pan-{wood}",
         "ingredients": [{ "ingredientCode": "log-placed-*-ud", "Code": "wildcrafttree:log-placed-*-ud", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+
+    // from log sections
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_WoodenPan_Enabled", "isValue": "true" }],
+        "outputCode": "pan-wooden",
+        "outputCodeNew": "vanvar:pan-{wood}",
+        "RecipeGroup": 1,
+        "ingredients": [{ "ingredientCode": "log-*", "Code": "logsection-placed-*-ne-ud", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_WoodenPan_Enabled", "isValue": "true" }],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "pan-wooden",
+        "outputCodeNew": "wildcrafttree:pan-{wood}",
+        "RecipeGroup": 1,
+        "ingredients": [{ "ingredientCode": "log-*", "Code": "wildcrafttree:logsection-placed-*-ne-ud", "Name": "wood", "SkipVariants": ["oak"] }]
     }
 ]

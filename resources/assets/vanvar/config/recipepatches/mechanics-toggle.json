@@ -1,4 +1,5 @@
 [
+    // replace planks with oak plank
     {
         "type": "Replace",
         "conditions": [{ "when": "VanillaVariants_MechanicalToggle_Enabled", "isValue": "true" }],
@@ -13,6 +14,7 @@
         "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] }]
     },
 
+    // from planks, but keep vanilla axle
     {
         "type": "Copy",
         "conditions": [
@@ -33,5 +35,34 @@
         "outputCode": "woodentoggle-ns",
         "outputCodeNew": "wildcrafttree:woodentoggle-{wood}-ns",
         "ingredients": [{ "ingredientCode": "plank-*", "Code": "wildcrafttree:plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+
+    // from planks and wood typed axles
+    {
+        "type": "Copy",
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalToggle_Enabled", "isValue": "true" },
+            { "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "true" }
+        ],
+        "outputCode": "woodentoggle-ns",
+        "outputCodeNew": "vanvar:woodentoggle-{wood}-ns",
+        "ingredients": [
+            { "ingredientCode": "woodenaxle-ud", "Code": "vanvar:woodenaxle-*-ud", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalToggle_Enabled", "isValue": "true" },
+            { "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "true" }
+        ],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "woodentoggle-ns",
+        "outputCodeNew": "wildcrafttree:woodentoggle-{wood}-ns",
+        "ingredients": [
+            { "ingredientCode": "woodenaxle-ud", "Code": "wildcrafttree:woodenaxle-*-ud", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "plank-*", "Code": "wildcrafttree:plank-*", "Name": "wood", "SkipVariants": ["oak"] }
+        ]
     }
 ]
