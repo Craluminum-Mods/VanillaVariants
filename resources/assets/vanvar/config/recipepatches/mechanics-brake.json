@@ -1,0 +1,124 @@
+[
+    // replace all logs and log sections with oak log
+    {
+        "type": "Replace",
+        "conditions": [{ "when": "VanillaVariants_MechanicalBrake_Enabled", "isValue": "true" }],
+        "outputCode": "brake-north",
+        "ingredients": [{ "ingredientCode": "log*", "Code": "log-placed-*-ud", "AllowedVariants": ["oak"] }]
+    },
+    {
+        "type": "Replace",
+        "conditions": [{ "when": "VanillaVariants_MechanicalBrake_Enabled", "isValue": "true" }],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "brake-north",
+        "ingredients": [{ "ingredientCode": "wildcrafttree:log*", "Code": "log-placed-*-ud", "AllowedVariants": ["oak"] }]
+    },
+
+    // from logs, but keep vanilla axle
+    {
+        "type": "Copy",
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalBrake_Enabled", "isValue": "true" },
+            { "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "false" }
+        ],
+        "outputCode": "brake-north",
+        "outputCodeNew": "vanvar:brake-{wood}-north",
+        "ingredients": [{ "ingredientCode": "log-placed-*-ud", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+    {
+        "type": "Copy",
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalBrake_Enabled", "isValue": "true" },
+            { "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "false" }
+        ],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "brake-north",
+        "outputCodeNew": "wildcrafttree:brake-{wood}-north",
+        "ingredients": [{ "ingredientCode": "log-placed-*-ud", "Code": "wildcrafttree:log-placed-*-ud", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+
+    // from logs and wood typed axles
+    {
+        "type": "Copy",
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalBrake_Enabled", "isValue": "true" },
+            { "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "true" }
+        ],
+        "outputCode": "brake-north",
+        "outputCodeNew": "vanvar:brake-{wood}-north",
+        "ingredients": [
+            { "ingredientCode": "woodenaxle-ud", "Code": "vanvar:woodenaxle-*-ud", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "log-placed-*-ud", "Name": "wood", "SkipVariants": ["oak"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalBrake_Enabled", "isValue": "true" },
+            { "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "true" }
+        ],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "brake-north",
+        "outputCodeNew": "wildcrafttree:brake-{wood}-north",
+        "ingredients": [
+            { "ingredientCode": "woodenaxle-ud", "Code": "wildcrafttree:woodenaxle-*-ud", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "log-placed-*-ud", "Code": "wildcrafttree:log-placed-*-ud", "Name": "wood", "SkipVariants": ["oak"] }
+        ]
+    },
+
+    // from log sections, but keep vanilla axle
+    {
+        "type": "Copy",
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalBrake_Enabled", "isValue": "true" },
+            { "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "false" }
+        ],
+        "outputCode": "brake-north",
+        "outputCodeNew": "vanvar:brake-{wood}-north",
+        "RecipeGroup": 1,
+        "ingredients": [{ "ingredientCode": "log-*", "Code": "logsection-placed-*-ne-ud", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+    {
+        "type": "Copy",
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalBrake_Enabled", "isValue": "true" },
+            { "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "false" }
+        ],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "brake-north",
+        "outputCodeNew": "wildcrafttree:brake-{wood}-north",
+        "RecipeGroup": 1,
+        "ingredients": [{ "ingredientCode": "log-*", "Code": "wildcrafttree:logsection-placed-*-ne-ud", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+
+    // from log sections and wood typed axles
+    {
+        "type": "Copy",
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalBrake_Enabled", "isValue": "true" },
+            { "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "true" }
+        ],
+        "outputCode": "brake-north",
+        "outputCodeNew": "vanvar:brake-{wood}-north",
+        "RecipeGroup": 1,
+        "ingredients": [
+            { "ingredientCode": "woodenaxle-ud", "Code": "vanvar:woodenaxle-*-ud", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "log-*", "Code": "logsection-placed-*-ne-ud", "Name": "wood", "SkipVariants": ["oak"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalBrake_Enabled", "isValue": "true" },
+            { "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "true" }
+        ],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "brake-north",
+        "outputCodeNew": "wildcrafttree:brake-{wood}-north",
+        "RecipeGroup": 1,
+        "ingredients": [
+            { "ingredientCode": "woodenaxle-ud", "Code": "wildcrafttree:woodenaxle-*-ud", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "log-*", "Code": "wildcrafttree:logsection-placed-*-ne-ud", "Name": "wood", "SkipVariants": ["oak"] }
+        ]
+    }
+]

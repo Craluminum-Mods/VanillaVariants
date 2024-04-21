@@ -25,6 +25,7 @@ public class Config
     public bool Ladder { get; set; } = true;
     public bool MechanicalAngledGears { get; set; } = true;
     public bool MechanicalAxle { get; set; } = true;
+    public bool MechanicalBrake { get; set; } = true;
     public bool MechanicalHelveHammerBase { get; set; } = true;
     public bool MechanicalHelveHammerItem { get; set; } = true;
     public bool MechanicalToggle { get; set; } = true;
@@ -76,6 +77,7 @@ public class Config
         Ladder = previousConfig.Ladder;
         MechanicalAngledGears = previousConfig.MechanicalAngledGears;
         MechanicalAxle = previousConfig.MechanicalAxle;
+        MechanicalBrake = previousConfig.MechanicalBrake;
         MechanicalHelveHammerBase = previousConfig.MechanicalHelveHammerBase;
         MechanicalHelveHammerItem = previousConfig.MechanicalHelveHammerItem;
         MechanicalToggle = previousConfig.MechanicalToggle;

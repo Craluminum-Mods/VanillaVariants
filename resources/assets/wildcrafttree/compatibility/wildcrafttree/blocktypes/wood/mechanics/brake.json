@@ -1,0 +1,82 @@
+{
+    "code": "brake",
+    "class": "BlockBrake",
+    "entityClass": "Brake",
+    "entityBehaviors": [{ "name": "MPBrake" }, { "name": "Animatable" }],
+    "behaviors": [
+        {
+            "name": "VanillaVariants.BbName",
+            "properties": {
+                "parts": ["block-brake-north", " (", "material-{wood}", ")"]
+            }
+        },
+        { "name": "HorizontalOrientable" }
+    ],
+    "attributes": {
+        "fromVanVarMod": true,
+        "handbook": {
+            "groupBy": ["brake-*"]
+        }
+    },
+    "variantgroups": [
+        { "code": "wood", "loadFromProperties": "wildcrafttree:block/wood" },
+        { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
+    ],
+    "creativeinventory": {
+        "general": ["*-north"],
+        "mechanics": ["*-north"],
+        "vanvar": ["*-north"]
+    },
+    "shapeInventory": { "base": "game:block/wood/mechanics/brake-inventory" },
+    "shapeByType": {
+        "*-north": { "base": "game:block/wood/mechanics/brake-stand", "rotateY": 0 },
+        "*-east": { "base": "game:block/wood/mechanics/brake-stand", "rotateY": 270 },
+        "*-south": { "base": "game:block/wood/mechanics/brake-stand", "rotateY": 180 },
+        "*-west": { "base": "game:block/wood/mechanics/brake-stand", "rotateY": 90 }
+    },
+    "blockmaterial": "Wood",
+    "heldTpIdleAnimation": "holdbothhandslarge",
+    "heldRightReadyAnimation": "heldblockready",
+    "heldTpUseAnimation": "twohandplaceblock",
+    "textures": {
+        "wood": { "base": "game:block/wood/debarked/{wood}" },
+        "oak": { "base": "wildcrafttree:block/wood/planks/{wood}1" },
+        "oak1": { "base": "game:block/wood/debarked/{wood}" },
+        "oak3": { "base": "wildcrafttree:block/wood/treetrunk/{wood}" },
+        "oak-h": { "base": "wildcrafttree:block/wood/bark/{wood}-h" }
+    },
+    "sidesolid": { "all": false },
+    "sideopaque": { "all": false },
+    "rainPermeable": true,
+    "resistance": 3.5,
+    "lightAbsorption": 0,
+    "maxStackSize": 1,
+    "drops": [{ "type": "block", "code": "brake-{wood}-north", "quantity": { "avg": 1 } }],
+    "groundTransform": {
+        "translation": { "x": 0, "y": 0, "z": 0 },
+        "rotation": { "x": -90, "y": 0, "z": 0 },
+        "origin": { "x": 0.5, "y": 0.45, "z": 0.38 },
+        "scale": 2.7
+    },
+    "guiTransform": {
+        "rotation": { "x": -30, "y": -146, "z": 0 },
+        "origin": { "x": 0.5, "y": 0.4, "z": 0.4 },
+        "scale": 1.2
+    },
+    "tpHandTransform": {
+        "translation": { "x": -1.03, "y": -0.4, "z": -0.6 },
+        "rotation": { "x": 0, "y": -28, "z": 90 },
+        "origin": { "x": 0.5, "y": 0.25, "z": 0.5 },
+        "scale": 0.55
+    },
+    "collisionSelectionBoxByType": {
+        "*-we": { "x1": 0, "y1": 0, "z1": 0.25, "x2": 1, "y2": 0.875, "z2": 0.75 },
+        "*-ns": { "x1": 0, "y1": 0, "z1": 0.25, "x2": 1, "y2": 0.875, "z2": 0.75, "rotateY": 90 }
+    },
+    "sounds": {
+        "hit": "game:block/planks",
+        "break": "game:block/planks",
+        "place": "game:block/planks",
+        "walk": "game:walk/wood"
+    }
+}
