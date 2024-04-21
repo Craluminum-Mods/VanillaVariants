@@ -40,7 +40,7 @@
     "heldTpUseAnimation": "twohandplaceblock",
     "textures": {
         "wood": { "base": "game:block/wood/debarked/{wood}" },
-        "oak": { "base": "wildcrafttree:block/wood/planks/{wood}1" },
+        "oak": { "base": "game:block/wood/debarked/{wood}" },
         "oak1": { "base": "game:block/wood/debarked/{wood}" },
         "oak3": { "base": "wildcrafttree:block/wood/treetrunk/{wood}" },
         "oak-h": { "base": "wildcrafttree:block/wood/bark/{wood}-h" }

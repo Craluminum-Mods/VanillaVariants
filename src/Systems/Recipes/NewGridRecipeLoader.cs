@@ -15,7 +15,6 @@ public class NewGridRecipeLoader : ModSystem
     public static int ReplacedCount { get; set; } = 0;
     public static int NewCount { get; set; } = 0;
     public static int UnmetConditionCount { get; set; } = 0;
-    // public static int ErrorCount { get; set; } = 0;
 
     public override bool ShouldLoad(EnumAppSide forSide) => forSide.IsServer();
     public override double ExecuteOrder() => 1.01;
@@ -58,14 +57,6 @@ public class NewGridRecipeLoader : ModSystem
             {
                 sb.Append($", unmet conditions on {UnmetConditionCount} patches");
             }
-            // if (ErrorCount > 0)
-            // {
-            //     sb.Append($", had errors on {ErrorCount} patches");
-            // }
-            // else
-            // {
-            //     sb.Append(string.Format(", no errors", ErrorCount));
-            // }
         }
         api.Logger.Notification(sb.ToString());
         api.Logger.VerboseDebug("[Vanilla Variants] Patchloader finished");
@@ -81,6 +72,5 @@ public class NewGridRecipeLoader : ModSystem
         ReplacedCount = 0;
         NewCount = 0;
         UnmetConditionCount = 0;
-        // ErrorCount = 0;
     }
 }

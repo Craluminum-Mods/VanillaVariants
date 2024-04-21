@@ -33,10 +33,6 @@ public static class BlockEntityHenBox_TryAddEgg_Patch
         chickNames[eggs] = (chickCode == null) ? null : entity.Code.CopyWithPath(chickCode);
         eggs++;
 
-        // original
-        // Block block = Api.World.GetBlock(new AssetLocation(base.Block.FirstCodePart() + "-" + num + ((num > 1) ? "eggs" : "egg")));
-
-        // fixed
         Block replacementBlock = __instance.Api.World.GetBlock(__instance.Block.CodeWithVariant("eggCount", eggs + ((eggs > 1) ? "eggs" : "egg")));
 
         if (replacementBlock == null)

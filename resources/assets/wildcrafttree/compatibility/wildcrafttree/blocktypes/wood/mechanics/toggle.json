@@ -33,7 +33,7 @@
         "*-we": { "base": "game:block/wood/mechanics/toggle-moving", "rotateY": 0 }
     },
     "textures": {
-        "oak1": { "base": "wildcrafttree:block/wood/planks/{wood}1" }
+        "oak1": { "base": "game:block/wood/debarked/{wood}" }
     },
     "blockmaterial": "Wood",
     "heldTpIdleAnimation": "holdbothhandslarge",

@@ -46,12 +46,13 @@ public static class BlockAxle_TryPlaceBlock_Patch
             }
         }
 
-        // if (base.TryPlaceBlock(world, byPlayer, itemstack, blockSel, ref failureCode))
-        // {
-        // 	this.WasPlaced(world, blockSel.Position, null);
-        // 	__result = true;
-        //     return false;
-        // }
-        return true;
+        if (Block_TryPlaceBlock_ReversePatch.Base(__instance, world, byPlayer, itemstack, blockSel, ref failureCode))
+        {
+            __instance.WasPlaced(world, blockSel.Position, null);
+            __result = true;
+            return false;
+        }
+        __result = false;
+        return false;
     }
 }
