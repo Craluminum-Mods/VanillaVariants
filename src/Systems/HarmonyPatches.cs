@@ -39,6 +39,8 @@ public class HarmonyPatches : ModSystem
             HarmonyInstance.Patch(original: typeof(BEBrake).GetMethod("GenOpenedMesh", AccessTools.all), prefix: typeof(BEBrake_GenOpenedMesh_Patch).GetMethod(nameof(BEBrake_GenOpenedMesh_Patch.Prefix)));
             HarmonyInstance.CreateReversePatcher(original: typeof(Block).GetMethod(nameof(Block.TryPlaceBlock)), standin: typeof(Block_TryPlaceBlock_ReversePatch).GetMethod(nameof(Block_TryPlaceBlock_ReversePatch.Base))).Patch(HarmonyReversePatchType.Original);
             HarmonyInstance.Patch(original: typeof(BlockBrake).GetMethod(nameof(BlockBrake.TryPlaceBlock)), prefix: typeof(BlockBrake_TryPlaceBlock_Patch).GetMethod(nameof(BlockBrake_TryPlaceBlock_Patch.Prefix)));
+            HarmonyInstance.Patch(original: typeof(BlockTransmission).GetMethod(nameof(BlockTransmission.IsOrientedTo)), prefix: typeof(BlockTransmission_IsOrientedTo_Patch).GetMethod(nameof(BlockTransmission_IsOrientedTo_Patch.Prefix)));
+            HarmonyInstance.Patch(original: typeof(BlockTransmission).GetMethod(nameof(BlockTransmission.TryPlaceBlock)), prefix: typeof(BlockTransmission_TryPlaceBlock_Patch).GetMethod(nameof(BlockTransmission_TryPlaceBlock_Patch.Prefix)));
         }
     }
 
@@ -70,6 +72,8 @@ public class HarmonyPatches : ModSystem
             HarmonyInstance.Unpatch(original: typeof(BEBrake).GetMethod("GenOpenedMesh", AccessTools.all), HarmonyPatchType.All, HarmonyInstance.Id);
             HarmonyInstance.Unpatch(original: typeof(Block).GetMethod(nameof(Block.TryPlaceBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
             HarmonyInstance.Unpatch(original: typeof(BlockBrake).GetMethod(nameof(BlockBrake.TryPlaceBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
+            HarmonyInstance.Unpatch(original: typeof(BlockTransmission).GetMethod(nameof(BlockTransmission.IsOrientedTo)), HarmonyPatchType.All, HarmonyInstance.Id);
+            HarmonyInstance.Unpatch(original: typeof(BlockTransmission).GetMethod(nameof(BlockTransmission.TryPlaceBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
         }
     }
 }

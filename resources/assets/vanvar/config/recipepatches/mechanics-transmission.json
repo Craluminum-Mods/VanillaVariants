@@ -1,0 +1,68 @@
+[
+    // replace planks with oak plank
+    {
+        "type": "Replace",
+        "conditions": [{ "when": "VanillaVariants_MechanicalTransmission_Enabled", "isValue": "true" }],
+        "outputCode": "transmission-ns",
+        "ingredients": [{ "ingredientCode": "plank-*", "AllowedVariants": ["oak"] }]
+    },
+    {
+        "type": "Replace",
+        "conditions": [{ "when": "VanillaVariants_MechanicalTransmission_Enabled", "isValue": "true" }],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "transmission-ns",
+        "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] }]
+    },
+
+    // from planks, but keep vanilla angled gears
+    {
+        "type": "Copy",
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalTransmission_Enabled", "isValue": "true" },
+            { "when": "VanillaVariants_MechanicalAngledGears_Enabled", "isValue": "false" }
+        ],
+        "outputCode": "transmission-ns",
+        "outputCodeNew": "vanvar:transmission-{wood}-ns",
+        "ingredients": [{ "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+    {
+        "type": "Copy",
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalTransmission_Enabled", "isValue": "true" },
+            { "when": "VanillaVariants_MechanicalAngledGears_Enabled", "isValue": "false" }
+        ],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "transmission-ns",
+        "outputCodeNew": "wildcrafttree:transmission-{wood}-ns",
+        "ingredients": [{ "ingredientCode": "plank-*", "Code": "wildcrafttree:plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+
+    // from planks and wood typed angled gears
+    {
+        "type": "Copy",
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalTransmission_Enabled", "isValue": "true" },
+            { "when": "VanillaVariants_MechanicalAngledGears_Enabled", "isValue": "true" }
+        ],
+        "outputCode": "transmission-ns",
+        "outputCodeNew": "vanvar:transmission-{wood}-ns",
+        "ingredients": [
+            { "ingredientCode": "angledgears-s", "Code": "vanvar:angledgears-*-s", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalTransmission_Enabled", "isValue": "true" },
+            { "when": "VanillaVariants_MechanicalAngledGears_Enabled", "isValue": "true" }
+        ],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "transmission-ns",
+        "outputCodeNew": "wildcrafttree:transmission-{wood}-ns",
+        "ingredients": [
+            { "ingredientCode": "angledgears-s", "Code": "wildcrafttree:angledgears-*-s", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "plank-*", "Code": "wildcrafttree:plank-*", "Name": "wood", "SkipVariants": ["oak"] }
+        ]
+    }
+]

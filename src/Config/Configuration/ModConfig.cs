@@ -51,6 +51,7 @@ static class ModConfig
         api.World.Config.SetBool("VanillaVariants_MechanicalHelveHammerBase_Enabled", config.MechanicalHelveHammerBase);
         api.World.Config.SetBool("VanillaVariants_MechanicalHelveHammerItem_Enabled", config.MechanicalHelveHammerItem);
         api.World.Config.SetBool("VanillaVariants_MechanicalToggle_Enabled", config.MechanicalToggle);
+        api.World.Config.SetBool("VanillaVariants_MechanicalTransmission_Enabled", config.MechanicalTransmission);
         api.World.Config.SetBool("VanillaVariants_Moldrack_Enabled", config.Moldrack);
         api.World.Config.SetBool("VanillaVariants_OmokTabletop_Enabled", config.OmokTabletop);
         api.World.Config.SetBool("VanillaVariants_Palisade_Enabled", config.Palisade);
