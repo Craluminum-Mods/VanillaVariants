@@ -1,4 +1,20 @@
 [
+    // replace planks with oak plank
+    {
+        "type": "Replace",
+        "conditions": [{ "when": "VanillaVariants_Chair_Enabled", "isValue": "true" }],
+        "outputCode": "chair-*",
+        "ingredients": [{ "ingredientCode": "plank-*", "AllowedVariants": ["oak"] }]
+    },
+    {
+        "type": "Replace",
+        "conditions": [{ "when": "VanillaVariants_Chair_Enabled", "isValue": "true" }],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "chair-*",
+        "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] }]
+    },
+
+    // from planks, but separate patch for each cloth, because there is bug in vanilla
     {
         "type": "Copy",
         "conditions": [{ "when": "VanillaVariants_Chair_Enabled", "isValue": "true" }],

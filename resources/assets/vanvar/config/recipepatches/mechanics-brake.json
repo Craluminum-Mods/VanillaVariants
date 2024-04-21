@@ -92,6 +92,7 @@
     },
 
     // from log sections and wood typed axles
+    // errors in logs are inevitable because of modded axle in the recipe, can't do anything about this
     {
         "type": "Copy",
         "conditions": [

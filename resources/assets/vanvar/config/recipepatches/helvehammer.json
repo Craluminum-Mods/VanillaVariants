@@ -1,4 +1,20 @@
 [
+    // replace planks with oak plank
+    {
+        "type": "Replace",
+        "conditions": [{ "when": "VanillaVariants_MechanicalHelveHammerItem_Enabled", "isValue": "true" }],
+        "outputCode": "helvehammer-*",
+        "ingredients": [{ "ingredientCode": "plank-*", "AllowedVariants": ["oak"] }]
+    },
+    {
+        "type": "Replace",
+        "conditions": [{ "when": "VanillaVariants_MechanicalHelveHammerItem_Enabled", "isValue": "true" }],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "helvehammer-*",
+        "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] }]
+    },
+
+    // from planks, but separate patch for each metal, because there is bug in vanilla
     {
         "type": "Copy",
         "conditions": [{ "when": "VanillaVariants_MechanicalHelveHammerItem_Enabled", "isValue": "true" }],
