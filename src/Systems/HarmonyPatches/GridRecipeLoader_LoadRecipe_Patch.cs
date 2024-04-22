@@ -6,16 +6,11 @@ namespace VanillaVariants;
 
 public static class GridRecipeLoader_LoadRecipe_Patch
 {
-    public static bool Prefix(GridRecipeLoader __instance, AssetLocation loc, GridRecipe recipe)
+    public static void Prefix(GridRecipeLoader __instance, AssetLocation loc, GridRecipe recipe)
     {
-        if (loc == new AssetLocation("skippatch"))
+        if (loc == new AssetLocation("skippatch") || !recipe.Enabled)
         {
-            return true;
-        }
-
-        if (!recipe.Enabled)
-        {
-            return true;
+            return;
         }
 
         ICoreServerAPI api = __instance.GetField<ICoreServerAPI>("api");
@@ -44,6 +39,6 @@ public static class GridRecipeLoader_LoadRecipe_Patch
         }
 
         NewGridRecipeLoader.ElapsedMilliseconds += api.World.ElapsedMilliseconds - elapsedMilliseconds;
-        return true;
+        return;
     }
 }
