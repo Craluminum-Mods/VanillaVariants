@@ -4,7 +4,7 @@ using Vintagestory.GameContent.Mechanics;
 
 namespace VanillaVariants;
 
-public static class HelveHammer_TexturePosition_Patch
+public static class BEHelveHammer_TexturePosition_Patch
 {
     public static bool Prefix(BEHelveHammer __instance, ref TextureAtlasPosition __result, string textureCode)
     {

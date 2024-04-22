@@ -39,6 +39,5 @@ public static class GridRecipeLoader_LoadRecipe_Patch
         }
 
         NewGridRecipeLoader.ElapsedMilliseconds += api.World.ElapsedMilliseconds - elapsedMilliseconds;
-        return;
     }
 }

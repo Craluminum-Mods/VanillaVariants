@@ -1,0 +1,105 @@
+[
+    // replace planks with oak plank
+    {
+        "type": "Replace",
+        "conditions": [{ "when": "VanillaVariants_MechanicalLargeGear_Enabled", "isValue": "true" }],
+        "outputCode": "largegear3",
+        "ingredients": [{ "ingredientCode": "plank-*", "AllowedVariants": ["oak"] }]
+    },
+    {
+        "type": "Replace",
+        "conditions": [{ "when": "VanillaVariants_MechanicalLargeGear_Enabled", "isValue": "true" }],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "largegear3",
+        "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] }]
+    },
+
+    // from planks, vanilla axle, vanilla large section
+    {
+        "type": "Copy",
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalLargeGear_Enabled", "isValue": "true" },
+            { "when": "VanillaVariants_MechanicalLargeGearSectionItem_Enabled", "isValue": "false" },
+            { "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "false" }
+        ],
+        "outputCode": "largegear3",
+        "outputCodeNew": "vanvar:largegear3-{wood}",
+        "ingredients": [{ "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+    {
+        "type": "Copy",
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalLargeGear_Enabled", "isValue": "true" },
+            { "when": "VanillaVariants_MechanicalLargeGearSectionItem_Enabled", "isValue": "false" },
+            { "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "false" }
+        ],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "largegear3",
+        "outputCodeNew": "wildcrafttree:largegear3-{wood}",
+        "ingredients": [{ "ingredientCode": "plank-*", "Code": "wildcrafttree:plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+
+    // from planks, wood typed axle, vanilla large section
+    {
+        "type": "Copy",
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalLargeGear_Enabled", "isValue": "true" },
+            { "when": "VanillaVariants_MechanicalLargeGearSectionItem_Enabled", "isValue": "false" },
+            { "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "true" }
+        ],
+        "outputCode": "largegear3",
+        "outputCodeNew": "vanvar:largegear3-{wood}",
+        "ingredients": [
+            { "ingredientCode": "woodenaxle-ud", "Code": "vanvar:woodenaxle-*-ud", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalLargeGear_Enabled", "isValue": "true" },
+            { "when": "VanillaVariants_MechanicalLargeGearSectionItem_Enabled", "isValue": "false" },
+            { "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "true" }
+        ],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "largegear3",
+        "outputCodeNew": "wildcrafttree:largegear3-{wood}",
+        "ingredients": [
+            { "ingredientCode": "woodenaxle-ud", "Code": "wildcrafttree:woodenaxle-*-ud", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "plank-*", "Code": "wildcrafttree:plank-*", "Name": "wood", "SkipVariants": ["oak"] }
+        ]
+    },
+
+    // from planks, wood typed axle, wood typed large section
+    {
+        "type": "Copy",
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalLargeGear_Enabled", "isValue": "true" },
+            { "when": "VanillaVariants_MechanicalLargeGearSectionItem_Enabled", "isValue": "true" },
+            { "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "true" }
+        ],
+        "outputCode": "largegear3",
+        "outputCodeNew": "vanvar:largegear3-{wood}",
+        "ingredients": [
+            { "ingredientCode": "woodenaxle-ud", "Code": "vanvar:woodenaxle-*-ud", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "largegearsection-wood", "Code": "vanvar:largegearsection-*", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalLargeGear_Enabled", "isValue": "true" },
+            { "when": "VanillaVariants_MechanicalLargeGearSectionItem_Enabled", "isValue": "true" },
+            { "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "true" }
+        ],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "largegear3",
+        "outputCodeNew": "wildcrafttree:largegear3-{wood}",
+        "ingredients": [
+            { "ingredientCode": "woodenaxle-ud", "Code": "wildcrafttree:woodenaxle-*-ud", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "largegearsection-wood", "Code": "wildcrafttree:largegearsection-*", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "plank-*", "Code": "wildcrafttree:plank-*", "Name": "wood", "SkipVariants": ["oak"] }
+        ]
+    }
+]

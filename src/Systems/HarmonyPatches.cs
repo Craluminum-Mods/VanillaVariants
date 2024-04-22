@@ -25,7 +25,7 @@ public class HarmonyPatches : ModSystem
         }
         if (Core.Config.ResolveMechanicalBlockIssues)
         {
-            HarmonyInstance.Patch(original: AccessTools.IndexerGetter(typeof(BEHelveHammer)), prefix: AccessTools.Method(typeof(HelveHammer_TexturePosition_Patch), nameof(HelveHammer_TexturePosition_Patch.Prefix)));
+            HarmonyInstance.Patch(original: AccessTools.IndexerGetter(typeof(BEHelveHammer)), prefix: AccessTools.Method(typeof(BEHelveHammer_TexturePosition_Patch), nameof(BEHelveHammer_TexturePosition_Patch.Prefix)));
             HarmonyInstance.Patch(original: typeof(BEBehaviorMPAxle).GetMethod("getStandMesh", AccessTools.all), prefix: typeof(BEBehaviorMPAxle_getStandMesh_Patch).GetMethod(nameof(BEBehaviorMPAxle_getStandMesh_Patch.Prefix)));
             HarmonyInstance.Patch(original: typeof(BlockAxle).GetMethod(nameof(BlockAxle.IsOrientedTo)), prefix: typeof(BlockAxle_IsOrientedTo_Patch).GetMethod(nameof(BlockAxle_IsOrientedTo_Patch.Prefix)));
             HarmonyInstance.Patch(original: typeof(BlockAxle).GetMethod(nameof(BlockAxle.TryPlaceBlock)), prefix: typeof(BlockAxle_TryPlaceBlock_Patch).GetMethod(nameof(BlockAxle_TryPlaceBlock_Patch.Prefix)));
@@ -43,6 +43,7 @@ public class HarmonyPatches : ModSystem
             HarmonyInstance.Patch(original: typeof(BlockTransmission).GetMethod(nameof(BlockTransmission.TryPlaceBlock)), prefix: typeof(BlockTransmission_TryPlaceBlock_Patch).GetMethod(nameof(BlockTransmission_TryPlaceBlock_Patch.Prefix)));
             HarmonyInstance.Patch(original: typeof(BlockClutch).GetMethod(nameof(BlockClutch.TryPlaceBlock)), prefix: typeof(BlockClutch_TryPlaceBlock_Patch).GetMethod(nameof(BlockClutch_TryPlaceBlock_Patch.Prefix)));
             HarmonyInstance.Patch(original: typeof(BlockWindmillRotor).GetMethod(nameof(BlockWindmillRotor.TryPlaceBlock)), prefix: typeof(BlockWindmillRotor_TryPlaceBlock_Patch).GetMethod(nameof(BlockWindmillRotor_TryPlaceBlock_Patch.Prefix)));
+            HarmonyInstance.Patch(original: typeof(BlockLargeGear3m).GetMethod(nameof(BlockLargeGear3m.TryPlaceBlock)), prefix: typeof(BlockLargeGear3m_TryPlaceBlock_Patch).GetMethod(nameof(BlockLargeGear3m_TryPlaceBlock_Patch.Prefix)));
         }
     }
 
@@ -78,6 +79,7 @@ public class HarmonyPatches : ModSystem
             HarmonyInstance.Unpatch(original: typeof(BlockTransmission).GetMethod(nameof(BlockTransmission.TryPlaceBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
             HarmonyInstance.Unpatch(original: typeof(BlockClutch).GetMethod(nameof(BlockClutch.TryPlaceBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
             HarmonyInstance.Unpatch(original: typeof(BlockWindmillRotor).GetMethod(nameof(BlockWindmillRotor.TryPlaceBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
+            HarmonyInstance.Unpatch(original: typeof(BlockLargeGear3m).GetMethod(nameof(BlockLargeGear3m.TryPlaceBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
         }
     }
 }
