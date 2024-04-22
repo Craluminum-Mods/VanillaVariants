@@ -2,7 +2,7 @@
     "code": "slantedroofingcornerouter",
     "behaviors": [
         {
-            "name": "VanillaVariants.BbName",
+            "name": "VanillaVariants.BlockName",
             "properties": {
                 "parts": ["block-slantedroofingcornerouter-sod-*", " (", "material-{material}", ")"]
             }

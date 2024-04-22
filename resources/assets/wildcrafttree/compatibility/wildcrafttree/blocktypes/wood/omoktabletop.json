@@ -5,7 +5,7 @@
     "variantgroups": [{ "code": "material", "loadFromProperties": "wildcrafttree:block/wood" }],
     "behaviors": [
         {
-            "name": "VanillaVariants.BbName",
+            "name": "VanillaVariants.BlockName",
             "properties": {
                 "parts": ["block-omoktabletop", " (", "material-{material}", ")"]
             }

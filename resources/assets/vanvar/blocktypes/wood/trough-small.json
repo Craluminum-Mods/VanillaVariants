@@ -3,7 +3,7 @@
     "class": "BlockTrough",
     "behaviors": [
         {
-            "name": "VanillaVariants.BbName",
+            "name": "VanillaVariants.BlockName",
             "properties": {
                 "parts": ["block-trough-genericwood-small-*", " (", "material-{material}", ")"]
             }

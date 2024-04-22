@@ -7,7 +7,7 @@
     },
     "behaviors": [
         {
-            "name": "VanillaVariants.CbName",
+            "name": "VanillaVariants.ItemName",
             "properties": {
                 "parts": ["item-largegearsection-wood", " (", "material-{wood}", ")"]
             }

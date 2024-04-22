@@ -5,7 +5,7 @@
 	"entityclass": "SignPost",
     "behaviors": [
         {
-            "name": "VanillaVariants.BbName",
+            "name": "VanillaVariants.BlockName",
             "properties": {
                 "parts": ["block-signpost", " (", "material-{type}", ")"]
             }

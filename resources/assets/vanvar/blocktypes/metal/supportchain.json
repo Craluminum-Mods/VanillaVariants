@@ -5,7 +5,7 @@
     "entityBehaviors": [{ "name": "SupportBeam" }],
     "behaviors": [
         {
-            "name": "VanillaVariants.BbName",
+            "name": "VanillaVariants.BlockName",
             "properties": {
                 "partsByType": {
                     "@.*-(uranium|platinum)": ["block-supportchain", " (", "ore-{metal}", ")"],

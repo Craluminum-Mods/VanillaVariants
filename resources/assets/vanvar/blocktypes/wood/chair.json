@@ -2,7 +2,7 @@
     "code": "chair",
     "behaviors": [
         {
-            "name": "VanillaVariants.BbName",
+            "name": "VanillaVariants.BlockName",
             "properties": {
                 "parts": ["block-chair-{color}", " (", "material-{type}", ")"]
             }

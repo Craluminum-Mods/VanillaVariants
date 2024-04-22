@@ -21,7 +21,7 @@
     "behaviorsByType": {
         "*-snow": [
             {
-                "name": "VanillaVariants.BbName",
+                "name": "VanillaVariants.BlockName",
                 "properties": {
                     "parts": ["block-stonepath-*", " (", "rock-{rock}", ")"]
                 }
@@ -30,7 +30,7 @@
         ],
         "*": [
             {
-                "name": "VanillaVariants.BbName",
+                "name": "VanillaVariants.BlockName",
                 "properties": {
                     "parts": ["block-stonepath-*", " (", "rock-{rock}", ")"]
                 }

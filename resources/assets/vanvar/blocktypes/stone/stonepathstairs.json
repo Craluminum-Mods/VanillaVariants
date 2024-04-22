@@ -14,7 +14,7 @@
     },
     "behaviors": [
         {
-            "name": "VanillaVariants.BbName",
+            "name": "VanillaVariants.BlockName",
             "properties": {
                 "parts": ["block-stonepathstairs-up-*", " (", "rock-{rock}", ")"]
             }

@@ -5,7 +5,7 @@
     "entityBehaviors": [{ "name": "MPAxle" }],
     "behaviors": [
         {
-            "name": "VanillaVariants.BbName",
+            "name": "VanillaVariants.BlockName",
             "properties": {
                 "parts": ["block-woodenaxle-*", " (", "material-{wood}", ")"]
             }

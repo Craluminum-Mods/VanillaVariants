@@ -4,7 +4,7 @@
     "entityClass": "HenBox",
     "behaviors": [
         {
-            "name": "VanillaVariants.BbName",
+            "name": "VanillaVariants.BlockName",
             "properties": {
                 "parts": ["block-henbox-{eggCount}", " (", "material-{type}", ")"]
             }

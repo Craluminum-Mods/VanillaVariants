@@ -5,7 +5,7 @@
     "entityBehaviors": [{ "name": "MPTransmission" }],
     "behaviors": [
         {
-            "name": "VanillaVariants.BbName",
+            "name": "VanillaVariants.BlockName",
             "properties": {
                 "parts": ["block-transmission-ns", " (", "material-{wood}", ")"]
             }

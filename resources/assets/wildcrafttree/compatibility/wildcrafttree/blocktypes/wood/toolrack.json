@@ -5,7 +5,7 @@
     "creativeinventory": { "general": ["toolrack-*-north"], "decorative": ["toolrack-*-north"], "vanvar": ["toolrack-*-north"] },
     "behaviors": [
         {
-            "name": "VanillaVariants.BbName",
+            "name": "VanillaVariants.BlockName",
             "properties": {
                 "parts": ["block-toolrack-*", " (", "material-{type}", ")"]
             }

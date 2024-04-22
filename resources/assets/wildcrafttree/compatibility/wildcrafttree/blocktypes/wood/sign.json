@@ -5,7 +5,7 @@
     "entityclass": "Sign",
     "behaviors": [
         {
-            "name": "VanillaVariants.BbName",
+            "name": "VanillaVariants.BlockName",
             "properties": {
                 "parts": ["block-sign-ground-*", " (", "material-{type}", ")"]
             }

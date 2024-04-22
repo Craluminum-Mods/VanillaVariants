@@ -2,7 +2,7 @@
     "code": "cage",
     "behaviors": [
         {
-            "name": "VanillaVariants.BbName",
+            "name": "VanillaVariants.BlockName",
             "properties": {
                 "parts": ["block-cage-wooden-*", " (", "material-{type}", ")"]
             }

@@ -2,7 +2,7 @@
     "code": "quern",
     "behaviors": [
         {
-            "name": "VanillaVariants.BbName",
+            "name": "VanillaVariants.BlockName",
             "properties": {
                 "parts": ["Quern", " (", "rock-{rock}", ") (", "tabname-decorative", ")"]
             }

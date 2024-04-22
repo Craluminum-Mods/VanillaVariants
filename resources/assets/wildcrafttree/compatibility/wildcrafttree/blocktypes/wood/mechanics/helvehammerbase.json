@@ -4,7 +4,7 @@
     "entityClass": "HelveHammer",
     "behaviors": [
         {
-            "name": "VanillaVariants.BbName",
+            "name": "VanillaVariants.BlockName",
             "properties": {
                 "parts": ["block-helvehammerbase-north", " (", "material-{wood}", ")"]
             }
@@ -35,7 +35,7 @@
     "textures": {
         "tinbronze": { "base": "game:block/metal/anvil/tinbronze" },
         "oak": { "base": "game:block/wood/debarked/{wood}" },
-        "oak1": { "base": "wildcrafttree:block/wood/planks/{wood}1" }
+        "oak1": { "base": "game:block/wood/debarked/{wood}" }
     },
     "blockmaterial": "Wood",
     "heldTpIdleAnimation": "holdbothhandslarge",

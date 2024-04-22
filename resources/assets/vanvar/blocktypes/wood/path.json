@@ -2,7 +2,7 @@
     "code": "woodenpath",
     "behaviors": [
         {
-            "name": "VanillaVariants.BbName",
+            "name": "VanillaVariants.BlockName",
             "properties": {
                 "parts": ["block-woodenpath-*", " (", "material-{type}", ")"]
             }

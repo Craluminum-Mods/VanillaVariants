@@ -2,7 +2,7 @@
     "code": "slantedroofing",
     "behaviors": [
         {
-            "name": "VanillaVariants.BbName",
+            "name": "VanillaVariants.BlockName",
             "properties": {
                 "parts": ["block-slantedroofing-sod-*", " (", "material-{material}", ")"]
             }

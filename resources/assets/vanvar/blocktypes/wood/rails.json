@@ -3,7 +3,7 @@
     "class": "BlockRails",
     "behaviors": [
         {
-            "name": "VanillaVariants.BbName",
+            "name": "VanillaVariants.BlockName",
             "properties": {
                 "parts": ["block-woodenrails-*", " (", "material-{material}", ")"]
             }

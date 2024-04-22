@@ -5,7 +5,7 @@
     "entityBehaviors": [{ "name": "MPLargeGear3m" }],
     "behaviors": [
         {
-            "name": "VanillaVariants.BbName",
+            "name": "VanillaVariants.BlockName",
             "properties": {
                 "parts": ["block-largegear3", " (", "material-{wood}", ")"]
             }

@@ -3,7 +3,7 @@
     "class": "ItemArmorStand",
     "behaviors": [
         {
-            "name": "VanillaVariants.CbName",
+            "name": "VanillaVariants.ItemName",
             "properties": {
                 "parts": ["item-armorstand", " (", "material-{wood}", ")"]
             }

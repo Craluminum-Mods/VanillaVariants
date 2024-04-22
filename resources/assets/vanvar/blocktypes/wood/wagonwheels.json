@@ -10,7 +10,7 @@
     "skipVariants": ["*-oak-*"],
     "behaviors": [
         {
-            "name": "VanillaVariants.BbName",
+            "name": "VanillaVariants.BlockName",
             "properties": {
                 "parts": ["block-wagonwheels-{type}-*", " (", "material-{material}", ")"]
             }

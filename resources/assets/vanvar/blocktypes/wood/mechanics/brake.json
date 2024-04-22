@@ -5,7 +5,7 @@
     "entityBehaviors": [{ "name": "MPBrake" }, { "name": "Animatable" }],
     "behaviors": [
         {
-            "name": "VanillaVariants.BbName",
+            "name": "VanillaVariants.BlockName",
             "properties": {
                 "parts": ["block-brake-north", " (", "material-{wood}", ")"]
             }

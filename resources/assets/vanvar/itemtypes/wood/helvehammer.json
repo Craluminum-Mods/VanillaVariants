@@ -14,7 +14,7 @@
     },
     "behaviors": [
         {
-            "name": "VanillaVariants.CbName",
+            "name": "VanillaVariants.ItemName",
             "properties": {
                 "parts": ["item-helvehammer-{metal}", " (", "material-{wood}", ")"]
             }
@@ -23,7 +23,7 @@
     "textures": {
         "metal": { "base": "game:block/metal/ingot/{metal}" },
         "oak": { "base": "game:block/wood/debarked/{wood}" },
-        "oak1": { "base": "game:block/wood/planks/{wood}1" }
+        "oak1": { "base": "game:block/wood/debarked/{wood}" }
     },
     "creativeinventory": { "general": ["*"], "items": ["*"], "tools": ["*"], "mechanics": ["*"], "vanvar": ["*"] },
     "heldTpIdleAnimation": "holdunderarm",

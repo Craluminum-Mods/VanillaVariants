@@ -4,7 +4,7 @@
     "maxstacksize": 32,
     "behaviors": [
         {
-            "name": "VanillaVariants.CbName",
+            "name": "VanillaVariants.ItemName",
             "properties": {
                 "parts": ["item-firewood", " (", "material-{wood}", ")"]
             }

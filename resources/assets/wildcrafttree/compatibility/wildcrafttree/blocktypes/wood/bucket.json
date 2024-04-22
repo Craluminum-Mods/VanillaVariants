@@ -4,7 +4,7 @@
     "entityClass": "Bucket",
     "behaviors": [
         {
-            "name": "VanillaVariants.BbName",
+            "name": "VanillaVariants.BlockName",
             "properties": {
                 "parts": ["block-woodbucket", " (", "material-{type}", ")"]
             }
