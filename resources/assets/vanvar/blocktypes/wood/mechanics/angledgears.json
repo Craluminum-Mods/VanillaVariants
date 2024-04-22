@@ -27,6 +27,12 @@
             "properties": {
                 "parts": ["block-angledgears-*", " (", "material-{wood}", ")"]
             }
+        },
+        {
+            "name": "VanillaVariants.BlockDescription",
+            "properties": {
+                "parts": ["blockdesc-angledgears-*"]
+            }
         }
     ],
     "variantgroups": [

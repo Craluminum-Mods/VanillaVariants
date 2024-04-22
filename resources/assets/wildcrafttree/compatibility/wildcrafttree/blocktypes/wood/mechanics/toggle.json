@@ -10,12 +10,19 @@
                 "parts": ["block-woodentoggle-ns", " (", "material-{wood}", ")"]
             }
         },
+        {
+            "name": "VanillaVariants.BlockDescription",
+            "properties": {
+                "parts": ["blockdesc-woodentoggle-ns"]
+            }
+        },
         { "name": "NWOrientable" }
     ],
     "attributes": {
         "fromVanVarMod": true,
         "handbook": {
             "groupBy": ["woodentoggle-*"]
+            // "extraSections": [{ "title": "game:block-handbooktitle-woodentoggle-*", "text": "game:block-handbooktext-woodentoggle-*" }]
         }
     },
     "creativeinventory": {

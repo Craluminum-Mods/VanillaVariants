@@ -16,7 +16,10 @@
     "attributes": {
         // panning drops are added by code
         "fromVanVarMod": true,
-        "handbook": { "groupBy": ["pan-*"] },
+        "handbook": {
+            "groupBy": ["pan-*"],
+            "extraSections": [{ "title": "game:block-handbooktitle-pan-wooden", "text": "game:block-handbooktext-pan-wooden" }]
+        },
         "heldItemPitchFollow": 0.5
     },
     "variantgroups": [{ "code": "type", "loadFromProperties": "wildcrafttree:block/wood" }],

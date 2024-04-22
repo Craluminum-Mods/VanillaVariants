@@ -9,12 +9,19 @@
                 "parts": ["block-clutch-north", " (", "material-{wood}", ")"]
             }
         },
+        {
+            "name": "VanillaVariants.BlockDescription",
+            "properties": {
+                "parts": ["blockdesc-brake-north"]
+            }
+        },
         { "name": "HorizontalOrientable" }
     ],
     "entityBehaviors": [{ "name": "Animatable" }],
     "attributes": {
         "handbook": {
-            "groupBy": ["clutch-*"]
+            "groupBy": ["clutch-*"],
+            "extraSections": [{ "title": "", "text": "game:block-handbooktext-clutch-north" }]
         },
         "mechanicalPower": {
             "renderer": "clutch"

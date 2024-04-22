@@ -9,12 +9,19 @@
                 "parts": ["block-helvehammerbase-north", " (", "material-{wood}", ")"]
             }
         },
+        {
+            "name": "VanillaVariants.BlockDescription",
+            "properties": {
+                "parts": ["blockdesc-helvehammerbase-north"]
+            }
+        },
         { "name": "HorizontalOrientable" }
     ],
     "attributes": {
         "fromVanVarMod": true,
         "handbook": {
             "groupBy": ["helvehammerbase-*"]
+            // "extraSections": [{ "title": "game:block-handbooktitle-helvehammerbase-*", "text": "game:block-handbooktext-helvehammerbase-*" }]
         }
     },
     "creativeinventory": {

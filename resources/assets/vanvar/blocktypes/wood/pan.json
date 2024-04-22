@@ -15,7 +15,10 @@
     "maxStackSize": 1,
     "attributes": {
         // panning drops are added by code
-        "handbook": { "groupBy": ["pan-*"] },
+        "handbook": {
+            "groupBy": ["pan-*"],
+            "extraSections": [{ "title": "game:block-handbooktitle-pan-wooden", "text": "game:block-handbooktext-pan-wooden" }]
+        },
         "heldItemPitchFollow": 0.5
     },
     "variantgroups": [{ "code": "type", "states": ["aged"], "loadFromProperties": "block/wood" }],

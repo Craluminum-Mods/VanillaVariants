@@ -10,6 +10,12 @@
                 "parts": ["block-windmillrotor-north", " (", "material-{wood}", ")"]
             }
         },
+        {
+            "name": "VanillaVariants.BlockDescription",
+            "properties": {
+                "parts": ["blockdesc-windmillrotor-*"]
+            }
+        },
         { "name": "HorizontalOrientable" }
     ],
     "attributes": {

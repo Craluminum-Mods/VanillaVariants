@@ -9,11 +9,18 @@
             "properties": {
                 "parts": ["block-largegear3", " (", "material-{wood}", ")"]
             }
+        },
+        {
+            "name": "VanillaVariants.BlockDescription",
+            "properties": {
+                "parts": ["blockdesc-largegear3"]
+            }
         }
     ],
     "attributes": {
         "handbook": {
-            "groupBy": ["largegear3-*"]
+            "groupBy": ["largegear3-*"],
+            "extraSections": [{ "title": "", "text": "game:block-handbooktext-largegear3" }]
         }
     },
     "creativeinventory": {

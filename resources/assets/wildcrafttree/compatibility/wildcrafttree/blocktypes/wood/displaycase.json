@@ -14,7 +14,10 @@
     "variantgroups": [{ "code": "type", "loadFromProperties": "wildcrafttree:block/wood" }],
     "attributes": {
         "fromVanVarMod": true,
-        "handbook": { "groupBy": ["displaycase-*"] },
+        "handbook": {
+            "groupBy": ["displaycase-*"],
+            "extraSections": [{ "title": "", "text": "game:block-handbooktext-displaycase" }]
+        },
         "height": 0.5
     },
     "creativeinventory": {

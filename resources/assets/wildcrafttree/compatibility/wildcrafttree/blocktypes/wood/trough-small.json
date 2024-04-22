@@ -8,6 +8,12 @@
                 "parts": ["block-trough-genericwood-small-*", " (", "material-{material}", ")"]
             }
         },
+        {
+            "name": "VanillaVariants.BlockDescription",
+            "properties": {
+                "parts": ["blockdesc-trough-genericwood-small-*"]
+            }
+        },
         { "name": "NWOrientable" }
     ],
     "entityClass": "Trough",

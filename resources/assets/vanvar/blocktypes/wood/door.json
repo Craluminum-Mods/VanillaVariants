@@ -10,6 +10,12 @@
                 // "parts": ["block-door-crude", " (", "material-{wood}", ")"]
             }
         },
+        {
+            "name": "VanillaVariants.BlockDescription",
+            "properties": {
+                "parts": ["blockdesc-door-log-*"]
+            }
+        },
         { "name": "Lockable" },
         { "name": "Door" },
         { "name": "BlockEntityInteract" }

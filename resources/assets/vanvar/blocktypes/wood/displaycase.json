@@ -13,7 +13,10 @@
     ],
     "variantgroups": [{ "code": "type", "states": ["aged"], "loadFromProperties": "block/wood" }],
     "attributes": {
-        "handbook": { "groupBy": ["displaycase-*"] },
+        "handbook": {
+            "groupBy": ["displaycase-*"],
+            "extraSections": [{ "title": "", "text": "game:block-handbooktext-displaycase" }]
+        },
         "height": 0.5
     },
     "skipVariants": ["*-oak"],

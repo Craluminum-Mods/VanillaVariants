@@ -10,6 +10,12 @@
             "properties": {
                 "parts": ["block-trough-genericwood-large-head-*", " (", "material-{material}", ")"]
             }
+        },
+        {
+            "name": "VanillaVariants.BlockDescription",
+            "properties": {
+                "parts": ["blockdesc-trough-genericwood-large-head-*"]
+            }
         }
     ],
     "attributes": {

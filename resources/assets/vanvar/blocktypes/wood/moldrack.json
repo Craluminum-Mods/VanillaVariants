@@ -17,7 +17,10 @@
         { "name": "HorizontalAttachable", "properties": { "dropBlockFace": "east" } }
     ],
     "attributes": {
-        "handbook": { "groupBy": ["moldrack-*"] }
+        "handbook": {
+            "groupBy": ["moldrack-*"]
+            // "extraSections": [{ "title": "", "text": "game:block-handbooktext-moldrack-*" }]
+        }
     },
     "shapeByType": {
         "*-north": { "base": "game:block/wood/moldrack", "rotateY": 0 },
