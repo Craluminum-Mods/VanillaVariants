@@ -6,6 +6,7 @@
     "description": "Variants of wood, stone and metal for vanilla blocks and items",
     "authors": ["Craluminum2413"],
     "dependencies": {
-        "game": "1.19.7"
+        "game": "1.19.7",
+        "recipepatcher": "1.0.0"
     }
 }
