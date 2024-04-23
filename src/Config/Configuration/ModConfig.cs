@@ -35,6 +35,7 @@ static class ModConfig
         api.World.Config.SetBool("VanillaVariants_CraftableWoodenRails_Enabled", config.CraftableWoodenRails);
 
         api.World.Config.SetBool("VanillaVariants_ArmorStand_Enabled", config.ArmorStand);
+        api.World.Config.SetBool("VanillaVariants_Barrel_Enabled", config.Barrel);
         api.World.Config.SetBool("VanillaVariants_Bed_Enabled", config.Bed);
         api.World.Config.SetBool("VanillaVariants_Cage_Enabled", config.Cage);
         api.World.Config.SetBool("VanillaVariants_Chair_Enabled", config.Chair);

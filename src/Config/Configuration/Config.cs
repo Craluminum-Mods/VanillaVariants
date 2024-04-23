@@ -13,6 +13,7 @@ public class Config
     public bool CraftableWoodenRails { get; set; }
 
     public bool ArmorStand { get; set; } = true;
+    public bool Barrel { get; set; } = true;
     public bool Bed { get; set; } = true;
     public bool Cage { get; set; } = true;
     public bool Chair { get; set; } = true;
@@ -72,6 +73,7 @@ public class Config
         CraftableWoodenRails = previousConfig.CraftableWoodenRails;
 
         ArmorStand = previousConfig.ArmorStand;
+        Barrel = previousConfig.Barrel;
         Bed = previousConfig.Bed;
         Cage = previousConfig.Cage;
         Chair = previousConfig.Chair;

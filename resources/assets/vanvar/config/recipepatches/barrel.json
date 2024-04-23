@@ -1,0 +1,30 @@
+[
+    {
+        "type": "Replace",
+        "conditions": [{ "when": "VanillaVariants_Barrel_Enabled", "isValue": "true" }],
+        "outputCode": "barrel",
+        "ingredients": [{ "ingredientCode": "plank-*", "AllowedVariants": ["oak"] }]
+    },
+    {
+        "type": "Replace",
+        "conditions": [{ "when": "VanillaVariants_Barrel_Enabled", "isValue": "true" }],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "barrel",
+        "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] }]
+    },
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_Barrel_Enabled", "isValue": "true" }],
+        "outputCode": "barrel",
+        "outputCodeNew": "vanvar:barrel-{wood}",
+        "ingredients": [{ "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_Barrel_Enabled", "isValue": "true" }],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "barrel",
+        "outputCodeNew": "wildcrafttree:barrel-{wood}",
+        "ingredients": [{ "ingredientCode": "plank-*", "Code": "wildcrafttree:plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
+    }
+]

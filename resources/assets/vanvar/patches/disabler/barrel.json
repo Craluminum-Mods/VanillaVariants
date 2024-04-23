@@ -1,0 +1,31 @@
+[
+    {
+        "file": "vanvar:blocktypes/wood/barrel.json",
+        "op": "addmerge",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VanillaVariants_Barrel_Enabled", "isValue": "false" },
+        "side": "server"
+    },
+    {
+        "file": "wildcrafttree:blocktypes/wood/barrel.json",
+        "op": "addmerge",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VanillaVariants_Barrel_Enabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
+    },
+
+    {
+        "op": "addmerge",
+        "path": "/textures",
+        "value": {
+            "bottom": { "base": "block/wood/debarked/oak" },
+            "aged": { "base": "block/wood/debarked/oak" }
+        },
+        "file": "game:blocktypes/wood/barrel.json",
+        "condition": { "when": "VanillaVariants_Barrel_Enabled", "isValue": "true" },
+        "side": "Server"
+    }
+]
