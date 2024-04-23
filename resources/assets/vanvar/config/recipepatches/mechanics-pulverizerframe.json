@@ -1,0 +1,123 @@
+[
+    // replace planks with oak plank, rocks with granite rock
+    {
+        "type": "Replace",
+        "conditions": [{ "when": "VanillaVariants_MechanicalPulverizer_Enabled", "isValue": "true" }],
+        "outputCode": "pulverizerframe-north",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "AllowedVariants": ["oak"] },
+            { "ingredientCode": "rock-*", "Name": "rock", "AllowedVariants": ["granite"] }
+        ]
+    },
+    {
+        "type": "Replace",
+        "conditions": [{ "when": "VanillaVariants_MechanicalPulverizer_Enabled", "isValue": "true" }],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "pulverizerframe-north",
+        "ingredients": [
+            { "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] },
+            { "ingredientCode": "rock-*", "Name": "rock", "AllowedVariants": ["granite"] }
+        ]
+    },
+
+    // from oak planks and each rock, except granite
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_MechanicalPulverizer_Enabled", "isValue": "true" }],
+        "outputCode": "pulverizerframe-north",
+        "outputCodeNew": "vanvar:pulverizerframe-{rock}-oak-north",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "AllowedVariants": ["oak"] },
+            { "ingredientCode": "rock-*", "Name": "rock", "SkipVariants": ["granite"] }
+        ]
+    },
+
+    // from planks, but separate patch for each rock, because there is bug in vanilla
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_MechanicalPulverizer_Enabled", "isValue": "true" }],
+        "outputCode": "pulverizerframe-north",
+        "outputCodeNew": "vanvar:pulverizerframe-granite-{wood}-north",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "rock-*", "Name": "rock", "AllowedVariants": ["granite"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_MechanicalPulverizer_Enabled", "isValue": "true" }],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "pulverizerframe-north",
+        "outputCodeNew": "wildcrafttree:pulverizerframe-granite-{wood}-north",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "Code": "wildcrafttree:plank-*", "SkipVariants": ["oak"] },
+            { "ingredientCode": "rock-*", "Name": "rock", "AllowedVariants": ["granite"] }
+        ]
+    },
+
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_MechanicalPulverizer_Enabled", "isValue": "true" }],
+        "outputCode": "pulverizerframe-north",
+        "outputCodeNew": "vanvar:pulverizerframe-andesite-{wood}-north",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "rock-*", "Name": "rock", "AllowedVariants": ["andesite"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_MechanicalPulverizer_Enabled", "isValue": "true" }],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "pulverizerframe-north",
+        "outputCodeNew": "wildcrafttree:pulverizerframe-andesite-{wood}-north",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "Code": "wildcrafttree:plank-*", "SkipVariants": ["oak"] },
+            { "ingredientCode": "rock-*", "Name": "rock", "AllowedVariants": ["andesite"] }
+        ]
+    },
+
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_MechanicalPulverizer_Enabled", "isValue": "true" }],
+        "outputCode": "pulverizerframe-north",
+        "outputCodeNew": "vanvar:pulverizerframe-basalt-{wood}-north",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "rock-*", "Name": "rock", "AllowedVariants": ["basalt"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_MechanicalPulverizer_Enabled", "isValue": "true" }],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "pulverizerframe-north",
+        "outputCodeNew": "wildcrafttree:pulverizerframe-basalt-{wood}-north",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "Code": "wildcrafttree:plank-*", "SkipVariants": ["oak"] },
+            { "ingredientCode": "rock-*", "Name": "rock", "AllowedVariants": ["basalt"] }
+        ]
+    },
+
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_MechanicalPulverizer_Enabled", "isValue": "true" }],
+        "outputCode": "pulverizerframe-north",
+        "outputCodeNew": "vanvar:pulverizerframe-peridotite-{wood}-north",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "rock-*", "Name": "rock", "AllowedVariants": ["peridotite"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_MechanicalPulverizer_Enabled", "isValue": "true" }],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "pulverizerframe-north",
+        "outputCodeNew": "wildcrafttree:pulverizerframe-peridotite-{wood}-north",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "Code": "wildcrafttree:plank-*", "SkipVariants": ["oak"] },
+            { "ingredientCode": "rock-*", "Name": "rock", "AllowedVariants": ["peridotite"] }
+        ]
+    }
+]

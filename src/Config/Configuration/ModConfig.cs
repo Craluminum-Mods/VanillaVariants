@@ -53,6 +53,7 @@ static class ModConfig
         api.World.Config.SetBool("VanillaVariants_MechanicalHelveHammerItem_Enabled", config.MechanicalHelveHammerItem);
         api.World.Config.SetBool("VanillaVariants_MechanicalLargeGear_Enabled", config.MechanicalLargeGear);
         api.World.Config.SetBool("VanillaVariants_MechanicalLargeGearSectionItem_Enabled", config.MechanicalLargeGearSectionItem);
+        api.World.Config.SetBool("VanillaVariants_MechanicalPulverizer_Enabled", config.MechanicalPulverizer);
         api.World.Config.SetBool("VanillaVariants_MechanicalToggle_Enabled", config.MechanicalToggle);
         api.World.Config.SetBool("VanillaVariants_MechanicalTransmission_Enabled", config.MechanicalTransmission);
         api.World.Config.SetBool("VanillaVariants_MechanicalWindmillRotor_Enabled", config.MechanicalWindmillRotor);

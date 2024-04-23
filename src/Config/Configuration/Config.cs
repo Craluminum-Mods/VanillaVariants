@@ -31,6 +31,7 @@ public class Config
     public bool MechanicalHelveHammerItem { get; set; } = true;
     public bool MechanicalLargeGear { get; set; } = true;
     public bool MechanicalLargeGearSectionItem { get; set; } = true;
+    public bool MechanicalPulverizer { get; set; } = true;
     public bool MechanicalToggle { get; set; } = true;
     public bool MechanicalTransmission { get; set; } = true;
     public bool MechanicalWindmillRotor { get; set; } = true;
@@ -88,6 +89,7 @@ public class Config
         MechanicalHelveHammerItem = previousConfig.MechanicalHelveHammerItem;
         MechanicalLargeGear = previousConfig.MechanicalLargeGear;
         MechanicalLargeGearSectionItem = previousConfig.MechanicalLargeGearSectionItem;
+        MechanicalPulverizer = previousConfig.MechanicalPulverizer;
         MechanicalToggle = previousConfig.MechanicalToggle;
         MechanicalTransmission = previousConfig.MechanicalTransmission;
         MechanicalWindmillRotor = previousConfig.MechanicalWindmillRotor;

@@ -22,7 +22,9 @@ public class HarmonyPatches : ModSystem
         }
         if (Core.Config.ResolveMechanicalBlockIssues)
         {
-            HarmonyInstance.Patch(original: AccessTools.IndexerGetter(typeof(BEHelveHammer)), prefix: AccessTools.Method(typeof(BEHelveHammer_TexturePosition_Patch), nameof(BEHelveHammer_TexturePosition_Patch.Prefix)));
+            HarmonyInstance.CreateReversePatcher(original: typeof(Block).GetMethod(nameof(Block.TryPlaceBlock)), standin: typeof(Block_TryPlaceBlock_ReversePatch).GetMethod(nameof(Block_TryPlaceBlock_ReversePatch.Base))).Patch(HarmonyReversePatchType.Original);
+            HarmonyInstance.CreateReversePatcher(original: typeof(BlockEntityDisplay).GetMethod(nameof(BlockEntityDisplay.OnTesselation)), standin: typeof(BlockEntityDisplay_OnTesselation_ReversePatch).GetMethod(nameof(BlockEntityDisplay_OnTesselation_ReversePatch.Base))).Patch(HarmonyReversePatchType.Original);
+            HarmonyInstance.Patch(original: AccessTools.IndexerGetter(typeof(BEHelveHammer)), prefix: AccessTools.Method(typeof(BEHelveHammer_TextureAtlasPosition_Patch), nameof(BEHelveHammer_TextureAtlasPosition_Patch.Prefix)));
             HarmonyInstance.Patch(original: typeof(BEBehaviorMPAxle).GetMethod("getStandMesh", AccessTools.all), prefix: typeof(BEBehaviorMPAxle_getStandMesh_Patch).GetMethod(nameof(BEBehaviorMPAxle_getStandMesh_Patch.Prefix)));
             HarmonyInstance.Patch(original: typeof(BlockAxle).GetMethod(nameof(BlockAxle.IsOrientedTo)), prefix: typeof(BlockAxle_IsOrientedTo_Patch).GetMethod(nameof(BlockAxle_IsOrientedTo_Patch.Prefix)));
             HarmonyInstance.Patch(original: typeof(BlockAxle).GetMethod(nameof(BlockAxle.TryPlaceBlock)), prefix: typeof(BlockAxle_TryPlaceBlock_Patch).GetMethod(nameof(BlockAxle_TryPlaceBlock_Patch.Prefix)));
@@ -34,13 +36,15 @@ public class HarmonyPatches : ModSystem
             HarmonyInstance.Patch(original: typeof(BlockAngledGears).GetMethod(nameof(BlockAngledGears.OnNeighbourBlockChange)), prefix: typeof(BlockAngledGears_OnNeighbourBlockChange_Patch).GetMethod(nameof(BlockAngledGears_OnNeighbourBlockChange_Patch.Prefix)));
             HarmonyInstance.Patch(original: typeof(BlockAngledGears).GetMethod("ToPegGear", AccessTools.all), prefix: typeof(BlockAngledGears_ToPegGear_Patch).GetMethod(nameof(BlockAngledGears_ToPegGear_Patch.Prefix)));
             HarmonyInstance.Patch(original: typeof(BEBrake).GetMethod("GenOpenedMesh", AccessTools.all), prefix: typeof(BEBrake_GenOpenedMesh_Patch).GetMethod(nameof(BEBrake_GenOpenedMesh_Patch.Prefix)));
-            HarmonyInstance.CreateReversePatcher(original: typeof(Block).GetMethod(nameof(Block.TryPlaceBlock)), standin: typeof(Block_TryPlaceBlock_ReversePatch).GetMethod(nameof(Block_TryPlaceBlock_ReversePatch.Base))).Patch(HarmonyReversePatchType.Original);
             HarmonyInstance.Patch(original: typeof(BlockBrake).GetMethod(nameof(BlockBrake.TryPlaceBlock)), prefix: typeof(BlockBrake_TryPlaceBlock_Patch).GetMethod(nameof(BlockBrake_TryPlaceBlock_Patch.Prefix)));
             HarmonyInstance.Patch(original: typeof(BlockTransmission).GetMethod(nameof(BlockTransmission.IsOrientedTo)), prefix: typeof(BlockTransmission_IsOrientedTo_Patch).GetMethod(nameof(BlockTransmission_IsOrientedTo_Patch.Prefix)));
             HarmonyInstance.Patch(original: typeof(BlockTransmission).GetMethod(nameof(BlockTransmission.TryPlaceBlock)), prefix: typeof(BlockTransmission_TryPlaceBlock_Patch).GetMethod(nameof(BlockTransmission_TryPlaceBlock_Patch.Prefix)));
             HarmonyInstance.Patch(original: typeof(BlockClutch).GetMethod(nameof(BlockClutch.TryPlaceBlock)), prefix: typeof(BlockClutch_TryPlaceBlock_Patch).GetMethod(nameof(BlockClutch_TryPlaceBlock_Patch.Prefix)));
             HarmonyInstance.Patch(original: typeof(BlockWindmillRotor).GetMethod(nameof(BlockWindmillRotor.TryPlaceBlock)), prefix: typeof(BlockWindmillRotor_TryPlaceBlock_Patch).GetMethod(nameof(BlockWindmillRotor_TryPlaceBlock_Patch.Prefix)));
             HarmonyInstance.Patch(original: typeof(BlockLargeGear3m).GetMethod(nameof(BlockLargeGear3m.TryPlaceBlock)), prefix: typeof(BlockLargeGear3m_TryPlaceBlock_Patch).GetMethod(nameof(BlockLargeGear3m_TryPlaceBlock_Patch.Prefix)));
+            HarmonyInstance.Patch(original: typeof(BlockPulverizer).GetMethod(nameof(BlockPulverizer.TryPlaceBlock)), prefix: typeof(BlockPulverizer_TryPlaceBlock_Patch).GetMethod(nameof(BlockPulverizer_TryPlaceBlock_Patch.Prefix)));
+            HarmonyInstance.Patch(original: typeof(BlockPulverizer).GetMethod(nameof(BlockPulverizer.GetDrops)), prefix: typeof(BlockPulverizer_GetDrops_Patch).GetMethod(nameof(BlockPulverizer_GetDrops_Patch.Prefix)));
+            HarmonyInstance.Patch(original: typeof(BEPulverizer).GetMethod(nameof(BEPulverizer.OnTesselation)), prefix: typeof(BEPulverizer_OnTesselation_Patch).GetMethod(nameof(BEPulverizer_OnTesselation_Patch.Prefix)));
         }
     }
 
@@ -56,6 +60,8 @@ public class HarmonyPatches : ModSystem
         }
         if (Core.Config.ResolveMechanicalBlockIssues)
         {
+            HarmonyInstance.Unpatch(original: typeof(Block).GetMethod(nameof(Block.TryPlaceBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
+            HarmonyInstance.Unpatch(original: typeof(BlockEntityDisplay).GetMethod(nameof(BlockEntityDisplay.OnTesselation)), HarmonyPatchType.All, HarmonyInstance.Id);
             HarmonyInstance.Unpatch(original: AccessTools.IndexerGetter(typeof(BEHelveHammer)), HarmonyPatchType.All, HarmonyInstance.Id);
             HarmonyInstance.Unpatch(original: typeof(BEBehaviorMPAxle).GetMethod("getStandMesh", AccessTools.all), HarmonyPatchType.All, HarmonyInstance.Id);
             HarmonyInstance.Unpatch(original: typeof(BlockAxle).GetMethod(nameof(BlockAxle.IsOrientedTo)), HarmonyPatchType.All, HarmonyInstance.Id);
@@ -68,13 +74,15 @@ public class HarmonyPatches : ModSystem
             HarmonyInstance.Unpatch(original: typeof(BlockAngledGears).GetMethod(nameof(BlockAngledGears.OnNeighbourBlockChange)), HarmonyPatchType.All, HarmonyInstance.Id);
             HarmonyInstance.Unpatch(original: typeof(BlockAngledGears).GetMethod("ToPegGear", AccessTools.all), HarmonyPatchType.All, HarmonyInstance.Id);
             HarmonyInstance.Unpatch(original: typeof(BEBrake).GetMethod("GenOpenedMesh", AccessTools.all), HarmonyPatchType.All, HarmonyInstance.Id);
-            HarmonyInstance.Unpatch(original: typeof(Block).GetMethod(nameof(Block.TryPlaceBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
             HarmonyInstance.Unpatch(original: typeof(BlockBrake).GetMethod(nameof(BlockBrake.TryPlaceBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
             HarmonyInstance.Unpatch(original: typeof(BlockTransmission).GetMethod(nameof(BlockTransmission.IsOrientedTo)), HarmonyPatchType.All, HarmonyInstance.Id);
             HarmonyInstance.Unpatch(original: typeof(BlockTransmission).GetMethod(nameof(BlockTransmission.TryPlaceBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
             HarmonyInstance.Unpatch(original: typeof(BlockClutch).GetMethod(nameof(BlockClutch.TryPlaceBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
             HarmonyInstance.Unpatch(original: typeof(BlockWindmillRotor).GetMethod(nameof(BlockWindmillRotor.TryPlaceBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
             HarmonyInstance.Unpatch(original: typeof(BlockLargeGear3m).GetMethod(nameof(BlockLargeGear3m.TryPlaceBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
+            HarmonyInstance.Unpatch(original: typeof(BlockPulverizer).GetMethod(nameof(BlockPulverizer.TryPlaceBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
+            HarmonyInstance.Unpatch(original: typeof(BlockPulverizer).GetMethod(nameof(BlockPulverizer.GetDrops)), HarmonyPatchType.All, HarmonyInstance.Id);
+            HarmonyInstance.Unpatch(original: typeof(BEPulverizer).GetMethod(nameof(BEPulverizer.OnTesselation)), HarmonyPatchType.All, HarmonyInstance.Id);
         }
     }
 }

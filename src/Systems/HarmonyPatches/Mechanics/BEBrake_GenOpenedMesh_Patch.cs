@@ -12,7 +12,7 @@ public static class BEBrake_GenOpenedMesh_Patch
     public static bool Prefix(BEBrake __instance, ref MeshData __result, ITesselatorAPI tesselator, float rotY)
     {
         Dictionary<string, MeshData> meshes = ObjectCacheUtil.GetOrCreate(__instance.Api, "mechbrakeOpenedMesh" + __instance.Block.Code.ToString(), () => new Dictionary<string, MeshData>());
-        if (meshes.TryGetValue(rotY.ToString() ?? "", out var mesh))
+        if (meshes.TryGetValue(rotY.ToString() ?? "", out MeshData mesh))
         {
             __result = mesh;
             return false;
