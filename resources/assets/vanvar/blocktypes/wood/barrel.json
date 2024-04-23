@@ -16,6 +16,8 @@
             "groupBy": ["barrel-*"],
             "extraSections": [{ "title": "", "text": "game:block-handbooktext-barrel" }]
         },
+        "openSound": "game:sounds/block/barrelopen",
+        "closeSound": "game:sounds/block/barrelclose",
         "partialAttachable": true,
         "capacityLitres": 50
     },

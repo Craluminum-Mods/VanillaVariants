@@ -16,6 +16,10 @@ public class HarmonyPatches : ModSystem
         {
             HarmonyInstance.Patch(original: typeof(ColorBlend).GetMethod(nameof(ColorBlend.Overlay)), prefix: typeof(Overlay_Patch).GetMethod(nameof(Overlay_Patch.Prefix)));
         }
+        if (Core.Config.ResolveBarrelSounds)
+        {
+            HarmonyInstance.Patch(original: typeof(BlockEntityBarrel).GetMethod("toggleInventoryDialogClient", AccessTools.all), prefix: typeof(BlockEntityBarrel_toggleInventoryDialogClient_Patch).GetMethod(nameof(BlockEntityBarrel_toggleInventoryDialogClient_Patch.Prefix)));
+        }
         if (Core.Config.ResolveHenboxImposter)
         {
             HarmonyInstance.Patch(original: typeof(BlockEntityHenBox).GetMethod(nameof(BlockEntityHenBox.TryAddEgg)), prefix: typeof(BlockEntityHenBox_TryAddEgg_Patch).GetMethod(nameof(BlockEntityHenBox_TryAddEgg_Patch.Prefix)));
@@ -53,6 +57,10 @@ public class HarmonyPatches : ModSystem
         if (Core.Config.ExperimentalOverlayTest)
         {
             HarmonyInstance.Unpatch(original: typeof(ColorBlend).GetMethod(nameof(ColorBlend.Overlay)), HarmonyPatchType.All, HarmonyInstance.Id);
+        }
+        if (Core.Config.ResolveBarrelSounds)
+        {
+            HarmonyInstance.Unpatch(original: typeof(BlockEntityBarrel).GetMethod("toggleInventoryDialogClient", AccessTools.all), HarmonyPatchType.All, HarmonyInstance.Id);
         }
         if (Core.Config.ResolveHenboxImposter)
         {
