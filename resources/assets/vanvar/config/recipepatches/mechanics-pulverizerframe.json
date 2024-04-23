@@ -28,7 +28,7 @@
         "outputCodeNew": "vanvar:pulverizerframe-{rock}-oak-north",
         "ingredients": [
             { "ingredientCode": "plank-*", "Name": "wood", "AllowedVariants": ["oak"] },
-            { "ingredientCode": "rock-*", "Name": "rock", "SkipVariants": ["granite"] }
+            { "ingredientCode": "rock-*", "Name": "rock", "AllowedVariants": ["andesite", "basalt", "peridotite"] }
         ]
     },
 

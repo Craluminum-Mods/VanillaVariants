@@ -1,0 +1,19 @@
+[
+    {
+        "file": "vanvar:blocktypes/wood/fruitpress.json",
+        "op": "addmerge",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VanillaVariants_FruitPress_Enabled", "isValue": "false" },
+        "side": "server"
+    },
+    {
+        "file": "wildcrafttree:blocktypes/wood/fruitpress.json",
+        "op": "addmerge",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VanillaVariants_FruitPress_Enabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
+    }
+]

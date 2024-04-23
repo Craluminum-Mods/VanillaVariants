@@ -21,6 +21,7 @@ public class Config
     public bool DisplayCase { get; set; } = true;
     public bool Firewood { get; set; } = true;
     public bool Forge { get; set; } = true;
+    public bool FruitPress { get; set; } = true;
     public bool Henbox { get; set; } = true;
     public bool Ladder { get; set; } = true;
     public bool MechanicalAngledGears { get; set; } = true;
@@ -79,6 +80,7 @@ public class Config
         DisplayCase = previousConfig.DisplayCase;
         Firewood = previousConfig.Firewood;
         Forge = previousConfig.Forge;
+        FruitPress = previousConfig.FruitPress;
         Henbox = previousConfig.Henbox;
         Ladder = previousConfig.Ladder;
         MechanicalAngledGears = previousConfig.MechanicalAngledGears;
