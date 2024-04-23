@@ -82,5 +82,17 @@
         "height": 2,
         "output": { "type": "block", "code": "vanvar:omoktabletop-{wood}" },
         "recipeGroup": 1
+    },
+    {
+        "ingredientPattern": "OP",
+        "ingredients": {
+            "O": { "type": "block", "code": "wildcrafttree:omoktabletop-*" },
+            "P": { "type": "item", "code": "wildcrafttree:plank-*", "name": "wood" }
+        },
+        "shapeless": true,
+        "width": 1,
+        "height": 2,
+        "output": { "type": "block", "code": "wildcrafttree:omoktabletop-{wood}" },
+        "recipeGroup": 1
     }
 ]

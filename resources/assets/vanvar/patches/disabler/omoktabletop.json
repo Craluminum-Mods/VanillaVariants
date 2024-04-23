@@ -76,5 +76,14 @@
         "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" },
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "side": "server"
+    },
+    {
+        "file": "vanvar:recipes/grid/omoktabletop.json",
+        "op": "addmerge",
+        "path": "/7/enabled",
+        "value": false,
+        "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
     }
 ]

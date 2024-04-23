@@ -48,5 +48,24 @@
         "outputCodeNew": "wildcrafttree:woodenaxle-{wood}-ud",
         "RecipeGroup": 1,
         "ingredients": [{ "ingredientCode": "log*", "Code": "wildcrafttree:logsection-placed-*-ne-ud", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+
+    // use modded axle together with vanilla axles
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "true" }],
+        "outputCode": "pulverizertoggle-oak",
+        "outputCodeNew": "pulverizertoggle-oak",
+        "RecipeGroup": 1,
+        "ingredients": [{ "ingredientCode": "woodenaxle-ud", "Code": "vanvar:woodenaxle-*-ud" }]
+    },
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "true" }],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "pulverizertoggle-oak",
+        "outputCodeNew": "pulverizertoggle-oak",
+        "RecipeGroup": 1,
+        "ingredients": [{ "ingredientCode": "woodenaxle-ud", "Code": "wildcrafttree:woodenaxle-*-ud" }]
     }
 ]

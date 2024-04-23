@@ -1,0 +1,26 @@
+[
+    // interchange modded axle with vanilla axle to craft vanilla brake
+    {
+        "type": "Copy",
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalBrake_Enabled", "isValue": "false" },
+            { "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "true" }
+        ],
+        "outputCode": "brake-north",
+        "outputCodeNew": "brake-north",
+        "RecipeGroup": 1,
+        "ingredients": [{ "ingredientCode": "woodenaxle-ud", "Code": "vanvar:woodenaxle-*-ud" }]
+    },
+    {
+        "type": "Copy",
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalBrake_Enabled", "isValue": "false" },
+            { "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "true" }
+        ],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "brake-north",
+        "outputCodeNew": "brake-north",
+        "RecipeGroup": 1,
+        "ingredients": [{ "ingredientCode": "woodenaxle-ud", "Code": "wildcrafttree:woodenaxle-*-ud" }]
+    }
+]

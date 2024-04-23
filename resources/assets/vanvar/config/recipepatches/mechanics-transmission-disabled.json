@@ -1,0 +1,26 @@
+[
+    // interchange modded angled gears with vanilla angled gears to craft vanilla transmission
+    {
+        "type": "Copy",
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalTransmission_Enabled", "isValue": "false" },
+            { "when": "VanillaVariants_MechanicalAngledGears_Enabled", "isValue": "true" }
+        ],
+        "outputCode": "transmission-ns",
+        "outputCodeNew": "transmission-ns",
+        "RecipeGroup": 1,
+        "ingredients": [{ "ingredientCode": "angledgears-s", "Code": "vanvar:angledgears-*-s" }]
+    },
+    {
+        "type": "Copy",
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalTransmission_Enabled", "isValue": "false" },
+            { "when": "VanillaVariants_MechanicalAngledGears_Enabled", "isValue": "true" }
+        ],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "transmission-ns",
+        "outputCodeNew": "transmission-ns",
+        "RecipeGroup": 1,
+        "ingredients": [{ "ingredientCode": "angledgears-s", "Code": "wildcrafttree:angledgears-*-s" }]
+    }
+]

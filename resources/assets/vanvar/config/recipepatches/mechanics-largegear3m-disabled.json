@@ -1,0 +1,88 @@
+[
+    // interchange modded axle with vanilla axle to craft vanilla large gear
+    {
+        "type": "Copy",
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalLargeGear_Enabled", "isValue": "false" },
+            { "when": "VanillaVariants_MechanicalLargeGearSectionItem_Enabled", "isValue": "false" },
+            { "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "true" }
+        ],
+        "outputCode": "largegear3",
+        "outputCodeNew": "largegear3",
+        "RecipeGroup": 1,
+        "ingredients": [{ "ingredientCode": "woodenaxle-ud", "Code": "vanvar:woodenaxle-*-ud" }]
+    },
+    {
+        "type": "Copy",
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalLargeGear_Enabled", "isValue": "false" },
+            { "when": "VanillaVariants_MechanicalLargeGearSectionItem_Enabled", "isValue": "false" },
+            { "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "true" }
+        ],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "largegear3",
+        "outputCodeNew": "largegear3",
+        "RecipeGroup": 1,
+        "ingredients": [{ "ingredientCode": "woodenaxle-ud", "Code": "wildcrafttree:woodenaxle-*-ud" }]
+    },
+
+    // interchange modded section with vanilla section to craft vanilla large gear
+    {
+        "type": "Copy",
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalLargeGear_Enabled", "isValue": "false" },
+            { "when": "VanillaVariants_MechanicalLargeGearSectionItem_Enabled", "isValue": "true" },
+            { "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "false" }
+        ],
+        "outputCode": "largegear3",
+        "outputCodeNew": "largegear3",
+        "RecipeGroup": 1,
+        "ingredients": [{ "ingredientCode": "largegearsection-wood", "Code": "vanvar:largegearsection-*" }]
+    },
+    {
+        "type": "Copy",
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalLargeGear_Enabled", "isValue": "false" },
+            { "when": "VanillaVariants_MechanicalLargeGearSectionItem_Enabled", "isValue": "true" },
+            { "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "false" }
+        ],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "largegear3",
+        "outputCodeNew": "largegear3",
+        "RecipeGroup": 1,
+        "ingredients": [{ "ingredientCode": "largegearsection-wood", "Code": "wildcrafttree:largegearsection-*" }]
+    },
+
+    // interchange modded section with vanilla section, also modded axle with vanilla axle to craft vanilla large gear
+    {
+        "type": "Copy",
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalLargeGear_Enabled", "isValue": "false" },
+            { "when": "VanillaVariants_MechanicalLargeGearSectionItem_Enabled", "isValue": "true" },
+            { "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "true" }
+        ],
+        "outputCode": "largegear3",
+        "outputCodeNew": "largegear3",
+        "RecipeGroup": 1,
+        "ingredients": [
+            { "ingredientCode": "woodenaxle-ud", "Code": "vanvar:woodenaxle-*-ud" },
+            { "ingredientCode": "largegearsection-wood", "Code": "vanvar:largegearsection-*" }
+        ]
+    },
+    {
+        "type": "Copy",
+        "conditions": [
+            { "when": "VanillaVariants_MechanicalLargeGear_Enabled", "isValue": "false" },
+            { "when": "VanillaVariants_MechanicalLargeGearSectionItem_Enabled", "isValue": "true" },
+            { "when": "VanillaVariants_MechanicalAxle_Enabled", "isValue": "true" }
+        ],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "largegear3",
+        "outputCodeNew": "largegear3",
+        "RecipeGroup": 1,
+        "ingredients": [
+            { "ingredientCode": "woodenaxle-ud", "Code": "wildcrafttree:woodenaxle-*-ud" },
+            { "ingredientCode": "largegearsection-wood", "Code": "wildcrafttree:largegearsection-*" }
+        ]
+    }
+]
