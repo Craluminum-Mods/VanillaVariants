@@ -4,7 +4,6 @@
         "conditions": [{ "when": "VanillaVariants_Firewood_Enabled", "isValue": "true" }],
         "outputCode": "firewood",
         "outputCodeNew": "vanvar:firewood-{wood}",
-        "ChangeQuantity": true,
         "QuantityNew": 4,
         "RecipeGroup": 5,
         "ingredients": [{ "ingredientCode": "log*", "Code": "logsection-placed-*-ne-ud", "Name": "wood" }]
@@ -16,7 +15,6 @@
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "firewood",
         "outputCodeNew": "wildcrafttree:firewood-{wood}",
-        "ChangeQuantity": true,
         "QuantityNew": 4,
         "RecipeGroup": 5,
         "ingredients": [{ "ingredientCode": "log*", "Code": "wildcrafttree:logsection-placed-*-ne-ud", "Name": "wood" }]

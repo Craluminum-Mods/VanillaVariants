@@ -7,7 +7,6 @@
         // there are no such variants for this item
         // "outputCodeNew": "wildcrafttree:firewood-{wood}",
         "outputCodeNew": "firewood",
-        "ChangeQuantity": true,
         "QuantityNew": 2,
         "RecipeGroup": 2,
         "ingredients": [

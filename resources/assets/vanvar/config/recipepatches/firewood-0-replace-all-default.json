@@ -4,7 +4,6 @@
         "type": "Replace",
         "conditions": [{ "when": "VanillaVariants_Firewood_Enabled", "isValue": "true" }],
         "outputCode": "firewood",
-        "ChangeQuantity": true,
         "QuantityNew": 4,
         "RecipeGroup": 0,
         "ingredients": [{ "ingredientCode": "log*", "Code": "log-placed-*-ud", "AllowedVariants": ["oak"] }]
@@ -15,7 +14,6 @@
         "conditions": [{ "when": "VanillaVariants_Firewood_Enabled", "isValue": "true" }],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "firewood",
-        "ChangeQuantity": true,
         "QuantityNew": 4,
         "RecipeGroup": 0,
         "ingredients": [{ "ingredientCode": "wildcrafttree:log*", "Code": "log-placed-*-ud", "AllowedVariants": ["oak"] }]

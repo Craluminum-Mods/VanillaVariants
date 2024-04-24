@@ -51,5 +51,10 @@
         "rotation": { "x": -2, "y": 25, "z": -78 },
         "scale": 0.4
     },
+    "guiTransform": {
+        "rotation": { "x": -45, "y": -45, "z": 0 },
+        "origin": { "x": 0.5, "y": 0.125, "z": 0.5 },
+        "scale": 2
+    },
     "drops": []
 }
