@@ -1,0 +1,36 @@
+[
+    {
+        "type": "Replace",
+        "conditions": [{ "when": "VanillaVariants_Chest_Enabled", "isValue": "true" }],
+        "attributes": { "type": "normal-generic" },
+        "outputCode": "chest-east",
+        "ingredients": [{ "ingredientCode": "plank-*", "AllowedVariants": ["oak"] }]
+    },
+    {
+        "type": "Replace",
+        "conditions": [{ "when": "VanillaVariants_Chest_Enabled", "isValue": "true" }],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "attributes": { "type": "normal-generic" },
+        "outputCode": "chest-east",
+        "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] }]
+    },
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_Chest_Enabled", "isValue": "true" }],
+        "attributes": { "type": "normal-generic" },
+        "attributesNew": { "type": "{wood}" },
+        "outputCode": "chest-east",
+        "outputCodeNew": "vanvar:chest-east",
+        "ingredients": [{ "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
+    },
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_Chest_Enabled", "isValue": "true" }],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "attributes": { "type": "normal-generic" },
+        "attributesNew": { "type": "{wood}" },
+        "outputCode": "chest-east",
+        "outputCodeNew": "wildcrafttree:chest-east",
+        "ingredients": [{ "ingredientCode": "plank-*", "Code": "wildcrafttree:plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
+    }
+]

@@ -5,6 +5,7 @@ public class Config
     public bool ExperimentalOverlayTest { get; set; } = true;
 
     public bool ResolveBarrelSounds { get; set; } = true;
+    public bool ResolveChestNames { get; set; } = true;
     public bool ResolveHenboxImposter { get; set; } = true;
     public bool ResolveMechanicalBlockIssues { get; set; } = true;
     public bool ResolveQuernAndAxleRelationship { get; set; } = true;
@@ -18,6 +19,7 @@ public class Config
     public bool Bed { get; set; } = true;
     public bool Cage { get; set; } = true;
     public bool Chair { get; set; } = true;
+    public bool Chest { get; set; } = true;
     public bool CrudeDoor { get; set; } = true;
     public bool DecorativeQuern { get; set; } = true;
     public bool DisplayCase { get; set; } = true;
@@ -66,6 +68,7 @@ public class Config
         ExperimentalOverlayTest = previousConfig.ExperimentalOverlayTest;
 
         ResolveBarrelSounds = previousConfig.ResolveBarrelSounds;
+        ResolveChestNames = previousConfig.ResolveChestNames;
         ResolveHenboxImposter = previousConfig.ResolveHenboxImposter;
         ResolveMechanicalBlockIssues = previousConfig.ResolveMechanicalBlockIssues;
         ResolveQuernAndAxleRelationship = previousConfig.ResolveQuernAndAxleRelationship;
@@ -79,6 +82,7 @@ public class Config
         Bed = previousConfig.Bed;
         Cage = previousConfig.Cage;
         Chair = previousConfig.Chair;
+        Chest = previousConfig.Chest;
         CrudeDoor = previousConfig.CrudeDoor;
         DecorativeQuern = previousConfig.DecorativeQuern;
         DisplayCase = previousConfig.DisplayCase;

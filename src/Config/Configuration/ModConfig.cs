@@ -39,6 +39,7 @@ static class ModConfig
         api.World.Config.SetBool("VanillaVariants_Bed_Enabled", config.Bed);
         api.World.Config.SetBool("VanillaVariants_Cage_Enabled", config.Cage);
         api.World.Config.SetBool("VanillaVariants_Chair_Enabled", config.Chair);
+        api.World.Config.SetBool("VanillaVariants_Chest_Enabled", config.Chest);
         api.World.Config.SetBool("VanillaVariants_CrudeDoor_Enabled", config.CrudeDoor);
         api.World.Config.SetBool("VanillaVariants_DecorativeQuern_Enabled", config.DecorativeQuern);
         api.World.Config.SetBool("VanillaVariants_DisplayCase_Enabled", config.DisplayCase);

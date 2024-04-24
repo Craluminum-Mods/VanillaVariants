@@ -1,10 +1,12 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json.Linq;
 using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.Util;
 using Vintagestory.GameContent;
+using Vintagestory.ServerMods;
 
 namespace VanillaVariants;
 
@@ -100,5 +102,176 @@ public static class CollectibleObjectPatches
 
         block.BlockBehaviors = block.BlockBehaviors.Append(behavior);
         block.CollectibleBehaviors = block.CollectibleBehaviors.Append(behavior);
+    }
+
+    public static void PatchChest(this ICoreAPI api, Block block)
+    {
+        if (!Enum.TryParse(block?.Attributes?["chestType"]?.AsString(), out EnumChestType chestType))
+        {
+            return;
+        }
+
+        switch (chestType)
+        {
+            case EnumChestType.Normal:
+                {
+                    Block fromBlock = api.World.GetBlock(new AssetLocation("chest-east"));
+                    if (fromBlock == null)
+                    {
+                        return;
+                    }
+
+                    ChestProperties chestProps = api.Assets.TryGet(block.Attributes?["loadChestPropertiesFrom"]?.AsString())?.ToObject<ChestProperties>();
+                    string[] types = api.GetTypes(new RegistryObjectVariantGroup() { LoadFromProperties = chestProps.GetLoadFromProperties(), States = chestProps.States }, chestProps.SkipVariants);
+                    if (!types.Any())
+                    {
+                        return;
+                    }
+
+                    string genericType = "normal-generic";
+                    block.Attributes ??= new JsonObject(new JObject());
+                    block.Attributes.Token["types"] = JToken.FromObject(types);
+                    block.Attributes.Token["defaultType"] = JToken.FromObject(types[0]);
+                    block.Attributes.Token["rotatatableInterval"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["rotatatableInterval"][genericType].AsString()));
+                    block.Attributes.Token["drop"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["drop"][genericType].AsBool()));
+                    block.Attributes.Token["quantitySlots"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["quantitySlots"][genericType].AsInt()));
+                    block.Attributes.Token["dialogTitleLangCode"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["dialogTitleLangCode"][genericType].AsString()));
+                    block.Attributes.Token["storageType"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["storageType"][genericType].AsInt()));
+                    block.Attributes.Token["retrieveOnly"] = JToken.FromObject(types.ToDictionary(key => key, value => false));
+                    block.Attributes.Token["shape"] = JToken.FromObject(types.ToDictionary(key => key, value => "game:" + fromBlock.Attributes["shape"][genericType].AsString()));
+                    block.Attributes.Token["typedOpenSound"] = JToken.FromObject(types.ToDictionary(key => key, value => "game:" + fromBlock.Attributes["typedOpenSound"][genericType].AsString()));
+                    block.Attributes.Token["typedCloseSound"] = JToken.FromObject(types.ToDictionary(key => key, value => "game:" + fromBlock.Attributes["typedCloseSound"][genericType].AsString()));
+
+                    if (block.Variant["side"] == "east")
+                    {
+                        api.AddChestToCreativeInventory(block, types);
+                    }
+                    break;
+                }
+            case EnumChestType.NormalLabeled:
+                {
+                    Block fromBlock = api.World.GetBlock(new AssetLocation("labeledchest-east"));
+                    if (fromBlock == null)
+                    {
+                        return;
+                    }
+
+                    ChestProperties chestProps = api.Assets.TryGet(block.Attributes?["loadChestPropertiesFrom"]?.AsString())?.ToObject<ChestProperties>();
+                    string[] types = api.GetTypes(new RegistryObjectVariantGroup() { LoadFromProperties = chestProps.GetLoadFromProperties(), States = chestProps.States }, chestProps.SkipVariants);
+                    if (!types.Any())
+                    {
+                        return;
+                    }
+
+                    string genericType = "normal-labeled";
+                    block.Attributes ??= new JsonObject(new JObject());
+                    block.Attributes.Token["types"] = JToken.FromObject(types);
+                    block.Attributes.Token["defaultType"] = JToken.FromObject(types[0]);
+                    block.Attributes.Token["drop"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["drop"][genericType].AsBool()));
+                    block.Attributes.Token["quantitySlots"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["quantitySlots"][genericType].AsInt()));
+                    block.Attributes.Token["dialogTitleLangCode"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["dialogTitleLangCode"][genericType].AsString()));
+                    block.Attributes.Token["storageType"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["storageType"][genericType].AsInt()));
+                    block.Attributes.Token["retrieveOnly"] = JToken.FromObject(types.ToDictionary(key => key, value => false));
+                    block.Attributes.Token["shape"] = JToken.FromObject(types.ToDictionary(key => key, value => "game:" + fromBlock.Attributes["shape"][genericType].AsString()));
+                    block.Attributes.Token["typedOpenSound"] = JToken.FromObject(types.ToDictionary(key => key, value => "game:" + fromBlock.Attributes["typedOpenSound"][genericType].AsString()));
+                    block.Attributes.Token["typedCloseSound"] = JToken.FromObject(types.ToDictionary(key => key, value => "game:" + fromBlock.Attributes["typedCloseSound"][genericType].AsString()));
+
+                    if (block.Variant["side"] == "east")
+                    {
+                        api.AddChestToCreativeInventory(block, types);
+                    }
+                    break;
+                }
+            case EnumChestType.Double:
+                {
+                    Block fromBlock = api.World.GetBlock(new AssetLocation("trunk-east"));
+                    if (fromBlock == null)
+                    {
+                        return;
+                    }
+
+                    ChestProperties chestProps = api.Assets.TryGet(block.Attributes?["loadChestPropertiesFrom"]?.AsString())?.ToObject<ChestProperties>();
+                    string[] types = api.GetTypes(new RegistryObjectVariantGroup() { LoadFromProperties = chestProps.GetLoadFromProperties(), States = chestProps.States }, chestProps.SkipVariants);
+                    if (!types.Any())
+                    {
+                        return;
+                    }
+
+                    string genericType = "normal-generic";
+                    block.Attributes ??= new JsonObject(new JObject());
+                    block.Attributes.Token["types"] = JToken.FromObject(types);
+                    block.Attributes.Token["defaultType"] = JToken.FromObject(types[0]);
+                    block.Attributes.Token["rotatatableInterval"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["rotatatableInterval"][genericType].AsString()));
+                    block.Attributes.Token["drop"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["drop"][genericType].AsBool()));
+                    block.Attributes.Token["quantitySlots"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["quantitySlots"][genericType].AsInt()));
+                    block.Attributes.Token["quantityColumns"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["quantityColumns"][genericType].AsInt()));
+                    block.Attributes.Token["dialogTitleLangCode"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["dialogTitleLangCode"][genericType].AsString()));
+                    block.Attributes.Token["storageType"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["storageType"][genericType].AsInt()));
+                    block.Attributes.Token["retrieveOnly"] = JToken.FromObject(types.ToDictionary(key => key, value => false));
+                    block.Attributes.Token["shape"] = JToken.FromObject(types.ToDictionary(key => key, value => "game:" + fromBlock.Attributes["shape"][genericType].AsString()));
+                    block.Attributes.Token["typedOpenSound"] = JToken.FromObject(types.ToDictionary(key => key, value => "game:" + fromBlock.Attributes["typedOpenSound"][genericType].AsString()));
+                    block.Attributes.Token["typedCloseSound"] = JToken.FromObject(types.ToDictionary(key => key, value => "game:" + fromBlock.Attributes["typedCloseSound"][genericType].AsString()));
+
+                    if (block.Variant["side"] == "east")
+                    {
+                        api.AddChestToCreativeInventory(block, types);
+                    }
+                    break;
+                }
+        }
+    }
+
+    // public static string[] GetTypes(this ICoreAPI api, Block block)
+    // {
+    //     RegistryObjectVariantGroup variantGroups = block.Attributes?["variantGroups"]?.AsObject<RegistryObjectVariantGroup>(null);
+    //     string[] skipTypes = block.Attributes?["skipVariants"]?.AsObject<string[]>(null);
+    //     return api.GetTypes(variantGroups, skipTypes);
+    // }
+
+    public static string[] GetTypes(this ICoreAPI api, RegistryObjectVariantGroup variantGroups, string[] skipTypes)
+    {
+        string[] types = variantGroups?.States ?? Array.Empty<string>();
+        if (variantGroups?.LoadFromProperties != null)
+        {
+            types = (api.Assets.TryGet(variantGroups.LoadFromProperties.WithPathPrefixOnce("worldproperties/").WithPathAppendixOnce(".json"))?
+                .ToObject<StandardWorldProperty>(null)).Variants
+                .Select((WorldPropertyVariant p) => p.Code.Path)
+                .Except(skipTypes ?? Array.Empty<string>())
+                .ToArray()
+                .Append(types);
+            return types;
+        }
+        return Array.Empty<string>();
+    }
+
+    public static void AddChestToCreativeInventory(this ICoreAPI api, Block block, string[] types)
+    {
+        string[] tabs = block.Attributes?["creativeTabs"]?.AsObject<string[]>();
+        if (tabs?.Any() == false)
+        {
+            return;
+        }
+
+        List<JsonItemStack> stacks = new();
+        foreach (string type in types)
+        {
+            JsonItemStack jsonItemStack = new()
+            {
+                Code = block.Code,
+                Type = block.ItemClass,
+                Attributes = new JsonObject(JToken.Parse($"{{ \"type\": \"{type}\" }}"))
+            };
+            JsonItemStack jstack = jsonItemStack;
+            jstack.Resolve(api.World, block.Code?.ToString() + " type");
+            stacks.Add(jstack);
+        }
+        block.CreativeInventoryStacks = new CreativeTabAndStackList[1]
+        {
+            new()
+            {
+                Stacks = stacks.ToArray(),
+                Tabs = tabs
+            }
+        };
     }
 }

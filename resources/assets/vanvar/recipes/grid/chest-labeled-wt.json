@@ -1,0 +1,56 @@
+[
+    {
+        "ingredientPattern": "S,C",
+        "ingredients": {
+            "S": { "type": "block", "code": "wildcrafttree:sign-*-ground-north" },
+            "C": { "type": "block", "code": "vanvar:chest-east" }
+        },
+        "shapeless": true,
+        "copyAttributesFrom": "C",
+        "width": 1,
+        "height": 2,
+        "recipeGroup": 2,
+        "output": { "type": "block", "code": "vanvar:labeledchest-east" }
+    },
+
+    {
+        "ingredientPattern": "S,C",
+        "ingredients": {
+            "S": { "type": "block", "code": "game:sign-ground-north" },
+            "C": { "type": "block", "code": "wildcrafttree:chest-east" }
+        },
+        "shapeless": true,
+        "copyAttributesFrom": "C",
+        "width": 1,
+        "height": 2,
+        "output": { "type": "block", "code": "wildcrafttree:labeledchest-east" }
+    },
+
+    {
+        "ingredientPattern": "S,C",
+        "ingredients": {
+            "S": { "type": "block", "code": "wildcrafttree:sign-*-ground-north" },
+            "C": { "type": "block", "code": "wildcrafttree:chest-east" }
+        },
+        "shapeless": true,
+        "copyAttributesFrom": "C",
+        "width": 1,
+        "height": 2,
+        "recipeGroup": 1,
+        "output": { "type": "block", "code": "wildcrafttree:labeledchest-east" }
+    },
+
+    {
+        "ingredientPattern": "S,C",
+        "ingredients": {
+            "S": { "type": "block", "code": "vanvar:sign-*-ground-north" },
+            "C": { "type": "block", "code": "wildcrafttree:chest-east" }
+        },
+        "shapeless": true,
+        "copyAttributesFrom": "C",
+        "width": 1,
+        "height": 2,
+        "recipeGroup": 2,
+        "output": { "type": "block", "code": "wildcrafttree:labeledchest-east" }
+    }
+]

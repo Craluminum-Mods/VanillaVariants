@@ -1,0 +1,23 @@
+// [
+//     {
+//         "op": "addmerge",
+//         "value": { "base": "game:block/wood/debarked/{wood}", "overlays": ["vanvar:block/chest/sides"] },
+//         "path": "textures/{wood}-sides2",
+//         "file": "vanvar:blocktypes/wood/chest.json",
+//         "condition": { "when": "VanillaVariants_Chest_Enabled", "isValue": "true" }
+//     },
+//     {
+//         "op": "addmerge",
+//         "value": { "base": "game:block/wood/debarked/{wood}" },
+//         "path": "textures/{wood}-lid",
+//         "file": "vanvar:blocktypes/wood/chest.json",
+//         "condition": { "when": "VanillaVariants_Chest_Enabled", "isValue": "true" }
+//     },
+//     {
+//         "op": "addmerge",
+//         "value": { "base": "game:block/wood/debarked/{wood}", "overlays": ["vanvar:block/chest/accessories"] },
+//         "path": "textures/{wood}-accessories",
+//         "file": "vanvar:blocktypes/wood/chest.json",
+//         "condition": { "when": "VanillaVariants_Chest_Enabled", "isValue": "true" }
+//     }
+// ]

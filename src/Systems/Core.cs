@@ -25,6 +25,8 @@ public class Core : ModSystem
         api.RegisterBlockBehaviorClass("VanillaVariants.BlockDescription", typeof(BlockBehaviorBlockDescription));
         api.RegisterCollectibleBehaviorClass("VanillaVariants.ItemDescription", typeof(CollectibleBehaviorItemDescription));
 
+        api.RegisterBlockBehaviorClass("VanillaVariants.ChestName", typeof(BlockBehaviorChestName));
+
         api.RegisterBlockClass("VanillaVariants.BlockWoodBucket", typeof(BlockWoodBucket));
         api.RegisterEntity("VV_EntityWoodArmorStand", typeof(EntityWoodArmorStand));
 
@@ -63,6 +65,11 @@ public class Core : ModSystem
             if (Config.ResolveQuernAndAxleRelationship && block?.Attributes?["patchQuernExceptions"]?.AsBool() == true)
             {
                 api.PatchQuern(block);
+            }
+
+            if (block?.Attributes?["chestType"]?.AsString() != null)
+            {
+                api.PatchChest(block);
             }
 
             if (!block.IsFromMod())

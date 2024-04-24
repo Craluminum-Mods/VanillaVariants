@@ -1,0 +1,90 @@
+{
+    "code": "trunk",
+    "class": "BlockGenericTypedContainerTrunk",
+    "entityclass": "GenericTypedContainer",
+    "attributes": {
+        "fromVanVarMod": true,
+        "partialAttachable": true,
+        "inventoryClassName": "chest",
+        "variantByGroup": "side",
+        "variantByGroupInventory": null,
+        // types and everything else is populated by VanillaVariants.Core.AssetsFinalize and VanillaVariants.CollectibleObjectPatches classes
+        "chestType": "Double",
+        "handbook": { "groupBy": ["trunk-*"] },
+        "loadChestPropertiesFrom": "vanvar:config/properties/chests-wildcrafttree.json",
+        "creativeTabs": ["general", "decorative", "vanvar"]
+    },
+    "behaviors": [
+        {
+            "name": "VanillaVariants.ChestName",
+            "properties": {
+                "parts": ["block-normal-generic-trunk-*", " (", "material-wood_type", ")"],
+                "replacePart": "wood_type",
+                "defaultName": "block-normal-generic-trunk-*"
+            }
+        },
+        { "name": "HorizontalOrientable" },
+        {
+            "name": "Multiblock",
+            "propertiesByType": {
+                "*-north": { "sizex": 2, "sizey": 1, "sizez": 1, "cposition": { "x": 0, "y": 0, "z": 0 } },
+                "*-east": { "sizex": 1, "sizey": 1, "sizez": 2, "cposition": { "x": 0, "y": 0, "z": 0 } },
+                "*-south": { "sizex": 2, "sizey": 1, "sizez": 1, "cposition": { "x": 1, "y": 0, "z": 0 } },
+                "*-west": { "sizex": 1, "sizey": 1, "sizez": 2, "cposition": { "x": 0, "y": 0, "z": 1 } }
+            }
+        },
+        { "name": "Lockable" },
+        { "name": "Container" }
+    ],
+    "entityBehaviors": [{ "name": "Animatable" }],
+    "variantgroups": [{ "code": "side", "loadFromProperties": "abstract/horizontalorientation" }],
+    "heldTpIdleAnimation": "holdunderarm",
+    "shapeInventory": { "base": "game:block/wood/trunk/normal", "rotateY": 270 },
+    "shapeByType": {
+        "*-north": { "base": "game:block/wood/trunk/normal", "rotateY": 0 },
+        "*-east": { "base": "game:block/wood/trunk/normal", "rotateY": 270 },
+        "*-west": { "base": "game:block/wood/trunk/normal", "rotateY": 90 },
+        "*-south": { "base": "game:block/wood/trunk/normal", "rotateY": 180 }
+    },
+    "textures": {}, // populated by VanillaVariants.JsonPatches class
+    "blockmaterial": "Wood",
+    "replaceable": 900,
+    "resistance": 3,
+    "lightAbsorption": 0,
+    "sideAo": { "all": false },
+    "sidesolid": { "all": false },
+    "sideopaque": { "all": false },
+    "collisionSelectionBox": {
+        "x1": 0.0625,
+        "y1": 0,
+        "z1": 0.0625,
+        "x2": 1,
+        "y2": 0.8125,
+        "z2": 0.9375,
+        "rotateYByType": {
+            "*-east": 270,
+            "*-west": 90,
+            "*-south": 180
+        }
+    },
+    "combustibleProps": {
+        "burnTemperature": 600,
+        "burnDuration": 35
+    },
+    "sounds": {
+        "place": "game:block/planks",
+        "hit": "game:block/planks",
+        "break": "game:block/planks",
+        "walk": "game:walk/wood"
+    },
+    "materialDensity": 600,
+    "tpHandTransform": {
+        "translation": { "x": -0.3, "y": -0.5, "z": -0.3 },
+        "rotation": { "x": 0, "y": 90, "z": -102 },
+        "scale": 0.56
+    },
+    "guiTransform": {
+        "origin": { "x": 0.5, "y": 0.5, "z": 0.97 },
+        "scale": 0.95
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "Code": "{wood}",
+    "LoadFromProperties": "block/wood",
+    "States": ["aged"],
+    "SkipVariants": ["oak"]
+    // "PatchesFromFile": "vanvar:config/patches/chestpatches.json"
+}

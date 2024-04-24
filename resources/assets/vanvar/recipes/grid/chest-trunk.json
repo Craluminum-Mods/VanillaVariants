@@ -1,0 +1,24 @@
+[
+    {
+        "ingredientPattern": "WW",
+        "ingredients": {
+            "W": { "type": "block", "code": "vanvar:chest-east" }
+        },
+        "shapeless": true,
+        "copyAttributesFrom": "W",
+        "width": 2,
+        "height": 1,
+        "output": { "type": "block", "code": "vanvar:trunk-east" }
+    },
+    {
+        "ingredientPattern": "WW",
+        "ingredients": {
+            "W": { "type": "block", "code": "wildcrafttree:chest-east" }
+        },
+        "shapeless": true,
+        "copyAttributesFrom": "W",
+        "width": 2,
+        "height": 1,
+        "output": { "type": "block", "code": "wildcrafttree:trunk-east" }
+    }
+]
