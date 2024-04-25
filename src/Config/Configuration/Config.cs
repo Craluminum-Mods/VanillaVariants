@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using Vintagestory.API.Util;
+
 namespace VanillaVariants.Configuration;
 
 public class Config
@@ -61,10 +64,35 @@ public class Config
     public bool WoodenPath { get; set; } = true;
     public bool WoodenRails { get; set; } = true;
 
+    public Dictionary<string, Dictionary<string, float>> FlowRates { get; set; } = new()
+    {
+        ["archimedesscrew"] = new() { ["default"] = 1, },
+        ["chute-cross"] = new() { ["default"] = 1, },
+        ["chute-straight"] = new() { ["default"] = 1, },
+        ["chute-t"] = new() { ["default"] = 1, },
+    };
+
+    public Dictionary<string, Dictionary<string, int>> QuantitySlots { get; set; } = new()
+    {
+        ["archimedesscrew"] = new() { ["default"] = 1, },
+        ["chute-cross"] = new() { ["default"] = 1, },
+        ["chute-straight"] = new() { ["default"] = 1, },
+        ["chute-t"] = new() { ["default"] = 1, },
+    };
+
+    public Dictionary<string, Dictionary<string, int>> CheckRateMs { get; set; } = new()
+    {
+        ["archimedesscrew"] = new() { ["default"] = 500, },
+    };
+
     public Config() { }
 
     public Config(Config previousConfig)
     {
+        FlowRates.AddRange(previousConfig.FlowRates);
+        QuantitySlots.AddRange(previousConfig.QuantitySlots);
+        CheckRateMs.AddRange(previousConfig.CheckRateMs);
+
         ExperimentalOverlayTest = previousConfig.ExperimentalOverlayTest;
 
         ResolveBarrelSounds = previousConfig.ResolveBarrelSounds;

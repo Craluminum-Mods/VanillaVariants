@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using VanillaVariants.Configuration;
 using Vintagestory.API.Client;
@@ -11,9 +11,17 @@ namespace VanillaVariants;
 
 public class Core : ModSystem
 {
-    public static Config Config { get; private set; }
+    public static Config Config { get; set; }
 
-    public override void StartPre(ICoreAPI api) => Config = ModConfig.ReadConfig(api);
+    public override void StartPre(ICoreAPI api)
+    {
+        Config = ModConfig.ReadConfig(api);
+
+        if (api.ModLoader.IsModEnabled("configlib"))
+        {
+            _ = new ConfigLibCompatibility(api);
+        }
+    }
 
     public override void Start(ICoreAPI api)
     {

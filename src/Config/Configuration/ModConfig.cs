@@ -84,6 +84,8 @@ static class ModConfig
         return config;
     }
 
+    public static void WriteConfig(ICoreAPI api, Config config) => GenerateConfig(api, config);
+
     private static Config LoadConfig(ICoreAPI api)
     {
         return api.LoadModConfig<Config>(jsonConfig);

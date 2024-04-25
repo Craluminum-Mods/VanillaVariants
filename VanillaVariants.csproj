@@ -26,6 +26,18 @@
             <HintPath>$(VINTAGE_STORY)\Lib\0Harmony.dll</HintPath>
             <Private>false</Private>
         </Reference>
+        <Reference Include="configlib">
+            <HintPath>..\configlib.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="ImGui.NET">
+            <HintPath>..\ImGui.NET.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="VSImGui">
+            <HintPath>..\VSImGui.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
     </ItemGroup>
 
 	<ItemGroup Condition="'$(Configuration)' == 'Release'">
