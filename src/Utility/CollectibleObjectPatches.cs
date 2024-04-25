@@ -272,4 +272,34 @@ public static class CollectibleObjectPatches
             }
         };
     }
+
+    public static void PatchChute(this Block block)
+    {
+        string name = block.Attributes?["configurableName"]?.AsString();
+        string variant = block.Variant[block.Attributes?["configurableType"]?.AsString()];
+
+        if (name == null || variant == null)
+        {
+            return;
+        }
+
+        UpdateAttribute(block, "item-flowrate", Core.Config.FlowRates, name, variant);
+        UpdateAttribute(block, "quantitySlots", Core.Config.QuantitySlots, name, variant);
+        UpdateAttribute(block, "item-checkrateMs", Core.Config.CheckRateMs, name, variant);
+    }
+
+    private static void UpdateAttribute<T>(Block block, string attributeName, Dictionary<string, Dictionary<string, T>> dict, string name, string variant)
+    {
+        if (!dict.TryGetValue(name, out Dictionary<string, T> innerDict))
+        {
+            return;
+        }
+
+        if (!innerDict.TryGetValue(variant, out T value) && !innerDict.TryGetValue("default", out value))
+        {
+            return;
+        }
+
+        block.Attributes.Token[attributeName] = JToken.FromObject(value);
+    }
 }

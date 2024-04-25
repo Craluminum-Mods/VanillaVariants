@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using VanillaVariants.Configuration;
 using Vintagestory.API.Client;
@@ -34,6 +34,7 @@ public class Core : ModSystem
         api.RegisterCollectibleBehaviorClass("VanillaVariants.ItemDescription", typeof(CollectibleBehaviorItemDescription));
 
         api.RegisterBlockBehaviorClass("VanillaVariants.ChestName", typeof(BlockBehaviorChestName));
+        api.RegisterBlockBehaviorClass("VanillaVariants.ItemFlowDescription", typeof(BlockBehaviorItemFlowDescription));
 
         api.RegisterBlockClass("VanillaVariants.BlockWoodBucket", typeof(BlockWoodBucket));
         api.RegisterEntity("VV_EntityWoodArmorStand", typeof(EntityWoodArmorStand));
@@ -122,6 +123,11 @@ public class Core : ModSystem
 
                         break;
                     }
+            }
+
+            if (block?.Attributes?["configurableChute"]?.AsBool() == true)
+            {
+                block.PatchChute();
             }
         }
 

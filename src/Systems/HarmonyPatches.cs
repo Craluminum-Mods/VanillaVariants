@@ -53,6 +53,7 @@ public class HarmonyPatches : ModSystem
             HarmonyInstance.Patch(original: typeof(BlockPulverizer).GetMethod(nameof(BlockPulverizer.TryPlaceBlock)), prefix: typeof(BlockPulverizer_TryPlaceBlock_Patch).GetMethod(nameof(BlockPulverizer_TryPlaceBlock_Patch.Prefix)));
             HarmonyInstance.Patch(original: typeof(BlockPulverizer).GetMethod(nameof(BlockPulverizer.GetDrops)), prefix: typeof(BlockPulverizer_GetDrops_Patch).GetMethod(nameof(BlockPulverizer_GetDrops_Patch.Prefix)));
             HarmonyInstance.Patch(original: typeof(BEPulverizer).GetMethod(nameof(BEPulverizer.OnTesselation)), prefix: typeof(BEPulverizer_OnTesselation_Patch).GetMethod(nameof(BEPulverizer_OnTesselation_Patch.Prefix)));
+            HarmonyInstance.Patch(original: typeof(BEBehaviorMPArchimedesScrew).GetMethod("getHullMesh", AccessTools.all), prefix: typeof(BEBehaviorMPArchimedesScrew_getHullMesh_Patch).GetMethod(nameof(BEBehaviorMPArchimedesScrew_getHullMesh_Patch.Prefix)));
         }
     }
 
@@ -99,6 +100,7 @@ public class HarmonyPatches : ModSystem
             HarmonyInstance.Unpatch(original: typeof(BlockPulverizer).GetMethod(nameof(BlockPulverizer.TryPlaceBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
             HarmonyInstance.Unpatch(original: typeof(BlockPulverizer).GetMethod(nameof(BlockPulverizer.GetDrops)), HarmonyPatchType.All, HarmonyInstance.Id);
             HarmonyInstance.Unpatch(original: typeof(BEPulverizer).GetMethod(nameof(BEPulverizer.OnTesselation)), HarmonyPatchType.All, HarmonyInstance.Id);
+            HarmonyInstance.Unpatch(original: typeof(BEBehaviorMPArchimedesScrew).GetMethod("getHullMesh", AccessTools.all), HarmonyPatchType.All, HarmonyInstance.Id);
         }
     }
 }
