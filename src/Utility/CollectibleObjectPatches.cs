@@ -221,19 +221,17 @@ public static class CollectibleObjectPatches
         }
     }
 
-    // public static string[] GetTypes(this ICoreAPI api, Block block)
-    // {
-    //     RegistryObjectVariantGroup variantGroups = block.Attributes?["variantGroups"]?.AsObject<RegistryObjectVariantGroup>(null);
-    //     string[] skipTypes = block.Attributes?["skipVariants"]?.AsObject<string[]>(null);
-    //     return api.GetTypes(variantGroups, skipTypes);
-    // }
-
     public static string[] GetTypes(this ICoreAPI api, RegistryObjectVariantGroup variantGroups, string[] skipTypes)
     {
         string[] types = variantGroups?.States ?? Array.Empty<string>();
         if (variantGroups?.LoadFromProperties != null)
         {
-            types = (api.Assets.TryGet(variantGroups.LoadFromProperties.WithPathPrefixOnce("worldproperties/").WithPathAppendixOnce(".json"))?
+            IAsset asset = api.Assets.TryGet(variantGroups.LoadFromProperties.WithPathPrefixOnce("worldproperties/").WithPathAppendixOnce(".json"));
+            if (asset == null)
+            {
+                return Array.Empty<string>();
+            }
+            types = (asset?
                 .ToObject<StandardWorldProperty>(null)).Variants
                 .Select((WorldPropertyVariant p) => p.Code.Path)
                 .Except(skipTypes ?? Array.Empty<string>())
