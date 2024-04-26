@@ -1,0 +1,27 @@
+[
+    {"file": "vanvar:recipes/smithing/chutesection.json","op": "addmerge","path": "/enabled","value": false,"condition": { "when": "VanillaVariants_ChuteSectionItem_Enabled", "isValue": "false" },"side": "server"},
+    {"file": "vanvar:recipes/smithing/chutesection.json","op": "addmerge","path": "/enabled","value": false,"condition": { "when": "VanillaVariants-anycraftable-chute", "isValue": "false" },"side": "server"},
+
+    {"file": "vanvar:recipes/smithing/chutesection.json","op": "addmerge","path": "/ingredient/allowedVariants/-","value": "bismuth", "when": "VanillaVariants-craftable-chute-bismuth", "isValue": "true","side": "server" },
+    {"file": "vanvar:recipes/smithing/chutesection.json","op": "addmerge","path": "/ingredient/allowedVariants/-","value": "bismuthbronze", "when": "VanillaVariants-craftable-chute-bismuthbronze", "isValue": "true","side": "server" },
+    {"file": "vanvar:recipes/smithing/chutesection.json","op": "addmerge","path": "/ingredient/allowedVariants/-","value": "blackbronze", "when": "VanillaVariants-craftable-chute-blackbronze", "isValue": "true","side": "server" },
+    {"file": "vanvar:recipes/smithing/chutesection.json","op": "addmerge","path": "/ingredient/allowedVariants/-","value": "brass", "when": "VanillaVariants-craftable-chute-brass", "isValue": "true","side": "server" },
+    {"file": "vanvar:recipes/smithing/chutesection.json","op": "addmerge","path": "/ingredient/allowedVariants/-","value": "chromium", "when": "VanillaVariants-craftable-chute-chromium", "isValue": "true","side": "server" },
+    {"file": "vanvar:recipes/smithing/chutesection.json","op": "addmerge","path": "/ingredient/allowedVariants/-","value": "cupronickel", "when": "VanillaVariants-craftable-chute-cupronickel", "isValue": "true","side": "server" },
+    {"file": "vanvar:recipes/smithing/chutesection.json","op": "addmerge","path": "/ingredient/allowedVariants/-","value": "electrum", "when": "VanillaVariants-craftable-chute-electrum", "isValue": "true","side": "server" },
+    {"file": "vanvar:recipes/smithing/chutesection.json","op": "addmerge","path": "/ingredient/allowedVariants/-","value": "gold", "when": "VanillaVariants-craftable-chute-gold", "isValue": "true","side": "server" },
+    {"file": "vanvar:recipes/smithing/chutesection.json","op": "addmerge","path": "/ingredient/allowedVariants/-","value": "iron", "when": "VanillaVariants-craftable-chute-iron", "isValue": "true","side": "server" },
+    {"file": "vanvar:recipes/smithing/chutesection.json","op": "addmerge","path": "/ingredient/allowedVariants/-","value": "meteoriciron", "when": "VanillaVariants-craftable-chute-meteoriciron", "isValue": "true","side": "server" },
+    {"file": "vanvar:recipes/smithing/chutesection.json","op": "addmerge","path": "/ingredient/allowedVariants/-","value": "lead", "when": "VanillaVariants-craftable-chute-lead", "isValue": "true","side": "server" },
+    {"file": "vanvar:recipes/smithing/chutesection.json","op": "addmerge","path": "/ingredient/allowedVariants/-","value": "molybdochalkos", "when": "VanillaVariants-craftable-chute-molybdochalkos", "isValue": "true","side": "server" },
+    {"file": "vanvar:recipes/smithing/chutesection.json","op": "addmerge","path": "/ingredient/allowedVariants/-","value": "platinum", "when": "VanillaVariants-craftable-chute-platinum", "isValue": "true","side": "server" },
+    {"file": "vanvar:recipes/smithing/chutesection.json","op": "addmerge","path": "/ingredient/allowedVariants/-","value": "nickel", "when": "VanillaVariants-craftable-chute-nickel", "isValue": "true","side": "server" },
+    {"file": "vanvar:recipes/smithing/chutesection.json","op": "addmerge","path": "/ingredient/allowedVariants/-","value": "silver", "when": "VanillaVariants-craftable-chute-silver", "isValue": "true","side": "server" },
+    {"file": "vanvar:recipes/smithing/chutesection.json","op": "addmerge","path": "/ingredient/allowedVariants/-","value": "stainlesssteel", "when": "VanillaVariants-craftable-chute-stainlesssteel", "isValue": "true","side": "server" },
+    {"file": "vanvar:recipes/smithing/chutesection.json","op": "addmerge","path": "/ingredient/allowedVariants/-","value": "steel", "when": "VanillaVariants-craftable-chute-steel", "isValue": "true","side": "server" },
+    {"file": "vanvar:recipes/smithing/chutesection.json","op": "addmerge","path": "/ingredient/allowedVariants/-","value": "tin", "when": "VanillaVariants-craftable-chute-tin", "isValue": "true","side": "server" },
+    {"file": "vanvar:recipes/smithing/chutesection.json","op": "addmerge","path": "/ingredient/allowedVariants/-","value": "tinbronze", "when": "VanillaVariants-craftable-chute-tinbronze", "isValue": "true","side": "server" },
+    {"file": "vanvar:recipes/smithing/chutesection.json","op": "addmerge","path": "/ingredient/allowedVariants/-","value": "titanium", "when": "VanillaVariants-craftable-chute-titanium", "isValue": "true","side": "server" },
+    {"file": "vanvar:recipes/smithing/chutesection.json","op": "addmerge","path": "/ingredient/allowedVariants/-","value": "uranium", "when": "VanillaVariants-craftable-chute-uranium", "isValue": "true","side": "server" },
+    {"file": "vanvar:recipes/smithing/chutesection.json","op": "addmerge","path": "/ingredient/allowedVariants/-","value": "zinc", "when": "VanillaVariants-craftable-chute-zinc", "isValue": "true","side": "server" }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "file": "vanvar:blocktypes/metal/chute.json",
+        "op": "addmerge",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VanillaVariants_Chute_Enabled", "isValue": "false" },
+        "side": "server"
+    },
+    {
+        "file": "vanvar:blocktypes/metal/chute-cross.json",
+        "op": "addmerge",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VanillaVariants_Chute_Enabled", "isValue": "false" },
+        "side": "server"
+    },
+    {
+        "file": "vanvar:blocktypes/metal/chute-straight.json",
+        "op": "addmerge",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VanillaVariants_Chute_Enabled", "isValue": "false" },
+        "side": "server"
+    },
+    {
+        "file": "vanvar:blocktypes/metal/chute-t.json",
+        "op": "addmerge",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VanillaVariants_Chute_Enabled", "isValue": "false" },
+        "side": "server"
+    }
+]

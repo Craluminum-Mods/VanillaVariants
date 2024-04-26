@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using Vintagestory.API.Common;
 
 namespace VanillaVariants.Configuration;
@@ -34,12 +36,15 @@ static class ModConfig
         api.World.Config.SetBool("VanillaVariants_CraftableWagonWheels_Enabled", config.CraftableWagonWheels);
         api.World.Config.SetBool("VanillaVariants_CraftableWoodenRails_Enabled", config.CraftableWoodenRails);
 
+        api.World.Config.SetBool("VanillaVariants_ArchimedesScrew_Enabled", config.ArchimedesScrew);
         api.World.Config.SetBool("VanillaVariants_ArmorStand_Enabled", config.ArmorStand);
         api.World.Config.SetBool("VanillaVariants_Barrel_Enabled", config.Barrel);
         api.World.Config.SetBool("VanillaVariants_Bed_Enabled", config.Bed);
         api.World.Config.SetBool("VanillaVariants_Cage_Enabled", config.Cage);
         api.World.Config.SetBool("VanillaVariants_Chair_Enabled", config.Chair);
         api.World.Config.SetBool("VanillaVariants_Chest_Enabled", config.Chest);
+        api.World.Config.SetBool("VanillaVariants_Chute_Enabled", config.Chute);
+        api.World.Config.SetBool("VanillaVariants_ChuteSectionItem_Enabled", config.ChuteSectionItem);
         api.World.Config.SetBool("VanillaVariants_CrudeDoor_Enabled", config.CrudeDoor);
         api.World.Config.SetBool("VanillaVariants_DecorativeQuern_Enabled", config.DecorativeQuern);
         api.World.Config.SetBool("VanillaVariants_DisplayCase_Enabled", config.DisplayCase);
@@ -47,6 +52,7 @@ static class ModConfig
         api.World.Config.SetBool("VanillaVariants_Forge_Enabled", config.Forge);
         api.World.Config.SetBool("VanillaVariants_FruitPress_Enabled", config.FruitPress);
         api.World.Config.SetBool("VanillaVariants_Henbox_Enabled", config.Henbox);
+        api.World.Config.SetBool("VanillaVariants_Hopper_Enabled", config.Hopper);
         api.World.Config.SetBool("VanillaVariants_Ladder_Enabled", config.Ladder);
         api.World.Config.SetBool("VanillaVariants_MechanicalAngledGears_Enabled", config.MechanicalAngledGears);
         api.World.Config.SetBool("VanillaVariants_MechanicalAxle_Enabled", config.MechanicalAxle);
@@ -80,6 +86,17 @@ static class ModConfig
         api.World.Config.SetBool("VanillaVariants_WoodenPan_Enabled", config.WoodenPan);
         api.World.Config.SetBool("VanillaVariants_WoodenPath_Enabled", config.WoodenPath);
         api.World.Config.SetBool("VanillaVariants_WoodenRails_Enabled", config.WoodenRails);
+
+        foreach ((string name, Dictionary<string, bool> metals) in config.CraftableChutes)
+        {
+            api.World.Config.SetBool($"VanillaVariants-anycraftable-{name}", metals.Any(x => x.Value));
+
+            foreach ((string metal, bool craftable) in metals)
+            {
+                // for example: VanillaVariants-craftable-archimedesscrew-gold
+                api.World.Config.SetBool($"VanillaVariants-craftable-{name}-{metal}", craftable);
+            }
+        }
 
         return config;
     }

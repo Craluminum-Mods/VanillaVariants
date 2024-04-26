@@ -1,0 +1,10 @@
+[
+    {
+        "file": "vanvar:blocktypes/metal/hopper.json",
+        "op": "addmerge",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VanillaVariants_Hopper_Enabled", "isValue": "false" },
+        "side": "server"
+    }
+]

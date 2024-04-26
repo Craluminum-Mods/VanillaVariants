@@ -1,0 +1,102 @@
+{
+    "code": "archimedesscrew",
+    "class": "BlockArchimedesScrew",
+    "entityclass": "ArchimedesScrew",
+    "entityBehaviors": [
+        {
+            "name": "MPArchimedesScrew",
+            "properties": {
+                "staticShapePartByType": {
+                    "*-ported-north": { "base": "game:block/metal/chute/archimedesscrew-ported-hull", "rotateY": 270 },
+                    "*-ported-east": { "base": "game:block/metal/chute/archimedesscrew-ported-hull", "rotateY": 180 },
+                    "*-ported-south": { "base": "game:block/metal/chute/archimedesscrew-ported-hull", "rotateY": 90 },
+                    "*-ported-west": { "base": "game:block/metal/chute/archimedesscrew-ported-hull", "rotateY": 0 },
+                    "*": { "base": "game:block/metal/chute/archimedesscrew-{type}-hull" }
+                }
+            }
+        }
+    ],
+    "behaviors": [
+        {
+            "name": "VanillaVariants.BlockName",
+            "properties": {
+                "partsByType": {
+                    "@.*(uranium|platinum).*straight": ["block-archimedesscrew-straight", " (", "ore-{metal}", ")"],
+                    "@.*(uranium|platinum).*ported.*": ["block-archimedesscrew-ported-*", " (", "ore-{metal}", ")"],
+                    "@.*straight": ["block-archimedesscrew-straight", " (", "material-{metal}", ")"],
+                    "@.*ported.*": ["block-archimedesscrew-ported-*", " (", "material-{metal}", ")"]
+                }
+            }
+        },
+        { "name": "VanillaVariants.ItemFlowDescription" },
+        { "name": "Lockable" }
+    ],
+    "attributes": {
+        "handbook": { "groupBy": ["archimedesscrew-*"] },
+        "configurableChute": true,
+        "configurableName": "archimedesscrew",
+        "configurableType": "metal",
+        "pullFacesByType": { "*": ["down"] },
+        "acceptFromFacesByType": {
+            "*-ported-north": ["north"],
+            "*-ported-east": ["east"],
+            "*-ported-south": ["south"],
+            "*-ported-west": ["west"]
+        },
+        "pushFacesByType": {
+            "*-straight": ["up"],
+            "*-ported-north": ["up", "north"],
+            "*-ported-east": ["up", "east"],
+            "*-ported-south": ["up", "south"],
+            "*-ported-west": ["up", "west"]
+        },
+        "inventoryClassName": "chute",
+        "item-flowrate": 1,
+        "item-checkrateMs": 500,
+        "quantitySlots": 1
+    },
+    "variantgroups": [
+        { "code": "metal", "loadFromProperties": "block/metal" },
+        { "code": "type", "states": ["straight", "ported-north", "ported-east", "ported-south", "ported-west"] }
+    ],
+    "skipVariants": ["*-copper-*"],
+    "creativeinventory": {
+        "general": ["*-straight", "*-ported-north"],
+        "mechanics": ["*-straight", "*-ported-north"],
+        "vanvar": ["*-straight", "*-ported-north"]
+    },
+    "shapeinventorybyType": {
+        "*-straight": {
+            "base": "game:block/metal/chute/archimedesscrew-{type}-hull",
+            "overlays": [{ "base": "game:block/metal/chute/archimedesscrew-{type}-shaft" }]
+        },
+        "*-ported-*": {
+            "base": "game:block/metal/chute/archimedesscrew-ported-hull",
+            "overlays": [{ "base": "game:block/metal/chute/archimedesscrew-ported-shaft" }]
+        }
+    },
+    "shapebytype": {
+        "*-straight": { "base": "game:block/metal/chute/archimedesscrew-{type}-shaft" },
+        "*-ported-north": { "base": "game:block/metal/chute/archimedesscrew-ported-shaft", "rotateY": 270 },
+        "*-ported-east": { "base": "game:block/metal/chute/archimedesscrew-ported-shaft", "rotateY": 180 },
+        "*-ported-south": { "base": "game:block/metal/chute/archimedesscrew-ported-shaft", "rotateY": 90 },
+        "*-ported-west": { "base": "game:block/metal/chute/archimedesscrew-ported-shaft", "rotateY": 0 }
+    },
+    "textures": {
+        "all": { "base": "game:block/metal/sheet/{metal}1" }
+    },
+    "blockmaterial": "Metal",
+    "lightAbsorption": 0,
+    "drawtype": "json",
+    "replaceable": 160,
+    "resistance": 1.75,
+    "sidesolid": { "all": false },
+    "sideopaque": { "all": false },
+    "sounds": {
+        "place": "game:block/chute",
+        "break": "game:block/chute",
+        "hit": "game:block/chute",
+        "walk": "game:game:walk/stone"
+    },
+    "collisionselectionboxByType": { "*": { "x1": 0.125, "y1": 0, "z1": 0.125, "x2": 0.875, "y2": 1, "z2": 0.875 } }
+}

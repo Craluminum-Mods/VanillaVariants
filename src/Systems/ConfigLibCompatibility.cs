@@ -97,6 +97,12 @@ public class ConfigLibCompatibility
             config.MechanicalToggle = OnCheckBox(id, config.MechanicalToggle, nameof(config.MechanicalToggle));
             config.MechanicalTransmission = OnCheckBox(id, config.MechanicalTransmission, nameof(config.MechanicalTransmission));
             config.MechanicalWindmillRotor = OnCheckBox(id, config.MechanicalWindmillRotor, nameof(config.MechanicalWindmillRotor));
+            ImGui.NewLine();
+            ImGui.TextWrapped(Lang.Get("Chutes"));
+            config.ArchimedesScrew = OnCheckBox(id, config.ArchimedesScrew, nameof(config.ArchimedesScrew));
+            config.Chute = OnCheckBox(id, config.Chute, nameof(config.Chute));
+            config.ChuteSectionItem = OnCheckBox(id, config.ChuteSectionItem, nameof(config.ChuteSectionItem));
+            config.Hopper = OnCheckBox(id, config.Hopper, nameof(config.Hopper));
             #endregion
         }
         #endregion
@@ -106,11 +112,11 @@ public class ConfigLibCompatibility
         {
             ImGui.Indent();
             #region BlockEntityItemFlow Settings
-            if (ImGui.CollapsingHeader(Lang.Get("vanvar:Config.SettingsBlockEntityItemFlow") + $"##{id}"))
+            if (ImGui.CollapsingHeader(Lang.Get("vanvar:Config.Settings.BlockEntityItemFlow") + $"##{id}"))
             {
                 ImGui.Indent();
                 #region Flow Rates
-                if (ImGui.CollapsingHeader(Lang.Get("vanvar:Config.SettingsFlowRates") + $"##{id}"))
+                if (ImGui.CollapsingHeader(Lang.Get("vanvar:Config.Settings.FlowRates") + $"##{id}"))
                 {
                     ImGui.Indent();
                     foreach (string name in config.FlowRates.Keys)
@@ -124,7 +130,7 @@ public class ConfigLibCompatibility
                 }
                 #endregion
                 #region Quantity Slots
-                if (ImGui.CollapsingHeader(Lang.Get("vanvar:Config.SettingsQuantitySlots") + $"##{id}"))
+                if (ImGui.CollapsingHeader(Lang.Get("vanvar:Config.Settings.QuantitySlots") + $"##{id}"))
                 {
                     ImGui.Indent();
                     foreach (string name in config.QuantitySlots.Keys)
@@ -138,7 +144,7 @@ public class ConfigLibCompatibility
                 }
                 #endregion
                 #region Check Rate Ms
-                if (ImGui.CollapsingHeader(Lang.Get("vanvar:Config.SettingsCheckRateMs") + $"##{id}"))
+                if (ImGui.CollapsingHeader(Lang.Get("vanvar:Config.Settings.CheckRateMs") + $"##{id}"))
                 {
                     ImGui.Indent();
                     foreach (string name in config.CheckRateMs.Keys)
@@ -151,6 +157,20 @@ public class ConfigLibCompatibility
                     ImGui.Unindent();
                 }
                 #endregion
+                ImGui.Unindent();
+            }
+            #endregion
+            #region Craftable Chutes
+            if (ImGui.CollapsingHeader(Lang.Get("vanvar:Config.Settings.CraftableChutes") + $"##{id}"))
+            {
+                ImGui.Indent();
+                foreach (string name in config.CraftableChutes.Keys)
+                {
+                    if (ImGui.CollapsingHeader(name + $"##craftablechutes-{id}"))
+                    {
+                        DictionaryEditor(config.CraftableChutes[name]);
+                    }
+                }
                 ImGui.Unindent();
             }
             #endregion
@@ -196,6 +216,12 @@ public class ConfigLibCompatibility
                     float floatValue = Convert.ToSingle(value);
                     ImGui.InputFloat($"##row-value-{row}", ref floatValue);
                     value = (T)Convert.ChangeType(floatValue, typeof(T));
+                }
+                else if (typeof(T) == typeof(bool))
+                {
+                    bool boolValue = Convert.ToBoolean(value);
+                    ImGui.Checkbox($"##row-value-{row}", ref boolValue);
+                    value = (T)Convert.ChangeType(boolValue, typeof(T));
                 }
                 dict[key] = value;
                 ImGui.TableNextColumn();

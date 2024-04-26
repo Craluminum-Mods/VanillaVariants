@@ -1,0 +1,49 @@
+{
+    "code": "hopper",
+    "class": "BlockHopper",
+    "entityclass": "ItemFlow",
+    "behaviors": [
+        {
+            "name": "VanillaVariants.BlockName",
+            "properties": {
+                "partsByType": {
+                    "@.*-(uranium|platinum).*": ["block-hopper", " (", "ore-{metal}", ")"],
+                    "*": ["block-hopper", " (", "material-{metal}", ")"]
+                }
+            }
+        },
+        { "name": "Lockable" },
+        { "name": "Container" }
+    ],
+    "attributes": {
+        "handbook": { "groupBy": ["hopper-*"] },
+        "configurableChute": true,
+        "configurableName": "hopper",
+        "configurableType": "metal",
+        "pullFaces": [],
+        "acceptFromFaces": ["up"],
+        "pushFaces": ["down"]
+    },
+    "variantgroups": [{ "code": "metal", "loadFromProperties": "block/metal" }],
+    "skipVariants": ["*-copper"],
+    "creativeinventory": {
+        "general": ["*"],
+        "mechanics": ["*"],
+        "vanvar": ["*"]
+    },
+    "blockmaterial": "Metal",
+    "lightAbsorption": 0,
+    "shape": { "base": "game:block/metal/hopperh" },
+    "textures": {
+        "all": { "base": "game:block/metal/sheet/{metal}1" }
+    },
+    "sidesolid": { "all": false },
+    "sideopaque": { "all": false },
+    "resistance": 1.75,
+    "sounds": {
+        "place": "game:block/chute",
+        "break": "game:block/chute",
+        "hit": "game:block/chute",
+        "walk": "game:walk/stone"
+    }
+}

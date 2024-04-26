@@ -17,12 +17,15 @@ public class Config
     public bool CraftableWagonWheels { get; set; }
     public bool CraftableWoodenRails { get; set; }
 
+    public bool ArchimedesScrew { get; set; } = true;
     public bool ArmorStand { get; set; } = true;
     public bool Barrel { get; set; } = true;
     public bool Bed { get; set; } = true;
     public bool Cage { get; set; } = true;
     public bool Chair { get; set; } = true;
     public bool Chest { get; set; } = true;
+    public bool Chute { get; set; } = true;
+    public bool ChuteSectionItem { get; set; } = true;
     public bool CrudeDoor { get; set; } = true;
     public bool DecorativeQuern { get; set; } = true;
     public bool DisplayCase { get; set; } = true;
@@ -30,6 +33,7 @@ public class Config
     public bool Forge { get; set; } = true;
     public bool FruitPress { get; set; } = true;
     public bool Henbox { get; set; } = true;
+    public bool Hopper { get; set; } = true;
     public bool Ladder { get; set; } = true;
     public bool MechanicalAngledGears { get; set; } = true;
     public bool MechanicalAxle { get; set; } = true;
@@ -67,22 +71,60 @@ public class Config
     public Dictionary<string, Dictionary<string, float>> FlowRates { get; set; } = new()
     {
         ["archimedesscrew"] = new() { ["default"] = 1, },
-        ["chute-cross"] = new() { ["default"] = 1, },
-        ["chute-straight"] = new() { ["default"] = 1, },
-        ["chute-t"] = new() { ["default"] = 1, },
+        ["chute"] = new() { ["default"] = 1, },
+        ["hopper"] = new() { ["default"] = 1, },
     };
 
     public Dictionary<string, Dictionary<string, int>> QuantitySlots { get; set; } = new()
     {
         ["archimedesscrew"] = new() { ["default"] = 1, },
-        ["chute-cross"] = new() { ["default"] = 1, },
-        ["chute-straight"] = new() { ["default"] = 1, },
-        ["chute-t"] = new() { ["default"] = 1, },
+        ["chute"] = new() { ["default"] = 1, },
+        ["hopper"] = new() { ["default"] = 4, },
     };
 
     public Dictionary<string, Dictionary<string, int>> CheckRateMs { get; set; } = new()
     {
         ["archimedesscrew"] = new() { ["default"] = 500, },
+    };
+
+    public Dictionary<string, Dictionary<string, bool>> CraftableChutes { get; set; } = new()
+    {
+        ["archimedesscrew"] = new()
+        {
+            ["tinbronze"] = true,
+            ["bismuthbronze"] = true,
+            ["blackbronze"] = true,
+            ["iron"] = true,
+            ["meteoriciron"] = true,
+            ["steel"] = true
+        },
+        ["chute"] = new()
+        {
+            ["tinbronze"] = true,
+            ["bismuthbronze"] = true,
+            ["blackbronze"] = true,
+            ["iron"] = true,
+            ["meteoriciron"] = true,
+            ["steel"] = true
+        },
+        ["chutesection"] = new()
+        {
+            ["tinbronze"] = true,
+            ["bismuthbronze"] = true,
+            ["blackbronze"] = true,
+            ["iron"] = true,
+            ["meteoriciron"] = true,
+            ["steel"] = true
+        },
+        ["hopper"] = new()
+        {
+            ["tinbronze"] = true,
+            ["bismuthbronze"] = true,
+            ["blackbronze"] = true,
+            ["iron"] = true,
+            ["meteoriciron"] = true,
+            ["steel"] = true
+        },
     };
 
     public Config() { }
@@ -92,6 +134,7 @@ public class Config
         FlowRates.AddRange(previousConfig.FlowRates);
         QuantitySlots.AddRange(previousConfig.QuantitySlots);
         CheckRateMs.AddRange(previousConfig.CheckRateMs);
+        CraftableChutes.AddRange(previousConfig.CraftableChutes);
 
         ExperimentalOverlayTest = previousConfig.ExperimentalOverlayTest;
 
@@ -105,12 +148,15 @@ public class Config
         CraftableWagonWheels = previousConfig.CraftableWagonWheels;
         CraftableWoodenRails = previousConfig.CraftableWoodenRails;
 
+        ArchimedesScrew = previousConfig.ArchimedesScrew;
         ArmorStand = previousConfig.ArmorStand;
         Barrel = previousConfig.Barrel;
         Bed = previousConfig.Bed;
         Cage = previousConfig.Cage;
         Chair = previousConfig.Chair;
         Chest = previousConfig.Chest;
+        Chute = previousConfig.Chute;
+        ChuteSectionItem = previousConfig.ChuteSectionItem;
         CrudeDoor = previousConfig.CrudeDoor;
         DecorativeQuern = previousConfig.DecorativeQuern;
         DisplayCase = previousConfig.DisplayCase;
@@ -118,6 +164,7 @@ public class Config
         Forge = previousConfig.Forge;
         FruitPress = previousConfig.FruitPress;
         Henbox = previousConfig.Henbox;
+        Hopper = previousConfig.Hopper;
         Ladder = previousConfig.Ladder;
         MechanicalAngledGears = previousConfig.MechanicalAngledGears;
         MechanicalAxle = previousConfig.MechanicalAxle;

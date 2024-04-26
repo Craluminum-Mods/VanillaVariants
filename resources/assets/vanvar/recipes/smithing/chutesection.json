@@ -1,0 +1,23 @@
+{
+    "ingredient": { "type": "item", "code": "game:ingot-*", "name": "metal", "skipVariants": ["copper"], "allowedVariants": [] },
+    "pattern": [
+        [
+            //
+            "#####",
+            "#___#",
+            "#___#",
+            "#___#",
+            "#####"
+        ],
+        [
+            //
+            "#####",
+            "#___#",
+            "#___#",
+            "#___#",
+            "#####"
+        ]
+    ],
+    "name": "chutesection",
+    "output": { "type": "item", "code": "vanvar:chutesection-{metal}", "skipVariants": ["copper"] }
+}

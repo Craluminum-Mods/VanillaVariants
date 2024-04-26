@@ -1,0 +1,10 @@
+[
+    {
+        "file": "vanvar:itemtypes/metal/chutesection.json",
+        "op": "addmerge",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VanillaVariants_ChuteSectionItem_Enabled", "isValue": "false" },
+        "side": "server"
+    }
+]
