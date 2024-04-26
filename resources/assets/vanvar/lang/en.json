@@ -4,7 +4,7 @@
     "Config.SettingsSimple": "Simple Settings",
     "Config.SettingsAdvanced": "Advanced Settings",
 
-    "Config.Settings.BlockEntityItemFlow": "BlockEntityItemFlow Settings",
+    "Config.Settings.BlockEntityItemFlow": "BlockEntityItemFlow Settings (Chutes)",
     "Config.Settings.FlowRates": "Flow Rates",
     "Config.Settings.QuantitySlots": "Quantity Slots",
     "Config.Settings.CheckRateMs": "Check Rate Ms",
@@ -16,10 +16,13 @@
     "Config.Setting.ResolveHenboxImposter": "Resolve Henbox Imposter",
     "Config.Setting.ResolveMechanicalBlockIssues": "Resolve Mechanical Block Issues",
     "Config.Setting.ResolveQuernAndAxleRelationship": "Resolve Quern And Axle Relationship",
-
+    
     "Config.Setting.CraftableCage": "Make Cage Craftable",
     "Config.Setting.CraftableWagonWheels": "Make Wagon Wheels Craftable",
     "Config.Setting.CraftableWoodenRails": "Make Wooden Rails Craftable",
+
+    "Config.Setting.DecorativeQuern": "Enable Decorative Quern",
+    "Config.Setting.MakeDecorativeQuernFunctional": "Enable Decorative Quern Functionality",
 
     "Config.Setting.ArchimedesScrew": "Enable Archimedes Screw",
     "Config.Setting.ArmorStand": "Enable Armor Stand",
@@ -31,7 +34,6 @@
     "Config.Setting.Chute": "Enable Chute",
     "Config.Setting.ChuteSectionItem": "Enable Chute Section",
     "Config.Setting.CrudeDoor": "Enable Crude Door",
-    "Config.Setting.DecorativeQuern": "Enable Decorative Quern",
     "Config.Setting.DisplayCase": "Enable Display Case",
     "Config.Setting.Firewood": "Enable Firewood",
     "Config.Setting.Forge": "Enable Forge",

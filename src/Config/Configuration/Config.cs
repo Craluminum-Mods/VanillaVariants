@@ -17,6 +17,9 @@ public class Config
     public bool CraftableWagonWheels { get; set; }
     public bool CraftableWoodenRails { get; set; }
 
+    public bool DecorativeQuern { get; set; } = true;
+    public bool MakeDecorativeQuernFunctional { get; set; } = false;
+
     public bool ArchimedesScrew { get; set; } = true;
     public bool ArmorStand { get; set; } = true;
     public bool Barrel { get; set; } = true;
@@ -27,7 +30,6 @@ public class Config
     public bool Chute { get; set; } = true;
     public bool ChuteSectionItem { get; set; } = true;
     public bool CrudeDoor { get; set; } = true;
-    public bool DecorativeQuern { get; set; } = true;
     public bool DisplayCase { get; set; } = true;
     public bool Firewood { get; set; } = true;
     public bool Forge { get; set; } = true;
@@ -148,6 +150,9 @@ public class Config
         CraftableWagonWheels = previousConfig.CraftableWagonWheels;
         CraftableWoodenRails = previousConfig.CraftableWoodenRails;
 
+        DecorativeQuern = previousConfig.DecorativeQuern;
+        MakeDecorativeQuernFunctional = previousConfig.MakeDecorativeQuernFunctional;
+
         ArchimedesScrew = previousConfig.ArchimedesScrew;
         ArmorStand = previousConfig.ArmorStand;
         Barrel = previousConfig.Barrel;
@@ -158,7 +163,6 @@ public class Config
         Chute = previousConfig.Chute;
         ChuteSectionItem = previousConfig.ChuteSectionItem;
         CrudeDoor = previousConfig.CrudeDoor;
-        DecorativeQuern = previousConfig.DecorativeQuern;
         DisplayCase = previousConfig.DisplayCase;
         Firewood = previousConfig.Firewood;
         Forge = previousConfig.Forge;

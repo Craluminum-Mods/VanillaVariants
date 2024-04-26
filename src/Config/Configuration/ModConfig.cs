@@ -36,6 +36,9 @@ static class ModConfig
         api.World.Config.SetBool("VanillaVariants_CraftableWagonWheels_Enabled", config.CraftableWagonWheels);
         api.World.Config.SetBool("VanillaVariants_CraftableWoodenRails_Enabled", config.CraftableWoodenRails);
 
+        api.World.Config.SetBool("VanillaVariants_DecorativeQuern_Enabled", config.DecorativeQuern);
+        api.World.Config.SetBool("VanillaVariants_MakeDecorativeQuernFunctional_Enabled", config.MakeDecorativeQuernFunctional);
+
         api.World.Config.SetBool("VanillaVariants_ArchimedesScrew_Enabled", config.ArchimedesScrew);
         api.World.Config.SetBool("VanillaVariants_ArmorStand_Enabled", config.ArmorStand);
         api.World.Config.SetBool("VanillaVariants_Barrel_Enabled", config.Barrel);
@@ -46,7 +49,6 @@ static class ModConfig
         api.World.Config.SetBool("VanillaVariants_Chute_Enabled", config.Chute);
         api.World.Config.SetBool("VanillaVariants_ChuteSectionItem_Enabled", config.ChuteSectionItem);
         api.World.Config.SetBool("VanillaVariants_CrudeDoor_Enabled", config.CrudeDoor);
-        api.World.Config.SetBool("VanillaVariants_DecorativeQuern_Enabled", config.DecorativeQuern);
         api.World.Config.SetBool("VanillaVariants_DisplayCase_Enabled", config.DisplayCase);
         api.World.Config.SetBool("VanillaVariants_Firewood_Enabled", config.Firewood);
         api.World.Config.SetBool("VanillaVariants_Forge_Enabled", config.Forge);

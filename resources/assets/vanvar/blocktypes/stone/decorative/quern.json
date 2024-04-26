@@ -1,5 +1,6 @@
 {
     "code": "quern",
+    "entityBehaviors": [],
     "behaviors": [
         {
             "name": "VanillaVariants.BlockName",

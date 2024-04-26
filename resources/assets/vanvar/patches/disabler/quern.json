@@ -1,0 +1,46 @@
+[
+    {
+        "file": "vanvar:blocktypes/stone/decorative/quern.json",
+        "op": "addmerge",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VanillaVariants_DecorativeQuern_Enabled", "isValue": "false" },
+        "side": "server"
+    },
+
+    {
+        "file": "vanvar:blocktypes/stone/decorative/quern.json",
+        "op": "addmerge",
+        "path": "/behaviors/-",
+        "value": { "name": "Container" },
+        "condition": { "when": "VanillaVariants_MakeDecorativeQuernFunctional_Enabled", "isValue": "true" },
+        "side": "server"
+    },
+
+    {
+        "file": "vanvar:blocktypes/stone/decorative/quern.json",
+        "op": "addmerge",
+        "path": "/entityBehaviors/-",
+        "value": { "name": "MPConsumer" },
+        "condition": { "when": "VanillaVariants_MakeDecorativeQuernFunctional_Enabled", "isValue": "true" },
+        "side": "server"
+    },
+
+    {
+        "file": "vanvar:blocktypes/stone/decorative/quern.json",
+        "op": "addmerge",
+        "path": "/class",
+        "value": "BlockQuern",
+        "condition": { "when": "VanillaVariants_MakeDecorativeQuernFunctional_Enabled", "isValue": "true" },
+        "side": "server"
+    },
+
+    {
+        "file": "vanvar:blocktypes/stone/decorative/quern.json",
+        "op": "addmerge",
+        "path": "/entityClass",
+        "value": "Quern",
+        "condition": { "when": "VanillaVariants_MakeDecorativeQuernFunctional_Enabled", "isValue": "true" },
+        "side": "server"
+    }
+]

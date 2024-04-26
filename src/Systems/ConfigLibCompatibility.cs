@@ -59,7 +59,6 @@ public class ConfigLibCompatibility
             config.DisplayCase = OnCheckBox(id, config.DisplayCase, nameof(config.DisplayCase));
             config.Firewood = OnCheckBox(id, config.Firewood, nameof(config.Firewood));
             config.Forge = OnCheckBox(id, config.Forge, nameof(config.Forge));
-            config.FruitPress = OnCheckBox(id, config.FruitPress, nameof(config.FruitPress));
             config.Henbox = OnCheckBox(id, config.Henbox, nameof(config.Henbox));
             config.Ladder = OnCheckBox(id, config.Ladder, nameof(config.Ladder));
             config.Moldrack = OnCheckBox(id, config.Moldrack, nameof(config.Moldrack));
