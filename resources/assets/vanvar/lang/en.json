@@ -10,6 +10,11 @@
     "Config.Settings.CheckRateMs": "Check Rate Ms",
     "Config.Settings.CraftableChutes": "Craftable",
 
+    "Config.Settings.ChestQuantitySlots": "Quantity Slots (Chest)",
+    "Config.Settings.DoubleChestQuantitySlots": "Quantity Slots (Double Chest)",
+    "Config.Setting.OverrideChestQuantitySlots": "Override Quantity Slots (No effect on vanilla chests)",
+    "Config.Setting.OverrideDoubleChestQuantitySlots": "Override Quantity Slots (No effect on vanilla chests)",
+
     "Config.Setting.ExperimentalOverlayTest": "Experimental Overlay Test",
     "Config.Setting.ResolveBarrelSounds": "Resolve Barrel Sounds",
     "Config.Setting.ResolveChestNames": "Resolve Chest Names",

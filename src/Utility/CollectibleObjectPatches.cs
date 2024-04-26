@@ -121,8 +121,7 @@ public static class CollectibleObjectPatches
                         return;
                     }
 
-                    ChestProperties chestProps = api.Assets.TryGet(block.Attributes?["loadChestPropertiesFrom"]?.AsString())?.ToObject<ChestProperties>();
-                    string[] types = api.GetTypes(new RegistryObjectVariantGroup() { LoadFromProperties = chestProps.GetLoadFromProperties(), States = chestProps.States }, chestProps.SkipVariants);
+                    string[] types = api.LoadTypesFromBlocks(block);
                     if (!types.Any())
                     {
                         return;
@@ -134,7 +133,17 @@ public static class CollectibleObjectPatches
                     block.Attributes.Token["defaultType"] = JToken.FromObject(types[0]);
                     block.Attributes.Token["rotatatableInterval"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["rotatatableInterval"][genericType].AsString()));
                     block.Attributes.Token["drop"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["drop"][genericType].AsBool()));
-                    block.Attributes.Token["quantitySlots"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["quantitySlots"][genericType].AsInt()));
+
+                    Dictionary<string, int> newQuantitySlots = types.ToDictionary(key => key, value => fromBlock.Attributes["quantitySlots"][genericType].AsInt());
+                    if (Core.Config.OverrideChestQuantitySlots)
+                    {
+                        foreach (string type in types.Where(Core.Config.ChestQuantitySlots.ContainsKey))
+                        {
+                            newQuantitySlots[type] = Core.Config.ChestQuantitySlots[type];
+                        }
+                    }
+                    block.Attributes.Token["quantitySlots"] = JToken.FromObject(newQuantitySlots);
+
                     block.Attributes.Token["dialogTitleLangCode"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["dialogTitleLangCode"][genericType].AsString()));
                     block.Attributes.Token["storageType"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["storageType"][genericType].AsInt()));
                     block.Attributes.Token["retrieveOnly"] = JToken.FromObject(types.ToDictionary(key => key, value => false));
@@ -155,9 +164,7 @@ public static class CollectibleObjectPatches
                     {
                         return;
                     }
-
-                    ChestProperties chestProps = api.Assets.TryGet(block.Attributes?["loadChestPropertiesFrom"]?.AsString())?.ToObject<ChestProperties>();
-                    string[] types = api.GetTypes(new RegistryObjectVariantGroup() { LoadFromProperties = chestProps.GetLoadFromProperties(), States = chestProps.States }, chestProps.SkipVariants);
+                    string[] types = api.LoadTypesFromBlocks(block);
                     if (!types.Any())
                     {
                         return;
@@ -168,7 +175,17 @@ public static class CollectibleObjectPatches
                     block.Attributes.Token["types"] = JToken.FromObject(types);
                     block.Attributes.Token["defaultType"] = JToken.FromObject(types[0]);
                     block.Attributes.Token["drop"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["drop"][genericType].AsBool()));
-                    block.Attributes.Token["quantitySlots"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["quantitySlots"][genericType].AsInt()));
+
+                    Dictionary<string, int> newQuantitySlots = types.ToDictionary(key => key, value => fromBlock.Attributes["quantitySlots"][genericType].AsInt());
+                    if (Core.Config.OverrideChestQuantitySlots)
+                    {
+                        foreach (string type in types.Where(Core.Config.ChestQuantitySlots.ContainsKey))
+                        {
+                            newQuantitySlots[type] = Core.Config.ChestQuantitySlots[type];
+                        }
+                    }
+                    block.Attributes.Token["quantitySlots"] = JToken.FromObject(newQuantitySlots);
+
                     block.Attributes.Token["dialogTitleLangCode"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["dialogTitleLangCode"][genericType].AsString()));
                     block.Attributes.Token["storageType"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["storageType"][genericType].AsInt()));
                     block.Attributes.Token["retrieveOnly"] = JToken.FromObject(types.ToDictionary(key => key, value => false));
@@ -189,9 +206,7 @@ public static class CollectibleObjectPatches
                     {
                         return;
                     }
-
-                    ChestProperties chestProps = api.Assets.TryGet(block.Attributes?["loadChestPropertiesFrom"]?.AsString())?.ToObject<ChestProperties>();
-                    string[] types = api.GetTypes(new RegistryObjectVariantGroup() { LoadFromProperties = chestProps.GetLoadFromProperties(), States = chestProps.States }, chestProps.SkipVariants);
+                    string[] types = api.LoadTypesFromBlocks(block);
                     if (!types.Any())
                     {
                         return;
@@ -203,7 +218,17 @@ public static class CollectibleObjectPatches
                     block.Attributes.Token["defaultType"] = JToken.FromObject(types[0]);
                     block.Attributes.Token["rotatatableInterval"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["rotatatableInterval"][genericType].AsString()));
                     block.Attributes.Token["drop"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["drop"][genericType].AsBool()));
-                    block.Attributes.Token["quantitySlots"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["quantitySlots"][genericType].AsInt()));
+
+                    Dictionary<string, int> newQuantitySlots = types.ToDictionary(key => key, value => fromBlock.Attributes["quantitySlots"][genericType].AsInt());
+                    if (Core.Config.OverrideDoubleChestQuantitySlots)
+                    {
+                        foreach (string type in types.Where(Core.Config.DoubleChestQuantitySlots.ContainsKey))
+                        {
+                            newQuantitySlots[type] = Core.Config.DoubleChestQuantitySlots[type];
+                        }
+                    }
+                    block.Attributes.Token["quantitySlots"] = JToken.FromObject(newQuantitySlots);
+
                     block.Attributes.Token["quantityColumns"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["quantityColumns"][genericType].AsInt()));
                     block.Attributes.Token["dialogTitleLangCode"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["dialogTitleLangCode"][genericType].AsString()));
                     block.Attributes.Token["storageType"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["storageType"][genericType].AsInt()));
@@ -219,6 +244,42 @@ public static class CollectibleObjectPatches
                     break;
                 }
         }
+    }
+
+    public static string[] LoadTypesFromFile(this ICoreAPI api, string assetName)
+    {
+        TypeProperties typeProps = api.Assets.TryGet(assetName)?.ToObject<TypeProperties>();
+        if (typeProps == null)
+        {
+            return Array.Empty<string>();
+        }
+        string[] types = api.GetTypes(new RegistryObjectVariantGroup() { LoadFromProperties = typeProps.GetLoadFromProperties(), States = typeProps.States }, typeProps.SkipVariants);
+        return types;
+    }
+
+    // public static string[] LoadTypesFromBlock(this ICoreAPI api, Block block)
+    // {
+    //     if (block == null)
+    //     {
+    //         return Array.Empty<string>();
+    //     }
+    //     TypeProperties typeProps = api.Assets.TryGet(block.Attributes?["loadTypePropertiesFrom"]?.AsString())?.ToObject<TypeProperties>();
+    //     if (typeProps == null)
+    //     {
+    //         return Array.Empty<string>();
+    //     }
+    //     string[] types = api.GetTypes(new RegistryObjectVariantGroup() { LoadFromProperties = typeProps.GetLoadFromProperties(), States = typeProps.States }, typeProps.SkipVariants);
+    //     return types;
+    // }
+
+    public static string[] LoadTypesFromBlocks(this ICoreAPI api, params Block[] blocks)
+    {
+        string[] types = Array.Empty<string>();
+        foreach (Block block in blocks.Where(block => block != null))
+        {
+            types = types.Concat(api.LoadTypesFromFile(block.Attributes?["loadTypePropertiesFrom"]?.AsString())).ToArray();
+        }
+        return types;
     }
 
     public static string[] GetTypes(this ICoreAPI api, RegistryObjectVariantGroup variantGroups, string[] skipTypes)
@@ -283,9 +344,9 @@ public static class CollectibleObjectPatches
             return;
         }
 
-        UpdateAttribute(block, "item-flowrate", Core.Config.FlowRates, name, variant);
-        UpdateAttribute(block, "quantitySlots", Core.Config.QuantitySlots, name, variant);
-        UpdateAttribute(block, "item-checkrateMs", Core.Config.CheckRateMs, name, variant);
+        UpdateAttribute(block, "item-flowrate", Core.Config.ChuteFlowRates, name, variant);
+        UpdateAttribute(block, "quantitySlots", Core.Config.ChuteQuantitySlots, name, variant);
+        UpdateAttribute(block, "item-checkrateMs", Core.Config.ChuteCheckRateMs, name, variant);
     }
 
     private static void UpdateAttribute<T>(Block block, string attributeName, Dictionary<string, Dictionary<string, T>> dict, string name, string variant)

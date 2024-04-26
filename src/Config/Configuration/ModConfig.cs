@@ -37,7 +37,7 @@ static class ModConfig
         api.World.Config.SetBool("VanillaVariants_CraftableWoodenRails_Enabled", config.CraftableWoodenRails);
 
         api.World.Config.SetBool("VanillaVariants_DecorativeQuern_Enabled", config.DecorativeQuern);
-        api.World.Config.SetBool("VanillaVariants_MakeDecorativeQuernFunctional_Enabled", config.MakeDecorativeQuernFunctional);
+        api.World.Config.SetBool("VanillaVariants_FunctionalQuern_Enabled", config.FunctionalQuern);
 
         api.World.Config.SetBool("VanillaVariants_ArchimedesScrew_Enabled", config.ArchimedesScrew);
         api.World.Config.SetBool("VanillaVariants_ArmorStand_Enabled", config.ArmorStand);
@@ -89,7 +89,7 @@ static class ModConfig
         api.World.Config.SetBool("VanillaVariants_WoodenPath_Enabled", config.WoodenPath);
         api.World.Config.SetBool("VanillaVariants_WoodenRails_Enabled", config.WoodenRails);
 
-        foreach ((string name, Dictionary<string, bool> metals) in config.CraftableChutes)
+        foreach ((string name, Dictionary<string, bool> metals) in config.ChuteCraftable)
         {
             api.World.Config.SetBool($"VanillaVariants-anycraftable-{name}", metals.Any(x => x.Value));
 

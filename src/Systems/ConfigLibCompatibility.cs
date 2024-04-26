@@ -6,11 +6,35 @@ using System.Linq;
 using VanillaVariants.Configuration;
 using Vintagestory.API.Common;
 using Vintagestory.API.Config;
+using Vintagestory.API.Util;
 
 namespace VanillaVariants;
 
 public class ConfigLibCompatibility
 {
+    private const string metalsWithoutCopper = "vanvar:config/properties/metals-without-copper.json";
+    private const string settingsAdvanced = "vanvar:Config.SettingsAdvanced";
+    private const string settingsSimple = "vanvar:Config.SettingsSimple";
+    private const string settingsBlockEntityItemFlow = "vanvar:Config.Settings.BlockEntityItemFlow";
+    private const string settingsChuteFlowRates = "vanvar:Config.Settings.FlowRates";
+    private const string settingsChuteQuantitySlots = "vanvar:Config.Settings.QuantitySlots";
+    private const string settingsChuteCheckRateMs = "vanvar:Config.Settings.CheckRateMs";
+    private const string settingsChuteCraftable = "vanvar:Config.Settings.CraftableChutes";
+    private const string settingsQuantitySlotsChest = "vanvar:Config.Settings.ChestQuantitySlots";
+    private const string vanvarChest = "vanvar:chest-east";
+    private const string vanvarTrunk = "vanvar:trunk-east";
+    private const string wtChest = "wildcrafttree:chest-east";
+    private const string wtTrunk = "wildcrafttree:trunk-east";
+    private const string settingsQuantitySlotsTrunk = "vanvar:Config.Settings.DoubleChestQuantitySlots";
+    private const string settingPrefix = "vanvar:Config.Setting.";
+    private const string textChutes = "Chutes";
+    private const string textMechanics = "tabname-mechanics";
+    private const string textBlocksAndItems = "Blocks and Items";
+    private const string textQuern = "Quern";
+    private const string textIssues = "Issues";
+    private const string textExperimental = "Experimental";
+    private const string nameHopper = "hopper";
+
     public ConfigLibCompatibility(ICoreAPI api)
     {
         Init(api);
@@ -31,13 +55,18 @@ public class ConfigLibCompatibility
 
     private void Edit(ICoreAPI api, Configuration.Config config, string id)
     {
-        #region Simple Settings
-        if (ImGui.CollapsingHeader(Lang.Get("vanvar:Config.SettingsSimple") + $"##{id}"))
+        BuildSimpleSettings(config, id);
+        BuildAdvancedSettings(api, config, id);
+    }
+
+    private void BuildSimpleSettings(Configuration.Config config, string id)
+    {
+        if (ImGui.CollapsingHeader(Lang.Get(settingsSimple) + $"##settingsSimple-{id}"))
         {
-            ImGui.TextWrapped(Lang.Get("Experimental"));
+            ImGui.TextWrapped(Lang.Get(textExperimental));
             config.ExperimentalOverlayTest = OnCheckBox(id, config.ExperimentalOverlayTest, nameof(config.ExperimentalOverlayTest));
             ImGui.NewLine();
-            ImGui.TextWrapped(Lang.Get("Issues"));
+            ImGui.TextWrapped(Lang.Get(textIssues));
             config.ResolveBarrelSounds = OnCheckBox(id, config.ResolveBarrelSounds, nameof(config.ResolveBarrelSounds));
             config.ResolveChestNames = OnCheckBox(id, config.ResolveChestNames, nameof(config.ResolveChestNames));
             config.ResolveHenboxImposter = OnCheckBox(id, config.ResolveHenboxImposter, nameof(config.ResolveHenboxImposter));
@@ -47,7 +76,11 @@ public class ConfigLibCompatibility
             config.CraftableWagonWheels = OnCheckBox(id, config.CraftableWagonWheels, nameof(config.CraftableWagonWheels));
             config.CraftableWoodenRails = OnCheckBox(id, config.CraftableWoodenRails, nameof(config.CraftableWoodenRails));
             ImGui.NewLine();
-            ImGui.TextWrapped(Lang.Get("Blocks and Items"));
+            ImGui.TextWrapped(Lang.Get(textQuern));
+            config.DecorativeQuern = OnCheckBox(id, config.DecorativeQuern, nameof(config.DecorativeQuern));
+            config.FunctionalQuern = OnCheckBox(id, config.FunctionalQuern, nameof(config.FunctionalQuern));
+            ImGui.NewLine();
+            ImGui.TextWrapped(Lang.Get(textBlocksAndItems));
             config.Cage = OnCheckBox(id, config.Cage, nameof(config.Cage));
             config.ArmorStand = OnCheckBox(id, config.ArmorStand, nameof(config.ArmorStand));
             config.Barrel = OnCheckBox(id, config.Barrel, nameof(config.Barrel));
@@ -55,10 +88,10 @@ public class ConfigLibCompatibility
             config.Chair = OnCheckBox(id, config.Chair, nameof(config.Chair));
             config.Chest = OnCheckBox(id, config.Chest, nameof(config.Chest));
             config.CrudeDoor = OnCheckBox(id, config.CrudeDoor, nameof(config.CrudeDoor));
-            config.DecorativeQuern = OnCheckBox(id, config.DecorativeQuern, nameof(config.DecorativeQuern));
             config.DisplayCase = OnCheckBox(id, config.DisplayCase, nameof(config.DisplayCase));
             config.Firewood = OnCheckBox(id, config.Firewood, nameof(config.Firewood));
             config.Forge = OnCheckBox(id, config.Forge, nameof(config.Forge));
+            config.FruitPress = OnCheckBox(id, config.FruitPress, nameof(config.FruitPress));
             config.Henbox = OnCheckBox(id, config.Henbox, nameof(config.Henbox));
             config.Ladder = OnCheckBox(id, config.Ladder, nameof(config.Ladder));
             config.Moldrack = OnCheckBox(id, config.Moldrack, nameof(config.Moldrack));
@@ -81,9 +114,8 @@ public class ConfigLibCompatibility
             config.WoodenPan = OnCheckBox(id, config.WoodenPan, nameof(config.WoodenPan));
             config.WoodenPath = OnCheckBox(id, config.WoodenPath, nameof(config.WoodenPath));
             config.WoodenRails = OnCheckBox(id, config.WoodenRails, nameof(config.WoodenRails));
-            #region Mechanics
             ImGui.NewLine();
-            ImGui.TextWrapped(Lang.Get("tabname-mechanics"));
+            ImGui.TextWrapped(Lang.Get(textMechanics));
             config.MechanicalAngledGears = OnCheckBox(id, config.MechanicalAngledGears, nameof(config.MechanicalAngledGears));
             config.MechanicalAxle = OnCheckBox(id, config.MechanicalAxle, nameof(config.MechanicalAxle));
             config.MechanicalBrake = OnCheckBox(id, config.MechanicalBrake, nameof(config.MechanicalBrake));
@@ -97,95 +129,84 @@ public class ConfigLibCompatibility
             config.MechanicalTransmission = OnCheckBox(id, config.MechanicalTransmission, nameof(config.MechanicalTransmission));
             config.MechanicalWindmillRotor = OnCheckBox(id, config.MechanicalWindmillRotor, nameof(config.MechanicalWindmillRotor));
             ImGui.NewLine();
-            ImGui.TextWrapped(Lang.Get("Chutes"));
+            ImGui.TextWrapped(Lang.Get(textChutes));
             config.ArchimedesScrew = OnCheckBox(id, config.ArchimedesScrew, nameof(config.ArchimedesScrew));
             config.Chute = OnCheckBox(id, config.Chute, nameof(config.Chute));
             config.ChuteSectionItem = OnCheckBox(id, config.ChuteSectionItem, nameof(config.ChuteSectionItem));
             config.Hopper = OnCheckBox(id, config.Hopper, nameof(config.Hopper));
-            #endregion
         }
-        #endregion
+    }
 
-        #region Advanced Settings
-        if (ImGui.CollapsingHeader(Lang.Get("vanvar:Config.SettingsAdvanced") + $"##{id}"))
+    private void BuildAdvancedSettings(ICoreAPI api, Configuration.Config config, string id)
+    {
+        if (ImGui.CollapsingHeader(Lang.Get(settingsAdvanced) + $"##settingsAdvanced-{id}"))
         {
             ImGui.Indent();
-            #region BlockEntityItemFlow Settings
-            if (ImGui.CollapsingHeader(Lang.Get("vanvar:Config.Settings.BlockEntityItemFlow") + $"##{id}"))
+            if (ImGui.CollapsingHeader(Lang.Get(settingsBlockEntityItemFlow) + $"##settingsBlockEntityItemFlow-{id}"))
             {
                 ImGui.Indent();
-                #region Flow Rates
-                if (ImGui.CollapsingHeader(Lang.Get("vanvar:Config.Settings.FlowRates") + $"##{id}"))
+                if (ImGui.CollapsingHeader(Lang.Get(settingsChuteFlowRates) + $"##settingsChuteFlowRates-{id}"))
                 {
                     ImGui.Indent();
-                    foreach (string name in config.FlowRates.Keys)
+                    foreach (string name in config.ChuteFlowRates.Keys.Where(name => ImGui.CollapsingHeader(name + $"##flowrates-{id}")))
                     {
-                        if (ImGui.CollapsingHeader(name + $"##flowrates-{id}"))
-                        {
-                            DictionaryEditor(config.FlowRates[name]);
-                        }
+                        DictionaryEditor(config.ChuteFlowRates[name], 1.0f, api.LoadTypesFromFile(metalsWithoutCopper));
                     }
                     ImGui.Unindent();
                 }
-                #endregion
-                #region Quantity Slots
-                if (ImGui.CollapsingHeader(Lang.Get("vanvar:Config.Settings.QuantitySlots") + $"##{id}"))
+                if (ImGui.CollapsingHeader(Lang.Get(settingsChuteQuantitySlots) + $"##settingsChuteQuantitySlots-{id}"))
                 {
                     ImGui.Indent();
-                    foreach (string name in config.QuantitySlots.Keys)
+                    foreach (string name in config.ChuteQuantitySlots.Keys.Where(name => ImGui.CollapsingHeader(name + $"##chutequantityslots-{id}")))
                     {
-                        if (ImGui.CollapsingHeader(name + $"##quantityslots-{id}"))
-                        {
-                            DictionaryEditor(config.QuantitySlots[name]);
-                        }
+                        DictionaryEditor(config.ChuteQuantitySlots[name], name == nameHopper ? 4 : 1, api.LoadTypesFromFile(metalsWithoutCopper));
                     }
                     ImGui.Unindent();
                 }
-                #endregion
-                #region Check Rate Ms
-                if (ImGui.CollapsingHeader(Lang.Get("vanvar:Config.Settings.CheckRateMs") + $"##{id}"))
+                if (ImGui.CollapsingHeader(Lang.Get(settingsChuteCheckRateMs) + $"##settingsChuteCheckRateMs-{id}"))
                 {
                     ImGui.Indent();
-                    foreach (string name in config.CheckRateMs.Keys)
+                    foreach (string name in config.ChuteCheckRateMs.Keys.Where(name => ImGui.CollapsingHeader(name + $"##checkratems-{id}")))
                     {
-                        if (ImGui.CollapsingHeader(name + $"##checkratems-{id}"))
-                        {
-                            DictionaryEditor(config.CheckRateMs[name]);
-                        }
+                        DictionaryEditor(config.ChuteCheckRateMs[name], 500, api.LoadTypesFromFile(metalsWithoutCopper));
                     }
                     ImGui.Unindent();
                 }
-                #endregion
-                ImGui.Unindent();
-            }
-            #endregion
-            #region Craftable Chutes
-            if (ImGui.CollapsingHeader(Lang.Get("vanvar:Config.Settings.CraftableChutes") + $"##{id}"))
-            {
-                ImGui.Indent();
-                foreach (string name in config.CraftableChutes.Keys)
+                if (ImGui.CollapsingHeader(Lang.Get(settingsChuteCraftable) + $"##settingsChuteCraftable-{id}"))
                 {
-                    if (ImGui.CollapsingHeader(name + $"##craftablechutes-{id}"))
+                    ImGui.Indent();
+                    foreach (string name in config.ChuteCraftable.Keys.Where(name => ImGui.CollapsingHeader(name + $"##craftablechutes-{id}")))
                     {
-                        DictionaryEditor(config.CraftableChutes[name]);
+                        DictionaryEditor(config.ChuteCraftable[name], true, api.LoadTypesFromFile(metalsWithoutCopper));
                     }
+                    ImGui.Unindent();
                 }
                 ImGui.Unindent();
             }
-            #endregion
+            if (ImGui.CollapsingHeader(Lang.Get(settingsQuantitySlotsChest) + $"##settingsQuantitySlotsChest-{id}"))
+            {
+                config.OverrideChestQuantitySlots = OnCheckBox($"overrideChestQuantitySlots-{id}", config.OverrideChestQuantitySlots, nameof(config.OverrideChestQuantitySlots));
+                ImGui.NewLine();
+                DictionaryEditor(config.ChestQuantitySlots, 16, api.LoadTypesFromBlocks(api.World.GetBlock(AssetLocation.Create(vanvarChest)), api.World.GetBlock(AssetLocation.Create(wtChest))));
+            }
+            if (ImGui.CollapsingHeader(Lang.Get(settingsQuantitySlotsTrunk) + $"##settingsQuantitySlotsTrunk-{id}"))
+            {
+                config.OverrideDoubleChestQuantitySlots = OnCheckBox($"overrideDoubleChestQuantitySlots-{id}", config.OverrideDoubleChestQuantitySlots, nameof(config.OverrideDoubleChestQuantitySlots));
+                ImGui.NewLine();
+                DictionaryEditor(config.DoubleChestQuantitySlots, 36, api.LoadTypesFromBlocks(api.World.GetBlock(AssetLocation.Create(vanvarTrunk)), api.World.GetBlock(AssetLocation.Create(wtTrunk))));
+            }
             ImGui.Unindent();
         }
-        #endregion
     }
 
     private bool OnCheckBox(string id, bool value, string name)
     {
         bool newValue = value;
-        ImGui.Checkbox(Lang.Get("vanvar:Config.Setting." + name) + $"##{id}", ref newValue);
+        ImGui.Checkbox(Lang.Get(settingPrefix + name) + $"##{name}-{id}", ref newValue);
         return newValue;
     }
 
-    private void DictionaryEditor<T>(Dictionary<string, T> dict)
+    private void DictionaryEditor<T>(Dictionary<string, T> dict, T defaultValue = default, string[] possibleValues = null)
     {
         if (ImGui.BeginTable("dict", 3, ImGuiTableFlags.BordersOuter))
         {
@@ -234,8 +255,16 @@ public class ConfigLibCompatibility
             if (ImGui.Button("Add"))
             {
                 int id = dict.Count;
-                while (dict.ContainsKey($"row {id}")) id++;
-                dict.TryAdd($"row {id}", default);
+                string newKey = possibleValues?.FirstOrDefault(x => !dict.ContainsKey(x), null);
+                if ((newKey != null || dict.Count == 0) && !dict.ContainsKey(newKey))
+                {
+                    dict.TryAdd(newKey, defaultValue);
+                }
+                else
+                {
+                    while (dict.ContainsKey($"row {id}")) id++;
+                    dict.TryAdd($"row {id}", defaultValue);
+                }
             }
             ImGui.TableNextColumn();
             ImGui.TableNextColumn();

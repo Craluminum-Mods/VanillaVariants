@@ -29,7 +29,7 @@ public class JsonPatches : ModSystem
 
             PatchCondition condition = new PatchCondition() { When = "VanillaVariants_Chest_Enabled", IsValue = "true" };
 
-            ChestProperties chestProps = api.Assets.TryGet($"vanvar:config/properties/chests-{domain}.json").ToObject<ChestProperties>();
+            TypeProperties chestProps = api.Assets.TryGet($"vanvar:config/properties/chests-{domain}.json").ToObject<TypeProperties>();
             string[] types = api.GetTypes(new RegistryObjectVariantGroup() { LoadFromProperties = chestProps.GetLoadFromProperties(), States = chestProps.States }, chestProps.SkipVariants);
 
             if (!api.ModLoader.IsModEnabled(domain))

@@ -18,7 +18,7 @@ public class Config
     public bool CraftableWoodenRails { get; set; }
 
     public bool DecorativeQuern { get; set; } = true;
-    public bool MakeDecorativeQuernFunctional { get; set; } = false;
+    public bool FunctionalQuern { get; set; } = false;
 
     public bool ArchimedesScrew { get; set; } = true;
     public bool ArmorStand { get; set; } = true;
@@ -70,26 +70,26 @@ public class Config
     public bool WoodenPath { get; set; } = true;
     public bool WoodenRails { get; set; } = true;
 
-    public Dictionary<string, Dictionary<string, float>> FlowRates { get; set; } = new()
+    public Dictionary<string, Dictionary<string, float>> ChuteFlowRates { get; set; } = new()
     {
         ["archimedesscrew"] = new() { ["default"] = 1, },
         ["chute"] = new() { ["default"] = 1, },
         ["hopper"] = new() { ["default"] = 1, },
     };
 
-    public Dictionary<string, Dictionary<string, int>> QuantitySlots { get; set; } = new()
+    public Dictionary<string, Dictionary<string, int>> ChuteQuantitySlots { get; set; } = new()
     {
         ["archimedesscrew"] = new() { ["default"] = 1, },
         ["chute"] = new() { ["default"] = 1, },
         ["hopper"] = new() { ["default"] = 4, },
     };
 
-    public Dictionary<string, Dictionary<string, int>> CheckRateMs { get; set; } = new()
+    public Dictionary<string, Dictionary<string, int>> ChuteCheckRateMs { get; set; } = new()
     {
         ["archimedesscrew"] = new() { ["default"] = 500, },
     };
 
-    public Dictionary<string, Dictionary<string, bool>> CraftableChutes { get; set; } = new()
+    public Dictionary<string, Dictionary<string, bool>> ChuteCraftable { get; set; } = new()
     {
         ["archimedesscrew"] = new()
         {
@@ -129,14 +129,34 @@ public class Config
         },
     };
 
+    public bool OverrideChestQuantitySlots { get; set; } = false;
+
+    public Dictionary<string, int> ChestQuantitySlots { get; set; } = new()
+    {
+        ["default"] = 16
+    };
+
+    public bool OverrideDoubleChestQuantitySlots { get; set; } = false;
+
+    public Dictionary<string, int> DoubleChestQuantitySlots { get; set; } = new()
+    {
+        ["default"] = 36
+    };
+
     public Config() { }
 
     public Config(Config previousConfig)
     {
-        FlowRates.AddRange(previousConfig.FlowRates);
-        QuantitySlots.AddRange(previousConfig.QuantitySlots);
-        CheckRateMs.AddRange(previousConfig.CheckRateMs);
-        CraftableChutes.AddRange(previousConfig.CraftableChutes);
+        ChuteFlowRates.AddRange(previousConfig.ChuteFlowRates);
+        ChuteQuantitySlots.AddRange(previousConfig.ChuteQuantitySlots);
+        ChuteCheckRateMs.AddRange(previousConfig.ChuteCheckRateMs);
+        ChuteCraftable.AddRange(previousConfig.ChuteCraftable);
+
+        OverrideChestQuantitySlots = previousConfig.OverrideChestQuantitySlots;
+        OverrideDoubleChestQuantitySlots = previousConfig.OverrideDoubleChestQuantitySlots;
+
+        ChestQuantitySlots.AddRange(previousConfig.ChestQuantitySlots);
+        DoubleChestQuantitySlots.AddRange(previousConfig.DoubleChestQuantitySlots);
 
         ExperimentalOverlayTest = previousConfig.ExperimentalOverlayTest;
 
@@ -151,7 +171,7 @@ public class Config
         CraftableWoodenRails = previousConfig.CraftableWoodenRails;
 
         DecorativeQuern = previousConfig.DecorativeQuern;
-        MakeDecorativeQuernFunctional = previousConfig.MakeDecorativeQuernFunctional;
+        FunctionalQuern = previousConfig.FunctionalQuern;
 
         ArchimedesScrew = previousConfig.ArchimedesScrew;
         ArmorStand = previousConfig.ArmorStand;

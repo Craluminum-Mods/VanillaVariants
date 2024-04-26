@@ -13,7 +13,7 @@
         "op": "addmerge",
         "path": "/behaviors/-",
         "value": { "name": "Container" },
-        "condition": { "when": "VanillaVariants_MakeDecorativeQuernFunctional_Enabled", "isValue": "true" },
+        "condition": { "when": "VanillaVariants_FunctionalQuern_Enabled", "isValue": "true" },
         "side": "server"
     },
 
@@ -22,7 +22,7 @@
         "op": "addmerge",
         "path": "/entityBehaviors/-",
         "value": { "name": "MPConsumer" },
-        "condition": { "when": "VanillaVariants_MakeDecorativeQuernFunctional_Enabled", "isValue": "true" },
+        "condition": { "when": "VanillaVariants_FunctionalQuern_Enabled", "isValue": "true" },
         "side": "server"
     },
 
@@ -31,7 +31,7 @@
         "op": "addmerge",
         "path": "/class",
         "value": "BlockQuern",
-        "condition": { "when": "VanillaVariants_MakeDecorativeQuernFunctional_Enabled", "isValue": "true" },
+        "condition": { "when": "VanillaVariants_FunctionalQuern_Enabled", "isValue": "true" },
         "side": "server"
     },
 
@@ -40,7 +40,7 @@
         "op": "addmerge",
         "path": "/entityClass",
         "value": "Quern",
-        "condition": { "when": "VanillaVariants_MakeDecorativeQuernFunctional_Enabled", "isValue": "true" },
+        "condition": { "when": "VanillaVariants_FunctionalQuern_Enabled", "isValue": "true" },
         "side": "server"
     }
 ]

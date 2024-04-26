@@ -3,7 +3,7 @@ using Vintagestory.API.Common;
 
 namespace VanillaVariants;
 
-public class ChestProperties
+public class TypeProperties
 {
     public string Code = "{wood}";
     public string LoadFromProperties = null;

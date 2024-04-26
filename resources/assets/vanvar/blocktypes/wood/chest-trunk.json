@@ -10,7 +10,7 @@
         // types and everything else is populated by VanillaVariants.Core.AssetsFinalize and VanillaVariants.CollectibleObjectPatches classes
         "chestType": "Double",
         "handbook": { "groupBy": ["trunk-*"] },
-        "loadChestPropertiesFrom": "vanvar:config/properties/chests-vanvar.json",
+        "loadTypePropertiesFrom": "vanvar:config/properties/chests-vanvar.json",
         "creativeTabs": ["general", "decorative", "vanvar"]
     },
     "behaviors": [

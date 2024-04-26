@@ -11,7 +11,7 @@
         // types and everything else is populated by VanillaVariants.Core.AssetsFinalize and VanillaVariants.CollectibleObjectPatches classes
         "chestType": "NormalLabeled",
         "handbook": { "groupBy": ["labeledchest-*"] },
-        "loadChestPropertiesFrom": "vanvar:config/properties/chests-wildcrafttree.json",
+        "loadTypePropertiesFrom": "vanvar:config/properties/chests-wildcrafttree.json",
         "creativeTabs": ["general", "decorative", "vanvar"]
     },
     "behaviors": [
