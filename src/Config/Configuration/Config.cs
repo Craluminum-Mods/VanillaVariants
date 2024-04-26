@@ -18,7 +18,7 @@ public class Config
     public bool CraftableWoodenRails { get; set; }
 
     public bool DecorativeQuern { get; set; } = true;
-    public bool FunctionalQuern { get; set; } = false;
+    public bool FunctionalQuern { get; set; }
 
     public bool ArchimedesScrew { get; set; } = true;
     public bool ArmorStand { get; set; } = true;
@@ -58,6 +58,7 @@ public class Config
     public bool Signpost { get; set; } = true;
     public bool SodRoofing { get; set; } = true;
     public bool StonePath { get; set; } = true;
+    public bool SupportBeamMetal { get; set; } = true;
     public bool SupportChain { get; set; } = true;
     public bool Table { get; set; } = true;
     public bool Toolrack { get; set; } = true;
@@ -129,14 +130,14 @@ public class Config
         },
     };
 
-    public bool OverrideChestQuantitySlots { get; set; } = false;
+    public bool OverrideChestQuantitySlots { get; set; }
 
     public Dictionary<string, int> ChestQuantitySlots { get; set; } = new()
     {
         ["default"] = 16
     };
 
-    public bool OverrideDoubleChestQuantitySlots { get; set; } = false;
+    public bool OverrideDoubleChestQuantitySlots { get; set; }
 
     public Dictionary<string, int> DoubleChestQuantitySlots { get; set; } = new()
     {
@@ -211,6 +212,7 @@ public class Config
         Signpost = previousConfig.Signpost;
         SodRoofing = previousConfig.SodRoofing;
         StonePath = previousConfig.StonePath;
+        SupportBeamMetal = previousConfig.SupportBeamMetal;
         SupportChain = previousConfig.SupportChain;
         Table = previousConfig.Table;
         Toolrack = previousConfig.Toolrack;

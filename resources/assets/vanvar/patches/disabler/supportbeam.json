@@ -1,0 +1,10 @@
+[
+    {
+        "file": "vanvar:blocktypes/metal/supportbeam.json",
+        "op": "addmerge",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VanillaVariants_SupportBeamMetal_Enabled", "isValue": "false" },
+        "side": "server"
+    }
+]

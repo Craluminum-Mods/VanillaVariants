@@ -6,5 +6,13 @@
         "value": false,
         "condition": { "when": "VanillaVariants_SupportChain_Enabled", "isValue": "false" },
         "side": "server"
+    },
+    {
+        "file": "vanvar:blocktypes/metal/supportchain-tarnishedmetal.json",
+        "op": "addmerge",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VanillaVariants_SupportChain_Enabled", "isValue": "false" },
+        "side": "server"
     }
 ]

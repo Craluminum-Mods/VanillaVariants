@@ -77,6 +77,7 @@ static class ModConfig
         api.World.Config.SetBool("VanillaVariants_Signpost_Enabled", config.Signpost);
         api.World.Config.SetBool("VanillaVariants_SodRoofing_Enabled", config.SodRoofing);
         api.World.Config.SetBool("VanillaVariants_StonePath_Enabled", config.StonePath);
+        api.World.Config.SetBool("VanillaVariants_SupportBeamMetal_Enabled", config.SupportBeamMetal);
         api.World.Config.SetBool("VanillaVariants_SupportChain_Enabled", config.SupportChain);
         api.World.Config.SetBool("VanillaVariants_Table_Enabled", config.Table);
         api.World.Config.SetBool("VanillaVariants_Toolrack_Enabled", config.Toolrack);

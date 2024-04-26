@@ -12,11 +12,15 @@
                 }
             }
         },
+        { "name": "VanillaVariants.ItemFlowDescription" },
         { "name": "Lockable" },
         { "name": "WrenchOrientable", "properties": { "baseCode": "chute-{metal}-{type}" } }
     ],
     "attributes": {
-        "handbook": { "groupBy": ["chute-*-{type}-*"] },
+        "handbook": {
+            "groupBy": ["chute-*-{type}-*"]
+            // "extraSections": [{ "title": "game:block-handbooktitle-chute-*", "text": "game:block-handbooktext-chute-*" }]
+        },
         "configurableChute": true,
         "configurableName": "chute",
         "configurableType": "metal",

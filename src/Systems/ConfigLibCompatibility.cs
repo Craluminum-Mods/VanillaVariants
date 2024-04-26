@@ -103,6 +103,7 @@ public class ConfigLibCompatibility
             config.Signpost = OnCheckBox(id, config.Signpost, nameof(config.Signpost));
             config.SodRoofing = OnCheckBox(id, config.SodRoofing, nameof(config.SodRoofing));
             config.StonePath = OnCheckBox(id, config.StonePath, nameof(config.StonePath));
+            config.SupportBeamMetal = OnCheckBox(id, config.SupportBeamMetal, nameof(config.SupportBeamMetal));
             config.SupportChain = OnCheckBox(id, config.SupportChain, nameof(config.SupportChain));
             config.Table = OnCheckBox(id, config.Table, nameof(config.Table));
             config.Toolrack = OnCheckBox(id, config.Toolrack, nameof(config.Toolrack));

@@ -1,5 +1,5 @@
 {
-    "code": "supportchain",
+    "code": "supportbeam",
     "class": "BlockSupportBeam",
     "entityClass": "Generic",
     "entityBehaviors": [{ "name": "SupportBeam" }],
@@ -8,8 +8,8 @@
             "name": "VanillaVariants.BlockName",
             "properties": {
                 "partsByType": {
-                    "@.*-(uranium|platinum)": ["block-supportchain", " (", "ore-{metal}", ")"],
-                    "*": ["block-supportchain", " (", "material-{metal}", ")"]
+                    "@.*-(uranium|platinum)": ["vanvar:block-supportbeam", " (", "ore-{metal}", ")"],
+                    "*": ["vanvar:block-supportbeam", " (", "material-{metal}", ")"]
                 }
             }
         }
@@ -20,12 +20,13 @@
         "construction": ["*"],
         "vanvar": ["*"]
     },
-    "shape": { "base": "game:block/metal/supportchain" },
+    "shape": { "base": "game:block/wood/supportbeam" },
     "textures": {
-        "rusty-iron": { "base": "game:block/metal/ingot/{metal}" }
+        "wood": { "base": "game:block/metal/ingot/{metal}" }
     },
     "attributes": {
-        "handbook": { "groupBy": ["supportchain-*"] }
+        "handbook": { "groupBy": ["supportbeam-*"] },
+        "unstableRockStabilization": 3
     },
     "vertexFlags": {
         "reflective": true,
@@ -37,6 +38,7 @@
     "sideOpaque": { "all": false },
     "emitSideAo": { "all": false },
     "lightAbsorption": 0,
+    "rainPermeable": true,
     "resistance": 3.5,
     "sounds": {
         "place": "game:block/anvil",
@@ -50,14 +52,13 @@
     "heldRightReadyAnimation": "heldblockready",
     "heldTpUseAnimation": "twohandplaceblock",
     "tpHandTransform": {
-        "translation": { "x": -1.23, "y": -0.91, "z": -0.8 },
-        "rotation": { "x": -2, "y": 25, "z": -78 },
-        "scale": 0.4
+        "translation": { "x": -1.13, "y": -0.81, "z": -1.2 },
+        "rotation": { "x": -95, "y": 29, "z": 3 },
+        "scale": 0.55
     },
     "guiTransform": {
-        "rotation": { "x": -45, "y": -45, "z": 0 },
-        "origin": { "x": 0.5, "y": 0.125, "z": 0.5 },
-        "scale": 2
+        "origin": { "x": 0.5, "y": 0.25, "z": 0.5 },
+        "scale": 1.4
     },
     "drops": []
 }

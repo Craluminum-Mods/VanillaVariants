@@ -1,6 +1,10 @@
 {
     "game:tabname-vanvar": "Van.Var.",
 
+    "block-metalfence": "Metal fence",
+    "block-supportbeam": "Support beam",
+    "tarnished": "Tarnished",
+
     "Config.SettingsSimple": "Simple Settings",
     "Config.SettingsAdvanced": "Advanced Settings",
 
@@ -21,13 +25,13 @@
     "Config.Setting.ResolveHenboxImposter": "Resolve Henbox Imposter",
     "Config.Setting.ResolveMechanicalBlockIssues": "Resolve Mechanical Block Issues",
     "Config.Setting.ResolveQuernAndAxleRelationship": "Resolve Quern And Axle Relationship",
-    
+
     "Config.Setting.CraftableCage": "Make Cage Craftable",
     "Config.Setting.CraftableWagonWheels": "Make Wagon Wheels Craftable",
     "Config.Setting.CraftableWoodenRails": "Make Wooden Rails Craftable",
 
     "Config.Setting.DecorativeQuern": "Enable Decorative Quern",
-    "Config.Setting.MakeDecorativeQuernFunctional": "Enable Decorative Quern Functionality",
+    "Config.Setting.FunctionalQuern": "Enable Decorative Quern Functionality",
 
     "Config.Setting.ArchimedesScrew": "Enable Archimedes Screw",
     "Config.Setting.ArmorStand": "Enable Armor Stand",
@@ -67,6 +71,7 @@
     "Config.Setting.Signpost": "Enable Signpost",
     "Config.Setting.SodRoofing": "Enable Sod Roofing",
     "Config.Setting.StonePath": "Enable Stone Path",
+    "Config.Setting.SupportBeamMetal": "Enable Metal Support Beam",
     "Config.Setting.SupportChain": "Enable Support Chain",
     "Config.Setting.Table": "Enable Table",
     "Config.Setting.Toolrack": "Enable Toolrack",

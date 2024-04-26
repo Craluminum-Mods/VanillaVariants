@@ -12,6 +12,7 @@
                 }
             }
         },
+        { "name": "VanillaVariants.ItemFlowDescription" },
         { "name": "Lockable" },
         { "name": "Container" }
     ],
