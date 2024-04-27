@@ -69,6 +69,15 @@ public class Core : ModSystem
                         }
                         break;
                     }
+                    // TODO: Why this code was commented? Read WHY in CollectibleObjectPatches.PatchSteelProduction
+                    // case BlockStoneCoffinSection:
+                    //     {
+                    //         if (Config.MetalDoor && Config.OverrideMetalDoorsForSteelProduction)
+                    //         {
+                    //             block.PatchSteelProduction();
+                    //         }
+                    //         break;
+                    //     }
             }
 
             if (Config.ResolveQuernAndAxleRelationship && block?.Attributes?["patchQuernExceptions"]?.AsBool() == true)

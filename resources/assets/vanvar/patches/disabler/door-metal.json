@@ -1,0 +1,10 @@
+[
+    {
+        "file": "vanvar:blocktypes/metal/door.json",
+        "op": "addmerge",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VanillaVariants_MetalDoor_Enabled", "isValue": "false" },
+        "side": "server"
+    }
+]

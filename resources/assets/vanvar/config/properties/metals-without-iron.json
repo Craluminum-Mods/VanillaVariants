@@ -1,0 +1,4 @@
+{
+    "LoadFromProperties": "block/metal",
+    "SkipVariants": ["iron"]
+}

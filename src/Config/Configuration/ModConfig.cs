@@ -70,6 +70,7 @@ static class ModConfig
         api.World.Config.SetBool("VanillaVariants_MechanicalToggle_Enabled", config.MechanicalToggle);
         api.World.Config.SetBool("VanillaVariants_MechanicalTransmission_Enabled", config.MechanicalTransmission);
         api.World.Config.SetBool("VanillaVariants_MechanicalWindmillRotor_Enabled", config.MechanicalWindmillRotor);
+        api.World.Config.SetBool("VanillaVariants_MetalDoor_Enabled", config.MetalDoor);
         api.World.Config.SetBool("VanillaVariants_Moldrack_Enabled", config.Moldrack);
         api.World.Config.SetBool("VanillaVariants_OmokTabletop_Enabled", config.OmokTabletop);
         api.World.Config.SetBool("VanillaVariants_Palisade_Enabled", config.Palisade);
@@ -98,7 +99,6 @@ static class ModConfig
 
             foreach ((string metal, bool craftable) in metals)
             {
-                // for example: VanillaVariants-craftable-archimedesscrew-gold
                 api.World.Config.SetBool($"VanillaVariants-craftable-{name}-{metal}", craftable);
             }
         }

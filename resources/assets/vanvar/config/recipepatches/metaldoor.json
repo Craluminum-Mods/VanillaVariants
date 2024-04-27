@@ -1,0 +1,9 @@
+[
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_MetalDoor_Enabled", "isValue": "true" }],
+        "outputCode": "irondoor-north-down-closed-left",
+        "outputCodeNew": "vanvar:door-1x2metal-{metal}",
+        "ingredients": [{ "ingredientCode": "metalplate-*", "Name": "metal", "SkipVariants": ["iron"] }]
+    }
+]

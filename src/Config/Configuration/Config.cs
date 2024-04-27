@@ -52,6 +52,7 @@ public class Config
     public bool MechanicalToggle { get; set; } = true;
     public bool MechanicalTransmission { get; set; } = true;
     public bool MechanicalWindmillRotor { get; set; } = true;
+    public bool MetalDoor { get; set; } = true;
     public bool Moldrack { get; set; } = true;
     public bool OmokTabletop { get; set; } = true;
     public bool Palisade { get; set; } = true;
@@ -147,34 +148,44 @@ public class Config
         ["default"] = 36
     };
 
+    // TODO
+    // public bool OverrideMetalDoorsForSteelProduction { get; set; }
+
+    // public Dictionary<string, bool> MetalDoorsForSteelProduction { get; set; } = new()
+    // {
+    //     ["meteoriciron"] = true,
+    //     ["steel"] = true,
+    // };
+
     public Config() { }
 
     public Config(Config previousConfig)
     {
-        ChuteFlowRates.AddRange(previousConfig.ChuteFlowRates);
-        ChuteQuantitySlots.AddRange(previousConfig.ChuteQuantitySlots);
         ChuteCheckRateMs.AddRange(previousConfig.ChuteCheckRateMs);
         ChuteCraftable.AddRange(previousConfig.ChuteCraftable);
+        ChuteFlowRates.AddRange(previousConfig.ChuteFlowRates);
+        ChuteQuantitySlots.AddRange(previousConfig.ChuteQuantitySlots);
 
         OverrideChestQuantitySlots = previousConfig.OverrideChestQuantitySlots;
-        OverrideDoubleChestQuantitySlots = previousConfig.OverrideDoubleChestQuantitySlots;
-
         ChestQuantitySlots.AddRange(previousConfig.ChestQuantitySlots);
+
+        OverrideDoubleChestQuantitySlots = previousConfig.OverrideDoubleChestQuantitySlots;
         DoubleChestQuantitySlots.AddRange(previousConfig.DoubleChestQuantitySlots);
 
-        ExperimentalOverlayTest = previousConfig.ExperimentalOverlayTest;
+        // TODO
+        // OverrideMetalDoorsForSteelProduction = previousConfig.OverrideMetalDoorsForSteelProduction;
+        // MetalDoorsForSteelProduction.AddRange(previousConfig.MetalDoorsForSteelProduction);
 
+        ExperimentalOverlayTest = previousConfig.ExperimentalOverlayTest;
         ResolveBarrelSounds = previousConfig.ResolveBarrelSounds;
         ResolveBasketTrapIssues = previousConfig.ResolveBasketTrapIssues;
         ResolveChestNames = previousConfig.ResolveChestNames;
         ResolveHenboxImposter = previousConfig.ResolveHenboxImposter;
         ResolveMechanicalBlockIssues = previousConfig.ResolveMechanicalBlockIssues;
         ResolveQuernAndAxleRelationship = previousConfig.ResolveQuernAndAxleRelationship;
-
         CraftableCage = previousConfig.CraftableCage;
         CraftableWagonWheels = previousConfig.CraftableWagonWheels;
         CraftableWoodenRails = previousConfig.CraftableWoodenRails;
-
         DecorativeQuern = previousConfig.DecorativeQuern;
         FunctionalQuern = previousConfig.FunctionalQuern;
 
@@ -209,6 +220,7 @@ public class Config
         MechanicalToggle = previousConfig.MechanicalToggle;
         MechanicalTransmission = previousConfig.MechanicalTransmission;
         MechanicalWindmillRotor = previousConfig.MechanicalWindmillRotor;
+        MetalDoor = previousConfig.MetalDoor;
         Moldrack = previousConfig.Moldrack;
         OmokTabletop = previousConfig.OmokTabletop;
         Palisade = previousConfig.Palisade;

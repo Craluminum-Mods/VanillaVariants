@@ -12,6 +12,7 @@ namespace VanillaVariants;
 public class ConfigLibCompatibility
 {
     private const string metalsWithoutCopper = "vanvar:config/properties/metals-without-copper.json";
+    // private const string metalsWithoutIron = "vanvar:config/properties/metals-without-iron.json";
     private const string settingsAdvanced = "vanvar:Config.SettingsAdvanced";
     private const string settingsSimple = "vanvar:Config.SettingsSimple";
     private const string settingsBlockEntityItemFlow = "vanvar:Config.Settings.BlockEntityItemFlow";
@@ -20,11 +21,12 @@ public class ConfigLibCompatibility
     private const string settingsChuteCheckRateMs = "vanvar:Config.Settings.CheckRateMs";
     private const string settingsChuteCraftable = "vanvar:Config.Settings.CraftableChutes";
     private const string settingsQuantitySlotsChest = "vanvar:Config.Settings.ChestQuantitySlots";
+    private const string settingsQuantitySlotsTrunk = "vanvar:Config.Settings.DoubleChestQuantitySlots";
+    // private const string settingsMetalDoorsForSteelProduction = "vanvar:Config.Settings.MetalDoorsForSteelProduction";
     private const string vanvarChest = "vanvar:chest-east";
     private const string vanvarTrunk = "vanvar:trunk-east";
     private const string wtChest = "wildcrafttree:chest-east";
     private const string wtTrunk = "wildcrafttree:trunk-east";
-    private const string settingsQuantitySlotsTrunk = "vanvar:Config.Settings.DoubleChestQuantitySlots";
     private const string settingPrefix = "vanvar:Config.Setting.";
     private const string textChutes = "Chutes";
     private const string textMechanics = "tabname-mechanics";
@@ -34,6 +36,7 @@ public class ConfigLibCompatibility
     private const string textCraftable = "Craftable";
     private const string textExperimental = "Experimental";
     private const string nameHopper = "hopper";
+    private const string settingOverride = "vanvar:Config.Setting.Override";
 
     public ConfigLibCompatibility(ICoreAPI api)
     {
@@ -99,6 +102,7 @@ public class ConfigLibCompatibility
             config.HandBasket = OnCheckBox(id, config.HandBasket, nameof(config.HandBasket));
             config.Henbox = OnCheckBox(id, config.Henbox, nameof(config.Henbox));
             config.Ladder = OnCheckBox(id, config.Ladder, nameof(config.Ladder));
+            config.MetalDoor = OnCheckBox(id, config.MetalDoor, nameof(config.MetalDoor));
             config.Moldrack = OnCheckBox(id, config.Moldrack, nameof(config.Moldrack));
             config.OmokTabletop = OnCheckBox(id, config.OmokTabletop, nameof(config.OmokTabletop));
             config.Palisade = OnCheckBox(id, config.Palisade, nameof(config.Palisade));
@@ -191,16 +195,23 @@ public class ConfigLibCompatibility
             }
             if (ImGui.CollapsingHeader(Lang.Get(settingsQuantitySlotsChest) + $"##settingsQuantitySlotsChest-{id}"))
             {
-                config.OverrideChestQuantitySlots = OnCheckBox($"overrideChestQuantitySlots-{id}", config.OverrideChestQuantitySlots, nameof(config.OverrideChestQuantitySlots));
+                config.OverrideChestQuantitySlots = OnCheckBox($"overrideChestQuantitySlots-{id}", config.OverrideChestQuantitySlots, Lang.Get(settingOverride));
                 ImGui.NewLine();
                 DictionaryEditor(config.ChestQuantitySlots, 16, api.LoadTypesFromBlocks(api.World.GetBlock(AssetLocation.Create(vanvarChest)), api.World.GetBlock(AssetLocation.Create(wtChest))));
             }
             if (ImGui.CollapsingHeader(Lang.Get(settingsQuantitySlotsTrunk) + $"##settingsQuantitySlotsTrunk-{id}"))
             {
-                config.OverrideDoubleChestQuantitySlots = OnCheckBox($"overrideDoubleChestQuantitySlots-{id}", config.OverrideDoubleChestQuantitySlots, nameof(config.OverrideDoubleChestQuantitySlots));
+                config.OverrideDoubleChestQuantitySlots = OnCheckBox($"overrideDoubleChestQuantitySlots-{id}", config.OverrideDoubleChestQuantitySlots, Lang.Get(settingOverride));
                 ImGui.NewLine();
                 DictionaryEditor(config.DoubleChestQuantitySlots, 36, api.LoadTypesFromBlocks(api.World.GetBlock(AssetLocation.Create(vanvarTrunk)), api.World.GetBlock(AssetLocation.Create(wtTrunk))));
             }
+            // TODO
+            // if (ImGui.CollapsingHeader(Lang.Get(settingsMetalDoorsForSteelProduction) + $"##settingsMetalDoorsForSteelProduction-{id}"))
+            // {
+            //     config.OverrideMetalDoorsForSteelProduction = OnCheckBox($"overrideMetalDoorsForSteelProduction-{id}", config.OverrideMetalDoorsForSteelProduction, Lang.Get(settingOverride));
+            //     ImGui.NewLine();
+            //     DictionaryEditor(config.MetalDoorsForSteelProduction, false, api.LoadTypesFromFile(metalsWithoutIron));
+            // }
             ImGui.Unindent();
         }
     }

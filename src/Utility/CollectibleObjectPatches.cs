@@ -257,21 +257,6 @@ public static class CollectibleObjectPatches
         return types;
     }
 
-    // public static string[] LoadTypesFromBlock(this ICoreAPI api, Block block)
-    // {
-    //     if (block == null)
-    //     {
-    //         return Array.Empty<string>();
-    //     }
-    //     TypeProperties typeProps = api.Assets.TryGet(block.Attributes?["loadTypePropertiesFrom"]?.AsString())?.ToObject<TypeProperties>();
-    //     if (typeProps == null)
-    //     {
-    //         return Array.Empty<string>();
-    //     }
-    //     string[] types = api.GetTypes(new RegistryObjectVariantGroup() { LoadFromProperties = typeProps.GetLoadFromProperties(), States = typeProps.States }, typeProps.SkipVariants);
-    //     return types;
-    // }
-
     public static string[] LoadTypesFromBlocks(this ICoreAPI api, params Block[] blocks)
     {
         string[] types = Array.Empty<string>();
@@ -363,4 +348,20 @@ public static class CollectibleObjectPatches
 
         block.Attributes.Token[attributeName] = JToken.FromObject(value);
     }
+
+    // TODO: Without joking, I spent whole day to find perfect regex, I DESERVE to comment this until I find regex that will actually work!!
+    // public static void PatchSteelProduction(this Block block)
+    // {
+    //     List<string> allowedTypes = Core.Config.MetalDoorsForSteelProduction.Where(x => x.Value).Select(keyVal => keyVal.Key).ToList();
+    //     if (!allowedTypes.Any())
+    //     {
+    //         return;
+    //     }
+
+    //     string allowedTypesAsString = string.Join("|", allowedTypes);
+    //     string newKey = $"@(game:irondoor-(.*)|vanvar:door-1x2metal-({allowedTypesAsString}))";
+    //     JToken value = block.Attributes.Token["multiblockStructure"]["blockNumbers"]["irondoor-*"];
+    //     block.Attributes.Token["multiblockStructure"]["blockNumbers"]["irondoor-*"].Remove();
+    //     block.Attributes.Token["multiblockStructure"]["blockNumbers"][newKey] = JToken.FromObject(value);
+    // }
 }
