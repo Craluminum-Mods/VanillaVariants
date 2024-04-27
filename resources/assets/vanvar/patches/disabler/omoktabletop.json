@@ -38,7 +38,7 @@
         "path": "/enabled",
         "value": false,
         "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" },
-        "dependsOn": [{ "modid": "wildcrafttree" }],
+        // "dependsOn": [{ "modid": "wildcrafttree" }],
         "side": "server"
     },
     {
@@ -47,7 +47,7 @@
         "path": "/3/enabled",
         "value": false,
         "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" },
-        "dependsOn": [{ "modid": "wildcrafttree" }],
+        // "dependsOn": [{ "modid": "wildcrafttree" }],
         "side": "server"
     },
     {
@@ -56,7 +56,7 @@
         "path": "/4/enabled",
         "value": false,
         "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" },
-        "dependsOn": [{ "modid": "wildcrafttree" }],
+        // "dependsOn": [{ "modid": "wildcrafttree" }],
         "side": "server"
     },
     {
@@ -65,7 +65,7 @@
         "path": "/5/enabled",
         "value": false,
         "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" },
-        "dependsOn": [{ "modid": "wildcrafttree" }],
+        // "dependsOn": [{ "modid": "wildcrafttree" }],
         "side": "server"
     },
     {
@@ -74,7 +74,7 @@
         "path": "/6/enabled",
         "value": false,
         "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" },
-        "dependsOn": [{ "modid": "wildcrafttree" }],
+        // "dependsOn": [{ "modid": "wildcrafttree" }],
         "side": "server"
     },
     {
@@ -83,7 +83,7 @@
         "path": "/7/enabled",
         "value": false,
         "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" },
-        "dependsOn": [{ "modid": "wildcrafttree" }],
+        // "dependsOn": [{ "modid": "wildcrafttree" }],
         "side": "server"
     }
 ]
