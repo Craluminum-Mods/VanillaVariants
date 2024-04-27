@@ -1,0 +1,17 @@
+[
+    // papyrus basket trap from papyrus basket
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_Basket_Enabled", "isValue": "true" }],
+        "outputCode": "baskettrap-reed",
+        "outputCodeNew": "vanvar:baskettrap-papyrus",
+        "ingredients": [
+            {
+                "ingredientCode": "stationarybasket-east",
+                "attributes": { "type": "reed" },
+                "Code": "vanvar:stationarybasket-east",
+                "attributesNew": { "type": "papyrus" }
+            }
+        ]
+    }
+]

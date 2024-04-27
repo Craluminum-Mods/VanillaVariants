@@ -8,6 +8,7 @@ public class Config
     public bool ExperimentalOverlayTest { get; set; } = true;
 
     public bool ResolveBarrelSounds { get; set; } = true;
+    public bool ResolveBasketTrapIssues { get; set; } = true;
     public bool ResolveChestNames { get; set; } = true;
     public bool ResolveHenboxImposter { get; set; } = true;
     public bool ResolveMechanicalBlockIssues { get; set; } = true;
@@ -23,6 +24,7 @@ public class Config
     public bool ArchimedesScrew { get; set; } = true;
     public bool ArmorStand { get; set; } = true;
     public bool Barrel { get; set; } = true;
+    public bool Basket { get; set; } = true;
     public bool Bed { get; set; } = true;
     public bool Cage { get; set; } = true;
     public bool Chair { get; set; } = true;
@@ -34,6 +36,7 @@ public class Config
     public bool Firewood { get; set; } = true;
     public bool Forge { get; set; } = true;
     public bool FruitPress { get; set; } = true;
+    public bool HandBasket { get; set; } = true;
     public bool Henbox { get; set; } = true;
     public bool Hopper { get; set; } = true;
     public bool Ladder { get; set; } = true;
@@ -162,6 +165,7 @@ public class Config
         ExperimentalOverlayTest = previousConfig.ExperimentalOverlayTest;
 
         ResolveBarrelSounds = previousConfig.ResolveBarrelSounds;
+        ResolveBasketTrapIssues = previousConfig.ResolveBasketTrapIssues;
         ResolveChestNames = previousConfig.ResolveChestNames;
         ResolveHenboxImposter = previousConfig.ResolveHenboxImposter;
         ResolveMechanicalBlockIssues = previousConfig.ResolveMechanicalBlockIssues;
@@ -177,6 +181,7 @@ public class Config
         ArchimedesScrew = previousConfig.ArchimedesScrew;
         ArmorStand = previousConfig.ArmorStand;
         Barrel = previousConfig.Barrel;
+        Basket = previousConfig.Basket;
         Bed = previousConfig.Bed;
         Cage = previousConfig.Cage;
         Chair = previousConfig.Chair;
@@ -188,6 +193,7 @@ public class Config
         Firewood = previousConfig.Firewood;
         Forge = previousConfig.Forge;
         FruitPress = previousConfig.FruitPress;
+        HandBasket = previousConfig.HandBasket;
         Henbox = previousConfig.Henbox;
         Hopper = previousConfig.Hopper;
         Ladder = previousConfig.Ladder;

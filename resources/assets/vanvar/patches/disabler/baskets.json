@@ -1,0 +1,28 @@
+[
+    {
+        "file": "vanvar:blocktypes/reed/baskettrap.json",
+        "op": "addmerge",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VanillaVariants_Basket_Enabled", "isValue": "false" },
+        "side": "server"
+    },
+
+    {
+        "file": "vanvar:blocktypes/reed/stationarybasket.json",
+        "op": "addmerge",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VanillaVariants_Basket_Enabled", "isValue": "false" },
+        "side": "server"
+    },
+
+    {
+        "file": "vanvar:itemtypes/reed/basket.json",
+        "op": "addmerge",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VanillaVariants_HandBasket_Enabled", "isValue": "false" },
+        "side": "server"
+    }
+]

@@ -42,6 +42,7 @@ static class ModConfig
         api.World.Config.SetBool("VanillaVariants_ArchimedesScrew_Enabled", config.ArchimedesScrew);
         api.World.Config.SetBool("VanillaVariants_ArmorStand_Enabled", config.ArmorStand);
         api.World.Config.SetBool("VanillaVariants_Barrel_Enabled", config.Barrel);
+        api.World.Config.SetBool("VanillaVariants_Basket_Enabled", config.Basket);
         api.World.Config.SetBool("VanillaVariants_Bed_Enabled", config.Bed);
         api.World.Config.SetBool("VanillaVariants_Cage_Enabled", config.Cage);
         api.World.Config.SetBool("VanillaVariants_Chair_Enabled", config.Chair);
@@ -53,6 +54,7 @@ static class ModConfig
         api.World.Config.SetBool("VanillaVariants_Firewood_Enabled", config.Firewood);
         api.World.Config.SetBool("VanillaVariants_Forge_Enabled", config.Forge);
         api.World.Config.SetBool("VanillaVariants_FruitPress_Enabled", config.FruitPress);
+        api.World.Config.SetBool("VanillaVariants_HandBasket_Enabled", config.HandBasket);
         api.World.Config.SetBool("VanillaVariants_Henbox_Enabled", config.Henbox);
         api.World.Config.SetBool("VanillaVariants_Hopper_Enabled", config.Hopper);
         api.World.Config.SetBool("VanillaVariants_Ladder_Enabled", config.Ladder);

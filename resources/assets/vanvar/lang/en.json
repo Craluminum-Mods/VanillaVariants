@@ -16,11 +16,13 @@
 
     "Config.Settings.ChestQuantitySlots": "Quantity Slots (Chest)",
     "Config.Settings.DoubleChestQuantitySlots": "Quantity Slots (Double Chest)",
-    "Config.Setting.OverrideChestQuantitySlots": "Override Quantity Slots (No effect on vanilla chests)",
-    "Config.Setting.OverrideDoubleChestQuantitySlots": "Override Quantity Slots (No effect on vanilla chests)",
+
+    "Config.Setting.OverrideChestQuantitySlots": "Override (No effect on vanilla chests)",
+    "Config.Setting.OverrideDoubleChestQuantitySlots": "Override (No effect on vanilla chests)",
 
     "Config.Setting.ExperimentalOverlayTest": "Experimental Overlay Test",
     "Config.Setting.ResolveBarrelSounds": "Resolve Barrel Sounds",
+    "Config.Setting.ResolveBasketTrapIssues": "Resolve Basket Trap Issues",
     "Config.Setting.ResolveChestNames": "Resolve Chest Names",
     "Config.Setting.ResolveHenboxImposter": "Resolve Henbox Imposter",
     "Config.Setting.ResolveMechanicalBlockIssues": "Resolve Mechanical Block Issues",
@@ -33,6 +35,8 @@
     "Config.Setting.DecorativeQuern": "Enable Decorative Quern",
     "Config.Setting.FunctionalQuern": "Enable Decorative Quern Functionality",
 
+    "Config.Setting.Basket": "Enable Basket (block)",
+    "Config.Setting.HandBasket": "Enable Hand Basket",
     "Config.Setting.ArchimedesScrew": "Enable Archimedes Screw",
     "Config.Setting.ArmorStand": "Enable Armor Stand",
     "Config.Setting.Barrel": "Enable Barrel",

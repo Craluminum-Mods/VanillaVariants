@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using Vintagestory.API.Common;
 using Vintagestory.API.Config;
@@ -22,8 +23,8 @@ public class BlockBehaviorChestName : BlockBehavior
         base.Initialize(properties);
 
         parts = properties["parts"].AsObject<List<string>>();
-        replacePart = properties["replacePart"].AsString("");
-        defaultName = properties["defaultName"].AsString("");
+        replacePart = properties.KeyExists("replacePart") ? properties["replacePart"].AsString() : "";
+        defaultName = properties.KeyExists("defaultName") ? properties["defaultName"].AsString() : "";
     }
 
     public override void GetPlacedBlockName(StringBuilder sb, IWorldAccessor world, BlockPos pos) => ConstructName(sb);
@@ -35,34 +36,40 @@ public class BlockBehaviorChestName : BlockBehavior
         sb ??= new StringBuilder();
 
         string newName = Lang.GetMatching(defaultName);
-        string type = GetType(stack, world, pos);
 
         if (parts != null && parts.Any())
         {
-            if (!string.IsNullOrEmpty(type))
+            if (string.IsNullOrEmpty(replacePart))
+            {
+                newName = string.Join("", parts.Select(x => Lang.GetMatching(x)));
+                sb.Clear();
+                sb.Append(newName);
+                return sb.ToString();
+            }
+            else if (GetType(out string type, stack, world, pos))
             {
                 newName = string.Join("", parts.Select(x => Lang.GetMatching(x.Replace(replacePart, type))));
+                sb.Clear();
+                sb.Append(newName);
+                return sb.ToString();
             }
-
-            sb.Clear();
-            sb.Append(newName);
-            return sb.ToString();
         }
-
-        return defaultName;
+        return newName;
     }
 
-    private static string GetType(ItemStack stack = null, IWorldAccessor world = null, BlockPos pos = null)
+    private static bool GetType(out string type, ItemStack stack = null, IWorldAccessor world = null, BlockPos pos = null)
     {
         if (stack != null)
         {
-            return stack.Attributes.GetString("type");
+            type = stack.Attributes.GetString("type");
+            return true;
         }
         else if (world != null && pos != null && world.BlockAccessor.GetBlock(pos) is BlockGenericTypedContainer chest)
         {
-            return chest.GetType(world.BlockAccessor, pos);
+            type = chest.GetType(world.BlockAccessor, pos);
+            return true;
         }
-
-        return null;
+        type = null;
+        return false;
     }
 }

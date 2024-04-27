@@ -1,0 +1,37 @@
+[
+    // replace papyrus with cattails
+    {
+        "type": "Replace",
+        "conditions": [{ "when": "VanillaVariants_Basket_Enabled", "isValue": "true" }],
+        "attributes": { "type": "reed" },
+        "outputCode": "stationarybasket-east",
+        "ingredients": [{ "ingredientCode": "papyrustops", "Code": "cattailtops" }]
+    },
+
+    // basket from papyrus
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_Basket_Enabled", "isValue": "true" }],
+        "attributes": { "type": "reed" },
+        "attributesNew": { "type": "papyrus" },
+        "outputCode": "stationarybasket-east",
+        "outputCodeNew": "vanvar:stationarybasket-east",
+        "ingredients": [{ "ingredientCode": "cattailtops", "Code": "papyrustops" }]
+    },
+
+    // deconstruct basket from papyrus
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_Basket_Enabled", "isValue": "true" }],
+        "outputCode": "cattailtops",
+        "outputCodeNew": "papyrustops",
+        "ingredients": [
+            {
+                "ingredientCode": "stationarybasket-east",
+                "attributes": { "type": "reed" },
+                "Code": "vanvar:stationarybasket-east",
+                "attributesNew": { "type": "papyrus" }
+            }
+        ]
+    }
+]

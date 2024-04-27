@@ -31,6 +31,7 @@ public class ConfigLibCompatibility
     private const string textBlocksAndItems = "Blocks and Items";
     private const string textQuern = "Quern";
     private const string textIssues = "Issues";
+    private const string textCraftable = "Craftable";
     private const string textExperimental = "Experimental";
     private const string nameHopper = "hopper";
 
@@ -67,10 +68,13 @@ public class ConfigLibCompatibility
             ImGui.NewLine();
             ImGui.TextWrapped(Lang.Get(textIssues));
             config.ResolveBarrelSounds = OnCheckBox(id, config.ResolveBarrelSounds, nameof(config.ResolveBarrelSounds));
+            config.ResolveBasketTrapIssues = OnCheckBox(id, config.ResolveBasketTrapIssues, nameof(config.ResolveBasketTrapIssues));
             config.ResolveChestNames = OnCheckBox(id, config.ResolveChestNames, nameof(config.ResolveChestNames));
             config.ResolveHenboxImposter = OnCheckBox(id, config.ResolveHenboxImposter, nameof(config.ResolveHenboxImposter));
             config.ResolveMechanicalBlockIssues = OnCheckBox(id, config.ResolveMechanicalBlockIssues, nameof(config.ResolveMechanicalBlockIssues));
             config.ResolveQuernAndAxleRelationship = OnCheckBox(id, config.ResolveQuernAndAxleRelationship, nameof(config.ResolveQuernAndAxleRelationship));
+            ImGui.NewLine();
+            ImGui.TextWrapped(Lang.Get(textCraftable));
             config.CraftableCage = OnCheckBox(id, config.CraftableCage, nameof(config.CraftableCage));
             config.CraftableWagonWheels = OnCheckBox(id, config.CraftableWagonWheels, nameof(config.CraftableWagonWheels));
             config.CraftableWoodenRails = OnCheckBox(id, config.CraftableWoodenRails, nameof(config.CraftableWoodenRails));
@@ -80,10 +84,11 @@ public class ConfigLibCompatibility
             config.FunctionalQuern = OnCheckBox(id, config.FunctionalQuern, nameof(config.FunctionalQuern));
             ImGui.NewLine();
             ImGui.TextWrapped(Lang.Get(textBlocksAndItems));
-            config.Cage = OnCheckBox(id, config.Cage, nameof(config.Cage));
             config.ArmorStand = OnCheckBox(id, config.ArmorStand, nameof(config.ArmorStand));
             config.Barrel = OnCheckBox(id, config.Barrel, nameof(config.Barrel));
+            config.Basket = OnCheckBox(id, config.Basket, nameof(config.Basket));
             config.Bed = OnCheckBox(id, config.Bed, nameof(config.Bed));
+            config.Cage = OnCheckBox(id, config.Cage, nameof(config.Cage));
             config.Chair = OnCheckBox(id, config.Chair, nameof(config.Chair));
             config.Chest = OnCheckBox(id, config.Chest, nameof(config.Chest));
             config.CrudeDoor = OnCheckBox(id, config.CrudeDoor, nameof(config.CrudeDoor));
@@ -91,6 +96,7 @@ public class ConfigLibCompatibility
             config.Firewood = OnCheckBox(id, config.Firewood, nameof(config.Firewood));
             config.Forge = OnCheckBox(id, config.Forge, nameof(config.Forge));
             config.FruitPress = OnCheckBox(id, config.FruitPress, nameof(config.FruitPress));
+            config.HandBasket = OnCheckBox(id, config.HandBasket, nameof(config.HandBasket));
             config.Henbox = OnCheckBox(id, config.Henbox, nameof(config.Henbox));
             config.Ladder = OnCheckBox(id, config.Ladder, nameof(config.Ladder));
             config.Moldrack = OnCheckBox(id, config.Moldrack, nameof(config.Moldrack));

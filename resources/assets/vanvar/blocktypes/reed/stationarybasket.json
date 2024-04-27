@@ -1,0 +1,122 @@
+{
+    "code": "stationarybasket",
+    "class": "BlockGenericTypedContainer",
+    "entityclass": "GenericTypedContainer",
+    "storageFlags": 3,
+    "attributes": {
+        "inventoryClassName": "basket",
+        "defaultType": "papyrus",
+        "openSound": "game:sounds/block/basketopen",
+        "closeSound": "game:sounds/block/basketclose",
+        "types": ["papyrus"],
+        "drop": {
+            "papyrus": true
+        },
+        "quantitySlots": {
+            "papyrus": 8
+        },
+        "dialogTitleLangCode": {
+            "papyrus": "basketcontents"
+        },
+        "storageType": {
+            "papyrus": 189
+        },
+        "retrieveOnly": {
+            "papyrus": false
+        },
+        "shape": {
+            "papyrus": "game:block/reed/basket-normal"
+        },
+        "creatureContainedShape": {
+            "papyrus": "game:block/reed/basket-full"
+        },
+        "variantByGroup": "side",
+        "variantByGroupInventory": null
+    },
+    "behaviors": [
+        //
+        {
+            "name": "VanillaVariants.ChestName",
+            "properties": {
+                "parts": ["block-reed-stationarybasket-*", " (", "item-papyrustops", ")"]
+            }
+        },
+        { "name": "Lockable" },
+        { "name": "CreatureContainer" },
+        { "name": "Container" },
+        { "name": "HorizontalOrientable", "properties": { "dropBlockFace": "east" } }
+    ],
+    "entityBehaviors": [{ "name": "Animatable" }],
+    "variantgroups": [{ "code": "side", "loadFromProperties": "abstract/horizontalorientation" }],
+    "creativeinventory": {},
+    "creativeinventoryStacksByType": {
+        "*-east": [
+            {
+                "tabs": ["general", "decorative", "vanvar"],
+                "stacks": [{ "type": "block", "code": "stationarybasket-east", "attributes": { "type": "papyrus" } }]
+            }
+        ]
+    },
+    "heldTpIdleAnimation": "holdunderarm",
+    "shapeInventory": { "base": "game:block/reed/basket-normal", "rotateY": 270 },
+    "shapeByType": {
+        "*-north": { "base": "game:block/reed/basket-normal", "rotateY": 0 },
+        "*-east": { "base": "game:block/reed/basket-normal", "rotateY": 270 },
+        "*-west": { "base": "game:block/reed/basket-normal", "rotateY": 90 },
+        "*-south": { "base": "game:block/reed/basket-normal", "rotateY": 180 }
+    },
+    "textures": {
+        "papyrus-sidesWE": { "base": "vanvar:block/basket/papyrus-westeast" },
+        "papyrus-sidesSN": { "base": "vanvar:block/basket/papyrus-northsouth" },
+        "papyrus-lid": { "base": "vanvar:block/basket/papyrus-lid" }
+    },
+    "blockmaterial": "Wood",
+    "replaceable": 900,
+    "resistance": 2,
+    "lightAbsorption": 0,
+    "sideAo": { "all": false },
+    "sidesolid": { "all": false },
+    "sideopaque": { "all": false },
+    "collisionbox": {
+        "x1": 0.125,
+        "y1": 0,
+        "z1": 0.125,
+        "x2": 0.8125,
+        "y2": 0.5,
+        "z2": 0.875,
+        "rotateYByType": {
+            "*-north": 270,
+            "*-east": 180,
+            "*-south": 90,
+            "*-west": 0
+        }
+    },
+    "selectionbox": {
+        "x1": 0.125,
+        "y1": 0,
+        "z1": 0.125,
+        "x2": 0.8125,
+        "y2": 0.5,
+        "z2": 0.875,
+        "rotateYByType": {
+            "*-north": 270,
+            "*-east": 180,
+            "*-south": 90,
+            "*-west": 0
+        }
+    },
+    "sounds": {
+        "place": "game:block/planks",
+        "walk": "game:walk/wood"
+    },
+    "materialDensity": 600,
+    "tpHandTransform": {
+        "translation": { "x": -0.9, "y": -0.5, "z": -0.3 },
+        "rotation": { "x": 0, "y": 90, "z": -102 },
+        "scale": 0.56
+    },
+    "guiTransform": {
+        "origin": { "x": 0.5, "y": 0.3, "z": 0.5 },
+        "scale": 1.3
+    }
+}
