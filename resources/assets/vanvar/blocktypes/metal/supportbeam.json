@@ -20,9 +20,9 @@
         "construction": ["*"],
         "vanvar": ["*"]
     },
-    "shape": { "base": "game:block/wood/supportbeam" },
+    "shape": { "base": "game:block/metal/supportbeam" },
     "textures": {
-        "wood": { "base": "game:block/metal/ingot/{metal}" }
+        "material": { "base": "game:block/metal/ingot/{metal}" }
     },
     "attributes": {
         "handbook": { "groupBy": ["supportbeam-*"] },

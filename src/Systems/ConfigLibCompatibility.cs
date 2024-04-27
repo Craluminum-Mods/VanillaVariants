@@ -6,7 +6,6 @@ using System.Linq;
 using VanillaVariants.Configuration;
 using Vintagestory.API.Common;
 using Vintagestory.API.Config;
-using Vintagestory.API.Util;
 
 namespace VanillaVariants;
 
