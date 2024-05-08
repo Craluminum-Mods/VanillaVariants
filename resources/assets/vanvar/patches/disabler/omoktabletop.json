@@ -1,89 +1,21 @@
 [
-    {
-        "file": "vanvar:blocktypes/wood/omoktabletop.json",
-        "op": "addmerge",
-        "path": "/enabled",
-        "value": false,
-        "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" },
-        "side": "server"
-    },
-    {
-        "file": "vanvar:recipes/grid/omoktabletop.json",
-        "op": "addmerge",
-        "path": "/0/enabled",
-        "value": false,
-        "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" },
-        "side": "server"
-    },
-    {
-        "file": "vanvar:recipes/grid/omoktabletop.json",
-        "op": "addmerge",
-        "path": "/1/enabled",
-        "value": false,
-        "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" },
-        "side": "server"
-    },
-    {
-        "file": "vanvar:recipes/grid/omoktabletop.json",
-        "op": "addmerge",
-        "path": "/2/enabled",
-        "value": false,
-        "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" },
-        "side": "server"
-    },
+    { "file": "vanvar:blocktypes/wood/omoktabletop.json", "op": "addmerge", "path": "/enabled", "value": false, "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" }, "side": "server" },
 
-    {
-        "file": "wildcrafttree:blocktypes/wood/omoktabletop.json",
-        "op": "addmerge",
-        "path": "/enabled",
-        "value": false,
-        "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" },
-        // "dependsOn": [{ "modid": "wildcrafttree" }],
-        "side": "server"
-    },
-    {
-        "file": "vanvar:recipes/grid/omoktabletop.json",
-        "op": "addmerge",
-        "path": "/3/enabled",
-        "value": false,
-        "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" },
-        // "dependsOn": [{ "modid": "wildcrafttree" }],
-        "side": "server"
-    },
-    {
-        "file": "vanvar:recipes/grid/omoktabletop.json",
-        "op": "addmerge",
-        "path": "/4/enabled",
-        "value": false,
-        "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" },
-        // "dependsOn": [{ "modid": "wildcrafttree" }],
-        "side": "server"
-    },
-    {
-        "file": "vanvar:recipes/grid/omoktabletop.json",
-        "op": "addmerge",
-        "path": "/5/enabled",
-        "value": false,
-        "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" },
-        // "dependsOn": [{ "modid": "wildcrafttree" }],
-        "side": "server"
-    },
-    {
-        "file": "vanvar:recipes/grid/omoktabletop.json",
-        "op": "addmerge",
-        "path": "/6/enabled",
-        "value": false,
-        "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" },
-        // "dependsOn": [{ "modid": "wildcrafttree" }],
-        "side": "server"
-    },
-    {
-        "file": "vanvar:recipes/grid/omoktabletop.json",
-        "op": "addmerge",
-        "path": "/7/enabled",
-        "value": false,
-        "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" },
-        // "dependsOn": [{ "modid": "wildcrafttree" }],
-        "side": "server"
-    }
+    { "file": "vanvar:recipes/grid/omoktabletop.json", "op": "addmerge", "path": "/0/enabled", "value": false, "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" }, "side": "server" },
+    { "file": "vanvar:recipes/grid/omoktabletop.json", "op": "addmerge", "path": "/1/enabled", "value": false, "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" }, "side": "server" },
+    { "file": "vanvar:recipes/grid/omoktabletop.json", "op": "addmerge", "path": "/2/enabled", "value": false, "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" }, "side": "server" },
+
+    { "file": "wildcrafttree:blocktypes/wood/omoktabletop.json", "op": "addmerge", "path": "/enabled", "value": false, "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" }, "dependsOn": [{ "modid": "wildcrafttree" }], "side": "server" },
+
+    { "file": "vanvar:recipes/grid/omoktabletop-wt.json", "op": "addmerge", "path": "/0/enabled", "value": false, "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" }, "side": "server" },
+    { "file": "vanvar:recipes/grid/omoktabletop-wt.json", "op": "addmerge", "path": "/1/enabled", "value": false, "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" }, "side": "server" },
+    { "file": "vanvar:recipes/grid/omoktabletop-wt.json", "op": "addmerge", "path": "/2/enabled", "value": false, "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" }, "side": "server" },
+    { "file": "vanvar:recipes/grid/omoktabletop-wt.json", "op": "addmerge", "path": "/3/enabled", "value": false, "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" }, "side": "server" },
+    { "file": "vanvar:recipes/grid/omoktabletop-wt.json", "op": "addmerge", "path": "/4/enabled", "value": false, "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "false" }, "side": "server" },
+
+    { "file": "vanvar:recipes/grid/omoktabletop-wt.json", "op": "addmerge", "path": "/0/enabled", "value": false, "dependsOn": [{ "modid": "wildcrafttree", "invert": true }], "side": "server" },
+    { "file": "vanvar:recipes/grid/omoktabletop-wt.json", "op": "addmerge", "path": "/1/enabled", "value": false, "dependsOn": [{ "modid": "wildcrafttree", "invert": true }], "side": "server" },
+    { "file": "vanvar:recipes/grid/omoktabletop-wt.json", "op": "addmerge", "path": "/2/enabled", "value": false, "dependsOn": [{ "modid": "wildcrafttree", "invert": true }], "side": "server" },
+    { "file": "vanvar:recipes/grid/omoktabletop-wt.json", "op": "addmerge", "path": "/3/enabled", "value": false, "dependsOn": [{ "modid": "wildcrafttree", "invert": true }], "side": "server" },
+    { "file": "vanvar:recipes/grid/omoktabletop-wt.json", "op": "addmerge", "path": "/4/enabled", "value": false, "dependsOn": [{ "modid": "wildcrafttree", "invert": true }], "side": "server" }
 ]
