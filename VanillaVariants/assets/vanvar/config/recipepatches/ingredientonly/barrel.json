@@ -1,0 +1,13 @@
+[
+    {
+        "type": "CopyReplaceIngredients",
+        "conditions": [{ "when": "VanillaVariants_Barrel_Enabled", "isValue": "true" }],
+        "ingredients": [{ "ingredientCode": "barrel", "Code": "vanvar:barrel-*" }]
+    },
+    {
+        "type": "CopyReplaceIngredients",
+        "conditions": [{ "when": "VanillaVariants_Barrel_Enabled", "isValue": "true" }],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "ingredients": [{ "ingredientCode": "barrel", "Code": "wildcrafttree:barrel-*" }]
+    }
+]
