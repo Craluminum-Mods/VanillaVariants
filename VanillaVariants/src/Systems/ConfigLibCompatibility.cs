@@ -115,7 +115,6 @@ public class ConfigLibCompatibility
             config.SupportChain = OnCheckBox(id, config.SupportChain, nameof(config.SupportChain));
             config.Table = OnCheckBox(id, config.Table, nameof(config.Table));
             config.Toolrack = OnCheckBox(id, config.Toolrack, nameof(config.Toolrack));
-            config.Trapdoor = OnCheckBox(id, config.Trapdoor, nameof(config.Trapdoor));
             config.TroughLarge = OnCheckBox(id, config.TroughLarge, nameof(config.TroughLarge));
             config.TroughSmall = OnCheckBox(id, config.TroughSmall, nameof(config.TroughSmall));
             config.WagonWheels = OnCheckBox(id, config.WagonWheels, nameof(config.WagonWheels));

@@ -65,7 +65,6 @@ public class Config
     public bool SupportChain { get; set; } = true;
     public bool Table { get; set; } = true;
     public bool Toolrack { get; set; } = true;
-    public bool Trapdoor { get; set; } = true;
     public bool TroughLarge { get; set; } = true;
     public bool TroughSmall { get; set; } = true;
     public bool WagonWheels { get; set; } = true;
@@ -232,7 +231,6 @@ public class Config
         SupportChain = previousConfig.SupportChain;
         Table = previousConfig.Table;
         Toolrack = previousConfig.Toolrack;
-        Trapdoor = previousConfig.Trapdoor;
         TroughLarge = previousConfig.TroughLarge;
         TroughSmall = previousConfig.TroughSmall;
         WagonWheels = previousConfig.WagonWheels;

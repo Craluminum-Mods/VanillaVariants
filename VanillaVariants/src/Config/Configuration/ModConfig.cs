@@ -84,7 +84,6 @@ static class ModConfig
         api.World.Config.SetBool("VanillaVariants_SupportChain_Enabled", config.SupportChain);
         api.World.Config.SetBool("VanillaVariants_Table_Enabled", config.Table);
         api.World.Config.SetBool("VanillaVariants_Toolrack_Enabled", config.Toolrack);
-        api.World.Config.SetBool("VanillaVariants_Trapdoor_Enabled", config.Trapdoor);
         api.World.Config.SetBool("VanillaVariants_TroughLarge_Enabled", config.TroughLarge);
         api.World.Config.SetBool("VanillaVariants_TroughSmall_Enabled", config.TroughSmall);
         api.World.Config.SetBool("VanillaVariants_WagonWheels_Enabled", config.WagonWheels);
