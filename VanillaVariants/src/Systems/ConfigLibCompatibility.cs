@@ -73,7 +73,6 @@ public class ConfigLibCompatibility
             config.ResolveBarrelSounds = OnCheckBox(id, config.ResolveBarrelSounds, nameof(config.ResolveBarrelSounds));
             config.ResolveBasketTrapIssues = OnCheckBox(id, config.ResolveBasketTrapIssues, nameof(config.ResolveBasketTrapIssues));
             config.ResolveChestNames = OnCheckBox(id, config.ResolveChestNames, nameof(config.ResolveChestNames));
-            config.ResolveHenboxImposter = OnCheckBox(id, config.ResolveHenboxImposter, nameof(config.ResolveHenboxImposter));
             config.ResolveMechanicalBlockIssues = OnCheckBox(id, config.ResolveMechanicalBlockIssues, nameof(config.ResolveMechanicalBlockIssues));
             config.ResolveQuernAndAxleRelationship = OnCheckBox(id, config.ResolveQuernAndAxleRelationship, nameof(config.ResolveQuernAndAxleRelationship));
             ImGui.NewLine();

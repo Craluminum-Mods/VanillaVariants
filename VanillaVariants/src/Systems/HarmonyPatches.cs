@@ -20,10 +20,6 @@ public class HarmonyPatches : ModSystem
         {
             HarmonyInstance.Patch(original: typeof(BlockEntityBarrel).GetMethod("toggleInventoryDialogClient", AccessTools.all), prefix: typeof(BlockEntityBarrel_toggleInventoryDialogClient_Patch).GetMethod(nameof(BlockEntityBarrel_toggleInventoryDialogClient_Patch.Prefix)));
         }
-        if (Core.Config.ResolveHenboxImposter)
-        {
-            HarmonyInstance.Patch(original: typeof(BlockEntityHenBox).GetMethod(nameof(BlockEntityHenBox.TryAddEgg)), prefix: typeof(BlockEntityHenBox_TryAddEgg_Patch).GetMethod(nameof(BlockEntityHenBox_TryAddEgg_Patch.Prefix)));
-        }
         if (Core.Config.ResolveChestNames)
         {
             HarmonyInstance.Patch(original: typeof(BlockGenericTypedContainer).GetMethod(nameof(BlockGenericTypedContainer.GetHeldItemName)), postfix: typeof(BlockGenericTypedContainer_GetHeldItemName_Patch).GetMethod(nameof(BlockGenericTypedContainer_GetHeldItemName_Patch.Postfix)));
@@ -70,10 +66,6 @@ public class HarmonyPatches : ModSystem
         if (Core.Config.ResolveBarrelSounds)
         {
             HarmonyInstance.Unpatch(original: typeof(BlockEntityBarrel).GetMethod("toggleInventoryDialogClient", AccessTools.all), HarmonyPatchType.All, HarmonyInstance.Id);
-        }
-        if (Core.Config.ResolveHenboxImposter)
-        {
-            HarmonyInstance.Unpatch(original: typeof(BlockEntityHenBox).GetMethod(nameof(BlockEntityHenBox.TryAddEgg)), HarmonyPatchType.All, HarmonyInstance.Id);
         }
         if (Core.Config.ResolveChestNames)
         {
