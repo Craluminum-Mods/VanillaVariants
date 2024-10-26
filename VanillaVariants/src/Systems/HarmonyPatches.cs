@@ -59,48 +59,6 @@ public class HarmonyPatches : ModSystem
 
     public override void Dispose()
     {
-        if (Core.Config.ExperimentalOverlayTest)
-        {
-            HarmonyInstance.Unpatch(original: typeof(ColorBlend).GetMethod(nameof(ColorBlend.Overlay)), HarmonyPatchType.All, HarmonyInstance.Id);
-        }
-        if (Core.Config.ResolveBarrelSounds)
-        {
-            HarmonyInstance.Unpatch(original: typeof(BlockEntityBarrel).GetMethod("toggleInventoryDialogClient", AccessTools.all), HarmonyPatchType.All, HarmonyInstance.Id);
-        }
-        if (Core.Config.ResolveChestNames)
-        {
-            HarmonyInstance.Unpatch(original: typeof(BlockGenericTypedContainer).GetMethod(nameof(BlockGenericTypedContainer.GetHeldItemName)), HarmonyPatchType.All, HarmonyInstance.Id);
-        }
-        if (Core.Config.ResolveBasketTrapIssues)
-        {
-            HarmonyInstance.Unpatch(original: typeof(BlockBasketTrap).GetMethod(nameof(BlockBasketTrap.GetDrops)), HarmonyPatchType.All, HarmonyInstance.Id);
-        }
-        if (Core.Config.ResolveMechanicalBlockIssues)
-        {
-            HarmonyInstance.Unpatch(original: typeof(Block).GetMethod(nameof(Block.TryPlaceBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
-            HarmonyInstance.Unpatch(original: typeof(BlockEntityDisplay).GetMethod(nameof(BlockEntityDisplay.OnTesselation)), HarmonyPatchType.All, HarmonyInstance.Id);
-            HarmonyInstance.Unpatch(original: AccessTools.IndexerGetter(typeof(BEHelveHammer)), HarmonyPatchType.All, HarmonyInstance.Id);
-            HarmonyInstance.Unpatch(original: typeof(BEBehaviorMPAxle).GetMethod("getStandMesh", AccessTools.all), HarmonyPatchType.All, HarmonyInstance.Id);
-            HarmonyInstance.Unpatch(original: typeof(BlockAxle).GetMethod(nameof(BlockAxle.IsOrientedTo)), HarmonyPatchType.All, HarmonyInstance.Id);
-            HarmonyInstance.Unpatch(original: typeof(BlockAxle).GetMethod(nameof(BlockAxle.TryPlaceBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
-            HarmonyInstance.Unpatch(original: typeof(BlockToggle).GetMethod(nameof(BlockToggle.IsOrientedTo)), HarmonyPatchType.All, HarmonyInstance.Id);
-            HarmonyInstance.Unpatch(original: typeof(BlockToggle).GetMethod(nameof(BlockToggle.TryPlaceBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
-            HarmonyInstance.Unpatch(original: typeof(MechNetworkRenderer).GetMethod(nameof(MechNetworkRenderer.AddDevice)), HarmonyPatchType.All, HarmonyInstance.Id);
-            HarmonyInstance.Unpatch(original: typeof(BlockAngledGears).GetMethod(nameof(BlockAngledGears.OnPickBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
-            HarmonyInstance.Unpatch(original: typeof(BlockAngledGears).GetMethod(nameof(BlockAngledGears.getGearBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
-            HarmonyInstance.Unpatch(original: typeof(BlockAngledGears).GetMethod(nameof(BlockAngledGears.OnNeighbourBlockChange)), HarmonyPatchType.All, HarmonyInstance.Id);
-            HarmonyInstance.Unpatch(original: typeof(BlockAngledGears).GetMethod("ToPegGear", AccessTools.all), HarmonyPatchType.All, HarmonyInstance.Id);
-            HarmonyInstance.Unpatch(original: typeof(BEBrake).GetMethod("GenOpenedMesh", AccessTools.all), HarmonyPatchType.All, HarmonyInstance.Id);
-            HarmonyInstance.Unpatch(original: typeof(BlockBrake).GetMethod(nameof(BlockBrake.TryPlaceBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
-            HarmonyInstance.Unpatch(original: typeof(BlockTransmission).GetMethod(nameof(BlockTransmission.IsOrientedTo)), HarmonyPatchType.All, HarmonyInstance.Id);
-            HarmonyInstance.Unpatch(original: typeof(BlockTransmission).GetMethod(nameof(BlockTransmission.TryPlaceBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
-            HarmonyInstance.Unpatch(original: typeof(BlockClutch).GetMethod(nameof(BlockClutch.TryPlaceBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
-            HarmonyInstance.Unpatch(original: typeof(BlockWindmillRotor).GetMethod(nameof(BlockWindmillRotor.TryPlaceBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
-            HarmonyInstance.Unpatch(original: typeof(BlockLargeGear3m).GetMethod(nameof(BlockLargeGear3m.TryPlaceBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
-            HarmonyInstance.Unpatch(original: typeof(BlockPulverizer).GetMethod(nameof(BlockPulverizer.TryPlaceBlock)), HarmonyPatchType.All, HarmonyInstance.Id);
-            HarmonyInstance.Unpatch(original: typeof(BlockPulverizer).GetMethod(nameof(BlockPulverizer.GetDrops)), HarmonyPatchType.All, HarmonyInstance.Id);
-            HarmonyInstance.Unpatch(original: typeof(BEPulverizer).GetMethod(nameof(BEPulverizer.OnTesselation)), HarmonyPatchType.All, HarmonyInstance.Id);
-            HarmonyInstance.Unpatch(original: typeof(BEBehaviorMPArchimedesScrew).GetMethod("getHullMesh", AccessTools.all), HarmonyPatchType.All, HarmonyInstance.Id);
-        }
+        HarmonyInstance.UnpatchAll(HarmonyInstance.Id);
     }
 }
