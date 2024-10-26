@@ -1,4 +1,5 @@
 {
+	  "inheritFrom": "game:blocktypes/wood/sieve",
     "code": "sieve",
     "behaviors": [
         {
@@ -19,7 +20,6 @@
         //
     ],
     "allowedVariants": ["*-linen"],
-    "maxStackSize": 1,
     "texturesbyType": {
         "*-linen": {
             "white": { "base": "game:block/cloth/linen/white" },
@@ -36,53 +36,16 @@
         "fromVanVarMod": true,
         "handbook": { "groupBy": ["sieve-*"] }
     },
-    "emitSideAo": { "all": false },
     "shape": { "base": "game:block/wood/sieve" },
-    "heldTpIdleAnimation": "holdunderarm",
     "creativeinventory": {
         "general": ["*"],
         "items": ["*"],
         "vanvar": ["*"]
     },
-    "blockmaterial": "Wood",
-    "replaceable": 900,
-    "resistance": 1.5,
-    "durability": 200,
-    "lightAbsorption": 1,
-    "sidesolid": { "all": false },
-    "sideopaque": { "all": false },
     "sounds": {
         "place": "game:block/planks",
         "hit": "game:block/planks",
         "break": "game:block/planks",
         "walk": "game:walk/wood"
-    },
-    "collisionSelectionBox": { "x1": 0.125, "y1": 0, "z1": 0.125, "x2": 0.875, "y2": 0.1875, "z2": 0.875 },
-    "combustibleProps": {
-        "burnTemperature": 500,
-        "burnDuration": 8
-    },
-    "materialDensity": 400,
-    "tpHandTransform": {
-        "translation": { "x": -0.7, "y": -0.6, "z": -0.9 },
-        "rotation": { "x": 89, "y": 0, "z": -3 },
-        "origin": { "x": 0.5, "y": 1.7, "z": 2 },
-        "scale": 0.75
-    },
-    "fpHandTransform": {
-        "translation": { "x": 0.08, "y": -0.2, "z": 0.6 },
-        "rotation": { "x": 17, "y": 130, "z": -26 },
-        "origin": { "x": 0.4, "y": 1.9, "z": 0.5 },
-        "scale": 1.51
-    },
-    "guiTransform": {
-        "origin": { "x": 0.5, "y": 0.2, "z": 0.5 },
-        "scale": 1.52
-    },
-    "groundTransform": {
-        "translation": { "x": 0, "y": 0, "z": 0 },
-        "rotation": { "x": 0, "y": -45, "z": 0 },
-        "origin": { "x": 0.5, "y": 0, "z": 0.5 },
-        "scale": 5
     }
 }

@@ -1,4 +1,5 @@
 {
+	  "inheritFrom": "game:blocktypes/wood/table",
     "code": "table",
     "behaviors": [
         {
@@ -15,33 +16,17 @@
     ],
     "skipVariants": ["*-oak-*"],
     "attributes": {
+        "humanoidTraversalCost": 100,
         "handbook": { "groupBy": ["table-*-{type}"] },
         "pieFormingSurface": true
     },
     "shape": { "base": "game:block/wood/table" },
-    "heldTpIdleAnimation": "holdunderarm",
-    "creativeinventory": { "general": ["*"], "decorative": ["*"], "vanvar": ["*"] },
-    "blockmaterial": "Wood",
-    "replaceable": 900,
-    "resistance": 1.5,
-    "lightAbsorption": 1,
-    "sidesolid": {
-        "up": true,
-        "all": false
-    },
-    "sideopaque": {
-        "up": true,
-        "all": false
-    },
+    "creativeinventoryByType": {"*":{ "general": ["*"], "decorative": ["*"], "vanvar": ["*"] }},
     "sounds": {
         "place": "game:block/planks",
         "hit": "game:block/planks",
         "break": "game:block/planks",
         "walk": "game:walk/wood"
-    },
-    "combustibleProps": {
-        "burnTemperature": 600,
-        "burnDuration": 35
     },
     "texturesByType": {
         "*-whitemarble": {
@@ -68,15 +53,5 @@
             "bottom": { "base": "game:block/wood/debarked/{material}" },
             "legs": { "base": "game:block/wood/debarked/{material}", "rotation": 90 }
         }
-    },
-    "materialDensity": 400,
-    "tpHandTransform": {
-        "translation": { "x": -0.7, "y": -0.6, "z": -0.9 },
-        "rotation": { "x": 80, "y": 0, "z": 0 },
-        "scale": 0.56
-    },
-    "fpHandTransform": {
-        "translation": { "x": 0.08, "y": -0.2, "z": 0.6 },
-        "rotation": { "x": 33, "y": 134, "z": -102 }
     }
 }

@@ -1,4 +1,5 @@
 {
+	  "inheritFrom": "game:blocktypes/wood/cage",
     "code": "cage",
     "behaviors": [
         {
@@ -27,32 +28,10 @@
         "all": { "base": "game:block/wood/debarked/{type}", "rotation": 90 }
     },
     "creativeinventory": { "general": ["*-north"], "decorative": ["*-north"], "vanvar": ["*-north"] },
-    "blockmaterial": "Wood",
-    "replaceable": 900,
-    "resistance": 1.5,
-    "lightAbsorption": 0,
-    "sidesolid": {
-        "all": false
-    },
-    "sideopaque": {
-        "all": false
-    },
     "sounds": {
         "place": "game:block/planks",
         "hit": "game:block/planks",
         "break": "game:block/planks",
         "walk": "game:walk/wood"
-    },
-    "combustibleProps": {
-        "burnTemperature": 600,
-        "burnDuration": 10
-    },
-    "materialDensity": 600,
-    "heldTpIdleAnimation": "holdbothhandslarge",
-    "heldTpUseAnimation": "twohandplaceblock",
-    "tpHandTransform": {
-        "translation": { "x": -1.2, "y": -1.1, "z": -0.8 },
-        "rotation": { "x": -2, "y": 25, "z": -78 },
-        "scale": 0.37
     }
 }

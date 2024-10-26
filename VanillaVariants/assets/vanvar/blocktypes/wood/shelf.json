@@ -1,7 +1,6 @@
 {
+	  "inheritFrom": "game:blocktypes/wood/shelf",
     "code": "shelf",
-    "class": "BlockShelf",
-    "entityClass": "Shelf",
     "variantgroups": [
         { "code": "type", "states": ["aged"], "loadFromProperties": "block/wood" },
         { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
@@ -29,99 +28,15 @@
         "surface": { "base": "game:block/wood/debarked/{type}", "blendedOverlays": [{ "base": "vanvar:block/shelf/surface" }] },
         "wood2": { "base": "game:block/wood/debarked/{type}", "blendedOverlays": [{ "base": "vanvar:block/shelf/wood" }] }
     },
-    "heldTpIdleAnimation": "holdunderarm",
     "creativeinventory": {
         "general": ["*-east"],
         "decorative": ["*-east"],
         "vanvar": ["*-east"]
-    },
-    "blockmaterial": "Wood",
-    "replaceable": 900,
-    "resistance": 1.5,
-    "lightAbsorption": 1,
-    "emitSideAo": { "all": false },
-    "sidesolid": {
-        "all": false
-    },
-    "sideopaque": {
-        "all": false
     },
     "sounds": {
         "place": "game:block/planks",
         "hit": "game:block/planks",
         "break": "game:block/planks",
         "walk": "game:walk/wood"
-    },
-    "combustibleProps": {
-        "burnTemperature": 600,
-        "burnDuration": 35
-    },
-    "materialDensity": 400,
-    "tpHandTransform": {
-        "translation": { "x": -0.8, "y": -0.68, "z": -0.41 },
-        "rotation": { "x": 99, "y": -10, "z": -6 },
-        "scale": 0.5
-    },
-    "fpHandTransform": {
-        "translation": { "x": 0.08, "y": -0.2, "z": 0.6 },
-        "rotation": { "x": 33, "y": 134, "z": -102 }
-    },
-    "collisionselectionboxes": [
-        {
-            "x1": 0,
-            "y1": 0,
-            "z1": 0,
-            "x2": 0.5,
-            "y2": 0.5,
-            "z2": 0.8125,
-            "rotateYByType": {
-                "*-north": 0,
-                "*-east": 270,
-                "*-west": 90,
-                "*-south": 180
-            }
-        },
-        {
-            "x1": 0.5,
-            "y1": 0,
-            "z1": 0,
-            "x2": 1,
-            "y2": 0.5,
-            "z2": 0.8125,
-            "rotateYByType": {
-                "*-north": 0,
-                "*-east": 270,
-                "*-west": 90,
-                "*-south": 180
-            }
-        },
-        {
-            "x1": 0,
-            "y1": 0.5,
-            "z1": 0,
-            "x2": 0.5,
-            "y2": 1,
-            "z2": 0.8125,
-            "rotateYByType": {
-                "*-north": 0,
-                "*-east": 270,
-                "*-west": 90,
-                "*-south": 180
-            }
-        },
-        {
-            "x1": 0.5,
-            "y1": 0.5,
-            "z1": 0,
-            "x2": 1,
-            "y2": 1,
-            "z2": 0.8125,
-            "rotateYByType": {
-                "*-north": 0,
-                "*-east": 270,
-                "*-west": 90,
-                "*-south": 180
-            }
-        }
-    ]
+    }
 }

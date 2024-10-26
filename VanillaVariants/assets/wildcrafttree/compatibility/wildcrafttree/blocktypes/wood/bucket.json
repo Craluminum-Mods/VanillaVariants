@@ -1,7 +1,7 @@
 {
+	  "inheritFrom": "game:blocktypes/wood/bucket",
     "code": "woodbucket",
     "class": "VanillaVariants.BlockWoodBucket",
-    "entityClass": "Bucket",
     "behaviors": [
         {
             "name": "VanillaVariants.BlockName",
@@ -26,66 +26,21 @@
         }
     },
     "variantgroups": [{ "code": "type", "loadFromProperties": "wildcrafttree:block/wood" }],
-    "creativeinventory": {
-        "general": ["woodbucket-*"],
-        "decorative": ["woodbucket-*"],
-        "vanvar": ["woodbucket-*"]
-    },
+	  "creativeinventoryStacks": [{
+			  "tabs": ["general", "decorative", "vanvar"],
+			  "stacks": [
+				  { "type": "block", "code": "woodbucket-{type}" }
+    ]}],
     "shape": { "base": "game:block/wood/bucket/empty" },
-    "sidesolid": {
-        "all": false
-    },
-    "sideopaque": {
-        "all": false
-    },
-    "blockmaterial": "Wood",
     "textures": {
         "sides": { "base": "game:block/wood/debarked/{type}" },
         "charred": { "base": "game:block/wood/debarked/{type}" },
         "aged": { "base": "game:block/wood/debarked/{type}" }
     },
-    "replaceable": 500,
-    "resistance": 1.5,
-    "maxStackSize": 4,
-    "liquidSelectable": true,
-    "lightAbsorption": 0,
     "sounds": {
         "place": "game:block/planks",
         "hit": "game:block/planks",
         "break": "game:block/planks",
         "walk": "game:walk/wood"
-    },
-    "collisionbox": {
-        "x1": 0.25,
-        "y1": 0,
-        "z1": 0.25,
-        "x2": 0.75,
-        "y2": 0.75,
-        "z2": 0.75
-    },
-    "selectionbox": {
-        "x1": 0.25,
-        "y1": 0,
-        "z1": 0.25,
-        "x2": 0.75,
-        "y2": 0.75,
-        "z2": 0.75
-    },
-    "materialDensity": 400,
-    "tpHandTransform": {
-        "translation": { "x": -0.86, "y": -1.03, "z": -0.88 },
-        "rotation": { "x": 0, "y": 0, "z": 0 },
-        "scale": 0.55
-    },
-    "guiTransform": {
-        "origin": { "x": 0.5, "y": 0.3, "z": 0.5 },
-        "scale": 1.75
-    },
-    "fpHandTransform": {
-        "scale": 1.5
-    },
-    "groundTransform": {
-        "origin": { "x": 0.5, "y": 0, "z": 0.5 },
-        "scale": 2
     }
 }

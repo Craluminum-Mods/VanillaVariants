@@ -1,6 +1,6 @@
 {
+	  "inheritFrom": "game:blocktypes/wood/trough-small",
     "code": "trough",
-    "class": "BlockTrough",
     "behaviors": [
         {
             "name": "VanillaVariants.BlockName",
@@ -13,17 +13,12 @@
             "properties": {
                 "parts": ["blockdesc-trough-genericwood-small-*"]
             }
-        },
-        { "name": "NWOrientable" }
+        }, { "name": "NWOrientable" }
     ],
-    "entityClass": "Trough",
     "attributes": {
         // contentConfig and unsuitableFor are added by code
         "handbook": { "groupBy": ["trough-*-small-*"] }
     },
-    "sidesolid": { "all": false },
-    "sideopaque": { "all": false },
-    "heldTpIdleAnimation": "holdunderarm",
     "variantgroups": [
         { "code": "material", "states": ["aged"], "loadFromProperties": "block/wood" },
         { "code": "part", "states": ["small"] },
@@ -46,51 +41,10 @@
         "wood": { "base": "game:block/wood/debarked/{material}" }
          // billion other textures are added by code
     },
-    "blockmaterial": "Wood",
-    "replaceable": 550,
-    "resistance": 2,
-    "lightAbsorption": 0,
-    "combustibleProps": {
-        "burnTemperature": 600,
-        "burnDuration": 40
-    },
-    "guiTransform": {
-        "translation": { "x": -1, "y": 0, "z": 0 },
-        "origin": { "x": 0.5, "y": 0.22, "z": 0.5 },
-        "scale": 1.53
-    },
-    "fpHandTransform": {
-        "translation": { "x": 0.16, "y": 0.4, "z": 0 },
-        "rotation": { "x": 125, "y": 132, "z": -82 },
-        "origin": { "x": 0.5, "y": 0, "z": 0.5 },
-        "scale": 1.9
-    },
-    "tpHandTransform": {
-        "translation": { "x": -0.5, "y": -0.3, "z": -0.01 },
-        "rotation": { "x": 85, "y": 1, "z": 0 },
-        "scale": 0.88
-    },
-    "groundTransform": {
-        "origin": { "x": 0.5, "y": 0, "z": 0.5 },
-        "scale": 2.5
-    },
-    "collisionselectionbox": {
-        "x1": 0.25,
-        "y1": 0,
-        "z1": 0.0625,
-        "x2": 0.75,
-        "y2": 0.25,
-        "z2": 0.9375,
-        "rotateYByType": {
-            "*-ns": 90,
-            "*-we": 0
-        }
-    },
     "sounds": {
         "place": "game:block/planks",
         "hit": "game:block/planks",
         "break": "game:block/planks",
         "walk": "game:walk/wood"
-    },
-    "materialDensity": 600
+    }
 }

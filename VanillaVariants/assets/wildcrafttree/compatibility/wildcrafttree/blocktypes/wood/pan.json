@@ -1,6 +1,6 @@
 {
+	  "inheritFrom": "game:blocktypes/wood/pan",
     "code": "pan",
-    "class": "BlockPan",
     "behaviors": [
         { "name": "SneakPlacing" },
         { "name": "UnstableFalling", "properties": { "attachmentArea": { "x1": 5, "y1": 0, "z1": 5, "x2": 10, "y2": 0, "z2": 10 } } },
@@ -12,7 +12,6 @@
             }
         }
     ],
-    "maxStackSize": 1,
     "attributes": {
         // panning drops are added by code
         "fromVanVarMod": true,
@@ -28,55 +27,12 @@
         "all": { "base": "game:block/wood/debarked/{type}" },
         "wood-generic": { "base": "game:block/wood/debarked/{type}" }
     },
-    "doNotRenderAtLod2": true,
-    "blockmaterial": "Wood",
-    "materialDensity": 450,
-    "durability": 150,
-    "randomizeRotations": true,
-    "sideopaque": { "all": false },
-    "sidesolid": { "all": false },
-    "emitSideAO": { "all": false },
-    "lightAbsorption": 0,
     "creativeinventory": {
         "general": ["*"],
         "items": ["*"],
         "tools": ["*"],
         "vanvar": ["*"]
     },
-    "heldTpIdleAnimation": "holdbothhandslarge",
-    "heldRightReadyAnimation": "heldblockready",
-    "heldTpUseAnimation": "twohandplaceblock",
-    "heldTpUseAnimation": "panning",
-    "combustibleProps": {
-        "burnTemperature": 600,
-        "burnDuration": 20
-    },
-    "fpHandTransform": {
-        "translation": { "x": 0.3, "y": 0, "z": 0 },
-        "rotation": { "x": 15, "y": 15, "z": 0 },
-        "scale": 2
-    },
-    "guiTransform": {
-        "rotate": true,
-        "translation": { "x": 0, "y": 0, "z": 0 },
-        "rotation": { "x": -25, "y": 22, "z": 0 },
-        "origin": { "x": 0.53, "y": 0.21, "z": 0.5 },
-        "scale": 1.76
-    },
-    "groundTransform": {
-        "translation": { "x": 0, "y": 0, "z": 0 },
-        "rotation": { "x": 0, "y": 18, "z": 0 },
-        "origin": { "x": 0.5, "y": 0, "z": 0.5 },
-        "scale": 4
-    },
-    "tpHandTransform": {
-        "translation": { "x": -0.71, "y": 0.04, "z": -0.41 },
-        "rotation": { "x": 0, "y": 13, "z": -83 },
-        "origin": { "x": 0.5, "y": 0, "z": 0.5 },
-        "scale": 0.8
-    },
-    "collisionSelectionBox": { "x1": 0.125, "y1": 0, "z1": 0.125, "x2": 0.875, "y2": 0.1875, "z2": 0.875 },
-    "resistance": 1,
     "sounds": {
         "place": "game:block/planks",
         "hit": "game:block/planks",

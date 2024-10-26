@@ -1,7 +1,6 @@
 {
+	  "inheritFrom": "game:blocktypes/wood/henbox",
     "code": "henbox",
-    "class": "BlockHenbox",
-    "entityClass": "HenBox",
     "behaviors": [
         {
             "name": "VanillaVariants.BlockName",
@@ -24,34 +23,12 @@
         }
     },
     "creativeinventory": { "general": ["*"], "vanvar": ["*"] },
-    "shape": {
-        "base": "game:block/wood/henbox/henbox-{eggCount}"
-    },
+    "shape": { "base": "game:block/wood/henbox/henbox-{eggCount}" },
     "textures": {
         "hay-egg": { "base": "game:block/wood/henbox/hay-egg" },
         "singlehay2": { "base": "game:block/wood/trough/large/singlehay2" },
         "sides": { "base": "game:block/wood/debarked/{type}", "blendedOverlays": [{ "base": "vanvar:block/henbox/sides" }] },
         "wood": { "base": "game:block/wood/debarked/{type}" }
-    },
-    "resistance": 1,
-    "sideopaque": {
-        "all": false
-    },
-    "sidesolid": {
-        "all": false
-    },
-    "blockmaterial": "Wood",
-    "randomizeRotations": true,
-    "sideao": { "all": false },
-    "lightAbsorption": 0,
-    "collisionbox": { "x1": 0.25, "y1": 0, "z1": 0.25, "x2": 0.75, "y2": 0.08, "z2": 0.75 },
-    "selectionbox": {
-        "x1": 0.2,
-        "y1": 0,
-        "z1": 0.2,
-        "x2": ".8",
-        "y2": ".21",
-        "z2": ".8"
     },
     "dropsbytype": {
         "*-1egg": [
@@ -68,14 +45,10 @@
         ],
         "*-empty": [{ "type": "block", "code": "henbox-{type}-empty", "quantity": { "avg": 1 } }]
     },
-    "tphandTransform": {
-        "origin": { "x": 0.5, "y": 0.5, "z": 0 },
-        "translation": { "x": "-1.2", "y": "-.5", "z": ".5" },
-        "rotation": { "x": 0, "y": 0, "z": 0 },
-        "scale": ".5"
-    },
-    "guiTransform": {
-        "origin": { "x": 0.5, "y": 0.15, "z": 0.5 },
-        "scale": 1.8
+    "sounds": {
+        "place": "game:block/planks",
+        "hit": "game:block/planks",
+        "break": "game:block/planks",
+        "walk": "game:walk/wood"
     }
 }
