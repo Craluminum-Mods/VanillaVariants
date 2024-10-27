@@ -1,0 +1,65 @@
+[
+    {
+        "ingredientPattern": "___,___,_H_",
+        "ingredients": {
+            "H": { "type": "block", "code": "vanvar:slantedroofing-sod-*-east-free", "name": "wood" }
+        },
+        "width": 3,
+        "height": 3,
+        "output": { "type": "block", "code": "vanvar:slantedroofingbottom-sod-{wood}-east-free" }
+    },
+    {
+        "ingredientPattern": "_H_,___,___",
+        "ingredients": {
+            "H": { "type": "block", "code": "vanvar:slantedroofing-sod-*-east-free", "name": "wood" }
+        },
+        "width": 3,
+        "height": 3,
+        "output": { "type": "block", "code": "vanvar:slantedroofingtop-sod-{wood}-east-free" }
+    },
+    {
+        "ingredientPattern": "___,H__,___",
+        "ingredients": {
+            "H": { "type": "block", "code": "vanvar:slantedroofing-sod-*-east-free", "name": "wood" }
+        },
+        "width": 3,
+        "height": 3,
+        "output": { "type": "block", "code": "vanvar:slantedroofinghalfleft-sod-{wood}-east-free" }
+    },
+    {
+        "ingredientPattern": "___,__H,___",
+        "ingredients": {
+            "H": { "type": "block", "code": "vanvar:slantedroofing-sod-*-east-free", "name": "wood" }
+        },
+        "width": 3,
+        "height": 3,
+        "output": { "type": "block", "code": "vanvar:slantedroofinghalfright-sod-{wood}-east-free" }
+    },
+    {
+        "ingredientPattern": "___,_H_,___",
+        "ingredients": {
+            "H": { "type": "block", "code": "vanvar:slantedroofingridge-sod-*-ns-free", "name": "wood" }
+        },
+        "width": 3,
+        "height": 3,
+        "output": { "type": "block", "code": "vanvar:slantedroofingridgeend-sod-{wood}-east-free" }
+    },
+    {
+        "ingredientPattern": "___,H__,___",
+        "ingredients": {
+            "H": { "type": "block", "code": "vanvar:slantedroofingridge-sod-*-ns-free", "name": "wood" }
+        },
+        "width": 3,
+        "height": 3,
+        "output": { "type": "block", "code": "vanvar:slantedroofingridgehalfleft-sod-{wood}-east-free" }
+    },
+    {
+        "ingredientPattern": "___,__H,___",
+        "ingredients": {
+            "H": { "type": "block", "code": "vanvar:slantedroofingridge-sod-*-ns-free", "name": "wood" }
+        },
+        "width": 3,
+        "height": 3,
+        "output": { "type": "block", "code": "vanvar:slantedroofingridgehalfright-sod-{wood}-east-free" }
+    }
+]
