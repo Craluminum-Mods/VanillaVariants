@@ -1,21 +1,13 @@
 {
+    "inheritFrom": "game:blocktypes/mechanics/transmission",
     "code": "transmission",
-    "class": "BlockTransmission",
-    "entityClass": "Generic",
-    "entityBehaviors": [{ "name": "MPTransmission" }],
     "behaviors": [
-        {
-            "name": "VanillaVariants.BlockName",
+        { "name": "VanillaVariants.BlockName",
             "properties": {
-                "parts": ["block-transmission-ns", " (", "material-{wood}", ")"]
-            }
-        },
-        {
-            "name": "VanillaVariants.BlockDescription",
+              "parts": ["block-transmission-ns", " (", "material-{wood}", ")"] } },
+        { "name": "VanillaVariants.BlockDescription",
             "properties": {
-                "parts": ["blockdesc-transmission-ns"]
-            }
-        },
+              "parts": ["blockdesc-transmission-ns"] } },
         { "name": "NWOrientable" }
     ],
     "attributes": {
@@ -24,9 +16,7 @@
             "groupBy": ["transmission-*"],
             "extraSections": [{ "title": "", "text": "game:block-handbooktext-transmission-ns" }]
         },
-        "mechanicalPower": {
-            "renderer": "transmission"
-        }
+        "mechanicalPower": { "renderer": "transmission" }
     },
     "creativeinventory": {
         "general": ["*-ns"],
@@ -47,38 +37,7 @@
         "oak": { "base": "game:block/wood/debarked/{wood}" },
         "oak1": { "base": "game:block/wood/debarked/{wood}" }
     },
-    "blockmaterial": "Wood",
-    "heldTpIdleAnimation": "holdbothhandslarge",
-    "heldRightReadyAnimation": "heldblockready",
-    "heldTpUseAnimation": "twohandplaceblock",
-    "sidesolid": { "all": false },
-    "sideopaque": { "all": false },
-    "rainPermeable": true,
-    "resistance": 3.5,
-    "lightAbsorption": 0,
-    "maxStackSize": 1,
     "drops": [{ "type": "block", "code": "transmission-{wood}-ns", "quantity": { "avg": 1 } }],
-    "groundTransform": {
-        "translation": { "x": 0, "y": 0, "z": 0 },
-        "rotation": { "x": -90, "y": 0, "z": 0 },
-        "origin": { "x": 0.5, "y": 0.45, "z": 0.38 },
-        "scale": 2.7
-    },
-    "guiTransform": {
-        "rotation": { "x": -30, "y": -146, "z": 0 },
-        "origin": { "x": 0.5, "y": 0.4, "z": 0.4 },
-        "scale": 1.2
-    },
-    "tpHandTransform": {
-        "translation": { "x": -1.03, "y": -0.4, "z": -0.6 },
-        "rotation": { "x": 0, "y": -28, "z": 90 },
-        "origin": { "x": 0.5, "y": 0.25, "z": 0.5 },
-        "scale": 0.55
-    },
-    "collisionSelectionBoxByType": {
-        "*-we": { "x1": 0, "y1": 0, "z1": 0.25, "x2": 1, "y2": 0.875, "z2": 0.75 },
-        "*-ns": { "x1": 0, "y1": 0, "z1": 0.25, "x2": 1, "y2": 0.875, "z2": 0.75, "rotateY": 90 }
-    },
     "sounds": {
         "hit": "game:block/planks",
         "break": "game:block/planks",

@@ -1,47 +1,27 @@
 {
+    "inheritFrom": "game:blocktypes/mechanics/angledgears",
     "code": "angledgears",
-    "class": "BlockAngledGears",
     "attributes": {
         "fromVanVarMod": true,
-        "mechanicalPower": {
-            "rendererByType": {
-                "*-n": "generic",
-                "*-e": "generic",
-                "*-s": "generic",
-                "*-w": "generic",
-                "*-u": "generic",
-                "*-d": "generic",
-                "*-nn": "angledgearcage",
-                "*-ee": "angledgearcage",
-                "*-ss": "angledgearcage",
-                "*-ww": "angledgearcage",
-                "*": "angledgears"
-            }
-        },
-        "handbook": {
-            "groupBy": ["angledgears-*"]
-        }
+        "mechanicalPower": { "rendererByType": {
+                "*-n": "generic", "*-e": "generic", "*-s": "generic",
+                "*-w": "generic", "*-u": "generic", "*-d": "generic",
+                "*-nn": "angledgearcage", "*-ee": "angledgearcage", "*-ss": "angledgearcage", "*-ww": "angledgearcage",
+                "*": "angledgears" } },
+        "handbook": { "groupBy": ["angledgears-*"] }
     },
     "behaviors": [
-        {
-            "name": "VanillaVariants.BlockName",
-            "properties": {
-                "parts": ["block-angledgears-*", " (", "material-{wood}", ")"]
-            }
-        },
-        {
-            "name": "VanillaVariants.BlockDescription",
-            "properties": {
-                "parts": ["blockdesc-angledgears-*"]
-            }
-        }
+        { "name": "VanillaVariants.BlockName",
+            "properties": { 
+              "parts": ["block-angledgears-*", " (", "material-{wood}", ")"] } },
+        { "name": "VanillaVariants.BlockDescription",
+            "properties": { 
+              "parts": ["blockdesc-angledgears-*"] } }
     ],
     "variantgroups": [
         { "code": "wood", "loadFromProperties": "wildcrafttree:block/wood" },
         { "code": "orientation", "states": ["n", "e", "s", "w", "u", "d", "en", "nw", "ws", "es", "nu", "nd", "eu", "ed", "su", "sd", "wu", "wd", "nn", "ss", "ww", "ee"] }
     ],
-    "entityClass": "Generic",
-    "entityBehaviors": [{ "name": "MPAngledGears" }],
     "creativeinventory": {
         "general": ["*-s"],
         "mechanics": ["*-s"],
@@ -76,111 +56,8 @@
         "*-ss": { "base": "game:block/wood/mechanics/angledgearbox-cage", "rotateY": 270 },
         "*-ww": { "base": "game:block/wood/mechanics/angledgearbox-cage", "rotateY": 180 }
     },
-    "blockmaterial": "Wood",
-    "textures": {
-        "wood": { "base": "game:block/wood/debarked/{wood}" }
-    },
+    "textures": { "wood": { "base": "game:block/wood/debarked/{wood}" } },
     "drops": [{ "type": "block", "code": "angledgears-{wood}-s" }],
-    "resistance": 3.5,
-    "lightAbsorption": 0,
-    "maxStackSize": 8,
-    "sidesolid": {
-        "all": false
-    },
-    "sideopaque": {
-        "all": false
-    },
-    "rainPermeable": true,
-    "guiTransform": {
-        "rotation": { "x": 49, "y": -36, "z": 35 },
-        "origin": { "x": 0.5, "y": 0.5, "z": 0.9 },
-        "scale": 2.32
-    },
-    "tpHandTransform": {
-        "translation": { "x": -1.2, "y": -1, "z": -0.6 },
-        "scale": 0.55
-    },
-    "groundTransform": {
-        "scale": 2.7
-    },
-    "collisionSelectionBoxesByType": {
-        "*-d": [{ "x1": 0.125, "y1": 0, "z1": 0.125, "x2": 0.875, "y2": 0.375, "z2": 0.875 }],
-        "*-u": [{ "x1": 0.125, "y1": 0, "z1": 0.125, "x2": 0.875, "y2": 0.375, "z2": 0.875, "rotateX": 180 }],
-
-        "*-n": [{ "x1": 0.125, "y1": 0, "z1": 0.625, "x2": 0.85, "y2": 1, "z2": 1, "rotateY": 180 }],
-        "*-e": [{ "x1": 0.125, "y1": 0, "z1": 0.625, "x2": 0.85, "y2": 1, "z2": 1, "rotateY": 90 }],
-        "*-s": [{ "x1": 0.125, "y1": 0, "z1": 0.625, "x2": 0.85, "y2": 1, "z2": 1, "rotateY": 0 }],
-        "*-w": [{ "x1": 0.125, "y1": 0, "z1": 0.625, "x2": 0.85, "y2": 1, "z2": 1, "rotateY": 270 }],
-
-        "*-en": [
-            { "x1": 0.625, "y1": 0, "z1": 0.125, "x2": 1, "y2": 0.875, "z2": 1, "rotateY": 90 },
-            { "x1": 1, "y1": 0, "z1": 1, "x2": 0.125, "y2": 0.875, "z2": 0.625, "rotateY": 90 }
-        ],
-        "*-nw": [
-            { "x1": 0.625, "y1": 0, "z1": 0.125, "x2": 1, "y2": 0.875, "z2": 1, "rotateY": 180 },
-            { "x1": 1, "y1": 0, "z1": 1, "x2": 0.125, "y2": 0.875, "z2": 0.625, "rotateY": 180 }
-        ],
-        "*-ws": [
-            { "x1": 0.625, "y1": 0, "z1": 0.125, "x2": 1, "y2": 0.875, "z2": 1, "rotateY": 270 },
-            { "x1": 1, "y1": 0, "z1": 1, "x2": 0.125, "y2": 0.875, "z2": 0.625, "rotateY": 270 }
-        ],
-        "*-es": [
-            { "x1": 0.625, "y1": 0, "z1": 0.125, "x2": 1, "y2": 0.875, "z2": 1, "rotateY": 0 },
-            { "x1": 1, "y1": 0, "z1": 1, "x2": 0.125, "y2": 0.875, "z2": 0.625, "rotateY": 0 }
-        ],
-
-        "*-nd": [
-            { "x1": 0.125, "y1": 0, "z1": 0, "x2": 0.875, "y2": 0.5, "z2": 0.875, "rotateY": 0 },
-            { "x1": 0.125, "y1": 0, "z1": 0, "x2": 0.875, "y2": 0.875, "z2": 0.5, "rotateY": 0 }
-        ],
-        "*-ed": [
-            { "x1": 0.125, "y1": 0, "z1": 0, "x2": 0.875, "y2": 0.5, "z2": 0.875, "rotateY": 270 },
-            { "x1": 0.125, "y1": 0, "z1": 0, "x2": 0.875, "y2": 0.875, "z2": 0.5, "rotateY": 270 }
-        ],
-        "*-wd": [
-            { "x1": 0.125, "y1": 0, "z1": 0, "x2": 0.875, "y2": 0.5, "z2": 0.875, "rotateY": 90 },
-            { "x1": 0.125, "y1": 0, "z1": 0, "x2": 0.875, "y2": 0.875, "z2": 0.5, "rotateY": 90 }
-        ],
-        "*-sd": [
-            { "x1": 0.125, "y1": 0, "z1": 0, "x2": 0.875, "y2": 0.5, "z2": 0.875, "rotateY": 180 },
-            { "x1": 0.125, "y1": 0, "z1": 0, "x2": 0.875, "y2": 0.875, "z2": 0.5, "rotateY": 180 }
-        ],
-
-        "*-wu": [
-            { "x1": 0, "y1": 0.625, "z1": 0.125, "x2": 0.875, "y2": 1, "z2": 0.875 },
-            { "x1": 0, "y1": 0, "z1": 0.125, "x2": 0.5, "y2": 1, "z2": 0.875 }
-        ],
-        "*-su": [
-            { "x1": 0, "y1": 0.625, "z1": 0.125, "x2": 0.875, "y2": 1, "z2": 0.875, "rotateY": 90 },
-            { "x1": 0, "y1": 0, "z1": 0.125, "x2": 0.5, "y2": 1, "z2": 0.875, "rotateY": 90 }
-        ],
-        "*-eu": [
-            { "x1": 0, "y1": 0.625, "z1": 0.125, "x2": 0.875, "y2": 1, "z2": 0.875, "rotateY": 180 },
-            { "x1": 0, "y1": 0, "z1": 0.125, "x2": 0.5, "y2": 1, "z2": 0.875, "rotateY": 180 }
-        ],
-        "*-nu": [
-            { "x1": 0, "y1": 0.625, "z1": 0.125, "x2": 0.875, "y2": 1, "z2": 0.875, "rotateY": 270 },
-            { "x1": 0, "y1": 0, "z1": 0.125, "x2": 0.5, "y2": 1, "z2": 0.875, "rotateY": 270 }
-        ],
-
-        "*-nn": [
-            { "x1": 0.125, "y1": 0, "z1": 0.625, "x2": 0.85, "y2": 0.875, "z2": 1, "rotateY": 180 },
-            { "x1": 0, "y1": 0, "z1": 0.125, "x2": 1, "y2": 0.375, "z2": 1 }
-        ],
-        "*-ee": [
-            { "x1": 0.125, "y1": 0, "z1": 0.625, "x2": 0.85, "y2": 0.875, "z2": 1, "rotateY": 90 },
-            { "x1": 0, "y1": 0, "z1": 0, "x2": 0.875, "y2": 0.375, "z2": 1 }
-        ],
-        "*-ss": [
-            { "x1": 0.125, "y1": 0, "z1": 0.625, "x2": 0.85, "y2": 0.875, "z2": 1 },
-            { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.375, "z2": 0.875 }
-        ],
-        "*-ww": [
-            { "x1": 0.125, "y1": 0, "z1": 0.625, "x2": 0.85, "y2": 0.875, "z2": 1, "rotateY": 270 },
-            { "x1": 0.125, "y1": 0, "z1": 0, "x2": 1, "y2": 0.375, "z2": 1 }
-        ]
-    },
-    "particleCollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 0, "y2": 0, "z2": 0 },
     "sounds": {
         "hit": "game:block/planks",
         "break": "game:block/planks",
