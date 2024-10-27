@@ -46,14 +46,37 @@
     "behaviorsByType": {
         "*-lowerbackside-saddlebags*": [
             { "name": "HeldBag" },
-            { "name": "VanillaVariants.ItemName",
+            {
+                "name": "GroundStorable",
                 "properties": {
-                    "parts": ["item-hoovedwearables-{category}-{type}", " (", "color-{color}", ")"] } }
+                    "layout": "SingleCenter",
+                    "collisionBox": { "x1": 0.25, "y1": 0, "z1": 0.25, "x2": 0.75, "y2": 0.375, "z2": 0.75 }
+                }
+            },
+            {
+                "name": "VanillaVariants.ItemName",
+                "properties": {
+                    "parts": ["item-hoovedwearables-{category}-{type}", " (", "color-{color}", ")"]
+                }
+            }
         ],
         "*": [
-            { "name": "VanillaVariants.ItemName",
+            {
+                "name": "GroundStorable",
                 "properties": {
-                    "parts": ["item-hoovedwearables-{category}-{type}", " (", "color-{color}", ")"] } }
+                    "layout": "SingleCenter",
+                    "collisionBoxByType": {
+                        "*-saddle*": { "x1": 0.125, "y1": 0, "z1": 0.125, "x2": 0.875, "y2": 0.375, "z2": 0.875 },
+                        "*-bridle*": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.125, "z2": 1 }
+                    }
+                }
+            },
+            {
+                "name": "VanillaVariants.ItemName",
+                "properties": {
+                    "parts": ["item-hoovedwearables-{category}-{type}", " (", "color-{color}", ")"]
+                }
+            }
         ]
     },
     "shape": { "base": "game:item/wearable/hooved/{type}-inventory" },
