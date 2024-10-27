@@ -1,17 +1,12 @@
 {
+    "inheritFrom": "game:blocktypes/metal/chute",
     "code": "chute",
-    "class": "BlockChute",
-    "entityclass": "ItemFlow",
     "behaviors": [
-        {
-            "name": "VanillaVariants.BlockName",
+        { "name": "VanillaVariants.BlockName",
             "properties": {
                 "partsByType": {
                     "@.*-(uranium|platinum).*": ["block-chute-{type}-*", " (", "ore-{metal}", ")"],
-                    "*": ["block-chute-{type}-*", " (", "material-{metal}", ")"]
-                }
-            }
-        },
+                    "*": ["block-chute-{type}-*", " (", "material-{metal}", ")"] } } },
         { "name": "VanillaVariants.ItemFlowDescription" },
         { "name": "Lockable" },
         { "name": "WrenchOrientable", "properties": { "baseCode": "chute-{metal}-{type}" } }
@@ -75,22 +70,12 @@
         "*-up-east": { "base": "game:block/metal/chute/{type}", "rotateY": 0, "rotateZ": 180 },
         "*-up-south": { "base": "game:block/metal/chute/{type}", "rotateY": 90, "rotateZ": 180 },
         "*-up-west": { "base": "game:block/metal/chute/{type}", "rotateY": 180, "rotateZ": 180 },
-
         "*-down-north": { "base": "game:block/metal/chute/{type}", "rotateY": 270 },
         "*-down-east": { "base": "game:block/metal/chute/{type}", "rotateY": 180 },
         "*-down-south": { "base": "game:block/metal/chute/{type}", "rotateY": 90 },
         "*-down-west": { "base": "game:block/metal/chute/{type}", "rotateY": 0 }
     },
-    "textures": {
-        "all": { "base": "game:block/metal/sheet/{metal}1" }
-    },
-    "blockmaterial": "Metal",
-    "lightAbsorption": 0,
-    "drawtype": "json",
-    "replaceable": 160,
-    "resistance": 1.75,
-    "sidesolid": { "all": false },
-    "sideopaque": { "all": false },
+    "textures": { "all": { "base": "game:block/metal/sheet/{metal}1" } },
     "sounds": {
         "place": "game:block/chute",
         "break": "game:block/chute",
@@ -117,6 +102,5 @@
         "*-3way-down-east": { "x1": 0, "y1": 0.25, "z1": 0.25, "x2": 0.75, "y2": 1, "z2": 1, "rotateY": 180 },
         "*-3way-down-south": { "x1": 0, "y1": 0.25, "z1": 0.25, "x2": 0.75, "y2": 1, "z2": 1, "rotateY": 90 },
         "*-3way-down-west": { "x1": 0, "y1": 0.25, "z1": 0.25, "x2": 0.75, "y2": 1, "z2": 1, "rotateY": 0 }
-    },
-    "guiTransform": { "scale": 1.22 }
+    }
 }
