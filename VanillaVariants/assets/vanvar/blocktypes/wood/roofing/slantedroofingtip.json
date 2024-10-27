@@ -1,51 +1,32 @@
 {
+	  "inheritFrom": "game:blocktypes/roofing/slantedroofingtip",
     "code": "slantedroofingtip",
     "behaviors": [
-        {
-            "name": "VanillaVariants.BlockName",
+        { "name": "VanillaVariants.BlockName",
             "properties": {
-                "parts": ["block-slantedroofingtip-sod-*", " (", "material-{material}", ")"]
-            }
-        }
+              "parts": ["block-slantedroofingtip-sod-*", " (", "material-{material}", ")"] } }
     ],
     "variantgroups": [
         { "code": "type", "states": ["sod"] },
         { "code": "material", "loadFromProperties": "block/wood" },
         { "code": "cover", "states": ["free", "snow"] }
-        //
     ],
     "attributes": {
+        "humanoidTraversalCost": 100,
         "mapColorCode": "settlement",
         "handbook": { "groupBy": ["slantedroofingtip-sod-*"] }
     },
-    "shape": { "base": "game:block/roofing/tip/sod-{cover}" },
+    "shapeByType": { "*-sod-*": { "base": "game:block/roofing/tip/sod-{cover}"} },
     "textures": {
         "aged-top": { "base": "game:block/wood/planks/{material}1" },
         "aged1": { "base": "game:block/wood/planks/{material}1" },
         "aged-side": { "base": "game:block/wood/planks/{material}1" }
     },
-    "drawtype": "json",
-    "faceCullMode": "NeverCull",
-    "renderpass": "OpaqueNoCull",
-    "sidesolid": { "all": false, "down": true },
-    "sideopaque": { "all": false },
-    "blockmaterial": "Plant",
     "creativeinventory": { "general": ["*-free"], "decorative": ["*-free"], "vanvar": ["*-free"] },
-    "replaceable": 300,
-    "resistance": 2,
-    "lightAbsorption": 99,
-    "emitSideAo": { "all": true },
-    "sideAoByType": { "*-sod-*": { "all": false } },
-    "collisionSelectionBoxes": [{ "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.5625, "z2": 1 }],
-    "sounds": {
+    "soundsByType": {"*-sod":{
         "hit": "game:block/planks",
         "break": "game:block/planks",
         "place": "game:block/planks",
         "walk": "game:walk/grass*"
-    },
-    "guiTransform": {
-        "rotation": { "x": -22.6, "y": -40, "z": 0 },
-        "origin": { "x": 0.53, "y": 0.4, "z": 0.46 },
-        "scale": 0.85
-    }
+    }}
 }
