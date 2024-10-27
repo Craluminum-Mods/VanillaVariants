@@ -29,7 +29,7 @@
         "aged-side": { "base": "wildcrafttree:block/wood/planks/{material}1" }
     },
     "creativeinventory": { "general": ["*-ns-free"], "decorative": ["*-ns-free"], "vanvar": ["*-ns-free"] },
-    "soundsByType": {"*-sod":{
+    "soundsByType": {"*-sod-*":{
         "hit": "game:block/planks",
         "break": "game:block/planks",
         "place": "game:block/planks",

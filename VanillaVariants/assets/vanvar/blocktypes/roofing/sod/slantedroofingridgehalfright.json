@@ -30,7 +30,7 @@
         "aged-side": { "base": "game:block/wood/planks/{material}1" }
     },
     "creativeinventory": { "general": ["*-east-free"], "decorative": ["*-east-free"], "vanvar": ["*-east-free"] },
-    "soundsByType": {"*-sod":{
+    "soundsByType": {"*-sod-*":{
         "hit": "game:block/planks",
         "break": "game:block/planks",
         "place": "game:block/planks",
