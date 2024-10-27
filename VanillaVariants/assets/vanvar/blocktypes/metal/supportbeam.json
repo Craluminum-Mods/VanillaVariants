@@ -1,18 +1,12 @@
 {
+    "inheritFrom": "game:blocktypes/metal/suppportbeam",
     "code": "supportbeam",
-    "class": "BlockSupportBeam",
-    "entityClass": "Generic",
-    "entityBehaviors": [{ "name": "SupportBeam" }],
     "behaviors": [
-        {
-            "name": "VanillaVariants.BlockName",
+        { "name": "VanillaVariants.BlockName",
             "properties": {
                 "partsByType": {
                     "@.*-(uranium|platinum)": ["vanvar:block-supportbeam", " (", "ore-{metal}", ")"],
-                    "*": ["vanvar:block-supportbeam", " (", "material-{metal}", ")"]
-                }
-            }
-        }
+                    "*": ["vanvar:block-supportbeam", " (", "material-{metal}", ")"] } } }
     ],
     "variantgroups": [{ "code": "metal", "loadFromProperties": "block/metal" }],
     "creativeinventory": {
@@ -20,45 +14,30 @@
         "construction": ["*"],
         "vanvar": ["*"]
     },
-    "shape": { "base": "game:block/metal/supportbeam" },
+    "shape": { "base": "game:block/metal/beams/supportbeam/16" },
     "textures": {
-        "material": { "base": "game:block/metal/ingot/{metal}" }
+        "material": {
+            "baseByType": {
+                "*-copper": "game:block/metal/ingot/{metal}",
+                "*": "game:block/metal/ingot/{metal}"
+            }
+        }
     },
     "attributes": {
         "handbook": { "groupBy": ["supportbeam-*"] },
-        "unstableRockStabilization": 3
+        "unstableRockStabilization": 3,
+		"partialEnds": true
     },
+    "blockmaterial": "Metal",
     "vertexFlags": {
         "reflective": true,
         "windData": 1
     },
-    "blockmaterial": "Metal",
-    "drawtype": "json",
-    "faceCullMode": "NeverCull",
-    "sideOpaque": { "all": false },
-    "emitSideAo": { "all": false },
-    "lightAbsorption": 0,
-    "rainPermeable": true,
-    "resistance": 3.5,
+    "combustibleProps": null,
     "sounds": {
         "place": "game:block/anvil",
         "break": "game:block/anvil",
         "hit": "game:block/anvil",
         "walk": "game:walk/stone1"
-    },
-    "maxStackSize": 32,
-    "materialDensity": 1200,
-    "heldTpIdleAnimation": "holdbothhandslarge",
-    "heldRightReadyAnimation": "heldblockready",
-    "heldTpUseAnimation": "twohandplaceblock",
-    "tpHandTransform": {
-        "translation": { "x": -1.13, "y": -0.81, "z": -1.2 },
-        "rotation": { "x": -95, "y": 29, "z": 3 },
-        "scale": 0.55
-    },
-    "guiTransform": {
-        "origin": { "x": 0.5, "y": 0.25, "z": 0.5 },
-        "scale": 1.4
-    },
-    "drops": []
+    }
 }
