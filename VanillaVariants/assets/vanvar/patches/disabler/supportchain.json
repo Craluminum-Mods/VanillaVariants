@@ -8,7 +8,7 @@
         "side": "server"
     },
     {
-        "file": "vanvar:blocktypes/metal/supportchain-tarnishedmetal.json",
+        "file": "vanvar:blocktypes/metal/supportchain-tarnished.json",
         "op": "addmerge",
         "path": "/enabled",
         "value": false,

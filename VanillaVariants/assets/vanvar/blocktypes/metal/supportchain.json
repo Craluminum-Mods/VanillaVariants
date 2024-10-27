@@ -1,63 +1,37 @@
 {
+    "inheritFrom": "game:blocktypes/metal/supportchain",
     "code": "supportchain",
-    "class": "BlockSupportBeam",
-    "entityClass": "Generic",
-    "entityBehaviors": [{ "name": "SupportBeam" }],
     "behaviors": [
-        {
-            "name": "VanillaVariants.BlockName",
+        { "name": "VanillaVariants.BlockName",
             "properties": {
                 "partsByType": {
-                    "@.*-(uranium|platinum)": ["block-supportchain", " (", "ore-{metal}", ")"],
-                    "*": ["block-supportchain", " (", "material-{metal}", ")"]
-                }
-            }
-        }
+                    "@.*-(uranium|platinum)": ["block-supportchain-*", " (", "ore-{metal}", ")"],
+                    "*": ["block-supportchain-*", " (", "material-{metal}", ")"] } } }
     ],
-    "variantgroups": [{ "code": "metal", "loadFromProperties": "block/metal" }],
+    "variantgroups": [
+        { "code": "type", "states": ["twonew", "fournew"] },
+        { "code": "metal", "loadFromProperties": "block/metal" }
+    ],
     "creativeinventory": {
         "general": ["*"],
         "construction": ["*"],
         "vanvar": ["*"]
     },
-    "shape": { "base": "game:block/metal/supportchain" },
-    "textures": {
+    "shapeByType": {
+        "supportchain-two*": { "base": "game:block/metal/beams/supportchain/two/16" },
+        "supportchain-four*": { "base": "game:block/metal/beams/supportchain/four/16" }
+    },
+    "texturesByType": {"*":{
         "rusty-iron": { "base": "game:block/metal/ingot/{metal}" }
-    },
-    "attributes": {
-        "handbook": { "groupBy": ["supportchain-*"] }
-    },
+    }},
     "vertexFlags": {
         "reflective": true,
         "windData": 1
     },
-    "blockmaterial": "Metal",
-    "drawtype": "json",
-    "faceCullMode": "NeverCull",
-    "sideOpaque": { "all": false },
-    "emitSideAo": { "all": false },
-    "lightAbsorption": 0,
-    "resistance": 3.5,
     "sounds": {
         "place": "game:block/anvil",
         "break": "game:block/anvil",
         "hit": "game:block/anvil",
         "walk": "game:walk/stone1"
-    },
-    "maxStackSize": 32,
-    "materialDensity": 1200,
-    "heldTpIdleAnimation": "holdbothhandslarge",
-    "heldRightReadyAnimation": "heldblockready",
-    "heldTpUseAnimation": "twohandplaceblock",
-    "tpHandTransform": {
-        "translation": { "x": -1.23, "y": -0.91, "z": -0.8 },
-        "rotation": { "x": -2, "y": 25, "z": -78 },
-        "scale": 0.4
-    },
-    "guiTransform": {
-        "rotation": { "x": -45, "y": -45, "z": 0 },
-        "origin": { "x": 0.5, "y": 0.125, "z": 0.5 },
-        "scale": 2
-    },
-    "drops": []
+    }
 }

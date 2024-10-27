@@ -1,0 +1,70 @@
+{
+    "inheritFrom": "game:blocktypes/metal/supportchain",
+    "code": "supportchain",
+    "behaviors": [
+        { "name": "VanillaVariants.BlockName",
+            "properties": {
+                "partsByType": {
+                    "@.*(rust.*|rust)": ["block-supportchain-*", " (", "vanvar:tarnished", ")", " (", "{metal}", ")"],
+                    "@.*tarnished-bronze": ["block-supportchain-*", " (", "vanvar:tarnished", ")", " (", "bronze", ")"],
+                    "@.*(copper).*": ["block-supportchain-*", " (", "vanvar:tarnished", ")", " (", "material-copper", ")"],
+                    "@.*(gold).*": ["block-supportchain-*", " (", "vanvar:tarnished", ")", " (", "material-gold", ")"],
+                    "@.*(lead).*": ["block-supportchain-*", " (", "vanvar:tarnished", ")", " (", "material-lead", ")"],
+                    "@.*(silver).*": ["block-supportchain-*", " (", "vanvar:tarnished", ")", " (", "material-silver", ")"],
+                    "@.*(blistersteel).*": ["block-supportchain-*", " (", "vanvar:tarnished", ")", " (", "blistersteel", ")"],
+                    "*": ["block-supportchain-*", " (", "vanvar:tarnished", ")", " (", "material-{metal}", ")"] } } }
+    ],
+    "variantgroups": [
+        { "code": "type", "states": ["two", "four"] },
+        {
+            "code": "metal",
+            "states": [
+                "cupronickel",
+                "electrum",
+                "gold",
+                "iron",
+                "lead",
+                "meteoriciron",
+                "molybdochalkos",
+                "rust",
+                "rust2",
+                "rusty-iron",
+                "rusty-iron2",
+                "silver",
+                "steel",
+                "tarnished-bronze",
+                "tarnished-copper",
+                "tarnished-gold",
+                "tarnished-lead",
+                "tarnished-silver",
+                "tin",
+                "tinbronze",
+                "zinc",
+                "bismuthbronze",
+                "blackbronze",
+                "blistersteel",
+                "brass",
+                "chain-rust",
+                "copper1"
+            ]
+        }
+    ],
+    "creativeinventory": {
+        "general": ["*"],
+        "construction": ["*"],
+        "vanvar": ["*"]
+    },
+    "shapeByType": {
+        "supportchain-two*": { "base": "game:block/metal/beams/supportchain/two/16" },
+        "supportchain-four*": { "base": "game:block/metal/beams/supportchain/four/16" }
+    },
+    "texturesByType": {"*":{
+        "rusty-iron": { "base": "game:block/metal/tarnished/{metal}" }
+    }},
+    "sounds": {
+        "place": "game:block/anvil",
+        "break": "game:block/anvil",
+        "hit": "game:block/anvil",
+        "walk": "game:walk/stone1"
+    }
+}
