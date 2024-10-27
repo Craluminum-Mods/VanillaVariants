@@ -33,5 +33,14 @@
         "value": "BlockQuern",
         "condition": { "when": "VanillaVariants_FunctionalQuern_Enabled", "isValue": "true" },
         "side": "server"
+    },
+
+    {
+        "file": "vanvar:blocktypes/stone/decorative/quern.json",
+        "op": "replace",
+        "path": "/behaviors/0/properties/parts",
+        "value": ["Quern", " (", "rock-{rock}", ")"],
+        "condition": { "when": "VanillaVariants_FunctionalQuern_Enabled", "isValue": "true" },
+        "side": "server"
     }
 ]
