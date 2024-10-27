@@ -18,21 +18,15 @@
     },
     "behaviorsByType": {
         "*-snow": [
-            {
-                "name": "VanillaVariants.BlockName",
+            { "name": "VanillaVariants.BlockName",
                 "properties": {
-                    "parts": ["block-stonepath-*", " (", "rock-{rock}", ")"]
-                }
-            },
+                    "parts": ["block-stonepath-*", " (", "rock-{rock}", ")"] } },
             { "name": "BreakSnowFirst" }
         ],
         "*": [
-            {
-                "name": "VanillaVariants.BlockName",
+            { "name": "VanillaVariants.BlockName",
                 "properties": {
-                    "parts": ["block-stonepath-*", " (", "rock-{rock}", ")"]
-                }
-            }
+                    "parts": ["block-stonepath-*", " (", "rock-{rock}", ")"] } }
         ]
     },
     "textures": {

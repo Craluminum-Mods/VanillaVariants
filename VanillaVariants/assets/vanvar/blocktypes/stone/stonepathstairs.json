@@ -13,12 +13,9 @@
         }
     },
     "behaviors": [
-        {
-            "name": "VanillaVariants.BlockName",
+        { "name": "VanillaVariants.BlockName",
             "properties": {
-                "parts": ["block-stonepathstairs-up-*", " (", "rock-{rock}", ")"]
-            }
-        },
+                "parts": ["block-stonepathstairs-up-*", " (", "rock-{rock}", ")"] } },
         { "name": "WrenchOrientable", "properties": { "baseCode": "stonepathstairs-{rock}-up-*-{cover}" } }
     ],
     "variantgroups": [

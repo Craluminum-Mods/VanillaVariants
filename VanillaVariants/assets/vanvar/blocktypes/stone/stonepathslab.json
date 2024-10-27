@@ -8,12 +8,9 @@
         "vanvar": ["*-free"]
     },
     "behaviors": [
-        {
-            "name": "VanillaVariants.BlockName",
+        { "name": "VanillaVariants.BlockName",
             "properties": {
-                "parts": ["block-stonepathslab-*", " (", "rock-{rock}", ")"]
-            }
-        }
+                "parts": ["block-stonepathslab-*", " (", "rock-{rock}", ")"] } }
     ],
     "variantgroups": [
         { "code": "rock", "loadFromProperties": "block/rockwithdeposit" },
