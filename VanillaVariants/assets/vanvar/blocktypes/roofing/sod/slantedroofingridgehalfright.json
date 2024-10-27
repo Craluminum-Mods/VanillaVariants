@@ -1,0 +1,39 @@
+{
+	  "inheritFrom": "game:blocktypes/roofing/slantedroofingridgehalfright",
+    "code": "slantedroofingridgehalfright",
+    "behaviors": [
+        { "name": "VanillaVariants.BlockName",
+            "properties": {
+              "parts": ["block-slantedroofingridgehalfright-sod-*", " (", "material-{material}", ")"] } },
+        { "name": "HorizontalOrientable", "properties": { "dropBlockFace": "east", "drop": { "type": "block", "code": "vanvar:slantedroofingridgehalfright-sod-{material}-east-free" } } }
+    ],
+    "variantgroups": [
+        { "code": "type", "states": ["sod"] },
+        { "code": "material", "loadFromProperties": "block/wood" },
+        { "loadFromProperties": "abstract/horizontalorientation" },
+        { "code": "cover", "states": ["free", "snow"] }
+    ],
+    "attributes": {
+        "humanoidTraversalCost": 100,
+        "mapColorCode": "settlement",
+        "handbook": { "groupBy": ["slantedroofingridgehalfright-sod-*"] }
+    },
+    "shapeByType": {
+        "*-north-*": { "base": "game:block/roofing/ridge-half/right/sod-{cover}", "rotateY": 90 },
+        "*-west-*": { "base": "game:block/roofing/ridge-half/right/sod-{cover}", "rotateY": 180 },
+        "*-south-*": { "base": "game:block/roofing/ridge-half/right/sod-{cover}", "rotateY": 270 },
+        "*-east-*": { "base": "game:block/roofing/ridge-half/right/sod-{cover}", "rotateY": 0 }
+    },
+    "textures": {
+        "aged-top": { "base": "game:block/wood/planks/{material}1" },
+        "aged1": { "base": "game:block/wood/planks/{material}1" },
+        "aged-side": { "base": "game:block/wood/planks/{material}1" }
+    },
+    "creativeinventory": { "general": ["*-east-free"], "decorative": ["*-east-free"], "vanvar": ["*-east-free"] },
+    "soundsByType": {"*-sod":{
+        "hit": "game:block/planks",
+        "break": "game:block/planks",
+        "place": "game:block/planks",
+        "walk": "game:walk/grass*"
+    }}
+}
