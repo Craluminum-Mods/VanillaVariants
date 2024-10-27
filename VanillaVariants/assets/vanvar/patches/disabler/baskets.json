@@ -9,7 +9,7 @@
     },
 
     {
-        "file": "vanvar:blocktypes/reed/stationarybasket.json",
+        "file": "vanvar:blocktypes/reed/reedchest.json",
         "op": "addmerge",
         "path": "/enabled",
         "value": false,
