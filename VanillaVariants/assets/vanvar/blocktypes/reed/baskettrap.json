@@ -1,18 +1,12 @@
 {
+    "inheritFrom": "game:blocktypes/reed/baskettrap",
     "code": "baskettrap",
-    "class": "BlockBasketTrap",
-    "entityclass": "BasketTrap",
     "behaviors": [
-        //
-        {
-            "name": "VanillaVariants.BlockName",
+        { "name": "VanillaVariants.BlockName",
             "properties": {
-                "parts": ["block-baskettrap-reed", " (", "item-papyrustops", ")"]
-            }
-        },
+                "parts": ["block-baskettrap-reed", " (", "item-papyrustops", ")"] } },
         { "name": "Lockable" }
     ],
-    "entityBehaviors": [{ "name": "Animatable" }],
     "attributes": {
         // "handbook": {
         //     "extraSections": [{ "title": "game:block-handbooktitle-baskettrap-*", "text": "game:block-handbooktext-baskettrap-*" }]
@@ -34,34 +28,8 @@
         "sidesSN": { "base": "vanvar:block/basket/papyrus-northsouth" },
         "lid": { "base": "vanvar:block/basket/papyrus-lid" }
     },
-    "heldTpIdleAnimation": "holdunderarm",
-    "blockmaterial": "Wood",
-    "replaceable": 900,
-    "resistance": 2,
-    "lightAbsorption": 0,
-    "sideAo": { "all": false },
-    "sidesolid": { "all": false },
-    "sideopaque": { "all": false },
-    "collisionbox": { "x1": 0.125, "y1": 0, "z1": 0.125, "x2": 0.8125, "y2": 0.5625, "z2": 0.875 },
-    "selectionbox": { "x1": 0.125, "y1": 0, "z1": 0.125, "x2": 0.8125, "y2": 0.5625, "z2": 0.875 },
     "sounds": {
         "place": "game:block/planks",
         "walk": "game:walk/wood"
-    },
-    "materialDensity": 600,
-    "tpHandTransform": {
-        "translation": { "x": -0.9, "y": -0.5, "z": -0.3 },
-        "rotation": { "x": 0, "y": 90, "z": -102 },
-        "scale": 0.56
-    },
-    "guiTransform": {
-        "origin": { "x": 0.5, "y": 0.3, "z": 0.5 },
-        "scale": 1.3
-    },
-    "groundTransform": {
-        "translation": { "x": 0, "y": 0, "z": 0 },
-        "rotation": { "x": 0, "y": -45, "z": 0 },
-        "origin": { "x": 0.5, "y": 0, "z": 0.5 },
-        "scale": 3.1
     }
 }
