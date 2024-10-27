@@ -20,6 +20,7 @@ public class Config
     public bool DecorativeQuern { get; set; } = true;
     public bool FunctionalQuern { get; set; }
 
+    public bool RidingEquipment { get; set; } = true;
     public bool ArchimedesScrew { get; set; } = true;
     public bool ArmorStand { get; set; } = true;
     public bool Barrel { get; set; } = true;
@@ -186,6 +187,7 @@ public class Config
         DecorativeQuern = previousConfig.DecorativeQuern;
         FunctionalQuern = previousConfig.FunctionalQuern;
 
+        RidingEquipment = previousConfig.RidingEquipment;
         ArchimedesScrew = previousConfig.ArchimedesScrew;
         ArmorStand = previousConfig.ArmorStand;
         Barrel = previousConfig.Barrel;

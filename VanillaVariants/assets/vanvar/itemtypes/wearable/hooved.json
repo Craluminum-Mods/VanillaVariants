@@ -1,0 +1,127 @@
+{
+    "code": "hoovedwearables",
+    "variantgroups": [
+        { "code": "category", "states": ["head", "middlebackunder", "middleback", "lowerbackside", "lowerback"] },
+        { "code": "type", "states": ["bridle1", "bridle2", "saddle1", "saddlebags1"] },
+        { "code": "color", "states": ["orange", "black", "red", "blue", "purple", "pink", "white", "yellow", "gray", "green"] }
+    ],
+    "allowedVariants": [
+        //
+        "hoovedwearables-head-bridle1-*",
+        "hoovedwearables-head-bridle2-*",
+        "hoovedwearables-middleback-saddle1-*",
+        "hoovedwearables-lowerbackside-saddlebags1-*"
+    ],
+    "attributes": {
+        "attachableToEntity": {
+            "categoryCodeByType": {
+                "*-head-bridle*": "bridle",
+                "*-middleback-saddle1*": "saddle",
+                "*-lowerbackside-saddlebags*": "sidebags"
+            },
+            "attachedShapeBySlotCode": {
+                "*": { "base": "game:item/wearable/hooved/{type}-elk" }
+            }
+        },
+        "controlSchemeByType": {
+            "*-bridle1-*": "Hold",
+            "*-bridle2-*": "Press"
+        },
+        "isSaddleByType": {
+            "*-middleback-saddle1-*": true
+        },
+        "isBridleByType": {
+            "*-head-bridle*": true
+        },
+        "backpackByType": {
+            "*-saddlebags1-*": { "quantitySlots": 16 }
+        },
+        "interactPassthroughByType": {
+            "*-saddle1-*": true
+        },
+        "handbook": {
+            "groupBy": ["hoovedwearables-{category}-{type}-*"]
+        }
+    },
+    "behaviorsByType": {
+        "*-lowerbackside-saddlebags*": [
+            { "name": "HeldBag" },
+            { "name": "VanillaVariants.ItemName",
+                "properties": {
+                    "parts": ["item-hoovedwearables-{category}-{type}", " (", "color-{color}", ")"] } }
+        ],
+        "*": [
+            { "name": "VanillaVariants.ItemName",
+                "properties": {
+                    "parts": ["item-hoovedwearables-{category}-{type}", " (", "color-{color}", ")"] } }
+        ]
+    },
+    "shape": { "base": "game:item/wearable/hooved/{type}-inventory" },
+    "textures": {
+        "hide": { "base": "game:block/transparent" },
+        "plain": { "base": "game:block/leather/{color}" },
+        "leather": { "base": "game:block/leather/{color}" },
+        "brass": { "base": "game:block/metal/plate/brass" }
+    },
+    "heldTpIdleAnimationByType": {
+        "*-saddle1-*": "holdbothhands",
+        "*-lowerbackside-saddlebags*": "holdbothhands"
+    },
+    "maxStackSize": 1,
+    "creativeinventory": { "general": ["*"], "items": ["*"], "clothing": ["*"], "vanvar": ["*"] },
+    "renderAlphaTest": 0.25,
+    "guiTransformByType": {
+        "*-saddle1-*": {
+            "translation": { "x": 0, "y": 0, "z": 0 },
+            "rotation": { "x": -35, "y": -46, "z": -180 },
+            "origin": { "x": 0.5, "y": 0.2, "z": 0.6 },
+            "scale": 1.4
+        },
+        "*-head-bridle*": {
+            "translation": { "x": 0, "y": 0, "z": 0 },
+            "rotation": { "x": -45, "y": -70, "z": -180 },
+            "origin": { "x": 0.5, "y": -0, "z": 0.5 },
+            "scale": 2.17
+        },
+        "*-lowerbackside-saddlebags*": {
+            "translation": { "x": 0, "y": 0, "z": 0 },
+            "rotation": { "x": -35, "y": 147, "z": -180 },
+            "origin": { "x": 0.4, "y": -0, "z": 0.62 },
+            "scale": 2.5
+        }
+    },
+    "groundTransformByType": {
+        "*-saddle1-*": {
+            "translation": { "x": 0, "y": 0.51, "z": 0 },
+            "rotation": { "x": 0, "y": 0, "z": 0 },
+            "scale": 5
+        },
+        "*-head-bridle*": {
+            "translation": { "x": 0, "y": 0.5, "z": 0 },
+            "rotation": { "x": 0, "y": 0, "z": 0 },
+            "scale": 5
+        },
+        "*-lowerbackside-saddlebags*": {
+            "translation": { "x": 0, "y": 0.5, "z": 0 },
+            "rotation": { "x": 0, "y": 0, "z": 0 },
+            "scale": 5
+        }
+    },
+    "tpHandTransformByType": {
+        "*-saddle1-*": {
+            "translation": { "x": -1, "y": -0.76, "z": -0.6 },
+            "rotation": { "x": -43, "y": -17, "z": -107 },
+            "scale": 0.8
+        },
+        "*-head-bridle*": {
+            "translation": { "x": -0.52, "y": -0.8, "z": -1 },
+            "rotation": { "x": 0, "y": 91, "z": 90 },
+            "scale": 0.95
+        },
+        "*-lowerbackside-saddlebags*": {
+            "translation": { "x": -1, "y": -0.5, "z": -0.2 },
+            "rotation": { "x": 48, "y": 23, "z": -86 },
+            "scale": 1
+        }
+    }
+}

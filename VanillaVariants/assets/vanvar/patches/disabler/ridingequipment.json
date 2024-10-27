@@ -1,0 +1,10 @@
+[
+    {
+        "file": "vanvar:itemtypes/wearable.json",
+        "op": "addmerge",
+        "path": "/enabled",
+        "value": false,
+        "condition": { "when": "VanillaVariants_RidingEquipment_Enabled", "isValue": "false" },
+        "side": "server"
+    }
+]

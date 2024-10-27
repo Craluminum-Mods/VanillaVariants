@@ -66,6 +66,7 @@ public class ConfigLibCompatibility
     {
         if (ImGui.CollapsingHeader(Lang.Get(settingsSimple) + $"##settingsSimple-{id}"))
         {
+            config.RidingEquipment = OnCheckBox(id, config.RidingEquipment, nameof(config.RidingEquipment));
             ImGui.TextWrapped(Lang.Get(textExperimental));
             config.ExperimentalOverlayTest = OnCheckBox(id, config.ExperimentalOverlayTest, nameof(config.ExperimentalOverlayTest));
             ImGui.NewLine();

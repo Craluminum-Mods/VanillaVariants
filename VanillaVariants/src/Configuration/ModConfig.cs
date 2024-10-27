@@ -39,6 +39,7 @@ static class ModConfig
         api.World.Config.SetBool("VanillaVariants_DecorativeQuern_Enabled", config.DecorativeQuern);
         api.World.Config.SetBool("VanillaVariants_FunctionalQuern_Enabled", config.FunctionalQuern);
 
+        api.World.Config.SetBool("VanillaVariants_RidingEquipment_Enabled", config.RidingEquipment);
         api.World.Config.SetBool("VanillaVariants_ArchimedesScrew_Enabled", config.ArchimedesScrew);
         api.World.Config.SetBool("VanillaVariants_ArmorStand_Enabled", config.ArmorStand);
         api.World.Config.SetBool("VanillaVariants_Barrel_Enabled", config.Barrel);

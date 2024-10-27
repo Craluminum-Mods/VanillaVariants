@@ -1,0 +1,17 @@
+[
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_RidingEquipment_Enabled", "isValue": "true" }],
+        "outputCode": "hoovedwearables-head-bridle1",
+        "outputCodeNew": "vanvar:hoovedwearables-head-bridle1-{color}",
+        "ingredients": [{ "ingredientCode": "leather-normal-plain", "Code": "leather-normal-*", "Name": "color", "SkipVariants": ["plain"] }]
+    },
+
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_RidingEquipment_Enabled", "isValue": "true" }],
+        "outputCode": "hoovedwearables-head-bridle2",
+        "outputCodeNew": "vanvar:hoovedwearables-head-bridle2-{color}",
+        "ingredients": [{ "ingredientCode": "leather-normal-plain", "Code": "leather-normal-*", "Name": "color", "SkipVariants": ["plain"] }]
+    }
+]

@@ -1,0 +1,9 @@
+[
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_RidingEquipment_Enabled", "isValue": "true" }],
+        "outputCode": "hoovedwearables-middleback-saddle1",
+        "outputCodeNew": "vanvar:hoovedwearables-middleback-saddle1-{color}",
+        "ingredients": [{ "ingredientCode": "leather-normal-plain", "Code": "leather-normal-*", "Name": "color", "SkipVariants": ["plain"] }]
+    }
+]
