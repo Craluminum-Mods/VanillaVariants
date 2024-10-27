@@ -28,18 +28,9 @@
 
     {
         "file": "vanvar:blocktypes/stone/decorative/quern.json",
-        "op": "addmerge",
+        "op": "replace",
         "path": "/class",
         "value": "BlockQuern",
-        "condition": { "when": "VanillaVariants_FunctionalQuern_Enabled", "isValue": "true" },
-        "side": "server"
-    },
-
-    {
-        "file": "vanvar:blocktypes/stone/decorative/quern.json",
-        "op": "addmerge",
-        "path": "/entityClass",
-        "value": "Quern",
         "condition": { "when": "VanillaVariants_FunctionalQuern_Enabled", "isValue": "true" },
         "side": "server"
     }

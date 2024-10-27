@@ -1,9 +1,8 @@
 {
     "inheritFrom": "game:blocktypes/stone/quern",
     "code": "quern",
-    "class": "Block",
-    "entityClass": null, // json patches make it functional
-    "entityBehaviors": [],
+    "class": "Block", // Functionality is added by json patches
+    "entityBehaviors": [], // Functionality is added by json patches 
     "behaviors": [
         {
             "name": "VanillaVariants.BlockName",
