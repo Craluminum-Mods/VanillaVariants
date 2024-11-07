@@ -16,7 +16,8 @@
                 "transferQuantity": 2,
                 "bulkTransferQuantity": 8,
                 "collisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 },
-                "cbScaleYByLayer": 0.125 } }
+                "cbScaleYByLayer": 0.125,
+                "burnHoursPerItem": 0.5 } }
     ],
     "variantGroups": [{ "code": "wood", "loadFromProperties": "wildcrafttree:block/wood" }],
     "attributes": {
