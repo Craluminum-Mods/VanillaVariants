@@ -23,8 +23,12 @@
         "handbook": { "groupBy": ["door-{style}-*"] },
         "width": 1,
         "height": 2,
-        "openSound": "game:sounds/block/metaldoor",
-        "closeSound": "game:sounds/block/metaldoor",
+        "openSoundByType": {
+            "*": "game:sounds/block/metaldoor"
+        },
+        "closeSoundByType": {
+            "*": "game:sounds/block/metaldoor"
+        },
         "easingSpeed": 10
     },
     "vertexFlags": {
