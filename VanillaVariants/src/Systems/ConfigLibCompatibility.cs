@@ -71,7 +71,6 @@ public class ConfigLibCompatibility
             config.ExperimentalOverlayTest = OnCheckBox(id, config.ExperimentalOverlayTest, nameof(config.ExperimentalOverlayTest));
             ImGui.NewLine();
             ImGui.TextWrapped(Lang.Get(textIssues));
-            config.ResolveBarrelSounds = OnCheckBox(id, config.ResolveBarrelSounds, nameof(config.ResolveBarrelSounds));
             config.ResolveBasketTrapIssues = OnCheckBox(id, config.ResolveBasketTrapIssues, nameof(config.ResolveBasketTrapIssues));
             config.ResolveChestNames = OnCheckBox(id, config.ResolveChestNames, nameof(config.ResolveChestNames));
             config.ResolveMechanicalBlockIssues = OnCheckBox(id, config.ResolveMechanicalBlockIssues, nameof(config.ResolveMechanicalBlockIssues));

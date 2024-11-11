@@ -16,10 +16,6 @@ public class HarmonyPatches : ModSystem
         {
             HarmonyInstance.Patch(original: typeof(ColorBlend).GetMethod(nameof(ColorBlend.Overlay)), prefix: typeof(Overlay_Patch).GetMethod(nameof(Overlay_Patch.Prefix)));
         }
-        if (Core.Config.ResolveBarrelSounds)
-        {
-            HarmonyInstance.Patch(original: typeof(BlockEntityBarrel).GetMethod("toggleInventoryDialogClient", AccessTools.all), prefix: typeof(BlockEntityBarrel_toggleInventoryDialogClient_Patch).GetMethod(nameof(BlockEntityBarrel_toggleInventoryDialogClient_Patch.Prefix)));
-        }
         if (Core.Config.ResolveChestNames)
         {
             HarmonyInstance.Patch(original: typeof(BlockGenericTypedContainer).GetMethod(nameof(BlockGenericTypedContainer.GetHeldItemName)), postfix: typeof(BlockGenericTypedContainer_GetHeldItemName_Patch).GetMethod(nameof(BlockGenericTypedContainer_GetHeldItemName_Patch.Postfix)));
