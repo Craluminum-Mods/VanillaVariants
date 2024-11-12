@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json.Linq;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using VanillaVariants.Configuration;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
@@ -94,46 +93,9 @@ public class Core : ModSystem
                 continue;
             }
 
-            switch (block)
+            if (block is BlockTroughDoubleBlock or BlockTrough)
             {
-                case BlockTroughDoubleBlock:
-                    {
-                        List<string> ignoreTextures = block.Attributes["ignoreTextures"].AsObject<List<string>>(new());
-
-                        foreach ((string key, CompositeTexture val) in largeTroughTextures)
-                        {
-                            switch (block.Textures.ContainsKey(key))
-                            {
-                                case false:
-                                    block.Textures.Add(key, val);
-                                    break;
-                                case true when !ignoreTextures.Contains(key):
-                                    block.Textures[key] = val;
-                                    break;
-                            }
-                        }
-
-                        break;
-                    }
-                case BlockTrough when block.Code.ToString().Contains("small"):
-                    {
-                        List<string> ignoreTextures = block.Attributes["ignoreTextures"].AsObject<List<string>>(new());
-
-                        foreach ((string key, CompositeTexture val) in smallTroughTextures)
-                        {
-                            switch (block.Textures.ContainsKey(key))
-                            {
-                                case false:
-                                    block.Textures.Add(key, val);
-                                    break;
-                                case true when !ignoreTextures.Contains(key):
-                                    block.Textures[key] = val;
-                                    break;
-                            }
-                        }
-
-                        break;
-                    }
+                block.PatchTrough(block.Code.ToString().Contains("small") ? smallTroughTextures : largeTroughTextures);
             }
 
             if (block?.Attributes?["configurableChute"]?.AsBool() == true)

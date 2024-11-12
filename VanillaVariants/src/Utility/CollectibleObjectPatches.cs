@@ -1,7 +1,8 @@
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Newtonsoft.Json.Linq;
+using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.Util;
@@ -332,6 +333,23 @@ public static class CollectibleObjectPatches
         UpdateAttribute(block, "item-flowrate", Core.Config.ChuteFlowRates, name, variant);
         UpdateAttribute(block, "quantitySlots", Core.Config.ChuteQuantitySlots, name, variant);
         UpdateAttribute(block, "item-checkrateMs", Core.Config.ChuteCheckRateMs, name, variant);
+    }
+
+    public static void PatchTrough(this Block block, IDictionary<string, CompositeTexture> textures)
+    {
+        List<string> ignoreTextures = block.Attributes["ignoreTextures"].AsObject<List<string>>(new());
+
+        foreach ((string key, CompositeTexture val) in textures)
+        {
+            if (block.Textures.ContainsKey(key) && !ignoreTextures.Contains(key))
+            {
+                block.Textures[key] = val;
+            }
+            else if (!block.Textures.ContainsKey(key))
+            {
+                block.Textures.Add(key, val);
+            }
+        }
     }
 
     private static void UpdateAttribute<T>(Block block, string attributeName, Dictionary<string, Dictionary<string, T>> dict, string name, string variant)
