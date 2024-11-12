@@ -2,7 +2,6 @@
 using VanillaVariants.Configuration;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
-using Vintagestory.GameContent;
 
 [assembly: ModInfo(name: "Vanilla Variants", modID: "vanvar")]
 
@@ -41,67 +40,20 @@ public class Core : ModSystem
         api.World.Logger.Event("started '{0}' mod", Mod.Info.Name);
     }
 
-    public override void AssetsFinalize(ICoreAPI api) => ApplyPatches(api);
-
-    private static void ApplyPatches(ICoreAPI api)
+    public override void AssetsFinalize(ICoreAPI api)
     {
-        IDictionary<string, CompositeTexture> largeTroughTextures = api.World.GetBlock(new AssetLocation("trough-genericwood-large-head-north")).Textures;
         IDictionary<string, CompositeTexture> smallTroughTextures = api.World.GetBlock(new AssetLocation("trough-genericwood-small-ns")).Textures;
+        IDictionary<string, CompositeTexture> largeTroughTextures = api.World.GetBlock(new AssetLocation("trough-genericwood-large-head-north")).Textures;
 
         foreach (Block block in api.World.Blocks)
         {
             api.TryAddModDescription(block);
-
-            switch (block)
-            {
-                case BlockPitkiln:
-                    {
-                        api.PatchPitKiln(block);
-                        break;
-                    }
-                case BlockQuern:
-                    {
-                        if (Config.ResolveQuernAndAxleRelationship)
-                        {
-                            api.PatchQuern(block);
-                        }
-                        break;
-                    }
-                    // TODO: Why this code was commented? Read WHY in CollectibleObjectPatches.PatchSteelProduction
-                    // case BlockStoneCoffinSection:
-                    //     {
-                    //         if (Config.MetalDoor && Config.OverrideMetalDoorsForSteelProduction)
-                    //         {
-                    //             block.PatchSteelProduction();
-                    //         }
-                    //         break;
-                    //     }
-            }
-
-            if (Config.ResolveQuernAndAxleRelationship && block?.Attributes?["patchQuernExceptions"]?.AsBool() == true)
-            {
-                api.PatchQuern(block);
-            }
-
-            if (block?.Attributes?["chestType"]?.AsString() != null)
-            {
-                api.PatchChest(block);
-            }
-
-            if (!block.IsFromMod())
-            {
-                continue;
-            }
-
-            if (block is BlockTroughDoubleBlock or BlockTrough)
-            {
-                block.PatchTrough(block.Code.ToString().Contains("small") ? smallTroughTextures : largeTroughTextures);
-            }
-
-            if (block?.Attributes?["configurableChute"]?.AsBool() == true)
-            {
-                block.PatchChute();
-            }
+            api.PatchPitKiln(block);
+            //block.PatchSteelProduction(); // TODO: Why this code was commented? Read WHY in CollectibleObjectPatches.PatchSteelProduction
+            api.PatchQuern(block);
+            api.PatchChest(block);
+            block.PatchTrough(smallTroughTextures, largeTroughTextures);
+            block.PatchChute();
         }
 
         foreach (Item item in api.World.Items)

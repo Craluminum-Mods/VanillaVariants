@@ -15,7 +15,7 @@ public static class CollectibleObjectPatches
 {
     public static bool HasFromModAttribute(this CollectibleObject obj)
     {
-        return obj?.Attributes?["fromVanVarMod"]?.AsBool() == true;
+        return obj?.Attributes?.IsTrue("fromVanVarMod") == true;
     }
 
     public static bool IsFromMod(this CollectibleObject obj)
@@ -33,6 +33,11 @@ public static class CollectibleObjectPatches
 
     public static void PatchPitKiln(this ICoreAPI api, Block block)
     {
+        if (block is not BlockPitkiln)
+        {
+            return;
+        }
+
         Item[] firewoodItems = Array.Empty<Item>();
         firewoodItems = firewoodItems
             .Concat(api.World.SearchItems(new AssetLocation("vanvar:firewood-*")))
@@ -75,6 +80,16 @@ public static class CollectibleObjectPatches
 
     public static void PatchQuern(this ICoreAPI api, Block block)
     {
+        if (!Core.Config.ResolveQuernAndAxleRelationship)
+        {
+            return;
+        }
+
+        if (block is not BlockQuern && (block.Attributes?.IsTrue("patchQuernExceptions")) != true)
+        {
+            return;
+        }
+
         BlockBehaviorUnstableFalling behavior = block.GetBehavior<BlockBehaviorUnstableFalling>();
         JsonObject properties = new JsonObject(JObject.Parse(behavior.propertiesAtString));
         AssetLocation[] exceptions = properties?["exceptions"]?.AsObject(new AssetLocation[0], block.Code.Domain);
@@ -107,6 +122,11 @@ public static class CollectibleObjectPatches
 
     public static void PatchChest(this ICoreAPI api, Block block)
     {
+        if (block.Attributes?.KeyExists("chestType") == false)
+        {
+            return;
+        }
+
         if (!Enum.TryParse(block?.Attributes?["chestType"]?.AsString(), out EnumChestType chestType))
         {
             return;
@@ -133,7 +153,7 @@ public static class CollectibleObjectPatches
                     block.Attributes.Token["types"] = JToken.FromObject(types);
                     block.Attributes.Token["defaultType"] = JToken.FromObject(types[0]);
                     block.Attributes.Token["rotatatableInterval"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["rotatatableInterval"][genericType].AsString()));
-                    block.Attributes.Token["drop"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["drop"][genericType].AsBool()));
+                    block.Attributes.Token["drop"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["drop"].IsTrue(genericType)));
 
                     Dictionary<string, int> newQuantitySlots = types.ToDictionary(key => key, value => fromBlock.Attributes["quantitySlots"][genericType].AsInt());
                     if (Core.Config.OverrideChestQuantitySlots)
@@ -175,7 +195,7 @@ public static class CollectibleObjectPatches
                     block.Attributes ??= new JsonObject(new JObject());
                     block.Attributes.Token["types"] = JToken.FromObject(types);
                     block.Attributes.Token["defaultType"] = JToken.FromObject(types[0]);
-                    block.Attributes.Token["drop"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["drop"][genericType].AsBool()));
+                    block.Attributes.Token["drop"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["drop"].IsTrue(genericType)));
 
                     Dictionary<string, int> newQuantitySlots = types.ToDictionary(key => key, value => fromBlock.Attributes["quantitySlots"][genericType].AsInt());
                     if (Core.Config.OverrideChestQuantitySlots)
@@ -218,7 +238,7 @@ public static class CollectibleObjectPatches
                     block.Attributes.Token["types"] = JToken.FromObject(types);
                     block.Attributes.Token["defaultType"] = JToken.FromObject(types[0]);
                     block.Attributes.Token["rotatatableInterval"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["rotatatableInterval"][genericType].AsString()));
-                    block.Attributes.Token["drop"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["drop"][genericType].AsBool()));
+                    block.Attributes.Token["drop"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["drop"].IsTrue(genericType)));
 
                     Dictionary<string, int> newQuantitySlots = types.ToDictionary(key => key, value => fromBlock.Attributes["quantitySlots"][genericType].AsInt());
                     if (Core.Config.OverrideDoubleChestQuantitySlots)
@@ -322,6 +342,11 @@ public static class CollectibleObjectPatches
 
     public static void PatchChute(this Block block)
     {
+        if (!block.IsFromMod() || block.Attributes?.IsTrue("configurableChute") != true)
+        {
+            return;
+        }
+
         string name = block.Attributes?["configurableName"]?.AsString();
         string variant = block.Variant[block.Attributes?["configurableType"]?.AsString()];
 
@@ -335,8 +360,14 @@ public static class CollectibleObjectPatches
         UpdateAttribute(block, "item-checkrateMs", Core.Config.ChuteCheckRateMs, name, variant);
     }
 
-    public static void PatchTrough(this Block block, IDictionary<string, CompositeTexture> textures)
+    public static void PatchTrough(this Block block, IDictionary<string, CompositeTexture> smallTextures, IDictionary<string, CompositeTexture> largeTextures)
     {
+        if (!block.IsFromMod() || block is not BlockTroughDoubleBlock and not BlockTrough)
+        {
+            return;
+        }
+
+        IDictionary<string, CompositeTexture> textures = block.Code.ToString().Contains("small") ? smallTextures : largeTextures;
         List<string> ignoreTextures = block.Attributes["ignoreTextures"].AsObject<List<string>>(new());
 
         foreach ((string key, CompositeTexture val) in textures)
@@ -368,18 +399,23 @@ public static class CollectibleObjectPatches
     }
 
     // TODO: Without joking, I spent whole day to find perfect regex, I DESERVE to comment this until I find regex that will actually work!!
-    // public static void PatchSteelProduction(this Block block)
-    // {
-    //     List<string> allowedTypes = Core.Config.MetalDoorsForSteelProduction.Where(x => x.Value).Select(keyVal => keyVal.Key).ToList();
-    //     if (!allowedTypes.Any())
-    //     {
-    //         return;
-    //     }
+    //public static void PatchSteelProduction(this Block block)
+    //{
+    //    if (block is not BlockStoneCoffinSection || !Config.MetalDoor || !Config.OverrideMetalDoorsForSteelProduction)
+    //    {
+    //        return;
+    //    }
 
-    //     string allowedTypesAsString = string.Join("|", allowedTypes);
-    //     string newKey = $"@(game:irondoor-(.*)|vanvar:door-1x2metal-({allowedTypesAsString}))";
-    //     JToken value = block.Attributes.Token["multiblockStructure"]["blockNumbers"]["irondoor-*"];
-    //     block.Attributes.Token["multiblockStructure"]["blockNumbers"]["irondoor-*"].Remove();
-    //     block.Attributes.Token["multiblockStructure"]["blockNumbers"][newKey] = JToken.FromObject(value);
-    // }
+    //    List<string> allowedTypes = Core.Config.MetalDoorsForSteelProduction.Where(x => x.Value).Select(keyVal => keyVal.Key).ToList();
+    //    if (!allowedTypes.Any())
+    //    {
+    //        return;
+    //    }
+
+    //    string allowedTypesAsString = string.Join("|", allowedTypes);
+    //    string newKey = $"@(game:irondoor-(.*)|vanvar:door-1x2metal-({allowedTypesAsString}))";
+    //    JToken value = block.Attributes.Token["multiblockStructure"]["blockNumbers"]["irondoor-*"];
+    //    block.Attributes.Token["multiblockStructure"]["blockNumbers"]["irondoor-*"].Remove();
+    //    block.Attributes.Token["multiblockStructure"]["blockNumbers"][newKey] = JToken.FromObject(value);
+    //}
 }
