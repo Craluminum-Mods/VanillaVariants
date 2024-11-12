@@ -17,7 +17,8 @@
     ],
     "attributes": {
         // contentConfig and unsuitableFor are added by code
-        "handbook": { "groupBy": ["trough-*-large-*"] }
+        "handbook": { "groupBy": ["trough-*-large-*"] },
+        "ignoreTextures": [ "charred", "aged", "bottom-inside" ]
     },
     "variantgroups": [
         { "code": "material", "states": ["aged"], "loadFromProperties": "block/wood" },

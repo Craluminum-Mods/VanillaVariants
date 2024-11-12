@@ -107,11 +107,18 @@ public class Core : ModSystem
                         if (largeContentConfig != null) block.Attributes.Token["contentConfig"] = JToken.FromObject(largeContentConfig);
                         if (largeUnsuitableFor != null) block.Attributes.Token["unsuitableFor"] = JToken.FromObject(largeUnsuitableFor);
 
+                        List<string> ignoreTextures = block.Attributes["ignoreTextures"].AsObject<List<string>>(new());
+
                         foreach ((string key, CompositeTexture val) in largeTroughTextures)
                         {
-                            if (!block.Textures.ContainsKey(key))
+                            switch (block.Textures.ContainsKey(key))
                             {
-                                block.Textures.Add(key, val);
+                                case false:
+                                    block.Textures.Add(key, val);
+                                    break;
+                                case true when !ignoreTextures.Contains(key):
+                                    block.Textures[key] = val;
+                                    break;
                             }
                         }
 
@@ -122,11 +129,18 @@ public class Core : ModSystem
                         if (smallContentConfig != null) block.Attributes.Token["contentConfig"] = JToken.FromObject(smallContentConfig);
                         if (smallUnsuitableFor != null) block.Attributes.Token["unsuitableFor"] = JToken.FromObject(smallUnsuitableFor);
 
+                        List<string> ignoreTextures = block.Attributes["ignoreTextures"].AsObject<List<string>>(new());
+
                         foreach ((string key, CompositeTexture val) in smallTroughTextures)
                         {
-                            if (!block.Textures.ContainsKey(key))
+                            switch (block.Textures.ContainsKey(key))
                             {
-                                block.Textures.Add(key, val);
+                                case false:
+                                    block.Textures.Add(key, val);
+                                    break;
+                                case true when !ignoreTextures.Contains(key):
+                                    block.Textures[key] = val;
+                                    break;
                             }
                         }
 
