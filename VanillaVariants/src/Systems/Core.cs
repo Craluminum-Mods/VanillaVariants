@@ -3,8 +3,6 @@ using VanillaVariants.Configuration;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 
-[assembly: ModInfo(name: "Vanilla Variants", modID: "vanvar")]
-
 namespace VanillaVariants;
 
 public class Core : ModSystem
