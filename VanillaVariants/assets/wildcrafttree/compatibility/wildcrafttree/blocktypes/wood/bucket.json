@@ -1,7 +1,6 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/bucket",
+    "inheritFrom": "game:blocktypes/wood/bucket",
     "code": "woodbucket",
-    "class": "VanillaVariants.BlockWoodBucket",
     "behaviors": [
         {
             "name": "VanillaVariants.BlockName",
@@ -27,9 +26,9 @@
     },
     "variantgroups": [{ "code": "type", "loadFromProperties": "wildcrafttree:block/wood" }],
 	  "creativeinventoryStacks": [{
-			  "tabs": ["general", "decorative", "vanvar"],
-			  "stacks": [
-				  { "type": "block", "code": "woodbucket-{type}" }
+	 	  "tabs": ["general", "decorative", "vanvar"],
+	 	  "stacks": [
+	 		  { "type": "block", "code": "woodbucket-{type}" }
     ]}],
     "shape": { "base": "game:block/wood/bucket/empty" },
     "textures": {

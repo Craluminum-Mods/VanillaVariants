@@ -32,7 +32,6 @@ public class Core : ModSystem
         api.RegisterBlockBehaviorClass("VanillaVariants.ChestName", typeof(BlockBehaviorChestName));
         api.RegisterBlockBehaviorClass("VanillaVariants.ItemFlowDescription", typeof(BlockBehaviorItemFlowDescription));
 
-        api.RegisterBlockClass("VanillaVariants.BlockWoodBucket", typeof(BlockWoodBucket));
         api.RegisterEntity("VV_EntityWoodArmorStand", typeof(EntityWoodArmorStand));
 
         api.World.Logger.Event("started '{0}' mod", Mod.Info.Name);
