@@ -1,44 +1,14 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/palisadestakes",
+    "inheritFrom": "vanvar:blocktypes/wood/palisadestakes",
     "code": "palisadestakes",
-    "behaviors": [
-        {
-            "name": "VanillaVariants.BlockName",
-            "properties": {
-                "parts": ["block-palisadestakes*", " (", "material-{material}", ")"]
-            }
-        },
-        { "name": "HorizontalOrientable", "properties": { "dropBlockFace": "west" } }
-    ],
     "variantgroups": [
         { "code": "material", "loadFromProperties": "wildcrafttree:block/wood" },
         { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
     ],
-    "attributes": {
-        "humanoidTraversalCost": 1000,
-        "fromVanVarMod": true,
-        "handbook": { "groupBy": ["palisadestakes-*"] }
-    },
-    "creativeinventory": {
-        "general": ["*-west"],
-        "decorative": ["*-west"],
-        "vanvar": ["*-west"]
-    },
-    "shapebytype": {
-        "*-west": { "base": "game:block/wood/fence/palisade/palisadestakes*", "rotateY": 0 },
-        "*-east": { "base": "game:block/wood/fence/palisade/palisadestakes*", "rotateY": 180 },
-        "*-south": { "base": "game:block/wood/fence/palisade/palisadestakes*", "rotateY": 90 },
-        "*-north": { "base": "game:block/wood/fence/palisade/palisadestakes*", "rotateY": 270 }
-    },
+    "attributes": { "fromVanVarMod": true },
     "textures": {
         "aged": { "base": "wildcrafttree:block/wood/bark/{material}" },
         "oak3": { "base": "wildcrafttree:block/wood/treetrunk/{material}" },
         "oak2": { "base": "game:block/wood/debarked/{material}" }
-    },
-    "sounds": {
-        "place": "game:block/planks",
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "walk": "game:walk/wood"
     }
 }

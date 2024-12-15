@@ -1,6 +1,7 @@
 {
     "inheritFrom": "game:blocktypes/wood/table",
     "code": "table",
+    "creativeinventoryByType": { "*": { "general": ["*"], "decorative": ["*"], "vanvar": ["*"] } },
     "behaviors": [
         {
             "name": "VanillaVariants.BlockName",
@@ -19,13 +20,6 @@
         "handbook": { "groupBy": ["table-*-{type}"] }
     },
     "shape": { "base": "game:block/wood/table" },
-    "creativeinventoryByType": {
-        "*": {
-            "general": ["*"],
-            "decorative": ["*"],
-            "vanvar": ["*"]
-        }
-    },
     "sounds": {
         "place": "game:block/planks",
         "hit": "game:block/planks",

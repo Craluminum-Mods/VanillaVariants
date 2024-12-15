@@ -1,5 +1,5 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/wagonwheels",
+    "inheritFrom": "game:blocktypes/wood/wagonwheels",
     "code": "wagonwheels",
     "creativeinventory": { "general": ["*-west"], "construction": ["*-west"], "vanvar": ["*-west"] },
     "attributes": { "handbook": { "groupBy": ["wagonwheels-*"] } },

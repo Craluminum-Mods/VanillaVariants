@@ -1,24 +1,6 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/signpost",
+    "inheritFrom": "vanvar:blocktypes/wood/signpost",
     "code": "signpost",
-    "creativeinventory": { "general": ["*"], "decorative": ["*"], "vanvar": ["*"] },
-    "behaviors": [{
-            "name": "VanillaVariants.BlockName",
-            "properties": {
-                "parts": ["block-signpost", " (", "material-{type}", ")"]
-    }}],
-    "attributes": {
-        "fromVanVarMod": true,
-        "handbook": { "groupBy": ["signpost-*"] }
-    },
-    "variantgroups": [{ "code": "type", "loadFromProperties": "wildcrafttree:block/wood" }],
-    "shape": { "base": "game:block/wood/signpost/post" },
-    "shapeInventory": { "base": "game:block/wood/signpost/inventory" },
-    "textures": { "all": { "base": "game:block/wood/debarked/{type}" } },
-    "sounds": {
-        "place": "game:block/planks",
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "walk": "game:walk/wood"
-    }
+    "attributes": { "fromVanVarMod": true },
+    "variantgroups": [{ "code": "type", "loadFromProperties": "wildcrafttree:block/wood" }]
 }

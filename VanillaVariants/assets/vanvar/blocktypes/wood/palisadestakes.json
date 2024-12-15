@@ -1,5 +1,5 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/palisadestakes",
+    "inheritFrom": "game:blocktypes/wood/palisadestakes",
     "code": "palisadestakes",
     "behaviors": [
         {
@@ -15,7 +15,6 @@
         { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
     ],
     "attributes": {
-        "humanoidTraversalCost": 1000,
         "handbook": { "groupBy": ["palisadestakes-*"] }
     },
     "creativeinventory": {

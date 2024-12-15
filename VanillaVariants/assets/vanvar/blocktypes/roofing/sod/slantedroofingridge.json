@@ -1,10 +1,13 @@
 {
-	  "inheritFrom": "game:blocktypes/roofing/slantedroofingridge",
+    "inheritFrom": "game:blocktypes/roofing/slantedroofingridge",
     "code": "slantedroofingridge",
     "behaviors": [
-        { "name": "VanillaVariants.BlockName",
+        {
+            "name": "VanillaVariants.BlockName",
             "properties": {
-                "parts": ["block-slantedroofingridge-sod-*", " (", "material-{material}", ")"] } },
+                "parts": ["block-slantedroofingridge-sod-*", " (", "material-{material}", ")"]
+            }
+        },
         { "name": "NWOrientable" }
     ],
     "variantgroups": [
@@ -14,13 +17,11 @@
         { "code": "cover", "states": ["free", "snow"] }
     ],
     "attributes": {
-        "humanoidTraversalCost": 100,
-        "mapColorCode": "settlement",
         "handbook": { "groupBy": ["slantedroofingridge-sod-*"] }
     },
     "shapeByType": {
-		  "*-ns-*": { "base": "game:block/roofing/ridge/sod-{cover}"},
-		  "*-we-*": { "base": "game:block/roofing/ridge/sod-{cover}", "rotateY": 90 }
+        "*-ns-*": { "base": "game:block/roofing/ridge/sod-{cover}" },
+        "*-we-*": { "base": "game:block/roofing/ridge/sod-{cover}", "rotateY": 90 }
     },
     "textures": {
         "aged-top": { "base": "game:block/wood/planks/{material}1" },
@@ -28,10 +29,12 @@
         "aged-side": { "base": "game:block/wood/planks/{material}1" }
     },
     "creativeinventory": { "general": ["*-ns-free"], "decorative": ["*-ns-free"], "vanvar": ["*-ns-free"] },
-    "soundsByType": {"*-sod-*":{
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "place": "game:block/planks",
-        "walk": "game:walk/grass*"
-    }}
+    "soundsByType": {
+        "*-sod-*": {
+            "hit": "game:block/planks",
+            "break": "game:block/planks",
+            "place": "game:block/planks",
+            "walk": "game:walk/grass*"
+        }
+    }
 }

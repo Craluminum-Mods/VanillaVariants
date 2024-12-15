@@ -2,12 +2,18 @@
     "inheritFrom": "game:blocktypes/mechanics/largegear3m",
     "code": "largegear3",
     "behaviors": [
-        { "name": "VanillaVariants.BlockName",
+        {
+            "name": "VanillaVariants.BlockName",
             "properties": {
-              "parts": ["block-largegear3", " (", "material-{wood}", ")"] } },
-        { "name": "VanillaVariants.BlockDescription",
+                "parts": ["block-largegear3", " (", "material-{wood}", ")"]
+            }
+        },
+        {
+            "name": "VanillaVariants.BlockDescription",
             "properties": {
-              "parts": ["blockdesc-largegear3"] } }
+                "parts": ["blockdesc-largegear3"]
+            }
+        }
     ],
     "attributes": {
         "handbook": {

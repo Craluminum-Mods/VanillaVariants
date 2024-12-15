@@ -1,5 +1,5 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/toolrack",
+    "inheritFrom": "game:blocktypes/wood/toolrack",
     "code": "toolrack",
     "creativeinventory": { "general": ["toolrack-*-north"], "decorative": ["toolrack-*-north"], "vanvar": ["toolrack-*-north"] },
     "behaviors": [
@@ -12,7 +12,6 @@
         { "name": "HorizontalAttachable" }
     ],
     "attributes": {
-        "toolTransforms": {},
         "handbook": { "groupBy": ["toolrack-*"] }
     },
     "variantgroups": [

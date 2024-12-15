@@ -1,11 +1,14 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/bed",
+    "inheritFrom": "game:blocktypes/wood/bed",
     "code": "bed",
-    "behaviors": [{
+    "behaviors": [
+        {
             "name": "VanillaVariants.BlockName",
             "properties": {
                 "parts": ["block-bed-wood-head-*", " (", "material-{type}", ")"]
-    }}],
+            }
+        }
+    ],
     "attributes": {
         "sleepEfficiency": 0.70833333,
         "handbook": { "groupBy": ["bed-*"] }
@@ -21,7 +24,7 @@
         "decorative": ["*-head-north"],
         "vanvar": ["*-head-north"]
     },
-    "shapeinventoryByType": {"*":{ "base": "game:block/wood/bed-inventory" }},
+    "shapeinventoryByType": { "*": { "base": "game:block/wood/bed-inventory" } },
     "shapebytype": {
         "*-head-north": { "base": "game:block/wood/bed-head", "rotateY": 90 },
         "*-head-east": { "base": "game:block/wood/bed-head", "rotateY": 0 },

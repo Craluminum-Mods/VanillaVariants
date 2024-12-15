@@ -1,51 +1,10 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/trough-small",
+    "inheritFrom": "vanvar:blocktypes/wood/trough-small",
     "code": "trough",
-    "behaviors": [
-        {
-            "name": "VanillaVariants.BlockName",
-            "properties": {
-                "parts": ["block-trough-genericwood-small-*", " (", "material-{material}", ")"]
-            }
-        },
-        {
-            "name": "VanillaVariants.BlockDescription",
-            "properties": {
-                "parts": ["blockdesc-trough-genericwood-small-*"]
-            }
-        }, { "name": "NWOrientable" }
-    ],
-    "attributes": {
-        // contentConfig and unsuitableFor are added by code
-        "fromVanVarMod": true,
-        "handbook": { "groupBy": ["trough-*-small-*"] },
-        "ignoreTextures": [ "charred", "aged", "wood" ]
-    },
+    "attributes": { "fromVanVarMod": true },
     "variantgroups": [
         { "code": "material", "loadFromProperties": "wildcrafttree:block/wood" },
         { "code": "part", "states": ["small"] },
         { "code": "side", "states": ["ns", "we"] }
-    ],
-    "creativeinventory": {
-        "general": ["*-ns"],
-        "decorative": ["*-ns"],
-        "vanvar": ["*-ns"]
-    },
-    "shape": { "base": "game:block/wood/trough/small/empty" },
-    "shapebytype": {
-        "*-ns": { "base": "game:block/wood/trough/small/empty", "rotateY": 0 },
-        "*-we": { "base": "game:block/wood/trough/small/empty", "rotateY": 90 }
-    },
-    "textures": {
-        "charred": { "base": "game:block/wood/debarked/{material}" },
-        "aged": { "base": "game:block/wood/debarked/{material}" },
-        "wood": { "base": "game:block/wood/debarked/{material}" }
-         // billion other textures are added by code
-    },
-    "sounds": {
-        "place": "game:block/planks",
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "walk": "game:walk/wood"
-    }
+    ]
 }

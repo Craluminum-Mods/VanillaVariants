@@ -1,16 +1,19 @@
 {
-	  "inheritFrom": "game:itemtypes/armorstand",
+    "inheritFrom": "game:itemtypes/armorstand",
     "code": "armorstand",
-    "behaviors": [
-        { "name": "VanillaVariants.ItemName",
-            "properties": {
-              "parts": ["item-armorstand", " (", "material-{wood}", ")"] } }
-    ],
-    "attributes": {
-      "handbook": { "groupBy": ["armorstand-*"] }
-    },
     "variantgroups": [{ "code": "wood", "states": ["aged"], "loadFromProperties": "block/wood" }],
     "skipVariants": ["*-oak"],
+    "attributes": {
+        "handbook": { "groupBy": ["armorstand-*"] }
+    },
+    "behaviors": [
+        {
+            "name": "VanillaVariants.ItemName",
+            "properties": {
+                "parts": ["item-armorstand", " (", "material-{wood}", ")"]
+            }
+        }
+    ],
     "shape": { "base": "game:entity/land/armorstand" },
     "textures": { "oak": { "base": "game:block/wood/debarked/{wood}" } },
     "creativeinventory": { "general": ["*"], "items": ["*"], "vanvar": ["*"] }

@@ -1,5 +1,5 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/woodtyped/door",
+    "inheritFrom": "game:blocktypes/wood/woodtyped/door",
     "code": "door",
     "behaviors": [
         {
@@ -35,11 +35,11 @@
         "easingSpeed": 10
     },
     "creativeinventoryByType": {
-      "*":{
-          "general": ["*"],
-          "decorative": ["*"],
-          "vanvar": ["*"]
-      }
+        "*": {
+            "general": ["*"],
+            "decorative": ["*"],
+            "vanvar": ["*"]
+        }
     },
     "shape": { "base": "game:block/wood/door/{style}" },
     "textures": {

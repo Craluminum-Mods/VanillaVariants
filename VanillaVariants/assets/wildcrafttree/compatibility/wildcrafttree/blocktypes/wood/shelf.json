@@ -1,42 +1,9 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/shelf",
+    "inheritFrom": "vanvar:blocktypes/wood/shelf",
     "code": "shelf",
     "variantgroups": [
         { "code": "type", "loadFromProperties": "wildcrafttree:block/wood" },
         { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
     ],
-    "behaviors": [
-        {
-            "name": "VanillaVariants.BlockName",
-            "properties": {
-                "parts": ["block-shelf-normal-*", " (", "material-{type}", ")"]
-            }
-        },
-        { "name": "HorizontalAttachable", "properties": { "dropBlockFace": "east" } }
-    ],
-    "attributes": {
-        "fromVanVarMod": true,
-        "handbook": { "groupBy": ["shelf-*"] }
-    },
-    "shapeByType": {
-        "*-north": { "base": "game:block/wood/shelf", "rotateY": 0 },
-        "*-east": { "base": "game:block/wood/shelf", "rotateY": 270 },
-        "*-west": { "base": "game:block/wood/shelf", "rotateY": 90 },
-        "*-south": { "base": "game:block/wood/shelf", "rotateY": 180 }
-    },
-    "textures": {
-        "surface": { "base": "game:block/wood/debarked/{type}", "blendedOverlays": [{ "base": "vanvar:block/shelf/surface" }] },
-        "wood2": { "base": "game:block/wood/debarked/{type}", "blendedOverlays": [{ "base": "vanvar:block/shelf/wood" }] }
-    },
-    "creativeinventory": {
-        "general": ["*-east"],
-        "decorative": ["*-east"],
-        "vanvar": ["*-east"]
-    },
-    "sounds": {
-        "place": "game:block/planks",
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "walk": "game:walk/wood"
-    }
+    "attributes": { "fromVanVarMod": true }
 }

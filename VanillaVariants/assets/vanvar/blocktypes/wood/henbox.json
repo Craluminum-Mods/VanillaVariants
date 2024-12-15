@@ -1,5 +1,5 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/henbox",
+    "inheritFrom": "game:blocktypes/wood/henbox",
     "code": "henbox",
     "behaviors": [
         {

@@ -1,5 +1,5 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/path",
+    "inheritFrom": "game:blocktypes/wood/path",
     "code": "woodenpath",
     "behaviors": [
         {
@@ -7,7 +7,9 @@
             "properties": {
                 "parts": ["block-woodenpath-*", " (", "material-{type}", ")"]
             }
-        }, { "name": "Unstable" }, { "name": "NWOrientable" }
+        },
+        { "name": "Unstable" },
+        { "name": "NWOrientable" }
     ],
     "attributes": {
         "handbook": { "groupBy": ["woodenpath-*"] }

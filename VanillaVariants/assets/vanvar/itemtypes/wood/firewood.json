@@ -1,11 +1,20 @@
 {
-	  "inheritFrom": "game:itemtypes/resource/firewood",
+    "inheritFrom": "game:itemtypes/resource/firewood",
     "code": "firewood",
+    "variantGroups": [{ "code": "wood", "loadFromProperties": "block/wood" }],
+    "skipVariants": ["*-oak"],
+    "attributes": {
+        "placeSound": "game:block/planks"
+    },
     "behaviors": [
-        { "name": "VanillaVariants.ItemName",
+        {
+            "name": "VanillaVariants.ItemName",
             "properties": {
-              "parts": ["item-firewood", " (", "material-{wood}", ")"] } },
-        { "name": "GroundStorable",
+                "parts": ["item-firewood", " (", "material-{wood}", ")"]
+            }
+        },
+        {
+            "name": "GroundStorable",
             "properties": {
                 "layout": "Stacking",
                 "placeRemoveSound": "game:block/planks",
@@ -17,15 +26,10 @@
                 "bulkTransferQuantity": 8,
                 "collisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 },
                 "cbScaleYByLayer": 0.125,
-                "burnHoursPerItem": 0.5 } }
+                "burnHoursPerItem": 0.5
+            }
+        }
     ],
-    "variantGroups": [{ "code": "wood", "loadFromProperties": "block/wood" }],
-    "skipVariants": ["*-oak"],
-    "attributes": {
-        "firepitConstructable": true,
-        "isClayOvenFuel": true,
-        "placeSound": "game:block/planks"
-    },
     "shape": { "base": "game:item/firewood" },
     "textures": {
         "side": { "base": "game:block/wood/debarked/{wood}" },

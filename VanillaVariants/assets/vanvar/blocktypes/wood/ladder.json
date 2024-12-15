@@ -1,5 +1,5 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/ladder",
+    "inheritFrom": "game:blocktypes/wood/ladder",
     "code": "ladder",
     "variantgroups": [
         { "code": "material", "states": ["aged"], "loadFromProperties": "block/wood" },
@@ -16,7 +16,6 @@
         { "name": "Ladder", "properties": { "isFlexible": false } }
     ],
     "attributes": {
-        "ignoreServerReplaceableTest": true,
         "handbook": { "groupBy": ["ladder-*"] }
     },
     "creativeinventory": {

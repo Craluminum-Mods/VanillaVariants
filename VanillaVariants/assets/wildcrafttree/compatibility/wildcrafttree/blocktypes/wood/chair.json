@@ -1,41 +1,9 @@
 {
-    "inheritFrom": "game:blocktypes/wood/chair",
+    "inheritFrom": "vanvar:blocktypes/wood/chair",
     "code": "chair",
-    "behaviors": [
-        {
-            "name": "VanillaVariants.BlockName",
-            "properties": {
-                "parts": ["block-chair-{color}", " (", "material-{type}", ")"]
-            }
-        },
-        { "name": "UnstableFalling" }
-    ],
-    "attributes": {
-        "fromVanVarMod": true,
-        "handbook": { "groupBy": ["chair-*"] }
-    },
+    "attributes": { "fromVanVarMod": true },
     "variantgroups": [
         { "code": "type", "loadFromProperties": "wildcrafttree:block/wood" },
         { "code": "color", "states": ["plain", "blue", "red", "yellow", "purple", "brown", "green", "orange", "black", "gray", "pink", "white"] }
-    ],
-    "shapeByType": { "*": { "base": "game:block/wood/chair-normal" } },
-    "texturesByType": {
-        "*": {
-            "cover": { "base": "game:block/cloth/linen/{color}*" },
-            "oak": { "base": "game:block/wood/debarked/{type}" },
-            "top": { "base": "game:block/wood/debarked/{type}" },
-
-            "0": { "base": "game:block/wood/debarked/{type}" },
-            "1": { "base": "game:block/wood/debarked/{type}" },
-            "2": { "base": "game:block/wood/debarked/{type}" },
-            "3": { "base": "game:block/wood/debarked/{type}", "rotation": 90 }
-        }
-    },
-    "creativeinventoryByType": { "*": { "general": ["*"], "decorative": ["*"], "vanvar": ["*"] } },
-    "sounds": {
-        "place": "game:block/planks",
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "walk": "game:walk/wood"
-    }
+    ]
 }

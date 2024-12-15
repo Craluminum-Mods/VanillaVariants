@@ -1,45 +1,6 @@
 {
-    "inheritFrom": "game:blocktypes/wood/bucket",
+    "inheritFrom": "vanvar:blocktypes/wood/bucket",
     "code": "woodbucket",
-    "behaviors": [
-        {
-            "name": "VanillaVariants.BlockName",
-            "properties": {
-                "parts": ["block-woodbucket", " (", "material-{type}", ")"]
-            }
-        },
-        { "name": "UnstableFalling" },
-        { "name": "RightClickPickup" },
-        { "name": "MilkingContainer" }
-    ],
-    "attributes": {
-        "fromVanVarMod": true,
-        "handbook": { "groupBy": ["woodbucket-*"] },
-        "liquidContainerProps": {
-            "capacityLitres": 10,
-            "transferSizeLitres": 1,
-            "emptyShapeLoc": "game:block/wood/bucket/empty",
-            "opaqueContentShapeLoc": "game:block/wood/bucket/contents",
-            "liquidContentShapeLoc": "game:block/wood/bucket/liquidcontents",
-            "liquidMaxYTranslate": 0.4375
-        }
-    },
-    "variantgroups": [{ "code": "type", "loadFromProperties": "wildcrafttree:block/wood" }],
-	  "creativeinventoryStacks": [{
-	 	  "tabs": ["general", "decorative", "vanvar"],
-	 	  "stacks": [
-	 		  { "type": "block", "code": "woodbucket-{type}" }
-    ]}],
-    "shape": { "base": "game:block/wood/bucket/empty" },
-    "textures": {
-        "sides": { "base": "game:block/wood/debarked/{type}" },
-        "charred": { "base": "game:block/wood/debarked/{type}" },
-        "aged": { "base": "game:block/wood/debarked/{type}" }
-    },
-    "sounds": {
-        "place": "game:block/planks",
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "walk": "game:walk/wood"
-    }
+    "attributes": { "fromVanVarMod": true },
+    "variantgroups": [{ "code": "type", "loadFromProperties": "wildcrafttree:block/wood" }]
 }

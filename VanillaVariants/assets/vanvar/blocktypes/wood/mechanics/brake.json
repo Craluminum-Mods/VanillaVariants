@@ -2,15 +2,20 @@
     "inheritFrom": "game:blocktypes/mechanics/brake",
     "code": "brake",
     "behaviors": [
-        { "name": "VanillaVariants.BlockName",
+        {
+            "name": "VanillaVariants.BlockName",
             "properties": {
-              "parts": ["block-brake-north", " (", "material-{wood}", ")"] } },
-        { "name": "VanillaVariants.BlockDescription",
+                "parts": ["block-brake-north", " (", "material-{wood}", ")"]
+            }
+        },
+        {
+            "name": "VanillaVariants.BlockDescription",
             "properties": {
-              "parts": ["blockdesc-brake-north"] } },
+                "parts": ["blockdesc-brake-north"]
+            }
+        },
         { "name": "HorizontalOrientable" }
     ],
-    "attributes": { "handbook": { "groupBy": ["brake-*"] } },
     "variantgroups": [
         { "code": "wood", "states": ["aged"], "loadFromProperties": "block/wood" },
         { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }

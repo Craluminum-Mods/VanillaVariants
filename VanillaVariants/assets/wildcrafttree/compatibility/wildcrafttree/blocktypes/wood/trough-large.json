@@ -1,58 +1,10 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/trough-large",
+    "inheritFrom": "vanvar:blocktypes/wood/trough-large",
     "code": "trough",
-    "behaviors": [
-        {
-            "name": "VanillaVariants.BlockName",
-            "properties": {
-                "parts": ["block-trough-genericwood-large-head-*", " (", "material-{material}", ")"]
-            }
-        },
-        {
-            "name": "VanillaVariants.BlockDescription",
-            "properties": {
-                "parts": ["blockdesc-trough-genericwood-large-head-*"]
-            }
-        }
-    ],
-    "attributes": {
-        // contentConfig and unsuitableFor are added by code
-        "fromVanVarMod": true,
-        "handbook": { "groupBy": ["trough-*-large-*"] },
-        "ignoreTextures": [ "charred", "aged", "bottom-inside" ]
-    },
+    "attributes": { "fromVanVarMod": true },
     "variantgroups": [
         { "code": "material", "loadFromProperties": "wildcrafttree:block/wood" },
         { "code": "part", "states": ["large-head", "large-feet"] },
         { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
-    ],
-    "creativeinventory": {
-        "general": ["*-head-north"],
-        "decorative": ["*-head-north"],
-        "vanvar": ["*-head-north"]
-    },
-    "shapeinventory": { "base": "game:block/wood/trough/large/inventory" },
-    "shapebytype": {
-        "*-head-north": { "base": "game:block/wood/trough/large/empty", "rotateY": 90 },
-        "*-head-east": { "base": "game:block/wood/trough/large/empty", "rotateY": 0 },
-        "*-head-south": { "base": "game:block/wood/trough/large/empty", "rotateY": 270 },
-        "*-head-west": { "base": "game:block/wood/trough/large/empty", "rotateY": 180 },
-
-        "*-feet-north": { "base": "game:block/wood/trough/large/empty", "rotateY": 270 },
-        "*-feet-east": { "base": "game:block/wood/trough/large/empty", "rotateY": 180 },
-        "*-feet-south": { "base": "game:block/wood/trough/large/empty", "rotateY": 90 },
-        "*-feet-west": { "base": "game:block/wood/trough/large/empty", "rotateY": 0 }
-    },
-    "textures": {
-        "charred": { "base": "game:block/wood/debarked/{material}" },
-        "aged": { "base": "game:block/wood/debarked/{material}" },
-        "bottom-inside": { "base": "game:block/wood/debarked/{material}" }
-        // billion other textures are added by code
-    },
-    "sounds": {
-        "place": "game:block/planks",
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "walk": "game:walk/wood"
-    }
+    ]
 }

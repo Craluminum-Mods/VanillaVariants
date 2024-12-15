@@ -1,41 +1,9 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/ladder",
+    "inheritFrom": "vanvar:blocktypes/wood/ladder",
     "code": "ladder",
     "variantgroups": [
         { "code": "material", "loadFromProperties": "wildcrafttree:block/wood" },
         { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
     ],
-    "behaviors": [
-        {
-            "name": "VanillaVariants.BlockName",
-            "properties": {
-                "parts": ["block-ladder-wood-*", " (", "material-{material}", ")"]
-            }
-        },
-        { "name": "Ladder", "properties": { "isFlexible": false } }
-    ],
-    "attributes": {
-        "fromVanVarMod": true,
-        "ignoreServerReplaceableTest": true,
-        "handbook": { "groupBy": ["ladder-*"] }
-    },
-    "creativeinventory": {
-        "general": ["ladder-*-north"],
-        "decorative": ["ladder-*-north"],
-        "vanvar": ["ladder-*-north"]
-    },
-    "shapeinventory": { "base": "game:block/wood/ladder-inventory" },
-    "shapebytype": {
-        "*-north": { "base": "game:block/wood/ladder", "rotateY": 0 },
-        "*-east": { "base": "game:block/wood/ladder", "rotateY": 270 },
-        "*-south": { "base": "game:block/wood/ladder", "rotateY": 180 },
-        "*-west": { "base": "game:block/wood/ladder", "rotateY": 90 }
-    },
-    "textures": { "ladder": { "base": "game:block/wood/debarked/{material}", "rotation": 90 } },
-    "sounds": {
-        "place": "game:block/planks",
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "walk": "game:walk/wood"
-    }
+    "attributes": { "fromVanVarMod": true }
 }

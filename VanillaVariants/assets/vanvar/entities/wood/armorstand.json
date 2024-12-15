@@ -1,5 +1,5 @@
 {
-	  "inheritFrom": "game:entities/land/armorstand",
+    "inheritFrom": "game:entities/land/armorstand",
     "code": "armorstand",
     "class": "VV_EntityWoodArmorStand",
     "variantgroups": [{ "code": "wood", "states": ["aged"], "loadFromProperties": "block/wood" }],
@@ -9,6 +9,7 @@
         "shape": { "base": "game:entity/land/armorstand" },
         "textures": { "oak": { "base": "game:block/wood/debarked/{wood}" } },
         "behaviors": [
+            //
             { "code": "repulseagents" },
             { "code": "controlledphysics", "stepHeight": 1.0001 },
             { "code": "armorstandinventory" },
@@ -17,6 +18,7 @@
     },
     "server": {
         "behaviors": [
+            //
             { "code": "repulseagents" },
             { "code": "controlledphysics", "stepHeight": 1.1251 },
             { "code": "armorstandinventory" }

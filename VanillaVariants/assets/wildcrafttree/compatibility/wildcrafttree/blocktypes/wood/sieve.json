@@ -1,51 +1,9 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/sieve",
+    "inheritFrom": "vanvar:blocktypes/wood/sieve",
     "code": "sieve",
-    "behaviors": [
-        {
-            "name": "VanillaVariants.BlockName",
-            "properties": {
-                "parts": ["block-sieve-linen", " (", "material-{wood}", ")"]
-            }
-        },
-        { "name": "UnstableFalling" },
-        { "name": "GroundStorable", "properties": { "layout": "SingleCenter" } },
-        { "name": "Unplaceable", "__comment": "The ground storable obsoletes this being a block. Should be an item, but is kept a block for backwards compatibility" },
-        { "name": "RightClickPickup" }
-        //
-    ],
     "variantgroups": [
         { "code": "wood", "loadFromProperties": "wildcrafttree:block/wood" },
         { "code": "type", "states": ["linen", "copper", "tinbronze", "bismuthbronze", "blackbronze"] }
-        //
     ],
-    "allowedVariants": ["*-linen"],
-    "texturesbyType": {
-        "*-linen": {
-            "white": { "base": "game:block/cloth/linen/white" },
-            "aged": { "base": "game:block/wood/debarked/{wood}" },
-            "oak": { "base": "game:block/wood/debarked/{wood}" }
-        },
-        "@.*-(copper|tinbronze|bismuthbronze|blackbronze)": {
-            "white": { "base": "game:block/metal/sheet/{type}1" },
-            "aged": { "base": "game:block/wood/debarked/{wood}" },
-            "oak": { "base": "game:block/wood/debarked/{wood}" }
-        }
-    },
-    "attributes": {
-        "fromVanVarMod": true,
-        "handbook": { "groupBy": ["sieve-*"] }
-    },
-    "shape": { "base": "game:block/wood/sieve" },
-    "creativeinventory": {
-        "general": ["*"],
-        "items": ["*"],
-        "vanvar": ["*"]
-    },
-    "sounds": {
-        "place": "game:block/planks",
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "walk": "game:walk/wood"
-    }
+    "attributes": { "fromVanVarMod": true }
 }

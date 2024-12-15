@@ -1,17 +1,6 @@
 {
-	  "inheritFrom": "game:itemtypes/armorstand",
+    "inheritFrom": "vanvar:itemtypes/wood/armorstand",
     "code": "armorstand",
-    "behaviors": [
-        { "name": "VanillaVariants.ItemName",
-            "properties": {
-              "parts": ["item-armorstand", " (", "material-{wood}", ")"] } }
-    ],
-    "attributes": {
-        "fromVanVarMod": true,
-        "handbook": { "groupBy": ["armorstand-*"] }
-    },
     "variantgroups": [{ "code": "wood", "loadFromProperties": "wildcrafttree:block/wood" }],
-    "shape": { "base": "game:entity/land/armorstand" },
-    "textures": { "oak": { "base": "game:block/wood/debarked/{wood}" } },
-    "creativeinventory": { "general": ["*"], "items": ["*"], "vanvar": ["*"] }
+    "attributes": { "fromVanVarMod": true }
 }

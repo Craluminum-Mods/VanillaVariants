@@ -2,17 +2,20 @@
     "inheritFrom": "game:blocktypes/mechanics/windmillrotor",
     "code": "windmillrotor",
     "behaviors": [
-        { "name": "VanillaVariants.BlockName",
+        {
+            "name": "VanillaVariants.BlockName",
             "properties": {
-              "parts": ["block-windmillrotor-north", " (", "material-{wood}", ")"] } },
-        { "name": "VanillaVariants.BlockDescription",
+                "parts": ["block-windmillrotor-north", " (", "material-{wood}", ")"]
+            }
+        },
+        {
+            "name": "VanillaVariants.BlockDescription",
             "properties": {
-              "parts": ["blockdesc-windmillrotor-*"] } },
+                "parts": ["blockdesc-windmillrotor-*"]
+            }
+        },
         { "name": "HorizontalOrientable" }
     ],
-    "attributes": {
-        "handbook": { "groupBy": ["windmillrotor-*"] }
-    },
     "variantgroups": [
         { "code": "wood", "states": ["aged"], "loadFromProperties": "block/wood" },
         { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }

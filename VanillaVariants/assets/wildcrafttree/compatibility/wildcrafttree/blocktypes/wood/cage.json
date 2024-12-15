@@ -1,37 +1,9 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/cage",
+    "inheritFrom": "vanvar:blocktypes/wood/cage",
     "code": "cage",
-    "behaviors": [
-        {
-            "name": "VanillaVariants.BlockName",
-            "properties": {
-                "parts": ["block-cage-wooden-*", " (", "material-{type}", ")"]
-            }
-        },
-        { "name": "HorizontalOrientable" }
-    ],
-    "attributes": {
-        "fromVanVarMod": true,
-        "handbook": { "groupBy": ["cage-*"] }
-    },
+    "attributes": { "fromVanVarMod": true },
     "variantgroups": [
         { "code": "type", "loadFromProperties": "wildcrafttree:block/wood" },
         { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
-    ],
-    "shapebytype": {
-        "*-north": { "base": "game:block/wood/cage/closed", "rotateY": 90 },
-        "*-east": { "base": "game:block/wood/cage/closed", "rotateY": 0 },
-        "*-south": { "base": "game:block/wood/cage/closed", "rotateY": 270 },
-        "*-west": { "base": "game:block/wood/cage/closed", "rotateY": 180 }
-    },
-    "textures": {
-        "all": { "base": "game:block/wood/debarked/{type}", "rotation": 90 }
-    },
-    "creativeinventory": { "general": ["*-north"], "decorative": ["*-north"], "vanvar": ["*-north"] },
-    "sounds": {
-        "place": "game:block/planks",
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "walk": "game:walk/wood"
-    }
+    ]
 }

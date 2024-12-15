@@ -1,16 +1,10 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/chest-labeled",
+    "inheritFrom": "game:blocktypes/wood/chest-labeled",
     "code": "labeledchest",
     "attributes": {
-        "humanoidTraversalCost": 100,
-        "partialAttachable": true,
-        "wearableCategoryCode": "chest",
-        "inventoryClassName": "chest",
-        "variantByGroup": "side",
-        "variantByGroupInventory": null,
         // types and everything else is populated by VanillaVariants.Core.AssetsFinalize and VanillaVariants.CollectibleObjectPatches classes
-        "chestType": "NormalLabeled",
         "handbook": { "groupBy": ["labeledchest-*"] },
+        "chestType": "NormalLabeled",
         "loadTypePropertiesFrom": "vanvar:config/properties/chests-vanvar.json",
         "creativeTabs": ["general", "decorative", "vanvar"]
     },

@@ -1,23 +1,7 @@
 {
-    "inheritFrom": "game:blocktypes/mechanics/transmission",
+    "inheritFrom": "vanvar:blocktypes/mechanics/transmission",
     "code": "transmission",
-    "behaviors": [
-        { "name": "VanillaVariants.BlockName",
-            "properties": {
-              "parts": ["block-transmission-ns", " (", "material-{wood}", ")"] } },
-        { "name": "VanillaVariants.BlockDescription",
-            "properties": {
-              "parts": ["blockdesc-transmission-ns"] } },
-        { "name": "NWOrientable" }
-    ],
-    "attributes": {
-        "fromVanVarMod": true,
-        "handbook": {
-            "groupBy": ["transmission-*"],
-            "extraSections": [{ "title": "", "text": "game:block-handbooktext-transmission-ns" }]
-        },
-        "mechanicalPower": { "renderer": "transmission" }
-    },
+    "attributes": { "fromVanVarMod": true },
     "creativeinventory": {
         "general": ["*-ns"],
         "mechanics": ["*-ns"],
@@ -26,22 +10,5 @@
     "variantgroups": [
         { "code": "wood", "loadFromProperties": "wildcrafttree:block/wood" },
         { "code": "orientation", "states": ["ns", "we"] }
-    ],
-    "shapeInventory": { "base": "game:block/wood/mechanics/transmission-inventory" },
-    "shapeByType": {
-        "*-ns": { "base": "game:block/wood/mechanics/transmission-stand", "rotateY": 90 },
-        "*-we": { "base": "game:block/wood/mechanics/transmission-stand", "rotateY": 0 }
-    },
-    "textures": {
-        "wood": { "base": "game:block/wood/debarked/{wood}" },
-        "oak": { "base": "game:block/wood/debarked/{wood}" },
-        "oak1": { "base": "game:block/wood/debarked/{wood}" }
-    },
-    "drops": [{ "type": "block", "code": "transmission-{wood}-ns", "quantity": { "avg": 1 } }],
-    "sounds": {
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "place": "game:block/planks",
-        "walk": "game:walk/wood"
-    }
+    ]
 }

@@ -1,42 +1,9 @@
 {
-    "inheritFrom": "game:blocktypes/mechanics/toggle",
+    "inheritFrom": "vanvar:blocktypes/mechanics/toggle",
     "code": "woodentoggle",
-    "behaviors": [
-        { "name": "VanillaVariants.BlockName",
-            "properties": {
-              "parts": ["block-woodentoggle-ns", " (", "material-{wood}", ")"] } },
-        { "name": "VanillaVariants.BlockDescription",
-            "properties": {
-              "parts": ["blockdesc-woodentoggle-ns"] } },
-        { "name": "NWOrientable" }
-    ],
-    "attributes": {
-        "fromVanVarMod": true,
-        "handbook": {
-            "groupBy": ["woodentoggle-*"]
-            // "extraSections": [{ "title": "game:block-handbooktitle-woodentoggle-*", "text": "game:block-handbooktext-woodentoggle-*" }]
-        }
-    },
-    "creativeinventory": {
-        "general": ["*-ns"],
-        "mechanics": ["*-ns"],
-        "vanvar": ["*-ns"]
-    },
+    "attributes": { "fromVanVarMod": true },
     "variantgroups": [
         { "code": "wood", "loadFromProperties": "wildcrafttree:block/wood" },
         { "code": "orientation", "states": ["ns", "we"] }
-    ],
-    "shapeInventory": { "base": "game:block/wood/mechanics/toggle-inventory" },
-    "shapeByType": {
-        "*-ns": { "base": "game:block/wood/mechanics/toggle-moving", "rotateY": 90 },
-        "*-we": { "base": "game:block/wood/mechanics/toggle-moving", "rotateY": 0 }
-    },
-    "textures": { "oak1": { "base": "game:block/wood/debarked/{wood}" } },
-    "drops": [{ "type": "block", "code": "woodentoggle-{wood}-ns", "quantity": { "avg": 1 } }],
-    "sounds": {
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "place": "game:block/planks",
-        "walk": "game:walk/wood"
-    }
+    ]
 }

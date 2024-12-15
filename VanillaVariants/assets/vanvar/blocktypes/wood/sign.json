@@ -1,22 +1,17 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/sign",
+    "inheritFrom": "game:blocktypes/wood/sign",
     "code": "sign",
     "creativeinventory": { "general": ["*-ground-north"], "decorative": ["*-ground-north"], "vanvar": ["*-ground-north"] },
-    "behaviors": [{
+    "behaviors": [
+        {
             "name": "VanillaVariants.BlockName",
             "properties": {
                 "parts": ["block-sign-ground-*", " (", "material-{type}", ")"]
-    }}],
+            }
+        }
+    ],
     "attributes": {
-        "handbook": { "groupBy": ["sign-*"] },
-        "maxWidth": 200,
-        "maxHeight": 165,
-        "fontSize": 20,
-        "textVoxelOffsetX": 0,
-        "textVoxelOffsetY": 0,
-        "textVoxelOffsetZ": 0,
-        "textVoxelWidth": 13,
-        "textVoxelHeight": 7
+        "handbook": { "groupBy": ["sign-*"] }
     },
     "variantgroups": [
         { "code": "type", "states": ["aged"], "loadFromProperties": "block/wood" },

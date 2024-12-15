@@ -1,21 +1,19 @@
 {
     "inheritFrom": "game:blocktypes/mechanics/angledgears",
     "code": "angledgears",
-    "attributes": {
-        "mechanicalPower": { "rendererByType": {
-                "*-n": "generic", "*-e": "generic", "*-s": "generic",
-                "*-w": "generic", "*-u": "generic", "*-d": "generic",
-                "*-nn": "angledgearcage", "*-ee": "angledgearcage", "*-ss": "angledgearcage", "*-ww": "angledgearcage",
-                "*": "angledgears" } },
-        "handbook": { "groupBy": ["angledgears-*"] }
-    },
     "behaviors": [
-        { "name": "VanillaVariants.BlockName",
+        {
+            "name": "VanillaVariants.BlockName",
             "properties": {
-              "parts": ["block-angledgears-*", " (", "material-{wood}", ")"] } },
-        { "name": "VanillaVariants.BlockDescription",
+                "parts": ["block-angledgears-*", " (", "material-{wood}", ")"]
+            }
+        },
+        {
+            "name": "VanillaVariants.BlockDescription",
             "properties": {
-              "parts": ["blockdesc-angledgears-*"] } }
+                "parts": ["blockdesc-angledgears-*"]
+            }
+        }
     ],
     "variantgroups": [
         { "code": "wood", "states": ["aged"], "loadFromProperties": "block/wood" },

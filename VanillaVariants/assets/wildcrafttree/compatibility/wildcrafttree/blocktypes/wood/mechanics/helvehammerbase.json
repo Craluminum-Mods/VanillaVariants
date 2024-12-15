@@ -1,47 +1,9 @@
 {
-    "inheritFrom": "game:blocktypes/mechanics/helvehammerbase",
+    "inheritFrom": "vanvar:blocktypes/mechanics/helvehammerbase",
     "code": "helvehammerbase",
-    "behaviors": [
-        { "name": "VanillaVariants.BlockName",
-            "properties": {
-              "parts": ["block-helvehammerbase-north", " (", "material-{wood}", ")"] } },
-        { "name": "VanillaVariants.BlockDescription",
-            "properties": {
-              "parts": ["blockdesc-helvehammerbase-north"] } },
-        { "name": "HorizontalOrientable" }
-    ],
-    "attributes": {
-        "fromVanVarMod": true,
-        "handbook": {
-            "groupBy": ["helvehammerbase-*"]
-            // "extraSections": [{ "title": "game:block-handbooktitle-helvehammerbase-*", "text": "game:block-handbooktext-helvehammerbase-*" }]
-        }
-    },
-    "creativeinventory": {
-        "general": ["*-north"],
-        "mechanics": ["*-north"],
-        "vanvar": ["*-north"]
-    },
+    "attributes": { "fromVanVarMod": true },
     "variantgroups": [
         { "code": "wood", "loadFromProperties": "wildcrafttree:block/wood" },
         { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
-    ],
-    "shapebytype": {
-        "*-north": { "base": "game:block/wood/mechanics/helvehammerbase", "rotateY": 180 },
-        "*-east": { "base": "game:block/wood/mechanics/helvehammerbase", "rotateY": 90 },
-        "*-south": { "base": "game:block/wood/mechanics/helvehammerbase", "rotateY": 0 },
-        "*-west": { "base": "game:block/wood/mechanics/helvehammerbase", "rotateY": 270 }
-    },
-    "textures": {
-        "tinbronze": { "base": "game:block/metal/anvil/tinbronze" },
-        "oak": { "base": "game:block/wood/debarked/{wood}" },
-        "oak1": { "base": "game:block/wood/debarked/{wood}" }
-    },
-    "drops": [{ "type": "block", "code": "helvehammerbase-{wood}-north", "quantity": { "avg": 1 } }],
-    "sounds": {
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "place": "game:block/planks",
-        "walk": "game:walk/wood"
-    }
+    ]
 }

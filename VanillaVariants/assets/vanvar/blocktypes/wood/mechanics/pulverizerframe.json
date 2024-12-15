@@ -2,22 +2,20 @@
     "inheritFrom": "game:blocktypes/mechanics/pulverizerframe",
     "code": "pulverizerframe",
     "behaviors": [
-        { "name": "VanillaVariants.BlockName",
+        {
+            "name": "VanillaVariants.BlockName",
             "properties": {
-              "parts": ["block-pulverizerframe-north", " (", "rock-{stone}", ")", " (", "material-{wood}", ")"] }
+                "parts": ["block-pulverizerframe-north", " (", "rock-{stone}", ")", " (", "material-{wood}", ")"]
+            }
         },
-        { "name": "VanillaVariants.BlockDescription",
+        {
+            "name": "VanillaVariants.BlockDescription",
             "properties": {
-              "parts": ["blockdesc-pulverizerframe-north"] } },
+                "parts": ["blockdesc-pulverizerframe-north"]
+            }
+        },
         { "name": "HorizontalOrientable" }
     ],
-    "attributes": {
-        "handbook": {
-            "groupBy": ["pulverizerframe-*"],
-            "extraSections": [{ "title": "handbooktitle-pulverizer", "text": "handbooktext-pulverizer" }]
-        },
-        "mechanicalPower": { "renderer": "pulverizer" }
-    },
     "creativeinventory": {
         "general": ["*-north"],
         "mechanics": ["*-north"],

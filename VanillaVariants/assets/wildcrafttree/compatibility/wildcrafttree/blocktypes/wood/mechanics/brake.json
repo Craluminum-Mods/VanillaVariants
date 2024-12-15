@@ -1,47 +1,16 @@
 {
-    "inheritFrom": "game:blocktypes/mechanics/brake",
+    "inheritFrom": "vanvar:blocktypes/mechanics/brake",
     "code": "brake",
-    "behaviors": [
-        { "name": "VanillaVariants.BlockName",
-            "properties": {
-              "parts": ["block-brake-north", " (", "material-{wood}", ")"] } },
-        { "name": "VanillaVariants.BlockDescription",
-            "properties": {
-              "parts": ["blockdesc-brake-north"] } },
-        { "name": "HorizontalOrientable" }
-    ],
-    "attributes": {
-        "fromVanVarMod": true,
-        "handbook": { "groupBy": ["brake-*"] }
-    },
+    "attributes": { "fromVanVarMod": true },
     "variantgroups": [
         { "code": "wood", "loadFromProperties": "wildcrafttree:block/wood" },
         { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
     ],
-    "creativeinventory": {
-        "general": ["*-north"],
-        "mechanics": ["*-north"],
-        "vanvar": ["*-north"]
-    },
-    "shapeInventory": { "base": "game:block/wood/mechanics/brake-inventory" },
-    "shapeByType": {
-        "*-north": { "base": "game:block/wood/mechanics/brake-stand", "rotateY": 0 },
-        "*-east": { "base": "game:block/wood/mechanics/brake-stand", "rotateY": 270 },
-        "*-south": { "base": "game:block/wood/mechanics/brake-stand", "rotateY": 180 },
-        "*-west": { "base": "game:block/wood/mechanics/brake-stand", "rotateY": 90 }
-    },
     "textures": {
         "wood": { "base": "game:block/wood/debarked/{wood}" },
         "oak": { "base": "game:block/wood/debarked/{wood}" },
         "oak1": { "base": "game:block/wood/debarked/{wood}" },
         "oak3": { "base": "wildcrafttree:block/wood/treetrunk/{wood}" },
         "oak-h": { "base": "wildcrafttree:block/wood/bark/{wood}-h" }
-    },
-    "drops": [{ "type": "block", "code": "brake-{wood}-north", "quantity": { "avg": 1 } }],
-    "sounds": {
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "place": "game:block/planks",
-        "walk": "game:walk/wood"
     }
 }

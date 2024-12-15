@@ -1,49 +1,9 @@
 {
-    "inheritFrom": "game:blocktypes/mechanics/clutch",
+    "inheritFrom": "vanvar:blocktypes/mechanics/clutch",
     "code": "clutch",
-    "behaviors": [
-        { "name": "VanillaVariants.BlockName",
-            "properties": {
-              "parts": ["block-clutch-north", " (", "material-{wood}", ")"] }
-        },
-        { "name": "VanillaVariants.BlockDescription",
-            "properties": {
-              "parts": ["blockdesc-brake-north"] } },
-        { "name": "HorizontalOrientable" }
-    ],
-    "attributes": {
-        "fromVanVarMod": true,
-        "handbook": {
-            "groupBy": ["clutch-*"],
-            "extraSections": [{ "title": "", "text": "game:block-handbooktext-clutch-north" }]
-        },
-        "mechanicalPower": { "renderer": "clutch" }
-    },
-    "creativeinventory": {
-        "general": ["*-north"],
-        "mechanics": ["*-north"],
-        "vanvar": ["*-north"]
-    },
+    "attributes": { "fromVanVarMod": true },
     "variantgroups": [
         { "code": "wood", "loadFromProperties": "wildcrafttree:block/wood" },
         { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
-    ],
-    "shapebytype": {
-        "*-north": { "base": "game:block/wood/mechanics/clutch", "rotateY": 180 },
-        "*-east": { "base": "game:block/wood/mechanics/clutch", "rotateY": 90 },
-        "*-south": { "base": "game:block/wood/mechanics/clutch", "rotateY": 0 },
-        "*-west": { "base": "game:block/wood/mechanics/clutch", "rotateY": 270 }
-    },
-    "textures": {
-        "wood": { "base": "game:block/wood/debarked/{wood}" },
-        "oak": { "base": "game:block/wood/debarked/{wood}" },
-        "oak1": { "base": "game:block/wood/debarked/{wood}" }
-    },
-    "drops": [{ "type": "block", "code": "clutch-{wood}-north", "quantity": { "avg": 1 } }],
-    "sounds": {
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "place": "game:block/planks",
-        "walk": "game:walk/wood"
-    }
+    ]
 }

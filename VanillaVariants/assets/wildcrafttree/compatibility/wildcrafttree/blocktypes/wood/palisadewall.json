@@ -1,15 +1,6 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/palisadewall",
+    "inheritFrom": "vanvar:blocktypes/wood/palisadewall",
     "code": "palisadewall",
-    "behaviors": [
-        {
-            "name": "VanillaVariants.BlockName",
-            "properties": {
-                "parts": ["block-palisadewall-*", " (", "material-{material}", ")"]
-            }
-        },
-        { "name": "HorizontalOrientable", "properties": { "dropBlockFace": "west" } }
-    ],
     "variantgroups": [
         { "code": "material", "loadFromProperties": "wildcrafttree:block/wood" },
         { "code": "logs", "states": ["four", "three"] },
@@ -17,45 +8,9 @@
         { "code": "layout", "states": ["wall", "cornerin", "cornerout"] },
         { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
     ],
-	  "skipVariants": [
-		  "*-three-lowerspiked-*",
-		  "*-four-lowerspiked-cornerin*",
-		  "*-four-lowerspiked-cornerout*",
-		  "*-four-toproped-cornerin-*",
-		  "*-four-toproped-cornerout-*",
-		  "*-three-toproped-cornerin-*",
-		  "*-three-toproped-cornerout-*",
-		  "*-three-lower-cornerin-*",
-		  "*-three-lower-cornerout-*",
-		  "*-three-top-cornerin-*",
-		  "*-three-top-cornerout-*",
-		  "*-three-halftop-cornerin-*",
-		  "*-three-halftop-cornerout-*"
-	  ],
-    "attributes": {
-     		"humanoidTraversalCost": 1000,
-        "fromVanVarMod": true,
-        "handbook": { "groupBy": ["palisadewall-*-{logs}-{type}-*"] }
-    },
-    "creativeinventory": {
-        "general": ["*-west"],
-        "decorative": ["*-west"],
-        "vanvar": ["*-west"]
-    },
-	  "shapebytype": {
-		  "*-west": { "base": "game:block/wood/fence/palisade/palisade-{logs}-{type}-{layout}*", "rotateY": 0 },
-		  "*-east": { "base": "game:block/wood/fence/palisade/palisade-{logs}-{type}-{layout}*", "rotateY": 180 },
-		  "*-south": { "base": "game:block/wood/fence/palisade/palisade-{logs}-{type}-{layout}*", "rotateY": 90 },
-		  "*-north": { "base": "game:block/wood/fence/palisade/palisade-{logs}-{type}-{layout}*", "rotateY": 270 }
-	  },
+    "attributes": { "fromVanVarMod": true },
     "textures": {
         "aged": { "base": "wildcrafttree:block/wood/bark/{material}" },
         "oak2": { "base": "game:block/wood/debarked/{material}" }
-    },
-    "sounds": {
-        "place": "game:block/planks",
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "walk": "game:walk/wood"
     }
 }

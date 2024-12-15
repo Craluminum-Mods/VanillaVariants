@@ -1,41 +1,12 @@
 {
-	  "inheritFrom": "game:itemtypes/resource/firewood",
+    "inheritFrom": "vanvar:itemtypes/wood/firewood",
     "code": "firewood",
-    "behaviors": [
-        { "name": "VanillaVariants.ItemName",
-            "properties": {
-              "parts": ["item-firewood", " (", "material-{wood}", ")"] } },
-        { "name": "GroundStorable",
-            "properties": {
-                "layout": "Stacking",
-                "placeRemoveSound": "game:block/planks",
-                "stackingModel": "game:block/wood/firewoodpile",
-                "modelItemsToStackSizeRatio": 0.5,
-                "upSolid": true,
-                "stackingCapacity": 32,
-                "transferQuantity": 2,
-                "bulkTransferQuantity": 8,
-                "collisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 },
-                "cbScaleYByLayer": 0.125,
-                "burnHoursPerItem": 0.5 } }
-    ],
     "variantGroups": [{ "code": "wood", "loadFromProperties": "wildcrafttree:block/wood" }],
-    "attributes": {
-        "fromVanVarMod": true,
-        "firepitConstructable": true,
-        "isClayOvenFuel": true,
-        "placeSound": "game:block/planks"
-    },
-    "shape": { "base": "game:item/firewood" },
+    "attributes": { "fromVanVarMod": true },
     "textures": {
         "side": { "base": "game:block/wood/debarked/{wood}" },
         "south": { "base": "wildcrafttree:block/wood/treetrunk/{wood}" },
         "bark": { "base": "wildcrafttree:block/wood/bark/{wood}-h" },
         "north": { "base": "wildcrafttree:block/wood/treetrunk/{wood}" }
-    },
-    "creativeinventory": {
-        "general": ["*"],
-        "items": ["*"],
-        "vanvar": ["*"]
     }
 }

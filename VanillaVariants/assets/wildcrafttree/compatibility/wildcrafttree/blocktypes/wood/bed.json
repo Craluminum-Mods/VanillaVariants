@@ -1,48 +1,10 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/bed",
+    "inheritFrom": "vanvar:blocktypes/wood/bed",
     "code": "bed",
-    "behaviors": [{
-            "name": "VanillaVariants.BlockName",
-            "properties": {
-                "parts": ["block-bed-wood-head-*", " (", "material-{type}", ")"]
-    }}],
-    "attributes": {
-        "fromVanVarMod": true,
-        "sleepEfficiency": 0.70833333,
-        "handbook": { "groupBy": ["bed-*"] }
-    },
+    "attributes": { "fromVanVarMod": true },
     "variantgroups": [
         { "code": "type", "loadFromProperties": "wildcrafttree:block/wood" },
         { "code": "part", "states": ["head", "feet"] },
         { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
-    ],
-    "creativeinventory": {
-        "general": ["*-head-north"],
-        "decorative": ["*-head-north"],
-        "vanvar": ["*-head-north"]
-    },
-    "shapeinventoryByType": {"*":{ "base": "game:block/wood/bed-inventory" }},
-    "shapebytype": {
-        "*-head-north": { "base": "game:block/wood/bed-head", "rotateY": 90 },
-        "*-head-east": { "base": "game:block/wood/bed-head", "rotateY": 0 },
-        "*-head-south": { "base": "game:block/wood/bed-head", "rotateY": 270 },
-        "*-head-west": { "base": "game:block/wood/bed-head", "rotateY": 180 },
-        "*-feet-north": { "base": "game:block/wood/bed-feet", "rotateY": 90 },
-        "*-feet-east": { "base": "game:block/wood/bed-feet", "rotateY": 0 },
-        "*-feet-south": { "base": "game:block/wood/bed-feet", "rotateY": 270 },
-        "*-feet-west": { "base": "game:block/wood/bed-feet", "rotateY": 180 }
-    },
-    "textures": {
-        "walnut": { "base": "game:block/wood/debarked/{type}" }
-    },
-    "guiTransform": {
-        "origin": { "x": 0.5, "y": 0.4, "z": 0.5 },
-        "scale": 0.75
-    },
-    "sounds": {
-        "place": "game:block/planks",
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "walk": "game:walk/wood"
-    }
+    ]
 }

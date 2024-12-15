@@ -1,5 +1,5 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/rails",
+    "inheritFrom": "game:blocktypes/wood/rails",
     "code": "woodenrails",
     "behaviors": [
         {
@@ -10,7 +10,9 @@
         },
         { "name": "Unstable" }
     ],
-    "attributes": { "handbook": { "groupBy": ["woodenrails-*"] } },
+    "attributes": {
+        "handbook": { "groupBy": ["woodenrails-*"] }
+    },
     "variantgroups": [
         { "code": "material", "states": ["aged"], "loadFromProperties": "block/wood" },
         { "code": "type", "states": ["curved_es", "curved_sw", "curved_wn", "curved_ne", "flat_ns", "flat_we", "raised_ns", "raised_we"] }

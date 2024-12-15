@@ -1,21 +1,23 @@
 {
-	  "inheritFrom": "game:blocktypes/roofing/slantedroofingridgehalfleft",
+    "inheritFrom": "game:blocktypes/roofing/slantedroofingridgehalfleft",
     "code": "slantedroofingridgehalfleft",
     "behaviors": [
-        { "name": "VanillaVariants.BlockName",
+        {
+            "name": "VanillaVariants.BlockName",
             "properties": {
-              "parts": ["block-slantedroofingridgehalfleft-sod-*", " (", "material-{material}", ")"] } },
-        { "name": "HorizontalOrientable", "properties": { "dropBlockFace": "east", "drop": { "type": "block", "code": "vanvar:slantedroofingridgehalfleft-sod-{material}-east-free" } } }
+                "parts": ["block-slantedroofingridgehalfleft-sod-*", " (", "material-{material}", ")"]
+            }
+        },
+        { "name": "HorizontalOrientable", "properties": { "dropBlockFace": "east", "drop": { "type": "block", "code": "slantedroofingridgehalfleft-sod-{material}-east-free" } } }
     ],
     "variantgroups": [
+        //
         { "code": "type", "states": ["sod"] },
         { "code": "material", "loadFromProperties": "block/wood" },
         { "loadFromProperties": "abstract/horizontalorientation" },
         { "code": "cover", "states": ["free", "snow"] }
     ],
     "attributes": {
-        "humanoidTraversalCost": 100,
-        "mapColorCode": "settlement",
         "handbook": { "groupBy": ["slantedroofingridgehalfleft-sod-*"] }
     },
     "shapeByType": {
@@ -30,10 +32,12 @@
         "aged-side": { "base": "game:block/wood/planks/{material}1" }
     },
     "creativeinventory": { "general": ["*-east-free"], "decorative": ["*-east-free"], "vanvar": ["*-east-free"] },
-    "soundsByType": {"*-sod-*":{
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "place": "game:block/planks",
-        "walk": "game:walk/grass*"
-    }}
+    "soundsByType": {
+        "*-sod-*": {
+            "hit": "game:block/planks",
+            "break": "game:block/planks",
+            "place": "game:block/planks",
+            "walk": "game:walk/grass*"
+        }
+    }
 }

@@ -1,53 +1,9 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/chest-trunk",
+    "inheritFrom": "vanvar:blocktypes/wood/chest-trunk",
     "code": "trunk",
     "attributes": {
-        "humanoidTraversalCost": 100,
-        "fromVanVarMod": true,
-        "partialAttachable": true,
-        "inventoryClassName": "chest",
-        "variantByGroup": "side",
-        "variantByGroupInventory": null,
         // types and everything else is populated by VanillaVariants.Core.AssetsFinalize and VanillaVariants.CollectibleObjectPatches classes
-        "chestType": "Double",
-        "handbook": { "groupBy": ["trunk-*"] },
-        "loadTypePropertiesFrom": "vanvar:config/properties/chests-wildcrafttree.json",
-        "creativeTabs": ["general", "decorative", "vanvar"]
-    },
-    "behaviors": [
-        {
-            "name": "VanillaVariants.ChestName",
-            "properties": {
-                "parts": ["block-normal-generic-trunk-*", " (", "material-wood_type", ")"],
-                "replacePart": "wood_type",
-                "defaultName": "block-normal-generic-trunk-*"
-            }
-        },
-        { "name": "HorizontalOrientable" },
-        {
-            "name": "Multiblock",
-            "propertiesByType": {
-                "*-north": { "sizex": 2, "sizey": 1, "sizez": 1, "cposition": { "x": 0, "y": 0, "z": 0 } },
-                "*-east": { "sizex": 1, "sizey": 1, "sizez": 2, "cposition": { "x": 0, "y": 0, "z": 0 } },
-                "*-south": { "sizex": 2, "sizey": 1, "sizez": 1, "cposition": { "x": 1, "y": 0, "z": 0 } },
-                "*-west": { "sizex": 1, "sizey": 1, "sizez": 2, "cposition": { "x": 0, "y": 0, "z": 1 } }
-            }
-        },
-        { "name": "Lockable" },
-        { "name": "Container" }
-    ],
-    "shapeInventory": { "base": "game:block/wood/trunk/normal", "rotateY": 270 },
-    "shapeByType": {
-        "*-north": { "base": "game:block/wood/trunk/normal", "rotateY": 0 },
-        "*-east": { "base": "game:block/wood/trunk/normal", "rotateY": 270 },
-        "*-west": { "base": "game:block/wood/trunk/normal", "rotateY": 90 },
-        "*-south": { "base": "game:block/wood/trunk/normal", "rotateY": 180 }
-    },
-    "textures": {}, // populated by VanillaVariants.JsonPatches class
-    "sounds": {
-        "place": "game:block/planks",
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "walk": "game:walk/wood"
+        "fromVanVarMod": true,
+        "loadTypePropertiesFrom": "vanvar:config/properties/chests-wildcrafttree.json"
     }
 }

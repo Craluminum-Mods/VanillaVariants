@@ -1,5 +1,5 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/trough-small",
+    "inheritFrom": "game:blocktypes/wood/trough-small",
     "code": "trough",
     "behaviors": [
         {
@@ -13,12 +13,12 @@
             "properties": {
                 "parts": ["blockdesc-trough-genericwood-small-*"]
             }
-        }, { "name": "NWOrientable" }
+        },
+        { "name": "NWOrientable" }
     ],
     "attributes": {
-        // contentConfig and unsuitableFor are added by code
         "handbook": { "groupBy": ["trough-*-small-*"] },
-        "ignoreTextures": [ "charred", "aged", "wood" ]
+        "ignoreTextures": ["charred", "aged", "wood"]
     },
     "variantgroups": [
         { "code": "material", "states": ["aged"], "loadFromProperties": "block/wood" },
@@ -40,7 +40,7 @@
         "charred": { "base": "game:block/wood/debarked/{material}" },
         "aged": { "base": "game:block/wood/debarked/{material}" },
         "wood": { "base": "game:block/wood/debarked/{material}" }
-         // billion other textures are added by code
+        // billion other textures are added by code
     },
     "sounds": {
         "place": "game:block/planks",

@@ -1,51 +1,10 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/wagonwheels",
+    "inheritFrom": "vanvar:blocktypes/wood/wagonwheels",
     "code": "wagonwheels",
-    "creativeinventory": { "general": ["*-west"], "construction": ["*-west"], "vanvar": ["*-west"] },
-    "attributes": {
-        "fromVanVarMod": true,
-        "handbook": { "groupBy": ["wagonwheels-*"] }
-    },
+    "attributes": { "fromVanVarMod": true },
     "variantgroups": [
         { "code": "material", "loadFromProperties": "wildcrafttree:block/wood" },
         { "code": "type", "states": ["spoked", "solid", "spoked-longaxle", "solid-longaxle"] },
         { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
-    ],
-    "behaviors": [
-        {
-            "name": "VanillaVariants.BlockName",
-            "properties": {
-                "parts": ["block-wagonwheels-{type}-*", " (", "material-{material}", ")"]
-            }
-        },
-        { "name": "HorizontalOrientable", "properties": { "dropBlockFace": "west" } }
-    ],
-    "shapebytype": {
-        "*-spoked-longaxle-west": { "base": "game:block/wood/wheel/{type}", "rotateY": 0 },
-        "*-spoked-longaxle-east": { "base": "game:block/wood/wheel/{type}", "rotateY": 180 },
-        "*-spoked-longaxle-south": { "base": "game:block/wood/wheel/{type}", "rotateY": 90 },
-        "*-spoked-longaxle-north": { "base": "game:block/wood/wheel/{type}", "rotateY": 270 },
-
-        "*-solid-longaxle-west": { "base": "game:block/wood/wheel/{type}", "rotateY": 0 },
-        "*-solid-longaxle-east": { "base": "game:block/wood/wheel/{type}", "rotateY": 180 },
-        "*-solid-longaxle-south": { "base": "game:block/wood/wheel/{type}", "rotateY": 90 },
-        "*-solid-longaxle-north": { "base": "game:block/wood/wheel/{type}", "rotateY": 270 },
-
-        "*-west": { "base": "game:block/wood/wheel/{type}", "rotateY": 180 },
-        "*-east": { "base": "game:block/wood/wheel/{type}", "rotateY": 0 },
-        "*-south": { "base": "game:block/wood/wheel/{type}", "rotateY": 270 },
-        "*-north": { "base": "game:block/wood/wheel/{type}", "rotateY": 90 }
-    },
-    "textures": {
-        "top": { "base": "game:block/wood/debarked/{material}" },
-        "iron1": { "base": "game:block/metal/sheet/iron1" },
-        "oak1": { "base": "game:block/wood/debarked/{material}" },
-        "generic": { "base": "game:block/wood/debarked/{material}" }
-    },
-    "sounds": {
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "place": "game:block/planks",
-        "walk": "game:walk/wood"
-    }
+    ]
 }

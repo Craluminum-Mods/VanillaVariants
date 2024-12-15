@@ -1,25 +1,5 @@
 {
-	  "inheritFrom": "game:entities/land/armorstand",
+    "inheritFrom": "vanvar:entities/wood/armorstand",
     "code": "armorstand",
-    "class": "VV_EntityWoodArmorStand",
-    "variantgroups": [{ "code": "wood", "loadFromProperties": "wildcrafttree:block/wood" }],
-    "client": {
-        "renderer": "Shape",
-        "shape": { "base": "game:entity/land/armorstand" },
-        "textures": { "oak": { "base": "game:block/wood/debarked/{wood}" } },
-        "behaviors": [
-            { "code": "repulseagents" },
-            { "code": "controlledphysics", "stepHeight": 1.0001 },
-            { "code": "armorstandinventory" },
-            { "code": "interpolateposition" }
-        ]
-    },
-    "server": {
-        "behaviors": [
-            { "code": "repulseagents" },
-            { "code": "controlledphysics", "stepHeight": 1.1251 },
-            { "code": "armorstandinventory" }
-        ]
-    },
-    "sounds": { "hurt": "game:player/slap" }
+    "variantgroups": [{ "code": "wood", "loadFromProperties": "wildcrafttree:block/wood" }]
 }

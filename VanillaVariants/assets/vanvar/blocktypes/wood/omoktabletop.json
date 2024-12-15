@@ -1,5 +1,5 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/omoktabletop",
+    "inheritFrom": "game:blocktypes/wood/omoktabletop",
     "code": "omoktabletop",
     "variantgroups": [{ "code": "material", "states": ["aged"], "loadFromProperties": "block/wood" }],
     "skipVariants": ["*-larch-*"],

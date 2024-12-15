@@ -1,15 +1,10 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/chest-trunk",
+    "inheritFrom": "game:blocktypes/wood/chest-trunk",
     "code": "trunk",
     "attributes": {
-        "humanoidTraversalCost": 100,
-        "partialAttachable": true,
-        "inventoryClassName": "chest",
-        "variantByGroup": "side",
-        "variantByGroupInventory": null,
         // types and everything else is populated by VanillaVariants.Core.AssetsFinalize and VanillaVariants.CollectibleObjectPatches classes
-        "chestType": "Double",
         "handbook": { "groupBy": ["trunk-*"] },
+        "chestType": "Double",
         "loadTypePropertiesFrom": "vanvar:config/properties/chests-vanvar.json",
         "creativeTabs": ["general", "decorative", "vanvar"]
     },

@@ -1,41 +1,6 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/barrel",
+    "inheritFrom": "vanvar:blocktypes/wood/barrel",
     "code": "barrel",
-    "behaviors": [
-        {
-            "name": "VanillaVariants.BlockName",
-            "properties": {
-                "parts": ["block-barrel", " (", "material-{wood}", ")"]
-            }
-        },
-        { "name": "UnstableFalling" }
-    ],
-    "attributes": {
-        "fromVanVarMod": true,
-        "handbook": {
-            "groupBy": ["barrel-*"],
-            "extraSections": [{ "title": "", "text": "game:block-handbooktext-barrel" }]
-        },
-        "openSound": "game:sounds/block/barrelopen",
-        "closeSound": "game:sounds/block/barrelclose",
-        "partialAttachable": true,
-        "capacityLitres": 50
-    },
-    "variantgroups": [{ "code": "wood", "loadFromProperties": "wildcrafttree:block/wood" }],
-    "creativeinventory": {
-        "general": ["*"],
-        "decorative": ["*"],
-        "vanvar": ["*"]
-    },
-    "shape": { "base": "game:block/wood/barrel/empty" },
-    "textures": {
-        "bottom": { "base": "game:block/wood/debarked/{wood}" },
-        "aged": { "base": "game:block/wood/debarked/{wood}" }
-    },
-    "sounds": {
-        "place": "game:block/planks",
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "walk": "game:walk/wood"
-    }
+    "attributes": { "fromVanVarMod": true },
+    "variantgroups": [{ "code": "wood", "loadFromProperties": "wildcrafttree:block/wood" }]
 }

@@ -1,5 +1,5 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/palisadewall",
+    "inheritFrom": "game:blocktypes/wood/palisadewall",
     "code": "palisadewall",
     "behaviors": [
         {
@@ -17,23 +17,22 @@
         { "code": "layout", "states": ["wall", "cornerin", "cornerout"] },
         { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
     ],
-	  "skipVariants": [
-		  "*-three-lowerspiked-*",
-		  "*-four-lowerspiked-cornerin*",
-		  "*-four-lowerspiked-cornerout*",
-		  "*-four-toproped-cornerin-*",
-		  "*-four-toproped-cornerout-*",
-		  "*-three-toproped-cornerin-*",
-		  "*-three-toproped-cornerout-*",
-		  "*-three-lower-cornerin-*",
-		  "*-three-lower-cornerout-*",
-		  "*-three-top-cornerin-*",
-		  "*-three-top-cornerout-*",
-		  "*-three-halftop-cornerin-*",
-		  "*-three-halftop-cornerout-*"
-	  ],
+    "skipVariants": [
+        "*-three-lowerspiked-*",
+        "*-four-lowerspiked-cornerin*",
+        "*-four-lowerspiked-cornerout*",
+        "*-four-toproped-cornerin-*",
+        "*-four-toproped-cornerout-*",
+        "*-three-toproped-cornerin-*",
+        "*-three-toproped-cornerout-*",
+        "*-three-lower-cornerin-*",
+        "*-three-lower-cornerout-*",
+        "*-three-top-cornerin-*",
+        "*-three-top-cornerout-*",
+        "*-three-halftop-cornerin-*",
+        "*-three-halftop-cornerout-*"
+    ],
     "attributes": {
-     		"humanoidTraversalCost": 1000,
         "handbook": { "groupBy": ["palisadewall-*-{logs}-{type}-{layout}-*"] }
     },
     "creativeinventory": {
@@ -41,12 +40,12 @@
         "decorative": ["*-west"],
         "vanvar": ["*-west"]
     },
-	  "shapebytype": {
-		  "*-west": { "base": "game:block/wood/fence/palisade/palisade-{logs}-{type}-{layout}*", "rotateY": 0 },
-		  "*-east": { "base": "game:block/wood/fence/palisade/palisade-{logs}-{type}-{layout}*", "rotateY": 180 },
-		  "*-south": { "base": "game:block/wood/fence/palisade/palisade-{logs}-{type}-{layout}*", "rotateY": 90 },
-		  "*-north": { "base": "game:block/wood/fence/palisade/palisade-{logs}-{type}-{layout}*", "rotateY": 270 }
-	  },
+    "shapebytype": {
+        "*-west": { "base": "game:block/wood/fence/palisade/palisade-{logs}-{type}-{layout}*", "rotateY": 0 },
+        "*-east": { "base": "game:block/wood/fence/palisade/palisade-{logs}-{type}-{layout}*", "rotateY": 180 },
+        "*-south": { "base": "game:block/wood/fence/palisade/palisade-{logs}-{type}-{layout}*", "rotateY": 90 },
+        "*-north": { "base": "game:block/wood/fence/palisade/palisade-{logs}-{type}-{layout}*", "rotateY": 270 }
+    },
     "textures": {
         "aged": { "base": "game:block/wood/bark/{material}" },
         "oak2": { "base": "game:block/wood/debarked/{material}" }

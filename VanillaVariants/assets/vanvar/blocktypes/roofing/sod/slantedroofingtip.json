@@ -1,32 +1,36 @@
 {
-	  "inheritFrom": "game:blocktypes/roofing/slantedroofingtip",
+    "inheritFrom": "game:blocktypes/roofing/slantedroofingtip",
     "code": "slantedroofingtip",
     "behaviors": [
-        { "name": "VanillaVariants.BlockName",
+        {
+            "name": "VanillaVariants.BlockName",
             "properties": {
-              "parts": ["block-slantedroofingtip-sod-*", " (", "material-{material}", ")"] } }
+                "parts": ["block-slantedroofingtip-sod-*", " (", "material-{material}", ")"]
+            }
+        }
     ],
     "variantgroups": [
+        //
         { "code": "type", "states": ["sod"] },
         { "code": "material", "loadFromProperties": "block/wood" },
         { "code": "cover", "states": ["free", "snow"] }
     ],
     "attributes": {
-        "humanoidTraversalCost": 100,
-        "mapColorCode": "settlement",
         "handbook": { "groupBy": ["slantedroofingtip-sod-*"] }
     },
-    "shapeByType": { "*-sod-*": { "base": "game:block/roofing/tip/sod-{cover}"} },
+    "shapeByType": { "*-sod-*": { "base": "game:block/roofing/tip/sod-{cover}" } },
     "textures": {
         "aged-top": { "base": "game:block/wood/planks/{material}1" },
         "aged1": { "base": "game:block/wood/planks/{material}1" },
         "aged-side": { "base": "game:block/wood/planks/{material}1" }
     },
     "creativeinventory": { "general": ["*-free"], "decorative": ["*-free"], "vanvar": ["*-free"] },
-    "soundsByType": {"*-sod-*":{
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "place": "game:block/planks",
-        "walk": "game:walk/grass*"
-    }}
+    "soundsByType": {
+        "*-sod-*": {
+            "hit": "game:block/planks",
+            "break": "game:block/planks",
+            "place": "game:block/planks",
+            "walk": "game:walk/grass*"
+        }
+    }
 }

@@ -1,5 +1,5 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/sieve",
+    "inheritFrom": "game:blocktypes/wood/sieve",
     "code": "sieve",
     "behaviors": [
         {
@@ -12,12 +12,10 @@
         { "name": "GroundStorable", "properties": { "layout": "SingleCenter" } },
         { "name": "Unplaceable", "__comment": "The ground storable obsoletes this being a block. Should be an item, but is kept a block for backwards compatibility" },
         { "name": "RightClickPickup" }
-        //
     ],
     "variantgroups": [
         { "code": "wood", "states": ["aged"], "loadFromProperties": "block/wood" },
         { "code": "type", "states": ["linen", "copper", "tinbronze", "bismuthbronze", "blackbronze"] }
-        //
     ],
     "skipVariants": ["*-oak-*"],
     "allowedVariants": ["*-linen"],
@@ -33,7 +31,9 @@
             "oak": { "base": "game:block/wood/debarked/{wood}" }
         }
     },
-    "attributes": { "handbook": { "groupBy": ["sieve-*"] } },
+    "attributes": {
+        "handbook": { "groupBy": ["sieve-*"] }
+    },
     "shape": { "base": "game:block/wood/sieve" },
     "creativeinventory": {
         "general": ["*"],

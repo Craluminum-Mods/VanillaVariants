@@ -1,5 +1,5 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/fruitpress",
+    "inheritFrom": "game:blocktypes/wood/fruitpress",
     "code": "fruitpress",
     "creativeinventory": {
         "general": ["*-ns"],

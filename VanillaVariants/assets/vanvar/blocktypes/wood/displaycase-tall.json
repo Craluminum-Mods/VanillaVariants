@@ -1,5 +1,5 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/displaycase-tall",
+    "inheritFrom": "game:blocktypes/wood/displaycase-tall",
     "code": "talldisplaycase",
     "behaviors": [
         {
@@ -15,8 +15,7 @@
         "handbook": {
             "groupBy": ["talldisplaycase-*"],
             "extraSections": [{ "title": "", "text": "game:block-handbooktext-displaycase" }]
-        },
-        "height": 1
+        }
     },
     "skipVariants": ["*-oak"],
     "creativeinventory": {

@@ -1,38 +1,9 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/toolrack",
+    "inheritFrom": "vanvar:blocktypes/wood/toolrack",
     "code": "toolrack",
-    "creativeinventory": { "general": ["toolrack-*-north"], "decorative": ["toolrack-*-north"], "vanvar": ["toolrack-*-north"] },
-    "behaviors": [
-        {
-            "name": "VanillaVariants.BlockName",
-            "properties": {
-                "parts": ["block-toolrack-*", " (", "material-{type}", ")"]
-            }
-        },
-        { "name": "HorizontalAttachable" }
-    ],
-    "attributes": {
-        "fromVanVarMod": true,
-        "toolTransforms": {},
-        "handbook": { "groupBy": ["toolrack-*"] }
-    },
+    "attributes": { "fromVanVarMod": true },
     "variantgroups": [
         { "code": "type", "loadFromProperties": "wildcrafttree:block/wood" },
         { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
-    ],
-    "shapebytype": {
-        "*-north": { "base": "game:block/wood/toolrack", "rotateY": 180 },
-        "*-east": { "base": "game:block/wood/toolrack", "rotateY": 90 },
-        "*-south": { "base": "game:block/wood/toolrack", "rotateY": 0 },
-        "*-west": { "base": "game:block/wood/toolrack", "rotateY": 270 }
-    },
-    "textures": {
-        "aged": { "base": "game:block/wood/debarked/{type}" },
-        "rusty-iron": { "base": "game:block/metal/tarnished/rusty-iron" }
-    },
-    "sounds": {
-        "place": "game:block/planks",
-        "hit": "game:block/planks",
-        "break": "game:block/planks"
-    }
+    ]
 }

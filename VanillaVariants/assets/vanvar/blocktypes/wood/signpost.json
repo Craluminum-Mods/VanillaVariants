@@ -2,12 +2,17 @@
     "inheritFrom": "game:blocktypes/wood/signpost",
     "code": "signpost",
     "creativeinventory": { "general": ["*"], "decorative": ["*"], "vanvar": ["*"] },
-    "behaviors": [{
+    "behaviors": [
+        {
             "name": "VanillaVariants.BlockName",
             "properties": {
                 "parts": ["block-signpost", " (", "material-{type}", ")"]
-    }}],
-    "attributes": { "handbook": { "groupBy": ["signpost-*"] } },
+            }
+        }
+    ],
+    "attributes": {
+        "handbook": { "groupBy": ["signpost-*"] }
+    },
     "variantgroups": [{ "code": "type", "states": ["aged"], "loadFromProperties": "block/wood" }],
     "skipVariants": ["*-oak"],
     "shape": { "base": "game:block/wood/signpost/post" },

@@ -2,20 +2,20 @@
     "inheritFrom": "game:blocktypes/mechanics/helvehammerbase",
     "code": "helvehammerbase",
     "behaviors": [
-        { "name": "VanillaVariants.BlockName",
+        {
+            "name": "VanillaVariants.BlockName",
             "properties": {
-              "parts": ["block-helvehammerbase-north", " (", "material-{wood}", ")"] } },
-        { "name": "VanillaVariants.BlockDescription",
+                "parts": ["block-helvehammerbase-north", " (", "material-{wood}", ")"]
+            }
+        },
+        {
+            "name": "VanillaVariants.BlockDescription",
             "properties": {
-              "parts": ["blockdesc-helvehammerbase-north"] } },
+                "parts": ["blockdesc-helvehammerbase-north"]
+            }
+        },
         { "name": "HorizontalOrientable" }
     ],
-    "attributes": {
-        "handbook": {
-            "groupBy": ["helvehammerbase-*"]
-            // "extraSections": [{ "title": "game:block-handbooktitle-helvehammerbase-*", "text": "game:block-handbooktext-helvehammerbase-*" }]
-        }
-    },
     "creativeinventory": {
         "general": ["*-north"],
         "mechanics": ["*-north"],

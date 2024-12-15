@@ -1,5 +1,5 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/barrel",
+    "inheritFrom": "game:blocktypes/wood/barrel",
     "code": "barrel",
     "behaviors": [
         {

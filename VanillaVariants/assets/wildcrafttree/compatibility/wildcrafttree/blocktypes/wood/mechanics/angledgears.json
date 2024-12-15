@@ -1,67 +1,9 @@
 {
-    "inheritFrom": "game:blocktypes/mechanics/angledgears",
+    "inheritFrom": "vanvar:blocktypes/mechanics/angledgears",
     "code": "angledgears",
-    "attributes": {
-        "fromVanVarMod": true,
-        "mechanicalPower": { "rendererByType": {
-                "*-n": "generic", "*-e": "generic", "*-s": "generic",
-                "*-w": "generic", "*-u": "generic", "*-d": "generic",
-                "*-nn": "angledgearcage", "*-ee": "angledgearcage", "*-ss": "angledgearcage", "*-ww": "angledgearcage",
-                "*": "angledgears" } },
-        "handbook": { "groupBy": ["angledgears-*"] }
-    },
-    "behaviors": [
-        { "name": "VanillaVariants.BlockName",
-            "properties": { 
-              "parts": ["block-angledgears-*", " (", "material-{wood}", ")"] } },
-        { "name": "VanillaVariants.BlockDescription",
-            "properties": { 
-              "parts": ["blockdesc-angledgears-*"] } }
-    ],
+    "attributes": { "fromVanVarMod": true },
     "variantgroups": [
         { "code": "wood", "loadFromProperties": "wildcrafttree:block/wood" },
         { "code": "orientation", "states": ["n", "e", "s", "w", "u", "d", "en", "nw", "ws", "es", "nu", "nd", "eu", "ed", "su", "sd", "wu", "wd", "nn", "ss", "ww", "ee"] }
-    ],
-    "creativeinventory": {
-        "general": ["*-s"],
-        "mechanics": ["*-s"],
-        "vanvar": ["*-s"]
-    },
-    "shapeByType": {
-        "*-n": { "base": "game:block/wood/mechanics/angledgearbox-peg" },
-        "*-e": { "base": "game:block/wood/mechanics/angledgearbox-peg", "rotateY": 270 },
-        "*-s": { "base": "game:block/wood/mechanics/angledgearbox-peg", "rotateY": 180 },
-        "*-w": { "base": "game:block/wood/mechanics/angledgearbox-peg", "rotateY": 90 },
-        "*-u": { "base": "game:block/wood/mechanics/angledgearbox-peg", "rotateX": 90 },
-        "*-d": { "base": "game:block/wood/mechanics/angledgearbox-peg", "rotateX": 270 },
-
-        "*-en": { "base": "game:block/wood/mechanics/angledgearbox" },
-        "*-nw": { "base": "game:block/wood/mechanics/angledgearbox", "rotateY": 90 },
-        "*-ws": { "base": "game:block/wood/mechanics/angledgearbox", "rotateY": 180 },
-        "*-es": { "base": "game:block/wood/mechanics/angledgearbox", "rotateY": 270 },
-
-        "*-nu": { "base": "game:block/wood/mechanics/angledgearbox", "rotateX": 90, "rotateZ": 270 },
-        "*-nd": { "base": "game:block/wood/mechanics/angledgearbox", "rotateZ": 270 },
-        "*-eu": { "base": "game:block/wood/mechanics/angledgearbox", "rotateX": 90 },
-        "*-ed": { "base": "game:block/wood/mechanics/angledgearbox", "rotateX": 270 },
-
-        "*-su": { "base": "game:block/wood/mechanics/angledgearbox", "rotateX": 90, "rotateY": 0, "rotateZ": 90 },
-        "*-sd": { "base": "game:block/wood/mechanics/angledgearbox", "rotateX": 180, "rotateZ": 90 },
-
-        "*-wu": { "base": "game:block/wood/mechanics/angledgearbox", "rotateX": 90, "rotateZ": 180 },
-        "*-wd": { "base": "game:block/wood/mechanics/angledgearbox", "rotateX": 180, "rotateY": 90, "rotateZ": 90 },
-
-        "*-nn": { "base": "game:block/wood/mechanics/angledgearbox-cage", "rotateY": 90 },
-        "*-ee": { "base": "game:block/wood/mechanics/angledgearbox-cage", "rotateY": 0 },
-        "*-ss": { "base": "game:block/wood/mechanics/angledgearbox-cage", "rotateY": 270 },
-        "*-ww": { "base": "game:block/wood/mechanics/angledgearbox-cage", "rotateY": 180 }
-    },
-    "textures": { "wood": { "base": "game:block/wood/debarked/{wood}" } },
-    "drops": [{ "type": "block", "code": "angledgears-{wood}-s" }],
-    "sounds": {
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "place": "game:block/planks",
-        "walk": "game:walk/wood"
-    }
+    ]
 }

@@ -1,5 +1,5 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/trough-large",
+    "inheritFrom": "game:blocktypes/wood/trough-large",
     "code": "trough",
     "behaviors": [
         {
@@ -16,9 +16,8 @@
         }
     ],
     "attributes": {
-        // contentConfig and unsuitableFor are added by code
         "handbook": { "groupBy": ["trough-*-large-*"] },
-        "ignoreTextures": [ "charred", "aged", "bottom-inside" ]
+        "ignoreTextures": ["charred", "aged", "bottom-inside"]
     },
     "variantgroups": [
         { "code": "material", "states": ["aged"], "loadFromProperties": "block/wood" },

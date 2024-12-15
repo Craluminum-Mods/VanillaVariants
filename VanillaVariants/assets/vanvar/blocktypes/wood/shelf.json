@@ -1,5 +1,5 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/shelf",
+    "inheritFrom": "game:blocktypes/wood/shelf",
     "code": "shelf",
     "variantgroups": [
         { "code": "type", "states": ["aged"], "loadFromProperties": "block/wood" },

@@ -1,44 +1,10 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/sign",
+    "inheritFrom": "vanvar:blocktypes/wood/sign",
     "code": "sign",
-    "creativeinventory": { "general": ["*-ground-north"], "decorative": ["*-ground-north"], "vanvar": ["*-ground-north"] },
-    "behaviors": [{
-            "name": "VanillaVariants.BlockName",
-            "properties": {
-                "parts": ["block-sign-ground-*", " (", "material-{type}", ")"]
-    }}],
-    "attributes": {
-        "fromVanVarMod": true,
-        "handbook": { "groupBy": ["sign-*"] },
-        "maxWidth": 200,
-        "maxHeight": 165,
-        "fontSize": 20,
-        "textVoxelOffsetX": 0,
-        "textVoxelOffsetY": 0,
-        "textVoxelOffsetZ": 0,
-        "textVoxelWidth": 13,
-        "textVoxelHeight": 7
-    },
+    "attributes": { "fromVanVarMod": true },
     "variantgroups": [
         { "code": "type", "loadFromProperties": "wildcrafttree:block/wood" },
         { "code": "attachment", "states": ["ground", "wall"] },
         { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
-    ],
-    "shapebytype": {
-        "*-ground-north": { "base": "game:block/wood/sign", "rotateY": 0 },
-        "*-ground-east": { "base": "game:block/wood/sign", "rotateY": 270 },
-        "*-ground-south": { "base": "game:block/wood/sign", "rotateY": 180 },
-        "*-ground-west": { "base": "game:block/wood/sign", "rotateY": 90 },
-        "*-wall-north": { "base": "game:block/wood/signwall", "rotateY": 0 },
-        "*-wall-east": { "base": "game:block/wood/signwall", "rotateY": 270 },
-        "*-wall-south": { "base": "game:block/wood/signwall", "rotateY": 180 },
-        "*-wall-west": { "base": "game:block/wood/signwall", "rotateY": 90 }
-    },
-    "textures": { "all": { "base": "game:block/wood/debarked/{type}" } },
-    "sounds": {
-        "place": "game:block/planks",
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "walk": "game:walk/wood"
-    }
+    ]
 }

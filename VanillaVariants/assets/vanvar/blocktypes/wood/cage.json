@@ -1,5 +1,5 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/cage",
+    "inheritFrom": "game:blocktypes/wood/cage",
     "code": "cage",
     "behaviors": [
         {

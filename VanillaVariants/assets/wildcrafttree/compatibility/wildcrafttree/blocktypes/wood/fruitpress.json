@@ -1,41 +1,10 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/fruitpress",
+    "inheritFrom": "vanvar:blocktypes/wood/fruitpress",
     "code": "fruitpress",
-    "creativeinventory": {
-        "general": ["*-ns"],
-        "vanvar": ["*-ns"]
-    },
-    "attributes": {
-        "fromVanVarMod": true,
-        "textureCodeForBlockColor": "oak",
-        "handbook": { "groupBy": ["fruitpress-*"] }
-    },
+    "attributes": { "fromVanVarMod": true },
     "variantgroups": [
         { "code": "metal", "states": ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"] },
         { "code": "wood", "loadFromProperties": "wildcrafttree:block/wood" },
         { "code": "orientation", "states": ["ns", "we"] }
-    ],
-    "behaviors": [
-        {
-            "name": "VanillaVariants.BlockName",
-            "properties": {
-                "parts": ["block-fruitpress-*", " (", "material-{metal}", ")", " (", "material-{wood}", ")"]
-            }
-        },
-        { "name": "NWOrientable" }
-    ],
-    "shapeInventory": { "base": "game:block/wood/fruitpress/inventory" },
-    "shapebytype": {
-        "*-ns": { "base": "game:block/wood/fruitpress/part-static", "rotateY": 0 },
-        "*-we": { "base": "game:block/wood/fruitpress/part-static", "rotateY": 90 }
-    },
-    "textures": {
-        "oak": { "base": "game:block/wood/debarked/{wood}" },
-        "iron2": { "base": "game:block/metal/sheet/{metal}2" }
-    },
-    "sounds": {
-        "place": "game:block/planks",
-        "break": "game:block/planks",
-        "hit": "game:block/planks"
-    }
+    ]
 }

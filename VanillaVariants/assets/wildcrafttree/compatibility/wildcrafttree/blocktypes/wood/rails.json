@@ -1,37 +1,9 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/rails",
+    "inheritFrom": "vanvar:blocktypes/wood/rails",
     "code": "woodenrails",
-    "behaviors": [
-        {
-            "name": "VanillaVariants.BlockName",
-            "properties": {
-                "parts": ["block-woodenrails-*", " (", "material-{material}", ")"]
-            }
-        },
-        { "name": "Unstable" }
-    ],
-    "attributes": {
-        "fromVanVarMod": true,
-        "handbook": { "groupBy": ["woodenrails-*"] }
-    },
+    "attributes": { "fromVanVarMod": true },
     "variantgroups": [
         { "code": "material", "loadFromProperties": "wildcrafttree:block/wood" },
         { "code": "type", "states": ["curved_es", "curved_sw", "curved_wn", "curved_ne", "flat_ns", "flat_we", "raised_ns", "raised_we"] }
-    ],
-    "creativeinventory": { "general": ["*-flat_ns"], "decorative": ["*-flat_ns"], "vanvar": ["*-flat_ns"] },
-    "shapeByType": {
-        "*-curved_sw": { "base": "game:block/wood/rails/curved_es", "rotateY": 270 },
-        "*-curved_wn": { "base": "game:block/wood/rails/curved_es", "rotateY": 180 },
-        "*-curved_ne": { "base": "game:block/wood/rails/curved_es", "rotateY": 90 },
-        "*-flat_we": { "base": "game:block/wood/rails/flat_ns", "rotateY": 90 },
-        "*-raised_we": { "base": "game:block/wood/rails/raised_ns", "rotateY": 90 },
-        "*": { "base": "game:block/wood/rails/{type}" }
-    },
-    "textures": { "wood": { "base": "game:block/wood/debarked/{material}" } },
-    "sounds": {
-        "place": "game:block/planks",
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "walk": "game:walk/wood"
-    }
+    ]
 }

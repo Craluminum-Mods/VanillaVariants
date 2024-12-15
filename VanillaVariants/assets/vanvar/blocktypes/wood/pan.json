@@ -1,5 +1,5 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/pan",
+    "inheritFrom": "game:blocktypes/wood/pan",
     "code": "pan",
     "behaviors": [
         { "name": "SneakPlacing" },
@@ -13,12 +13,10 @@
         }
     ],
     "attributes": {
-        // panning drops are added by code
         "handbook": {
             "groupBy": ["pan-*"],
             "extraSections": [{ "title": "game:block-handbooktitle-pan-wooden", "text": "game:block-handbooktext-pan-wooden" }]
-        },
-        "heldItemPitchFollow": 0.5
+        }
     },
     "variantgroups": [{ "code": "type", "states": ["aged"], "loadFromProperties": "block/wood" }],
     "skipVariants": ["*-oak"],

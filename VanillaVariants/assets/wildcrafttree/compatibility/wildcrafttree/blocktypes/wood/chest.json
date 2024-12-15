@@ -1,44 +1,9 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/chest",
+    "inheritFrom": "vanvar:blocktypes/wood/chest",
     "code": "chest",
     "attributes": {
-        "humanoidTraversalCost": 100,  
-        "fromVanVarMod": true,
-        "partialAttachable": true,
-        "inventoryClassName": "chest",
-        "variantByGroup": "side",
-        "variantByGroupInventory": null,
         // types and everything else is populated by VanillaVariants.Core.AssetsFinalize and VanillaVariants.CollectibleObjectPatches classes
-        "chestType": "Normal",
-        "handbook": { "groupBy": ["chest-*"] },
-        "loadTypePropertiesFrom": "vanvar:config/properties/chests-wildcrafttree.json",
-        "creativeTabs": ["general", "decorative", "vanvar"]
-    },
-    "behaviors": [
-        {
-            "name": "VanillaVariants.ChestName",
-            "properties": {
-                "parts": ["block-normal-generic-chest-*", " (", "material-wood_type", ")"],
-                "replacePart": "wood_type",
-                "defaultName": "block-normal-generic-chest-*"
-            }
-        },
-		    { "name": "BoatableGenericTypedContainer" },
-        { "name": "Lockable" },
-        { "name": "Container" }
-    ],
-    "shapeInventory": { "base": "game:block/wood/chest/normal", "rotateY": 270 },
-    "shapeByType": {
-        "*-north": { "base": "game:block/wood/chest/normal", "rotateY": 0 },
-        "*-east": { "base": "game:block/wood/chest/normal", "rotateY": 270 },
-        "*-west": { "base": "game:block/wood/chest/normal", "rotateY": 90 },
-        "*-south": { "base": "game:block/wood/chest/normal", "rotateY": 180 }
-    },
-    "textures": {}, // populated by VanillaVariants.JsonPatches class
-    "sounds": {
-        "place": "game:block/planks",
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "walk": "game:walk/wood"
+        "fromVanVarMod": true,
+        "loadTypePropertiesFrom": "vanvar:config/properties/chests-wildcrafttree.json"
     }
 }

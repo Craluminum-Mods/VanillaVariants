@@ -1,42 +1,6 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/pan",
+    "inheritFrom": "vanvar:blocktypes/wood/pan",
     "code": "pan",
-    "behaviors": [
-        { "name": "SneakPlacing" },
-        { "name": "UnstableFalling", "properties": { "attachmentArea": { "x1": 5, "y1": 0, "z1": 5, "x2": 10, "y2": 0, "z2": 10 } } },
-        { "name": "RightClickPickup" },
-        {
-            "name": "VanillaVariants.BlockName",
-            "properties": {
-                "parts": ["block-pan-wooden", " (", "material-{type}", ")"]
-            }
-        }
-    ],
-    "attributes": {
-        // panning drops are added by code
-        "fromVanVarMod": true,
-        "handbook": {
-            "groupBy": ["pan-*"],
-            "extraSections": [{ "title": "game:block-handbooktitle-pan-wooden", "text": "game:block-handbooktext-pan-wooden" }]
-        },
-        "heldItemPitchFollow": 0.5
-    },
-    "variantgroups": [{ "code": "type", "loadFromProperties": "wildcrafttree:block/wood" }],
-    "shape": { "base": "game:block/wood/pan/empty" },
-    "textures": {
-        "all": { "base": "game:block/wood/debarked/{type}" },
-        "wood-generic": { "base": "game:block/wood/debarked/{type}" }
-    },
-    "creativeinventory": {
-        "general": ["*"],
-        "items": ["*"],
-        "tools": ["*"],
-        "vanvar": ["*"]
-    },
-    "sounds": {
-        "place": "game:block/planks",
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "walk": "game:walk/wood"
-    }
+    "attributes": { "fromVanVarMod": true },
+    "variantgroups": [{ "code": "type", "loadFromProperties": "wildcrafttree:block/wood" }]
 }

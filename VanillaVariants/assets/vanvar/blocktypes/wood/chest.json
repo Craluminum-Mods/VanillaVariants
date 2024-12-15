@@ -1,15 +1,10 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/chest",
+    "inheritFrom": "game:blocktypes/wood/chest",
     "code": "chest",
     "attributes": {
-        "humanoidTraversalCost": 100,  
-        "partialAttachable": true,
-        "inventoryClassName": "chest",
-        "variantByGroup": "side",
-        "variantByGroupInventory": null,
         // types and everything else is populated by VanillaVariants.Core.AssetsFinalize and VanillaVariants.CollectibleObjectPatches classes
-        "chestType": "Normal",
         "handbook": { "groupBy": ["chest-*"] },
+        "chestType": "Normal",
         "loadTypePropertiesFrom": "vanvar:config/properties/chests-vanvar.json",
         "creativeTabs": ["general", "decorative", "vanvar"]
     },
@@ -22,7 +17,7 @@
                 "defaultName": "block-normal-generic-chest-*"
             }
         },
-		    { "name": "BoatableGenericTypedContainer" },
+        { "name": "BoatableGenericTypedContainer" },
         { "name": "Lockable" },
         { "name": "Container" }
     ],

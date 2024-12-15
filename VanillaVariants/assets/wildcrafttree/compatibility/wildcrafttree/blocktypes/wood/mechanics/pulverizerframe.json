@@ -1,59 +1,10 @@
 {
-    "inheritFrom": "game:blocktypes/mechanics/pulverizerframe",
+    "inheritFrom": "vanvar:blocktypes/mechanics/pulverizerframe",
     "code": "pulverizerframe",
-    "behaviors": [
-        { "name": "VanillaVariants.BlockName",
-            "properties": {
-              "parts": ["block-pulverizerframe-north", " (", "rock-{stone}", ")", " (", "material-{wood}", ")"] }
-        },
-        { "name": "VanillaVariants.BlockDescription",
-            "properties": {
-              "parts": ["blockdesc-pulverizerframe-north"] } },
-        { "name": "HorizontalOrientable" }
-    ],
-    "attributes": {
-        "fromVanVarMod": true,
-        "handbook": {
-            "groupBy": ["pulverizerframe-*"],
-            "extraSections": [{ "title": "handbooktitle-pulverizer", "text": "handbooktext-pulverizer" }]
-        },
-        "mechanicalPower": { "renderer": "pulverizer" }
-    },
-    "creativeinventory": {
-        "general": ["*-north"],
-        "mechanics": ["*-north"],
-        "vanvar": ["*-north"]
-    },
+    "attributes": { "fromVanVarMod": true },
     "variantgroups": [
         { "code": "stone", "states": ["andesite", "granite", "basalt", "peridotite"] },
         { "code": "wood", "loadFromProperties": "wildcrafttree:block/wood" },
         { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
-    ],
-    "shapeInventory": { "base": "game:block/wood/mechanics/pulverizer-inventory" },
-    "textures": {
-        "oak": { "base": "game:block/wood/debarked/{wood}" },
-        "oak1": { "base": "game:block/wood/debarked/{wood}" },
-        "granite2": { "base": "game:block/stone/rock/{stone}2" },
-        "cap": { "base": "game:block/metal/sheet/tinbronze1" },
-        "capmetal-tinbronze": { "base": "game:block/metal/sheet/tinbronze1" },
-        "capmetal-bismuthbronze": { "base": "game:block/metal/sheet/bismuthbronze1" },
-        "capmetal-blackbronze": { "base": "game:block/metal/sheet/blackbronze1" },
-        "capmetal-iron": { "base": "game:block/metal/sheet/iron1" },
-        "capmetal-meteoriciron": { "base": "game:block/metal/sheet/meteoriciron1" },
-        "capmetal-steel": { "base": "game:block/metal/sheet/steel1" },
-        "capmetal-nometal": { "base": "game:block/transparent" }
-    },
-    "shapeByType": {
-        "*-north": { "base": "game:block/wood/mechanics/pulverizer-base", "rotateY": 90 },
-        "*-east": { "base": "game:block/wood/mechanics/pulverizer-base", "rotateY": 0 },
-        "*-south": { "base": "game:block/wood/mechanics/pulverizer-base", "rotateY": 270 },
-        "*-west": { "base": "game:block/wood/mechanics/pulverizer-base", "rotateY": 180 }
-    },
-    "drops": [{ "type": "block", "code": "pulverizerframe-{stone}-{wood}-north", "quantity": { "avg": 1 } }],
-    "sounds": {
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "place": "game:block/planks",
-        "walk": "game:walk/wood"
-    }
+    ]
 }

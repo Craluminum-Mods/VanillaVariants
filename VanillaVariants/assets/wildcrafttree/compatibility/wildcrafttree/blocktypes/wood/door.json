@@ -1,61 +1,9 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/woodtyped/door",
+    "inheritFrom": "vanvar:blocktypes/wood/woodtyped/door",
     "code": "door",
-    "behaviors": [
-        {
-            "name": "VanillaVariants.BlockName",
-            "properties": {
-                "parts": ["block-door-crude"]
-                // "parts": ["block-door-crude", " (", "material-{wood}", ")"]
-            }
-        },
-        {
-            "name": "VanillaVariants.BlockDescription",
-            "properties": {
-                "parts": ["blockdesc-door-log-*"]
-            }
-        },
-        { "name": "Lockable" },
-        { "name": "Door" },
-        { "name": "BlockEntityInteract" }
-    ],
     "variantgroups": [
         { "code": "style", "states": ["crude"] },
         { "code": "wood", "loadFromProperties": "wildcrafttree:block/wood" }
     ],
-    "attributes": {
-        "fromVanVarMod": true,
-        "handbook": { "groupBy": ["door-crude-*"] },
-        "airtight": false,
-        "width": 1,
-        "height": 2,
-        "openSound": "game:sounds/block/door",
-        "closeSound": "game:sounds/block/door",
-        "breakOnTriggerChance": 0.08,
-        "easingSpeed": 10
-    },
-    "creativeinventoryByType": {
-      "*":{
-          "general": ["*"],
-          "decorative": ["*"],
-          "vanvar": ["*"]
-      }
-    },
-    "shape": { "base": "game:block/wood/door/{style}" },
-    "textures": {
-        "top": {
-            "base": "game:block/wood/debarked/{wood}",
-            "blendedOverlays": [{ "base": "vanvar:block/door/rough-top", "blendMode": "Normal" }]
-        },
-        "bottom": {
-            "base": "game:block/wood/debarked/{wood}",
-            "blendedOverlays": [{ "base": "vanvar:block/door/rough-bottom", "blendMode": "Normal" }]
-        }
-    },
-    "sounds": {
-        "place": "game:block/planks",
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "walk": "game:walk/wood"
-    }
+    "attributes": { "fromVanVarMod": true }
 }

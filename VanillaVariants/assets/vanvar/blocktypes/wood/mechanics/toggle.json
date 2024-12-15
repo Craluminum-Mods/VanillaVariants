@@ -2,20 +2,20 @@
     "inheritFrom": "game:blocktypes/mechanics/toggle",
     "code": "woodentoggle",
     "behaviors": [
-        { "name": "VanillaVariants.BlockName",
+        {
+            "name": "VanillaVariants.BlockName",
             "properties": {
-              "parts": ["block-woodentoggle-ns", " (", "material-{wood}", ")"] } },
-        { "name": "VanillaVariants.BlockDescription",
+                "parts": ["block-woodentoggle-ns", " (", "material-{wood}", ")"]
+            }
+        },
+        {
+            "name": "VanillaVariants.BlockDescription",
             "properties": {
-              "parts": ["blockdesc-woodentoggle-ns"] } },
+                "parts": ["blockdesc-woodentoggle-ns"]
+            }
+        },
         { "name": "NWOrientable" }
     ],
-    "attributes": {
-        "handbook": {
-            "groupBy": ["woodentoggle-*"]
-            // "extraSections": [{ "title": "game:block-handbooktitle-woodentoggle-*", "text": "game:block-handbooktext-woodentoggle-*" }]
-        }
-    },
     "creativeinventory": {
         "general": ["*-ns"],
         "mechanics": ["*-ns"],

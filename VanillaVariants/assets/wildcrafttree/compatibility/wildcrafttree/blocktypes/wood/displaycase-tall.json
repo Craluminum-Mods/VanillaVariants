@@ -1,37 +1,6 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/displaycase-tall",
+    "inheritFrom": "vanvar:blocktypes/wood/displaycase-tall",
     "code": "talldisplaycase",
-    "behaviors": [
-        {
-            "name": "VanillaVariants.BlockName",
-            "properties": {
-                "parts": ["block-talldisplaycase-*", " (", "material-{type}", ")"]
-            }
-        },
-        { "name": "UnstableFalling", "properties": { "fallSound": null, "dustIntensity": 0 } }
-    ],
     "variantgroups": [{ "code": "type", "loadFromProperties": "wildcrafttree:block/wood" }],
-    "attributes": {
-        "fromVanVarMod": true,
-        "handbook": {
-            "groupBy": ["talldisplaycase-*"],
-            "extraSections": [{ "title": "", "text": "game:block-handbooktext-displaycase" }]
-        },
-        "height": 1
-    },
-    "creativeinventory": {
-        "general": ["*"],
-        "terrain": ["*"],
-        "vanvar": ["*"]
-    },
-    "shape": { "base": "game:block/wood/displaycase/tall-generic" },
-    "textures": {
-        "ebony": { "base": "game:block/wood/debarked/{type}" }
-    },
-    "sounds": {
-        "place": "game:block/planks",
-        "break": "game:block/glass",
-        "hit": "game:block/glass",
-        "walk": "game:walk/glass*"
-    }
+    "attributes": { "fromVanVarMod": true }
 }

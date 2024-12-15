@@ -1,39 +1,9 @@
 {
-    "inheritFrom": "game:blocktypes/mechanics/axle",
+    "inheritFrom": "vanvar:blocktypes/mechanics/axle",
     "code": "woodenaxle",
-    "behaviors": [
-        { "name": "VanillaVariants.BlockName",
-            "properties": {
-              "parts": ["block-woodenaxle-*", " (", "material-{wood}", ")"] } },
-        { "name": "VanillaVariants.BlockDescription",
-            "properties": {
-              "parts": ["blockdesc-woodenaxle-*"] } },
-        { "name": "Pillar", "properties": { "invertedPlacement": true } }
-    ],
-    "attributes": {
-        "fromVanVarMod": true,
-        "handbook": { "groupBy": ["woodenaxle-*"] }
-    },
-    "creativeinventory": {
-        "general": ["*-ud"],
-        "mechanics": ["*-ud"],
-        "vanvar": ["*-ud"]
-    },
+    "attributes": { "fromVanVarMod": true },
     "variantgroups": [
         { "code": "wood", "loadFromProperties": "wildcrafttree:block/wood" },
         { "code": "rotation", "states": ["ud", "ns", "we"] }
-    ],
-    "shapeByType": {
-        "*-ns": { "base": "game:block/wood/mechanics/axle", "rotateY": 90 },
-        "*-ud": { "base": "game:block/wood/mechanics/axle", "rotateZ": 90 },
-        "*-we": { "base": "game:block/wood/mechanics/axle", "rotateY": 0 }
-    },
-    "textures": { "wood": { "base": "game:block/wood/debarked/{wood}" } },
-    "drops": [{ "type": "block", "code": "woodenaxle-{wood}-ud", "quantity": { "avg": 1 } }],
-    "sounds": {
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "place": "game:block/planks",
-        "walk": "game:walk/wood"
-    }
+    ]
 }

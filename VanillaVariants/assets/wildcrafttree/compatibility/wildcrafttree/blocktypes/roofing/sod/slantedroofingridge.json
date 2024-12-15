@@ -1,38 +1,16 @@
 {
-	  "inheritFrom": "game:blocktypes/roofing/slantedroofingridge",
+    "inheritFrom": "vanvar:blocktypes/roofing/sod/slantedroofingridge",
     "code": "slantedroofingridge",
-    "behaviors": [
-        { "name": "VanillaVariants.BlockName",
-            "properties": {
-                "parts": ["block-slantedroofingridge-sod-*", " (", "material-{material}", ")"] } },
-        { "name": "NWOrientable" }
-    ],
     "variantgroups": [
         { "code": "type", "states": ["sod"] },
         { "code": "material", "loadFromProperties": "wildcrafttree:block/wood" },
         { "code": "orientation", "states": ["ns", "we"] },
         { "code": "cover", "states": ["free", "snow"] }
     ],
-    "attributes": {
-        "humanoidTraversalCost": 100,
-        "fromVanVarMod": true,
-        "mapColorCode": "settlement",
-        "handbook": { "groupBy": ["slantedroofingridge-sod-*"] }
-    },
-    "shapeByType": {
-		  "*-ns-*": { "base": "game:block/roofing/ridge/sod-{cover}"},
-		  "*-we-*": { "base": "game:block/roofing/ridge/sod-{cover}", "rotateY": 90 }
-    },
+    "attributes": { "fromVanVarMod": true },
     "textures": {
         "aged-top": { "base": "wildcrafttree:block/wood/planks/{material}1" },
         "aged1": { "base": "wildcrafttree:block/wood/planks/{material}1" },
         "aged-side": { "base": "wildcrafttree:block/wood/planks/{material}1" }
-    },
-    "creativeinventory": { "general": ["*-ns-free"], "decorative": ["*-ns-free"], "vanvar": ["*-ns-free"] },
-    "soundsByType": {"*-sod-*":{
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "place": "game:block/planks",
-        "walk": "game:walk/grass*"
-    }}
+    }
 }

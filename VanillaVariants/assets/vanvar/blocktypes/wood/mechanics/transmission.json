@@ -2,20 +2,25 @@
     "inheritFrom": "game:blocktypes/mechanics/transmission",
     "code": "transmission",
     "behaviors": [
-        { "name": "VanillaVariants.BlockName",
+        {
+            "name": "VanillaVariants.BlockName",
             "properties": {
-              "parts": ["block-transmission-ns", " (", "material-{wood}", ")"] } },
-        { "name": "VanillaVariants.BlockDescription",
+                "parts": ["block-transmission-ns", " (", "material-{wood}", ")"]
+            }
+        },
+        {
+            "name": "VanillaVariants.BlockDescription",
             "properties": {
-              "parts": ["blockdesc-transmission-ns"] } },
+                "parts": ["blockdesc-transmission-ns"]
+            }
+        },
         { "name": "NWOrientable" }
     ],
     "attributes": {
         "handbook": {
             "groupBy": ["transmission-*"],
             "extraSections": [{ "title": "", "text": "game:block-handbooktext-transmission-ns" }]
-        },
-        "mechanicalPower": { "renderer": "transmission" }
+        }
     },
     "creativeinventory": {
         "general": ["*-ns"],

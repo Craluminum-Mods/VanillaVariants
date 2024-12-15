@@ -1,47 +1,9 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/path",
+    "inheritFrom": "vanvar:blocktypes/wood/path",
     "code": "woodenpath",
-    "behaviors": [
-        {
-            "name": "VanillaVariants.BlockName",
-            "properties": {
-                "parts": ["block-woodenpath-*", " (", "material-{type}", ")"]
-            }
-        }, { "name": "Unstable" }, { "name": "NWOrientable" }
-    ],
-    "attributes": {
-        "fromVanVarMod": true,
-        "handbook": { "groupBy": ["woodenpath-*"] }
-    },
+    "attributes": { "fromVanVarMod": true },
     "variantgroups": [
         { "code": "type", "loadFromProperties": "wildcrafttree:block/wood" },
         { "code": "orientation", "states": ["ns", "we"] }
-    ],
-    "creativeinventory": { "general": ["*-ns"], "decorative": ["*-ns"], "vanvar": ["*-ns"] },
-    "shapeByType": {
-        "*-ns": { "base": "game:block/basic/flat" },
-        "*-we": { "base": "game:block/basic/flat", "rotateY": 90 }
-    },
-    "textures": {
-        "all": {
-            "base": "game:block/wood/path/normal1",
-            "blendedOverlays": [{ "base": "game:block/wood/debarked/{type}", "blendMode": "Overlay" }],
-            "alternates": [
-                { "base": "game:block/wood/path/normal2", "blendedOverlays": [{ "base": "game:block/wood/debarked/{type}", "blendMode": "Overlay" }] },
-                { "base": "game:block/wood/path/normal3", "blendedOverlays": [{ "base": "game:block/wood/debarked/{type}", "blendMode": "Overlay" }] },
-                { "base": "game:block/wood/path/normal4", "blendedOverlays": [{ "base": "game:block/wood/debarked/{type}", "blendMode": "Overlay" }] },
-                { "base": "game:block/wood/path/normal5", "blendedOverlays": [{ "base": "game:block/wood/debarked/{type}", "blendMode": "Overlay" }] },
-                { "base": "game:block/wood/path/normal6", "blendedOverlays": [{ "base": "game:block/wood/debarked/{type}", "blendMode": "Overlay" }] },
-                { "base": "game:block/wood/path/normal7", "blendedOverlays": [{ "base": "game:block/wood/debarked/{type}", "blendMode": "Overlay" }] },
-                { "base": "game:block/wood/path/normal8", "blendedOverlays": [{ "base": "game:block/wood/debarked/{type}", "blendMode": "Overlay" }] },
-                { "base": "game:block/wood/path/normal9", "blendedOverlays": [{ "base": "game:block/wood/debarked/{type}", "blendMode": "Overlay" }] }
-            ]
-        }
-    },
-    "sounds": {
-        "place": "game:block/planks",
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "walk": "game:walk/wood"
-    }
+    ]
 }

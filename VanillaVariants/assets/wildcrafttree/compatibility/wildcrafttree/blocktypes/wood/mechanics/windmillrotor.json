@@ -1,43 +1,9 @@
 {
-    "inheritFrom": "game:blocktypes/mechanics/windmillrotor",
+    "inheritFrom": "vanvar:blocktypes/mechanics/windmillrotor",
     "code": "windmillrotor",
-    "behaviors": [
-        { "name": "VanillaVariants.BlockName",
-            "properties": {
-              "parts": ["block-windmillrotor-north", " (", "material-{wood}", ")"] } },
-        { "name": "VanillaVariants.BlockDescription",
-            "properties": {
-              "parts": ["blockdesc-windmillrotor-*"] } },
-        { "name": "HorizontalOrientable" }
-    ],
-    "attributes": {
-        "fromVanVarMod": true,
-        "handbook": { "groupBy": ["windmillrotor-*"] }
-    },
+    "attributes": { "fromVanVarMod": true },
     "variantgroups": [
         { "code": "wood", "loadFromProperties": "wildcrafttree:block/wood" },
         { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
-    ],
-    "creativeinventory": {
-        "general": ["*-north"],
-        "mechanics": ["*-north"],
-        "vanvar": ["*-north"]
-    },
-    "shapebytype": {
-        "*-north": { "base": "game:block/wood/mechanics/windmillrotor", "rotateY": 90 },
-        "*-east": { "base": "game:block/wood/mechanics/windmillrotor", "rotateY": 0 },
-        "*-south": { "base": "game:block/wood/mechanics/windmillrotor", "rotateY": 270 },
-        "*-west": { "base": "game:block/wood/mechanics/windmillrotor", "rotateY": 180 }
-    },
-    "textures": {
-        "wood": { "base": "game:block/wood/debarked/{wood}" },
-        "cloth": { "base": "game:block/cloth/linen/normal1" }
-    },
-    "drops": [{ "type": "block", "code": "windmillrotor-{wood}-north" }],
-    "sounds": {
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "place": "game:block/planks",
-        "walk": "game:walk/wood"
-    }
+    ]
 }

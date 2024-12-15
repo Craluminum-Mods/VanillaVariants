@@ -1,7 +1,6 @@
 {
-	  "inheritFrom": "game:itemtypes/part/helvehammer",
+    "inheritFrom": "game:itemtypes/part/helvehammer",
     "code": "helvehammer",
-    "shape": { "base": "game:block/wood/mechanics/helvehammer" },
     "variantgroups": [
         { "code": "wood", "states": ["aged"], "loadFromProperties": "block/wood" },
         { "code": "metal", "states": ["tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"] }
@@ -17,17 +16,24 @@
         }
     },
     "behaviors": [
-        { "name": "VanillaVariants.ItemName",
+        {
+            "name": "VanillaVariants.ItemName",
             "properties": {
-              "parts": ["item-helvehammer-{metal}", " (", "material-{wood}", ")"] } },
-         { "name": "GroundStorable", 
-           "properties": { 
-             "layout": "WallHalves", 
-             "SprintKey": true,
-             "WallOffY": 3,
-             "selectionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 },
-             "collisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 1, "z2": 1 } } }
+                "parts": ["item-helvehammer-{metal}", " (", "material-{wood}", ")"]
+            }
+        },
+        {
+            "name": "GroundStorable",
+            "properties": {
+                "layout": "WallHalves",
+                "SprintKey": true,
+                "WallOffY": 3,
+                "selectionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 },
+                "collisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 1, "z2": 1 }
+            }
+        }
     ],
+    "shape": { "base": "game:block/wood/mechanics/helvehammer" },
     "textures": {
         "metal": { "base": "game:block/metal/ingot/{metal}" },
         "oak": { "base": "game:block/wood/debarked/{wood}" },

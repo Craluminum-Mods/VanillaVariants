@@ -1,33 +1,6 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/omoktabletop",
+    "inheritFrom": "vanvar:blocktypes/wood/omoktabletop",
     "code": "omoktabletop",
     "variantgroups": [{ "code": "material", "loadFromProperties": "wildcrafttree:block/wood" }],
-    "behaviors": [
-        {
-            "name": "VanillaVariants.BlockName",
-            "properties": {
-                "parts": ["block-omoktabletop", " (", "material-{material}", ")"]
-            }
-        },
-        { "name": "UnstableFalling" }
-    ],
-    "attributes": {
-        "fromVanVarMod": true,
-        "handbook": { "groupBy": ["omoktabletop-*"] }
-    },
-    "shape": { "base": "game:block/wood/omoktabletop" },
-    "textures": {
-        "larch": { "base": "game:block/wood/debarked/{material}" }
-    },
-    "creativeinventory": {
-        "general": ["*"],
-        "decorative": ["*"],
-        "vanvar": ["*"]
-    },
-    "sounds": {
-        "place": "game:block/planks",
-        "hit": "game:block/planks",
-        "break": "game:block/planks",
-        "walk": "game:walk/wood"
-    }
+    "attributes": { "fromVanVarMod": true }
 }

@@ -1,5 +1,5 @@
 {
-	  "inheritFrom": "game:blocktypes/wood/bucket",
+    "inheritFrom": "game:blocktypes/wood/bucket",
     "code": "woodbucket",
     "behaviors": [
         {
@@ -25,11 +25,12 @@
     },
     "variantgroups": [{ "code": "type", "states": ["aged"], "loadFromProperties": "block/wood" }],
     "skipVariants": ["*-oak"],
-	  "creativeinventoryStacks": [{
-			"tabs": ["general", "decorative", "vanvar"],
-			"stacks": [
-				{ "type": "block", "code": "woodbucket-{type}" }
-    ]}],
+    "creativeinventoryStacks": [
+        {
+            "tabs": ["general", "decorative", "vanvar"],
+            "stacks": [{ "type": "block", "code": "woodbucket-{type}" }]
+        }
+    ],
     "shape": { "base": "game:block/wood/bucket/empty" },
     "textures": {
         "sides": { "base": "game:block/wood/debarked/{type}" },

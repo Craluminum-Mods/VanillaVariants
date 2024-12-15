@@ -2,21 +2,25 @@
     "inheritFrom": "game:blocktypes/mechanics/clutch",
     "code": "clutch",
     "behaviors": [
-        { "name": "VanillaVariants.BlockName",
+        {
+            "name": "VanillaVariants.BlockName",
             "properties": {
-              "parts": ["block-clutch-north", " (", "material-{wood}", ")"] }
+                "parts": ["block-clutch-north", " (", "material-{wood}", ")"]
+            }
         },
-        { "name": "VanillaVariants.BlockDescription",
+        {
+            "name": "VanillaVariants.BlockDescription",
             "properties": {
-              "parts": ["blockdesc-brake-north"] } },
+                "parts": ["blockdesc-clutch-north"]
+            }
+        },
         { "name": "HorizontalOrientable" }
     ],
     "attributes": {
         "handbook": {
             "groupBy": ["clutch-*"],
             "extraSections": [{ "title": "", "text": "game:block-handbooktext-clutch-north" }]
-        },
-        "mechanicalPower": { "renderer": "clutch" }
+        }
     },
     "creativeinventory": {
         "general": ["*-north"],

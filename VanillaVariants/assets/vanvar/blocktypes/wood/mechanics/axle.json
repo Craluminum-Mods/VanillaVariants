@@ -2,15 +2,23 @@
     "inheritFrom": "game:blocktypes/mechanics/axle",
     "code": "woodenaxle",
     "behaviors": [
-        { "name": "VanillaVariants.BlockName",
+        {
+            "name": "VanillaVariants.BlockName",
             "properties": {
-              "parts": ["block-woodenaxle-*", " (", "material-{wood}", ")"] } },
-        { "name": "VanillaVariants.BlockDescription",
+                "parts": ["block-woodenaxle-*", " (", "material-{wood}", ")"]
+            }
+        },
+        {
+            "name": "VanillaVariants.BlockDescription",
             "properties": {
-              "parts": ["blockdesc-woodenaxle-*"] } },
+                "parts": ["blockdesc-woodenaxle-*"]
+            }
+        },
         { "name": "Pillar", "properties": { "invertedPlacement": true } }
     ],
-    "attributes": { "handbook": { "groupBy": ["woodenaxle-*"] } },
+    "attributes": {
+        "handbook": { "groupBy": ["woodenaxle-*"] }
+    },
     "creativeinventory": {
         "general": ["*-ud"],
         "mechanics": ["*-ud"],
