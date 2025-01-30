@@ -4,7 +4,9 @@
     "variantgroups": [{ "code": "metal", "loadFromProperties": "block/metal" }],
     "skipVariants": ["*-copper"],
     "shape": { "base": "game:block/metal/chute/section" },
-    "textures": { "copper1": { "base": "game:block/metal/sheet/{metal}1" } },
+    "textures": { 
+        "metaltex": { "base": "game:block/metal/sheet/{metal}1" }
+     },
     "creativeinventory": {
         "general": ["*"],
         "items": ["*"],
