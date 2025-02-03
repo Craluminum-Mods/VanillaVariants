@@ -43,7 +43,7 @@ public static class BlockAngledGears_OnNeighbourBlockChange_Patch
             orients = orients.Replace(lostFacings[0].Code[0].ToString() ?? "", "");
             BlockMPBase blockMpBase = world.GetBlock(__instance.CodeWithVariant("orientation", orients)) as BlockMPBase;
             blockMpBase.CallMethod("ExchangeBlockAt", world, pos);
-            world.BlockAccessor.GetBlockEntity(pos).GetBehavior<BEBehaviorMPBase>().LeaveNetwork();
+            world.BlockAccessor.GetBlockEntity(pos)?.GetBehavior<BEBehaviorMPBase>()?.LeaveNetwork();
             BlockFacing firstFace = BlockFacing.FromFirstLetter(orients[0]);
             BlockPos firstPos = pos.AddCopy(firstFace);
             BlockEntity blockEntity2 = world.BlockAccessor.GetBlockEntity(firstPos);
