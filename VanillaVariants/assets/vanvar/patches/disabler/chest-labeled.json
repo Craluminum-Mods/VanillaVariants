@@ -21,6 +21,7 @@
     // disable recipes
     { "file": "vanvar:recipes/grid/chest-labeled.json", "op": "addmerge", "path": "/0/enabled", "value": false, "condition": { "when": "VanillaVariants_Chest_Enabled", "isValue": "false" }, "side": "server" },
     { "file": "vanvar:recipes/grid/chest-labeled.json", "op": "addmerge", "path": "/1/enabled", "value": false, "condition": { "when": "VanillaVariants_Chest_Enabled", "isValue": "false" }, "side": "server" },
+    { "file": "vanvar:recipes/grid/chest-labeled.json", "op": "addmerge", "path": "/1/enabled", "value": false, "condition": { "when": "VanillaVariants_Sign_Enabled", "isValue": "false" }, "side": "server" },
 
     { "file": "vanvar:recipes/grid/chest-labeled-wt.json", "op": "addmerge", "path": "/0/enabled", "value": false, "condition": { "when": "VanillaVariants_Chest_Enabled", "isValue": "false" }, "side": "server" },
     { "file": "vanvar:recipes/grid/chest-labeled-wt.json", "op": "addmerge", "path": "/1/enabled", "value": false, "condition": { "when": "VanillaVariants_Chest_Enabled", "isValue": "false" }, "side": "server" },
