@@ -1,6 +1,6 @@
 [
     {
-        "file": "vanvar:itemtypes/wearable.json",
+        "file": "vanvar:itemtypes/wearable/hooved.json",
         "op": "addmerge",
         "path": "/enabled",
         "value": false,
