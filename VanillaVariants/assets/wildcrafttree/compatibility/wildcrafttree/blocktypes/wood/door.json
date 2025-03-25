@@ -1,5 +1,5 @@
 {
-    "inheritFrom": "vanvar:blocktypes/wood/woodtyped/door",
+    "inheritFrom": "vanvar:blocktypes/wood/door",
     "code": "door",
     "variantgroups": [
         { "code": "style", "states": ["crude"] },
