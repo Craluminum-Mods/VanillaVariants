@@ -5,5 +5,6 @@
         // types and everything else is populated by VanillaVariants.Core.AssetsFinalize and VanillaVariants.CollectibleObjectPatches classes
         "fromVanVarMod": true,
         "loadTypePropertiesFrom": "vanvar:config/properties/chests-wildcrafttree.json"
-    }
+    },
+    "textures": {} // populated by VanillaVariants.JsonPatches class
 }
