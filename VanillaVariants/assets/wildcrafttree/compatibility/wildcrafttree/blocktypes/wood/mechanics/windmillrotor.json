@@ -1,5 +1,5 @@
 {
-    "inheritFrom": "vanvar:blocktypes/mechanics/windmillrotor",
+    "inheritFrom": "vanvar:blocktypes/wood/mechanics/windmillrotor",
     "code": "windmillrotor",
     "attributes": { "fromVanVarMod": true },
     "variantgroups": [

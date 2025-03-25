@@ -1,5 +1,5 @@
 {
-    "inheritFrom": "vanvar:blocktypes/mechanics/brake",
+    "inheritFrom": "vanvar:blocktypes/wood/mechanics/brake",
     "code": "brake",
     "attributes": { "fromVanVarMod": true },
     "variantgroups": [

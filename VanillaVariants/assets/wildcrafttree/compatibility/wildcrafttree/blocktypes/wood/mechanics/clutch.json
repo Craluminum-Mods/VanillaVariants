@@ -1,5 +1,5 @@
 {
-    "inheritFrom": "vanvar:blocktypes/mechanics/clutch",
+    "inheritFrom": "vanvar:blocktypes/wood/mechanics/clutch",
     "code": "clutch",
     "attributes": { "fromVanVarMod": true },
     "variantgroups": [

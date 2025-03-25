@@ -1,5 +1,5 @@
 {
-    "inheritFrom": "vanvar:blocktypes/mechanics/axle",
+    "inheritFrom": "vanvar:blocktypes/wood/mechanics/axle",
     "code": "woodenaxle",
     "attributes": { "fromVanVarMod": true },
     "variantgroups": [

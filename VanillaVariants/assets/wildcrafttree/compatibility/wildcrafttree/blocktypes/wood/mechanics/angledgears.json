@@ -1,5 +1,5 @@
 {
-    "inheritFrom": "vanvar:blocktypes/mechanics/angledgears",
+    "inheritFrom": "vanvar:blocktypes/wood/mechanics/angledgears",
     "code": "angledgears",
     "attributes": { "fromVanVarMod": true },
     "variantgroups": [

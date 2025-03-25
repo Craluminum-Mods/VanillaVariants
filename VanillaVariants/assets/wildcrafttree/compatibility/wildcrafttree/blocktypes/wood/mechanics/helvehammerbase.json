@@ -1,5 +1,5 @@
 {
-    "inheritFrom": "vanvar:blocktypes/mechanics/helvehammerbase",
+    "inheritFrom": "vanvar:blocktypes/wood/mechanics/helvehammerbase",
     "code": "helvehammerbase",
     "attributes": { "fromVanVarMod": true },
     "variantgroups": [

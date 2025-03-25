@@ -1,5 +1,5 @@
 {
-    "inheritFrom": "vanvar:blocktypes/mechanics/pulverizerframe",
+    "inheritFrom": "vanvar:blocktypes/wood/mechanics/pulverizerframe",
     "code": "pulverizerframe",
     "attributes": { "fromVanVarMod": true },
     "variantgroups": [

@@ -1,5 +1,5 @@
 {
-    "inheritFrom": "vanvar:blocktypes/mechanics/transmission",
+    "inheritFrom": "vanvar:blocktypes/wood/mechanics/transmission",
     "code": "transmission",
     "attributes": { "fromVanVarMod": true },
     "creativeinventory": {

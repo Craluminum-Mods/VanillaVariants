@@ -1,5 +1,5 @@
 {
-    "inheritFrom": "vanvar:blocktypes/mechanics/toggle",
+    "inheritFrom": "vanvar:blocktypes/wood/mechanics/toggle",
     "code": "woodentoggle",
     "attributes": { "fromVanVarMod": true },
     "variantgroups": [
