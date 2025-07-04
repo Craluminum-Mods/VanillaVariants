@@ -14,13 +14,16 @@
     ],
     "attributes": {
         "attachableToEntity": {
+            "texturePrefixCode": "hoovedwearables-{category}-{type}-{color}",
             "categoryCodeByType": {
                 "*-head-bridle*": "bridle",
                 "*-middleback-saddle1*": "saddle",
                 "*-lowerbackside-saddlebags*": "sidebags"
             },
             "attachedShapeBySlotCode": {
-                "*": { "base": "game:item/wearable/hooved/{type}-elk" }
+                "head": { "base": "game:item/wearable/hooved/{type}-elk" },
+                "middleback": { "base": "game:item/wearable/hooved/{type}-elk" },
+                "lowerbackside": { "base": "game:item/wearable/hooved/{type}-elk" }
             }
         },
         "controlSchemeByType": {
