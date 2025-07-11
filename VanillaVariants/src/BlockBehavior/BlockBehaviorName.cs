@@ -17,12 +17,7 @@ public class BlockBehaviorName : BlockBehavior
     public override void Initialize(JsonObject properties)
     {
         base.Initialize(properties);
-
-        parts = properties["parts"].AsObject<List<string>>();
-        if (parts != null && parts.Any())
-        {
-            parts = parts.Select(x => Lang.GetMatching(x)).ToList();
-        }
+        parts = properties["parts"].AsObject(new List<string>());
     }
 
     public override void GetPlacedBlockName(StringBuilder sb, IWorldAccessor world, BlockPos pos) => ConstructName(sb);
@@ -34,7 +29,7 @@ public class BlockBehaviorName : BlockBehavior
         if (parts != null && parts.Any())
         {
             sb.Clear();
-            sb.Append(string.Join("", parts));
+            sb.Append(string.Join("", parts.Select(x => Lang.GetMatching(x))));
         }
     }
 }
