@@ -22,7 +22,6 @@ public class Config
     public bool ArchimedesScrew { get; set; } = true;
     public bool ArmorStand { get; set; } = true;
     public bool Barrel { get; set; } = true;
-    public bool Basket { get; set; } = true;
     public bool Bed { get; set; } = true;
     public bool Cage { get; set; } = true;
     public bool Chair { get; set; } = true;
@@ -186,7 +185,6 @@ public class Config
         ArchimedesScrew = previousConfig.ArchimedesScrew;
         ArmorStand = previousConfig.ArmorStand;
         Barrel = previousConfig.Barrel;
-        Basket = previousConfig.Basket;
         Bed = previousConfig.Bed;
         Cage = previousConfig.Cage;
         Chair = previousConfig.Chair;

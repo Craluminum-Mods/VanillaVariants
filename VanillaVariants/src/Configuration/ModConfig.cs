@@ -43,7 +43,6 @@ static class ModConfig
         api.World.Config.SetBool("VanillaVariants_ArchimedesScrew_Enabled", config.ArchimedesScrew);
         api.World.Config.SetBool("VanillaVariants_ArmorStand_Enabled", config.ArmorStand);
         api.World.Config.SetBool("VanillaVariants_Barrel_Enabled", config.Barrel);
-        api.World.Config.SetBool("VanillaVariants_Basket_Enabled", config.Basket);
         api.World.Config.SetBool("VanillaVariants_Bed_Enabled", config.Bed);
         api.World.Config.SetBool("VanillaVariants_Cage_Enabled", config.Cage);
         api.World.Config.SetBool("VanillaVariants_Chair_Enabled", config.Chair);

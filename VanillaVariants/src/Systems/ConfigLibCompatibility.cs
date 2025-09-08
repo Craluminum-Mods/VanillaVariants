@@ -87,7 +87,6 @@ public class ConfigLibCompatibility
             ImGui.TextWrapped(Lang.Get(textBlocksAndItems));
             config.ArmorStand = OnCheckBox(id, config.ArmorStand, nameof(config.ArmorStand));
             config.Barrel = OnCheckBox(id, config.Barrel, nameof(config.Barrel));
-            config.Basket = OnCheckBox(id, config.Basket, nameof(config.Basket));
             config.Bed = OnCheckBox(id, config.Bed, nameof(config.Bed));
             config.Cage = OnCheckBox(id, config.Cage, nameof(config.Cage));
             config.Chair = OnCheckBox(id, config.Chair, nameof(config.Chair));
