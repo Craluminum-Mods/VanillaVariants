@@ -77,7 +77,6 @@ public class ConfigLibCompatibility
             ImGui.NewLine();
             ImGui.TextWrapped(Lang.Get(textCraftable));
             config.CraftableCage = OnCheckBox(id, config.CraftableCage, nameof(config.CraftableCage));
-            config.CraftableWagonWheels = OnCheckBox(id, config.CraftableWagonWheels, nameof(config.CraftableWagonWheels));
             config.CraftableWoodenRails = OnCheckBox(id, config.CraftableWoodenRails, nameof(config.CraftableWoodenRails));
             ImGui.NewLine();
             ImGui.TextWrapped(Lang.Get(textQuern));
@@ -114,7 +113,6 @@ public class ConfigLibCompatibility
             config.Toolrack = OnCheckBox(id, config.Toolrack, nameof(config.Toolrack));
             config.TroughLarge = OnCheckBox(id, config.TroughLarge, nameof(config.TroughLarge));
             config.TroughSmall = OnCheckBox(id, config.TroughSmall, nameof(config.TroughSmall));
-            config.WagonWheels = OnCheckBox(id, config.WagonWheels, nameof(config.WagonWheels));
             config.WoodBucket = OnCheckBox(id, config.WoodBucket, nameof(config.WoodBucket));
             config.WoodenPan = OnCheckBox(id, config.WoodenPan, nameof(config.WoodenPan));
             config.WoodenPath = OnCheckBox(id, config.WoodenPath, nameof(config.WoodenPath));

@@ -12,7 +12,6 @@ public class Config
     public bool ResolveQuernAndAxleRelationship { get; set; } = true;
 
     public bool CraftableCage { get; set; }
-    public bool CraftableWagonWheels { get; set; }
     public bool CraftableWoodenRails { get; set; }
 
     public bool DecorativeQuern { get; set; } = true;
@@ -64,7 +63,6 @@ public class Config
     public bool Toolrack { get; set; } = true;
     public bool TroughLarge { get; set; } = true;
     public bool TroughSmall { get; set; } = true;
-    public bool WagonWheels { get; set; } = true;
     public bool WoodBucket { get; set; } = true;
     public bool WoodenPan { get; set; } = true;
     public bool WoodenPath { get; set; } = true;
@@ -176,7 +174,6 @@ public class Config
         ResolveMechanicalBlockIssues = previousConfig.ResolveMechanicalBlockIssues;
         ResolveQuernAndAxleRelationship = previousConfig.ResolveQuernAndAxleRelationship;
         CraftableCage = previousConfig.CraftableCage;
-        CraftableWagonWheels = previousConfig.CraftableWagonWheels;
         CraftableWoodenRails = previousConfig.CraftableWoodenRails;
         DecorativeQuern = previousConfig.DecorativeQuern;
         FunctionalQuern = previousConfig.FunctionalQuern;
@@ -227,7 +224,6 @@ public class Config
         Toolrack = previousConfig.Toolrack;
         TroughLarge = previousConfig.TroughLarge;
         TroughSmall = previousConfig.TroughSmall;
-        WagonWheels = previousConfig.WagonWheels;
         WoodBucket = previousConfig.WoodBucket;
         WoodenPan = previousConfig.WoodenPan;
         WoodenPath = previousConfig.WoodenPath;

@@ -33,7 +33,6 @@ static class ModConfig
         }
 
         api.World.Config.SetBool("VanillaVariants_CraftableCage_Enabled", config.CraftableCage);
-        api.World.Config.SetBool("VanillaVariants_CraftableWagonWheels_Enabled", config.CraftableWagonWheels);
         api.World.Config.SetBool("VanillaVariants_CraftableWoodenRails_Enabled", config.CraftableWoodenRails);
 
         api.World.Config.SetBool("VanillaVariants_DecorativeQuern_Enabled", config.DecorativeQuern);
@@ -85,7 +84,6 @@ static class ModConfig
         api.World.Config.SetBool("VanillaVariants_Toolrack_Enabled", config.Toolrack);
         api.World.Config.SetBool("VanillaVariants_TroughLarge_Enabled", config.TroughLarge);
         api.World.Config.SetBool("VanillaVariants_TroughSmall_Enabled", config.TroughSmall);
-        api.World.Config.SetBool("VanillaVariants_WagonWheels_Enabled", config.WagonWheels);
         api.World.Config.SetBool("VanillaVariants_WoodBucket_Enabled", config.WoodBucket);
         api.World.Config.SetBool("VanillaVariants_WoodenPan_Enabled", config.WoodenPan);
         api.World.Config.SetBool("VanillaVariants_WoodenPath_Enabled", config.WoodenPath);

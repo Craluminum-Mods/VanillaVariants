@@ -28,7 +28,6 @@
     "Config.Setting.ResolveQuernAndAxleRelationship": "Resolve Quern And Axle Relationship",
 
     "Config.Setting.CraftableCage": "Make Cage Craftable",
-    "Config.Setting.CraftableWagonWheels": "Make Wagon Wheels Craftable",
     "Config.Setting.CraftableWoodenRails": "Make Wooden Rails Craftable",
 
     "Config.Setting.DecorativeQuern": "Enable Decorative Quern",
@@ -81,7 +80,6 @@
     "Config.Setting.Trapdoor": "Enable Trapdoor",
     "Config.Setting.TroughLarge": "Enable Trough Large",
     "Config.Setting.TroughSmall": "Enable Trough Small",
-    "Config.Setting.WagonWheels": "Enable Wagon Wheels",
     "Config.Setting.WoodBucket": "Enable Wood Bucket",
     "Config.Setting.WoodenPan": "Enable Wooden Pan",
     "Config.Setting.WoodenPath": "Enable Wooden Path",
