@@ -34,7 +34,6 @@ public class Config
     public bool Firewood { get; set; } = true;
     public bool Forge { get; set; } = true;
     public bool FruitPress { get; set; } = true;
-    public bool HandBasket { get; set; } = true;
     public bool Henbox { get; set; } = true;
     public bool Hopper { get; set; } = true;
     public bool Ladder { get; set; } = true;
@@ -199,7 +198,6 @@ public class Config
         Firewood = previousConfig.Firewood;
         Forge = previousConfig.Forge;
         FruitPress = previousConfig.FruitPress;
-        HandBasket = previousConfig.HandBasket;
         Henbox = previousConfig.Henbox;
         Hopper = previousConfig.Hopper;
         Ladder = previousConfig.Ladder;

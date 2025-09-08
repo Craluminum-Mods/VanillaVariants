@@ -55,7 +55,6 @@ static class ModConfig
         api.World.Config.SetBool("VanillaVariants_Firewood_Enabled", config.Firewood);
         api.World.Config.SetBool("VanillaVariants_Forge_Enabled", config.Forge);
         api.World.Config.SetBool("VanillaVariants_FruitPress_Enabled", config.FruitPress);
-        api.World.Config.SetBool("VanillaVariants_HandBasket_Enabled", config.HandBasket);
         api.World.Config.SetBool("VanillaVariants_Henbox_Enabled", config.Henbox);
         api.World.Config.SetBool("VanillaVariants_Hopper_Enabled", config.Hopper);
         api.World.Config.SetBool("VanillaVariants_Ladder_Enabled", config.Ladder);

@@ -97,7 +97,6 @@ public class ConfigLibCompatibility
             config.Firewood = OnCheckBox(id, config.Firewood, nameof(config.Firewood));
             config.Forge = OnCheckBox(id, config.Forge, nameof(config.Forge));
             config.FruitPress = OnCheckBox(id, config.FruitPress, nameof(config.FruitPress));
-            config.HandBasket = OnCheckBox(id, config.HandBasket, nameof(config.HandBasket));
             config.Henbox = OnCheckBox(id, config.Henbox, nameof(config.Henbox));
             config.Ladder = OnCheckBox(id, config.Ladder, nameof(config.Ladder));
             config.MetalDoor = OnCheckBox(id, config.MetalDoor, nameof(config.MetalDoor));
