@@ -86,7 +86,6 @@ static class ModConfig
         api.World.Config.SetBool("VanillaVariants_TroughSmall_Enabled", config.TroughSmall);
         api.World.Config.SetBool("VanillaVariants_WoodBucket_Enabled", config.WoodBucket);
         api.World.Config.SetBool("VanillaVariants_WoodenPan_Enabled", config.WoodenPan);
-        api.World.Config.SetBool("VanillaVariants_WoodenPath_Enabled", config.WoodenPath);
         api.World.Config.SetBool("VanillaVariants_WoodenRails_Enabled", config.WoodenRails);
 
         foreach ((string name, Dictionary<string, bool> metals) in config.ChuteCraftable)

@@ -115,7 +115,6 @@ public class ConfigLibCompatibility
             config.TroughSmall = OnCheckBox(id, config.TroughSmall, nameof(config.TroughSmall));
             config.WoodBucket = OnCheckBox(id, config.WoodBucket, nameof(config.WoodBucket));
             config.WoodenPan = OnCheckBox(id, config.WoodenPan, nameof(config.WoodenPan));
-            config.WoodenPath = OnCheckBox(id, config.WoodenPath, nameof(config.WoodenPath));
             config.WoodenRails = OnCheckBox(id, config.WoodenRails, nameof(config.WoodenRails));
             ImGui.NewLine();
             ImGui.TextWrapped(Lang.Get(textMechanics));

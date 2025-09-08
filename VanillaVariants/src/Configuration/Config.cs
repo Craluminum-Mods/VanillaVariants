@@ -65,7 +65,6 @@ public class Config
     public bool TroughSmall { get; set; } = true;
     public bool WoodBucket { get; set; } = true;
     public bool WoodenPan { get; set; } = true;
-    public bool WoodenPath { get; set; } = true;
     public bool WoodenRails { get; set; } = true;
 
     public Dictionary<string, Dictionary<string, float>> ChuteFlowRates { get; set; } = new()
@@ -226,7 +225,6 @@ public class Config
         TroughSmall = previousConfig.TroughSmall;
         WoodBucket = previousConfig.WoodBucket;
         WoodenPan = previousConfig.WoodenPan;
-        WoodenPath = previousConfig.WoodenPath;
         WoodenRails = previousConfig.WoodenRails;
     }
 }
