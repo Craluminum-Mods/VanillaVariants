@@ -31,53 +31,6 @@ public static class CollectibleObjectPatches
         }
     }
 
-    public static void PatchPitKiln(this ICoreAPI api, Block block)
-    {
-        if (block is not BlockPitkiln)
-        {
-            return;
-        }
-
-        Item[] firewoodItems = Array.Empty<Item>();
-        firewoodItems = firewoodItems
-            .Concat(api.World.SearchItems(new AssetLocation("vanvar:firewood-*")))
-            .Concat(api.World.SearchItems(new AssetLocation("wildcrafttree:firewood-*")))
-            .ToArray();
-
-        if (!firewoodItems.Any())
-        {
-            return;
-        }
-
-        JsonItemStackBuildStage[] fuel = block?.Attributes?["buildMats"]?["fuel"]?.AsObject<JsonItemStackBuildStage[]>();
-        if (fuel == null)
-        {
-            return;
-        }
-
-        JsonItemStackBuildStage firewoodJsonStack = fuel.FirstOrDefault(x => x.Code.ToString().Contains("firewood"));
-        if (firewoodJsonStack == null)
-        {
-            return;
-        }
-
-        foreach (Item item in firewoodItems)
-        {
-            JsonItemStackBuildStage newJsonStack = new()
-            {
-                Type = item.ItemClass,
-                Code = item.Code,
-                Quantity = firewoodJsonStack.Quantity,
-                EleCode = firewoodJsonStack.EleCode,
-                BurnTimeHours = firewoodJsonStack.BurnTimeHours
-            };
-
-            fuel = fuel.Append(newJsonStack);
-        }
-
-        block.Attributes.Token["buildMats"]["fuel"] = JToken.FromObject(fuel);
-    }
-
     public static void PatchQuern(this ICoreAPI api, Block block)
     {
         if (!Core.Config.ResolveQuernAndAxleRelationship)

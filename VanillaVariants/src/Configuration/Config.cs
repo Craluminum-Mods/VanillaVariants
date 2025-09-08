@@ -29,7 +29,6 @@ public class Config
     public bool ChuteSectionItem { get; set; } = true;
     public bool CrudeDoor { get; set; } = true;
     public bool DisplayCase { get; set; } = true;
-    public bool Firewood { get; set; } = true;
     public bool Forge { get; set; } = true;
     public bool FruitPress { get; set; } = true;
     public bool Henbox { get; set; } = true;
@@ -189,7 +188,6 @@ public class Config
         ChuteSectionItem = previousConfig.ChuteSectionItem;
         CrudeDoor = previousConfig.CrudeDoor;
         DisplayCase = previousConfig.DisplayCase;
-        Firewood = previousConfig.Firewood;
         Forge = previousConfig.Forge;
         FruitPress = previousConfig.FruitPress;
         Henbox = previousConfig.Henbox;
