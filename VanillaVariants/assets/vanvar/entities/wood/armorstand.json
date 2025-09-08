@@ -1,12 +1,12 @@
 {
-    "inheritFrom": "game:entities/land/armorstand",
+    "inheritFrom": "game:entities/nonliving/armorstand",
     "code": "armorstand",
     "class": "VV_EntityWoodArmorStand",
     "variantgroups": [{ "code": "wood", "states": ["aged"], "loadFromProperties": "block/wood" }],
     "skipVariants": ["*-oak"],
     "client": {
         "renderer": "Shape",
-        "shape": { "base": "game:entity/land/armorstand" },
+        "shape": { "base": "game:entity/nonliving/armorstand" },
         "textures": { "oak": { "base": "game:block/wood/debarked/{wood}" } },
         "behaviors": [
             //

@@ -14,7 +14,7 @@
             }
         }
     ],
-    "shape": { "base": "game:entity/land/armorstand" },
+    "shape": { "base": "game:entity/nonliving/armorstand" },
     "textures": { "oak": { "base": "game:block/wood/debarked/{wood}" } },
     "creativeinventory": { "general": ["*"], "items": ["*"], "vanvar": ["*"] }
 }
