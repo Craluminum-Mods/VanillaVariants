@@ -21,7 +21,6 @@
 
     "Config.Setting.Override": "Override",
 
-    "Config.Setting.ExperimentalOverlayTest": "Experimental Overlay Test",
     "Config.Setting.ResolveBarrelSounds": "Resolve Barrel Sounds",
     "Config.Setting.ResolveChestNames": "Resolve Chest Names",
     "Config.Setting.ResolveMechanicalBlockIssues": "Resolve Mechanical Block Issues",

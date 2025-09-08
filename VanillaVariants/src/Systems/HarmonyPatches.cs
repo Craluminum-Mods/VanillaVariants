@@ -12,10 +12,6 @@ public class HarmonyPatches : ModSystem
 
     public override void Start(ICoreAPI api)
     {
-        if (Core.Config.ExperimentalOverlayTest)
-        {
-            HarmonyInstance.Patch(original: typeof(ColorBlend).GetMethod(nameof(ColorBlend.Overlay)), prefix: typeof(Overlay_Patch).GetMethod(nameof(Overlay_Patch.Prefix)));
-        }
         if (Core.Config.ResolveChestNames)
         {
             HarmonyInstance.Patch(original: typeof(BlockGenericTypedContainer).GetMethod(nameof(BlockGenericTypedContainer.GetHeldItemName)), postfix: typeof(BlockGenericTypedContainer_GetHeldItemName_Patch).GetMethod(nameof(BlockGenericTypedContainer_GetHeldItemName_Patch.Postfix)));

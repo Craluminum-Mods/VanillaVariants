@@ -15,7 +15,6 @@
   "Config.Settings.DoubleChestQuantitySlots": "Количество слотов (двойной сундук)",
   "Config.Settings.MetalDoorsForSteelProduction": "Металлические двери для производства стали",
   "Config.Setting.Override": "Переопределить",
-  "Config.Setting.ExperimentalOverlayTest": "Экспериментальный тест наложения",
   "Config.Setting.ResolveBarrelSounds": "Устранение звуков ствола",
   "Config.Setting.ResolveChestNames": "Разрешить названия сундуков",
   "Config.Setting.ResolveHenboxImposter": "Решить проблему самозванца из Henbox",
