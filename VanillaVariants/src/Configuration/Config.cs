@@ -7,7 +7,6 @@ public class Config
 {
     public bool ExperimentalOverlayTest { get; set; } = true;
 
-    public bool ResolveBasketTrapIssues { get; set; } = true;
     public bool ResolveChestNames { get; set; } = true;
     public bool ResolveMechanicalBlockIssues { get; set; } = true;
     public bool ResolveQuernAndAxleRelationship { get; set; } = true;
@@ -175,7 +174,6 @@ public class Config
         // MetalDoorsForSteelProduction.AddRange(previousConfig.MetalDoorsForSteelProduction);
 
         ExperimentalOverlayTest = previousConfig.ExperimentalOverlayTest;
-        ResolveBasketTrapIssues = previousConfig.ResolveBasketTrapIssues;
         ResolveChestNames = previousConfig.ResolveChestNames;
         ResolveMechanicalBlockIssues = previousConfig.ResolveMechanicalBlockIssues;
         ResolveQuernAndAxleRelationship = previousConfig.ResolveQuernAndAxleRelationship;

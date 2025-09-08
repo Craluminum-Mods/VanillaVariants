@@ -20,10 +20,6 @@ public class HarmonyPatches : ModSystem
         {
             HarmonyInstance.Patch(original: typeof(BlockGenericTypedContainer).GetMethod(nameof(BlockGenericTypedContainer.GetHeldItemName)), postfix: typeof(BlockGenericTypedContainer_GetHeldItemName_Patch).GetMethod(nameof(BlockGenericTypedContainer_GetHeldItemName_Patch.Postfix)));
         }
-        if (Core.Config.ResolveBasketTrapIssues)
-        {
-            HarmonyInstance.Patch(original: typeof(BlockBasketTrap).GetMethod(nameof(BlockBasketTrap.GetDrops)), postfix: typeof(BlockBasketTrap_GetDrops_Patch).GetMethod(nameof(BlockBasketTrap_GetDrops_Patch.Postfix)));
-        }
         if (Core.Config.ResolveMechanicalBlockIssues)
         {
             HarmonyInstance.CreateReversePatcher(original: typeof(Block).GetMethod(nameof(Block.TryPlaceBlock)), standin: typeof(Block_TryPlaceBlock_ReversePatch).GetMethod(nameof(Block_TryPlaceBlock_ReversePatch.Base))).Patch(HarmonyReversePatchType.Original);

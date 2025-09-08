@@ -17,7 +17,6 @@
   "Config.Setting.Override": "Anular",
   "Config.Setting.ExperimentalOverlayTest": "Prueba de superposición experimental",
   "Config.Setting.ResolveBarrelSounds": "Resolver sonidos de barril",
-  "Config.Setting.ResolveBasketTrapIssues": "Resolver problemas de trampas de canasta",
   "Config.Setting.ResolveChestNames": "Resolver nombres de cofres",
   "Config.Setting.ResolveHenboxImposter": "Resolver el impostor de Henbox",
   "Config.Setting.ResolveMechanicalBlockIssues": "Resolver problemas de bloques mecánicos",

@@ -1,14 +1,5 @@
 [
     {
-        "file": "vanvar:blocktypes/reed/baskettrap.json",
-        "op": "addmerge",
-        "path": "/enabled",
-        "value": false,
-        "condition": { "when": "VanillaVariants_Basket_Enabled", "isValue": "false" },
-        "side": "server"
-    },
-
-    {
         "file": "vanvar:blocktypes/reed/reedchest.json",
         "op": "addmerge",
         "path": "/enabled",

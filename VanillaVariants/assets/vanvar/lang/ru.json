@@ -17,7 +17,6 @@
   "Config.Setting.Override": "Переопределить",
   "Config.Setting.ExperimentalOverlayTest": "Экспериментальный тест наложения",
   "Config.Setting.ResolveBarrelSounds": "Устранение звуков ствола",
-  "Config.Setting.ResolveBasketTrapIssues": "Решение проблем с корзиной-ловушкой",
   "Config.Setting.ResolveChestNames": "Разрешить названия сундуков",
   "Config.Setting.ResolveHenboxImposter": "Решить проблему самозванца из Henbox",
   "Config.Setting.ResolveMechanicalBlockIssues": "Решение проблем с механическим блоком",
