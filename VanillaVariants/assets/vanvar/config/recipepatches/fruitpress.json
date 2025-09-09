@@ -20,170 +20,49 @@
         ]
     },
 
-    // from oak planks and each metal, except copper
+    // from any wood and copper metal
     {
         "type": "Copy",
         "conditions": [{ "when": "VanillaVariants_FruitPress_Enabled", "isValue": "true" }],
         "outputCode": "fruitpress-ns",
-        "outputCodeNew": "vanvar:fruitpress-{metal}-oak-ns",
+        "outputCodeNew": "vanvar:fruitpress-{metal}-{wood}-ns",
         "ingredients": [
-            { "ingredientCode": "plank-*", "Name": "wood", "AllowedVariants": ["oak"] },
+            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "rod-*", "Name": "metal", "AllowedVariants": ["copper"] }
+        ]
+    },
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_FruitPress_Enabled", "isValue": "true" }],
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "outputCode": "fruitpress-ns",
+        "outputCodeNew": "wildcrafttree:fruitpress-{metal}-{wood}-ns",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
+            { "ingredientCode": "rod-*", "Name": "metal", "AllowedVariants": ["copper"] }
+        ]
+    },
+
+    // from any wood and metal, except copper metal
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_FruitPress_Enabled", "isValue": "true" }],
+        "outputCode": "fruitpress-ns",
+        "outputCodeNew": "vanvar:fruitpress-{metal}-{wood}-ns",
+        "ingredients": [
+            { "ingredientCode": "plank-*", "Name": "wood" },
             { "ingredientCode": "rod-*", "Name": "metal", "AllowedVariants": ["tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"] }
         ]
     },
-
-    // from planks, but separate patch for each metal, because there is bug in vanilla
-    {
-        "type": "Copy",
-        "conditions": [{ "when": "VanillaVariants_FruitPress_Enabled", "isValue": "true" }],
-        "outputCode": "fruitpress-ns",
-        "outputCodeNew": "vanvar:fruitpress-copper-{wood}-ns",
-        "ingredients": [
-            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
-            { "ingredientCode": "rod-*", "Name": "metal", "AllowedVariants": ["copper"] }
-        ]
-    },
     {
         "type": "Copy",
         "conditions": [{ "when": "VanillaVariants_FruitPress_Enabled", "isValue": "true" }],
         "dependsOn": [{ "modid": "wildcrafttree" }],
         "outputCode": "fruitpress-ns",
-        "outputCodeNew": "wildcrafttree:fruitpress-copper-{wood}-ns",
+        "outputCodeNew": "wildcrafttree:fruitpress-{metal}-{wood}-ns",
         "ingredients": [
-            { "ingredientCode": "plank-*", "Name": "wood", "Code": "wildcrafttree:plank-*", "SkipVariants": ["oak"] },
-            { "ingredientCode": "rod-*", "Name": "metal", "AllowedVariants": ["copper"] }
-        ]
-    },
-
-    {
-        "type": "Copy",
-        "conditions": [{ "when": "VanillaVariants_FruitPress_Enabled", "isValue": "true" }],
-        "outputCode": "fruitpress-ns",
-        "outputCodeNew": "vanvar:fruitpress-tinbronze-{wood}-ns",
-        "ingredients": [
-            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
-            { "ingredientCode": "rod-*", "Name": "metal", "AllowedVariants": ["tinbronze"] }
-        ]
-    },
-    {
-        "type": "Copy",
-        "conditions": [{ "when": "VanillaVariants_FruitPress_Enabled", "isValue": "true" }],
-        "dependsOn": [{ "modid": "wildcrafttree" }],
-        "outputCode": "fruitpress-ns",
-        "outputCodeNew": "wildcrafttree:fruitpress-tinbronze-{wood}-ns",
-        "ingredients": [
-            { "ingredientCode": "plank-*", "Name": "wood", "Code": "wildcrafttree:plank-*", "SkipVariants": ["oak"] },
-            { "ingredientCode": "rod-*", "Name": "metal", "AllowedVariants": ["tinbronze"] }
-        ]
-    },
-
-    {
-        "type": "Copy",
-        "conditions": [{ "when": "VanillaVariants_FruitPress_Enabled", "isValue": "true" }],
-        "outputCode": "fruitpress-ns",
-        "outputCodeNew": "vanvar:fruitpress-bismuthbronze-{wood}-ns",
-        "ingredients": [
-            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
-            { "ingredientCode": "rod-*", "Name": "metal", "AllowedVariants": ["bismuthbronze"] }
-        ]
-    },
-    {
-        "type": "Copy",
-        "conditions": [{ "when": "VanillaVariants_FruitPress_Enabled", "isValue": "true" }],
-        "dependsOn": [{ "modid": "wildcrafttree" }],
-        "outputCode": "fruitpress-ns",
-        "outputCodeNew": "wildcrafttree:fruitpress-bismuthbronze-{wood}-ns",
-        "ingredients": [
-            { "ingredientCode": "plank-*", "Name": "wood", "Code": "wildcrafttree:plank-*", "SkipVariants": ["oak"] },
-            { "ingredientCode": "rod-*", "Name": "metal", "AllowedVariants": ["bismuthbronze"] }
-        ]
-    },
-
-    {
-        "type": "Copy",
-        "conditions": [{ "when": "VanillaVariants_FruitPress_Enabled", "isValue": "true" }],
-        "outputCode": "fruitpress-ns",
-        "outputCodeNew": "vanvar:fruitpress-blackbronze-{wood}-ns",
-        "ingredients": [
-            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
-            { "ingredientCode": "rod-*", "Name": "metal", "AllowedVariants": ["blackbronze"] }
-        ]
-    },
-    {
-        "type": "Copy",
-        "conditions": [{ "when": "VanillaVariants_FruitPress_Enabled", "isValue": "true" }],
-        "dependsOn": [{ "modid": "wildcrafttree" }],
-        "outputCode": "fruitpress-ns",
-        "outputCodeNew": "wildcrafttree:fruitpress-blackbronze-{wood}-ns",
-        "ingredients": [
-            { "ingredientCode": "plank-*", "Name": "wood", "Code": "wildcrafttree:plank-*", "SkipVariants": ["oak"] },
-            { "ingredientCode": "rod-*", "Name": "metal", "AllowedVariants": ["blackbronze"] }
-        ]
-    },
-
-    {
-        "type": "Copy",
-        "conditions": [{ "when": "VanillaVariants_FruitPress_Enabled", "isValue": "true" }],
-        "outputCode": "fruitpress-ns",
-        "outputCodeNew": "vanvar:fruitpress-iron-{wood}-ns",
-        "ingredients": [
-            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
-            { "ingredientCode": "rod-*", "Name": "metal", "AllowedVariants": ["iron"] }
-        ]
-    },
-    {
-        "type": "Copy",
-        "conditions": [{ "when": "VanillaVariants_FruitPress_Enabled", "isValue": "true" }],
-        "dependsOn": [{ "modid": "wildcrafttree" }],
-        "outputCode": "fruitpress-ns",
-        "outputCodeNew": "wildcrafttree:fruitpress-iron-{wood}-ns",
-        "ingredients": [
-            { "ingredientCode": "plank-*", "Name": "wood", "Code": "wildcrafttree:plank-*", "SkipVariants": ["oak"] },
-            { "ingredientCode": "rod-*", "Name": "metal", "AllowedVariants": ["iron"] }
-        ]
-    },
-
-    {
-        "type": "Copy",
-        "conditions": [{ "when": "VanillaVariants_FruitPress_Enabled", "isValue": "true" }],
-        "outputCode": "fruitpress-ns",
-        "outputCodeNew": "vanvar:fruitpress-meteoriciron-{wood}-ns",
-        "ingredients": [
-            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
-            { "ingredientCode": "rod-*", "Name": "metal", "AllowedVariants": ["meteoriciron"] }
-        ]
-    },
-    {
-        "type": "Copy",
-        "conditions": [{ "when": "VanillaVariants_FruitPress_Enabled", "isValue": "true" }],
-        "dependsOn": [{ "modid": "wildcrafttree" }],
-        "outputCode": "fruitpress-ns",
-        "outputCodeNew": "wildcrafttree:fruitpress-meteoriciron-{wood}-ns",
-        "ingredients": [
-            { "ingredientCode": "plank-*", "Name": "wood", "Code": "wildcrafttree:plank-*", "SkipVariants": ["oak"] },
-            { "ingredientCode": "rod-*", "Name": "metal", "AllowedVariants": ["meteoriciron"] }
-        ]
-    },
-
-    {
-        "type": "Copy",
-        "conditions": [{ "when": "VanillaVariants_FruitPress_Enabled", "isValue": "true" }],
-        "outputCode": "fruitpress-ns",
-        "outputCodeNew": "vanvar:fruitpress-steel-{wood}-ns",
-        "ingredients": [
-            { "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] },
-            { "ingredientCode": "rod-*", "Name": "metal", "AllowedVariants": ["steel"] }
-        ]
-    },
-    {
-        "type": "Copy",
-        "conditions": [{ "when": "VanillaVariants_FruitPress_Enabled", "isValue": "true" }],
-        "dependsOn": [{ "modid": "wildcrafttree" }],
-        "outputCode": "fruitpress-ns",
-        "outputCodeNew": "wildcrafttree:fruitpress-steel-{wood}-ns",
-        "ingredients": [
-            { "ingredientCode": "plank-*", "Name": "wood", "Code": "wildcrafttree:plank-*", "SkipVariants": ["oak"] },
-            { "ingredientCode": "rod-*", "Name": "metal", "AllowedVariants": ["steel"] }
+            { "ingredientCode": "plank-*", "Name": "wood", "Code": "wildcrafttree:plank-*" },
+            { "ingredientCode": "rod-*", "Name": "metal", "AllowedVariants": ["tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"] }
         ]
     }
 ]
