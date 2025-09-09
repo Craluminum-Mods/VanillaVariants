@@ -2,8 +2,25 @@
     {
         "type": "Copy",
         "conditions": [{ "when": "VanillaVariants_MetalDoor_Enabled", "isValue": "true" }],
-        "outputCode": "irondoor-north-down-closed-left",
-        "outputCodeNew": "vanvar:door-1x2metal-{metal}",
+        "outputCode": "metaldoor-solid-iron",
+        "outputCodeNew": "vanvar:metaldoor-solid-{metal}",
         "ingredients": [{ "ingredientCode": "metalplate-*", "Name": "metal", "SkipVariants": ["iron"] }]
+    },
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_MetalDoor_Enabled", "isValue": "true" }],
+        "outputCode": "metaldoor-barred-iron",
+        "outputCodeNew": "vanvar:metaldoor-barred-{metal}",
+        "ingredients": [{ "ingredientCode": "rod-*", "Name": "metal", "SkipVariants": ["iron"] }]
+    },
+    {
+        "type": "Copy",
+        "conditions": [{ "when": "VanillaVariants_MetalDoor_Enabled", "isValue": "true" }],
+        "outputCode": "metaldoor-sleek-windowed-iron",
+        "outputCodeNew": "vanvar:metaldoor-sleek-windowed-{metal}",
+        "ingredients": [
+            { "ingredientCode": "rod-*", "Name": "metal", "SkipVariants": ["iron"] },
+            { "ingredientCode": "metalplate-*", "Name": "metal", "SkipVariants": ["iron"] }
+        ]
     }
 ]

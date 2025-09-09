@@ -1,6 +1,6 @@
 [
     {
-        "file": "vanvar:blocktypes/metal/door.json",
+        "file": "vanvar:blocktypes/metal/door-metal.json",
         "op": "addmerge",
         "path": "/enabled",
         "value": false,
