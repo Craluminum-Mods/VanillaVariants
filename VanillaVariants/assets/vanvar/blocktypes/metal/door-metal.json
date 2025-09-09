@@ -7,8 +7,8 @@
             "name": "VanillaVariants.BlockName",
             "properties": {
                 "partsByType": {
-                    "@.*-(uranium|platinum).*": ["vanvar:block-door-1x2metal", " (", "ore-{metal}", ")"],
-                    "*": ["vanvar:block-door-1x2metal", " (", "material-{metal}", ")"]
+                    "@.*-(uranium|platinum).*": ["vanvar:block-metaldoor-{style}", " (", "ore-{metal}", ")"],
+                    "*": ["vanvar:block-metaldoor-{style}", " (", "material-{metal}", ")"]
                 }
             }
         },

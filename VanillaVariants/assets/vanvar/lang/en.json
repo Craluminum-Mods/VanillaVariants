@@ -2,9 +2,12 @@
     "game:tabname-vanvar": "Van.Var.",
 
     "block-metalfence": "Metal fence",
-    "block-door-1x2metal": "Metal door",
     "block-supportbeam": "Support beam",
     "tarnished": "Tarnished",
+
+    "block-metaldoor-barred": "Barred door",
+    "block-metaldoor-solid": "Solid door",
+    "block-metaldoor-sleek-windowed": "Windowed door",
 
     "Config.SettingsSimple": "Simple Settings",
     "Config.SettingsAdvanced": "Advanced Settings",
@@ -79,6 +82,6 @@
     "Config.Setting.TroughSmall": "Enable Trough Small",
     "Config.Setting.WoodBucket": "Enable Wood Bucket",
     "Config.Setting.WoodenPan": "Enable Wooden Pan",
-    
+
     "Config.Setting.WoodenRails": "Enable Wooden Rails"
 }
