@@ -2,29 +2,29 @@
     {
         "type": "Replace",
         "conditions": [{ "when": "VanillaVariants_Henbox_Enabled", "isValue": "true" }],
-        "outputCode": "henbox-empty",
+        "outputCode": "henbox",
         "ingredients": [{ "ingredientCode": "plank-*", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Replace",
         "conditions": [{ "when": "VanillaVariants_Henbox_Enabled", "isValue": "true" }],
         "dependsOn": [{ "modid": "wildcrafttree" }],
-        "outputCode": "henbox-empty",
+        "outputCode": "henbox",
         "ingredients": [{ "ingredientCode": "wildcrafttree:plank-*", "Code": "plank-*", "AllowedVariants": ["oak"] }]
     },
     {
         "type": "Copy",
         "conditions": [{ "when": "VanillaVariants_Henbox_Enabled", "isValue": "true" }],
-        "outputCode": "henbox-empty",
-        "outputCodeNew": "vanvar:henbox-{wood}-empty",
+        "outputCode": "henbox",
+        "outputCodeNew": "vanvar:henbox-{wood}",
         "ingredients": [{ "ingredientCode": "plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
     },
     {
         "type": "Copy",
         "conditions": [{ "when": "VanillaVariants_Henbox_Enabled", "isValue": "true" }],
         "dependsOn": [{ "modid": "wildcrafttree" }],
-        "outputCode": "henbox-empty",
-        "outputCodeNew": "wildcrafttree:henbox-{wood}-empty",
+        "outputCode": "henbox",
+        "outputCodeNew": "wildcrafttree:henbox-{wood}",
         "ingredients": [{ "ingredientCode": "plank-*", "Code": "wildcrafttree:plank-*", "Name": "wood", "SkipVariants": ["oak"] }]
     }
 ]

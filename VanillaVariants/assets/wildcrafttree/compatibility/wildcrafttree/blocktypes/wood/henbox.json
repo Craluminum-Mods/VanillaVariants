@@ -2,8 +2,7 @@
     "inheritFrom": "vanvar:blocktypes/wood/henbox",
     "code": "henbox",
     "variantgroups": [
-        { "code": "type", "loadFromProperties": "wildcrafttree:block/wood" },
-        { "code": "eggCount", "states": ["empty", "1egg", "2eggs", "3eggs"] }
+        { "code": "wood", "loadFromProperties": "wildcrafttree:block/wood" }
     ],
     "attributes": { "fromVanVarMod": true }
 }

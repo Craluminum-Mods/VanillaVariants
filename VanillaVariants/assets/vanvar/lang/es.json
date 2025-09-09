@@ -17,7 +17,6 @@
   "Config.Setting.Override": "Anular",
   "Config.Setting.ResolveBarrelSounds": "Resolver sonidos de barril",
   "Config.Setting.ResolveChestNames": "Resolver nombres de cofres",
-  "Config.Setting.ResolveHenboxImposter": "Resolver el impostor de Henbox",
   "Config.Setting.ResolveMechanicalBlockIssues": "Resolver problemas de bloques mecánicos",
   "Config.Setting.ResolveQuernAndAxleRelationship": "Resolver la relación Quern y Eje",
   "Config.Setting.CraftableCage": "Hacer una jaula fabricable",
