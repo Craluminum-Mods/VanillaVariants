@@ -16,6 +16,9 @@
         },
         { "name": "NWOrientable" }
     ],
+    "attributes": {
+        "handbook": { "groupBy": ["woodentoggle-*"] }
+    },
     "creativeinventory": {
         "general": ["*-ns"],
         "mechanics": ["*-ns"],
