@@ -1,14 +1,17 @@
 {
     "inheritFrom": "game:blocktypes/stone/quern",
     "code": "quern",
-    "class": "Block", // Functionality is added by json patches
-    "entityBehaviors": [], // Functionality is added by json patches 
+    "class": "BlockQuern",
+    "entityBehaviors": [
+      { "name": "MPConsumer" }
+    ],
     "behaviors": [
         {
             "name": "VanillaVariants.BlockName",
             "properties": {
-                "parts": ["Quern", " (", "rock-{rock}", ") (", "tabname-decorative", ")"] } },
-        { "name": "UnstableFalling", "properties": { "exceptions": ["game:woodenaxle-ud"] } }
+                "parts": ["Quern", " (", "rock-{rock}", ")"] } },
+        { "name": "UnstableFalling", "properties": { "exceptions": ["game:woodenaxle-ud"] } },
+        { "name": "Container" }
     ],
     "attributes": {
         "patchQuernExceptions": true,

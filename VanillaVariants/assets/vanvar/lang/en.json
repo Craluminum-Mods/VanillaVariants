@@ -32,9 +32,6 @@
     "Config.Setting.CraftableCage": "Make Cage Craftable",
     "Config.Setting.CraftableWoodenRails": "Make Wooden Rails Craftable",
 
-    "Config.Setting.DecorativeQuern": "Enable Decorative Quern",
-    "Config.Setting.FunctionalQuern": "Enable Decorative Quern Functionality",
-
     "Config.Setting.ArchimedesScrew": "Enable Archimedes Screw",
     "Config.Setting.ArmorStand": "Enable Armor Stand",
     "Config.Setting.Barrel": "Enable Barrel",
@@ -67,6 +64,7 @@
     "Config.Setting.Moldrack": "Enable Moldrack",
     "Config.Setting.OmokTabletop": "Enable Omok Tabletop",
     "Config.Setting.Palisade": "Enable Palisade",
+    "Config.Setting.Quern": "Enable Quern",
     "Config.Setting.Shelf": "Enable Shelf",
     "Config.Setting.Sieve": "Enable Sieve",
     "Config.Setting.Sign": "Enable Sign",

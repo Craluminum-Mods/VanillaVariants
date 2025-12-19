@@ -35,9 +35,6 @@ static class ModConfig
         api.World.Config.SetBool("VanillaVariants_CraftableCage_Enabled", config.CraftableCage);
         api.World.Config.SetBool("VanillaVariants_CraftableWoodenRails_Enabled", config.CraftableWoodenRails);
 
-        api.World.Config.SetBool("VanillaVariants_DecorativeQuern_Enabled", config.DecorativeQuern);
-        api.World.Config.SetBool("VanillaVariants_FunctionalQuern_Enabled", config.FunctionalQuern);
-
         api.World.Config.SetBool("VanillaVariants_ArchimedesScrew_Enabled", config.ArchimedesScrew);
         api.World.Config.SetBool("VanillaVariants_ArmorStand_Enabled", config.ArmorStand);
         api.World.Config.SetBool("VanillaVariants_Barrel_Enabled", config.Barrel);
@@ -70,6 +67,7 @@ static class ModConfig
         api.World.Config.SetBool("VanillaVariants_Moldrack_Enabled", config.Moldrack);
         api.World.Config.SetBool("VanillaVariants_OmokTabletop_Enabled", config.OmokTabletop);
         api.World.Config.SetBool("VanillaVariants_Palisade_Enabled", config.Palisade);
+        api.World.Config.SetBool("VanillaVariants_Quern_Enabled", config.Quern);
         api.World.Config.SetBool("VanillaVariants_Shelf_Enabled", config.Shelf);
         api.World.Config.SetBool("VanillaVariants_Sieve_Enabled", config.Sieve);
         api.World.Config.SetBool("VanillaVariants_Sign_Enabled", config.Sign);

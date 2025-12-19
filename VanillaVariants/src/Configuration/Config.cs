@@ -12,9 +12,6 @@ public class Config
     public bool CraftableCage { get; set; }
     public bool CraftableWoodenRails { get; set; }
 
-    public bool DecorativeQuern { get; set; } = true;
-    public bool FunctionalQuern { get; set; }
-
     public bool ArchimedesScrew { get; set; } = true;
     public bool ArmorStand { get; set; } = true;
     public bool Barrel { get; set; } = true;
@@ -47,6 +44,7 @@ public class Config
     public bool Moldrack { get; set; } = true;
     public bool OmokTabletop { get; set; } = true;
     public bool Palisade { get; set; } = true;
+    public bool Quern { get; set; } = true;
     public bool Shelf { get; set; } = true;
     public bool Sieve { get; set; } = true;
     public bool Sign { get; set; } = true;
@@ -169,8 +167,6 @@ public class Config
         ResolveQuernAndAxleRelationship = previousConfig.ResolveQuernAndAxleRelationship;
         CraftableCage = previousConfig.CraftableCage;
         CraftableWoodenRails = previousConfig.CraftableWoodenRails;
-        DecorativeQuern = previousConfig.DecorativeQuern;
-        FunctionalQuern = previousConfig.FunctionalQuern;
 
         ArchimedesScrew = previousConfig.ArchimedesScrew;
         ArmorStand = previousConfig.ArmorStand;
@@ -204,6 +200,7 @@ public class Config
         Moldrack = previousConfig.Moldrack;
         OmokTabletop = previousConfig.OmokTabletop;
         Palisade = previousConfig.Palisade;
+        Quern = previousConfig.Quern;
         Shelf = previousConfig.Shelf;
         Sieve = previousConfig.Sieve;
         Sign = previousConfig.Sign;

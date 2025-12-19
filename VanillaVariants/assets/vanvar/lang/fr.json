@@ -21,8 +21,6 @@
   "Config.Setting.ResolveQuernAndAxleRelationship": "Résoudre la relation entre le Quern et l'essieu",
   "Config.Setting.CraftableCage": "Rendre la cage réalisable",
   "Config.Setting.CraftableWoodenRails": "Fabriquer des rails en bois",
-  "Config.Setting.DecorativeQuern": "Activer Quern décoratif",
-  "Config.Setting.FunctionalQuern": "Activer la fonctionnalité Quern décorative",
   "Config.Setting.ArchimedesScrew": "Activer la vis d'Archimède",
   "Config.Setting.ArmorStand": "Activer le support d'armure",
   "Config.Setting.Barrel": "Activer le baril",

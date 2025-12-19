@@ -31,7 +31,6 @@ public class ConfigLibCompatibility
     private const string textChutes = "Chutes";
     private const string textMechanics = "tabname-mechanics";
     private const string textBlocksAndItems = "Blocks and Items";
-    private const string textQuern = "Quern";
     private const string textIssues = "Issues";
     private const string textCraftable = "Craftable";
     private const string textExperimental = "Experimental";
@@ -77,10 +76,6 @@ public class ConfigLibCompatibility
             config.CraftableCage = OnCheckBox(id, config.CraftableCage, nameof(config.CraftableCage));
             config.CraftableWoodenRails = OnCheckBox(id, config.CraftableWoodenRails, nameof(config.CraftableWoodenRails));
             ImGui.NewLine();
-            ImGui.TextWrapped(Lang.Get(textQuern));
-            config.DecorativeQuern = OnCheckBox(id, config.DecorativeQuern, nameof(config.DecorativeQuern));
-            config.FunctionalQuern = OnCheckBox(id, config.FunctionalQuern, nameof(config.FunctionalQuern));
-            ImGui.NewLine();
             ImGui.TextWrapped(Lang.Get(textBlocksAndItems));
             config.ArmorStand = OnCheckBox(id, config.ArmorStand, nameof(config.ArmorStand));
             config.Barrel = OnCheckBox(id, config.Barrel, nameof(config.Barrel));
@@ -98,6 +93,7 @@ public class ConfigLibCompatibility
             config.Moldrack = OnCheckBox(id, config.Moldrack, nameof(config.Moldrack));
             config.OmokTabletop = OnCheckBox(id, config.OmokTabletop, nameof(config.OmokTabletop));
             config.Palisade = OnCheckBox(id, config.Palisade, nameof(config.Palisade));
+            config.Quern = OnCheckBox(id, config.Quern, nameof(config.Quern));
             config.Shelf = OnCheckBox(id, config.Shelf, nameof(config.Shelf));
             config.Sieve = OnCheckBox(id, config.Sieve, nameof(config.Sieve));
             config.Sign = OnCheckBox(id, config.Sign, nameof(config.Sign));
