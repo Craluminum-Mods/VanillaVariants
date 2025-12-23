@@ -1,0 +1,75 @@
+[
+    {
+        "file": "vanvar:recipes/grid/toolrack.json",
+        "op": "addmerge",
+        "path": "/0/enabled",
+        "value": false,
+        "condition": { "when": "VanillaVariants_Toolrack_Enabled", "isValue": "false" },
+        "side": "server"
+    },
+    {
+        "file": "vanvar:recipes/grid/toolrack.json",
+        "op": "addmerge",
+        "path": "/1/enabled",
+        "value": false,
+        "condition": { "when": "VanillaVariants_Toolrack_Enabled", "isValue": "false" },
+        "side": "server"
+    },
+    {
+        "file": "vanvar:recipes/grid/toolrack.json",
+        "op": "addmerge",
+        "path": "/2/enabled",
+        "value": false,
+        "condition": { "when": "VanillaVariants_Toolrack_Enabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
+    },
+
+    {
+        "op": "addmerge",
+        "path": "/textures",
+        "value": {
+            "aged": { "base": "block/wood/debarked/oak" }
+        },
+        "file": "game:blocktypes/wood/toolrack.json",
+        "condition": { "when": "VanillaVariants_Toolrack_Enabled", "isValue": "true" },
+        "side": "Server"
+    },
+    {
+        "op": "remove",
+        "path": "/creativeinventory",
+        "file": "game:blocktypes/wood/toolrack.json",
+        "condition": { "when": "VanillaVariants_Toolrack_Enabled", "isValue": "true" },
+        "side": "Server"
+    },
+    {
+        "op": "addmerge",
+        "path": "/creativeinventoryStacksByType",
+        "value": {
+            "*-north": [
+                {
+                    "tabs": ["general", "decorative"],
+                    "stacks": [
+                        { "type": "block", "code": "toolrack-north" },
+
+                        { "type": "block", "code": "toolrack-north", "attributes": { "types": { "wood": "aged" } } },
+                        { "type": "block", "code": "toolrack-north", "attributes": { "types": { "wood": "birch" } } },
+                        { "type": "block", "code": "toolrack-north", "attributes": { "types": { "wood": "maple" } } },
+                        { "type": "block", "code": "toolrack-north", "attributes": { "types": { "wood": "pine" } } },
+                        { "type": "block", "code": "toolrack-north", "attributes": { "types": { "wood": "acacia" } } },
+                        { "type": "block", "code": "toolrack-north", "attributes": { "types": { "wood": "kapok" } } },
+                        { "type": "block", "code": "toolrack-north", "attributes": { "types": { "wood": "baldcypress" } } },
+                        { "type": "block", "code": "toolrack-north", "attributes": { "types": { "wood": "larch" } } },
+                        { "type": "block", "code": "toolrack-north", "attributes": { "types": { "wood": "redwood" } } },
+                        { "type": "block", "code": "toolrack-north", "attributes": { "types": { "wood": "ebony" } } },
+                        { "type": "block", "code": "toolrack-north", "attributes": { "types": { "wood": "walnut" } } },
+                        { "type": "block", "code": "toolrack-north", "attributes": { "types": { "wood": "purpleheart" } } }
+                    ]
+                }
+            ]
+        },
+        "file": "game:blocktypes/wood/toolrack.json",
+        "condition": { "when": "VanillaVariants_Toolrack_Enabled", "isValue": "true" },
+        "side": "Server"
+    }
+]

@@ -16,7 +16,7 @@
         },
         "width": 1,
         "height": 3,
-        "output": { "type": "block", "code": "toolrack-{wood}-north" }
+        "output": { "type": "block", "code": "game:toolrack-north", "attributes": { "types": { "wood": "{wood}" } } }
     },
     {
         "ingredientPattern": "S,_,S",
@@ -25,6 +25,6 @@
         },
         "width": 1,
         "height": 3,
-        "output": { "type": "block", "code": "wildcrafttree:toolrack-{wood}-north" }
+        "output": { "type": "block", "code": "game:toolrack-north", "attributes": { "types": { "wood": "{wood}" } } }
     }
 ]

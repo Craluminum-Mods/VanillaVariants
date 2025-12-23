@@ -1,7 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using AttributeRenderingLibrary;
+using System.Collections.Generic;
 using VanillaVariants.Configuration;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
+using Vintagestory.API.Datastructures;
+using Vintagestory.API.Util;
+using Vintagestory.GameContent;
 
 namespace VanillaVariants;
 
@@ -50,11 +54,77 @@ public class Core : ModSystem
             api.PatchChest(block);
             block.PatchTrough(smallTroughTextures, largeTroughTextures);
             block.PatchChute();
+
+            if (api.Side.IsServer())
+            {
+                PatchWithBehavior(block);
+            }
         }
 
         foreach (Item item in api.World.Items)
         {
             api.TryAddModDescription(item);
+
+            if (api.Side.IsServer())
+            {
+                PatchWithBehavior(item);
+            }
         }
+    }
+
+    private void PatchWithBehavior(CollectibleObject obj)
+    {
+        AddBehaviorWithPropertiesIfTrue(Config.Toolrack && obj is BlockToolRack && obj.Code.Domain == "game", obj, toolrackProps);
+    }
+
+    private void AddBehaviorWithPropertiesIfTrue(bool condition, CollectibleObject obj, JsonObject props)
+    {
+        if (!condition) return;
+        if (props == null) return;
+        if (obj is Block block)
+        {
+            BlockBehaviorShapeTexturesFromAttributes behavior = new(block);
+            behavior.Initialize(props);
+            block.CollectibleBehaviors = block.CollectibleBehaviors.Append(behavior);
+            block.BlockBehaviors = block.BlockBehaviors.Append(behavior);
+
+            BlockEntityBehaviorType bebehavior = new BlockEntityBehaviorType
+            {
+                Name = "AttributeRenderingLibrary.ShapeTexturesFromAttributes",
+                properties = null
+            };
+            block.BlockEntityBehaviors = block.BlockEntityBehaviors.Append(bebehavior);
+        }
+        else
+        {
+            CollectibleBehaviorShapeTexturesFromAttributes behavior = new(obj);
+            behavior.Initialize(props);
+            obj.CollectibleBehaviors = obj.CollectibleBehaviors.Append(behavior);
+        }
+    }
+
+    //private void AddCreativeInventoryStacks(CollectibleObject obj, JsonObject props)
+    //{
+    //    string[] prevTabs = obj.CreativeInventoryTabs;
+    //    obj.CreativeInventoryTabs = [];
+    //    obj.CreativeInventoryStacks = obj.CreativeInventoryStacks.Append(new CreativeTabAndStackList()
+    //    {
+    //        Tabs = prevTabs,
+    //        Stacks = []
+    //    });
+    //}
+
+    #region Behavior Properties
+    private JsonObject toolrackProps;
+    #endregion
+
+    public override void AssetsLoaded(ICoreAPI api)
+    {
+        toolrackProps = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/toolrack-properties.json")).ToText());
+    }
+
+    public override void Dispose()
+    {
+        toolrackProps = null;
     }
 }

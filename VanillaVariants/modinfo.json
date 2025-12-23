@@ -2,10 +2,11 @@
     "type": "code",
     "name": "Vanilla Variants",
     "modid": "vanvar",
-    "version": "7.1.1",
+    "version": "8.0.0",
     "description": "Variants of wood, stone and metal for vanilla blocks and items",
-    "authors": ["Craluminum2413"],
+    "authors": ["Craluminum2413 (Dana)"],
     "dependencies": {
-        "game": "1.21.0"
+        "game": "1.21.0",
+        "attributerenderinglibrary": "2.4.0"
     }
 }

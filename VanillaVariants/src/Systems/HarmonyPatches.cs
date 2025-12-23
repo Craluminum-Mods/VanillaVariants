@@ -43,6 +43,11 @@ public class HarmonyPatches : ModSystem
             HarmonyInstance.Patch(original: typeof(BEPulverizer).GetMethod(nameof(BEPulverizer.OnTesselation)), prefix: typeof(BEPulverizer_OnTesselation_Patch).GetMethod(nameof(BEPulverizer_OnTesselation_Patch.Prefix)));
             HarmonyInstance.Patch(original: typeof(BEBehaviorMPArchimedesScrew).GetMethod("getHullMesh", AccessTools.all), prefix: typeof(BEBehaviorMPArchimedesScrew_getHullMesh_Patch).GetMethod(nameof(BEBehaviorMPArchimedesScrew_getHullMesh_Patch.Prefix)));
         }
+
+        if (api.Side.IsClient())
+        {
+            HarmonyInstance.PatchCategory("Client");
+        }
     }
 
     public override void Dispose()
