@@ -5,7 +5,7 @@
         "value": {
             "*-generic": [
                 {
-                    "tabs": ["general", "terrain"],
+                    "tabs": ["general", "terrain", "vanvar"],
                     "stacks": [
                         { "type": "block", "code": "displaycase-generic", "attributes": { "types": { "wood": "aged" } } },
                         { "type": "block", "code": "displaycase-generic", "attributes": { "types": { "wood": "birch" } } },
@@ -34,7 +34,7 @@
         "value": {
             "*-generic": [
                 {
-                    "tabs": ["general", "terrain"],
+                    "tabs": ["general", "terrain", "vanvar"],
                     "stacks": [
                         { "type": "block", "code": "talldisplaycase-generic", "attributes": { "types": { "wood": "aged" } } },
                         { "type": "block", "code": "talldisplaycase-generic", "attributes": { "types": { "wood": "birch" } } },

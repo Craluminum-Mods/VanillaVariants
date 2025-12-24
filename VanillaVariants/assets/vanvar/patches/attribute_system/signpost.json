@@ -4,7 +4,7 @@
         "path": "/creativeinventoryStacks",
         "value": [
             {
-                "tabs": ["general", "decorative"],
+                "tabs": ["general", "decorative", "vanvar"],
                 "stacks": [
                     { "type": "block", "code": "signpost" },
                     { "type": "block", "code": "signpost", "attributes": { "types": { "wood": "aged" } } },

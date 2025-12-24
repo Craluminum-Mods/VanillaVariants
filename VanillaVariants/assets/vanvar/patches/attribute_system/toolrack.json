@@ -48,10 +48,9 @@
         "value": {
             "*-north": [
                 {
-                    "tabs": ["general", "decorative"],
+                    "tabs": ["general", "decorative", "vanvar"],
                     "stacks": [
                         { "type": "block", "code": "toolrack-north" },
-
                         { "type": "block", "code": "toolrack-north", "attributes": { "types": { "wood": "aged" } } },
                         { "type": "block", "code": "toolrack-north", "attributes": { "types": { "wood": "birch" } } },
                         { "type": "block", "code": "toolrack-north", "attributes": { "types": { "wood": "maple" } } },

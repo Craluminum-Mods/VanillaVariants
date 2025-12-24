@@ -5,7 +5,7 @@
         "value": {
             "*-normal-east": [
                 {
-                    "tabs": ["general", "decorative"],
+                    "tabs": ["general", "decorative", "vanvar"],
                     "stacks": [
                         { "type": "block", "code": "shelf-normal-east" },
                         { "type": "block", "code": "shelf-normal-east", "attributes": { "types": { "wood": "aged" } } },

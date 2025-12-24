@@ -81,7 +81,8 @@ public class Core : ModSystem
         AddBehaviorWithPropertiesIfTrue(Config.Ladder && obj.Code.PathStartsWith("ladder-wood"), obj, behaviorProps["ladder"]);
         AddBehaviorWithPropertiesIfTrue(Config.Shelf && obj is BlockShelf && obj.Code.PathStartsWith("shelf-normal"), obj, behaviorProps["shelf"]);
         AddBehaviorWithPropertiesIfTrue(Config.Sign && obj is BlockSign && obj.Code.PathStartsWith("sign"), obj, behaviorProps["sign"]);
-        AddBehaviorWithPropertiesIfTrue(Config.Sign && obj is BlockSignPost && obj.Code.PathStartsWith("signpost"), obj, behaviorProps["signpost"]);
+        AddBehaviorWithPropertiesIfTrue(Config.Signpost && obj is BlockSignPost && obj.Code.PathStartsWith("signpost"), obj, behaviorProps["signpost"]);
+        AddBehaviorWithPropertiesIfTrue(Config.Moldrack && obj is BlockMoldRack && obj.Code.PathStartsWith("moldrack"), obj, behaviorProps["moldrack"]);
     }
 
     private void AddBehaviorWithPropertiesIfTrue(bool condition, CollectibleObject obj, JsonObject props)
@@ -143,6 +144,7 @@ public class Core : ModSystem
         behaviorProps["shelf"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/shelf-properties.json")).ToText());
         behaviorProps["sign"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/sign-properties.json")).ToText());
         behaviorProps["signpost"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/signpost-properties.json")).ToText());
+        behaviorProps["moldrack"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/moldrack-properties.json")).ToText());
     }
 
     public override void Dispose()

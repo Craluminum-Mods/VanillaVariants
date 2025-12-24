@@ -5,7 +5,7 @@
         "value": {
             "*-ground-north": [
                 {
-                    "tabs": ["general", "decorative"],
+                    "tabs": ["general", "decorative", "vanvar"],
                     "stacks": [
                         { "type": "block", "code": "sign-ground-north" },
                         { "type": "block", "code": "sign-ground-north", "attributes": { "types": { "wood": "aged" } } },
