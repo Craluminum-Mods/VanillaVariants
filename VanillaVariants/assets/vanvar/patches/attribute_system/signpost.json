@@ -1,0 +1,29 @@
+[
+    {
+        "op": "addmerge",
+        "path": "/creativeinventoryStacks",
+        "value": [
+            {
+                "tabs": ["general", "decorative"],
+                "stacks": [
+                    { "type": "block", "code": "signpost" },
+                    { "type": "block", "code": "signpost", "attributes": { "types": { "wood": "aged" } } },
+                    { "type": "block", "code": "signpost", "attributes": { "types": { "wood": "birch" } } },
+                    { "type": "block", "code": "signpost", "attributes": { "types": { "wood": "maple" } } },
+                    { "type": "block", "code": "signpost", "attributes": { "types": { "wood": "pine" } } },
+                    { "type": "block", "code": "signpost", "attributes": { "types": { "wood": "acacia" } } },
+                    { "type": "block", "code": "signpost", "attributes": { "types": { "wood": "kapok" } } },
+                    { "type": "block", "code": "signpost", "attributes": { "types": { "wood": "baldcypress" } } },
+                    { "type": "block", "code": "signpost", "attributes": { "types": { "wood": "larch" } } },
+                    { "type": "block", "code": "signpost", "attributes": { "types": { "wood": "redwood" } } },
+                    { "type": "block", "code": "signpost", "attributes": { "types": { "wood": "ebony" } } },
+                    { "type": "block", "code": "signpost", "attributes": { "types": { "wood": "walnut" } } },
+                    { "type": "block", "code": "signpost", "attributes": { "types": { "wood": "purpleheart" } } }
+                ]
+            }
+        ],
+        "file": "game:blocktypes/wood/signpost.json",
+        "condition": { "when": "VanillaVariants_Signpost_Enabled", "isValue": "true" },
+        "side": "Server"
+    }
+]
