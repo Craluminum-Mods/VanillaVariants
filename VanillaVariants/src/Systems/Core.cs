@@ -74,9 +74,15 @@ public class Core : ModSystem
 
     private void PatchWithBehavior(CollectibleObject obj)
     {
-        AddBehaviorWithPropertiesIfTrue(Config.Toolrack && obj is BlockToolRack && obj.Code.Domain == "game", obj, toolrackProps);
-        AddBehaviorWithPropertiesIfTrue(Config.DisplayCase && obj is BlockDisplayCase && obj.Code.Domain == "game", obj, displayCaseProps);
-        AddBehaviorWithPropertiesIfTrue(Config.DisplayCase && obj.Code.Domain == "game" && obj.Code.PathStartsWith("ladder-wood"), obj, ladderProps);
+        if (obj.Code.Domain != "game")
+        {
+            return;
+        }
+
+        AddBehaviorWithPropertiesIfTrue(Config.Toolrack && obj is BlockToolRack, obj, toolrackProps);
+        AddBehaviorWithPropertiesIfTrue(Config.DisplayCase && obj is BlockDisplayCase, obj, displayCaseProps);
+        AddBehaviorWithPropertiesIfTrue(Config.DisplayCase && obj.Code.PathStartsWith("ladder-wood"), obj, ladderProps);
+        AddBehaviorWithPropertiesIfTrue(Config.DisplayCase && obj is BlockShelf && obj.Code.PathStartsWith("shelf-normal"), obj, shelfProps);
     }
 
     private void AddBehaviorWithPropertiesIfTrue(bool condition, CollectibleObject obj, JsonObject props)
@@ -85,6 +91,8 @@ public class Core : ModSystem
         if (props == null) return;
         if (obj is Block block)
         {
+            AddExtraBlockBehaviors(block);
+
             BlockBehaviorShapeTexturesFromAttributes behavior = new(block);
             behavior.Initialize(props);
             block.CollectibleBehaviors = block.CollectibleBehaviors.Append(behavior);
@@ -105,21 +113,29 @@ public class Core : ModSystem
         }
     }
 
-    //private void AddCreativeInventoryStacks(CollectibleObject obj, JsonObject props)
-    //{
-    //    string[] prevTabs = obj.CreativeInventoryTabs;
-    //    obj.CreativeInventoryTabs = [];
-    //    obj.CreativeInventoryStacks = obj.CreativeInventoryStacks.Append(new CreativeTabAndStackList()
-    //    {
-    //        Tabs = prevTabs,
-    //        Stacks = []
-    //    });
-    //}
+    private static void AddExtraBlockBehaviors(Block block)
+    {
+        Vintagestory.GameContent.BlockBehaviorHorizontalAttachable horAttachable = block.GetBehavior<Vintagestory.GameContent.BlockBehaviorHorizontalAttachable>();
+        if (horAttachable != null)
+        {
+            JsonObject clonedProps = JsonObject.FromJson(horAttachable.propertiesAtString);
+            AttributeRenderingLibrary.BlockBehaviorHorizontalAttachable horAttachBehavior = new(block);
+            horAttachBehavior.Initialize(clonedProps);
+
+            int index = block.CollectibleBehaviors.IndexOf(x => x is Vintagestory.GameContent.BlockBehaviorHorizontalAttachable);
+            block.CollectibleBehaviors = block.CollectibleBehaviors.RemoveAt(index);
+            block.BlockBehaviors = block.BlockBehaviors.RemoveAt(index);
+
+            block.CollectibleBehaviors = block.CollectibleBehaviors.InsertAt(horAttachBehavior, index);
+            block.BlockBehaviors = block.BlockBehaviors.InsertAt(horAttachBehavior, index);
+        }
+    }
 
     #region Behavior Properties
     private JsonObject toolrackProps;
     private JsonObject displayCaseProps;
     private JsonObject ladderProps;
+    private JsonObject shelfProps;
     #endregion
 
     public override void AssetsLoaded(ICoreAPI api)
@@ -127,6 +143,7 @@ public class Core : ModSystem
         toolrackProps = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/toolrack-properties.json")).ToText());
         displayCaseProps = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/displaycase-properties.json")).ToText());
         ladderProps = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/ladder-properties.json")).ToText());
+        shelfProps = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/shelf-properties.json")).ToText());
     }
 
     public override void Dispose()
@@ -134,5 +151,6 @@ public class Core : ModSystem
         toolrackProps = null;
         displayCaseProps = null;
         ladderProps = null;
+        shelfProps = null;
     }
 }

@@ -1,0 +1,11 @@
+{
+    "description": {
+        "wood-*": ["blockmaterial-Wood", ": ", "material-{wood}"]
+    },
+    "textures": {
+        "wood-*": {
+            "surface": { "base": "game:block/wood/debarked/{wood}", "blendedOverlays": [{ "base": "vanvar:block/shelf/surface" }] },
+            "wood2": { "base": "game:block/wood/debarked/{wood}", "blendedOverlays": [{ "base": "vanvar:block/shelf/wood" }] }
+        }
+    }
+}

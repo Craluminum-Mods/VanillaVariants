@@ -1,0 +1,31 @@
+[
+    {
+        "op": "addmerge",
+        "path": "/creativeinventoryStacksByType",
+        "value": {
+            "*-normal-east": [
+                {
+                    "tabs": ["general", "decorative"],
+                    "stacks": [
+                        { "type": "block", "code": "shelf-normal-east" },
+                        { "type": "block", "code": "shelf-normal-east", "attributes": { "types": { "wood": "aged" } } },
+                        { "type": "block", "code": "shelf-normal-east", "attributes": { "types": { "wood": "birch" } } },
+                        { "type": "block", "code": "shelf-normal-east", "attributes": { "types": { "wood": "maple" } } },
+                        { "type": "block", "code": "shelf-normal-east", "attributes": { "types": { "wood": "pine" } } },
+                        { "type": "block", "code": "shelf-normal-east", "attributes": { "types": { "wood": "acacia" } } },
+                        { "type": "block", "code": "shelf-normal-east", "attributes": { "types": { "wood": "kapok" } } },
+                        { "type": "block", "code": "shelf-normal-east", "attributes": { "types": { "wood": "baldcypress" } } },
+                        { "type": "block", "code": "shelf-normal-east", "attributes": { "types": { "wood": "larch" } } },
+                        { "type": "block", "code": "shelf-normal-east", "attributes": { "types": { "wood": "redwood" } } },
+                        { "type": "block", "code": "shelf-normal-east", "attributes": { "types": { "wood": "ebony" } } },
+                        { "type": "block", "code": "shelf-normal-east", "attributes": { "types": { "wood": "walnut" } } },
+                        { "type": "block", "code": "shelf-normal-east", "attributes": { "types": { "wood": "purpleheart" } } }
+                    ]
+                }
+            ]
+        },
+        "file": "game:blocktypes/wood/shelf.json",
+        "condition": { "when": "VanillaVariants_Shelf_Enabled", "isValue": "true" },
+        "side": "Server"
+    }
+]
