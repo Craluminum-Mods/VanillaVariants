@@ -78,8 +78,8 @@ public class Core : ModSystem
 
         AddBehaviorWithPropertiesIfTrue(Config.Toolrack && obj is BlockToolRack, obj, behaviorProps["toolrack"]);
         AddBehaviorWithPropertiesIfTrue(Config.DisplayCase && obj is BlockDisplayCase, obj, behaviorProps["displayCase"]);
-        AddBehaviorWithPropertiesIfTrue(Config.DisplayCase && obj.Code.PathStartsWith("ladder-wood"), obj, behaviorProps["ladder"]);
-        AddBehaviorWithPropertiesIfTrue(Config.DisplayCase && obj is BlockShelf && obj.Code.PathStartsWith("shelf-normal"), obj, behaviorProps["shelf"]);
+        AddBehaviorWithPropertiesIfTrue(Config.Ladder && obj.Code.PathStartsWith("ladder-wood"), obj, behaviorProps["ladder"]);
+        AddBehaviorWithPropertiesIfTrue(Config.Shelf && obj is BlockShelf && obj.Code.PathStartsWith("shelf-normal"), obj, behaviorProps["shelf"]);
     }
 
     private void AddBehaviorWithPropertiesIfTrue(bool condition, CollectibleObject obj, JsonObject props)
@@ -112,19 +112,19 @@ public class Core : ModSystem
 
     private static void AddExtraBlockBehaviors(Block block)
     {
-        Vintagestory.GameContent.BlockBehaviorHorizontalAttachable horAttachable = block.GetBehavior<Vintagestory.GameContent.BlockBehaviorHorizontalAttachable>();
-        if (horAttachable != null)
+        Vintagestory.GameContent.BlockBehaviorHorizontalAttachable prevAttachableBehavior = block.GetBehavior<Vintagestory.GameContent.BlockBehaviorHorizontalAttachable>();
+        if (prevAttachableBehavior != null)
         {
-            JsonObject clonedProps = JsonObject.FromJson(horAttachable.propertiesAtString);
-            AttributeRenderingLibrary.BlockBehaviorHorizontalAttachable horAttachBehavior = new(block);
-            horAttachBehavior.Initialize(clonedProps);
+            JsonObject clonedProps = JsonObject.FromJson(prevAttachableBehavior.propertiesAtString);
+            AttributeRenderingLibrary.BlockBehaviorHorizontalAttachable newAttachableBehavior = new(block);
+            newAttachableBehavior.Initialize(clonedProps);
 
             int index = block.CollectibleBehaviors.IndexOf(x => x is Vintagestory.GameContent.BlockBehaviorHorizontalAttachable);
             block.CollectibleBehaviors = block.CollectibleBehaviors.RemoveAt(index);
             block.BlockBehaviors = block.BlockBehaviors.RemoveAt(index);
 
-            block.CollectibleBehaviors = block.CollectibleBehaviors.InsertAt(horAttachBehavior, index);
-            block.BlockBehaviors = block.BlockBehaviors.InsertAt(horAttachBehavior, index);
+            block.CollectibleBehaviors = block.CollectibleBehaviors.InsertAt(newAttachableBehavior, index);
+            block.BlockBehaviors = block.BlockBehaviors.InsertAt(newAttachableBehavior, index);
         }
     }
 
