@@ -48,6 +48,11 @@ public class HarmonyPatches : ModSystem
         {
             HarmonyInstance.PatchCategory("Client");
         }
+        if (api.Side.IsServer())
+        {
+            HarmonyInstance.PatchCategory("Server");
+        }
+        HarmonyInstance.PatchCategory("Universal");
     }
 
     public override void Dispose()

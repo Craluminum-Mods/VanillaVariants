@@ -80,6 +80,7 @@ public class Core : ModSystem
         AddBehaviorWithPropertiesIfTrue(Config.DisplayCase && obj is BlockDisplayCase, obj, behaviorProps["displayCase"]);
         AddBehaviorWithPropertiesIfTrue(Config.Ladder && obj.Code.PathStartsWith("ladder-wood"), obj, behaviorProps["ladder"]);
         AddBehaviorWithPropertiesIfTrue(Config.Shelf && obj is BlockShelf && obj.Code.PathStartsWith("shelf-normal"), obj, behaviorProps["shelf"]);
+        AddBehaviorWithPropertiesIfTrue(Config.Sign && obj is BlockSign && obj.Code.PathStartsWith("sign"), obj, behaviorProps["sign"]);
     }
 
     private void AddBehaviorWithPropertiesIfTrue(bool condition, CollectibleObject obj, JsonObject props)
@@ -139,6 +140,7 @@ public class Core : ModSystem
         behaviorProps["displayCase"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/displaycase-properties.json")).ToText());
         behaviorProps["ladder"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/ladder-properties.json")).ToText());
         behaviorProps["shelf"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/shelf-properties.json")).ToText());
+        behaviorProps["sign"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/sign-properties.json")).ToText());
     }
 
     public override void Dispose()
