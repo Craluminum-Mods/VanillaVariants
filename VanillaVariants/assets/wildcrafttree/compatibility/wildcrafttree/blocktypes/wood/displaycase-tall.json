@@ -1,6 +1,0 @@
-{
-    "inheritFrom": "vanvar:blocktypes/wood/displaycase-tall",
-    "code": "talldisplaycase",
-    "variantgroups": [{ "code": "type", "loadFromProperties": "wildcrafttree:block/wood" }],
-    "attributes": { "fromVanVarMod": true }
-}

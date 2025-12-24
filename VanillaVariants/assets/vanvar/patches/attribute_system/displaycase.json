@@ -1,0 +1,59 @@
+[
+    {
+        "op": "addmerge",
+        "path": "/creativeinventoryStacksByType",
+        "value": {
+            "*-generic": [
+                {
+                    "tabs": ["general", "terrain"],
+                    "stacks": [
+                        { "type": "block", "code": "displaycase-generic", "attributes": { "types": { "wood": "aged" } } },
+                        { "type": "block", "code": "displaycase-generic", "attributes": { "types": { "wood": "birch" } } },
+                        { "type": "block", "code": "displaycase-generic", "attributes": { "types": { "wood": "maple" } } },
+                        { "type": "block", "code": "displaycase-generic", "attributes": { "types": { "wood": "pine" } } },
+                        { "type": "block", "code": "displaycase-generic", "attributes": { "types": { "wood": "acacia" } } },
+                        { "type": "block", "code": "displaycase-generic", "attributes": { "types": { "wood": "kapok" } } },
+                        { "type": "block", "code": "displaycase-generic", "attributes": { "types": { "wood": "baldcypress" } } },
+                        { "type": "block", "code": "displaycase-generic", "attributes": { "types": { "wood": "larch" } } },
+                        { "type": "block", "code": "displaycase-generic", "attributes": { "types": { "wood": "redwood" } } },
+                        { "type": "block", "code": "displaycase-generic", "attributes": { "types": { "wood": "ebony" } } },
+                        { "type": "block", "code": "displaycase-generic", "attributes": { "types": { "wood": "walnut" } } },
+                        { "type": "block", "code": "displaycase-generic", "attributes": { "types": { "wood": "purpleheart" } } }
+                    ]
+                }
+            ]
+        },
+        "file": "game:blocktypes/wood/displaycase.json",
+        "condition": { "when": "VanillaVariants_DisplayCase_Enabled", "isValue": "true" },
+        "side": "Server"
+    },
+
+    {
+        "op": "addmerge",
+        "path": "/creativeinventoryStacksByType",
+        "value": {
+            "*-generic": [
+                {
+                    "tabs": ["general", "terrain"],
+                    "stacks": [
+                        { "type": "block", "code": "talldisplaycase-generic", "attributes": { "types": { "wood": "aged" } } },
+                        { "type": "block", "code": "talldisplaycase-generic", "attributes": { "types": { "wood": "birch" } } },
+                        { "type": "block", "code": "talldisplaycase-generic", "attributes": { "types": { "wood": "maple" } } },
+                        { "type": "block", "code": "talldisplaycase-generic", "attributes": { "types": { "wood": "pine" } } },
+                        { "type": "block", "code": "talldisplaycase-generic", "attributes": { "types": { "wood": "acacia" } } },
+                        { "type": "block", "code": "talldisplaycase-generic", "attributes": { "types": { "wood": "kapok" } } },
+                        { "type": "block", "code": "talldisplaycase-generic", "attributes": { "types": { "wood": "baldcypress" } } },
+                        { "type": "block", "code": "talldisplaycase-generic", "attributes": { "types": { "wood": "larch" } } },
+                        { "type": "block", "code": "talldisplaycase-generic", "attributes": { "types": { "wood": "redwood" } } },
+                        { "type": "block", "code": "talldisplaycase-generic", "attributes": { "types": { "wood": "ebony" } } },
+                        { "type": "block", "code": "talldisplaycase-generic", "attributes": { "types": { "wood": "walnut" } } },
+                        { "type": "block", "code": "talldisplaycase-generic", "attributes": { "types": { "wood": "purpleheart" } } }
+                    ]
+                }
+            ]
+        },
+        "file": "game:blocktypes/wood/displaycase-tall.json",
+        "condition": { "when": "VanillaVariants_DisplayCase_Enabled", "isValue": "true" },
+        "side": "Server"
+    }
+]
