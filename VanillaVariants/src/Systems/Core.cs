@@ -74,15 +74,12 @@ public class Core : ModSystem
 
     private void PatchWithBehavior(CollectibleObject obj)
     {
-        if (obj.Code.Domain != "game")
-        {
-            return;
-        }
+        if (obj.Code.Domain != "game") return;
 
-        AddBehaviorWithPropertiesIfTrue(Config.Toolrack && obj is BlockToolRack, obj, toolrackProps);
-        AddBehaviorWithPropertiesIfTrue(Config.DisplayCase && obj is BlockDisplayCase, obj, displayCaseProps);
-        AddBehaviorWithPropertiesIfTrue(Config.DisplayCase && obj.Code.PathStartsWith("ladder-wood"), obj, ladderProps);
-        AddBehaviorWithPropertiesIfTrue(Config.DisplayCase && obj is BlockShelf && obj.Code.PathStartsWith("shelf-normal"), obj, shelfProps);
+        AddBehaviorWithPropertiesIfTrue(Config.Toolrack && obj is BlockToolRack, obj, behaviorProps["toolrack"]);
+        AddBehaviorWithPropertiesIfTrue(Config.DisplayCase && obj is BlockDisplayCase, obj, behaviorProps["displayCase"]);
+        AddBehaviorWithPropertiesIfTrue(Config.DisplayCase && obj.Code.PathStartsWith("ladder-wood"), obj, behaviorProps["ladder"]);
+        AddBehaviorWithPropertiesIfTrue(Config.DisplayCase && obj is BlockShelf && obj.Code.PathStartsWith("shelf-normal"), obj, behaviorProps["shelf"]);
     }
 
     private void AddBehaviorWithPropertiesIfTrue(bool condition, CollectibleObject obj, JsonObject props)
@@ -131,26 +128,21 @@ public class Core : ModSystem
         }
     }
 
-    #region Behavior Properties
-    private JsonObject toolrackProps;
-    private JsonObject displayCaseProps;
-    private JsonObject ladderProps;
-    private JsonObject shelfProps;
-    #endregion
+    private Dictionary<string, JsonObject> behaviorProps;
 
     public override void AssetsLoaded(ICoreAPI api)
     {
-        toolrackProps = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/toolrack-properties.json")).ToText());
-        displayCaseProps = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/displaycase-properties.json")).ToText());
-        ladderProps = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/ladder-properties.json")).ToText());
-        shelfProps = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/shelf-properties.json")).ToText());
+        if (api.Side.IsClient()) return;
+
+        behaviorProps = new Dictionary<string, JsonObject>(4);
+        behaviorProps["toolrack"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/toolrack-properties.json")).ToText());
+        behaviorProps["displayCase"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/displaycase-properties.json")).ToText());
+        behaviorProps["ladder"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/ladder-properties.json")).ToText());
+        behaviorProps["shelf"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/shelf-properties.json")).ToText());
     }
 
     public override void Dispose()
     {
-        toolrackProps = null;
-        displayCaseProps = null;
-        ladderProps = null;
-        shelfProps = null;
+        behaviorProps = null;
     }
 }
