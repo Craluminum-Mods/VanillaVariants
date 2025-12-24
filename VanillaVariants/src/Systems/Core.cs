@@ -76,6 +76,7 @@ public class Core : ModSystem
     {
         AddBehaviorWithPropertiesIfTrue(Config.Toolrack && obj is BlockToolRack && obj.Code.Domain == "game", obj, toolrackProps);
         AddBehaviorWithPropertiesIfTrue(Config.DisplayCase && obj is BlockDisplayCase && obj.Code.Domain == "game", obj, displayCaseProps);
+        AddBehaviorWithPropertiesIfTrue(Config.DisplayCase && obj.Code.Domain == "game" && obj.Code.PathStartsWith("ladder-wood"), obj, ladderProps);
     }
 
     private void AddBehaviorWithPropertiesIfTrue(bool condition, CollectibleObject obj, JsonObject props)
@@ -118,17 +119,20 @@ public class Core : ModSystem
     #region Behavior Properties
     private JsonObject toolrackProps;
     private JsonObject displayCaseProps;
+    private JsonObject ladderProps;
     #endregion
 
     public override void AssetsLoaded(ICoreAPI api)
     {
         toolrackProps = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/toolrack-properties.json")).ToText());
         displayCaseProps = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/displaycase-properties.json")).ToText());
+        ladderProps = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/ladder-properties.json")).ToText());
     }
 
     public override void Dispose()
     {
         toolrackProps = null;
         displayCaseProps = null;
+        ladderProps = null;
     }
 }

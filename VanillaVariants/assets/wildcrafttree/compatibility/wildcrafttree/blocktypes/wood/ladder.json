@@ -1,9 +1,0 @@
-{
-    "inheritFrom": "vanvar:blocktypes/wood/ladder",
-    "code": "ladder",
-    "variantgroups": [
-        { "code": "material", "loadFromProperties": "wildcrafttree:block/wood" },
-        { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
-    ],
-    "attributes": { "fromVanVarMod": true }
-}
