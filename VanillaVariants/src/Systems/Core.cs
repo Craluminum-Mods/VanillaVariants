@@ -154,17 +154,17 @@ public class Core : ModSystem
         if (api.Side.IsClient()) return;
 
         behaviorProps = new Dictionary<string, JsonObject>(4);
-        behaviorProps["toolrack"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/toolrack-properties.json")).ToText());
-        behaviorProps["displayCase"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/displaycase-properties.json")).ToText());
-        behaviorProps["ladder"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/ladder-properties.json")).ToText());
-        behaviorProps["shelf"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/shelf-properties.json")).ToText());
-        behaviorProps["sign"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/sign-properties.json")).ToText());
-        behaviorProps["signpost"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/signpost-properties.json")).ToText());
-        behaviorProps["moldrack"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/moldrack-properties.json")).ToText());
-        behaviorProps["henbox"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/henbox-properties.json")).ToText());
-        behaviorProps["sieve"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/sieve-properties.json")).ToText());
-        behaviorProps["omoktabletop"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/omoktabletop-properties.json")).ToText());
-        behaviorProps["forge"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/forge-properties.json")).ToText());
+        behaviorProps["toolrack"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/toolrack.json")).ToText());
+        behaviorProps["displayCase"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/displaycase.json")).ToText());
+        behaviorProps["ladder"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/ladder.json")).ToText());
+        behaviorProps["shelf"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/shelf.json")).ToText());
+        behaviorProps["sign"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/sign.json")).ToText());
+        behaviorProps["signpost"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/signpost.json")).ToText());
+        behaviorProps["moldrack"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/moldrack.json")).ToText());
+        behaviorProps["henbox"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/henbox.json")).ToText());
+        behaviorProps["sieve"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/sieve.json")).ToText());
+        behaviorProps["omoktabletop"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/omoktabletop.json")).ToText());
+        behaviorProps["forge"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/forge.json")).ToText());
     }
 
     public override void Dispose()
