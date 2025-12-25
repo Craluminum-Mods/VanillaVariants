@@ -74,6 +74,7 @@ public class Core : ModSystem
 
     private void PatchWithBehavior(CollectibleObject obj)
     {
+        if (obj == null || obj.Code == null) return;
         if (obj.Code.Domain != "game") return;
 
         AddBehaviorWithPropertiesIfTrue(Config.Toolrack && obj is BlockToolRack, obj, behaviorProps["toolrack"]);
