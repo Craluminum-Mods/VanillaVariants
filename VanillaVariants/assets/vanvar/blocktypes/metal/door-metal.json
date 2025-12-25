@@ -1,5 +1,4 @@
 {
-    // No need to inherit from irondoor, since my doors are implemented completely different
     "inheritFrom": "game:blocktypes/metal/door-metal",
     "code": "metaldoor",
     "behaviors": [
@@ -38,7 +37,6 @@
     "textures": {
         "top-right": {
             "baseByType": {
-                // "@.*-(bismuth|brass|chromium|meteoriciron|molybdochalkos|platinum|nickel|stainlesssteel|tin|titanium|uranium|zinc)": "game:block/metal/plate/{metal}",
                 "@.*-(bismuth|brass|chromium|meteoriciron|molybdochalkos|platinum|nickel|stainlesssteel|tin|titanium|uranium|zinc)": "game:block/metal/sheet/{metal}2",
                 "*": "game:block/metal/sheet-plain/{metal}2"
             },
@@ -47,7 +45,6 @@
         "bottom-right": {
             "baseByType": {
                 "@.*-(bismuth|brass|chromium|meteoriciron|molybdochalkos|platinum|nickel|stainlesssteel|tin|titanium|uranium|zinc)": "game:block/metal/sheet/{metal}4",
-                // "@.*-(bismuth|brass|chromium|meteoriciron|molybdochalkos|platinum|nickel|stainlesssteel|tin|titanium|uranium|zinc)": "game:block/metal/plate/{metal}",
                 "*": "game:block/metal/sheet-plain/{metal}4"
             },
             "blendedOverlays": [{ "base": "vanvar:block/door/metal/bottom", "blendMode": "Normal" }]
@@ -55,7 +52,6 @@
         "sides": {
             "baseByType": {
                 "@.*-(bismuth|brass|chromium|meteoriciron|molybdochalkos|platinum|nickel|stainlesssteel|tin|titanium|uranium|zinc)": "game:block/metal/sheet/{metal}5",
-                // "@.*-(bismuth|brass|chromium|meteoriciron|molybdochalkos|platinum|nickel|stainlesssteel|tin|titanium|uranium|zinc)": "game:block/metal/plate/{metal}",
                 "*-cupronickel": "game:block/metal/sheet-plain/{metal}3",
                 "*": "game:block/metal/sheet-plain/{metal}5"
             },
@@ -64,20 +60,16 @@
 
         "iron1": {
             "baseByType": {
-                // "@.*-(bismuth|brass|chromium|meteoriciron|molybdochalkos|platinum|nickel|stainlesssteel|tin|titanium|uranium|zinc)": "game:block/metal/plate/{metal}",
                 "@.*-(bismuth|brass|chromium|meteoriciron|molybdochalkos|platinum|nickel|stainlesssteel|tin|titanium|uranium|zinc)": "game:block/metal/sheet/{metal}2",
                 "*": "game:block/metal/sheet-plain/{metal}2"
             }
-            // "blendedOverlays": [{ "base": "vanvar:block/door/metal/top", "blendMode": "Normal" }]
         },
 
         "iron12": {
             "baseByType": {
-                // "@.*-(bismuth|brass|chromium|meteoriciron|molybdochalkos|platinum|nickel|stainlesssteel|tin|titanium|uranium|zinc)": "game:block/metal/plate/{metal}",
                 "@.*-(bismuth|brass|chromium|meteoriciron|molybdochalkos|platinum|nickel|stainlesssteel|tin|titanium|uranium|zinc)": "game:block/metal/sheet/{metal}2",
                 "*": "game:block/metal/sheet-plain/{metal}2"
             }
-            // "blendedOverlays": [{ "base": "vanvar:block/door/metal/top", "blendMode": "Normal" }]
         }
     },
     "resistance": 2.5,

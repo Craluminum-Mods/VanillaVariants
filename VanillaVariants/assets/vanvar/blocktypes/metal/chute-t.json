@@ -14,7 +14,6 @@
     "attributes": {
         "handbook": {
             "groupBy": ["chute-*-{type}-*"]
-            // "extraSections": [{ "title": "game:block-handbooktitle-chute-*", "text": "game:block-handbooktext-chute-*" }]
         },
         "configurableChute": true,
         "configurableName": "chute",

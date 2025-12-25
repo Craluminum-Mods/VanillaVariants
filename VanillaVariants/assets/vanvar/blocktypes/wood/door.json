@@ -6,7 +6,6 @@
             "name": "VanillaVariants.BlockName",
             "properties": {
                 "parts": ["block-door-crude"]
-                // "parts": ["block-door-crude", " (", "material-{wood}", ")"]
             }
         },
         {

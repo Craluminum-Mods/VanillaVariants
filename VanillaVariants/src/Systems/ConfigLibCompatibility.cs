@@ -12,11 +12,9 @@ namespace VanillaVariants;
 public class ConfigLibCompatibility
 {
     private const string metalsWithoutCopper = "vanvar:config/properties/metals-without-copper.json";
-    // private const string metalsWithoutIron = "vanvar:config/properties/metals-without-iron.json";
     private const string settingsAdvanced = "vanvar:Config.SettingsAdvanced";
     private const string settingsSimple = "vanvar:Config.SettingsSimple";
     private const string settingsChuteCraftable = "vanvar:Config.Settings.CraftableChutes";
-    // private const string settingsMetalDoorsForSteelProduction = "vanvar:Config.Settings.MetalDoorsForSteelProduction";
     private const string settingPrefix = "vanvar:Config.Setting.";
     private const string textChutes = "Chutes";
     private const string textMechanics = "tabname-mechanics";

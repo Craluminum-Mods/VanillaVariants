@@ -10,7 +10,6 @@
         }
     ],
     "variantgroups": [
-        //
         { "code": "type", "states": ["sod"] },
         { "code": "material", "loadFromProperties": "block/wood" },
         { "code": "cover", "states": ["free", "snow"] }

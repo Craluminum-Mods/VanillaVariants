@@ -2,7 +2,6 @@
     "inheritFrom": "game:blocktypes/roofing/slantedroofing",
     "code": "slantedroofing",
     "variantgroups": [
-        //
         { "code": "type", "states": ["sod"] },
         { "code": "material", "loadFromProperties": "block/wood" },
         { "loadFromProperties": "abstract/horizontalorientation" },

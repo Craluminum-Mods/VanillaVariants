@@ -172,24 +172,11 @@ public class Config
         "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"
     ];
 
-    // TODO
-    // public bool OverrideMetalDoorsForSteelProduction { get; set; }
-
-    // public Dictionary<string, bool> MetalDoorsForSteelProduction { get; set; } = new()
-    // {
-    //     ["meteoriciron"] = true,
-    //     ["steel"] = true,
-    // };
-
     public Config() { }
 
     public Config(Config previousConfig)
     {
         ChuteCraftable = previousConfig.ChuteCraftable;
-
-        // TODO
-        // OverrideMetalDoorsForSteelProduction = previousConfig.OverrideMetalDoorsForSteelProduction;
-        // MetalDoorsForSteelProduction.AddRange(previousConfig.MetalDoorsForSteelProduction);
 
         ResolveChestNames = previousConfig.ResolveChestNames;
         ResolveMechanicalBlockIssues = previousConfig.ResolveMechanicalBlockIssues;
