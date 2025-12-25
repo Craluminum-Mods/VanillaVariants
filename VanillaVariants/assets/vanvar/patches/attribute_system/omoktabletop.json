@@ -1,0 +1,28 @@
+[
+    {
+        "op": "addmerge",
+        "path": "/creativeinventoryStacks",
+        "value": [
+            {
+                "tabs": ["general", "decorative", "vanvar"],
+                "stacks": [
+                    { "type": "block", "code": "omoktabletop", "attributes": { "types": { "wood": "oak" } } },
+                    { "type": "block", "code": "omoktabletop", "attributes": { "types": { "wood": "aged" } } },
+                    { "type": "block", "code": "omoktabletop", "attributes": { "types": { "wood": "birch" } } },
+                    { "type": "block", "code": "omoktabletop", "attributes": { "types": { "wood": "maple" } } },
+                    { "type": "block", "code": "omoktabletop", "attributes": { "types": { "wood": "pine" } } },
+                    { "type": "block", "code": "omoktabletop", "attributes": { "types": { "wood": "acacia" } } },
+                    { "type": "block", "code": "omoktabletop", "attributes": { "types": { "wood": "kapok" } } },
+                    { "type": "block", "code": "omoktabletop", "attributes": { "types": { "wood": "baldcypress" } } },
+                    { "type": "block", "code": "omoktabletop", "attributes": { "types": { "wood": "redwood" } } },
+                    { "type": "block", "code": "omoktabletop", "attributes": { "types": { "wood": "ebony" } } },
+                    { "type": "block", "code": "omoktabletop", "attributes": { "types": { "wood": "walnut" } } },
+                    { "type": "block", "code": "omoktabletop", "attributes": { "types": { "wood": "purpleheart" } } }
+                ]
+            }
+        ],
+        "file": "game:blocktypes/wood/omoktabletop.json",
+        "condition": { "when": "VanillaVariants_OmokTabletop_Enabled", "isValue": "true" },
+        "side": "Server"
+    }
+]

@@ -1,6 +1,0 @@
-{
-    "inheritFrom": "vanvar:blocktypes/wood/omoktabletop",
-    "code": "omoktabletop",
-    "variantgroups": [{ "code": "material", "loadFromProperties": "wildcrafttree:block/wood" }],
-    "attributes": { "fromVanVarMod": true }
-}
