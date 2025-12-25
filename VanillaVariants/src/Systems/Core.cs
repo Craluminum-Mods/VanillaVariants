@@ -84,6 +84,7 @@ public class Core : ModSystem
         AddBehaviorWithPropertiesIfTrue(Config.Sign && obj is BlockSign && obj.Code.PathStartsWith("sign"), obj, behaviorProps["sign"]);
         AddBehaviorWithPropertiesIfTrue(Config.Signpost && obj is BlockSignPost && obj.Code.PathStartsWith("signpost"), obj, behaviorProps["signpost"]);
         AddBehaviorWithPropertiesIfTrue(Config.Moldrack && obj is BlockMoldRack && obj.Code.PathStartsWith("moldrack"), obj, behaviorProps["moldrack"]);
+        AddBehaviorWithPropertiesIfTrue(Config.Henbox && obj is BlockHenbox, obj, behaviorProps["henbox"]);
     }
 
     private void AddBehaviorWithPropertiesIfTrue(bool condition, CollectibleObject obj, JsonObject props)
@@ -146,6 +147,7 @@ public class Core : ModSystem
         behaviorProps["sign"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/sign-properties.json")).ToText());
         behaviorProps["signpost"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/signpost-properties.json")).ToText());
         behaviorProps["moldrack"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/moldrack-properties.json")).ToText());
+        behaviorProps["henbox"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/henbox-properties.json")).ToText());
     }
 
     public override void Dispose()
