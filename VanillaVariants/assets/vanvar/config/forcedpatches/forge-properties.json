@@ -1,0 +1,18 @@
+{
+    "description": {
+        "stone-*": ["blockmaterial-Stone", ": ", "material-{stone}"]
+    },
+    "textures": {
+        "stone-*": {
+            "coal": {
+                "base": "game:block/stone/rock/{stone}1",
+                "blendedOverlays": [{ "base": "vanvar:block/forge/coal-dust-overlay", "blendMode": "normal" }]
+            },
+            "ember": { "base": "game:block/coal/ember" },
+            "forge": {
+                "base": "game:block/stone/rock/{stone}1",
+                "blendedOverlays": [{ "base": "vanvar:block/forge/forge-overlay", "blendMode": "Normal" }]
+            }
+        }
+    }
+}

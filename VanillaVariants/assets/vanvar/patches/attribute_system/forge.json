@@ -1,0 +1,37 @@
+[
+    {
+        "op": "addmerge",
+        "path": "/creativeinventoryStacks",
+        "value": [
+            {
+                "tabs": ["general", "decorative", "vanvar"],
+                "stacks": [
+                    { "type": "block", "code": "forge", "attributes": { "types": { "stone": "andesite" } } },
+                    { "type": "block", "code": "forge", "attributes": { "types": { "stone": "chalk" } } },
+                    { "type": "block", "code": "forge", "attributes": { "types": { "stone": "chert" } } },
+                    { "type": "block", "code": "forge", "attributes": { "types": { "stone": "conglomerate" } } },
+                    { "type": "block", "code": "forge", "attributes": { "types": { "stone": "limestone" } } },
+                    { "type": "block", "code": "forge", "attributes": { "types": { "stone": "claystone" } } },
+                    { "type": "block", "code": "forge", "attributes": { "types": { "stone": "sandstone" } } },
+                    { "type": "block", "code": "forge", "attributes": { "types": { "stone": "shale" } } },
+                    { "type": "block", "code": "forge", "attributes": { "types": { "stone": "basalt" } } },
+                    { "type": "block", "code": "forge", "attributes": { "types": { "stone": "peridotite" } } },
+                    { "type": "block", "code": "forge", "attributes": { "types": { "stone": "phyllite" } } },
+                    { "type": "block", "code": "forge", "attributes": { "types": { "stone": "slate" } } },
+                    { "type": "block", "code": "forge", "attributes": { "types": { "stone": "obsidian" } } },
+                    { "type": "block", "code": "forge", "attributes": { "types": { "stone": "kimberlite" } } },
+                    { "type": "block", "code": "forge", "attributes": { "types": { "stone": "scoria" } } },
+                    { "type": "block", "code": "forge", "attributes": { "types": { "stone": "tuff" } } },
+                    { "type": "block", "code": "forge", "attributes": { "types": { "stone": "bauxite" } } },
+                    { "type": "block", "code": "forge", "attributes": { "types": { "stone": "suevite" } } },
+                    { "type": "block", "code": "forge", "attributes": { "types": { "stone": "whitemarble" } } },
+                    { "type": "block", "code": "forge", "attributes": { "types": { "stone": "redmarble" } } },
+                    { "type": "block", "code": "forge", "attributes": { "types": { "stone": "greenmarble" } } }
+                ]
+            }
+        ],
+        "file": "game:blocktypes/stone/generic/forge.json",
+        "condition": { "when": "VanillaVariants_Forge_Enabled", "isValue": "true" },
+        "side": "Server"
+    }
+]

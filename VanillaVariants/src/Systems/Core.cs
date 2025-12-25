@@ -98,6 +98,7 @@ public class Core : ModSystem
         AddBehaviorWithPropertiesIfTrue(Config.Henbox && obj is BlockHenbox, obj, behaviorProps["henbox"]);
         AddBehaviorWithPropertiesIfTrue(Config.Sieve && obj.Code.PathStartsWith("sieve"), obj, behaviorProps["sieve"]);
         AddBehaviorWithPropertiesIfTrue(Config.OmokTabletop && obj is BlockOmokTable, obj, behaviorProps["omoktabletop"]);
+        AddBehaviorWithPropertiesIfTrue(Config.Forge && obj is BlockForge, obj, behaviorProps["forge"]);
     }
 
     private void AddBehaviorWithPropertiesIfTrue(bool condition, CollectibleObject obj, JsonObject props)
@@ -163,6 +164,7 @@ public class Core : ModSystem
         behaviorProps["henbox"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/henbox-properties.json")).ToText());
         behaviorProps["sieve"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/sieve-properties.json")).ToText());
         behaviorProps["omoktabletop"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/omoktabletop-properties.json")).ToText());
+        behaviorProps["forge"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/forcedpatches/forge-properties.json")).ToText());
     }
 
     public override void Dispose()
