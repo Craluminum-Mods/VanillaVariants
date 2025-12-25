@@ -1,0 +1,15 @@
+{
+    "description": {
+        "wood-*": ["blockmaterial-Wood", ": ", "material-{wood}"]
+    },
+    "textures": {
+        "wood-*": {
+            "oak": { "base": "game:block/wood/debarked/{wood}" },
+            "top": { "base": "game:block/wood/debarked/{wood}" },
+            "0": { "base": "game:block/wood/debarked/{wood}" },
+            "1": { "base": "game:block/wood/debarked/{wood}" },
+            "2": { "base": "game:block/wood/debarked/{wood}" },
+            "3": { "base": "game:block/wood/debarked/{wood}", "rotation": 90 }
+        }
+    }
+}

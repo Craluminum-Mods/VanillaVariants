@@ -1,9 +1,0 @@
-{
-    "inheritFrom": "vanvar:blocktypes/wood/chair",
-    "code": "chair",
-    "attributes": { "fromVanVarMod": true },
-    "variantgroups": [
-        { "code": "type", "loadFromProperties": "wildcrafttree:block/wood" },
-        { "code": "color", "states": ["plain", "blue", "red", "yellow", "purple", "brown", "green", "orange", "black", "gray", "pink", "white"] }
-    ]
-}

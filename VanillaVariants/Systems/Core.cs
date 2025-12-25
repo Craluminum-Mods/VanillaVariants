@@ -103,6 +103,7 @@ public class Core : ModSystem
         AddBehaviorWithPropertiesIfTrue(Config.Table && obj.Code.PathStartsWith("table-whitemarble"), obj, behaviorProps["table-whitemarble"]);
         AddBehaviorWithPropertiesIfTrue(Config.Table && obj.Code.PathStartsWith("table-redmarble"), obj, behaviorProps["table-redmarble"]);
         AddBehaviorWithPropertiesIfTrue(Config.Table && obj.Code.PathStartsWith("table-greenmarble"), obj, behaviorProps["table-greenmarble"]);
+        AddBehaviorWithPropertiesIfTrue(Config.Chair && obj.Code.PathStartsWith("chair"), obj, behaviorProps["chair"]);
     }
 
     private void AddBehaviorWithPropertiesIfTrue(bool condition, CollectibleObject obj, JsonObject props)
@@ -174,6 +175,7 @@ public class Core : ModSystem
         behaviorProps["table-whitemarble"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/table-whitemarble.json")).ToText());
         behaviorProps["table-redmarble"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/table-redmarble.json")).ToText());
         behaviorProps["table-greenmarble"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/table-greenmarble.json")).ToText());
+        behaviorProps["chair"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/chair.json")).ToText());
     }
 
     public override void Dispose()

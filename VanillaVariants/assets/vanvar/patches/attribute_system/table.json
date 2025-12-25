@@ -5,7 +5,7 @@
         "value": {
             "@.*-(normal|.*marble)": [
                 {
-                    "tabs": ["general", "vanvar"],
+                    "tabs": ["general", "decorative", "vanvar"],
                     "stacks": [
                         { "type": "block", "code": "table-{type}", "attributes": { "types": { "wood": "aged" } } },
                         { "type": "block", "code": "table-{type}", "attributes": { "types": { "wood": "birch" } } },
