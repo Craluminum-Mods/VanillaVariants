@@ -4,6 +4,7 @@ using VanillaVariants.Configuration;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;
+using Vintagestory.API.Server;
 using Vintagestory.API.Util;
 using Vintagestory.GameContent;
 
@@ -21,6 +22,16 @@ public class Core : ModSystem
         {
             _ = new ConfigLibCompatibility(api);
         }
+    }
+
+    public override void StartServerSide(ICoreServerAPI api)
+    {
+        api.Event.PlayerJoin += (byPlayer) => Event_PlayerJoin(byPlayer, api);
+    }
+
+    private void Event_PlayerJoin(IServerPlayer byPlayer, ICoreServerAPI api)
+    {
+        api.Network.GetChannel("vanvar").SendPacket<VanillaVariants.Configuration.Config>(Config, byPlayer);
     }
 
     public override void Start(ICoreAPI api)

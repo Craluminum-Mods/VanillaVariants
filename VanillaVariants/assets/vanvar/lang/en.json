@@ -12,14 +12,8 @@
     "Config.SettingsSimple": "Simple Settings",
     "Config.SettingsAdvanced": "Advanced Settings",
 
-    "Config.Settings.BlockEntityItemFlow": "BlockEntityItemFlow Settings (Chutes)",
-    "Config.Settings.FlowRates": "Flow Rates",
-    "Config.Settings.QuantitySlots": "Quantity Slots",
-    "Config.Settings.CheckRateMs": "Check Rate Ms",
     "Config.Settings.CraftableChutes": "Craftable",
 
-    "Config.Settings.ChestQuantitySlots": "Quantity Slots (Chest)",
-    "Config.Settings.DoubleChestQuantitySlots": "Quantity Slots (Double Chest)",
     "Config.Settings.MetalDoorsForSteelProduction": "Metal Doors For Steel Production",
 
     "Config.Setting.Override": "Override",

@@ -1,138 +1,176 @@
+using ProtoBuf;
 using System.Collections.Generic;
 using Vintagestory.API.Util;
 
 namespace VanillaVariants.Configuration;
 
+[ProtoContract]
 public class Config
 {
+    [ProtoMember(1)]
     public bool ResolveChestNames { get; set; } = true;
+    
+    [ProtoMember(2)]
     public bool ResolveMechanicalBlockIssues { get; set; } = true;
+    
+    [ProtoMember(3)]
     public bool ResolveQuernAndAxleRelationship { get; set; } = true;
 
+    [ProtoMember(4)]
     public bool CraftableCage { get; set; }
+
+    [ProtoMember(5)]
     public bool CraftableWoodenRails { get; set; }
 
+    [ProtoMember(6)]
     public bool ArchimedesScrew { get; set; } = true;
+    
+    [ProtoMember(7)]
     public bool ArmorStand { get; set; } = true;
+    
+    [ProtoMember(8)]
     public bool Barrel { get; set; } = true;
+    
+    [ProtoMember(9)]
     public bool Bed { get; set; } = true;
+    
+    [ProtoMember(10)]
     public bool Cage { get; set; } = true;
+    
+    [ProtoMember(11)]
     public bool Chair { get; set; } = true;
+    
+    [ProtoMember(12)]
     public bool Chest { get; set; } = true;
+    
+    [ProtoMember(13)]
     public bool Chute { get; set; } = true;
+    
+    [ProtoMember(14)]
     public bool ChuteSectionItem { get; set; } = true;
+    
+    [ProtoMember(15)]
     public bool CrudeDoor { get; set; } = true;
+    
+    [ProtoMember(16)]
     public bool DisplayCase { get; set; } = true;
+    
+    [ProtoMember(17)]
     public bool Forge { get; set; } = true;
+    
+    [ProtoMember(18)]
     public bool FruitPress { get; set; } = true;
+    
+    [ProtoMember(19)]
     public bool Henbox { get; set; } = true;
+    
+    [ProtoMember(20)]
     public bool Hopper { get; set; } = true;
+    
+    [ProtoMember(21)]
     public bool Ladder { get; set; } = true;
+    
+    [ProtoMember(22)]
     public bool MechanicalAngledGears { get; set; } = true;
+    
+    [ProtoMember(23)]
     public bool MechanicalAxle { get; set; } = true;
+    
+    [ProtoMember(24)]
     public bool MechanicalBrake { get; set; } = true;
+    
+    [ProtoMember(25)]
     public bool MechanicalClutch { get; set; } = true;
+    
+    [ProtoMember(26)]
     public bool MechanicalHelveHammerBase { get; set; } = true;
+    
+    [ProtoMember(27)]
     public bool MechanicalHelveHammerItem { get; set; } = true;
+    
+    [ProtoMember(28)]
     public bool MechanicalLargeGear { get; set; } = true;
+    
+    [ProtoMember(29)]
     public bool MechanicalLargeGearSectionItem { get; set; } = true;
+    
+    [ProtoMember(30)]
     public bool MechanicalPulverizer { get; set; } = true;
+    
+    [ProtoMember(31)]
     public bool MechanicalToggle { get; set; } = true;
+    
+    [ProtoMember(32)]
     public bool MechanicalTransmission { get; set; } = true;
+    
+    [ProtoMember(33)]
     public bool MechanicalWindmillRotor { get; set; } = true;
+    
+    [ProtoMember(34)]
     public bool MetalDoor { get; set; } = true;
+    
+    [ProtoMember(35)]
     public bool Moldrack { get; set; } = true;
+    
+    [ProtoMember(36)]
     public bool OmokTabletop { get; set; } = true;
+    
+    [ProtoMember(37)]
     public bool Palisade { get; set; } = true;
+    
+    [ProtoMember(38)]
     public bool Quern { get; set; } = true;
+    
+    [ProtoMember(39)]
     public bool Shelf { get; set; } = true;
+    
+    [ProtoMember(40)]
     public bool Sieve { get; set; } = true;
+    
+    [ProtoMember(41)]
     public bool Sign { get; set; } = true;
+    
+    [ProtoMember(42)]
     public bool Signpost { get; set; } = true;
+    
+    [ProtoMember(43)]
     public bool SodRoofing { get; set; } = true;
+    
+    [ProtoMember(44)]
     public bool StonePath { get; set; } = true;
+    
+    [ProtoMember(45)]
     public bool SupportBeamMetal { get; set; } = true;
+    
+    [ProtoMember(46)]
     public bool SupportChain { get; set; } = true;
+    
+    [ProtoMember(47)]
     public bool Table { get; set; } = true;
+    
+    [ProtoMember(48)]
     public bool Toolrack { get; set; } = true;
+    
+    [ProtoMember(49)]
     public bool TroughLarge { get; set; } = true;
+    
+    [ProtoMember(50)]
     public bool TroughSmall { get; set; } = true;
+    
+    [ProtoMember(51)]
     public bool WoodBucket { get; set; } = true;
+    
+    [ProtoMember(52)]
     public bool WoodenPan { get; set; } = true;
+    
+    [ProtoMember(53)]
     public bool WoodenRails { get; set; } = true;
 
-    public Dictionary<string, Dictionary<string, float>> ChuteFlowRates { get; set; } = new()
-    {
-        ["archimedesscrew"] = new() { ["default"] = 1, },
-        ["chute"] = new() { ["default"] = 1, },
-        ["hopper"] = new() { ["default"] = 1, },
-    };
-
-    public Dictionary<string, Dictionary<string, int>> ChuteQuantitySlots { get; set; } = new()
-    {
-        ["archimedesscrew"] = new() { ["default"] = 1, },
-        ["chute"] = new() { ["default"] = 1, },
-        ["hopper"] = new() { ["default"] = 4, },
-    };
-
-    public Dictionary<string, Dictionary<string, int>> ChuteCheckRateMs { get; set; } = new()
-    {
-        ["archimedesscrew"] = new() { ["default"] = 500, },
-    };
-
-    public Dictionary<string, Dictionary<string, bool>> ChuteCraftable { get; set; } = new()
-    {
-        ["archimedesscrew"] = new()
-        {
-            ["tinbronze"] = true,
-            ["bismuthbronze"] = true,
-            ["blackbronze"] = true,
-            ["iron"] = true,
-            ["meteoriciron"] = true,
-            ["steel"] = true
-        },
-        ["chute"] = new()
-        {
-            ["tinbronze"] = true,
-            ["bismuthbronze"] = true,
-            ["blackbronze"] = true,
-            ["iron"] = true,
-            ["meteoriciron"] = true,
-            ["steel"] = true
-        },
-        ["chutesection"] = new()
-        {
-            ["tinbronze"] = true,
-            ["bismuthbronze"] = true,
-            ["blackbronze"] = true,
-            ["iron"] = true,
-            ["meteoriciron"] = true,
-            ["steel"] = true
-        },
-        ["hopper"] = new()
-        {
-            ["tinbronze"] = true,
-            ["bismuthbronze"] = true,
-            ["blackbronze"] = true,
-            ["iron"] = true,
-            ["meteoriciron"] = true,
-            ["steel"] = true
-        },
-    };
-
-    public bool OverrideChestQuantitySlots { get; set; }
-
-    public Dictionary<string, int> ChestQuantitySlots { get; set; } = new()
-    {
-        ["default"] = 16
-    };
-
-    public bool OverrideDoubleChestQuantitySlots { get; set; }
-
-    public Dictionary<string, int> DoubleChestQuantitySlots { get; set; } = new()
-    {
-        ["default"] = 36
-    };
+    [ProtoMember(54)]
+    public List<string> ChuteCraftable { get; set; } = 
+    [
+        "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"
+    ];
 
     // TODO
     // public bool OverrideMetalDoorsForSteelProduction { get; set; }
@@ -147,16 +185,7 @@ public class Config
 
     public Config(Config previousConfig)
     {
-        ChuteCheckRateMs.AddRange(previousConfig.ChuteCheckRateMs);
-        ChuteCraftable.AddRange(previousConfig.ChuteCraftable);
-        ChuteFlowRates.AddRange(previousConfig.ChuteFlowRates);
-        ChuteQuantitySlots.AddRange(previousConfig.ChuteQuantitySlots);
-
-        OverrideChestQuantitySlots = previousConfig.OverrideChestQuantitySlots;
-        ChestQuantitySlots.AddRange(previousConfig.ChestQuantitySlots);
-
-        OverrideDoubleChestQuantitySlots = previousConfig.OverrideDoubleChestQuantitySlots;
-        DoubleChestQuantitySlots.AddRange(previousConfig.DoubleChestQuantitySlots);
+        ChuteCraftable = previousConfig.ChuteCraftable;
 
         // TODO
         // OverrideMetalDoorsForSteelProduction = previousConfig.OverrideMetalDoorsForSteelProduction;

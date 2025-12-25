@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
 using Vintagestory.API.Common;
 
 namespace VanillaVariants.Configuration;
@@ -84,13 +82,14 @@ static class ModConfig
         api.World.Config.SetBool("VanillaVariants_WoodenPan_Enabled", config.WoodenPan);
         api.World.Config.SetBool("VanillaVariants_WoodenRails_Enabled", config.WoodenRails);
 
-        foreach ((string name, Dictionary<string, bool> metals) in config.ChuteCraftable)
+        string[] chutes = ["archimedesscrew", "chute", "chutesection", "hopper"];
+        foreach (string chuteName in chutes)
         {
-            api.World.Config.SetBool($"VanillaVariants-anycraftable-{name}", metals.Any(x => x.Value));
+            api.World.Config.SetBool($"VanillaVariants-anycraftable-{chuteName}", config.ChuteCraftable.Count > 0);
 
-            foreach ((string metal, bool craftable) in metals)
+            foreach (string metal in config.ChuteCraftable)
             {
-                api.World.Config.SetBool($"VanillaVariants-craftable-{name}-{metal}", craftable);
+                api.World.Config.SetBool($"VanillaVariants-craftable-{chuteName}-{metal}", true);
             }
         }
 

@@ -107,17 +107,7 @@ public static class CollectibleObjectPatches
                     block.Attributes.Token["defaultType"] = JToken.FromObject(types[0]);
                     block.Attributes.Token["rotatatableInterval"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["rotatatableInterval"][genericType].AsString()));
                     block.Attributes.Token["drop"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["drop"].IsTrue(genericType)));
-
-                    Dictionary<string, int> newQuantitySlots = types.ToDictionary(key => key, value => fromBlock.Attributes["quantitySlots"][genericType].AsInt());
-                    if (Core.Config.OverrideChestQuantitySlots)
-                    {
-                        foreach (string type in types.Where(Core.Config.ChestQuantitySlots.ContainsKey))
-                        {
-                            newQuantitySlots[type] = Core.Config.ChestQuantitySlots[type];
-                        }
-                    }
-                    block.Attributes.Token["quantitySlots"] = JToken.FromObject(newQuantitySlots);
-
+                    block.Attributes.Token["quantitySlots"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["quantitySlots"][genericType].AsInt()));
                     block.Attributes.Token["dialogTitleLangCode"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["dialogTitleLangCode"][genericType].AsString()));
                     block.Attributes.Token["storageType"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["storageType"][genericType].AsInt()));
                     block.Attributes.Token["retrieveOnly"] = JToken.FromObject(types.ToDictionary(key => key, value => false));
@@ -149,17 +139,7 @@ public static class CollectibleObjectPatches
                     block.Attributes.Token["types"] = JToken.FromObject(types);
                     block.Attributes.Token["defaultType"] = JToken.FromObject(types[0]);
                     block.Attributes.Token["drop"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["drop"].IsTrue(genericType)));
-
-                    Dictionary<string, int> newQuantitySlots = types.ToDictionary(key => key, value => fromBlock.Attributes["quantitySlots"][genericType].AsInt());
-                    if (Core.Config.OverrideChestQuantitySlots)
-                    {
-                        foreach (string type in types.Where(Core.Config.ChestQuantitySlots.ContainsKey))
-                        {
-                            newQuantitySlots[type] = Core.Config.ChestQuantitySlots[type];
-                        }
-                    }
-                    block.Attributes.Token["quantitySlots"] = JToken.FromObject(newQuantitySlots);
-
+                    block.Attributes.Token["quantitySlots"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["quantitySlots"][genericType].AsInt()));
                     block.Attributes.Token["dialogTitleLangCode"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["dialogTitleLangCode"][genericType].AsString()));
                     block.Attributes.Token["storageType"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["storageType"][genericType].AsInt()));
                     block.Attributes.Token["retrieveOnly"] = JToken.FromObject(types.ToDictionary(key => key, value => false));
@@ -181,7 +161,7 @@ public static class CollectibleObjectPatches
                         return;
                     }
                     string[] types = api.LoadTypesFromBlocks(block);
-                    if (!types.Any())
+                    if (types.Length == 0)
                     {
                         return;
                     }
@@ -192,17 +172,7 @@ public static class CollectibleObjectPatches
                     block.Attributes.Token["defaultType"] = JToken.FromObject(types[0]);
                     block.Attributes.Token["rotatatableInterval"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["rotatatableInterval"][genericType].AsString()));
                     block.Attributes.Token["drop"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["drop"].IsTrue(genericType)));
-
-                    Dictionary<string, int> newQuantitySlots = types.ToDictionary(key => key, value => fromBlock.Attributes["quantitySlots"][genericType].AsInt());
-                    if (Core.Config.OverrideDoubleChestQuantitySlots)
-                    {
-                        foreach (string type in types.Where(Core.Config.DoubleChestQuantitySlots.ContainsKey))
-                        {
-                            newQuantitySlots[type] = Core.Config.DoubleChestQuantitySlots[type];
-                        }
-                    }
-                    block.Attributes.Token["quantitySlots"] = JToken.FromObject(newQuantitySlots);
-
+                    block.Attributes.Token["quantitySlots"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["quantitySlots"][genericType].AsInt()));
                     block.Attributes.Token["quantityColumns"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["quantityColumns"][genericType].AsInt()));
                     block.Attributes.Token["dialogTitleLangCode"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["dialogTitleLangCode"][genericType].AsString()));
                     block.Attributes.Token["storageType"] = JToken.FromObject(types.ToDictionary(key => key, value => fromBlock.Attributes["storageType"][genericType].AsInt()));
@@ -307,10 +277,6 @@ public static class CollectibleObjectPatches
         {
             return;
         }
-
-        UpdateAttribute(block, "item-flowrate", Core.Config.ChuteFlowRates, name, variant);
-        UpdateAttribute(block, "quantitySlots", Core.Config.ChuteQuantitySlots, name, variant);
-        UpdateAttribute(block, "item-checkrateMs", Core.Config.ChuteCheckRateMs, name, variant);
     }
 
     public static void PatchTrough(this Block block, IDictionary<string, CompositeTexture> smallTextures, IDictionary<string, CompositeTexture> largeTextures)
@@ -334,21 +300,6 @@ public static class CollectibleObjectPatches
                 block.Textures.Add(key, val);
             }
         }
-    }
-
-    private static void UpdateAttribute<T>(Block block, string attributeName, Dictionary<string, Dictionary<string, T>> dict, string name, string variant)
-    {
-        if (!dict.TryGetValue(name, out Dictionary<string, T> innerDict))
-        {
-            return;
-        }
-
-        if (!innerDict.TryGetValue(variant, out T value) && !innerDict.TryGetValue("default", out value))
-        {
-            return;
-        }
-
-        block.Attributes.Token[attributeName] = JToken.FromObject(value);
     }
 
     // TODO: Without joking, I spent whole day to find perfect regex, I DESERVE to comment this until I find regex that will actually work!!
