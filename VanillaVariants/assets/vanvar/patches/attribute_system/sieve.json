@@ -1,0 +1,28 @@
+[
+    {
+        "op": "addmerge",
+        "path": "/creativeinventoryStacks",
+        "value": [
+            {
+                "tabs": ["general", "items", "vanvar"],
+                "stacks": [
+                    { "type": "block", "code": "sieve-{type}", "attributes": { "types": { "wood": "aged" } } },
+                    { "type": "block", "code": "sieve-{type}", "attributes": { "types": { "wood": "birch" } } },
+                    { "type": "block", "code": "sieve-{type}", "attributes": { "types": { "wood": "maple" } } },
+                    { "type": "block", "code": "sieve-{type}", "attributes": { "types": { "wood": "pine" } } },
+                    { "type": "block", "code": "sieve-{type}", "attributes": { "types": { "wood": "acacia" } } },
+                    { "type": "block", "code": "sieve-{type}", "attributes": { "types": { "wood": "kapok" } } },
+                    { "type": "block", "code": "sieve-{type}", "attributes": { "types": { "wood": "baldcypress" } } },
+                    { "type": "block", "code": "sieve-{type}", "attributes": { "types": { "wood": "larch" } } },
+                    { "type": "block", "code": "sieve-{type}", "attributes": { "types": { "wood": "redwood" } } },
+                    { "type": "block", "code": "sieve-{type}", "attributes": { "types": { "wood": "ebony" } } },
+                    { "type": "block", "code": "sieve-{type}", "attributes": { "types": { "wood": "walnut" } } },
+                    { "type": "block", "code": "sieve-{type}", "attributes": { "types": { "wood": "purpleheart" } } }
+                ]
+            }
+        ],
+        "file": "game:blocktypes/wood/sieve.json",
+        "condition": { "when": "VanillaVariants_Sieve_Enabled", "isValue": "true" },
+        "side": "Server"
+    }
+]

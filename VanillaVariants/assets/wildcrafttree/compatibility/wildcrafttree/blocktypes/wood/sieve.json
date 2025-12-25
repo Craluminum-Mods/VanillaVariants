@@ -1,9 +1,0 @@
-{
-    "inheritFrom": "vanvar:blocktypes/wood/sieve",
-    "code": "sieve",
-    "variantgroups": [
-        { "code": "wood", "loadFromProperties": "wildcrafttree:block/wood" },
-        { "code": "type", "states": ["linen", "copper", "tinbronze", "bismuthbronze", "blackbronze"] }
-    ],
-    "attributes": { "fromVanVarMod": true }
-}
