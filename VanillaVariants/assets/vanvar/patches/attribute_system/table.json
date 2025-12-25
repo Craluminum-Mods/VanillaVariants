@@ -1,0 +1,30 @@
+[
+    {
+        "op": "addmerge",
+        "path": "/creativeinventoryStacksByType",
+        "value": {
+            "@.*-(normal|.*marble)": [
+                {
+                    "tabs": ["general", "vanvar"],
+                    "stacks": [
+                        { "type": "block", "code": "table-{type}", "attributes": { "types": { "wood": "aged" } } },
+                        { "type": "block", "code": "table-{type}", "attributes": { "types": { "wood": "birch" } } },
+                        { "type": "block", "code": "table-{type}", "attributes": { "types": { "wood": "maple" } } },
+                        { "type": "block", "code": "table-{type}", "attributes": { "types": { "wood": "pine" } } },
+                        { "type": "block", "code": "table-{type}", "attributes": { "types": { "wood": "acacia" } } },
+                        { "type": "block", "code": "table-{type}", "attributes": { "types": { "wood": "kapok" } } },
+                        { "type": "block", "code": "table-{type}", "attributes": { "types": { "wood": "baldcypress" } } },
+                        { "type": "block", "code": "table-{type}", "attributes": { "types": { "wood": "larch" } } },
+                        { "type": "block", "code": "table-{type}", "attributes": { "types": { "wood": "redwood" } } },
+                        { "type": "block", "code": "table-{type}", "attributes": { "types": { "wood": "ebony" } } },
+                        { "type": "block", "code": "table-{type}", "attributes": { "types": { "wood": "walnut" } } },
+                        { "type": "block", "code": "table-{type}", "attributes": { "types": { "wood": "purpleheart" } } }
+                    ]
+                }
+            ]
+        },
+        "file": "game:blocktypes/wood/table.json",
+        "condition": { "when": "VanillaVariants_Table_Enabled", "isValue": "true" },
+        "side": "Server"
+    }
+]

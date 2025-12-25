@@ -99,6 +99,10 @@ public class Core : ModSystem
         AddBehaviorWithPropertiesIfTrue(Config.Sieve && obj.Code.PathStartsWith("sieve"), obj, behaviorProps["sieve"]);
         AddBehaviorWithPropertiesIfTrue(Config.OmokTabletop && obj is BlockOmokTable, obj, behaviorProps["omoktabletop"]);
         AddBehaviorWithPropertiesIfTrue(Config.Forge && obj is BlockForge, obj, behaviorProps["forge"]);
+        AddBehaviorWithPropertiesIfTrue(Config.Table && obj.Code.PathStartsWith("table-normal"), obj, behaviorProps["table"]);
+        AddBehaviorWithPropertiesIfTrue(Config.Table && obj.Code.PathStartsWith("table-whitemarble"), obj, behaviorProps["table-whitemarble"]);
+        AddBehaviorWithPropertiesIfTrue(Config.Table && obj.Code.PathStartsWith("table-redmarble"), obj, behaviorProps["table-redmarble"]);
+        AddBehaviorWithPropertiesIfTrue(Config.Table && obj.Code.PathStartsWith("table-greenmarble"), obj, behaviorProps["table-greenmarble"]);
     }
 
     private void AddBehaviorWithPropertiesIfTrue(bool condition, CollectibleObject obj, JsonObject props)
@@ -120,6 +124,7 @@ public class Core : ModSystem
                 properties = null
             };
             block.BlockEntityBehaviors = block.BlockEntityBehaviors.Append(bebehavior);
+            block.EntityClass ??= "Generic";
         }
         else
         {
@@ -165,6 +170,10 @@ public class Core : ModSystem
         behaviorProps["sieve"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/sieve.json")).ToText());
         behaviorProps["omoktabletop"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/omoktabletop.json")).ToText());
         behaviorProps["forge"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/forge.json")).ToText());
+        behaviorProps["table"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/table.json")).ToText());
+        behaviorProps["table-whitemarble"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/table-whitemarble.json")).ToText());
+        behaviorProps["table-redmarble"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/table-redmarble.json")).ToText());
+        behaviorProps["table-greenmarble"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/table-greenmarble.json")).ToText());
     }
 
     public override void Dispose()

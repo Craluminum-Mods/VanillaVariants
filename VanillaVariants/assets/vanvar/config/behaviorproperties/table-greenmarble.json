@@ -1,0 +1,14 @@
+{
+    "description": {
+        "wood-*": ["blockmaterial-Wood", ": ", "material-{wood}"]
+    },
+    "textures": {
+        "wood-*": {
+            "sides": { "base": "game:block/wood/debarked/{wood}", "blendedOverlays": [{ "base": "vanvar:block/table/sides-greenmarble" }] },
+            "top": { "base": "game:block/stone/polishedrock/greenmarble-inside" },
+            "bottom": { "base": "game:block/wood/debarked/{wood}" },
+            "legs": { "base": "game:block/wood/debarked/{wood}", "rotation": 90 },
+            "oak": { "base": "game:block/wood/debarked/{wood}" }
+        }
+    }
+}

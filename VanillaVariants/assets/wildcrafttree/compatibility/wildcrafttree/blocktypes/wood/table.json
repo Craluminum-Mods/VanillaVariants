@@ -1,9 +1,0 @@
-{
-    "inheritFrom": "vanvar:blocktypes/wood/table",
-    "code": "table",
-    "variantgroups": [
-        { "code": "material", "loadFromProperties": "wildcrafttree:block/wood" },
-        { "code": "type", "states": ["normal", "whitemarble", "redmarble", "greenmarble"] }
-    ],
-    "attributes": { "fromVanVarMod": true }
-}
