@@ -1,0 +1,55 @@
+[
+    {
+        "op": "addmerge",
+        "path": "/creativeinventoryStacksByType",
+        "value": {
+            "*-large-head-north": [
+                {
+                    "tabs": ["general", "decorative", "vanvar"],
+                    "stacks": [
+                        { "type": "block", "code": "trough-{material}-{part}-{side}", "attributes": { "types": { "wood": "aged" } } },
+                        { "type": "block", "code": "trough-{material}-{part}-{side}", "attributes": { "types": { "wood": "birch" } } },
+                        { "type": "block", "code": "trough-{material}-{part}-{side}", "attributes": { "types": { "wood": "maple" } } },
+                        { "type": "block", "code": "trough-{material}-{part}-{side}", "attributes": { "types": { "wood": "pine" } } },
+                        { "type": "block", "code": "trough-{material}-{part}-{side}", "attributes": { "types": { "wood": "acacia" } } },
+                        { "type": "block", "code": "trough-{material}-{part}-{side}", "attributes": { "types": { "wood": "kapok" } } },
+                        { "type": "block", "code": "trough-{material}-{part}-{side}", "attributes": { "types": { "wood": "baldcypress" } } },
+                        { "type": "block", "code": "trough-{material}-{part}-{side}", "attributes": { "types": { "wood": "larch" } } },
+                        { "type": "block", "code": "trough-{material}-{part}-{side}", "attributes": { "types": { "wood": "redwood" } } },
+                        { "type": "block", "code": "trough-{material}-{part}-{side}", "attributes": { "types": { "wood": "ebony" } } },
+                        { "type": "block", "code": "trough-{material}-{part}-{side}", "attributes": { "types": { "wood": "walnut" } } },
+                        { "type": "block", "code": "trough-{material}-{part}-{side}", "attributes": { "types": { "wood": "purpleheart" } } }
+                    ]
+                }
+            ]
+        },
+        "file": "game:blocktypes/wood/trough-large.json",
+        "condition": { "when": "VanillaVariants_TroughLarge_Enabled", "isValue": "true" },
+        "side": "Server"
+    },
+
+    {
+        "file": "game:blocktypes/wood/trough-large.json",
+        "op": "addmerge",
+        "path": "/textures/aged",
+        "value": { "base": "block/wood/debarked/oak" },
+        "condition": { "when": "VanillaVariants_TroughLarge_Enabled", "isValue": "true" },
+        "side": "server"
+    },
+    {
+        "file": "game:blocktypes/wood/trough-large.json",
+        "op": "addmerge",
+        "path": "/textures/charred",
+        "value": { "base": "block/wood/debarked/oak" },
+        "condition": { "when": "VanillaVariants_TroughLarge_Enabled", "isValue": "true" },
+        "side": "server"
+    },
+    {
+        "file": "game:blocktypes/wood/trough-large.json",
+        "op": "addmerge",
+        "path": "/textures/bottom-inside",
+        "value": { "base": "block/wood/debarked/oak" },
+        "condition": { "when": "VanillaVariants_TroughLarge_Enabled", "isValue": "true" },
+        "side": "server"
+    }
+]

@@ -68,7 +68,7 @@ public class Core : ModSystem
 
             if (api.Side.IsServer())
             {
-                PatchWithBehavior(block);
+                AddRenderingBehavior(block);
             }
         }
 
@@ -78,35 +78,37 @@ public class Core : ModSystem
 
             if (api.Side.IsServer())
             {
-                PatchWithBehavior(item);
+                AddRenderingBehavior(item);
             }
         }
     }
 
-    private void PatchWithBehavior(CollectibleObject obj)
+    private void AddRenderingBehavior(CollectibleObject obj)
     {
         if (obj == null || obj.Code == null) return;
         if (obj.Code.Domain != "game") return;
 
-        AddBehaviorWithPropertiesIfTrue(Config.Toolrack && obj is BlockToolRack, obj, behaviorProps["toolrack"]);
-        AddBehaviorWithPropertiesIfTrue(Config.DisplayCase && obj is BlockDisplayCase, obj, behaviorProps["displayCase"]);
-        AddBehaviorWithPropertiesIfTrue(Config.Ladder && obj.Code.PathStartsWith("ladder-wood"), obj, behaviorProps["ladder"]);
-        AddBehaviorWithPropertiesIfTrue(Config.Shelf && obj is BlockShelf && obj.Code.PathStartsWith("shelf-normal"), obj, behaviorProps["shelf"]);
-        AddBehaviorWithPropertiesIfTrue(Config.Sign && obj is BlockSign && obj.Code.PathStartsWith("sign"), obj, behaviorProps["sign"]);
-        AddBehaviorWithPropertiesIfTrue(Config.Signpost && obj is BlockSignPost && obj.Code.PathStartsWith("signpost"), obj, behaviorProps["signpost"]);
-        AddBehaviorWithPropertiesIfTrue(Config.Moldrack && obj is BlockMoldRack && obj.Code.PathStartsWith("moldrack"), obj, behaviorProps["moldrack"]);
-        AddBehaviorWithPropertiesIfTrue(Config.Henbox && obj is BlockHenbox, obj, behaviorProps["henbox"]);
-        AddBehaviorWithPropertiesIfTrue(Config.Sieve && obj.Code.PathStartsWith("sieve"), obj, behaviorProps["sieve"]);
-        AddBehaviorWithPropertiesIfTrue(Config.OmokTabletop && obj is BlockOmokTable, obj, behaviorProps["omoktabletop"]);
-        AddBehaviorWithPropertiesIfTrue(Config.Forge && obj is BlockForge, obj, behaviorProps["forge"]);
-        AddBehaviorWithPropertiesIfTrue(Config.Table && obj.Code.PathStartsWith("table-normal"), obj, behaviorProps["table"]);
-        AddBehaviorWithPropertiesIfTrue(Config.Table && obj.Code.PathStartsWith("table-whitemarble"), obj, behaviorProps["table-whitemarble"]);
-        AddBehaviorWithPropertiesIfTrue(Config.Table && obj.Code.PathStartsWith("table-redmarble"), obj, behaviorProps["table-redmarble"]);
-        AddBehaviorWithPropertiesIfTrue(Config.Table && obj.Code.PathStartsWith("table-greenmarble"), obj, behaviorProps["table-greenmarble"]);
-        AddBehaviorWithPropertiesIfTrue(Config.Chair && obj.Code.PathStartsWith("chair"), obj, behaviorProps["chair"]);
+        AddRenderingBehaviorIfTrue(Config.Toolrack && obj is BlockToolRack, obj, behaviorProps["toolrack"]);
+        AddRenderingBehaviorIfTrue(Config.DisplayCase && obj is BlockDisplayCase, obj, behaviorProps["displayCase"]);
+        AddRenderingBehaviorIfTrue(Config.Ladder && obj.Code.PathStartsWith("ladder-wood"), obj, behaviorProps["ladder"]);
+        AddRenderingBehaviorIfTrue(Config.Shelf && obj is BlockShelf && obj.Code.PathStartsWith("shelf-normal"), obj, behaviorProps["shelf"]);
+        AddRenderingBehaviorIfTrue(Config.Sign && obj is BlockSign && obj.Code.PathStartsWith("sign"), obj, behaviorProps["sign"]);
+        AddRenderingBehaviorIfTrue(Config.Signpost && obj is BlockSignPost && obj.Code.PathStartsWith("signpost"), obj, behaviorProps["signpost"]);
+        AddRenderingBehaviorIfTrue(Config.Moldrack && obj is BlockMoldRack && obj.Code.PathStartsWith("moldrack"), obj, behaviorProps["moldrack"]);
+        AddRenderingBehaviorIfTrue(Config.Henbox && obj is BlockHenbox, obj, behaviorProps["henbox"]);
+        AddRenderingBehaviorIfTrue(Config.Sieve && obj.Code.PathStartsWith("sieve"), obj, behaviorProps["sieve"]);
+        AddRenderingBehaviorIfTrue(Config.OmokTabletop && obj is BlockOmokTable, obj, behaviorProps["omoktabletop"]);
+        AddRenderingBehaviorIfTrue(Config.Forge && obj is BlockForge, obj, behaviorProps["forge"]);
+        AddRenderingBehaviorIfTrue(Config.Table && obj.Code.PathStartsWith("table-normal"), obj, behaviorProps["table"]);
+        AddRenderingBehaviorIfTrue(Config.Table && obj.Code.PathStartsWith("table-whitemarble"), obj, behaviorProps["table-whitemarble"]);
+        AddRenderingBehaviorIfTrue(Config.Table && obj.Code.PathStartsWith("table-redmarble"), obj, behaviorProps["table-redmarble"]);
+        AddRenderingBehaviorIfTrue(Config.Table && obj.Code.PathStartsWith("table-greenmarble"), obj, behaviorProps["table-greenmarble"]);
+        AddRenderingBehaviorIfTrue(Config.Chair && obj.Code.PathStartsWith("chair"), obj, behaviorProps["chair"]);
+        AddRenderingBehaviorIfTrue(Config.TroughLarge && obj is BlockTroughDoubleBlock, obj, behaviorProps["trough-large"]);
+        AddRenderingBehaviorIfTrue(Config.TroughSmall && obj is BlockTrough, obj, behaviorProps["trough-small"]);
     }
 
-    private void AddBehaviorWithPropertiesIfTrue(bool condition, CollectibleObject obj, JsonObject props)
+    private void AddRenderingBehaviorIfTrue(bool condition, CollectibleObject obj, JsonObject props)
     {
         if (!condition) return;
         if (props == null) return;
@@ -151,6 +153,21 @@ public class Core : ModSystem
             block.CollectibleBehaviors = block.CollectibleBehaviors.InsertAt(newAttachableBehavior, index);
             block.BlockBehaviors = block.BlockBehaviors.InsertAt(newAttachableBehavior, index);
         }
+
+        Vintagestory.GameContent.BlockBehaviorNWOrientable prevNwOrientableBehavior = block.GetBehavior<Vintagestory.GameContent.BlockBehaviorNWOrientable>();
+        if (prevNwOrientableBehavior != null)
+        {
+            JsonObject clonedProps = JsonObject.FromJson(prevNwOrientableBehavior.propertiesAtString);
+            AttributeRenderingLibrary.BlockBehaviorNWOrientable newAttachableBehavior = new(block);
+            newAttachableBehavior.Initialize(clonedProps);
+
+            int index = block.CollectibleBehaviors.IndexOf(x => x is Vintagestory.GameContent.BlockBehaviorNWOrientable);
+            block.CollectibleBehaviors = block.CollectibleBehaviors.RemoveAt(index);
+            block.BlockBehaviors = block.BlockBehaviors.RemoveAt(index);
+
+            block.CollectibleBehaviors = block.CollectibleBehaviors.InsertAt(newAttachableBehavior, index);
+            block.BlockBehaviors = block.BlockBehaviors.InsertAt(newAttachableBehavior, index);
+        }
     }
 
     private Dictionary<string, JsonObject> behaviorProps;
@@ -160,22 +177,29 @@ public class Core : ModSystem
         if (api.Side.IsClient()) return;
 
         behaviorProps = new Dictionary<string, JsonObject>(4);
-        behaviorProps["toolrack"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/toolrack.json")).ToText());
-        behaviorProps["displayCase"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/displaycase.json")).ToText());
-        behaviorProps["ladder"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/ladder.json")).ToText());
-        behaviorProps["shelf"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/shelf.json")).ToText());
-        behaviorProps["sign"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/sign.json")).ToText());
-        behaviorProps["signpost"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/signpost.json")).ToText());
-        behaviorProps["moldrack"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/moldrack.json")).ToText());
-        behaviorProps["henbox"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/henbox.json")).ToText());
-        behaviorProps["sieve"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/sieve.json")).ToText());
-        behaviorProps["omoktabletop"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/omoktabletop.json")).ToText());
-        behaviorProps["forge"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/forge.json")).ToText());
-        behaviorProps["table"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/table.json")).ToText());
-        behaviorProps["table-whitemarble"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/table-whitemarble.json")).ToText());
-        behaviorProps["table-redmarble"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/table-redmarble.json")).ToText());
-        behaviorProps["table-greenmarble"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/table-greenmarble.json")).ToText());
-        behaviorProps["chair"] = JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create("vanvar:config/behaviorproperties/chair.json")).ToText());
+        behaviorProps["toolrack"] = LoadProperties(api, "toolrack");
+        behaviorProps["displayCase"] = LoadProperties(api, "displaycase");
+        behaviorProps["ladder"] = LoadProperties(api, "ladder");
+        behaviorProps["shelf"] = LoadProperties(api, "shelf");
+        behaviorProps["sign"] = LoadProperties(api, "sign");
+        behaviorProps["signpost"] = LoadProperties(api, "signpost");
+        behaviorProps["moldrack"] = LoadProperties(api, "moldrack");
+        behaviorProps["henbox"] = LoadProperties(api, "henbox");
+        behaviorProps["sieve"] = LoadProperties(api, "sieve");
+        behaviorProps["omoktabletop"] = LoadProperties(api, "omoktabletop");
+        behaviorProps["forge"] = LoadProperties(api, "forge");
+        behaviorProps["table"] = LoadProperties(api, "table");
+        behaviorProps["table-whitemarble"] = LoadProperties(api, "table-whitemarble");
+        behaviorProps["table-redmarble"] = LoadProperties(api, "table-redmarble");
+        behaviorProps["table-greenmarble"] = LoadProperties(api, "table-greenmarble");
+        behaviorProps["chair"] = LoadProperties(api, "chair");
+        behaviorProps["trough-large"] = LoadProperties(api, "trough-large");
+        behaviorProps["trough-small"] = LoadProperties(api, "trough-small");
+    }
+
+    public JsonObject LoadProperties(ICoreAPI api, string pathEnding)
+    {
+        return JsonObject.FromJson(api.Assets.TryGet(AssetLocation.Create($"vanvar:config/behaviorproperties/{pathEnding}.json")).ToText());
     }
 
     public override void Dispose()
