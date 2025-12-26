@@ -106,6 +106,7 @@ public class Core : ModSystem
         AddRenderingBehaviorIfTrue(Config.Chair && obj.Code.PathStartsWith("chair"), obj, behaviorProps["chair"]);
         AddRenderingBehaviorIfTrue(Config.TroughLarge && obj is BlockTroughDoubleBlock, obj, behaviorProps["trough-large"]);
         AddRenderingBehaviorIfTrue(Config.TroughSmall && obj is BlockTrough, obj, behaviorProps["trough-small"]);
+        AddRenderingBehaviorIfTrue(Config.WoodenRails && obj is BlockRails, obj, behaviorProps["woodenrails"]);
     }
 
     private void AddRenderingBehaviorIfTrue(bool condition, CollectibleObject obj, JsonObject props)
@@ -176,7 +177,7 @@ public class Core : ModSystem
     {
         if (api.Side.IsClient()) return;
 
-        behaviorProps = new FastSmallDictionary<string, JsonObject>(18);
+        behaviorProps = new FastSmallDictionary<string, JsonObject>(19);
         behaviorProps["toolrack"] = LoadProperties(api, "toolrack");
         behaviorProps["displayCase"] = LoadProperties(api, "displaycase");
         behaviorProps["ladder"] = LoadProperties(api, "ladder");
@@ -195,6 +196,7 @@ public class Core : ModSystem
         behaviorProps["chair"] = LoadProperties(api, "chair");
         behaviorProps["trough-large"] = LoadProperties(api, "trough-large");
         behaviorProps["trough-small"] = LoadProperties(api, "trough-small");
+        behaviorProps["woodenrails"] = LoadProperties(api, "woodenrails");
     }
 
     public JsonObject LoadProperties(ICoreAPI api, string pathEnding)

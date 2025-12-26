@@ -1,0 +1,48 @@
+[
+    {
+        "op": "addmerge",
+        "path": "/creativeinventoryStacksByType",
+        "value": {
+            "*-flat_ns": [
+                {
+                    "tabs": ["general", "decorative", "vanvar"],
+                    "stacks": [
+                        { "type": "block", "code": "woodenrails-flat_ns", "attributes": { "types": { "wood": "aged" } } },
+                        { "type": "block", "code": "woodenrails-flat_ns", "attributes": { "types": { "wood": "birch" } } },
+                        { "type": "block", "code": "woodenrails-flat_ns", "attributes": { "types": { "wood": "maple" } } },
+                        { "type": "block", "code": "woodenrails-flat_ns", "attributes": { "types": { "wood": "pine" } } },
+                        { "type": "block", "code": "woodenrails-flat_ns", "attributes": { "types": { "wood": "acacia" } } },
+                        { "type": "block", "code": "woodenrails-flat_ns", "attributes": { "types": { "wood": "kapok" } } },
+                        { "type": "block", "code": "woodenrails-flat_ns", "attributes": { "types": { "wood": "baldcypress" } } },
+                        { "type": "block", "code": "woodenrails-flat_ns", "attributes": { "types": { "wood": "larch" } } },
+                        { "type": "block", "code": "woodenrails-flat_ns", "attributes": { "types": { "wood": "redwood" } } },
+                        { "type": "block", "code": "woodenrails-flat_ns", "attributes": { "types": { "wood": "ebony" } } },
+                        { "type": "block", "code": "woodenrails-flat_ns", "attributes": { "types": { "wood": "walnut" } } },
+                        { "type": "block", "code": "woodenrails-flat_ns", "attributes": { "types": { "wood": "purpleheart" } } }
+                    ]
+                }
+            ]
+        },
+        "file": "game:blocktypes/wood/rails.json",
+        "condition": { "when": "VanillaVariants_WoodenRails_Enabled", "isValue": "true" },
+        "side": "Server"
+    },
+
+    {
+        "file": "vanvar:recipes/grid/morerecipes/woodenrails.json",
+        "op": "addmerge",
+        "path": "/0/enabled",
+        "value": false,
+        "condition": { "when": "VanillaVariants_CraftableWoodenRails_Enabled", "isValue": "false" },
+        "side": "server"
+    },
+    {
+        "file": "vanvar:recipes/grid/morerecipes/woodenrails.json",
+        "op": "addmerge",
+        "path": "/1/enabled",
+        "value": false,
+        "condition": { "when": "VanillaVariants_CraftableWoodenRails_Enabled", "isValue": "false" },
+        "dependsOn": [{ "modid": "wildcrafttree" }],
+        "side": "server"
+    }
+]
