@@ -170,13 +170,13 @@ public class Core : ModSystem
         }
     }
 
-    private Dictionary<string, JsonObject> behaviorProps;
+    private FastSmallDictionary<string, JsonObject> behaviorProps;
 
     public override void AssetsLoaded(ICoreAPI api)
     {
         if (api.Side.IsClient()) return;
 
-        behaviorProps = new Dictionary<string, JsonObject>(4);
+        behaviorProps = new FastSmallDictionary<string, JsonObject>(18);
         behaviorProps["toolrack"] = LoadProperties(api, "toolrack");
         behaviorProps["displayCase"] = LoadProperties(api, "displaycase");
         behaviorProps["ladder"] = LoadProperties(api, "ladder");
