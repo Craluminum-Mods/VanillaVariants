@@ -31,7 +31,7 @@ public class Core : ModSystem
 
     private void Event_PlayerJoin(IServerPlayer byPlayer, ICoreServerAPI api)
     {
-        api.Network.GetChannel("vanvar").SendPacket<VanillaVariants.Configuration.Config>(Config, byPlayer);
+        api.Network.GetChannel("vanvar").SendPacket(Config, byPlayer);
     }
 
     public override void Start(ICoreAPI api)
@@ -107,6 +107,7 @@ public class Core : ModSystem
         AddRenderingBehaviorIfTrue(Config.TroughLarge && obj is BlockTroughDoubleBlock, obj, behaviorProps["trough-large"]);
         AddRenderingBehaviorIfTrue(Config.TroughSmall && obj is BlockTrough, obj, behaviorProps["trough-small"]);
         AddRenderingBehaviorIfTrue(Config.WoodenRails && obj is BlockRails, obj, behaviorProps["woodenrails"]);
+        AddRenderingBehaviorIfTrue(Config.Barrel && obj is BlockBarrel, obj, behaviorProps["barrel"]);
     }
 
     private void AddRenderingBehaviorIfTrue(bool condition, CollectibleObject obj, JsonObject props)
@@ -197,6 +198,7 @@ public class Core : ModSystem
         behaviorProps["trough-large"] = LoadProperties(api, "trough-large");
         behaviorProps["trough-small"] = LoadProperties(api, "trough-small");
         behaviorProps["woodenrails"] = LoadProperties(api, "woodenrails");
+        behaviorProps["barrel"] = LoadProperties(api, "barrel");
     }
 
     public JsonObject LoadProperties(ICoreAPI api, string pathEnding)

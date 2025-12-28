@@ -3,6 +3,7 @@ using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Server;
 using Vintagestory.Server;
+using VanillaVariants.Configuration;
 
 namespace VanillaVariants;
 
@@ -12,7 +13,7 @@ public class Network : ModSystem
     {
         api.Network
             .RegisterChannel("vanvar")
-            .RegisterMessageType(typeof(VanillaVariants.Configuration.Config));
+            .RegisterMessageType(typeof(Config));
     }
 
     #region Client
@@ -24,10 +25,10 @@ public class Network : ModSystem
         clientApi = api;
         clientChannel = api.Network
             .GetChannel("vanvar")
-            .SetMessageHandler<VanillaVariants.Configuration.Config>(OnServerResponse);
+            .SetMessageHandler<Config>(OnServerResponse);
     }
 
-    private void OnServerResponse(VanillaVariants.Configuration.Config configFromServer)
+    private void OnServerResponse(Config configFromServer)
     {
         if (configFromServer == null) return;
 
@@ -48,10 +49,10 @@ public class Network : ModSystem
         serverApi = api;
         serverChannel = api.Network
             .GetChannel("vanvar")
-            .SetMessageHandler<VanillaVariants.Configuration.Config>(OnClientRequest);
+            .SetMessageHandler<Config>(OnClientRequest);
     }
 
-    private void OnClientRequest(IPlayer fromPlayer, VanillaVariants.Configuration.Config configFromClient)
+    private void OnClientRequest(IPlayer fromPlayer, Config configFromClient)
     {
         if (!fromPlayer.HasPrivilege(Privilege.controlserver)) return;
         if (configFromClient == null) return;
@@ -70,7 +71,7 @@ public class Network : ModSystem
 
         if (allPlayers != null && allPlayers.Length > 0)
         {
-            serverChannel.SendPacket<VanillaVariants.Configuration.Config>(configFromClient, allPlayers);
+            serverChannel.SendPacket(configFromClient, allPlayers);
         }
     }
     #endregion

@@ -7,6 +7,6 @@
     "authors": ["Craluminum2413 (Dana)"],
     "dependencies": {
         "game": "1.21.0",
-        "attributerenderinglibrary": "2.4.0"
+        "attributerenderinglibrary": "2.4.2"
     }
 }

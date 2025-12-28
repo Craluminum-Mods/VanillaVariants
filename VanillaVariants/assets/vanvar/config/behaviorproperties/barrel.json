@@ -1,0 +1,11 @@
+{
+    "description": {
+        "wood-*": ["blockmaterial-Wood", ": ", "material-{wood}"]
+    },
+    "textures": {
+        "wood-*": {
+            "bottom": { "base": "game:block/wood/debarked/{wood}" },
+            "aged": { "base": "game:block/wood/debarked/{wood}" }
+        }
+    }
+}
