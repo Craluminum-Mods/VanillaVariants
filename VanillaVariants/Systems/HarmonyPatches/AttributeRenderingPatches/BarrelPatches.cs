@@ -79,7 +79,11 @@ public static partial class AttributeRenderingPatches
             return barrelMesh;
         }
 
-        var bebehavior = block.GetBEBehavior<BlockEntityBehaviorShapeTexturesFromAttributes>(forBlockPos);
+        BlockEntityBehaviorShapeTexturesFromAttributes bebehavior = null;
+        if (forBlockPos != null)
+        {
+            bebehavior = block.GetBEBehavior<BlockEntityBehaviorShapeTexturesFromAttributes>(forBlockPos);
+        }
 
         if (issealed)
         {
@@ -122,7 +126,7 @@ public static partial class AttributeRenderingPatches
     }
 
     [HarmonyPatchCategory("Client")]
-    [HarmonyPatch(typeof(BlockEntityBarrel), "GenMesh", [])]
+    [HarmonyPatch(typeof(BlockEntityBarrel), "GenMesh")]
     public static class BEBarrel_GenMesh_Patch
     {
         public static bool Prefix(BlockEntityBarrel __instance, ref MeshData __result, BlockBarrel ___ownBlock)

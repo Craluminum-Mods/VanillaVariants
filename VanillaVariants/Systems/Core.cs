@@ -108,6 +108,7 @@ public class Core : ModSystem
         AddRenderingBehaviorIfTrue(Config.TroughSmall && obj is BlockTrough, obj, behaviorProps["trough-small"]);
         AddRenderingBehaviorIfTrue(Config.WoodenRails && obj is BlockRails, obj, behaviorProps["woodenrails"]);
         AddRenderingBehaviorIfTrue(Config.Barrel && obj is BlockBarrel, obj, behaviorProps["barrel"]);
+        AddRenderingBehaviorIfTrue(Config.WoodBucket && obj is BlockBucket, obj, behaviorProps["bucket"]);
     }
 
     private void AddRenderingBehaviorIfTrue(bool condition, CollectibleObject obj, JsonObject props)
@@ -199,6 +200,7 @@ public class Core : ModSystem
         behaviorProps["trough-small"] = LoadProperties(api, "trough-small");
         behaviorProps["woodenrails"] = LoadProperties(api, "woodenrails");
         behaviorProps["barrel"] = LoadProperties(api, "barrel");
+        behaviorProps["bucket"] = LoadProperties(api, "bucket");
     }
 
     public JsonObject LoadProperties(ICoreAPI api, string pathEnding)

@@ -1,6 +1,0 @@
-{
-    "inheritFrom": "vanvar:blocktypes/wood/bucket",
-    "code": "woodbucket",
-    "attributes": { "fromVanVarMod": true },
-    "variantgroups": [{ "code": "type", "loadFromProperties": "wildcrafttree:block/wood" }]
-}
