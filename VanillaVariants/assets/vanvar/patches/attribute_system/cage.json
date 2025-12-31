@@ -1,0 +1,30 @@
+[
+    {
+        "op": "addmerge",
+        "path": "/creativeinventoryStacksByType",
+        "value": {
+            "*-north": [
+                {
+                    "tabs": ["general", "decorative", "vanvar"],
+                    "stacks": [
+                        { "type": "block", "code": "cage-{type}-north", "attributes": { "types": { "wood": "aged" } } },
+                        { "type": "block", "code": "cage-{type}-north", "attributes": { "types": { "wood": "birch" } } },
+                        { "type": "block", "code": "cage-{type}-north", "attributes": { "types": { "wood": "maple" } } },
+                        { "type": "block", "code": "cage-{type}-north", "attributes": { "types": { "wood": "pine" } } },
+                        { "type": "block", "code": "cage-{type}-north", "attributes": { "types": { "wood": "acacia" } } },
+                        { "type": "block", "code": "cage-{type}-north", "attributes": { "types": { "wood": "kapok" } } },
+                        { "type": "block", "code": "cage-{type}-north", "attributes": { "types": { "wood": "baldcypress" } } },
+                        { "type": "block", "code": "cage-{type}-north", "attributes": { "types": { "wood": "larch" } } },
+                        { "type": "block", "code": "cage-{type}-north", "attributes": { "types": { "wood": "redwood" } } },
+                        { "type": "block", "code": "cage-{type}-north", "attributes": { "types": { "wood": "ebony" } } },
+                        { "type": "block", "code": "cage-{type}-north", "attributes": { "types": { "wood": "walnut" } } },
+                        { "type": "block", "code": "cage-{type}-north", "attributes": { "types": { "wood": "purpleheart" } } }
+                    ]
+                }
+            ]
+        },
+        "file": "game:blocktypes/wood/cage.json",
+        "condition": { "when": "VanillaVariants_Cage_Enabled", "isValue": "true" },
+        "side": "Server"
+    }
+]

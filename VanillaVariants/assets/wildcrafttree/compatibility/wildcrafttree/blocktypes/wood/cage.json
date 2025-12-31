@@ -1,9 +1,0 @@
-{
-    "inheritFrom": "vanvar:blocktypes/wood/cage",
-    "code": "cage",
-    "attributes": { "fromVanVarMod": true },
-    "variantgroups": [
-        { "code": "type", "loadFromProperties": "wildcrafttree:block/wood" },
-        { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
-    ]
-}

@@ -1,0 +1,12 @@
+{
+    "description": {
+        "wood-*": ["blockmaterial-Wood", ": ", "material-{wood}"]
+    },
+    "textures": {
+        "wood-*": {
+            "0": { "base": "game:block/wood/debarked/{wood}", "rotation": 90 },
+            "1": { "base": "game:block/wood/debarked/{wood}", "rotation": 90 },
+            "2": { "base": "game:block/wood/debarked/{wood}", "rotation": 90 }
+        }
+    }
+}

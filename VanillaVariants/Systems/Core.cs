@@ -110,6 +110,7 @@ public class Core : ModSystem
         AddRenderingBehaviorIfTrue(Config.Barrel && obj is BlockBarrel, obj, behaviorProps["barrel"]);
         AddRenderingBehaviorIfTrue(Config.WoodBucket && obj is BlockBucket, obj, behaviorProps["bucket"]);
         AddRenderingBehaviorIfTrue(Config.Bed && obj is BlockBed && obj.Code.PathStartsWith("bed-wood"), obj, behaviorProps["bed"]);
+        AddRenderingBehaviorIfTrue(Config.Cage && obj.Code.PathStartsWith("cage"), obj, behaviorProps["cage"]);
     }
 
     private void AddRenderingBehaviorIfTrue(bool condition, CollectibleObject obj, JsonObject props)
@@ -125,12 +126,12 @@ public class Core : ModSystem
             block.CollectibleBehaviors = block.CollectibleBehaviors.Append(behavior);
             block.BlockBehaviors = block.BlockBehaviors.Append(behavior);
 
-            BlockEntityBehaviorType bebehavior = new BlockEntityBehaviorType
+            block.BlockEntityBehaviors = block.BlockEntityBehaviors.Append(new BlockEntityBehaviorType
             {
                 Name = "AttributeRenderingLibrary.ShapeTexturesFromAttributes",
                 properties = null
-            };
-            block.BlockEntityBehaviors = block.BlockEntityBehaviors.Append(bebehavior);
+            });
+
             block.EntityClass ??= "Generic";
         }
         else
@@ -143,34 +144,46 @@ public class Core : ModSystem
 
     private static void AddExtraBlockBehaviors(Block block)
     {
-        Vintagestory.GameContent.BlockBehaviorHorizontalAttachable prevAttachableBehavior = block.GetBehavior<Vintagestory.GameContent.BlockBehaviorHorizontalAttachable>();
-        if (prevAttachableBehavior != null)
+        if (block.HasBehavior<Vintagestory.GameContent.BlockBehaviorHorizontalAttachable>())
         {
-            JsonObject clonedProps = JsonObject.FromJson(prevAttachableBehavior.propertiesAtString);
-            AttributeRenderingLibrary.BlockBehaviorHorizontalAttachable newAttachableBehavior = new(block);
-            newAttachableBehavior.Initialize(clonedProps);
+            Vintagestory.GameContent.BlockBehaviorHorizontalAttachable _prevBehavior = block.GetBehavior<Vintagestory.GameContent.BlockBehaviorHorizontalAttachable>();
+            AttributeRenderingLibrary.BlockBehaviorHorizontalAttachable _newBehavior = new(block);
+            _newBehavior.Initialize(properties: JsonObject.FromJson(_prevBehavior.propertiesAtString));
 
-            int index = block.CollectibleBehaviors.IndexOf(x => x is Vintagestory.GameContent.BlockBehaviorHorizontalAttachable);
+            int index = block.CollectibleBehaviors.IndexOf(b => b is Vintagestory.GameContent.BlockBehaviorHorizontalAttachable);
             block.CollectibleBehaviors = block.CollectibleBehaviors.RemoveAt(index);
             block.BlockBehaviors = block.BlockBehaviors.RemoveAt(index);
 
-            block.CollectibleBehaviors = block.CollectibleBehaviors.InsertAt(newAttachableBehavior, index);
-            block.BlockBehaviors = block.BlockBehaviors.InsertAt(newAttachableBehavior, index);
+            block.CollectibleBehaviors = block.CollectibleBehaviors.InsertAt(_newBehavior, index);
+            block.BlockBehaviors = block.BlockBehaviors.InsertAt(_newBehavior, index);
         }
 
-        Vintagestory.GameContent.BlockBehaviorNWOrientable prevNwOrientableBehavior = block.GetBehavior<Vintagestory.GameContent.BlockBehaviorNWOrientable>();
-        if (prevNwOrientableBehavior != null)
+        if (block.HasBehavior<Vintagestory.GameContent.BlockBehaviorNWOrientable>())
         {
-            JsonObject clonedProps = JsonObject.FromJson(prevNwOrientableBehavior.propertiesAtString);
-            AttributeRenderingLibrary.BlockBehaviorNWOrientable newAttachableBehavior = new(block);
-            newAttachableBehavior.Initialize(clonedProps);
+            Vintagestory.GameContent.BlockBehaviorNWOrientable _prevBehavior = block.GetBehavior<Vintagestory.GameContent.BlockBehaviorNWOrientable>();
+            AttributeRenderingLibrary.BlockBehaviorNWOrientable _newBehavior = new(block);
+            _newBehavior.Initialize(properties: JsonObject.FromJson(_prevBehavior.propertiesAtString));
 
-            int index = block.CollectibleBehaviors.IndexOf(x => x is Vintagestory.GameContent.BlockBehaviorNWOrientable);
+            int index = block.CollectibleBehaviors.IndexOf(b => b is Vintagestory.GameContent.BlockBehaviorNWOrientable);
             block.CollectibleBehaviors = block.CollectibleBehaviors.RemoveAt(index);
             block.BlockBehaviors = block.BlockBehaviors.RemoveAt(index);
 
-            block.CollectibleBehaviors = block.CollectibleBehaviors.InsertAt(newAttachableBehavior, index);
-            block.BlockBehaviors = block.BlockBehaviors.InsertAt(newAttachableBehavior, index);
+            block.CollectibleBehaviors = block.CollectibleBehaviors.InsertAt(_newBehavior, index);
+            block.BlockBehaviors = block.BlockBehaviors.InsertAt(_newBehavior, index);
+        }
+
+        if (block.HasBehavior<Vintagestory.GameContent.BlockBehaviorHorizontalOrientable>())
+        {
+            Vintagestory.GameContent.BlockBehaviorHorizontalOrientable _prevBehavior = block.GetBehavior<Vintagestory.GameContent.BlockBehaviorHorizontalOrientable>();
+            AttributeRenderingLibrary.BlockBehaviorHorizontalOrientable _newBehavior = new(block);
+            _newBehavior.Initialize(properties: JsonObject.FromJson(_prevBehavior.propertiesAtString));
+
+            int _index = block.CollectibleBehaviors.IndexOf(b => b is Vintagestory.GameContent.BlockBehaviorHorizontalOrientable);
+            block.CollectibleBehaviors = block.CollectibleBehaviors.RemoveAt(_index);
+            block.BlockBehaviors = block.BlockBehaviors.RemoveAt(_index);
+
+            block.CollectibleBehaviors = block.CollectibleBehaviors.InsertAt(_newBehavior, _index);
+            block.BlockBehaviors = block.BlockBehaviors.InsertAt(_newBehavior, _index);
         }
     }
 
@@ -203,6 +216,7 @@ public class Core : ModSystem
         behaviorProps["barrel"] = LoadProperties(api, "barrel");
         behaviorProps["bucket"] = LoadProperties(api, "bucket");
         behaviorProps["bed"] = LoadProperties(api, "bed");
+        behaviorProps["cage"] = LoadProperties(api, "cage");
     }
 
     public JsonObject LoadProperties(ICoreAPI api, string pathEnding)
