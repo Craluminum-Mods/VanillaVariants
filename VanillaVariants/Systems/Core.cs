@@ -109,6 +109,7 @@ public class Core : ModSystem
         AddRenderingBehaviorIfTrue(Config.WoodenRails && obj is BlockRails, obj, behaviorProps["woodenrails"]);
         AddRenderingBehaviorIfTrue(Config.Barrel && obj is BlockBarrel, obj, behaviorProps["barrel"]);
         AddRenderingBehaviorIfTrue(Config.WoodBucket && obj is BlockBucket, obj, behaviorProps["bucket"]);
+        AddRenderingBehaviorIfTrue(Config.Bed && obj is BlockBed && obj.Code.PathStartsWith("bed-wood"), obj, behaviorProps["bed"]);
     }
 
     private void AddRenderingBehaviorIfTrue(bool condition, CollectibleObject obj, JsonObject props)
@@ -201,6 +202,7 @@ public class Core : ModSystem
         behaviorProps["woodenrails"] = LoadProperties(api, "woodenrails");
         behaviorProps["barrel"] = LoadProperties(api, "barrel");
         behaviorProps["bucket"] = LoadProperties(api, "bucket");
+        behaviorProps["bed"] = LoadProperties(api, "bed");
     }
 
     public JsonObject LoadProperties(ICoreAPI api, string pathEnding)

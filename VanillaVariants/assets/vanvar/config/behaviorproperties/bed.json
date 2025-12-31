@@ -1,0 +1,10 @@
+{
+    "description": {
+        "wood-*": ["blockmaterial-Wood", ": ", "material-{wood}"]
+    },
+    "textures": {
+        "wood-*": {
+            "walnut": { "base": "game:block/wood/debarked/{wood}" }
+        }
+    }
+}
