@@ -94,7 +94,6 @@ public class ConfigLibCompatibility
             config.Sieve = OnCheckBox(id, config.Sieve, nameof(config.Sieve));
             config.Sign = OnCheckBox(id, config.Sign, nameof(config.Sign));
             config.Signpost = OnCheckBox(id, config.Signpost, nameof(config.Signpost));
-            config.SodRoofing = OnCheckBox(id, config.SodRoofing, nameof(config.SodRoofing));
             config.StonePath = OnCheckBox(id, config.StonePath, nameof(config.StonePath));
             config.SupportBeamMetal = OnCheckBox(id, config.SupportBeamMetal, nameof(config.SupportBeamMetal));
             config.SupportChain = OnCheckBox(id, config.SupportChain, nameof(config.SupportChain));

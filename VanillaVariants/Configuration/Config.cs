@@ -132,41 +132,38 @@ public class Config
     
     [ProtoMember(42)]
     public bool Signpost { get; set; } = true;
-    
+
     [ProtoMember(43)]
-    public bool SodRoofing { get; set; } = true;
-    
-    [ProtoMember(44)]
     public bool StonePath { get; set; } = true;
     
-    [ProtoMember(45)]
+    [ProtoMember(44)]
     public bool SupportBeamMetal { get; set; } = true;
     
-    [ProtoMember(46)]
+    [ProtoMember(45)]
     public bool SupportChain { get; set; } = true;
     
-    [ProtoMember(47)]
+    [ProtoMember(46)]
     public bool Table { get; set; } = true;
     
-    [ProtoMember(48)]
+    [ProtoMember(47)]
     public bool Toolrack { get; set; } = true;
     
-    [ProtoMember(49)]
+    [ProtoMember(48)]
     public bool TroughLarge { get; set; } = true;
     
-    [ProtoMember(50)]
+    [ProtoMember(49)]
     public bool TroughSmall { get; set; } = true;
     
-    [ProtoMember(51)]
+    [ProtoMember(50)]
     public bool WoodBucket { get; set; } = true;
     
-    [ProtoMember(52)]
+    [ProtoMember(51)]
     public bool WoodenPan { get; set; } = true;
     
-    [ProtoMember(53)]
+    [ProtoMember(52)]
     public bool WoodenRails { get; set; } = true;
 
-    [ProtoMember(54)]
+    [ProtoMember(53)]
     public List<string> ChuteCraftable { get; set; } = 
     [
         "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"
@@ -221,7 +218,6 @@ public class Config
         Sieve = previousConfig.Sieve;
         Sign = previousConfig.Sign;
         Signpost = previousConfig.Signpost;
-        SodRoofing = previousConfig.SodRoofing;
         StonePath = previousConfig.StonePath;
         SupportBeamMetal = previousConfig.SupportBeamMetal;
         SupportChain = previousConfig.SupportChain;
