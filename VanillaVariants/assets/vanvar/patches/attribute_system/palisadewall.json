@@ -1,0 +1,30 @@
+[
+    {
+        "op": "addmerge",
+        "path": "/creativeinventoryStacksByType",
+        "value": {
+            "*-north": [
+                {
+                    "tabs": ["general", "decorative", "vanvar"],
+                    "stacks": [
+                        { "type": "block", "code": "palisadewall-{logs}-{type}-{layout}-west", "attributes": { "types": { "wood": "oak" } } },
+                        { "type": "block", "code": "palisadewall-{logs}-{type}-{layout}-west", "attributes": { "types": { "wood": "birch" } } },
+                        { "type": "block", "code": "palisadewall-{logs}-{type}-{layout}-west", "attributes": { "types": { "wood": "maple" } } },
+                        { "type": "block", "code": "palisadewall-{logs}-{type}-{layout}-west", "attributes": { "types": { "wood": "pine" } } },
+                        { "type": "block", "code": "palisadewall-{logs}-{type}-{layout}-west", "attributes": { "types": { "wood": "acacia" } } },
+                        { "type": "block", "code": "palisadewall-{logs}-{type}-{layout}-west", "attributes": { "types": { "wood": "kapok" } } },
+                        { "type": "block", "code": "palisadewall-{logs}-{type}-{layout}-west", "attributes": { "types": { "wood": "baldcypress" } } },
+                        { "type": "block", "code": "palisadewall-{logs}-{type}-{layout}-west", "attributes": { "types": { "wood": "larch" } } },
+                        { "type": "block", "code": "palisadewall-{logs}-{type}-{layout}-west", "attributes": { "types": { "wood": "redwood" } } },
+                        { "type": "block", "code": "palisadewall-{logs}-{type}-{layout}-west", "attributes": { "types": { "wood": "ebony" } } },
+                        { "type": "block", "code": "palisadewall-{logs}-{type}-{layout}-west", "attributes": { "types": { "wood": "walnut" } } },
+                        { "type": "block", "code": "palisadewall-{logs}-{type}-{layout}-west", "attributes": { "types": { "wood": "purpleheart" } } }
+                    ]
+                }
+            ]
+        },
+        "file": "game:blocktypes/wood/palisadewall.json",
+        "condition": { "when": "VanillaVariants_Palisade_Enabled", "isValue": "true" },
+        "side": "Server"
+    }
+]

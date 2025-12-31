@@ -1,0 +1,30 @@
+[
+    {
+        "op": "addmerge",
+        "path": "/creativeinventoryStacksByType",
+        "value": {
+            "*-west": [
+                {
+                    "tabs": ["general", "decorative", "vanvar"],
+                    "stacks": [
+                        { "type": "block", "code": "palisadestakes-west", "attributes": { "types": { "wood": "oak" } } },
+                        { "type": "block", "code": "palisadestakes-west", "attributes": { "types": { "wood": "birch" } } },
+                        { "type": "block", "code": "palisadestakes-west", "attributes": { "types": { "wood": "maple" } } },
+                        { "type": "block", "code": "palisadestakes-west", "attributes": { "types": { "wood": "pine" } } },
+                        { "type": "block", "code": "palisadestakes-west", "attributes": { "types": { "wood": "acacia" } } },
+                        { "type": "block", "code": "palisadestakes-west", "attributes": { "types": { "wood": "kapok" } } },
+                        { "type": "block", "code": "palisadestakes-west", "attributes": { "types": { "wood": "baldcypress" } } },
+                        { "type": "block", "code": "palisadestakes-west", "attributes": { "types": { "wood": "larch" } } },
+                        { "type": "block", "code": "palisadestakes-west", "attributes": { "types": { "wood": "redwood" } } },
+                        { "type": "block", "code": "palisadestakes-west", "attributes": { "types": { "wood": "ebony" } } },
+                        { "type": "block", "code": "palisadestakes-west", "attributes": { "types": { "wood": "walnut" } } },
+                        { "type": "block", "code": "palisadestakes-west", "attributes": { "types": { "wood": "purpleheart" } } }
+                    ]
+                }
+            ]
+        },
+        "file": "game:blocktypes/wood/palisadestakes.json",
+        "condition": { "when": "VanillaVariants_Palisade_Enabled", "isValue": "true" },
+        "side": "Server"
+    }
+]

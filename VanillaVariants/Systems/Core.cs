@@ -111,6 +111,8 @@ public class Core : ModSystem
         AddRenderingBehaviorIfTrue(Config.WoodBucket && obj is BlockBucket, obj, behaviorProps["bucket"]);
         AddRenderingBehaviorIfTrue(Config.Bed && obj is BlockBed && obj.Code.PathStartsWith("bed-wood"), obj, behaviorProps["bed"]);
         AddRenderingBehaviorIfTrue(Config.Cage && obj.Code.PathStartsWith("cage"), obj, behaviorProps["cage"]);
+        AddRenderingBehaviorIfTrue(Config.Palisade && obj.Code.PathStartsWith("palisadewall"), obj, behaviorProps["palisadewall"]);
+        AddRenderingBehaviorIfTrue(Config.Palisade && obj.Code.PathStartsWith("palisadestakes"), obj, behaviorProps["palisadestakes"]);
     }
 
     private void AddRenderingBehaviorIfTrue(bool condition, CollectibleObject obj, JsonObject props)
@@ -217,6 +219,8 @@ public class Core : ModSystem
         behaviorProps["bucket"] = LoadProperties(api, "bucket");
         behaviorProps["bed"] = LoadProperties(api, "bed");
         behaviorProps["cage"] = LoadProperties(api, "cage");
+        behaviorProps["palisadewall"] = LoadProperties(api, "palisadewall");
+        behaviorProps["palisadestakes"] = LoadProperties(api, "palisadestakes");
     }
 
     public JsonObject LoadProperties(ICoreAPI api, string pathEnding)
