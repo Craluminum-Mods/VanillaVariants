@@ -1,0 +1,29 @@
+[
+        {
+        "op": "addmerge",
+        "path": "/creativeinventoryStacks",
+        "value": [
+            {
+                "tabs": ["general", "items", "tools", "vanvar"],
+                "stacks": [
+                    { "type": "block", "code": "pan-wooden" },
+                    { "type": "block", "code": "pan-wooden", "attributes": { "types": { "wood": "aged" } } },
+                    { "type": "block", "code": "pan-wooden", "attributes": { "types": { "wood": "birch" } } },
+                    { "type": "block", "code": "pan-wooden", "attributes": { "types": { "wood": "maple" } } },
+                    { "type": "block", "code": "pan-wooden", "attributes": { "types": { "wood": "pine" } } },
+                    { "type": "block", "code": "pan-wooden", "attributes": { "types": { "wood": "acacia" } } },
+                    { "type": "block", "code": "pan-wooden", "attributes": { "types": { "wood": "kapok" } } },
+                    { "type": "block", "code": "pan-wooden", "attributes": { "types": { "wood": "baldcypress" } } },
+                    { "type": "block", "code": "pan-wooden", "attributes": { "types": { "wood": "larch" } } },
+                    { "type": "block", "code": "pan-wooden", "attributes": { "types": { "wood": "redwood" } } },
+                    { "type": "block", "code": "pan-wooden", "attributes": { "types": { "wood": "ebony" } } },
+                    { "type": "block", "code": "pan-wooden", "attributes": { "types": { "wood": "walnut" } } },
+                    { "type": "block", "code": "pan-wooden", "attributes": { "types": { "wood": "purpleheart" } } }
+                ]
+            }
+        ],
+        "file": "game:blocktypes/wood/pan.json",
+        "condition": { "when": "VanillaVariants_WoodenPan_Enabled", "isValue": "true" },
+        "side": "Server"
+    }
+]

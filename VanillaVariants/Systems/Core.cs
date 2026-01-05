@@ -113,6 +113,7 @@ public class Core : ModSystem
         AddRenderingBehaviorIfTrue(Config.Cage && obj.Code.PathStartsWith("cage"), obj, behaviorProps["cage"]);
         AddRenderingBehaviorIfTrue(Config.Palisade && obj.Code.PathStartsWith("palisadewall"), obj, behaviorProps["palisadewall"]);
         AddRenderingBehaviorIfTrue(Config.Palisade && obj.Code.PathStartsWith("palisadestakes"), obj, behaviorProps["palisadestakes"]);
+        AddRenderingBehaviorIfTrue(Config.WoodenPan && obj is BlockPan && obj.Code.PathStartsWith("pan-wooden"), obj, behaviorProps["pan"]);
     }
 
     private void AddRenderingBehaviorIfTrue(bool condition, CollectibleObject obj, JsonObject props)
@@ -221,6 +222,7 @@ public class Core : ModSystem
         behaviorProps["cage"] = LoadProperties(api, "cage");
         behaviorProps["palisadewall"] = LoadProperties(api, "palisadewall");
         behaviorProps["palisadestakes"] = LoadProperties(api, "palisadestakes");
+        behaviorProps["pan"] = LoadProperties(api, "pan");
     }
 
     public JsonObject LoadProperties(ICoreAPI api, string pathEnding)
