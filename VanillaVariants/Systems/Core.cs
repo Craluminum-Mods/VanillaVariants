@@ -117,6 +117,7 @@ public class Core : ModSystem
         AddRenderingBehaviorIfTrue(Config.Palisade && obj.Code.PathStartsWith("palisadestakes"), obj, behaviorProps["palisadestakes"]);
         AddRenderingBehaviorIfTrue(Config.WoodenPan && obj is BlockPan && obj.Code.PathStartsWith("pan-wooden"), obj, behaviorProps["pan"]);
         AddRenderingBehaviorIfTrue(Config.Chute && (obj.Code.PathStartsWith("chute-elbow") || obj.Code.PathStartsWith("chute-3way")), obj, behaviorProps["chute"]);
+        AddRenderingBehaviorIfTrue(Config.Chute && obj.Code.PathStartsWith("chute-t"), obj, behaviorProps["chute-t"]);
     }
 
     private void AddRenderingBehaviorIfTrue(bool condition, CollectibleObject obj, JsonObject props)
@@ -208,7 +209,7 @@ public class Core : ModSystem
     {
         if (api.Side.IsClient()) return;
 
-        behaviorProps = new FastSmallDictionary<string, JsonObject>(27);
+        behaviorProps = new FastSmallDictionary<string, JsonObject>(28);
         behaviorProps["toolrack"] = LoadProperties(api, "toolrack");
         behaviorProps["displayCase"] = LoadProperties(api, "displaycase");
         behaviorProps["ladder"] = LoadProperties(api, "ladder");
@@ -236,6 +237,7 @@ public class Core : ModSystem
         behaviorProps["palisadestakes"] = LoadProperties(api, "palisadestakes");
         behaviorProps["pan"] = LoadProperties(api, "pan");
         behaviorProps["chute"] = LoadProperties(api, "chute");
+        behaviorProps["chute-t"] = LoadProperties(api, "chute-t");
     }
 
     public JsonObject LoadProperties(ICoreAPI api, string pathEnding)

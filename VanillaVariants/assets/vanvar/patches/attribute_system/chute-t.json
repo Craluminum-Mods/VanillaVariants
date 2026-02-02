@@ -1,0 +1,41 @@
+[
+    {
+        "op": "addmerge",
+        "path": "/creativeinventoryStacksByType",
+        "value": {
+            "*-ns": [
+                {
+                    "tabs": ["general", "mechanics", "vanvar"],
+                    "stacks": [
+                        { "type": "block", "code": "chute-{type}-{side}" },
+                        { "type": "block", "code": "chute-{type}-{side}", "attributes": { "types": { "metal": "bismuth" } } },
+                        { "type": "block", "code": "chute-{type}-{side}", "attributes": { "types": { "metal": "bismuthbronze" } } },
+                        { "type": "block", "code": "chute-{type}-{side}", "attributes": { "types": { "metal": "blackbronze" } } },
+                        { "type": "block", "code": "chute-{type}-{side}", "attributes": { "types": { "metal": "brass" } } },
+                        { "type": "block", "code": "chute-{type}-{side}", "attributes": { "types": { "metal": "chromium" } } },
+                        { "type": "block", "code": "chute-{type}-{side}", "attributes": { "types": { "metal": "cupronickel" } } },
+                        { "type": "block", "code": "chute-{type}-{side}", "attributes": { "types": { "metal": "electrum" } } },
+                        { "type": "block", "code": "chute-{type}-{side}", "attributes": { "types": { "metal": "gold" } } },
+                        { "type": "block", "code": "chute-{type}-{side}", "attributes": { "types": { "metal": "iron" } } },
+                        { "type": "block", "code": "chute-{type}-{side}", "attributes": { "types": { "metal": "meteoriciron" } } },
+                        { "type": "block", "code": "chute-{type}-{side}", "attributes": { "types": { "metal": "lead" } } },
+                        { "type": "block", "code": "chute-{type}-{side}", "attributes": { "types": { "metal": "molybdochalkos" } } },
+                        { "type": "block", "code": "chute-{type}-{side}", "attributes": { "types": { "metal": "platinum" } } },
+                        { "type": "block", "code": "chute-{type}-{side}", "attributes": { "types": { "metal": "nickel" } } },
+                        { "type": "block", "code": "chute-{type}-{side}", "attributes": { "types": { "metal": "silver" } } },
+                        { "type": "block", "code": "chute-{type}-{side}", "attributes": { "types": { "metal": "stainlesssteel" } } },
+                        { "type": "block", "code": "chute-{type}-{side}", "attributes": { "types": { "metal": "steel" } } },
+                        { "type": "block", "code": "chute-{type}-{side}", "attributes": { "types": { "metal": "tin" } } },
+                        { "type": "block", "code": "chute-{type}-{side}", "attributes": { "types": { "metal": "tinbronze" } } },
+                        { "type": "block", "code": "chute-{type}-{side}", "attributes": { "types": { "metal": "titanium" } } },
+                        { "type": "block", "code": "chute-{type}-{side}", "attributes": { "types": { "metal": "uranium" } } },
+                        { "type": "block", "code": "chute-{type}-{side}", "attributes": { "types": { "metal": "zinc" } } }
+                    ]
+                }
+            ]
+        },
+        "file": "game:blocktypes/metal/chute-t.json",
+        "condition": { "when": "VanillaVariants_Chute_Enabled", "isValue": "true" },
+        "side": "Server"
+    }
+]
