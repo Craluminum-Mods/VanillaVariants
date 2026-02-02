@@ -1,0 +1,14 @@
+{
+    "name": {
+        "@metal-(uranium|platinum)": ["block-chute-cross-ground", " (", "ore-{metal}", ")"],
+        "metal-*": ["block-chute-cross-ground", " (", "material-{metal}", ")"]
+    },
+    "description": {
+        "metal-*": ["blockmaterial-Metal", ": ", "material-{metal}"]
+    },
+    "textures": {
+        "metal-*": {
+            "copper1": { "base": "game:block/metal/sheet/{metal}1" }
+        }
+    }
+}
