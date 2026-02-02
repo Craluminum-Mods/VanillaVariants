@@ -81,6 +81,8 @@ public class Core : ModSystem
                 AddRenderingBehavior(item);
             }
         }
+
+        behaviorProps = null;
     }
 
     private void AddRenderingBehavior(CollectibleObject obj)
