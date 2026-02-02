@@ -1,0 +1,41 @@
+[
+    {
+        "op": "addmerge",
+        "path": "/creativeinventoryStacksByType",
+        "value": {
+            "@.*-(candle0|candle8)": [
+                {
+                    "tabs": ["general", "decorative", "vanvar"],
+                    "stacks": [
+                        { "type": "block", "code": "chandelier-{type}" },
+                        { "type": "block", "code": "chandelier-{type}", "attributes": { "types": { "metal": "bismuth" } } },
+                        { "type": "block", "code": "chandelier-{type}", "attributes": { "types": { "metal": "bismuthbronze" } } },
+                        { "type": "block", "code": "chandelier-{type}", "attributes": { "types": { "metal": "blackbronze" } } },
+                        { "type": "block", "code": "chandelier-{type}", "attributes": { "types": { "metal": "brass" } } },
+                        { "type": "block", "code": "chandelier-{type}", "attributes": { "types": { "metal": "chromium" } } },
+                        { "type": "block", "code": "chandelier-{type}", "attributes": { "types": { "metal": "cupronickel" } } },
+                        { "type": "block", "code": "chandelier-{type}", "attributes": { "types": { "metal": "electrum" } } },
+                        { "type": "block", "code": "chandelier-{type}", "attributes": { "types": { "metal": "gold" } } },
+                        { "type": "block", "code": "chandelier-{type}", "attributes": { "types": { "metal": "iron" } } },
+                        { "type": "block", "code": "chandelier-{type}", "attributes": { "types": { "metal": "meteoriciron" } } },
+                        { "type": "block", "code": "chandelier-{type}", "attributes": { "types": { "metal": "lead" } } },
+                        { "type": "block", "code": "chandelier-{type}", "attributes": { "types": { "metal": "molybdochalkos" } } },
+                        { "type": "block", "code": "chandelier-{type}", "attributes": { "types": { "metal": "platinum" } } },
+                        { "type": "block", "code": "chandelier-{type}", "attributes": { "types": { "metal": "nickel" } } },
+                        { "type": "block", "code": "chandelier-{type}", "attributes": { "types": { "metal": "silver" } } },
+                        { "type": "block", "code": "chandelier-{type}", "attributes": { "types": { "metal": "stainlesssteel" } } },
+                        { "type": "block", "code": "chandelier-{type}", "attributes": { "types": { "metal": "steel" } } },
+                        { "type": "block", "code": "chandelier-{type}", "attributes": { "types": { "metal": "tin" } } },
+                        { "type": "block", "code": "chandelier-{type}", "attributes": { "types": { "metal": "tinbronze" } } },
+                        { "type": "block", "code": "chandelier-{type}", "attributes": { "types": { "metal": "titanium" } } },
+                        { "type": "block", "code": "chandelier-{type}", "attributes": { "types": { "metal": "uranium" } } },
+                        { "type": "block", "code": "chandelier-{type}", "attributes": { "types": { "metal": "zinc" } } }
+                    ]
+                }
+            ]
+        },
+        "file": "game:blocktypes/metal/chandelier.json",
+        "condition": { "when": "VanillaVariants_Chandelier_Enabled", "isValue": "true" },
+        "side": "Server"
+    }
+]

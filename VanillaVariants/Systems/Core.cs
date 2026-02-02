@@ -120,6 +120,7 @@ public class Core : ModSystem
         AddRenderingBehaviorIfTrue(Config.Chute && obj.Code.PathStartsWith("chute-t"), obj, behaviorProps["chute-t"]);
         AddRenderingBehaviorIfTrue(Config.Chute && obj.Code.PathStartsWith("chute-straight"), obj, behaviorProps["chute-straight"]);
         AddRenderingBehaviorIfTrue(Config.Chute && obj.Code.PathStartsWith("chute-cross"), obj, behaviorProps["chute-cross"]);
+        AddRenderingBehaviorIfTrue(Config.Chandelier && obj.Code.PathStartsWith("chandelier"), obj, behaviorProps["chandelier"]);
     }
 
     private void AddRenderingBehaviorIfTrue(bool condition, CollectibleObject obj, JsonObject props)
@@ -242,6 +243,7 @@ public class Core : ModSystem
         behaviorProps["chute-t"] = LoadProperties(api, "chute-t");
         behaviorProps["chute-straight"] = LoadProperties(api, "chute-straight");
         behaviorProps["chute-cross"] = LoadProperties(api, "chute-cross");
+        behaviorProps["chandelier"] = LoadProperties(api, "chandelier");
     }
 
     public JsonObject LoadProperties(ICoreAPI api, string pathEnding)

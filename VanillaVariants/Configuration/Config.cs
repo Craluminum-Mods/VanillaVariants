@@ -169,6 +169,9 @@ public class Config
         "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"
     ];
 
+    [ProtoMember(54)]
+    public bool Chandelier { get; set; } = true;
+
     public Config() { }
 
     public Config(Config previousConfig)
@@ -228,5 +231,6 @@ public class Config
         WoodBucket = previousConfig.WoodBucket;
         WoodenPan = previousConfig.WoodenPan;
         WoodenRails = previousConfig.WoodenRails;
+        Chandelier = previousConfig.Chandelier;
     }
 }

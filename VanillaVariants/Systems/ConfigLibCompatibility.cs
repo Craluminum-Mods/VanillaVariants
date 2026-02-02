@@ -78,6 +78,7 @@ public class ConfigLibCompatibility
             config.Bed = OnCheckBox(id, config.Bed, nameof(config.Bed));
             config.Cage = OnCheckBox(id, config.Cage, nameof(config.Cage));
             config.Chair = OnCheckBox(id, config.Chair, nameof(config.Chair));
+            config.Chandelier = OnCheckBox(id, config.Chandelier, nameof(config.Chandelier));
             config.Chest = OnCheckBox(id, config.Chest, nameof(config.Chest));
             config.CrudeDoor = OnCheckBox(id, config.CrudeDoor, nameof(config.CrudeDoor));
             config.DisplayCase = OnCheckBox(id, config.DisplayCase, nameof(config.DisplayCase));

@@ -80,6 +80,7 @@ static class ModConfig
         api.World.Config.SetBool("VanillaVariants_WoodBucket_Enabled", config.WoodBucket);
         api.World.Config.SetBool("VanillaVariants_WoodenPan_Enabled", config.WoodenPan);
         api.World.Config.SetBool("VanillaVariants_WoodenRails_Enabled", config.WoodenRails);
+        api.World.Config.SetBool("VanillaVariants_Chandelier_Enabled", config.Chandelier);
 
         string[] chutes = ["archimedesscrew", "chute", "chutesection", "hopper"];
         foreach (string chuteName in chutes)
