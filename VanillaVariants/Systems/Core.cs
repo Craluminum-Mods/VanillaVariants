@@ -116,18 +116,28 @@ public class Core : ModSystem
         AddRenderingBehaviorIfTrue(Config.Palisade && obj.Code.PathStartsWith("palisadewall"), obj, behaviorProps["palisadewall"]);
         AddRenderingBehaviorIfTrue(Config.Palisade && obj.Code.PathStartsWith("palisadestakes"), obj, behaviorProps["palisadestakes"]);
         AddRenderingBehaviorIfTrue(Config.WoodenPan && obj is BlockPan && obj.Code.PathStartsWith("pan-wooden"), obj, behaviorProps["pan"]);
+        AddRenderingBehaviorIfTrue(Config.Chute && (obj.Code.PathStartsWith("chute-elbow") || obj.Code.PathStartsWith("chute-3way")), obj, behaviorProps["chute"]);
     }
 
     private void AddRenderingBehaviorIfTrue(bool condition, CollectibleObject obj, JsonObject props)
     {
         if (!condition) return;
         if (props == null) return;
+
+        JsonObject resolvedProps = props.Clone();
+
+        if (obj.Variant != null)
+        {
+            foreach ((string key, string val) in obj.Variant)
+                resolvedProps.FillPlaceHolder(key, val);
+        }
+
         if (obj is Block block)
         {
             AddExtraBlockBehaviors(block);
 
             BlockBehaviorShapeTexturesFromAttributes behavior = new(block);
-            behavior.Initialize(props);
+            behavior.Initialize(resolvedProps);
             block.CollectibleBehaviors = block.CollectibleBehaviors.Append(behavior);
             block.BlockBehaviors = block.BlockBehaviors.Append(behavior);
 
@@ -142,7 +152,7 @@ public class Core : ModSystem
         else
         {
             CollectibleBehaviorShapeTexturesFromAttributes behavior = new(obj);
-            behavior.Initialize(props);
+            behavior.Initialize(resolvedProps);
             obj.CollectibleBehaviors = obj.CollectibleBehaviors.Append(behavior);
         }
     }
@@ -198,7 +208,7 @@ public class Core : ModSystem
     {
         if (api.Side.IsClient()) return;
 
-        behaviorProps = new FastSmallDictionary<string, JsonObject>(19);
+        behaviorProps = new FastSmallDictionary<string, JsonObject>(27);
         behaviorProps["toolrack"] = LoadProperties(api, "toolrack");
         behaviorProps["displayCase"] = LoadProperties(api, "displaycase");
         behaviorProps["ladder"] = LoadProperties(api, "ladder");
@@ -225,6 +235,7 @@ public class Core : ModSystem
         behaviorProps["palisadewall"] = LoadProperties(api, "palisadewall");
         behaviorProps["palisadestakes"] = LoadProperties(api, "palisadestakes");
         behaviorProps["pan"] = LoadProperties(api, "pan");
+        behaviorProps["chute"] = LoadProperties(api, "chute");
     }
 
     public JsonObject LoadProperties(ICoreAPI api, string pathEnding)
