@@ -32,7 +32,6 @@ public class Network : ModSystem
     {
         if (configFromServer == null) return;
 
-        // ignore packets in SinglePlayer
         if (clientApi.IsSinglePlayer) return;
 
         Core.Config = configFromServer;
@@ -57,7 +56,6 @@ public class Network : ModSystem
         if (!fromPlayer.HasPrivilege(Privilege.controlserver)) return;
         if (configFromClient == null) return;
 
-        // ignore packets in SinglePlayer
         if ((serverApi.World as ServerMain).Clients.Any(p => p.Value.IsSinglePlayerClient)) return;
 
         Configuration.ModConfig.WriteConfig(serverApi, configFromClient);

@@ -60,10 +60,8 @@ public class Core : ModSystem
         foreach (Block block in api.World.Blocks)
         {
             api.TryAddModDescription(block);
-            //block.PatchSteelProduction(); // TODO: Why this code was commented? Read WHY in CollectibleObjectPatches.PatchSteelProduction
             api.PatchQuern(block);
             api.PatchChest(block);
-            block.PatchTrough(smallTroughTextures, largeTroughTextures);
             block.PatchChute();
 
             if (api.Side.IsServer())

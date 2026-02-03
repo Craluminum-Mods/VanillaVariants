@@ -19,8 +19,7 @@ public static class BlockWindmillRotor_TryPlaceBlock_Patch
             BlockPos pos = blockSel.Position.AddCopy(face);
             if (world.BlockAccessor.GetBlock(pos) is IMechanicalPowerBlock block && block.HasMechPowerConnectorAt(world, pos, face.Opposite))
             {
-                // if (block is IMPPowered)
-                if (block is BlockWindmillRotor || block is BlockCreativeRotor)
+                if (block is IMPPowered)
                 {
                     __result = false;
                     return false;

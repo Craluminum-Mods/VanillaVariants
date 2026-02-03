@@ -278,48 +278,4 @@ public static class CollectibleObjectPatches
             return;
         }
     }
-
-    public static void PatchTrough(this Block block, IDictionary<string, CompositeTexture> smallTextures, IDictionary<string, CompositeTexture> largeTextures)
-    {
-        if (!block.IsFromMod() || block is not BlockTroughDoubleBlock and not BlockTrough)
-        {
-            return;
-        }
-
-        IDictionary<string, CompositeTexture> textures = block.Code.ToString().Contains("small") ? smallTextures : largeTextures;
-        List<string> ignoreTextures = block.Attributes["ignoreTextures"].AsObject<List<string>>(new());
-
-        foreach ((string key, CompositeTexture val) in textures)
-        {
-            if (block.Textures.ContainsKey(key) && !ignoreTextures.Contains(key))
-            {
-                block.Textures[key] = val;
-            }
-            else if (!block.Textures.ContainsKey(key))
-            {
-                block.Textures.Add(key, val);
-            }
-        }
-    }
-
-    // TODO: Without joking, I spent whole day to find perfect regex, I DESERVE to comment this until I find regex that will actually work!!
-    //public static void PatchSteelProduction(this Block block)
-    //{
-    //    if (block is not BlockStoneCoffinSection || !Config.MetalDoor || !Config.OverrideMetalDoorsForSteelProduction)
-    //    {
-    //        return;
-    //    }
-
-    //    List<string> allowedTypes = Core.Config.MetalDoorsForSteelProduction.Where(x => x.Value).Select(keyVal => keyVal.Key).ToList();
-    //    if (!allowedTypes.Any())
-    //    {
-    //        return;
-    //    }
-
-    //    string allowedTypesAsString = string.Join("|", allowedTypes);
-    //    string newKey = $"@(game:irondoor-(.*)|vanvar:door-1x2metal-({allowedTypesAsString}))";
-    //    JToken value = block.Attributes.Token["multiblockStructure"]["blockNumbers"]["irondoor-*"];
-    //    block.Attributes.Token["multiblockStructure"]["blockNumbers"]["irondoor-*"].Remove();
-    //    block.Attributes.Token["multiblockStructure"]["blockNumbers"][newKey] = JToken.FromObject(value);
-    //}
 }
