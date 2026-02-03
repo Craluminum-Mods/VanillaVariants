@@ -121,6 +121,7 @@ public class Core : ModSystem
         AddRenderingBehaviorIfTrue(Config.Chute && obj.Code.PathStartsWith("chute-straight"), obj, behaviorProps["chute-straight"]);
         AddRenderingBehaviorIfTrue(Config.Chute && obj.Code.PathStartsWith("chute-cross"), obj, behaviorProps["chute-cross"]);
         AddRenderingBehaviorIfTrue(Config.Chandelier && obj.Code.PathStartsWith("chandelier"), obj, behaviorProps["chandelier"]);
+        AddRenderingBehaviorIfTrue(Config.Hopper && obj is BlockHopper, obj, behaviorProps["hopper"]);
     }
 
     private void AddRenderingBehaviorIfTrue(bool condition, CollectibleObject obj, JsonObject props)
@@ -212,7 +213,7 @@ public class Core : ModSystem
     {
         if (api.Side.IsClient()) return;
 
-        behaviorProps = new FastSmallDictionary<string, JsonObject>(30);
+        behaviorProps = new FastSmallDictionary<string, JsonObject>(32);
         behaviorProps["toolrack"] = LoadProperties(api, "toolrack");
         behaviorProps["displayCase"] = LoadProperties(api, "displaycase");
         behaviorProps["ladder"] = LoadProperties(api, "ladder");
@@ -244,6 +245,7 @@ public class Core : ModSystem
         behaviorProps["chute-straight"] = LoadProperties(api, "chute-straight");
         behaviorProps["chute-cross"] = LoadProperties(api, "chute-cross");
         behaviorProps["chandelier"] = LoadProperties(api, "chandelier");
+        behaviorProps["hopper"] = LoadProperties(api, "hopper");
     }
 
     public JsonObject LoadProperties(ICoreAPI api, string pathEnding)

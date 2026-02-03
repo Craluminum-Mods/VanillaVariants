@@ -1,0 +1,39 @@
+[
+    {
+        "op": "addmerge",
+        "path": "/creativeinventoryStacks",
+        "value": [
+            {
+                "tabs": ["general", "mechanics", "vanvar"],
+                "stacks": [
+                    { "type": "block", "code": "hopper" },
+                    { "type": "block", "code": "hopper", "attributes": { "types": { "metal": "bismuth" } } },
+                    { "type": "block", "code": "hopper", "attributes": { "types": { "metal": "bismuthbronze" } } },
+                    { "type": "block", "code": "hopper", "attributes": { "types": { "metal": "blackbronze" } } },
+                    { "type": "block", "code": "hopper", "attributes": { "types": { "metal": "brass" } } },
+                    { "type": "block", "code": "hopper", "attributes": { "types": { "metal": "chromium" } } },
+                    { "type": "block", "code": "hopper", "attributes": { "types": { "metal": "cupronickel" } } },
+                    { "type": "block", "code": "hopper", "attributes": { "types": { "metal": "electrum" } } },
+                    { "type": "block", "code": "hopper", "attributes": { "types": { "metal": "gold" } } },
+                    { "type": "block", "code": "hopper", "attributes": { "types": { "metal": "iron" } } },
+                    { "type": "block", "code": "hopper", "attributes": { "types": { "metal": "meteoriciron" } } },
+                    { "type": "block", "code": "hopper", "attributes": { "types": { "metal": "lead" } } },
+                    { "type": "block", "code": "hopper", "attributes": { "types": { "metal": "molybdochalkos" } } },
+                    { "type": "block", "code": "hopper", "attributes": { "types": { "metal": "platinum" } } },
+                    { "type": "block", "code": "hopper", "attributes": { "types": { "metal": "nickel" } } },
+                    { "type": "block", "code": "hopper", "attributes": { "types": { "metal": "silver" } } },
+                    { "type": "block", "code": "hopper", "attributes": { "types": { "metal": "stainlesssteel" } } },
+                    { "type": "block", "code": "hopper", "attributes": { "types": { "metal": "steel" } } },
+                    { "type": "block", "code": "hopper", "attributes": { "types": { "metal": "tin" } } },
+                    { "type": "block", "code": "hopper", "attributes": { "types": { "metal": "tinbronze" } } },
+                    { "type": "block", "code": "hopper", "attributes": { "types": { "metal": "titanium" } } },
+                    { "type": "block", "code": "hopper", "attributes": { "types": { "metal": "uranium" } } },
+                    { "type": "block", "code": "hopper", "attributes": { "types": { "metal": "zinc" } } }
+                ]
+            }
+        ],
+        "file": "game:blocktypes/metal/hopper.json",
+        "condition": { "when": "VanillaVariants_Hopper_Enabled", "isValue": "true" },
+        "side": "Server"
+    }
+]
