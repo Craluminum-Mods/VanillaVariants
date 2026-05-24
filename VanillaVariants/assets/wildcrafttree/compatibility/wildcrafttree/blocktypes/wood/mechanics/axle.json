@@ -1,9 +1,0 @@
-{
-    "inheritFrom": "vanvar:blocktypes/wood/mechanics/axle",
-    "code": "woodenaxle",
-    "attributes": { "fromVanVarMod": true },
-    "variantgroups": [
-        { "code": "wood", "loadFromProperties": "wildcrafttree:block/wood" },
-        { "code": "rotation", "states": ["ud", "ns", "we"] }
-    ]
-}

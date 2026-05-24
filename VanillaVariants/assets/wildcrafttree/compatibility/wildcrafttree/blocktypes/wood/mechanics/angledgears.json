@@ -1,9 +1,0 @@
-{
-    "inheritFrom": "vanvar:blocktypes/wood/mechanics/angledgears",
-    "code": "angledgears",
-    "attributes": { "fromVanVarMod": true },
-    "variantgroups": [
-        { "code": "wood", "loadFromProperties": "wildcrafttree:block/wood" },
-        { "code": "orientation", "states": ["n", "e", "s", "w", "u", "d", "en", "nw", "ws", "es", "nu", "nd", "eu", "ed", "su", "sd", "wu", "wd", "nn", "ss", "ww", "ee"] }
-    ]
-}

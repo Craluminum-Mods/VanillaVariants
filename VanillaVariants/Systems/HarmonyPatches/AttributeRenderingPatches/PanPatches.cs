@@ -32,11 +32,12 @@ public static partial class AttributeRenderingPatches
                 return false;
             }
 
-            string key = __instance.GetMeshCacheKey(itemstack) + target;
+            ItemSlot inSlot = renderinfo.InSlot;
+            string key = __instance.GetMeshCacheKey(inSlot) + target;
 
             renderinfo.ModelRef = ObjectCacheUtil.GetOrCreate(capi, key, () =>
             {
-                MeshData mesh = __instance.GenMesh(itemstack, capi.BlockTextureAtlas, null);
+                MeshData mesh = __instance.GenMesh(inSlot, capi.BlockTextureAtlas, null);
                 return capi.Render.UploadMultiTextureMesh(mesh);
             });
             return false;

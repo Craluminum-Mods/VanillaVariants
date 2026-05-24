@@ -17,14 +17,11 @@ public class ConfigLibCompatibility
     private const string settingsChuteCraftable = "vanvar:Config.Settings.CraftableChutes";
     private const string settingPrefix = "vanvar:Config.Setting.";
     private const string textChutes = "Chutes";
-    private const string textMechanics = "tabname-mechanics";
     private const string textBlocksAndItems = "Blocks and Items";
     private const string textIssues = "Issues";
     private const string textCraftable = "Craftable";
     private const string textExperimental = "Experimental";
     
-    private const string settingOverride = "vanvar:Config.Setting.Override";
-
     public ConfigLibCompatibility(ICoreAPI api)
     {
         Init(api);
@@ -42,7 +39,7 @@ public class ConfigLibCompatibility
             ModConfig.WriteConfig(api, Core.Config);
             if (api is ICoreClientAPI clientApi && !clientApi.IsSinglePlayer)
             {
-                clientApi.Network.GetChannel("vanvar").SendPacket<VanillaVariants.Configuration.Config>(Core.Config);
+                clientApi.Network.GetChannel("vanvar").SendPacket(Core.Config);
             }
         }
 
@@ -65,7 +62,6 @@ public class ConfigLibCompatibility
             ImGui.NewLine();
             ImGui.TextWrapped(Lang.Get(textIssues));
             config.ResolveChestNames = OnCheckBox(id, config.ResolveChestNames, nameof(config.ResolveChestNames));
-            config.ResolveMechanicalBlockIssues = OnCheckBox(id, config.ResolveMechanicalBlockIssues, nameof(config.ResolveMechanicalBlockIssues));
             config.ResolveQuernAndAxleRelationship = OnCheckBox(id, config.ResolveQuernAndAxleRelationship, nameof(config.ResolveQuernAndAxleRelationship));
             ImGui.NewLine();
             ImGui.TextWrapped(Lang.Get(textCraftable));
@@ -105,20 +101,6 @@ public class ConfigLibCompatibility
             config.WoodBucket = OnCheckBox(id, config.WoodBucket, nameof(config.WoodBucket));
             config.WoodenPan = OnCheckBox(id, config.WoodenPan, nameof(config.WoodenPan));
             config.WoodenRails = OnCheckBox(id, config.WoodenRails, nameof(config.WoodenRails));
-            ImGui.NewLine();
-            ImGui.TextWrapped(Lang.Get(textMechanics));
-            config.MechanicalAngledGears = OnCheckBox(id, config.MechanicalAngledGears, nameof(config.MechanicalAngledGears));
-            config.MechanicalAxle = OnCheckBox(id, config.MechanicalAxle, nameof(config.MechanicalAxle));
-            config.MechanicalBrake = OnCheckBox(id, config.MechanicalBrake, nameof(config.MechanicalBrake));
-            config.MechanicalClutch = OnCheckBox(id, config.MechanicalClutch, nameof(config.MechanicalClutch));
-            config.MechanicalHelveHammerBase = OnCheckBox(id, config.MechanicalHelveHammerBase, nameof(config.MechanicalHelveHammerBase));
-            config.MechanicalHelveHammerItem = OnCheckBox(id, config.MechanicalHelveHammerItem, nameof(config.MechanicalHelveHammerItem));
-            config.MechanicalLargeGear = OnCheckBox(id, config.MechanicalLargeGear, nameof(config.MechanicalLargeGear));
-            config.MechanicalLargeGearSectionItem = OnCheckBox(id, config.MechanicalLargeGearSectionItem, nameof(config.MechanicalLargeGearSectionItem));
-            config.MechanicalPulverizer = OnCheckBox(id, config.MechanicalPulverizer, nameof(config.MechanicalPulverizer));
-            config.MechanicalToggle = OnCheckBox(id, config.MechanicalToggle, nameof(config.MechanicalToggle));
-            config.MechanicalTransmission = OnCheckBox(id, config.MechanicalTransmission, nameof(config.MechanicalTransmission));
-            config.MechanicalWindmillRotor = OnCheckBox(id, config.MechanicalWindmillRotor, nameof(config.MechanicalWindmillRotor));
             ImGui.NewLine();
             ImGui.TextWrapped(Lang.Get(textChutes));
             config.ArchimedesScrew = OnCheckBox(id, config.ArchimedesScrew, nameof(config.ArchimedesScrew));

@@ -1,9 +1,0 @@
-{
-    "inheritFrom": "vanvar:itemtypes/wood/helvehammer",
-    "code": "helvehammer",
-    "variantgroups": [
-        { "code": "wood", "loadFromProperties": "wildcrafttree:block/wood" },
-        { "code": "metal", "states": ["tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"] }
-    ],
-    "attributes": { "fromVanVarMod": true }
-}

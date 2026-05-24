@@ -1,9 +1,0 @@
-{
-    "inheritFrom": "vanvar:blocktypes/wood/mechanics/toggle",
-    "code": "woodentoggle",
-    "attributes": { "fromVanVarMod": true },
-    "variantgroups": [
-        { "code": "wood", "loadFromProperties": "wildcrafttree:block/wood" },
-        { "code": "orientation", "states": ["ns", "we"] }
-    ]
-}

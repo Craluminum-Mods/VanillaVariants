@@ -1,6 +1,0 @@
-{
-    "inheritFrom": "vanvar:itemtypes/wood/largegearsection",
-    "code": "largegearsection",
-    "variantgroups": [{ "code": "wood", "loadFromProperties": "wildcrafttree:block/wood" }],
-    "attributes": { "fromVanVarMod": true }
-}

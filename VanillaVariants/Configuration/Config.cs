@@ -1,6 +1,5 @@
 using ProtoBuf;
 using System.Collections.Generic;
-using Vintagestory.API.Util;
 
 namespace VanillaVariants.Configuration;
 
@@ -9,161 +8,122 @@ public class Config
 {
     [ProtoMember(1)]
     public bool ResolveChestNames { get; set; } = true;
-    
+
     [ProtoMember(2)]
-    public bool ResolveMechanicalBlockIssues { get; set; } = true;
-    
-    [ProtoMember(3)]
     public bool ResolveQuernAndAxleRelationship { get; set; } = true;
 
-    [ProtoMember(4)]
+    [ProtoMember(3)]
     public bool CraftableCage { get; set; }
 
-    [ProtoMember(5)]
+    [ProtoMember(4)]
     public bool CraftableWoodenRails { get; set; }
 
-    [ProtoMember(6)]
+    [ProtoMember(5)]
     public bool ArchimedesScrew { get; set; } = true;
     
-    [ProtoMember(7)]
+    [ProtoMember(6)]
     public bool ArmorStand { get; set; } = true;
     
-    [ProtoMember(8)]
+    [ProtoMember(7)]
     public bool Barrel { get; set; } = true;
     
-    [ProtoMember(9)]
+    [ProtoMember(8)]
     public bool Bed { get; set; } = true;
     
-    [ProtoMember(10)]
+    [ProtoMember(9)]
     public bool Cage { get; set; } = true;
     
-    [ProtoMember(11)]
+    [ProtoMember(10)]
     public bool Chair { get; set; } = true;
     
-    [ProtoMember(12)]
+    [ProtoMember(11)]
     public bool Chest { get; set; } = true;
     
-    [ProtoMember(13)]
+    [ProtoMember(12)]
     public bool Chute { get; set; } = true;
     
-    [ProtoMember(14)]
+    [ProtoMember(13)]
     public bool ChuteSectionItem { get; set; } = true;
     
-    [ProtoMember(15)]
+    [ProtoMember(14)]
     public bool CrudeDoor { get; set; } = true;
     
-    [ProtoMember(16)]
+    [ProtoMember(15)]
     public bool DisplayCase { get; set; } = true;
     
-    [ProtoMember(17)]
+    [ProtoMember(16)]
     public bool Forge { get; set; } = true;
     
-    [ProtoMember(18)]
+    [ProtoMember(17)]
     public bool FruitPress { get; set; } = true;
     
-    [ProtoMember(19)]
+    [ProtoMember(18)]
     public bool Henbox { get; set; } = true;
     
-    [ProtoMember(20)]
+    [ProtoMember(19)]
     public bool Hopper { get; set; } = true;
     
-    [ProtoMember(21)]
+    [ProtoMember(20)]
     public bool Ladder { get; set; } = true;
-    
-    [ProtoMember(22)]
-    public bool MechanicalAngledGears { get; set; } = true;
-    
-    [ProtoMember(23)]
-    public bool MechanicalAxle { get; set; } = true;
-    
-    [ProtoMember(24)]
-    public bool MechanicalBrake { get; set; } = true;
-    
-    [ProtoMember(25)]
-    public bool MechanicalClutch { get; set; } = true;
-    
-    [ProtoMember(26)]
-    public bool MechanicalHelveHammerBase { get; set; } = true;
-    
-    [ProtoMember(27)]
-    public bool MechanicalHelveHammerItem { get; set; } = true;
-    
-    [ProtoMember(28)]
-    public bool MechanicalLargeGear { get; set; } = true;
-    
-    [ProtoMember(29)]
-    public bool MechanicalLargeGearSectionItem { get; set; } = true;
-    
-    [ProtoMember(30)]
-    public bool MechanicalPulverizer { get; set; } = true;
-    
-    [ProtoMember(31)]
-    public bool MechanicalToggle { get; set; } = true;
-    
-    [ProtoMember(32)]
-    public bool MechanicalTransmission { get; set; } = true;
-    
-    [ProtoMember(33)]
-    public bool MechanicalWindmillRotor { get; set; } = true;
-    
-    [ProtoMember(34)]
+
+    [ProtoMember(21)]
     public bool MetalDoor { get; set; } = true;
     
-    [ProtoMember(35)]
+    [ProtoMember(22)]
     public bool Moldrack { get; set; } = true;
     
-    [ProtoMember(36)]
+    [ProtoMember(23)]
     public bool OmokTabletop { get; set; } = true;
     
-    [ProtoMember(37)]
+    [ProtoMember(24)]
     public bool Palisade { get; set; } = true;
     
-    [ProtoMember(38)]
+    [ProtoMember(25)]
     public bool Quern { get; set; } = true;
     
-    [ProtoMember(39)]
+    [ProtoMember(26)]
     public bool Shelf { get; set; } = true;
     
-    [ProtoMember(40)]
+    [ProtoMember(27)]
     public bool Sieve { get; set; } = true;
     
-    [ProtoMember(41)]
+    [ProtoMember(28)]
     public bool Sign { get; set; } = true;
     
-    [ProtoMember(42)]
+    [ProtoMember(29)]
     public bool Signpost { get; set; } = true;
 
-    [ProtoMember(43)]
+    [ProtoMember(30)]
     public bool StonePath { get; set; } = true;
     
-    [ProtoMember(44)]
+    [ProtoMember(31)]
     public bool SupportBeamMetal { get; set; } = true;
     
-    [ProtoMember(45)]
+    [ProtoMember(32)]
     public bool SupportChain { get; set; } = true;
     
-    [ProtoMember(46)]
+    [ProtoMember(33)]
     public bool Table { get; set; } = true;
     
-    [ProtoMember(47)]
+    [ProtoMember(34)]
     public bool Toolrack { get; set; } = true;
     
-    [ProtoMember(48)]
+    [ProtoMember(35)]
     public bool TroughLarge { get; set; } = true;
     
-    [ProtoMember(49)]
+    [ProtoMember(36)]
     public bool TroughSmall { get; set; } = true;
     
-    [ProtoMember(50)]
+    [ProtoMember(37)]
     public bool WoodBucket { get; set; } = true;
     
-    [ProtoMember(51)]
+    [ProtoMember(38)]
     public bool WoodenPan { get; set; } = true;
     
-    [ProtoMember(52)]
+    [ProtoMember(39)]
     public bool WoodenRails { get; set; } = true;
 
-    [ProtoMember(53)]
+    [ProtoMember(40)]
     public List<string> ChuteCraftable { get; set; } = 
     [
         "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"
@@ -179,7 +139,6 @@ public class Config
         ChuteCraftable = previousConfig.ChuteCraftable;
 
         ResolveChestNames = previousConfig.ResolveChestNames;
-        ResolveMechanicalBlockIssues = previousConfig.ResolveMechanicalBlockIssues;
         ResolveQuernAndAxleRelationship = previousConfig.ResolveQuernAndAxleRelationship;
         CraftableCage = previousConfig.CraftableCage;
         CraftableWoodenRails = previousConfig.CraftableWoodenRails;
@@ -200,18 +159,6 @@ public class Config
         Henbox = previousConfig.Henbox;
         Hopper = previousConfig.Hopper;
         Ladder = previousConfig.Ladder;
-        MechanicalAngledGears = previousConfig.MechanicalAngledGears;
-        MechanicalAxle = previousConfig.MechanicalAxle;
-        MechanicalBrake = previousConfig.MechanicalBrake;
-        MechanicalClutch = previousConfig.MechanicalClutch;
-        MechanicalHelveHammerBase = previousConfig.MechanicalHelveHammerBase;
-        MechanicalHelveHammerItem = previousConfig.MechanicalHelveHammerItem;
-        MechanicalLargeGear = previousConfig.MechanicalLargeGear;
-        MechanicalLargeGearSectionItem = previousConfig.MechanicalLargeGearSectionItem;
-        MechanicalPulverizer = previousConfig.MechanicalPulverizer;
-        MechanicalToggle = previousConfig.MechanicalToggle;
-        MechanicalTransmission = previousConfig.MechanicalTransmission;
-        MechanicalWindmillRotor = previousConfig.MechanicalWindmillRotor;
         MetalDoor = previousConfig.MetalDoor;
         Moldrack = previousConfig.Moldrack;
         OmokTabletop = previousConfig.OmokTabletop;

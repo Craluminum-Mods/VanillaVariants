@@ -1,6 +1,0 @@
-{
-    "inheritFrom": "vanvar:blocktypes/wood/mechanics/largegear3m",
-    "code": "largegear3",
-    "attributes": { "fromVanVarMod": true },
-    "variantgroups": [{ "code": "wood", "loadFromProperties": "wildcrafttree:block/wood" }]
-}

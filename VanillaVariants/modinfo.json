@@ -6,7 +6,7 @@
     "description": "Variants of wood, stone and metal for vanilla blocks and items",
     "authors": ["Craluminum2413 (Dana)"],
     "dependencies": {
-        "game": "1.21.0",
-        "attributerenderinglibrary": "2.8.0"
+        "game": "1.22.0",
+        "attributerenderinglibrary": "3.0.0"
     }
 }
